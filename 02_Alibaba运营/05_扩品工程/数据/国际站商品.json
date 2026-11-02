@@ -4043,11 +4043,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:00:57.382733+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:07.862210+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000042821848/prepared.json",
@@ -4133,12 +4134,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/10000042821848/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/10000042821848/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/10000042821848/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/10000042821848/after_get.json",
-        "at": "2026-11-02T05:00:57.382733+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/10000042821848/after_get.json",
+        "at": "2026-11-02T05:15:07.862210+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "915505550",
@@ -4146,7 +4149,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:00:57.382733+00:00",
+        "at": "2026-11-02T05:15:07.862210+00:00",
         "model": "BQ-001",
         "title": "Wide Toe Box Slip On Walking Shoes Breathable Knit Casual Sneakers with EVA Sole Wholesale",
         "keywords": [
@@ -4161,8 +4164,8 @@
           "https://sc04.alicdn.com/kf/H10fcbfc872ad44b6a0a068a3755b82312.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Slip-On-Walking_10000042821848.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -4213,7 +4216,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -4380,6 +4422,13 @@
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
         "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/10000042821848/公开验价.json",
         "public_verified_at": "2026-11-02T05:03:33.044440+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.862210+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/10000042821848/verification.json"
       }
     },
     {
@@ -4391,11 +4440,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:04:35.292553+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.251576+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000042896165/prepared.json",
@@ -4479,12 +4529,14 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000042896165/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/10000042896165/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/10000042896165/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000042896165/formal_get.json",
-        "at": "2026-11-02T02:03:10.172149+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/10000042896165/after_get.json",
+        "at": "2026-11-02T05:15:08.251576+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "915505550",
@@ -4492,7 +4544,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:10.172149+00:00",
+        "at": "2026-11-02T05:15:08.251576+00:00",
         "model": "BQ-002",
         "title": "Breathable Wide Toe Box Knit Slip On Walking Shoes with EVA Sole for Wholesale",
         "keywords": [
@@ -4507,8 +4559,8 @@
           "https://sc04.alicdn.com/kf/H44e824ae8afc40c588f50338771c4039T.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Breathable-Wide-Toe-Box-Knit-Slip_10000042896165.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -4548,7 +4600,46 @@
             },
             "image_url": "https://sc04.alicdn.com/kf/Hb44661e70ba449189365832223cfce5b1.png"
           }
-        ]
+        ],
+        "sku_count": 30,
+        "colour_EU": {
+          "Grey Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey Khaki": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -4698,15 +4789,8 @@
         }
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.236569+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042896165/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042896165/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.823019+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -4721,7 +4805,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.251576+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/10000042896165/verification.json"
       }
     },
     {
@@ -5418,7 +5520,7 @@
       "observation": {
         "audit": "modified",
         "display": "N",
-        "at": "2026-11-02T04:51:55.396521+00:00",
+        "at": "2026-11-02T05:17:02.917024+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -5515,11 +5617,11 @@
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json",
         "next_action": "本次修正完成",
         "price_state": "PENDING_REVIEW",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/after_get.json",
-        "at": "2026-11-02T04:51:55.396521+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/最终价格/after_get.json",
+        "at": "2026-11-02T05:17:02.917024+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -5528,7 +5630,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T04:51:55.396521+00:00",
+        "at": "2026-11-02T05:17:02.917024+00:00",
         "model": "BQ-008",
         "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper",
         "keywords": [
@@ -5581,7 +5683,7 @@
         "price_tiers": [
           {
             "start_quantity": 2,
-            "price": "10.90"
+            "price": "10.00"
           },
           {
             "start_quantity": 50,
@@ -5805,26 +5907,20 @@
       },
       "price_adjustment": {
         "state": "PENDING_REVIEW",
-        "at": "2026-11-02T04:51:55.396521+00:00",
+        "at": "2026-11-02T05:17:02.917024+00:00",
         "usd_tiers": [
           [
             2,
-            "10.90"
+            "10.00"
           ],
           [
             50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/verification.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "平台审核结束后，将首档调整为 2 双起 9.50 美元。",
-        "desired_next_tiers": [
-          [
-            2,
-            "9.50"
-          ]
-        ]
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -5836,9 +5932,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T05:01:58.122006+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:22:54.088996+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -5876,12 +5972,12 @@
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "at": "2026-10-31T05:15:09.046704+00:00",
         "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601825074604/recovery_render.json",
-        "price_state": "PENDING_REVIEW",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/首档修正/verification.json"
+        "price_state": "APPROVED",
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/首档修正/after_get.json",
-        "at": "2026-11-02T05:01:58.122006+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/最终价格/after_get.json",
+        "at": "2026-11-02T05:22:54.088996+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -5890,7 +5986,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:01:58.122006+00:00",
+        "at": "2026-11-02T05:22:54.088996+00:00",
         "title": "Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale",
         "keywords": [
           ""
@@ -5904,14 +6000,18 @@
           "https://sc04.alicdn.com/kf/H2977c962882f40d084232e3f81390822S.jpg"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Marathon-Running-Shoes-High_1601825074604.html",
         "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
         "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -5953,17 +6053,21 @@
         }
       },
       "price_adjustment": {
-        "state": "PENDING_REVIEW",
-        "at": "2026-11-02T05:01:58.122006+00:00",
+        "state": "APPROVED",
+        "at": "2026-11-02T05:22:54.088996+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/首档修正/verification.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核公开价格。"
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -10808,11 +10912,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:01:00.638772+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:07.566770+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939572948/prepared.json",
@@ -10899,12 +11004,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939572948/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939572948/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939572948/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939572948/after_get.json",
-        "at": "2026-11-02T05:01:00.638772+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939572948/after_get.json",
+        "at": "2026-11-02T05:15:07.566770+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "PENDING_APPROVAL",
@@ -11084,7 +11191,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:01:00.638772+00:00",
+        "at": "2026-11-02T05:15:07.566770+00:00",
         "model": "BQ001-O1 / BQ001",
         "title": "Custom Logo Wide Toe Box Knit Slip On Walking Shoes with Breathable Upper and EVA Sole OEM ODM",
         "keywords": [
@@ -11099,8 +11206,8 @@
           "https://sc04.alicdn.com/kf/S699419e2036849f988d3aad8f1a811f3v.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Custom-Logo-Wide-Toe-Box-Knit_1601939572948.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -11144,7 +11251,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "price_adjustment": {
         "state": "APPROVED",
@@ -11164,6 +11310,13 @@
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
         "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939572948/公开验价.json",
         "public_verified_at": "2026-11-02T05:03:33.044440+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.566770+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939572948/verification.json"
       }
     },
     {
@@ -11175,11 +11328,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:04:22.302682+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:07.603151+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939727104/prepared.json",
@@ -11258,12 +11412,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939727104/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/after_get.json",
-        "at": "2026-11-02T05:04:22.302682+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939727104/after_get.json",
+        "at": "2026-11-02T05:15:07.603151+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -11444,7 +11600,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:04:22.302682+00:00",
+        "at": "2026-11-02T05:15:07.603151+00:00",
         "model": "BQ001-R1 / BQ001",
         "title": "Breathable Wide Toe Box Slip On Walking Shoes Lightweight Knit Sneakers with EVA Sole",
         "keywords": [
@@ -11459,8 +11615,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Breathable-Wide-Toe-Box-Slip-On_1601939727104.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -11504,7 +11660,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "price_adjustment": {
         "state": "APPROVED",
@@ -11522,8 +11717,15 @@
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/verification.json",
         "public": "VERIFIED",
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
-        "public_verified_at": "2026-11-02T05:05:57.191669+00:00",
-        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/公开验价.json"
+        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939727104/公开验价.json",
+        "public_verified_at": "2026-11-02T05:05:57.191669+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.603151+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939727104/verification.json"
       }
     },
     {
@@ -11537,9 +11739,10 @@
       "observation": {
         "audit": "modified",
         "display": "N",
-        "at": "2026-11-02T04:51:54.213254+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "at": "2026-11-02T05:15:07.601026+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601956115029/prepared.json",
@@ -11621,12 +11824,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "PENDING_REVIEW",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601956115029/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601956115029/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601956115029/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601956115029/after_get.json",
-        "at": "2026-11-02T04:51:54.213254+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601956115029/after_get.json",
+        "at": "2026-11-02T05:15:07.601026+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -11634,7 +11839,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T04:51:54.213254+00:00",
+        "at": "2026-11-02T05:15:07.601026+00:00",
         "model": "BQ001-S1 / BQ001",
         "title": "Easy On Knit Wide Toe Box Walking Shoes Breathable Slip On Sneakers with EVA Sole",
         "keywords": [
@@ -11694,7 +11899,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -11845,8 +12089,8 @@
         }
       },
       "price_adjustment": {
-        "state": "PENDING_REVIEW",
-        "at": "2026-11-02T04:51:54.213254+00:00",
+        "state": "APPROVED",
+        "at": "2026-11-02T05:13:52.383874+00:00",
         "usd_tiers": [
           [
             2,
@@ -11857,9 +12101,16 @@
             "9.00"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601956115029/verification.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601956115029/尺码修改前价格回读.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核公开价格。"
+        "next_action": "等待平台审核并核对接口结果。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.601026+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601956115029/verification.json"
       }
     },
     {
@@ -11871,11 +12122,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:01:04.034330+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:07.975631+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601957061462/prepared.json",
@@ -11954,12 +12206,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957061462/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957061462/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957061462/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957061462/after_get.json",
-        "at": "2026-11-02T05:01:04.034330+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957061462/after_get.json",
+        "at": "2026-11-02T05:15:07.975631+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -11967,7 +12221,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:01:04.034330+00:00",
+        "at": "2026-11-02T05:15:07.975631+00:00",
         "model": "BQ001-S2 / BQ001",
         "title": "Wide Toe Box Knit Slip On Shoes Lightweight Breathable Walking Sneakers with EVA Sole",
         "keywords": [
@@ -11982,8 +12236,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601957061462.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -12027,7 +12281,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -12194,6 +12487,13 @@
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
         "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957061462/公开验价.json",
         "public_verified_at": "2026-11-02T05:03:33.044440+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.975631+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957061462/verification.json"
       }
     },
     {
@@ -12205,11 +12505,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:01:06.514621+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.011208+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601957079462/prepared.json",
@@ -12288,12 +12589,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957079462/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957079462/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957079462/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957079462/after_get.json",
-        "at": "2026-11-02T05:01:06.514621+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957079462/after_get.json",
+        "at": "2026-11-02T05:15:08.011208+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -12301,7 +12604,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:01:06.514621+00:00",
+        "at": "2026-11-02T05:15:08.011208+00:00",
         "model": "BQ001-S3 / BQ001",
         "title": "Knit Wide Toe Box Walking Shoes Breathable Slip On Sneakers with EVA Sole for Daily Wear",
         "keywords": [
@@ -12316,8 +12619,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Knit-Wide-Toe-Box-Walking-Shoes_1601957079462.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -12361,7 +12664,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -12528,6 +12870,13 @@
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
         "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601957079462/公开验价.json",
         "public_verified_at": "2026-11-02T05:03:33.044440+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.011208+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601957079462/verification.json"
       }
     },
     {
@@ -12539,11 +12888,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:01:09.362269+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:07.977267+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939707196/prepared.json",
@@ -12622,12 +12972,14 @@
         "title_state": "PENDING_PUBLIC_VERIFY",
         "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939707196/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939707196/verification.json",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939707196/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939707196/after_get.json",
-        "at": "2026-11-02T05:01:09.362269+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939707196/after_get.json",
+        "at": "2026-11-02T05:15:07.977267+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -12806,7 +13158,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:01:09.362269+00:00",
+        "at": "2026-11-02T05:15:07.977267+00:00",
         "model": "BQ001-W1 / BQ001",
         "title": "Wholesale Wide Toe Box Knit Slip On Walking Shoes Breathable Casual Sneakers with EVA Sole",
         "keywords": [
@@ -12821,8 +13173,8 @@
           "https://sc04.alicdn.com/kf/S2b55d974229b4e5784ad8c537cc380c63.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Wholesale-Wide-Toe-Box-Knit-Slip_1601939707196.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
@@ -12866,7 +13218,46 @@
             "price": "9.00"
           }
         ],
-        "price_scope": "平台官方回读，公开价格另核"
+        "price_scope": "平台官方回读，公开价格另核",
+        "sku_count": 30,
+        "colour_EU": {
+          "White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Black White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "All Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "price_adjustment": {
         "state": "APPROVED",
@@ -12886,6 +13277,13 @@
         "next_action": "按同款、同数量继续观察竞品与获客表现。",
         "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_价格调整/1601939707196/公开验价.json",
         "public_verified_at": "2026-11-02T05:03:33.044440+00:00"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:07.977267+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ001/2026-11-02_尺码下架/1601939707196/verification.json"
       }
     },
     {
@@ -12897,12 +13295,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:04:41.208872+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.356049+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
         "score": "5.00",
-        "sku_count": 33
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939635505/prepared.json",
@@ -13026,12 +13424,14 @@
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939635505/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601939635505/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939635505/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939635505/formal_get.json",
-        "at": "2026-11-02T02:03:04.324131+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939635505/after_get.json",
+        "at": "2026-11-02T05:15:08.356049+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -13221,7 +13621,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:04.324131+00:00",
+        "at": "2026-11-02T05:15:08.356049+00:00",
         "model": "BQ002-O1 / BQ002",
         "title": "Custom Logo Wide Toe Box Slip On Walking Sneakers Breathable Knit Shoes with EVA Sole OEM ODM",
         "keywords": [
@@ -13236,14 +13636,14 @@
           "https://sc04.alicdn.com/kf/H2651c2d7bfec4dd3982b4037721778f66.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Custom-Logo-Wide-Toe-Box-Slip_1601939635505.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
-        "sku_count": 33,
+        "sku_count": 30,
         "colour_EU": {
-          "Grey Black": [
+          "Grey White": [
             "36",
             "37",
             "38",
@@ -13253,8 +13653,7 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ],
           "Grey Khaki": [
             "36",
@@ -13266,10 +13665,9 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ],
-          "Grey White": [
+          "Grey Black": [
             "36",
             "37",
             "38",
@@ -13279,8 +13677,7 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ]
         },
         "detail_images": [
@@ -13315,15 +13712,8 @@
         ]
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.287620+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939635505/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939635505/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.823559+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -13338,7 +13728,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.356049+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939635505/verification.json"
       }
     },
     {
@@ -13350,12 +13758,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:04:44.836651+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.401908+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
         "score": "5.00",
-        "sku_count": 33
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939614689/prepared.json",
@@ -13479,12 +13887,14 @@
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939614689/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601939614689/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939614689/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939614689/formal_get.json",
-        "at": "2026-11-02T02:03:04.303495+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939614689/after_get.json",
+        "at": "2026-11-02T05:15:08.401908+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -13674,7 +14084,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:04.303495+00:00",
+        "at": "2026-11-02T05:15:08.401908+00:00",
         "model": "BQ002-R1 / BQ002",
         "title": "Breathable Knit Wide Toe Box Slip On Walking Sneakers Lightweight Shoes with EVA Sole",
         "keywords": [
@@ -13689,14 +14099,14 @@
           "https://sc04.alicdn.com/kf/H51650b4f666743f0956b2a753c3082fcG.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Wide-Toe-Box-Slip_1601939614689.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
-        "sku_count": 33,
+        "sku_count": 30,
         "colour_EU": {
-          "Grey Black": [
+          "Grey White": [
             "36",
             "37",
             "38",
@@ -13706,8 +14116,7 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ],
           "Grey Khaki": [
             "36",
@@ -13719,10 +14128,9 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ],
-          "Grey White": [
+          "Grey Black": [
             "36",
             "37",
             "38",
@@ -13732,8 +14140,7 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
           ]
         },
         "detail_images": [
@@ -13768,15 +14175,8 @@
         ]
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.289634+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939614689/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939614689/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.823559+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -13791,7 +14191,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.401908+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939614689/verification.json"
       }
     },
     {
@@ -13803,11 +14221,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:04:49.519860+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.381621+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601956046603/prepared.json",
@@ -13884,12 +14303,14 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601956046603/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601956046603/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601956046603/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601956046603/formal_get.json",
-        "at": "2026-11-02T02:03:07.285034+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601956046603/after_get.json",
+        "at": "2026-11-02T05:15:08.381621+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -13897,7 +14318,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:07.285034+00:00",
+        "at": "2026-11-02T05:15:08.381621+00:00",
         "model": "BQ002-S1 / BQ002",
         "title": "Wide Toe Box Knit Slip On Walking Shoes Breathable Lightweight Casual Sneakers with EVA Sole",
         "keywords": [
@@ -13912,8 +14333,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601956046603.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -13946,7 +14367,46 @@
             },
             "image_url": "https://sc04.alicdn.com/kf/H30359a3b67df40f6a11ddc0a1895ebf80.png"
           }
-        ]
+        ],
+        "sku_count": 30,
+        "colour_EU": {
+          "Grey Khaki": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -14096,15 +14556,8 @@
         }
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.291864+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956046603/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956046603/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.823559+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -14119,7 +14572,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.381621+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601956046603/verification.json"
       }
     },
     {
@@ -14131,11 +14602,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:04:55.402620+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.599131+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601957092413/prepared.json",
@@ -14212,12 +14684,14 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601957092413/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601957092413/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957092413/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601957092413/formal_get.json",
-        "at": "2026-11-02T02:03:07.312610+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957092413/after_get.json",
+        "at": "2026-11-02T05:15:08.599131+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -14225,7 +14699,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:07.312610+00:00",
+        "at": "2026-11-02T05:15:08.599131+00:00",
         "model": "BQ002-S2 / BQ002",
         "title": "Breathable Knit Slip On Sneakers with Wide Toe Box EVA Sole Walking Shoes for Daily Wear",
         "keywords": [
@@ -14240,8 +14714,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Slip-On-Sneakers-with_1601957092413.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -14274,7 +14748,46 @@
             },
             "image_url": "https://sc04.alicdn.com/kf/H0d73d3b2b7bf49e88ee5ad840720601ce.png"
           }
-        ]
+        ],
+        "sku_count": 30,
+        "colour_EU": {
+          "Grey Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey Khaki": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -14424,15 +14937,8 @@
         }
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.295647+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957092413/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957092413/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.824091+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -14447,7 +14953,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.599131+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957092413/verification.json"
       }
     },
     {
@@ -14459,11 +14983,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:05:01.458404+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
-        "score": "5.00"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.760411+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
+        "score": "5.00",
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601957075451/prepared.json",
@@ -14543,12 +15068,14 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601957075451/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601957075451/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957075451/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601957075451/formal_get.json",
-        "at": "2026-11-02T02:03:09.999839+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957075451/after_get.json",
+        "at": "2026-11-02T05:15:08.760411+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "platform_group": {
         "id": "972130291",
@@ -14556,7 +15083,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:09.999839+00:00",
+        "at": "2026-11-02T05:15:08.760411+00:00",
         "model": "BQ002-S3 / BQ002",
         "title": "Lightweight Knit Slip On Walking Shoes with Wide Toe Box Breathable Upper and EVA Sole",
         "keywords": [
@@ -14571,8 +15098,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Lightweight-Knit-Slip-On-Walking-Shoes_1601957075451.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -14605,7 +15132,46 @@
             },
             "image_url": "https://sc04.alicdn.com/kf/H30359a3b67df40f6a11ddc0a1895ebf80.png"
           }
-        ]
+        ],
+        "sku_count": 30,
+        "colour_EU": {
+          "Grey Black": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey White": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ],
+          "Grey Khaki": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
       },
       "optimization": {
         "buyer_copy": {
@@ -14756,15 +15322,8 @@
         }
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.297743+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957075451/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957075451/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.824091+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -14779,7 +15338,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.760411+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601957075451/verification.json"
       }
     },
     {
@@ -14791,12 +15368,12 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-20T14:05:07.352861+00:00",
-        "scope": "本次精确ID价格正式回读；公开待核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T05:15:08.797294+00:00",
+        "scope": "下架大于 EU45 尺码后的官方回读",
         "score": "5.00",
-        "sku_count": 33
+        "sku_count": 30
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939654418/prepared.json",
@@ -14920,12 +15497,14 @@
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939654418/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/商品/1601939654418/verification.json",
         "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+        "size_state": "PENDING_REVIEW",
+        "size_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939654418/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939654418/formal_get.json",
-        "at": "2026-11-02T02:03:00.719134+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939654418/after_get.json",
+        "at": "2026-11-02T05:15:08.797294+00:00",
+        "scope": "尺码下架后的官方回读"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -15115,7 +15694,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:03:00.719134+00:00",
+        "at": "2026-11-02T05:15:08.797294+00:00",
         "model": "BQ002-W1 / BQ002",
         "title": "Wholesale Wide Toe Box Knit Slip On Walking Sneakers Breathable Casual Shoes with EVA Sole",
         "keywords": [
@@ -15130,12 +15709,12 @@
           "https://sc04.alicdn.com/kf/H66c70ba5e5b94ee4a197f4dcd7a62072U.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Wholesale-Wide-Toe-Box-Knit-Slip_1601939654418.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
-        "sku_count": 33,
+        "sku_count": 30,
         "colour_EU": {
           "Grey Black": [
             "36",
@@ -15147,21 +15726,7 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
-          ],
-          "Grey Khaki": [
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"
+            "45"
           ],
           "Grey White": [
             "36",
@@ -15173,8 +15738,19 @@
             "42",
             "43",
             "44",
-            "45",
-            "46"
+            "45"
+          ],
+          "Grey Khaki": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
           ]
         },
         "detail_images": [
@@ -15209,15 +15785,8 @@
         ]
       },
       "price_adjustment": {
-        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
-        "at": "2026-10-17T12:35:22.299855+00:00",
-        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939654418/plan.json",
-        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939654418/verification.json",
-        "cny_targets": [
-          50,
-          48,
-          45
-        ],
+        "at": "2026-11-02T05:19:28.824091+00:00",
+        "state": "WAITING_SIZE_REVIEW",
         "usd_tiers": [
           [
             2,
@@ -15232,7 +15801,25 @@
             "6.73"
           ]
         ],
-        "public": "PENDING"
+        "desired_next_tiers": [
+          [
+            2,
+            "9.50"
+          ],
+          [
+            50,
+            "9.00"
+          ]
+        ],
+        "public": "NOT_CHECKED",
+        "next_action": "尺码下架审核通过后，提交并回读 2 双起 9.50、50 双起 9.00 美元。"
+      },
+      "size_adjustment": {
+        "at": "2026-11-02T05:15:08.797294+00:00",
+        "state": "PENDING_REVIEW",
+        "eu_max": 45,
+        "removed_skus": 3,
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_尺码下架/1601939654418/verification.json"
       }
     },
     {
@@ -29642,7 +30229,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-11-02T05:04:27.620427+00:00",
+        "at": "2026-11-02T05:22:49.113027+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -29688,11 +30275,11 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json",
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/首档修正/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/首档修正/after_get.json",
-        "at": "2026-11-02T05:04:27.620427+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/after_get.json",
+        "at": "2026-11-02T05:22:49.113027+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -29701,7 +30288,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:04:27.620427+00:00",
+        "at": "2026-11-02T05:22:49.113027+00:00",
         "model": "BQ008-O1 / L1009",
         "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects",
         "keywords": [
@@ -29724,6 +30311,10 @@
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -29919,18 +30510,20 @@
       },
       "price_adjustment": {
         "state": "APPROVED",
-        "at": "2026-11-02T05:04:27.620427+00:00",
+        "at": "2026-11-02T05:22:49.113027+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/首档修正/verification.json",
-        "public": "VERIFIED",
-        "next_action": "按同款、同数量继续观察竞品与获客表现。",
-        "public_verified_at": "2026-11-02T05:05:57.191669+00:00",
-        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/首档修正/公开验价.json"
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/verification.json",
+        "public": "PENDING",
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -29944,7 +30537,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-11-02T05:04:31.331612+00:00",
+        "at": "2026-11-02T05:22:51.642283+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -29990,11 +30583,11 @@
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json",
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/首档修正/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/首档修正/after_get.json",
-        "at": "2026-11-02T05:04:31.331612+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/after_get.json",
+        "at": "2026-11-02T05:22:51.642283+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -30003,7 +30596,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:04:31.331612+00:00",
+        "at": "2026-11-02T05:22:51.642283+00:00",
         "model": "BQ008-R1 / L1009",
         "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections",
         "keywords": [
@@ -30026,6 +30619,10 @@
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -30221,18 +30818,20 @@
       },
       "price_adjustment": {
         "state": "APPROVED",
-        "at": "2026-11-02T05:04:31.331612+00:00",
+        "at": "2026-11-02T05:22:51.642283+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/首档修正/verification.json",
-        "public": "VERIFIED",
-        "next_action": "按同款、同数量继续观察竞品与获客表现。",
-        "public_verified_at": "2026-11-02T05:05:57.191669+00:00",
-        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/首档修正/公开验价.json"
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/verification.json",
+        "public": "PENDING",
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -30244,9 +30843,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T04:51:55.804435+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:20:34.395380+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -30293,12 +30892,12 @@
         "next_action": "FAQ已批准、get/render与一次公开文字核验通过；正常买家视觉交互待验。继续首页与橱窗已授权调整。",
         "latest_faq_verification": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/20261101_222007_verification.json",
         "previous_approved_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/recovery_render.json",
-        "price_state": "PENDING_REVIEW",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/verification.json"
+        "price_state": "APPROVED",
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/after_get.json",
-        "at": "2026-11-02T04:51:55.804435+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/after_get.json",
+        "at": "2026-11-02T05:20:34.395380+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -30307,7 +30906,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T04:51:55.804435+00:00",
+        "at": "2026-11-02T05:20:34.395380+00:00",
         "model": "BQ008-W1 / L1009",
         "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders",
         "keywords": [
@@ -30322,15 +30921,15 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939625569.html",
         "scope": "2026-11-01 FAQ审核通过、get/render命中且其余正式字段保全；美国公开抓取命中，视觉交互待验。",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "price_tiers": [
           {
             "start_quantity": 2,
-            "price": "10.90"
+            "price": "10.00"
           },
           {
             "start_quantity": 50,
@@ -30562,27 +31161,21 @@
         "public": "NOT_REQUESTED_API_ACCEPTANCE"
       },
       "price_adjustment": {
-        "state": "PENDING_REVIEW",
-        "at": "2026-11-02T04:51:55.804435+00:00",
+        "state": "APPROVED",
+        "at": "2026-11-02T05:20:34.395380+00:00",
         "usd_tiers": [
           [
             2,
-            "10.90"
+            "10.00"
           ],
           [
             50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/verification.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "平台审核结束后，将首档调整为 2 双起 9.50 美元。",
-        "desired_next_tiers": [
-          [
-            2,
-            "9.50"
-          ]
-        ]
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -30596,7 +31189,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-11-02T05:04:35.042403+00:00",
+        "at": "2026-11-02T05:20:37.534348+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -30753,11 +31346,11 @@
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json",
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/首档修正/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/首档修正/after_get.json",
-        "at": "2026-11-02T05:04:35.042403+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/最终价格/after_get.json",
+        "at": "2026-11-02T05:20:37.534348+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -30766,7 +31359,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:04:35.042403+00:00",
+        "at": "2026-11-02T05:20:37.534348+00:00",
         "model": "BQ009-O1 / L1026",
         "title": "Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM",
         "keywords": [
@@ -30874,6 +31467,10 @@
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -31092,18 +31689,20 @@
       },
       "price_adjustment": {
         "state": "APPROVED",
-        "at": "2026-11-02T05:04:35.042403+00:00",
+        "at": "2026-11-02T05:20:37.534348+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/首档修正/verification.json",
-        "public": "VERIFIED",
-        "next_action": "按同款、同数量继续观察竞品与获客表现。",
-        "public_verified_at": "2026-11-02T05:05:57.191669+00:00",
-        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/首档修正/公开验价.json"
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/最终价格/verification.json",
+        "public": "PENDING",
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -31117,7 +31716,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-11-02T05:04:37.972229+00:00",
+        "at": "2026-11-02T05:20:40.008715+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -31274,11 +31873,11 @@
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json",
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "price_state": "APPROVED",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/首档修正/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/首档修正/after_get.json",
-        "at": "2026-11-02T05:04:37.972229+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/最终价格/after_get.json",
+        "at": "2026-11-02T05:20:40.008715+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -31287,7 +31886,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:04:37.972229+00:00",
+        "at": "2026-11-02T05:20:40.008715+00:00",
         "model": "BQ009-R1 / L1026",
         "title": "Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole",
         "keywords": [
@@ -31395,6 +31994,10 @@
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -31613,18 +32216,20 @@
       },
       "price_adjustment": {
         "state": "APPROVED",
-        "at": "2026-11-02T05:04:37.972229+00:00",
+        "at": "2026-11-02T05:20:40.008715+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/首档修正/verification.json",
-        "public": "VERIFIED",
-        "next_action": "按同款、同数量继续观察竞品与获客表现。",
-        "public_verified_at": "2026-11-02T05:05:57.191669+00:00",
-        "public_evidence": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/首档修正/公开验价.json"
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/最终价格/verification.json",
+        "public": "PENDING",
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {
@@ -31638,7 +32243,7 @@
       "observation": {
         "audit": "modified",
         "display": "N",
-        "at": "2026-11-02T05:02:20.741749+00:00",
+        "at": "2026-11-02T05:16:12.204765+00:00",
         "scope": "本次价格的官方回读，公开价格另核",
         "score": "5.00"
       },
@@ -31795,11 +32400,11 @@
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json",
         "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
         "price_state": "PENDING_REVIEW",
-        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/首档修正/verification.json"
+        "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/首档修正/after_get.json",
-        "at": "2026-11-02T05:02:20.741749+00:00",
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/最终价格/after_get.json",
+        "at": "2026-11-02T05:16:12.204765+00:00",
         "scope": "本次价格的官方回读；公开价格另核"
       },
       "platform_group": {
@@ -31808,7 +32413,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:02:20.741749+00:00",
+        "at": "2026-11-02T05:16:12.204765+00:00",
         "model": "BQ009-W1 / L1026",
         "title": "Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale",
         "keywords": [
@@ -31916,6 +32521,10 @@
         "price_tiers": [
           {
             "start_quantity": 2,
+            "price": "10.00"
+          },
+          {
+            "start_quantity": 50,
             "price": "9.50"
           }
         ],
@@ -32134,16 +32743,20 @@
       },
       "price_adjustment": {
         "state": "PENDING_REVIEW",
-        "at": "2026-11-02T05:02:20.741749+00:00",
+        "at": "2026-11-02T05:16:12.204765+00:00",
         "usd_tiers": [
           [
             2,
+            "10.00"
+          ],
+          [
+            50,
             "9.50"
           ]
         ],
-        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/首档修正/verification.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核公开价格。"
+        "next_action": "等待平台审核并核对接口结果。"
       }
     },
     {

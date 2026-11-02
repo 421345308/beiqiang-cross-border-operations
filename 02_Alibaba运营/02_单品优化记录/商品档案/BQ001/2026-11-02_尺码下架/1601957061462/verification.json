@@ -1,0 +1,29 @@
+{
+  "id": "1601957061462",
+  "family": "BQ001",
+  "at": "2026-11-02T05:15:07.975631+00:00",
+  "status": "modified",
+  "display": "N",
+  "checks": {
+    "removed_sizes_absent": true,
+    "removed_skus_absent": true,
+    "remaining_sku_ids_exact": true,
+    "remaining_skus_unchanged": true,
+    "other_fields_unchanged": true
+  },
+  "remaining_skus": 30,
+  "removed_skus": 3,
+  "sizes": [
+    "41",
+    "40",
+    "43",
+    "42",
+    "45",
+    "44",
+    "36",
+    "38",
+    "37",
+    "39"
+  ],
+  "state": "PENDING_REVIEW"
+}
