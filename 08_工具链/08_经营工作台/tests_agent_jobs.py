@@ -67,10 +67,11 @@ class Process:
     class Stream:
         def __init__(self, process, complete, failed): self.process=process; self.complete=complete; self.failed=failed
         def __iter__(self):
+            yield json.dumps({'type':'thread.started','thread_id':'12345678-1234-4234-8234-123456789abc'})+'\n'
             if self.process.reconnect:
                 yield json.dumps({'type':'error','message':'Reconnecting... 2/5 (request timed out)'})+'\n'
             yield json.dumps({'type':'item.started','item':{'type':'command_execution','command':'private-command'}})+'\n'
-            if self.process.gate: self.process.gate.wait(3)
+            if self.process.gate: self.process.gate.wait(10)
             yield 'unstructured diagnostic access_token=PRIVATE\n'
             yield json.dumps({'type':'item.completed','item':{'type':'command_execution','aggregated_output':'PRIVATE'}})+'\n'
             if self.failed: yield json.dumps({'type':'turn.failed','error':{'message':'PRIVATE'}})+'\n'
@@ -126,9 +127,10 @@ class AgentJobTests(unittest.TestCase):
     def test_command_actual_help_flags_and_tools_not_disabled(self):
         self.wait(self.jobs.start('product:shoe','读取依据'))
         self.assertEqual(self.command[self.command.index('-m')+1],MODEL)
-        self.assertEqual(self.command[self.command.index('-s')+1],'read-only')
-        self.assertIn('--ignore-user-config',self.command)
-        self.assertIn('multi_agent',self.command)
+        self.assertEqual(self.command[self.command.index('-s')+1],'workspace-write')
+        self.assertNotIn('--ignore-user-config',self.command)
+        self.assertNotIn('--ephemeral',self.command)
+        self.assertEqual(self.command[self.command.index('--enable')+1],'multi_agent')
         self.assertNotIn('--output-schema',self.command)
         self.assertNotIn('shell',self.command)
         self.assertTrue(self.kwargs['text'])
@@ -142,6 +144,38 @@ class AgentJobTests(unittest.TestCase):
         self.options={'code':1}
         result=self.wait(self.jobs.start('product:shoe','整理'))
         self.assertEqual(result['status'],'failed');self.assertIsNone(result['artifact_id']);self.assertFalse(self.app.business.artifacts)
+
+    def test_resume_uses_saved_session_and_new_attempt_without_losing_result(self):
+        first=self.wait(self.jobs.start('product:shoe','研究选款'))
+        self.assertEqual(first['session_id'],'12345678-1234-4234-8234-123456789abc')
+        second=self.wait(self.jobs.resume(first['id'],'根据已有研究继续'))
+        self.assertEqual(second['status'],'completed')
+        self.assertEqual(second['attempt'],2)
+        self.assertIn('resume',self.command)
+        self.assertIn(first['session_id'],self.command)
+        self.assertEqual(len(self.app.business.artifacts),2)
+        self.assertTrue((self.app.state/'agent-jobs'/first['id']/'attempt-1'/'final.md').exists())
+
+    def test_same_object_cannot_run_twice_and_other_object_can(self):
+        gate=threading.Event();self.options={'gate':gate}
+        with patch.object(self.app.business,'get_object',side_effect=lambda oid: {'id':oid,'kind':'product','title':oid}):
+            first=self.jobs.start('product:shoe','一项工作')
+            with self.assertRaisesRegex(ValueError,'已有工作'):
+                self.jobs.start('product:shoe','重复工作')
+            second=self.jobs.start('product:other','独立工作')
+            gate.set()
+            self.assertEqual(self.wait(first)['status'],'completed')
+            self.assertEqual(self.wait(second)['status'],'completed')
+
+    def test_automatic_mail_draft_is_read_only_and_cannot_write_mcp(self):
+        self.wait(self.jobs.start('product:shoe','处理收到的邮件',mode='mail_draft'))
+        self.assertEqual(self.command[self.command.index('-s')+1],'read-only')
+        self.assertIn('--disable',self.command)
+        self.assertTrue(any('--read-only' in arg for arg in self.command))
+        scoped=DeskTools(self.app.business,self.root,'product:shoe',read_only=True)
+        with self.assertRaises(ValueError):scoped.call('save_customer_commercial',{})
+        listed=dispatch(scoped,{'jsonrpc':'2.0','id':1,'method':'tools/list'})['result']['tools']
+        self.assertNotIn('save_customer_commercial',[row['name'] for row in listed])
 
     def test_transient_reconnect_followed_by_completed_turn_saves_result(self):
         self.options={'reconnect':True}
@@ -255,7 +289,7 @@ class AgentJobTests(unittest.TestCase):
 
     def test_private_diagnostics_retained_redacted_and_progress_has_read_type(self):
         job=self.wait(self.jobs.start('product:shoe','整理'))
-        text=(self.app.state/'agent-jobs'/job['id']/'diagnostics.log').read_text(encoding='utf8')
+        text=(self.app.state/'agent-jobs'/job['id']/'attempt-1'/'diagnostics.log').read_text(encoding='utf8')
         self.assertIn('unstructured diagnostic',text)
         self.assertNotIn('access_token=PRIVATE',text)
         self.assertIn('read',[e['type'] for e in job['events']])
@@ -313,6 +347,15 @@ class AgentJobTests(unittest.TestCase):
         events=[json.loads(line) for line in audit.read_text(encoding='utf8').splitlines()]
         self.assertTrue(any(e['tool']=='get_object' for e in events))
         self.assertTrue(any(e['tool']=='read_source' for e in events))
+
+    def test_mcp_reuses_only_bound_object_artifacts_with_pagination(self):
+        self.app.business.artifacts=[{'id':'one','object_id':'product:shoe','title':'既有研究','content':'前文后文','updated_at':'today'},
+                                     {'id':'other','object_id':'customer:buyer','title':'其他客户','content':'private'}]
+        scoped=DeskTools(self.app.business,self.root,'product:shoe')
+        self.assertEqual([x['id'] for x in scoped.call('list_artifacts',{})],['one'])
+        part=scoped.call('read_artifact',{'artifact_id':'one','start':0,'limit':2})
+        self.assertEqual(part['content'],'前文');self.assertEqual(part['nextStart'],2)
+        with self.assertRaises(ValueError):scoped.call('read_artifact',{'artifact_id':'other'})
 
     def test_website_virtual_source_uses_id_not_display_label(self):
         self.app.business.obj.update(id='customer:website-REF',kind='customer',source='网站询盘 · REF',content='original inquiry')

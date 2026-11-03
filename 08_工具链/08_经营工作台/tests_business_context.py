@@ -34,7 +34,8 @@ class ContextTests(unittest.TestCase):
             write('00_总控台/当前状态.md', '# 当前状态\n## 长期要做成什么\n持续合作\n## 中期要形成的经营能力\n旧执行摘要')
             context = desk.call('get_business_context', {})
             self.assertIn('持续合作', context['shared_sources'][1]['content'])
-            self.assertNotIn('旧执行摘要', context['shared_sources'][1]['content'])
+            self.assertIn('旧执行摘要', context['shared_sources'][1]['content'])
+            self.assertIn('可能滞后', context['shared_sources'][1]['projection'])
             self.assertIn('旧执行摘要', desk.read('00_总控台/当前状态.md')['content'])
 
     def test_customer_workflow_is_reused_and_creation_is_excluded(self):

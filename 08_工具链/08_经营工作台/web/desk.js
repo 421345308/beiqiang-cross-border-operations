@@ -882,7 +882,7 @@
         },'quiet');
         lookup.append(el('h3','公司官网'),el('p','按公司名称查找公开网址，结果可用于后续买家研究。每次查询使用现有搜索额度。'),findSite,status,results); main.append(lookup);
       }
-      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; if(item.kind==='candidate'){mountGmail(ctx,main);main.insertBefore(ctx.gmailHost,editDetails);mountCommercial(main,object.id,editDetails);} layout.append(main); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; if(item.kind==='candidate'){mountGmail(ctx,main);main.insertBefore(ctx.gmailHost,editDetails);mountCommercial(main,object.id,editDetails);main.append(button('客户资料包 · 查看选款材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'));} mountAgentWork(ctx,main); layout.append(main); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
       if (item.kind === 'candidate') {
         const shortcuts = el('div', undefined, 'candidate-quick-actions');
         shortcuts.append(button('查看资料与回复', () => artifactSection.scrollIntoView?.({behavior:'smooth',block:'start'}), 'quiet'), button('编辑客户资料', () => { editDetails.open = true; editDetails.scrollIntoView?.({behavior:'smooth',block:'start'}); }, 'quiet'));
@@ -1024,7 +1024,37 @@
     }
     if (object.kind === 'product') loadProductGaps(object, main);
     const artifactSection = el(object.kind === 'customer' ? 'details' : 'section', undefined, 'card'); if(object.kind==='customer' && isWebsite(object))artifactSection.open=true; artifactSection.append(el(object.kind === 'customer' ? 'summary' : 'h2', object.kind === 'customer' ? '回复草稿与工作成果' : '工作成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(el('p', '整理出的选款资料、回复草稿和补充内容都保存在这里，可继续编辑。', 'artifact-note'), tabs, editor); if (object.kind === 'product') main.append(artifactSection); else main.insertBefore(artifactSection, main.children[1] || null);
-    const ctx = { object, tabs, editor, summaryParagraph, conversationMessages, replyArea, artifacts: [], selectedId: null, requestedArtifact, currentEdit: null }; S.detail = ctx; if (object.kind === 'customer') { ctx.profileHost = el('section', undefined, 'card customer-analysis'); main.insertBefore(ctx.profileHost, main.children[0] || null); main.insertBefore(button('客户资料包 · 选择与组合材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),ctx.profileHost); loadProfile(ctx); mountCommercial(main,object.id,artifactSection); } if(object.kind==='customer')mountGmail(ctx,main); layout.append(main); page.append(layout); refreshArtifacts(ctx, true);
+    const ctx = { object, tabs, editor, summaryParagraph, conversationMessages, replyArea, artifacts: [], selectedId: null, requestedArtifact, currentEdit: null }; S.detail = ctx; if (object.kind === 'customer') { ctx.profileHost = el('section', undefined, 'card customer-analysis'); main.insertBefore(ctx.profileHost, main.children[0] || null); main.insertBefore(button('客户资料包 · 选择与组合材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),ctx.profileHost); loadProfile(ctx); mountCommercial(main,object.id,artifactSection); } else if (object.kind === 'prospect') { main.insertBefore(button('客户资料包 · 查看选款材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),artifactSection); } if(object.kind==='customer')mountGmail(ctx,main); mountAgentWork(ctx, main); layout.append(main); page.append(layout); refreshArtifacts(ctx, true);
+  }
+  function mountAgentWork(ctx, main) {
+    const box = el('details', undefined, 'card agent-work'), entry = el('textarea'), feedback = el('p', '', 'agent-feedback'), list = el('div');
+    entry.placeholder = '说明希望完成的经营目标或继续事项'; entry.setAttribute('aria-label', '交给 Agent 的工作');
+    const start = button('开始工作', async () => {
+      if (!entry.value.trim()) { feedback.textContent = '请先写明要完成的工作。'; return; }
+      start.disabled = true;
+      try { const job = await api('/api/desk/jobs', { object_id: ctx.object.id, instruction: entry.value.trim() }); S.jobs.unshift(job); entry.value = ''; feedback.textContent = '工作已开始。'; renderAgentJobs(ctx); }
+      catch (error) { feedback.textContent = error.message; } finally { start.disabled = false; }
+    }, 'primary');
+    box.append(el('summary', '交给 Agent 执行'), el('p', '可研究、维护资料和继续上次工作；客户开发邮件仍需逐封审核。'), entry, start, feedback, list);
+    ctx.jobList = list; ctx.jobEntry = entry; ctx.jobFeedback = feedback; main.append(box); renderAgentJobs(ctx);
+  }
+  function renderAgentJobs(ctx) {
+    if (!ctx.jobList) return; ctx.jobList.replaceChildren();
+    for (const job of jobsFor(ctx.object.id).slice(0, 8)) {
+      const row = el('article', undefined, 'agent-job');
+      row.append(badge(job.status), el('p', text(job.summary || job.error || job.instruction || '工作已创建')));
+      if (job.error && job.summary) row.append(el('p', text(job.error), 'inline-error'));
+      if (isActive(job)) row.append(button('取消工作', async () => {
+        try { const value = await api('/api/desk/job/cancel', { id: job.id }); Object.assign(job, value); renderAgentJobs(ctx); }
+        catch (error) { ctx.jobFeedback.textContent = error.message; }
+      }, 'quiet'));
+      else if (job.session_id) row.append(button('继续这项工作', async () => {
+        const instruction = ctx.jobEntry.value.trim(); if (!instruction) { ctx.jobFeedback.textContent = '请先填写继续事项。'; ctx.jobEntry.focus(); return; }
+        try { const value = await api('/api/desk/job/resume', { id: job.id, instruction }); Object.assign(job, value); ctx.jobEntry.value = ''; ctx.jobFeedback.textContent = '已继续原工作。'; renderAgentJobs(ctx); }
+        catch (error) { ctx.jobFeedback.textContent = error.message; }
+      }, 'quiet'));
+      ctx.jobList.append(row);
+    }
   }
   async function loadProductGaps(object, host) {
     const card = el('section', undefined, 'card product-gaps');
@@ -1088,7 +1118,7 @@
       if (Date.now() - S.lastBootstrapPoll >= 12000 || ['loading', 'refreshing', 'pending'].includes(S.websiteStatus.state) || ['loading', 'refreshing', 'pending'].includes(S.alibabaStatus.state)) {
         const result = await api('/api/desk/bootstrap'); S.lastBootstrapPoll = Date.now(); const old = JSON.stringify(S.objects); S.objects = result.objects || S.objects; objectsChanged = old !== JSON.stringify(S.objects); const priorArtifacts = JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); S.artifacts = result.artifacts || S.artifacts; dataChanged = priorArtifacts !== JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); websiteUpdated = !!result.website_status?.observed_at && result.website_status.observed_at !== S.websiteStatus.observed_at; gmailUpdated = (result.gmail_revision || 0) !== S.gmailRevision; S.gmailRevision = result.gmail_revision || 0; S.websiteStatus = result.website_status || S.websiteStatus; S.alibabaStatus = result.alibaba_status || S.alibabaStatus; if (result.csrf_token) S.token = result.csrf_token; updateWebsiteLabels();
       }
-      if (S.detail) { const ctx = S.detail; if(ctx.gmailHost && (gmailUpdated || Date.now()-(ctx.lastGmailRefresh || 0)>=12000))loadGmail(ctx); if(ctx.profileHost && !ctx.profileEditing && !ctx.workflowEditing && (gmailUpdated || (isWebsite(ctx.object) && (websiteUpdated || Date.now()-(ctx.lastProfileRefresh || 0)>=120000)))) {ctx.lastProfileRefresh=Date.now();loadProfile(ctx);} if (changed && ctx.profileHost && !ctx.profileEditing) loadProfile(ctx); if (changed || dataChanged || jobsFor(ctx.object.id).some(isActive)) await refreshArtifacts(ctx); }
+      if (S.detail) { const ctx = S.detail; if (changed) renderAgentJobs(ctx); if(ctx.gmailHost && (gmailUpdated || Date.now()-(ctx.lastGmailRefresh || 0)>=12000))loadGmail(ctx); if(ctx.profileHost && !ctx.profileEditing && !ctx.workflowEditing && (gmailUpdated || (isWebsite(ctx.object) && (websiteUpdated || Date.now()-(ctx.lastProfileRefresh || 0)>=120000)))) {ctx.lastProfileRefresh=Date.now();loadProfile(ctx);} if (changed && ctx.profileHost && !ctx.profileEditing) loadProfile(ctx); if (changed || dataChanged || jobsFor(ctx.object.id).some(isActive)) await refreshArtifacts(ctx); }
       else if (S.page === 'overview' && (changed || objectsChanged || dataChanged || websiteUpdated || gmailUpdated)) renderOverview();
       else if ((objectsChanged || (S.page === 'customers' && (websiteUpdated || gmailUpdated))) && S.listRefresh) await S.listRefresh();
       $('connection').textContent = '本地工作台已连接';

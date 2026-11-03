@@ -19,7 +19,7 @@
     try {
       const [data, resources, candidates] = await Promise.all([request('/api/desk/bootstrap'), request('/api/library'), request('/api/library/candidates')]);
       if (ticket !== generation || !location.hash.startsWith('#/library')) return;
-      const customers = data.objects.filter(o => o.kind === 'customer');
+      const customers = data.objects.filter(o => o.kind === 'customer' || o.kind === 'prospect');
       const selected = new URLSearchParams(location.hash.split('?')[1] || '').get('customer') || '';
       const filter = element('select'); filter.setAttribute('aria-label','查看客户资料');
       filter.add(new Option('全部资料','')); filter.add(new Option('仅共用资料','shared'));

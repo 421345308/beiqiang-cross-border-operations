@@ -113,7 +113,7 @@ class CustomerHTTPTests(unittest.TestCase):
         self.assertEqual(self.request('/api/desk/jobs',{'object_id':oid,'instruction':'Not supported','mode':'send_email'})[0],400)
 
     def test_customer_scoped_mcp_can_find_and_read_products_without_other_customer_exposure(self):
-        oid=self.intake()['object_id'];tools=self.tools(oid)
+        oid=self.intake()['object_id'];tools=DeskTools(self.app.business,self.root,oid,read_only=True)
         products=tools.call('list_objects',{'kind':'product','q':'Fixture supplier'})
         self.assertEqual([item['id'] for item in products],['product:BQ009']);self.assertLessEqual(len(products),20)
         selected=tools.call('read_product',{'product_id':'BQ009'})

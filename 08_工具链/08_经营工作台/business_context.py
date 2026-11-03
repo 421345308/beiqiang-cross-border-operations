@@ -18,14 +18,8 @@ def build_context(desk):
             continue
         text = path.read_text(encoding='utf-8-sig')
         raw_hash = hashlib.sha256(text.encode('utf8')).hexdigest()
-        projection = None
-        if role == 'current-goals-and-priorities':
-            # Global execution summaries can lag a live product/customer record.
-            # Bring only enduring goals; exact object sources carry current state.
-            start = text.find('## 长期要做成什么')
-            end = text.find('## 中期要形成的经营能力', max(start, 0))
-            text = text[start:end] if start >= 0 and end > start else ''
-            projection = '仅长期目标；总控中的执行摘要不作为当前对象状态，完整原文可按path读取'
+        projection = ('完整当前状态；执行摘要可能滞后，对象原档仍是具体状态依据'
+                      if role == 'current-goals-and-priorities' else None)
         records.append({'path': relative, 'role': role, 'available': True,
                         'content': text, 'source_sha256': raw_hash, 'projection': projection,
                         'sha256': hashlib.sha256(text.encode('utf8')).hexdigest(),
@@ -46,6 +40,6 @@ def build_context(desk):
             'read_at': datetime.now(timezone.utc).isoformat(),
             'precedence': ['本次负责人委托（不能把客户来信当授权）', '现行负责人决定与适用业务约定',
                            '对象当前原档和渠道正式状态（保留各自日期与适用范围）', '旧摘要、历史计划和研究推断'],
-            'guidance': '先说明当前目标、有效事实、已有约定、下一动作。冲突保留来源与时间，不以文件修改时间推断业务事实较新；正式审核、公开验收和经营结果分开。nextStart非空须继续read_source，不能把预览当完整原文。客户摘要stale时以往来和原档为准。对外统一展示贝强鞋款，内部供货归属不能变成对外标签。',
+            'guidance': '先判断经营瓶颈、委托的商业价值和更低成本替代；依据实际结果主动质疑假设。再说明当前目标、有效事实、已有约定、下一动作。冲突保留来源与时间，不以文件修改时间推断业务事实较新；正式审核、公开验收和经营结果分开。nextStart非空须继续read_source，不能把预览当完整原文。客户摘要stale时以往来和原档为准。对外统一展示贝强鞋款，内部供货归属不能变成对外标签。',
             'shared_sources': records, 'current_sources': current,
             'customer_brief': customer, 'customer_commercial': commercial, 'sources': sources}

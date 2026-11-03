@@ -9,6 +9,23 @@ from resource_library import ResourceLibrary
 
 
 class ResourceLibraryTest(unittest.TestCase):
+    def test_prospect_reads_only_its_own_or_shared_material(self):
+        from desk_mcp import DeskTools
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); folder=root/'04_客户开发'; folder.mkdir()
+            (folder/'selection.md').write_text('候选选款',encoding='utf8')
+            (folder/'other.md').write_text('其他客户',encoding='utf8')
+            business=SimpleNamespace(list_objects=lambda:[{'id':'prospect:a'},{'id':'customer:b'}],
+                                     get_object=lambda oid:{'id':oid,'kind':'prospect'})
+            app=SimpleNamespace(root=root,db=sqlite3.connect(':memory:'),lock=threading.RLock(),business=business)
+            library=ResourceLibrary(app);app.library=library;business.app=app
+            own=library.add({'path':'04_客户开发/selection.md','object_ids':['prospect:a']})
+            other=library.add({'path':'04_客户开发/other.md','object_ids':['customer:b']})
+            tools=DeskTools(business,root,'prospect:a')
+            self.assertEqual(tools.call('read_customer_material',{'material_id':own['id']})['content'],'候选选款')
+            with self.assertRaises(ValueError):tools.call('read_customer_material',{'material_id':other['id']})
+            app.db.close()
+
     def test_agent_reads_only_current_customer_or_shared_material(self):
         from desk_mcp import DeskTools
         with tempfile.TemporaryDirectory() as tmp:

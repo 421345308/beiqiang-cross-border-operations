@@ -57,7 +57,7 @@ class ResourceLibrary:
     def list(self):
         with self.app.lock: return [json.loads(r[0]) for r in self.app.db.execute('SELECT data FROM resource_library ORDER BY rowid DESC')]
     def for_object(self, object_id):
-        if not isinstance(object_id,str) or not object_id.startswith('customer:'): raise ValueError('请选择客户')
+        if not isinstance(object_id,str) or not object_id.startswith(('customer:', 'prospect:')): raise ValueError('请选择客户或候选客户')
         return [row for row in self.list() if not row['object_ids'] or object_id in row['object_ids']]
 
     def read_for_object(self, object_id, rid, start=0, limit=12000):

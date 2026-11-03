@@ -89,7 +89,7 @@ class Workbench:
                      '如提示正文被截断，说明需要在 Gmail 查看完整原文，不虚构缺失内容；'
                      '用中文整理客户要求、我们如何承接和下一步，再准备英文回复草稿及完整中文对照。'
                      '如为自动回复或退信，直接说明实际情况；不自动发送或作未经确认的商业承诺。')
-        return self.agent_jobs.start(object_id,instruction,mode='draft')
+        return self.agent_jobs.start(object_id,instruction,mode='mail_draft')
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -471,6 +471,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(app.business.website_status())
             if parts==['api','desk','job','cancel']:
                 return self.send_json(app.agent_jobs.cancel(body.get('id')))
+            if parts==['api','desk','job','resume']:
+                return self.send_json(app.agent_jobs.resume(body.get('id'),body.get('instruction')))
             if parts==['api','desk','artifacts']:
                 return self.send_json(app.business.save_artifact(body.get('object_id'),body.get('title'),body.get('content'),artifact_id=body.get('id')))
             if parts==['api','media','resolve']:return self.send_json({'media':app.media.resolve(body.get('path',''))})

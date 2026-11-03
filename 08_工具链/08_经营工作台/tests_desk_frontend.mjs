@@ -70,6 +70,20 @@ function harness(hash = '#/overview') {
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, clipboard: () => local.get('clipboard'), setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
+test('业务对象可继续已保存的 Agent 会话，续接请求携带原工作编号', async () => {
+  const h=harness('#/object/product%3A1'), original=h.originalFetch, calls=[];
+  h.jobs.push({id:'saved-job',object_id:'product:1',instruction:'原研究',status:'completed',session_id:'saved-session',summary:'已有结果',updated_at:'2026-11-03T00:00:00Z'});
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/job/resume') { const payload=JSON.parse(options.body); calls.push(payload); return {ok:true,json:async()=>({...h.jobs[0],status:'queued',instruction:payload.instruction})}; }
+    return original(path,options);
+  });
+  await h.ui.bootstrap(); await settle();
+  const entry=walk(h.elements.page).find(x=>x['aria-label']==='交给 Agent 的工作');
+  entry.value='核对结果后继续'; await findButton(h.body,'继续这项工作').click(); await settle();
+  assert.equal(calls.length,1); assert.equal(calls[0].id,'saved-job'); assert.equal(calls[0].instruction,'核对结果后继续');
+  assert.equal(h.requests.some(x=>String(x.path).includes('/gmail/send')),false);
+});
+
 test('Gmail 默认显示中文，原文只通过 Gmail 链接查看，更新邮件保留未保存内容', async () => {
   const h=harness('#/object/customer%3A1'), original=h.originalFetch;
   h.objects.push({id:'customer:1',kind:'customer',title:'邮件客户',assets:[]});
@@ -286,6 +300,8 @@ test('客户详情展示并保存发现路径和适配理由', async () => {
   await h.ui.bootstrap(); await settle();
   const summary=h.elements.page.querySelector('.candidate-summary');
   assert.ok(summary.textContent.includes('公开搜索发现；官网主营休闲鞋。'));
+  assert.ok(h.elements.page.textContent.includes('交给 Agent 执行'));
+  assert.ok(h.elements.page.textContent.includes('客户资料包 · 查看选款材料'));
   assert.ok(walk(summary).some(node=>node.tagName==='A' && node.href==='https://buyer.example/about'));
   const field=walk(h.elements.page).find(node=>node['aria-label']==='从哪里找到，为什么适合');
   field.value='公开目录发现；鞋类定位与本厂套脚鞋相邻。';
