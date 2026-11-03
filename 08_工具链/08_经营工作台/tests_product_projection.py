@@ -34,6 +34,15 @@ class ProductProjectionTests(BusinessTests):
         self.assertIn('换款进行中',obj['summary'])
         self.assertTrue(any(f['label']=='换款进度' and f['value']=='新款审核中' for f in obj['facts']))
 
+    def test_new_product_submission_is_shown_as_pending_review(self):
+        self.product()
+        import json
+        from business import PRODUCTS
+        rows=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        rows['products'][0]['publication_disposition']={'state':'NEW_SUBMITTED_REVIEW_PENDING'}
+        self.write(PRODUCTS,rows)
+        self.assertEqual(self.business.get_object('product:BQ009')['summary'],'新商品已提交 · 平台审核中')
+
     def test_current_model_and_reference_source_are_distinct_in_list(self):
         self.product()
         import json

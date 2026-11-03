@@ -32771,6 +32771,55 @@
         "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       }
+    },
+    {
+      "id": "BQ-9002",
+      "current_model": "BQ-9002",
+      "aliases": [
+        "BQ-9002",
+        "9002",
+        "9002-R"
+      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-bq9002-bqgcd-9002",
+      "candidate_source_ids": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/9002_贝强"
+      ],
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/上架计划.json",
+        "09_国内电商/抖店/数据/品牌首发商品.json"
+      ],
+      "notes": [
+        "普通版；与 9002-1 / ZX9002 加绒款分开。",
+        "原 HR001 三条历史使用本鞋，已改为其他款，不作为当前关联。"
+      ],
+      "classification": {
+        "local_intent_candidates": [
+          "针织套脚泡泡底步行鞋"
+        ],
+        "state": "SOURCE_AND_FORMAL_SUBMISSION",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md"
+      },
+      "local_assets": {
+        "asset_roots": [
+          "01_产品资产/02_成品素材/9002_贝强/01_国际站"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md",
+        "current_formal_by_id": {
+          "1602003801096": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/.local/独立复核/1602003801096/get.json"
+        },
+        "state": "SUBMITTED_NEW_N_REVIEW_PENDING",
+        "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
+        "finished_asset_key": "BQ-9002",
+        "finished_asset_count": 7
+      },
+      "publication_disposition": {
+        "state": "NEW_APPROVED_PUBLIC_QA_PENDING",
+        "scope": "2026-11-03 正式回读 approved/Y，核心字段独立核对通过；公开页面尚未验收。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md"
+      }
     }
   ],
   "identity_consolidation": [

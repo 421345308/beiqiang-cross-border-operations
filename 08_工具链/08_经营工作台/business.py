@@ -103,8 +103,10 @@ class Business:
             obj['publication_disposition']=product.get('publication_disposition') or {}
             if obj['publication_disposition'].get('state')=='OWNER_REPORTED_UNAVAILABLE_REPLACEMENT_PENDING':
                 obj['summary']='负责人反馈原款无货 · 暂停新推荐 · 替换进行中'
-            elif obj['publication_disposition'].get('state')=='PLATFORM_REPLACED_PUBLIC_QA_PENDING':
+            elif obj['publication_disposition'].get('state') in ('PLATFORM_REPLACED_PUBLIC_QA_PENDING','NEW_APPROVED_PUBLIC_QA_PENDING'):
                 obj['summary']='新款已审核 · 公开页面验收中'
+            elif obj['publication_disposition'].get('state')=='NEW_SUBMITTED_REVIEW_PENDING':
+                obj['summary']='新商品已提交 · 平台审核中'
             progress=(channel_states.get(pid) or {}).get('replacement_progress') or {}
             if progress.get('state')=='IN_REVIEW':obj['summary']='新款换款进行中 · 逐链接审核和验收'
             obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
@@ -127,7 +129,7 @@ class Business:
                 if str(source.get('url','')).startswith('https://'):obj['links'].append({'label':'已采纳供货来源' if adopted else '历史参考来源（非采购承诺）','url':source['url']})
             for listing in listings:
                 current=listing.get('current_platform_fields') or {};historic=listing.get('catalog_fields') or {}
-                status={'approved':'已审核','modified':'修改审核中','pending':'待审核','published':'已发布'}.get(current.get('status'),current.get('status') or '未记录审核状态')
+                status={'approved':'已审核','modified':'修改审核中','pending':'待审核','new':'新商品审核中','published':'已发布'}.get(current.get('status'),current.get('status') or '未记录审核状态')
                 obj['facts'].append(_fact('Alibaba '+str(listing.get('id')),' · '.join(str(v) for v in [current.get('title') or historic.get('title'),status,current.get('at')] if v)))
                 pending=listing.get('pending_replacement') or {}
                 if pending.get('state') in ('SUBMITTED_REVIEW_PENDING','APPROVED_PUBLIC_QA_PENDING'):
