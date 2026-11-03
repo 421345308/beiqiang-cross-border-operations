@@ -10,8 +10,9 @@ from workspaces import Workspaces, WorkspaceConflict
 from media_assets import MediaAssets, MediaError
 from resource_library import ResourceLibrary
 from product_changes import ProductChanges
+from product_gallery_changes import GalleryChanges
 from alibaba_product_review import AlibabaProductReview
-from business import Business
+from business import Business, CHANNEL
 from agent_jobs import AgentJobs, codex_executable
 from customer_workspace import CustomerWorkspace
 from inquiry_intake import InquiryIntake
@@ -55,6 +56,7 @@ class Workbench:
         self.media=MediaAssets(self.root)
         self.library=ResourceLibrary(self)
         self.product_changes=ProductChanges(self)
+        self.product_gallery_changes=GalleryChanges(self)
         self.product_review=AlibabaProductReview(self)
         self.business=Business(self)
         self.customer_workspace=CustomerWorkspace(self)
@@ -302,6 +304,7 @@ class Handler(BaseHTTPRequestHandler):
                     self.send_header('X-Content-Type-Options','nosniff');self.send_header('Cache-Control','no-store');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
                 if u.path=='/api/desk/gmail/candidates':return self.send_json(app.gmail.buyer_candidates())
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
+                if u.path=='/api/desk/customer-commercial':return self.send_json(app.customer_workspace.commercial(value('object_id')))
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
                 if u.path=='/api/desk/creation-canvas':return self.send_json({'canvas':app.creation_canvas.get(value('object_id'))})
@@ -335,6 +338,9 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/artifacts':return self.send_json({'artifacts':app.business.list_artifacts(value('object_id') or None)})
             if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
             if u.path=='/api/product-changes':return self.send_json({'changes':app.product_changes.list_changes()})
+            if u.path=='/api/product-gallery-changes':return self.send_json({'changes':app.product_gallery_changes.list_changes()})
+            if u.path.startswith('/api/product-gallery-changes/'):
+                return self.send_json(app.product_gallery_changes.get(u.path.split('/')[-1]))
             if u.path.startswith('/api/product-changes/'):
                 return self.send_json(app.product_changes.get(u.path.split('/')[-1]))
             if u.path.startswith(('/api/canvases','/api/product-drafts','/api/tools/','/api/channel-metrics/')):
@@ -405,6 +411,9 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-profile']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_profile(object_id,body))
+            if parts==['api','desk','customer-commercial']:
+                object_id=body.pop('object_id',None)
+                return self.send_json(app.customer_workspace.save_commercial(object_id,body))
             if parts==['api','desk','website-reply']:
                 return self.send_json(app.business.website.reply(body.get('object_id'),body.get('message')))
             if parts==['api','desk','customer-workflow']:
@@ -432,6 +441,11 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','media','resolve']:return self.send_json({'media':app.media.resolve(body.get('path',''))})
             if parts==['api','product-changes','prepare']:
                 return self.send_json(app.product_changes.prepare(body.get('product_id'),body.get('proposed_title'),rationale=body.get('rationale'),evidence=body.get('evidence')))
+            if parts==['api','product-gallery-changes','prepare']:
+                return self.send_json(app.product_gallery_changes.prepare_reorder(body.get('product_id'),body.get('order'),rationale=body.get('rationale') or '调整商品主图展示顺序',evidence=body.get('evidence') or [CHANNEL]))
+            if len(parts)==4 and parts[:2]==['api','product-gallery-changes']:
+                if parts[3]=='apply':return self.send_json(app.product_gallery_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
+                if parts[3]=='reconcile':return self.send_json(app.product_gallery_changes.reconcile(parts[2]))
             if len(parts)==4 and parts[:2]==['api','product-changes']:
                 if parts[3]=='apply':return self.send_json(app.product_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
                 if parts[3]=='reconcile':return self.send_json(app.product_changes.reconcile(parts[2]))

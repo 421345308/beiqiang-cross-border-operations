@@ -50,7 +50,8 @@
   async function api(path, body) {
     const response = await fetch(path, body === undefined ? { cache: 'no-store' } : { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Workbench-Token': S.token }, body: JSON.stringify(body) }); let value;
     try { value = await response.json(); } catch { throw new Error('暂时无法读取服务结果，请稍后重新读取。'); }
-    if (!response.ok || value.ok === false) throw new Error(typeof value.error === 'string' ? value.error.slice(0, 400) : value.error?.message || '这次操作未完成，请稍后再试。');
+    const errors={NO_CHANGE:'主图顺序没有变化，请先调整图片。',SIX_IMAGE_GALLERY_REQUIRED:'当前链接不是六张主图，暂不支持在此调整。',GALLERY_SCHEMA_UNVERIFIED:'平台未返回完整的主图编辑信息，请刷新后重试。',GALLERY_SCHEMA_MISMATCH:'平台主图刚发生变化，请刷新商品后重新调整。',GALLERY_IMAGE_UNAVAILABLE:'未能读取当前主图，请刷新后重试。',GALLERY_IMAGE_NOT_OFFICIAL:'当前主图无法匹配国际站图片银行。',IMAGE_BANK_UNAVAILABLE:'图片银行暂时无法读取，请稍后重试。',IMAGE_BANK_ASSET_NOT_FOUND:'图片银行未找到对应主图，请检查图片后再操作。',IMAGE_BANK_ASSET_AMBIGUOUS:'图片银行中有重复的对应图片，需要先确认。',PLATFORM_VERSION_CONFLICT:'平台商品已变化，请刷新后重新准备方案。',LOCAL_VERSION_CONFLICT:'本地商品记录已变化，请重新读取后准备方案。',PLATFORM_NOT_APPROVED:'商品仍在平台审核中，请审核完成后再调整。'};
+    if (!response.ok || value.ok === false) throw new Error(typeof value.error === 'string' ? value.error.slice(0, 400) : value.error?.message || errors[value.error?.code] || '这次操作未完成，请稍后再试。');
     return value;
   }
   const array = (value, key) => Array.isArray(value) ? value : value?.[key] || [];
@@ -256,7 +257,7 @@
                 const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.listing_id}`),el('p',row.action));
                 const labels={search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors:'访客',inquiries:'询盘',tm_buyers:'TM买家'};
                 entry.append(el('p',Object.entries(labels).map(([key,title])=>`${title} ${row.metrics?.[key] ?? '无报表数据'}`).join(' · ')));
-                if(row.object_id)entry.append(button('查看当前商品与平台链接',()=>goObject(row.object_id),'quiet'));
+                if(row.object_id)entry.append(button('查看当前商品与平台链接',()=>{location.hash=`/object/${encodeURIComponent(row.object_id)}?listing=${encodeURIComponent(row.listing_id)}`;},'quiet'));
                 else entry.append(el('p',row.association==='ambiguous'?'此链接关联多个商品，先核商品对应。':'此历史链接尚未关联当前商品。','muted'));
                 list.append(entry);
               }
@@ -763,6 +764,57 @@
       contact_status_label:flow.state_label || '', next_action:summary.next_action || flow.next_action || '',
       workflow:flow, updated_at:flow.updated_at || row.received_at, source_type:row.source_type};
   }
+  function mountCommercial(host, objectId, before = null) {
+    const box=el('section',undefined,'card customer-commercial'), content=el('div'), feedback=el('p','','agent-feedback');
+    box.append(el('h2','报价、样品与订单'),content,feedback); if(before)host.insertBefore(box,before);else host.append(box);
+    let data;
+    async function read() {
+      try { data=await api(`/api/desk/customer-commercial?object_id=${encodeURIComponent(objectId)}`); draw(); }
+      catch(error) { content.replaceChildren(el('p',error.message,'muted')); }
+    }
+    function draw() {
+      content.replaceChildren();
+      if(data.next_action)content.append(el('p',`下一步：${data.next_action}`));
+      const records=data.records || [];
+      if(!records.length)content.append(el('p','还没有报价、样品或订单记录。','muted'));
+      for(const row of [...records].reverse()) {
+        const item=el('article',undefined,'artifact-row');
+        item.append(el('h3',`${data.labels?.kinds?.[row.kind] || row.kind} · ${data.labels?.statuses?.[row.status] || row.status}`),el('p',row.summary));
+        if(row.products)item.append(el('p',`商品：${row.products}`));
+        if(row.terms)item.append(el('p',`条件：${row.terms}`));
+        if(row.actual_result)item.append(el('p',`实际进展：${row.actual_result}`));
+        if(row.reference)item.append(el('p',`关联资料：${row.reference}`));
+        item.append(button('编辑',()=>editor(row),'quiet'));content.append(item);
+      }
+      if(data.source_orders?.length)content.append(el('p',`已有国际站订单 ${data.source_orders.length} 条，可在原订单记录查看。`,'muted'));
+      const editorHost=el('div'); content.append(button('添加报价、样品或订单',()=>editor(), 'quiet'),editorHost);
+      function editor(row={}) {
+        editorHost.replaceChildren(); const form=el('div',undefined,'profile-form');
+        const kind=selectField(form,'记录类型',[['quotation','报价'],['sample','样品'],['order','订单']],row.kind || 'quotation');
+        if(row.id)kind.disabled=true;
+        const status=selectField(form,'记录状态',[['draft','内部准备'],['recorded','已有实际记录'],['cancelled','已取消']],row.status || 'draft');
+        const summary=addField(form,'当前情况',row.summary,true,'例如：客户希望先确认混码报价');
+        const products=addField(form,'相关商品',row.products,false,'选填');
+        const terms=addField(form,'价格、条件或样品要求',row.terms,true,'选填');
+        const reference=addField(form,'相关资料或订单编号',row.reference,false,'选填');
+        const extra=el('details'), extraFields=el('div',undefined,'profile-form');extra.append(el('summary','补充样品、结果和费用'),extraFields);
+        const purpose=addField(extraFields,'样品目的',row.purpose,true,'选填');
+        const acceptance=addField(extraFields,'验收要求',row.acceptance,true,'选填');
+        const exclusions=addField(extraFields,'不包含的内容',row.exclusions,true,'选填');
+        const actual=addField(extraFields,'实际进展',row.actual_result,true,'选填');
+        const profit=addField(extraFields,'费用与利润依据',row.profit_basis,true,'选填');form.append(extra);
+        const owner=addField(form,'负责人',data.owner,false,'选填');
+        const next=addField(form,'接下来做什么',data.next_action,true,'选填');
+        const save=button('保存记录',async()=>{
+          if(!summary.value.trim()){feedback.textContent='请填写当前情况。';return;}
+          save.disabled=true;feedback.textContent='正在保存…';
+          try { await api('/api/desk/customer-commercial',{object_id:objectId,revision:data.revision,owner:owner.value,next_action:next.value,record:{...(row.id?{id:row.id}:{}),kind:kind.value,status:status.value,summary:summary.value,products:products.value,terms:terms.value,reference:reference.value,purpose:purpose.value,acceptance:acceptance.value,exclusions:exclusions.value,actual_result:actual.value,profit_basis:profit.value}});feedback.textContent='已保存到客户记录。';await read(); }
+          catch(error){feedback.textContent=error.message;save.disabled=false;}
+        },'primary');form.append(save,button('取消',()=>editorHost.replaceChildren(),'quiet'));editorHost.append(form);
+      }
+    }
+    read();return box;
+  }
   async function renderDevelopment() {
     const page = $('page'), routeSerial = S.loadSerial; const current = () => S.page === 'customers' && routeSerial === S.loadSerial && parseRoute().query.get('view') !== 'inquiries'; page.replaceChildren(heading('客户工作台', '客户与机会', '先看需要处理的事，再继续开发目标客群。'), customerTabs('development')); const target = el('details', undefined, 'card discovery-target'); target.append(el('summary', '新建买家研究任务')); const form = el('div', undefined, 'discovery-target-form'), title = addField(form, '研究任务名称', '', false, '例如：为一组产品寻找匹配的买家'), audience = addField(form, '目标客群与研究要求', '', true, '说明市场、买家业务、产品适配与需要核查的证据'); const feedback = el('p', '', 'agent-feedback'), inbox = el('section'), tasks = el('section'), candidates = el('section'), detail = el('section'), sync = el('div', undefined, 'customer-sync'); target.append(form, feedback, button('保存研究任务', async () => { if (!title.value.trim() || !audience.value.trim()) { feedback.textContent = '请先写清任务名称和目标客群。'; return; } try { const result = await api('/api/desk/discovery', { kind: 'research_task', title: title.value, target: audience.value, status: '研究准备' }); await read(); await openItem((result.item || result).id); } catch (error) { feedback.textContent = error.message; } }, 'primary')); page.append(sync, inbox, candidates, tasks, target, detail);
     async function openItem(id) {
@@ -807,7 +859,7 @@
         },'quiet');
         lookup.append(el('h3','公司官网'),el('p','按公司名称查找公开网址，结果可用于后续买家研究。每次查询使用现有搜索额度。'),findSite,status,results); main.append(lookup);
       }
-      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; if(item.kind==='candidate'){mountGmail(ctx,main);main.insertBefore(ctx.gmailHost,editDetails);} layout.append(main); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; if(item.kind==='candidate'){mountGmail(ctx,main);main.insertBefore(ctx.gmailHost,editDetails);mountCommercial(main,object.id,editDetails);} layout.append(main); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
       if (item.kind === 'candidate') {
         const shortcuts = el('div', undefined, 'candidate-quick-actions');
         shortcuts.append(button('查看资料与回复', () => artifactSection.scrollIntoView?.({behavior:'smooth',block:'start'}), 'quiet'), button('编辑客户资料', () => { editDetails.open = true; editDetails.scrollIntoView?.({behavior:'smooth',block:'start'}); }, 'quiet'));
@@ -931,7 +983,7 @@
   function renderObject(object, requestedArtifact) {
     const page = $('page'), top = el('div', undefined, 'detail-top'), info = el('div'); info.append(el('span', objectKind(object), 'eyebrow'), el('h1', text(object.title))); if (object.subtitle && object.kind !== 'customer') info.append(el('p', object.kind === 'product' && /[A-Za-z]/.test(text(object.subtitle)) ? `平台原文：${text(object.subtitle)}` : displayText(object.subtitle))); if (object.kind === 'product') info.append(el('p', '集中查看产品事实、来源依据和素材，继续整理可用的选款资料。'));  top.append(info, button('返回列表', () => { location.hash = object.kind === 'product' ? '/products' : object.kind === 'prospect' ? '/customers?view=development' : '/customers?view=inquiries'; }, 'quiet')); page.replaceChildren(top);
     const layout = el('div', undefined, 'object-layout'), main = el('div', undefined, 'object-main'); const hero = el('section', undefined, 'card detail-hero'), asset = firstImage(object), facts = el('div'); if (asset) hero.append(image(asset, 'hero-image')); else hero.style.gridTemplateColumns = '1fr'; facts.append(el('h2', object.kind === 'product' ? '商品资料' : '需求与背景')); const summaryParagraph = el('p', object.kind === 'customer' ? '原始需求在下方，可在当前对话中让我整理中文解读。' : text(object.summary), object.kind === 'customer' ? 'agent-copy customer-need' : 'agent-copy'); if (object.kind === 'customer') facts.append(summaryParagraph); if(object.kind==='product')appendProductLinks(facts,object); const dl = el('dl', undefined, 'object-facts'); const factGroups = summaryFacts(object); for (const item of factGroups.shown) dl.append(el('dt', text(item.label)), el('dd', displayText(item.value) || '资料未提供')); facts.append(dl); if (object.kind !== 'product' && (factGroups.more.length || object.source)) { const details = el('details', undefined, 'extra-facts'); details.append(el('summary', '更多档案与渠道信息')); const more = el('dl', undefined, 'object-facts'); for (const item of factGroups.more) more.append(el('dt', text(item.label)), el('dd', displayText(item.value) || '资料未提供')); details.append(more, el('div', `来源：${text(object.source) || '来源未提供'}`, 'object-source')); facts.append(details); } hero.append(facts); if (object.kind !== 'customer') main.append(hero);
-    if (object.kind === 'product' && window.mountProductReview) window.mountProductReview(main, object, api, {preview: previewAsset, titleDraft: (box, select) => titleDraftForm(box, object, select)});
+    if (object.kind === 'product' && window.mountProductReview) window.mountProductReview(main, object, api, {preview: previewAsset, listingId: parseRoute().query.get('listing') || '', titleDraft: (box, select) => titleDraftForm(box, object, select)});
     if ((object.assets || []).length) {
       const materials = el('section', undefined, 'card'); materials.append(el('h2', object.kind === 'product' ? '图片与素材' : '需求资料')); const grid = el('div', undefined, 'asset-grid'); let expanded = false;
       function renderAssets() { grid.replaceChildren(); for (const item of object.assets.slice(0, expanded ? object.assets.length : 6)) { const row = el('div', undefined, 'asset-item'), src = safeUrl(item.url); if (imageAsset(item) && src) row.append(image(item, '')); row.append(el('div', assetLabel(item), 'asset-label')); if (src) row.append(button('预览', () => previewAsset(item), 'quiet')); grid.append(row); } }
@@ -949,7 +1001,7 @@
     }
     if (object.kind === 'product') loadProductGaps(object, main);
     const artifactSection = el(object.kind === 'customer' ? 'details' : 'section', undefined, 'card'); if(object.kind==='customer' && isWebsite(object))artifactSection.open=true; artifactSection.append(el(object.kind === 'customer' ? 'summary' : 'h2', object.kind === 'customer' ? '回复草稿与工作成果' : '工作成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(el('p', '整理出的选款资料、回复草稿和补充内容都保存在这里，可继续编辑。', 'artifact-note'), tabs, editor); if (object.kind === 'product') main.append(artifactSection); else main.insertBefore(artifactSection, main.children[1] || null);
-    const ctx = { object, tabs, editor, summaryParagraph, conversationMessages, replyArea, artifacts: [], selectedId: null, requestedArtifact, currentEdit: null }; S.detail = ctx; if (object.kind === 'customer') { ctx.profileHost = el('section', undefined, 'card customer-analysis'); main.insertBefore(ctx.profileHost, main.children[0] || null); main.insertBefore(button('客户资料包 · 选择与组合材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),ctx.profileHost); loadProfile(ctx); } if(object.kind==='customer')mountGmail(ctx,main); layout.append(main); page.append(layout); refreshArtifacts(ctx, true);
+    const ctx = { object, tabs, editor, summaryParagraph, conversationMessages, replyArea, artifacts: [], selectedId: null, requestedArtifact, currentEdit: null }; S.detail = ctx; if (object.kind === 'customer') { ctx.profileHost = el('section', undefined, 'card customer-analysis'); main.insertBefore(ctx.profileHost, main.children[0] || null); main.insertBefore(button('客户资料包 · 选择与组合材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),ctx.profileHost); loadProfile(ctx); mountCommercial(main,object.id,artifactSection); } if(object.kind==='customer')mountGmail(ctx,main); layout.append(main); page.append(layout); refreshArtifacts(ctx, true);
   }
   async function loadProductGaps(object, host) {
     const card = el('section', undefined, 'card product-gaps');

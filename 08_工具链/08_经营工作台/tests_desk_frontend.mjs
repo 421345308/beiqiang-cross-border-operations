@@ -515,8 +515,8 @@ test('creation project opens its exact object without a duplicate agent entry', 
   assert.ok(h.elements.page.textContent.includes('创作成果'));
 });
 
-test('商品检查使用所选链接并展示平台与本地标题差异', async () => {
-  const h = harness('#/object/product%3A1');
+test('商品检查从经营分析打开精确链接，并支持切换与对照', async () => {
+  const h = harness('#/object/product%3A1?listing=456');
   h.objects[0].links = [{label:'Alibaba 123',url:'https://example.com/product'},{label:'Alibaba 456',url:'https://example.com/product2'}];
   const original = h.originalFetch;
   h.interceptFetch(async (path, options) => {
@@ -525,9 +525,41 @@ test('商品检查使用所选链接并展示平台与本地标题差异', async
     return original(path, options);
   });
   await h.ui.bootstrap(); await settle();
-  const select=walk(h.elements.page).find(x=>x['aria-label']==='选择国际站商品链接'); select.value='456';select.listeners.change();await settle();
-  assert.ok(h.elements.page.textContent.includes('Live 456'));assert.ok(h.elements.page.textContent.includes('中文平台标题'));assert.ok(h.elements.page.textContent.includes('本地标题：Local'));
+  assert.ok(h.elements.page.textContent.includes('Live 456'));
+  const select=walk(h.elements.page).find(x=>x['aria-label']==='选择国际站商品链接'); select.value='123';select.listeners.change();await settle();
+  assert.ok(h.elements.page.textContent.includes('Live 123'));assert.ok(h.elements.page.textContent.includes('中文平台标题'));assert.ok(h.elements.page.textContent.includes('本地标题：Local'));
   assert.ok(h.elements.page.textContent.includes('平台主图 · 1 张'));assert.ok(h.elements.page.textContent.includes('平台详情图 · 1 张'));
+});
+
+test('商品主图调整先预览顺序，准备方案不自动提交', async () => {
+  const h=harness('#/object/product%3A1'), original=h.originalFetch;
+  h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];
+  const urls=Array.from({length:6},(_,i)=>`https://sc04.alicdn.com/kf/${i}.jpg`);let prepared=null,submitted=false;
+  h.interceptFetch(async(path,options={})=>{
+    if(String(path).startsWith('/api/desk/product-review'))return {ok:true,json:async()=>({listings:[{id:'123'}],selected:{id:'123',state:'ready',local:{},platform:{title:'Live',main_images:urls.map(url=>({url})),detail_images:[],company_images:[]},comparison:{}}})};
+    if(path==='/api/product-gallery-changes/prepare'){prepared=JSON.parse(options.body);return {ok:true,json:async()=>({ok:true,change:{id:'gallery1',version:'v1',diff:{before:urls,after:[urls[1],urls[0],...urls.slice(2)]},submission:{state:'not-submitted'}}})};}
+    if(String(path).includes('/apply'))submitted=true;
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const up=walk(h.elements.page).filter(node=>node.tagName==='BUTTON' && node.textContent==='前移');await up[1].click();
+  await findButton(h.elements.page,'生成主图调整方案').click();await settle();
+  assert.deepEqual(prepared,{product_id:'123',order:[2,1,3,4,5,6]});assert.match(h.elements.page.textContent,/主图调整方案/);assert.equal(submitted,false);
+});
+
+test('客户商机可记录报价并保存下一步', async () => {
+  const h=harness('#/object/customer%3Adeal'),original=h.originalFetch;
+  h.objects.push({id:'customer:deal',kind:'customer',title:'测试客户',assets:[]});let saved;
+  const commercial={object_id:'customer:deal',revision:'v1',records:[],owner:'',next_action:'',labels:{kinds:{quotation:'报价'},statuses:{draft:'内部准备'}}};
+  h.interceptFetch(async(path,options={})=>{
+    if(String(path).startsWith('/api/desk/customer-commercial')){if(options.body){saved=JSON.parse(options.body);commercial.records=[saved.record];commercial.next_action=saved.next_action;}return {ok:true,json:async()=>structuredClone(commercial)};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'添加报价、样品或订单').click();
+  const find=label=>walk(h.elements.page).find(node=>node['aria-label']===label);
+  find('当前情况').value='客户需要确认混码报价';find('接下来做什么').value='确认颜色和尺码';
+  await findButton(h.elements.page,'保存记录').click();await settle();
+  assert.equal(saved.record.kind,'quotation');assert.equal(saved.record.summary,'客户需要确认混码报价');assert.equal(saved.next_action,'确认颜色和尺码');assert.match(h.elements.page.textContent,/客户需要确认混码报价/);
 });
 
 test('title draft selects only existing evidence and prepares without submission', async () => {
@@ -675,7 +707,7 @@ test('渠道经营分析保留历史期和空数据，筛选重点行动并进�
   const filter=h.elements.page.querySelector('select');filter.value='已有咨询，改善有效采购承接';filter.listeners.change();
   assert.doesNotMatch(h.elements.page.textContent,/链接 12/);
   await findButton(h.elements.page,'查看当前商品与平台链接').click();
-  assert.equal(h.location.hash,'/object/product%3ABQ001');
+  assert.equal(h.location.hash,'/object/product%3ABQ001?listing=11');
   assert.equal(h.requests.some(row=>row.payload),false);
 });
 

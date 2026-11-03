@@ -191,6 +191,14 @@ class CustomerWorkspace:
         obj,source_type,record,original,source_hash=self._source(object_id)
         return self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'),record=record))
 
+    def commercial(self,object_id):
+        import customer_commercial
+        return customer_commercial.view(self,object_id)
+
+    def save_commercial(self,object_id,body):
+        import customer_commercial
+        return customer_commercial.save(self,object_id,body)
+
     def save_workflow(self,object_id,body):
         with self.app.lock:
             row=customer_workflow.update(self.workflow(object_id),body,record=self._source(object_id)[2])

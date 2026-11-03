@@ -1,7 +1,7 @@
-"""Reviewed, title-only Alibaba change. No import-time I/O or automatic retries.
+"""Reviewed Alibaba field changes. No import-time I/O or automatic retries.
 
 Drafts/receipts belong to the existing application database. The sole catalog
-remains 国际站商品.json; only approved, formally read titles may be synchronized.
+remains 国际站商品.json; only approved, formally read targets may be synchronized.
 """
 from __future__ import annotations
 
@@ -41,6 +41,19 @@ class ChangeError(Exception):
 
 
 class ProductChanges:
+    field = 'title'
+    protected = PROTECTED
+
+    def _target(self, product):
+        return product['subject']
+
+    def _valid_target(self, value):
+        return (isinstance(value, str) and bool(value.strip()) and len(value) <= 1000
+                and not any(ord(c) < 32 for c in value))
+
+    def _normalize_target(self, value, platform):
+        return value.strip()
+
     def __init__(self, app, client=None):
         self.app = app
         self.root = Path(app.root).resolve()
@@ -83,7 +96,10 @@ class ProductChanges:
             row = self.app.db.execute('SELECT data FROM product_changes WHERE id=?', (change_id,)).fetchone()
         if not row:
             raise ChangeError('CHANGE_NOT_FOUND')
-        return json.loads(row[0])
+        change = json.loads(row[0])
+        if change.get('diff', {}).get('field') != self.field:
+            raise ChangeError('CHANGE_FIELD_MISMATCH')
+        return change
 
     def _save(self, change, previous=None):
         with self.app.lock:
@@ -170,7 +186,8 @@ class ProductChanges:
             raise ChangeError('PROTECTION_FIELDS_UNAVAILABLE')
         return {'title': product['subject'], 'status': product.get('status'),
                 'display': product.get('display'), 'categoryId': str(cat),
-                'protectedFields': {key: digest({'present': key in product, 'value': product.get(key)}) for key in PROTECTED},
+                'protectedFields': {key: digest({'present': key in product, 'value': product.get(key)}) for key in self.protected},
+                self.field: self._target(product),
                 'observedAt': now(), **self._receipt(raw)}
 
     def _xml(self, pid, platform, title):
@@ -218,8 +235,7 @@ class ProductChanges:
 
     def _prepare(self, pid, title, *, rationale, evidence, internal_test=False):
         if (not isinstance(pid, str) or not re.fullmatch(r'\d{1,32}', pid)
-                or not isinstance(title, str) or not title.strip() or len(title) > 1000
-                or any(ord(c) < 32 for c in title)
+                or not self._valid_target(title)
                 or not isinstance(rationale, str) or not rationale.strip() or len(rationale) > 4000
                 or not isinstance(evidence, list) or not evidence or len(evidence) > 30
                 or type(internal_test) is not bool):
@@ -240,19 +256,19 @@ class ProductChanges:
         _, _, row = self._catalog(pid)
         if 'PROTECT_SOURCE' in json.dumps(row):
             raise ChangeError('PROTECTED_PRODUCT')
-        local = row.get('current_platform_fields', row.get('catalog_fields', {})).get('title')
-        if not isinstance(local, str):
+        local = row.get('current_platform_fields', row.get('catalog_fields', {})).get(self.field)
+        if self.field == 'title' and not isinstance(local, str):
             raise ChangeError('LOCAL_TITLE_MISSING')
         platform = self._read(pid)
         if platform['status'] != 'approved':
             raise ChangeError('PLATFORM_NOT_APPROVED')
-        title = title.strip()
-        if title == platform['title']:
+        title = self._normalize_target(title, platform)
+        if title == platform[self.field]:
             raise ChangeError('NO_CHANGE')
         xml = self._xml(pid, platform, title)
         change = {'id': change_id, 'productId': pid, 'state': 'prepared', 'createdAt': now(),
                   'internalTest': internal_test,
-                  'diff': {'field': 'title', 'before': platform['title'], 'after': title, 'localBefore': local},
+                  'diff': {'field': self.field, 'before': platform[self.field], 'after': title, 'localBefore': local},
                   'rationale': rationale.strip(), 'evidence': refs, 'localRowHash': digest(row),
                   'baseline': platform, 'xml': xml, 'xmlHash': hashlib.sha256(xml.encode()).hexdigest(),
                   'submission': {'state': 'not-submitted', 'at': None},
@@ -266,6 +282,7 @@ class ProductChanges:
     def list_changes(self):
         with self.app.lock:
             values = [json.loads(row[0]) for row in self.app.db.execute('SELECT data FROM product_changes ORDER BY rowid DESC')]
+            values = [value for value in values if value.get('diff', {}).get('field') == self.field]
             return self.client.safe(values) if hasattr(self.client, 'safe') else self.adapter.sanitize(values)
 
     def apply(self, change_id, *, confirmed, expected_version):
@@ -287,7 +304,7 @@ class ProductChanges:
         if digest(row) != change['localRowHash']:
             raise ChangeError('LOCAL_VERSION_CONFLICT')
         current = self._read(pid)
-        if (current['title'] != change['diff']['before'] or current['categoryId'] != change['baseline']['categoryId']
+        if (current[self.field] != change['diff']['before'] or current['categoryId'] != change['baseline']['categoryId']
                 or current['status'] != 'approved' or current['display'] != change['baseline']['display']
                 or current['protectedFields'] != change['baseline']['protectedFields']):
             raise ChangeError('PLATFORM_VERSION_CONFLICT')
@@ -345,7 +362,7 @@ class ProductChanges:
         formal = self._read(change['productId'])
         preserved = formal['protectedFields'] == change['baseline']['protectedFields']
         display_preserved = formal['display'] == change['baseline']['display']
-        matched = formal['title'] == change['diff']['after'] and formal['status'] == 'approved' and preserved and display_preserved
+        matched = formal[self.field] == change['diff']['after'] and formal['status'] == 'approved' and preserved and display_preserved
         schema_state = 'not-verified'
         if matched:
             try:
@@ -378,26 +395,26 @@ class ProductChanges:
 
     def _sync_locked(self, change):
         raw, data, row = self._catalog(change['productId'])
-        marker = row.get('local_sync', {}).get('title_change', {})
-        title_fields = [row[key].get('title') for key in ('current_platform_fields', 'catalog_fields') if key in row]
-        if marker.get('change_id') == change['id'] and title_fields and all(value == change['diff']['after'] for value in title_fields):
+        marker = row.get('local_sync', {}).get(self.field + '_change', {})
+        target_fields = [row[key].get(self.field) for key in ('current_platform_fields', 'catalog_fields') if key in row]
+        if marker.get('change_id') == change['id'] and target_fields and all(value == change['diff']['after'] for value in target_fields):
             return  # Recovery after file replace succeeded but DB commit failed.
         if digest(row) != change['localRowHash']:
             raise ChangeError('LOCAL_VERSION_CONFLICT')
         for key in ('current_platform_fields', 'catalog_fields'):
             if key in row:
-                row[key]['title'] = change['formal']['title']
+                row[key][self.field] = change['formal'][self.field]
                 # Do not freshen the timestamp of unrelated historical fields.
-                row[key]['title_observed_at'] = change['formal']['observedAt']
-        row.setdefault('local_sync', {})['title_change'] = {
-            'change_id': change['id'], 'state': 'TITLE_FORMAL_SYNCED_PUBLIC_PENDING',
+                row[key][self.field + '_observed_at'] = change['formal']['observedAt']
+        row.setdefault('local_sync', {})[self.field + '_change'] = {
+            'change_id': change['id'], 'state': self.field.upper() + '_FORMAL_SYNCED_PUBLIC_PENDING',
             'observed_at': change['formal']['observedAt'], 'request_id': change['formal'].get('requestId'),
             'receipt_store': 'workbench-db:product_changes', 'index_state': 'PENDING_REGENERATION'}
-        row.setdefault('formal_fields', {})['title'] = {
+        row.setdefault('formal_fields', {})[self.field] = {
             'change_id': change['id'], 'observed_at': change['formal']['observedAt'],
-            'receipt_store': 'workbench-db:product_changes', 'scope': 'productTitle only; protected fields matched'}
+            'receipt_store': 'workbench-db:product_changes', 'scope': self.field + ' only; protected fields matched'}
         payload = (json.dumps(data, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
-        handle, tmp = tempfile.mkstemp(prefix='.title-change-', suffix='.tmp', dir=self.catalog.parent)
+        handle, tmp = tempfile.mkstemp(prefix='.' + self.field + '-change-', suffix='.tmp', dir=self.catalog.parent)
         try:
             with os.fdopen(handle, 'wb') as output:
                 output.write(payload)

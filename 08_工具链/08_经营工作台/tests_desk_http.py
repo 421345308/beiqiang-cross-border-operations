@@ -108,6 +108,26 @@ class DeskHTTPTests(unittest.TestCase):
         for thread in threading.enumerate():
             if thread.name=='product-title-translation':thread.join(2)
 
+    def test_customer_commercial_http_saves_in_original_customer_profile(self):
+        oid='customer:website-BQ-REAL'
+        status,current=self.request('/api/desk/customer-commercial?'+urlencode({'object_id':oid}))
+        self.assertEqual(status,200)
+        status,updated=self.request('/api/desk/customer-commercial',{'object_id':oid,'revision':current['revision'],
+            'next_action':'确认尺码','record':{'kind':'quotation','status':'draft','summary':'报价待确认'}})
+        self.assertEqual(status,200);self.assertEqual(updated['records'][0]['summary'],'报价待确认')
+        self.assertEqual(self.app.customer_workspace.workflow(oid)['next_action'],'确认尺码')
+        status,again=self.request('/api/desk/customer-commercial?'+urlencode({'object_id':oid}))
+        self.assertEqual(again['records'][0]['summary'],'报价待确认')
+
+    def test_gallery_http_routes_prepare_without_submitting(self):
+        change={'ok':True,'change':{'id':'gallery1','version':'v1'}}
+        with patch.object(self.app.product_gallery_changes,'prepare_reorder',return_value=change) as prepare, \
+             patch.object(self.app.product_gallery_changes,'apply') as apply:
+            status,value=self.request('/api/product-gallery-changes/prepare',{'product_id':'1601','order':[2,1,3,4,5,6]})
+            self.assertEqual(status,200);self.assertEqual(value['change']['id'],'gallery1')
+            prepare.assert_called_once_with('1601',[2,1,3,4,5,6],rationale='调整商品主图展示顺序',evidence=[CHANNEL])
+            apply.assert_not_called()
+
     def test_alibaba_manual_inquiry_to_analysis_and_queue(self):
         from tests_customer_analysis import response
         original='Please send a quotation for 500 pairs of walking shoes.'
