@@ -18622,10 +18622,8 @@
         "HR015"
       ],
       "source_state": "ADOPTED",
-      "adopted_source_id": "src-hr-hr015-24czya22-56",
-      "candidate_source_ids": [
-        "src-hr-hr015-24czya22-56"
-      ],
+      "adopted_source_id": "src-hr015-yongyi-Y778",
+      "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -18709,7 +18707,8 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943542329/verification.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/搜鞋候选.md"
       ],
       "notes": [
         "历史候选/货号：**未定款；无已确认货源**",
@@ -18719,65 +18718,116 @@
       ],
       "local_assets": {
         "asset_roots": [
+          "01_产品资产/02_成品素材/BQ1015_Y778"
+        ],
+        "historical_asset_roots": [
           "01_产品资产/02_成品素材/BQ1015"
         ],
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/来源与正式绑定核验.json",
-        "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
-        "current_gallery_by_id": {
-          "1601943542329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943542329/当前图库与货号.json",
-          "1601943517454": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943517454/当前图库与货号.json",
-          "1601943502604": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943502604/当前图库与货号.json"
-        },
-        "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
-        "current_detail_image_revision_by_id": {
-          "1601943502604": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
-          "1601943542329": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
-          "1601943517454": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json"
-        },
-        "current_prices_by_id": {
-          "1601943542329": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943542329/verification.json",
-          "1601943517454": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943517454/verification.json",
-          "1601943502604": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943502604/verification.json"
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "current_fields_file": null,
+        "current_formal_by_id": {
+          "1601943502604": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/.local/668执行/商品/1601943502604/status_once_20261104_get.json",
+          "1601943542329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/.local/668执行/商品/1601943542329/status_once_20261104_get.json",
+          "1601943517454": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/.local/668执行/商品/1601943517454/status_once_20261104_get.json"
         },
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ1015",
-        "finished_asset_count": 6
+        "finished_asset_count": 10
       },
       "classification": {
         "local_intent_candidates": [
-          "套脚/袜套需求",
-          "步行/休闲需求"
+          "女式素面低帮套脚休闲鞋"
         ],
-        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
-        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        "state": "FORMAL_CATEGORY_AND_GROUP_READBACK",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/搜鞋候选.md"
       },
       "supply_mode": {
         "current": "EXTERNAL_FACTORY",
         "state": "SOURCE_ROUTE_EVIDENCED",
-        "at": "2026-10-16T05:17:22.697536+00:00",
+        "scope": "外采兼容编码仅表采购路线，不证明供方是工厂或实际库存。",
         "evidence": [
-          "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_images_approved.json",
-          "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_approved_bank_mapping.json",
-          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/来源与正式绑定核验.json"
-        ],
-        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/搜鞋候选.md"
+        ]
       },
       "current_model": "BQ1015",
       "content_gallery_revision": {
-        "at": "2026-10-20T07:58:10.962726+00:00",
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+        "state": "Y778_FORMAL_READBACK_PUBLIC_QA_PENDING",
         "evidence": [
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/图片银行.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/prepared.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/update_receipt.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/verification.json"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/搜鞋候选.md"
         ]
-      }
+      },
+      "before_Y778": {
+        "adopted_source_id": "src-hr-hr015-24czya22-56",
+        "source_state": "ADOPTED",
+        "supply_mode": {
+          "current": "EXTERNAL_FACTORY",
+          "state": "SOURCE_ROUTE_EVIDENCED",
+          "at": "2026-10-16T05:17:22.697536+00:00",
+          "evidence": [
+            "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_images_approved.json",
+            "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_approved_bank_mapping.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/来源与正式绑定核验.json"
+          ],
+          "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+          "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+        },
+        "candidate_source_ids": [
+          "src-hr-hr015-24czya22-56"
+        ],
+        "raw_packages": [],
+        "classification": {
+          "local_intent_candidates": [
+            "套脚/袜套需求",
+            "步行/休闲需求"
+          ],
+          "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+          "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        },
+        "content_gallery_revision": {
+          "at": "2026-10-20T07:58:10.962726+00:00",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/图片银行.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/商品/1601943517454/verification.json"
+          ]
+        },
+        "local_assets": {
+          "asset_roots": [
+            "01_产品资产/02_成品素材/BQ1015"
+          ],
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/来源与正式绑定核验.json",
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+          "current_gallery_by_id": {
+            "1601943542329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943542329/当前图库与货号.json",
+            "1601943517454": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943517454/当前图库与货号.json",
+            "1601943502604": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943502604/当前图库与货号.json"
+          },
+          "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+          "current_detail_image_revision_by_id": {
+            "1601943502604": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
+            "1601943542329": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json",
+            "1601943517454": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR015_旧报价图替换/计划.json"
+          },
+          "current_prices_by_id": {
+            "1601943542329": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943542329/verification.json",
+            "1601943517454": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943517454/verification.json",
+            "1601943502604": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943502604/verification.json"
+          },
+          "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
+          "finished_asset_key": "BQ1015",
+          "finished_asset_count": 6
+        }
+      },
+      "historical_source_ids": [
+        "src-hr-hr015-24czya22-56"
+      ],
+      "historical_raw_packages": []
     },
     {
       "id": "HR016",
@@ -19621,7 +19671,7 @@
         "HR021"
       ],
       "source_state": "ADOPTED",
-      "adopted_source_id": "src-707e87acea05",
+      "adopted_source_id": "src-hr021-shangzuo-7899",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -19717,68 +19767,118 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943584343/verification.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/搜鞋候选.md"
       ],
       "notes": [],
       "local_assets": {
         "asset_roots": [
+          "01_产品资产/02_成品素材/BQ1021_7899"
+        ],
+        "historical_asset_roots": [
           "01_产品资产/02_成品素材/BQ1021"
         ],
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
         "current_fields_file": null,
-        "state": "SINGLE_DOSSIER_SOURCE_FACTS_PENDING",
-        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
-        "current_gallery_by_id": {
-          "1601943593293": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943593293/当前图库与货号.json",
-          "1601943584343": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943584343/当前图库与货号.json",
-          "1601943577329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943577329/当前图库与货号.json"
-        },
-        "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
-        "current_detail_image_revision_by_id": {
-          "1601943593293": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
-          "1601943584343": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
-          "1601943577329": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json"
-        },
-        "current_prices_by_id": {
-          "1601943577329": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943577329/verification.json",
-          "1601943584343": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943584343/verification.json",
-          "1601943593293": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943593293/verification.json"
+        "current_formal_by_id": {
+          "1601943593293": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/.local/7899替换_20261104/执行/商品/1601943593293/latest_get.json",
+          "1601943584343": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/.local/7899替换_20261104/执行/商品/1601943584343/latest_get.json",
+          "1601943577329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/.local/7899替换_20261104/执行/商品/1601943577329/latest_get.json"
         },
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ1021",
-        "finished_asset_count": 15
+        "finished_asset_count": 12
       },
       "classification": {
         "local_intent_candidates": [
-          "待分类",
-          "步行/休闲需求"
+          "双带玛丽珍休闲鞋"
         ],
-        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
-        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        "state": "FORMAL_CATEGORY_AND_GROUP_READBACK",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/搜鞋候选.md"
       },
       "supply_mode": {
         "current": "EXTERNAL_FACTORY",
         "state": "SOURCE_ROUTE_EVIDENCED",
-        "at": "2026-10-16T05:17:22.697536+00:00",
+        "scope": "外采兼容编码仅表采购路线，不证明供方是工厂或实际库存。",
         "evidence": [
-          "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
-        ],
-        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/搜鞋候选.md"
+        ]
       },
       "current_model": "BQ1021",
       "content_gallery_revision": {
-        "at": "2026-10-20T07:58:54.949893+00:00",
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+        "state": "7899_FORMAL_READBACK_PUBLIC_QA_PENDING",
         "evidence": [
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/图片银行.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/prepared.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/update_receipt.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/verification.json"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR021/搜鞋候选.md"
         ]
-      }
+      },
+      "before_7899": {
+        "adopted_source_id": "src-707e87acea05",
+        "source_state": "ADOPTED",
+        "supply_mode": {
+          "current": "EXTERNAL_FACTORY",
+          "state": "SOURCE_ROUTE_EVIDENCED",
+          "at": "2026-10-16T05:17:22.697536+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+          ],
+          "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+          "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+        },
+        "candidate_source_ids": [],
+        "raw_packages": [],
+        "classification": {
+          "local_intent_candidates": [
+            "待分类",
+            "步行/休闲需求"
+          ],
+          "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+          "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        },
+        "content_gallery_revision": {
+          "at": "2026-10-20T07:58:54.949893+00:00",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/图片银行.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943577329/verification.json"
+          ]
+        },
+        "local_assets": {
+          "asset_roots": [
+            "01_产品资产/02_成品素材/BQ1021"
+          ],
+          "current_fields_file": null,
+          "state": "SINGLE_DOSSIER_SOURCE_FACTS_PENDING",
+          "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+          "current_gallery_by_id": {
+            "1601943593293": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943593293/当前图库与货号.json",
+            "1601943584343": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943584343/当前图库与货号.json",
+            "1601943577329": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943577329/当前图库与货号.json"
+          },
+          "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+          "current_detail_image_revision_by_id": {
+            "1601943593293": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
+            "1601943584343": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json",
+            "1601943577329": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/计划.json"
+          },
+          "current_prices_by_id": {
+            "1601943577329": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943577329/verification.json",
+            "1601943584343": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943584343/verification.json",
+            "1601943593293": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943593293/verification.json"
+          },
+          "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
+          "finished_asset_key": "BQ1021",
+          "finished_asset_count": 15
+        }
+      },
+      "historical_source_ids": [
+        "src-707e87acea05"
+      ],
+      "historical_raw_packages": []
     },
     {
       "id": "HR022",
@@ -19951,10 +20051,8 @@
         "HR025"
       ],
       "source_state": "ADOPTED",
-      "adopted_source_id": "src-hr-hr025-24dzya22-87",
-      "candidate_source_ids": [
-        "src-hr-hr025-24dzya22-87"
-      ],
+      "adopted_source_id": "src-hr025-hongrui-LH2618",
+      "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/manifest.json",
@@ -20026,53 +20124,105 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943541766/verification.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/搜鞋候选.md"
       ],
       "notes": [],
       "local_assets": {
         "asset_roots": [
+          "01_产品资产/02_成品素材/BQ1025_LH2618"
+        ],
+        "historical_asset_roots": [
           "01_产品资产/02_成品素材/BQ1025"
         ],
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json",
-        "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
-        "current_gallery_by_id": {
-          "1601943597447": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943597447/当前图库与货号.json",
-          "1601943535810": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943535810/当前图库与货号.json",
-          "1601943541766": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943541766/当前图库与货号.json"
-        },
-        "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
-        "current_prices_by_id": {
-          "1601943597447": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943597447/verification.json",
-          "1601943541766": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943541766/verification.json",
-          "1601943535810": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943535810/verification.json"
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "current_fields_file": null,
+        "current_formal_by_id": {
+          "1601943541766": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/.local/LH2618执行/商品/1601943541766/status_once_20261104_get.json",
+          "1601943535810": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/.local/LH2618执行/商品/1601943535810/status_once_20261104_get.json",
+          "1601943597447": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/.local/LH2618执行/商品/1601943597447/status_once_20261104_get.json"
         },
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ1025",
-        "finished_asset_count": 6
+        "finished_asset_count": 10
       },
       "classification": {
         "local_intent_candidates": [
-          "套脚/袜套需求",
-          "步行/休闲需求"
+          "女式加绒单扣低帮套脚鞋"
         ],
-        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
-        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        "state": "FORMAL_CATEGORY_AND_GROUP_READBACK",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/搜鞋候选.md"
       },
       "supply_mode": {
         "current": "EXTERNAL_FACTORY",
         "state": "SOURCE_ROUTE_EVIDENCED",
-        "at": "2026-10-16T05:17:22.697536+00:00",
+        "scope": "外采兼容编码仅表采购路线，不证明供方是工厂或实际库存。",
         "evidence": [
-          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图审依据.json",
-          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图库绑定.json",
-          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
-        ],
-        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/搜鞋候选.md"
+        ]
       },
-      "current_model": "BQ1025"
+      "current_model": "BQ1025",
+      "before_LH2618": {
+        "adopted_source_id": "src-hr-hr025-24dzya22-87",
+        "source_state": "ADOPTED",
+        "supply_mode": {
+          "current": "EXTERNAL_FACTORY",
+          "state": "SOURCE_ROUTE_EVIDENCED",
+          "at": "2026-10-16T05:17:22.697536+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图审依据.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图库绑定.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
+          ],
+          "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+          "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+        },
+        "candidate_source_ids": [
+          "src-hr-hr025-24dzya22-87"
+        ],
+        "raw_packages": [],
+        "classification": {
+          "local_intent_candidates": [
+            "套脚/袜套需求",
+            "步行/休闲需求"
+          ],
+          "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+          "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+        },
+        "local_assets": {
+          "asset_roots": [
+            "01_产品资产/02_成品素材/BQ1025"
+          ],
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json",
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+          "current_gallery_by_id": {
+            "1601943597447": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943597447/当前图库与货号.json",
+            "1601943535810": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943535810/当前图库与货号.json",
+            "1601943541766": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943541766/当前图库与货号.json"
+          },
+          "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+          "current_prices_by_id": {
+            "1601943597447": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943597447/verification.json",
+            "1601943541766": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943541766/verification.json",
+            "1601943535810": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943535810/verification.json"
+          },
+          "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
+          "finished_asset_key": "BQ1025",
+          "finished_asset_count": 6
+        }
+      },
+      "historical_source_ids": [
+        "src-hr-hr025-24dzya22-87"
+      ],
+      "historical_raw_packages": [],
+      "content_gallery_revision": {
+        "state": "LH2618_FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "evidence": [
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/搜鞋候选.md"
+        ]
+      }
     },
     {
       "id": "HR026",
