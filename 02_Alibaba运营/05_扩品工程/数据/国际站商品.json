@@ -76932,16 +76932,16 @@
       "id": "1601943335751",
       "product_id": "HR005",
       "model": "BQ1005-A",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-with_1601943335751.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-d9aea7f2612e",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Loafer-Mules-Backless_1601943335751.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr005-fengshou-627",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:56:01.467864+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T11:34:41.521755+00:00",
+        "score": "5.00",
+        "scope": "正式回读；中文自动翻译局限见业务记录。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -76952,520 +76952,840 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "新款为流苏包头露跟穆勒；旧款便士横带。实际库存及订单条件另核。公开自动翻译及视觉验收范围见业务记录。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:56:01.467864+00:00",
+        "at": "2026-11-03T11:34:41.521755+00:00",
         "model": "BQ1005-A",
-        "title": "Men's Suede Backless Mules with Penny Style Strap for Everyday Casual Wear",
+        "title": "Men's Tassel Loafer Mules Backless Slip On Closed Toe Shoes in Black and Brown",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H88b150a0d5844a6fa7cefcf43d86ba04C.jpg",
-          "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
-          "https://sc04.alicdn.com/kf/Hb857d1aecc2f460ab97e9c751e5cabd5b.png",
-          "https://sc04.alicdn.com/kf/Had8dc2d541d243bda1d45c1d653327daa.png",
-          "https://sc04.alicdn.com/kf/Hbb991b9749774e539f4d30abf0e0df9fJ.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-with_1601943335751.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
-        "detail_images": [
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H2753fd82d56a4b1da5f452f8ea4227a2F.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H1657342bff1f462eb1c838708220c74f0.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hd9609d0e9a0045ebb638a8c1a8ace9c4t.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
-          }
-        ]
+        "url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Loafer-Mules-Backless_1601943335751.html",
+        "sku": {
+          "BQ1005-A-BROWN-EU46": 109919351276,
+          "BQ1005-A-BROWN-EU43": 109919351273,
+          "BQ1005-A-BROWN-EU42": 109919351272,
+          "BQ1005-A-BROWN-EU45": 109919351275,
+          "BQ1005-A-BROWN-EU44": 109919351274,
+          "BQ1005-A-BROWN-EU39": 109919351269,
+          "BQ1005-A-BROWN-EU38": 109919351268,
+          "BQ1005-A-BROWN-EU41": 109919351271,
+          "BQ1005-A-BROWN-EU40": 109919351270,
+          "BQ1005-A-BLACK-EU44": 109919351265,
+          "BQ1005-A-BLACK-EU43": 109919351264,
+          "BQ1005-A-BLACK-EU46": 109919351267,
+          "BQ1005-A-BLACK-EU45": 109919351266,
+          "BQ1005-A-BLACK-EU40": 109919351261,
+          "BQ1005-A-BLACK-EU39": 109919351260,
+          "BQ1005-A-BLACK-EU42": 109919351263,
+          "BQ1005-A-BLACK-EU41": 109919351262,
+          "BQ1005-A-BLACK-EU38": 109919351259
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/当前图库与货号.json",
-        "at": "2026-10-16T04:40:06.528093+00:00",
-        "observed_at": "2026-10-19T18:41:38.611878+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_READBACK_PUBLIC_PARTIAL",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943335751/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943335751/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_get.json",
-        "at": "2026-11-02T02:49:05.431073+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943335751/latest_get.json",
+        "scope": "正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "972225685",
+        "scope": "Backless & Mule Casual Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:49:05.431073+00:00",
+        "at": "2026-11-03T11:34:41.521755+00:00",
         "model": "BQ1005-A",
-        "title": "Men's Suede Backless Penny Loafer Mules with Slip On Design and Apron Toe",
+        "title": "Men's Tassel Loafer Mules Backless Slip On Closed Toe Shoes in Black and Brown",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H88b150a0d5844a6fa7cefcf43d86ba04C.jpg",
-          "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
-          "https://sc04.alicdn.com/kf/Hb857d1aecc2f460ab97e9c751e5cabd5b.png",
-          "https://sc04.alicdn.com/kf/Had8dc2d541d243bda1d45c1d653327daa.png",
-          "https://sc04.alicdn.com/kf/Hbb991b9749774e539f4d30abf0e0df9fJ.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Penny-Loafer_1601943335751.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
-        "detail_images": [
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H2753fd82d56a4b1da5f452f8ea4227a2F.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H1657342bff1f462eb1c838708220c74f0.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hd9609d0e9a0045ebb638a8c1a8ace9c4t.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
-          }
-        ]
+        "url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Loafer-Mules-Backless_1601943335751.html",
+        "sku": {
+          "BQ1005-A-BROWN-EU46": 109919351276,
+          "BQ1005-A-BROWN-EU43": 109919351273,
+          "BQ1005-A-BROWN-EU42": 109919351272,
+          "BQ1005-A-BROWN-EU45": 109919351275,
+          "BQ1005-A-BROWN-EU44": 109919351274,
+          "BQ1005-A-BROWN-EU39": 109919351269,
+          "BQ1005-A-BROWN-EU38": 109919351268,
+          "BQ1005-A-BROWN-EU41": 109919351271,
+          "BQ1005-A-BROWN-EU40": 109919351270,
+          "BQ1005-A-BLACK-EU44": 109919351265,
+          "BQ1005-A-BLACK-EU43": 109919351264,
+          "BQ1005-A-BLACK-EU46": 109919351267,
+          "BQ1005-A-BLACK-EU45": 109919351266,
+          "BQ1005-A-BLACK-EU40": 109919351261,
+          "BQ1005-A-BLACK-EU39": 109919351260,
+          "BQ1005-A-BLACK-EU42": 109919351263,
+          "BQ1005-A-BLACK-EU41": 109919351262,
+          "BQ1005-A-BLACK-EU38": 109919351259
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:47.509762+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:47.509762+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-d9aea7f2612e",
-          "at": "2026-10-13T10:07:33.393113+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:40:06.528093+00:00",
-          "old_model": "HR005-A",
-          "planned_model": "BQ1005-A",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:38.611878+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T07:56:01.467864+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:39.323310+00:00",
-          "before": "Men's Suede Backless Mules with Penny Style Strap for Everyday Casual Wear",
-          "target": "Men's Suede Backless Penny Loafer Mules with Slip On Design and Apron Toe",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:49:05.431073+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化在 before_627；当前页面见正式回读。"
       },
       "legacy_model_aliases": [
         "HR005-A"
-      ]
+      ],
+      "before_627": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-with_1601943335751.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-d9aea7f2612e",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-20T07:56:01.467864+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-20T07:56:01.467864+00:00",
+          "model": "BQ1005-A",
+          "title": "Men's Suede Backless Mules with Penny Style Strap for Everyday Casual Wear",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H88b150a0d5844a6fa7cefcf43d86ba04C.jpg",
+            "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
+            "https://sc04.alicdn.com/kf/Hb857d1aecc2f460ab97e9c751e5cabd5b.png",
+            "https://sc04.alicdn.com/kf/Had8dc2d541d243bda1d45c1d653327daa.png",
+            "https://sc04.alicdn.com/kf/Hbb991b9749774e539f4d30abf0e0df9fJ.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-with_1601943335751.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H2753fd82d56a4b1da5f452f8ea4227a2F.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H1657342bff1f462eb1c838708220c74f0.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hd9609d0e9a0045ebb638a8c1a8ace9c4t.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:49:05.431073+00:00",
+          "model": "BQ1005-A",
+          "title": "Men's Suede Backless Penny Loafer Mules with Slip On Design and Apron Toe",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H88b150a0d5844a6fa7cefcf43d86ba04C.jpg",
+            "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
+            "https://sc04.alicdn.com/kf/Hb857d1aecc2f460ab97e9c751e5cabd5b.png",
+            "https://sc04.alicdn.com/kf/Had8dc2d541d243bda1d45c1d653327daa.png",
+            "https://sc04.alicdn.com/kf/Hbb991b9749774e539f4d30abf0e0df9fJ.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Penny-Loafer_1601943335751.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H2753fd82d56a4b1da5f452f8ea4227a2F.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H1657342bff1f462eb1c838708220c74f0.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hd9609d0e9a0045ebb638a8c1a8ace9c4t.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_get.json",
+          "at": "2026-11-02T02:49:05.431073+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/当前图库与货号.json",
+          "at": "2026-10-16T04:40:06.528093+00:00",
+          "observed_at": "2026-10-19T18:41:38.611878+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:47.509762+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:47.509762+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335751/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-d9aea7f2612e",
+            "at": "2026-10-13T10:07:33.393113+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:40:06.528093+00:00",
+            "old_model": "HR005-A",
+            "planned_model": "BQ1005-A",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335751/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:38.611878+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335751/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T07:56:01.467864+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943335751/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:39.323310+00:00",
+            "before": "Men's Suede Backless Mules with Penny Style Strap for Everyday Casual Wear",
+            "target": "Men's Suede Backless Penny Loafer Mules with Slip On Design and Apron Toe",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335751/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:49:05.431073+00:00"
+          }
+        }
+      }
     },
     {
       "id": "1601943353831",
       "product_id": "HR005",
       "model": "BQ1005-B",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Slip-On-Mules-with_1601943353831.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-d9aea7f2612e",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-PU-Upper-Backless-Tassel_1601943353831.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr005-fengshou-627",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:41:43.299184+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T11:34:41.748674+00:00",
+        "score": "5.00",
+        "scope": "正式回读；中文自动翻译局限见业务记录。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "新款为流苏包头露跟穆勒；旧款便士横带。实际库存及订单条件另核。公开自动翻译及视觉验收范围见业务记录。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:41:43.299184+00:00",
+        "at": "2026-11-03T11:34:41.748674+00:00",
         "model": "BQ1005-B",
-        "title": "Men's Slip On Mules with Suede Upper and Apron Toe Stitching for Casual Outfits",
+        "title": "Men's PU Upper Backless Tassel Mules Slip On Loafer Shoes for Smart Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hb90b3a89512d45eeb66dfc803d6272d2h.jpg",
-          "https://sc04.alicdn.com/kf/H8a78d3fe62d94206993bf42e8423bcb9W.jpg",
-          "https://sc04.alicdn.com/kf/H18546d392a2f4fa187e4124ff2ef6dbbU.png",
-          "https://sc04.alicdn.com/kf/H7db85a5afbff4af2bf51aeedc7dc9fafT.png",
-          "https://sc04.alicdn.com/kf/Hfa02bb3549944e2fa8c3b2c8601ca0b5C.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Slip-On-Mules-with_1601943353831.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole."
+        "url": "https://www.alibaba.com/product-detail/Men-s-PU-Upper-Backless-Tassel_1601943353831.html",
+        "sku": {
+          "BQ1005-B-BLACK-EU40": 109919259663,
+          "BQ1005-B-BLACK-EU39": 109919259662,
+          "BQ1005-B-BLACK-EU38": 109919259661,
+          "BQ1005-B-BROWN-EU43": 109919259675,
+          "BQ1005-B-BROWN-EU42": 109919259674,
+          "BQ1005-B-BROWN-EU41": 109919259673,
+          "BQ1005-B-BROWN-EU40": 109919259672,
+          "BQ1005-B-BROWN-EU46": 109919259678,
+          "BQ1005-B-BROWN-EU45": 109919259677,
+          "BQ1005-B-BROWN-EU44": 109919259676,
+          "BQ1005-B-BLACK-EU44": 109919259667,
+          "BQ1005-B-BLACK-EU43": 109919259666,
+          "BQ1005-B-BLACK-EU42": 109919259665,
+          "BQ1005-B-BLACK-EU41": 109919259664,
+          "BQ1005-B-BROWN-EU39": 109919259671,
+          "BQ1005-B-BROWN-EU38": 109919259670,
+          "BQ1005-B-BLACK-EU46": 109919259669,
+          "BQ1005-B-BLACK-EU45": 109919259668
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/当前图库与货号.json",
-        "at": "2026-10-16T04:28:02.141615+00:00",
-        "observed_at": "2026-10-19T18:41:43.299184+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_READBACK_PUBLIC_PARTIAL",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943353831/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943353831/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_get.json",
-        "at": "2026-11-02T02:49:07.117583+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943353831/latest_get.json",
+        "scope": "正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "972225685",
+        "scope": "Backless & Mule Casual Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:49:07.117583+00:00",
+        "at": "2026-11-03T11:34:41.748674+00:00",
         "model": "BQ1005-B",
-        "title": "Men's Suede Slip On Mules with Penny Strap and Apron Toe Stitching for Casual Wear",
+        "title": "Men's PU Upper Backless Tassel Mules Slip On Loafer Shoes for Smart Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hb90b3a89512d45eeb66dfc803d6272d2h.jpg",
-          "https://sc04.alicdn.com/kf/H8a78d3fe62d94206993bf42e8423bcb9W.jpg",
-          "https://sc04.alicdn.com/kf/H18546d392a2f4fa187e4124ff2ef6dbbU.png",
-          "https://sc04.alicdn.com/kf/H7db85a5afbff4af2bf51aeedc7dc9fafT.png",
-          "https://sc04.alicdn.com/kf/Hfa02bb3549944e2fa8c3b2c8601ca0b5C.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Slip-On-Mules_1601943353831.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole."
+        "url": "https://www.alibaba.com/product-detail/Men-s-PU-Upper-Backless-Tassel_1601943353831.html",
+        "sku": {
+          "BQ1005-B-BLACK-EU40": 109919259663,
+          "BQ1005-B-BLACK-EU39": 109919259662,
+          "BQ1005-B-BLACK-EU38": 109919259661,
+          "BQ1005-B-BROWN-EU43": 109919259675,
+          "BQ1005-B-BROWN-EU42": 109919259674,
+          "BQ1005-B-BROWN-EU41": 109919259673,
+          "BQ1005-B-BROWN-EU40": 109919259672,
+          "BQ1005-B-BROWN-EU46": 109919259678,
+          "BQ1005-B-BROWN-EU45": 109919259677,
+          "BQ1005-B-BROWN-EU44": 109919259676,
+          "BQ1005-B-BLACK-EU44": 109919259667,
+          "BQ1005-B-BLACK-EU43": 109919259666,
+          "BQ1005-B-BLACK-EU42": 109919259665,
+          "BQ1005-B-BLACK-EU41": 109919259664,
+          "BQ1005-B-BROWN-EU39": 109919259671,
+          "BQ1005-B-BROWN-EU38": 109919259670,
+          "BQ1005-B-BLACK-EU46": 109919259669,
+          "BQ1005-B-BLACK-EU45": 109919259668
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:59.360451+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:59.360451+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-d9aea7f2612e",
-          "at": "2026-10-13T10:07:33.393113+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:28:02.141615+00:00",
-          "old_model": "HR005-B",
-          "planned_model": "BQ1005-B",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:43.299184+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:39.831223+00:00",
-          "before": "Men's Slip On Mules with Suede Upper and Apron Toe Stitching for Casual Outfits",
-          "target": "Men's Suede Slip On Mules with Penny Strap and Apron Toe Stitching for Casual Wear",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:49:07.117583+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化在 before_627；当前页面见正式回读。"
       },
       "legacy_model_aliases": [
         "HR005-B"
-      ]
+      ],
+      "before_627": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Slip-On-Mules-with_1601943353831.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-d9aea7f2612e",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-19T18:41:43.299184+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-19T18:41:43.299184+00:00",
+          "model": "BQ1005-B",
+          "title": "Men's Slip On Mules with Suede Upper and Apron Toe Stitching for Casual Outfits",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hb90b3a89512d45eeb66dfc803d6272d2h.jpg",
+            "https://sc04.alicdn.com/kf/H8a78d3fe62d94206993bf42e8423bcb9W.jpg",
+            "https://sc04.alicdn.com/kf/H18546d392a2f4fa187e4124ff2ef6dbbU.png",
+            "https://sc04.alicdn.com/kf/H7db85a5afbff4af2bf51aeedc7dc9fafT.png",
+            "https://sc04.alicdn.com/kf/Hfa02bb3549944e2fa8c3b2c8601ca0b5C.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Slip-On-Mules-with_1601943353831.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole."
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:49:07.117583+00:00",
+          "model": "BQ1005-B",
+          "title": "Men's Suede Slip On Mules with Penny Strap and Apron Toe Stitching for Casual Wear",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hb90b3a89512d45eeb66dfc803d6272d2h.jpg",
+            "https://sc04.alicdn.com/kf/H8a78d3fe62d94206993bf42e8423bcb9W.jpg",
+            "https://sc04.alicdn.com/kf/H18546d392a2f4fa187e4124ff2ef6dbbU.png",
+            "https://sc04.alicdn.com/kf/H7db85a5afbff4af2bf51aeedc7dc9fafT.png",
+            "https://sc04.alicdn.com/kf/Hfa02bb3549944e2fa8c3b2c8601ca0b5C.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Slip-On-Mules_1601943353831.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole."
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_get.json",
+          "at": "2026-11-02T02:49:07.117583+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/当前图库与货号.json",
+          "at": "2026-10-16T04:28:02.141615+00:00",
+          "observed_at": "2026-10-19T18:41:43.299184+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:59.360451+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:59.360451+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943353831/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-d9aea7f2612e",
+            "at": "2026-10-13T10:07:33.393113+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:28:02.141615+00:00",
+            "old_model": "HR005-B",
+            "planned_model": "BQ1005-B",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943353831/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:43.299184+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943353831/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:39.831223+00:00",
+            "before": "Men's Slip On Mules with Suede Upper and Apron Toe Stitching for Casual Outfits",
+            "target": "Men's Suede Slip On Mules with Penny Strap and Apron Toe Stitching for Casual Wear",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943353831/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:49:07.117583+00:00"
+          }
+        }
+      }
     },
     {
       "id": "1601943444273",
       "product_id": "HR005",
       "model": "BQ1005-C",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Open-Heel-Casual_1601943444273.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-d9aea7f2612e",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Closed-Toe-Backless-Mules_1601943444273.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr005-fengshou-627",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:56:05.680616+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T11:34:41.917553+00:00",
+        "score": "5.00",
+        "scope": "正式回读；中文自动翻译局限见业务记录。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -77476,282 +77796,442 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "新款为流苏包头露跟穆勒；旧款便士横带。实际库存及订单条件另核。公开自动翻译及视觉验收范围见业务记录。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:56:05.680616+00:00",
+        "at": "2026-11-03T11:34:41.917553+00:00",
         "model": "BQ1005-C",
-        "title": "Men's Suede Open Heel Casual Shoes with Slip On Design for Everyday Wear",
+        "title": "Men's Closed Toe Backless Mules Tassel Slip On Loafer Style Shoes for Wholesale",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H8529010cbfd24dbe96f238105aeef702D.png",
-          "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
-          "https://sc04.alicdn.com/kf/Hc810415939994504aac1dc406fb49239G.png",
-          "https://sc04.alicdn.com/kf/Hf8fed86dae0e43d38d84ce1d358e6c197.png",
-          "https://sc04.alicdn.com/kf/H7cd62f9b1c21419fae46d29e026e9e80b.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Open-Heel-Casual_1601943444273.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
-        "detail_images": [
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3fa6265d52554f41af1ffde441d0803aU.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Ha1f12984e0114284915b9fc6cf632bb5p.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hcc4076f7378f4417a6f3d3ac33812719S.png"
-          }
-        ]
+        "url": "https://www.alibaba.com/product-detail/Men-s-Closed-Toe-Backless-Mules_1601943444273.html",
+        "sku": {
+          "BQ1005-C-BROWN-EU45": 109919257891,
+          "BQ1005-C-BROWN-EU44": 109919257890,
+          "BQ1005-C-BROWN-EU43": 109919257889,
+          "BQ1005-C-BROWN-EU42": 109919257888,
+          "BQ1005-C-BROWN-EU46": 109919257892,
+          "BQ1005-C-BLACK-EU46": 109919257883,
+          "BQ1005-C-BLACK-EU45": 109919257882,
+          "BQ1005-C-BLACK-EU44": 109919257881,
+          "BQ1005-C-BLACK-EU43": 109919257880,
+          "BQ1005-C-BROWN-EU41": 109919257887,
+          "BQ1005-C-BROWN-EU40": 109919257886,
+          "BQ1005-C-BROWN-EU39": 109919257885,
+          "BQ1005-C-BROWN-EU38": 109919257884,
+          "BQ1005-C-BLACK-EU38": 109919257875,
+          "BQ1005-C-BLACK-EU42": 109919257879,
+          "BQ1005-C-BLACK-EU41": 109919257878,
+          "BQ1005-C-BLACK-EU40": 109919257877,
+          "BQ1005-C-BLACK-EU39": 109919257876
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/当前图库与货号.json",
-        "at": "2026-10-16T04:27:51.870366+00:00",
-        "observed_at": "2026-10-19T18:41:44.978279+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_READBACK_PUBLIC_PARTIAL",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943444273/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943444273/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_get.json",
-        "at": "2026-11-02T02:49:03.499604+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/627执行/商品/1601943444273/latest_get.json",
+        "scope": "正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "972225685",
+        "scope": "Backless & Mule Casual Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:49:03.499604+00:00",
+        "at": "2026-11-03T11:34:41.917553+00:00",
         "model": "BQ1005-C",
-        "title": "Men's Suede Backless Mules Slip On Casual Shoes with Penny Strap and Apron Toe",
+        "title": "Men's Closed Toe Backless Mules Tassel Slip On Loafer Style Shoes for Wholesale",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H8529010cbfd24dbe96f238105aeef702D.png",
-          "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
-          "https://sc04.alicdn.com/kf/Hc810415939994504aac1dc406fb49239G.png",
-          "https://sc04.alicdn.com/kf/Hf8fed86dae0e43d38d84ce1d358e6c197.png",
-          "https://sc04.alicdn.com/kf/H7cd62f9b1c21419fae46d29e026e9e80b.png",
+          "https://sc04.alicdn.com/kf/Ha21d14ad2a4943018b93ac2ee7edd37av.jpg",
+          "https://sc04.alicdn.com/kf/H46dc59f43750487f87468470b4c9e9cca.jpg",
+          "https://sc04.alicdn.com/kf/He46f32aea4624fe5b38e04411ce89ff2T.jpg",
+          "https://sc04.alicdn.com/kf/Hb464c82776694a09b3a05deeb167d6b8n.jpg",
+          "https://sc04.alicdn.com/kf/H443f99321a89414faa533a1b8011f798F.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H723b7cda688a48c39e13ea4028636b2ew.jpg",
+          "https://sc04.alicdn.com/kf/H76145e8adbdb46c692083fb79a5af968A.jpg",
+          "https://sc04.alicdn.com/kf/H7b6bacd2d232494e836ca71fd42f5388I.jpg",
+          "https://sc04.alicdn.com/kf/Hfd3117d1f8bc4a75a2beaa066a64ee6cD.jpg"
         ],
         "category_id": 201336720,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-Slip_1601943444273.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
-        "detail_images": [
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3fa6265d52554f41af1ffde441d0803aU.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Ha1f12984e0114284915b9fc6cf632bb5p.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hcc4076f7378f4417a6f3d3ac33812719S.png"
-          }
-        ]
+        "url": "https://www.alibaba.com/product-detail/Men-s-Closed-Toe-Backless-Mules_1601943444273.html",
+        "sku": {
+          "BQ1005-C-BROWN-EU45": 109919257891,
+          "BQ1005-C-BROWN-EU44": 109919257890,
+          "BQ1005-C-BROWN-EU43": 109919257889,
+          "BQ1005-C-BROWN-EU42": 109919257888,
+          "BQ1005-C-BROWN-EU46": 109919257892,
+          "BQ1005-C-BLACK-EU46": 109919257883,
+          "BQ1005-C-BLACK-EU45": 109919257882,
+          "BQ1005-C-BLACK-EU44": 109919257881,
+          "BQ1005-C-BLACK-EU43": 109919257880,
+          "BQ1005-C-BROWN-EU41": 109919257887,
+          "BQ1005-C-BROWN-EU40": 109919257886,
+          "BQ1005-C-BROWN-EU39": 109919257885,
+          "BQ1005-C-BROWN-EU38": 109919257884,
+          "BQ1005-C-BLACK-EU38": 109919257875,
+          "BQ1005-C-BLACK-EU42": 109919257879,
+          "BQ1005-C-BLACK-EU41": 109919257878,
+          "BQ1005-C-BLACK-EU40": 109919257877,
+          "BQ1005-C-BLACK-EU39": 109919257876
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          [
+            2,
+            "12.89"
+          ],
+          [
+            50,
+            "12.03"
+          ],
+          [
+            100,
+            "11.17"
+          ]
+        ],
+        "highlights": "Backless mule shape: A closed toe and open heel create an easy slip-on profile.\nTassel detail: The upper features a decorative tassel and loafer-style strap.\nUpper material: PU upper as described in the source specifications.\nTwo colours: Offered in black and brown, as shown in the product images.\nEU 38–46: Share preferred colours, sizes and quantities for an order-specific quotation.",
+        "scope": "正式回读；买家中文自动翻译及图片视觉复核范围见业务记录。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:39.884570+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:39.884570+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-d9aea7f2612e",
-          "at": "2026-10-13T10:07:33.393113+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:27:51.870366+00:00",
-          "old_model": "HR005-C",
-          "planned_model": "BQ1005-C",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:44.978279+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T07:56:05.680616+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:33.651549+00:00",
-          "before": "Men's Suede Open Heel Casual Shoes with Slip On Design for Everyday Wear",
-          "target": "Men's Suede Backless Mules Slip On Casual Shoes with Penny Strap and Apron Toe",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:49:03.499604+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化在 before_627；当前页面见正式回读。"
       },
       "legacy_model_aliases": [
         "HR005-C"
-      ]
+      ],
+      "before_627": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Open-Heel-Casual_1601943444273.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-d9aea7f2612e",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-20T07:56:05.680616+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-20T07:56:05.680616+00:00",
+          "model": "BQ1005-C",
+          "title": "Men's Suede Open Heel Casual Shoes with Slip On Design for Everyday Wear",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H8529010cbfd24dbe96f238105aeef702D.png",
+            "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
+            "https://sc04.alicdn.com/kf/Hc810415939994504aac1dc406fb49239G.png",
+            "https://sc04.alicdn.com/kf/Hf8fed86dae0e43d38d84ce1d358e6c197.png",
+            "https://sc04.alicdn.com/kf/H7cd62f9b1c21419fae46d29e026e9e80b.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Open-Heel-Casual_1601943444273.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3fa6265d52554f41af1ffde441d0803aU.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha1f12984e0114284915b9fc6cf632bb5p.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hcc4076f7378f4417a6f3d3ac33812719S.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:49:03.499604+00:00",
+          "model": "BQ1005-C",
+          "title": "Men's Suede Backless Mules Slip On Casual Shoes with Penny Strap and Apron Toe",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H8529010cbfd24dbe96f238105aeef702D.png",
+            "https://sc04.alicdn.com/kf/H030e209951db47f3b4982d458e858a92c.jpg",
+            "https://sc04.alicdn.com/kf/Hc810415939994504aac1dc406fb49239G.png",
+            "https://sc04.alicdn.com/kf/Hf8fed86dae0e43d38d84ce1d358e6c197.png",
+            "https://sc04.alicdn.com/kf/H7cd62f9b1c21419fae46d29e026e9e80b.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201336720,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Backless-Mules-Slip_1601943444273.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Backless daily entry: An open heel lets the foot slide into the shoe while the closed suede front covers the toes.\n\nLoafer-style front: A penny-style band and apron-toe seam give the mule the appearance of a casual loafer.\n\nLined contact surface: Cotton-fabric lining sits inside the suede upper, paired with a PVC insole and outsole.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3fa6265d52554f41af1ffde441d0803aU.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha1f12984e0114284915b9fc6cf632bb5p.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8d02398e13854241813b2b59f2a668d5v.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hcc4076f7378f4417a6f3d3ac33812719S.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_get.json",
+          "at": "2026-11-02T02:49:03.499604+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/当前图库与货号.json",
+          "at": "2026-10-16T04:27:51.870366+00:00",
+          "observed_at": "2026-10-19T18:41:44.978279+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款B7FXZA57保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:39.884570+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:39.884570+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943444273/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-d9aea7f2612e",
+            "at": "2026-10-13T10:07:33.393113+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:27:51.870366+00:00",
+            "old_model": "HR005-C",
+            "planned_model": "BQ1005-C",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943444273/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:44.978279+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943444273/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T07:56:05.680616+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR005_旧报价图替换/商品/1601943444273/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:33.651549+00:00",
+            "before": "Men's Suede Open Heel Casual Shoes with Slip On Design for Everyday Wear",
+            "target": "Men's Suede Backless Mules Slip On Casual Shoes with Penny Strap and Apron Toe",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943444273/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:49:03.499604+00:00"
+          }
+        }
+      }
     },
     {
       "id": "1601943439124",
@@ -151161,7 +151641,7 @@
       }
     },
     "HR005": {
-      "next_action": "丰收627三条换款已审核；C为修正中文误译已提交最小属性修订，目前复审中，须核对其他字段和恢复展示。",
+      "next_action": "三条丰收627已正式审核通过并恢复上架；A/B 中文自动翻译局限已记录，按负责人要求不循环修改。订单前确认色码、库存与商业条件。",
       "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR005/README.md",
       "content_quality_revision": {
         "at": "2026-10-19T18:41:44.978279+00:00",
@@ -151190,15 +151670,29 @@
         ],
         "store_groups": [
           {
-            "id": "972130291",
-            "name": "Slip-On Casual Walking Shoes"
+            "id": "972225685",
+            "name": "Backless & Mule Casual Shoes"
           }
         ]
       },
       "historical_next_action_before_sooxie": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
-      "replacement_progress": {
+      "historical_replacement_progress": {
         "state": "IN_REVIEW",
         "note": "丰收627三条换款已审核；C为修正中文误译已提交最小属性修订，目前复审中，须核对其他字段和恢复展示。"
+      },
+      "before_627": {
+        "next_action": "丰收627三条换款已审核；C为修正中文误译已提交最小属性修订，目前复审中，须核对其他字段和恢复展示。",
+        "classification": {
+          "platform_category_ids": [
+            201336720
+          ],
+          "store_groups": [
+            {
+              "id": "972130291",
+              "name": "Slip-On Casual Walking Shoes"
+            }
+          ]
+        }
       }
     },
     "HR006": {
