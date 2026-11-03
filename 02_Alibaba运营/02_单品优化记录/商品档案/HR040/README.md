@@ -25,19 +25,19 @@
 
 ## 国际站链接与本地正式字段
 
-### HR040-C · 1601943611671
+### 历史编号 · HR040-C · 1601943611671
 
 - 平台直链：待补
 - 当前完整正式回读：待补；历史ID未检出不自动判定删除。
 - 本地同步状态：`UNVERIFIED`。
 - 本轮优化：``；
 
-### HR040-B · 1601943620678
+### 历史编号 · HR040-B · 1601943620678
 
 - 平台链接：[1601943620678](https://www.alibaba.com/product-detail/Casual-Court-Style-Lace-Up-Shoes_1601943620678.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943620678/formal_get.json)；UTC 2026-10-13T21:42:31.845075+00:00。
-- 当前正式标题：Casual Court Style Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Shoe Buyers
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943620678/formal_get.json)；UTC 2026-10-13T21:42:31.845075+00:00。
+- 历史正式标题：Casual Court Style Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Shoe Buyers
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。

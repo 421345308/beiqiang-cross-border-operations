@@ -52,6 +52,20 @@ class ProductProjectionTests(BusinessTests):
         self.assertIn('历史参考',obj['links'][0]['label'])
         self.assertEqual(obj['publication_disposition'],{})
 
+    def test_historical_hr_identity_without_current_model_is_not_a_current_sku(self):
+        self.product()
+        import json
+        from business import PRODUCTS
+        rows=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        rows['products'][0].update({'id':'HR022','aliases':['HR022']})
+        rows['products'][0].pop('current_model',None)
+        self.write(PRODUCTS,rows)
+        obj=self.business.get_object('product:HR022')
+        self.assertEqual(obj['title'],'历史档案 · HR022')
+        self.assertEqual(obj['current_model'],'')
+        self.assertIn('当前型号未核',obj['summary'])
+        self.assertEqual(obj['aliases'],['HR022'])
+
     def test_current_model_assets_are_joined_deduplicated_and_main_image_first(self):
         self.product()
         import json

@@ -4,6 +4,12 @@
 
 **当前判断：优先借鉴凯顺把鞋款特征、定制服务和采购门槛一起呈现的方式。没有证据证明堆满关键词或统一加 FREE DESIGN 会带来高销量。** 贝强应围绕逐款真实结构，把“是什么鞋、适合什么采购、下一步如何询价”说清，并用本店点击和有效询盘验证。
 
+### 2026-11-03：负责人截图的针织套脚款
+
+已定位 [凯顺商品 1601978389693](https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-on_1601978389693.html)，英文页面标题为 “Wide Toe Box Knit Slip on Barefoot Shoes Men Low-Profile Sole Wide Width Spring Autumn Sport Sneakers OEM ODM Custom Style”。[完整主图](视觉证据/1601978389693_主图.jpg)与截图匹配：浅色背景，深灰针织套脚鞋斜置于黑色外底上方；左上为 KAISUN 标识、定制项目清单及 OEM&ODM，右上为印有 CUSTOM 的鞋盒。该图为竞品研究证据，不是贝强可直接使用的素材或能力证明。
+
+同日商品详情页显示 **399 sold**、该商品暂无评价；[店内检索卡片](https://kaisuntd.en.alibaba.com/search/product?SearchText=knit%20slip)同时显示 **99 sold**。两处公开数字有冲突，统计周期、单位、变体和退货口径均未明，不能将其解释为已核实销量或用来证明主图导致成交。详情页当前显示 300–999 双每双 US$11.60、1000 双起 US$10.58；用户截图显示的是人民币价，币种和观察时点不同，不直接比较。详情页可选码为 38–47，属性区写 39–48，描述表格写 36–46，属于该竞品页面内部差异，不能作为任何贝强鞋款的尺码依据。
+
 ## 数据与覆盖
 
 | 对象 | 当前覆盖 | 未完成 |

@@ -71,7 +71,8 @@ def builds(data):
         return f'[{label or Path(path).name}]({url})'
     for product in data['products']:
         parent = Path(product['dossier_path']).parent if product.get('dossier_path') else AREA / product['id']
-        current_model=product.get('current_model')or product['aliases'][0]
+        historical_only=bool(re.fullmatch(r'HR[-_]?\d+',product['id'],re.I) and not product.get('current_model'))
+        current_model=product.get('current_model') or (f"历史档案 · {product['id']}" if historical_only else product['aliases'][0])
         lines = [f"# {current_model} 商品档案", '',
                  '此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。', '',
                  f"来源状态：`{product['source_state']}`。下一步：{product['next_action']}", '',
@@ -126,10 +127,12 @@ def builds(data):
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
             path, actual, observed_at = formal_snapshot(listing)
-            lines += [f"### {listing['model']} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
+            model_label=('历史编号 · ' if re.fullmatch(r'HR[-_]?\d+(?:-[A-Z]+)?',listing['model'],re.I) else '')+listing['model']
+            lines += [f"### {model_label} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
             if actual:
                 prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
-                prefix='换款前历史' if prior else '当前'
+                absent=(listing.get('observation',{}).get('current_presence') or {}).get('state')=='CURRENT_CATALOG_ABSENT_AND_EXACT_GET_NO_PRODUCT'
+                prefix='换款前历史' if prior else '历史' if absent else '当前'
                 lines += [f"- {prefix}正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- {prefix}正式标题：{actual.get('subject','')}", f"- {prefix}审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
                 group_id=str(actual.get('group_id') or '')
                 group_file=DETAILS.parent/'店内分组'/(group_id+'.json')

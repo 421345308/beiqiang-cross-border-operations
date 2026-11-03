@@ -79,7 +79,9 @@ class Business:
             state_label=SOURCE_STATES.get(product.get('source_state'),product.get('source_state') or '尚未记录')
             first=listings[0] if listings else {};fields=first.get('current_platform_fields') or {}
             title=fields.get('title') or (first.get('catalog_fields') or {}).get('title') or ''
-            obj=_object('product:'+pid,'product',product.get('current_model') or pid,PRODUCTS,subtitle=title or state_label,
+            historical_only=bool(re.fullmatch(r'HR[-_]?\d+',pid,re.I) and not product.get('current_model'))
+            display_model=product.get('current_model') or (f'历史档案 · {pid}' if historical_only else pid)
+            obj=_object('product:'+pid,'product',display_model,PRODUCTS,subtitle=title or state_label,
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
             mode_record=product.get('supply_mode') or {}
             supply_kind=mode_record.get('current') if isinstance(mode_record,dict) else ''
@@ -93,7 +95,8 @@ class Business:
                 'model':source.get('model','') if adopted else ''}
             obj['subtitle']=title
             obj['summary']=obj['supply']['label']
-            obj['current_model']=product.get('current_model') or pid
+            if historical_only:obj['summary']='历史档案 · 当前型号未核'
+            obj['current_model']=product.get('current_model') or ('' if historical_only else pid)
             obj['aliases']=product.get('aliases') or []
             obj['source_state']=product.get('source_state') or ''
             obj['source_role']='adopted' if adopted else ('reference' if source else 'missing')

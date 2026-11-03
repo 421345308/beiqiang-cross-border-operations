@@ -97,6 +97,20 @@ class DossierReceipts(unittest.TestCase):
         self.assertNotIn('images/other.jpg', result)
         self.assertIsNone(dossiers.official_image_key('https://unrelated.example/kf/Hnew.jpg'))
 
+    def test_historical_identity_and_unavailable_listing_are_labeled_as_history(self):
+        product=self.data['products'][0]
+        product.pop('current_model')
+        product['id']='HR022';product['aliases']=['HR022']
+        listing=self.data['listings'][0]
+        listing.update({'product_id':'HR022','model':'HR022-A','observation':{'current_presence':{
+            'state':'CURRENT_CATALOG_ABSENT_AND_EXACT_GET_NO_PRODUCT','at':'2026-11-03',
+            'evidence':'receipts/new.json'}}})
+        result=self.render()
+        self.assertIn('# 历史档案 · HR022 商品档案',result)
+        self.assertIn('### 历史编号 · HR022-A',result)
+        self.assertIn('历史审核/展示',result)
+        self.assertNotIn('当前审核/展示',result)
+
 
 if __name__ == '__main__':
     unittest.main()
