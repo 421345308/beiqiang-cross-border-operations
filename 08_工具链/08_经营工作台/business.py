@@ -67,6 +67,8 @@ class Business:
             for pid in asset.get('products',[]):asset_map.setdefault(pid,[]).append(asset)
         channel_map={}
         for row in self._json(CHANNEL,'listings'):channel_map.setdefault(row.get('product_id'),[]).append(row)
+        channel_file=self.root/CHANNEL
+        channel_states=json.loads(channel_file.read_text(encoding='utf-8-sig')).get('product_state',{}) if channel_file.is_file() else {}
         result=[]
         for product in self._json(PRODUCTS,'products'):
             pid=product.get('id')
@@ -100,9 +102,12 @@ class Business:
                 obj['summary']='负责人反馈原款无货 · 暂停新推荐 · 替换进行中'
             elif obj['publication_disposition'].get('state')=='PLATFORM_REPLACED_PUBLIC_QA_PENDING':
                 obj['summary']='新款已审核 · 公开页面验收中'
+            progress=(channel_states.get(pid) or {}).get('replacement_progress') or {}
+            if progress.get('state')=='IN_REVIEW':obj['summary']='新款换款进行中 · 逐链接审核和验收'
             obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
             obj['facts']=[_fact('共用产品ID',pid),_fact('来源状态',state_label),_fact('别名',product.get('aliases',[])),
                 _fact('原始资料包',product.get('raw_packages') or '原档未列出原包路径')]
+            if progress.get('note'):obj['facts'].append(_fact('换款进度',progress['note']))
             if product.get('current_model'):obj['facts'].append(_fact('当前款号（原档）',product['current_model']))
             if product.get('publication_disposition'):obj['facts'].append(_fact('平台发布处置（原档）',product['publication_disposition']))
             mode=product.get('supply_mode')

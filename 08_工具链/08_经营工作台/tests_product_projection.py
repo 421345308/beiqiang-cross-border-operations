@@ -23,6 +23,17 @@ class ProductProjectionTests(BusinessTests):
         self.assertTrue(any(f['label'].startswith('换款审核') and '1533' in f['value'] for f in obj['facts']))
         self.assertEqual(obj['channel_listings'][0]['pending_replacement']['state'],'SUBMITTED_REVIEW_PENDING')
 
+    def test_family_replacement_progress_warns_while_previous_source_is_retained(self):
+        self.product()
+        import json
+        from business import CHANNEL
+        data=json.loads((self.root/CHANNEL).read_text(encoding='utf8'))
+        data['product_state']={'BQ009':{'replacement_progress':{'state':'IN_REVIEW','note':'新款审核中'}}}
+        self.write(CHANNEL,data)
+        obj=self.business.get_object('product:BQ009')
+        self.assertIn('换款进行中',obj['summary'])
+        self.assertTrue(any(f['label']=='换款进度' and f['value']=='新款审核中' for f in obj['facts']))
+
     def test_current_model_and_reference_source_are_distinct_in_list(self):
         self.product()
         import json

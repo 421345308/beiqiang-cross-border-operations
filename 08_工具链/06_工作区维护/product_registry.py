@@ -18,7 +18,7 @@ from contextlib import contextmanager
 PRODUCTS = Path('00_总控台/产品中心/数据/产品.json')
 SUPPLY = Path('00_总控台/产品中心/数据/供应来源.json')
 ALIBABA = Path('02_Alibaba运营/05_扩品工程/数据/国际站商品.json')
-CHANNEL_FIELDS = ('next_action', 'dossier_path', 'content_quality_revision')
+CHANNEL_FIELDS = ('next_action', 'dossier_path', 'content_quality_revision', 'replacement_progress')
 CHANNEL_CLASSIFICATION = ('platform_category_ids', 'store_groups')
 
 

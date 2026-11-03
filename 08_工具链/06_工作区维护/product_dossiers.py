@@ -128,7 +128,9 @@ def builds(data):
             path, actual, observed_at = formal_snapshot(listing)
             lines += [f"### {listing['model']} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
             if actual:
-                lines += [f"- 正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- 当前正式标题：{actual.get('subject','')}", f"- 审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
+                prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
+                prefix='换款前历史' if prior else '当前'
+                lines += [f"- {prefix}正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- {prefix}正式标题：{actual.get('subject','')}", f"- {prefix}审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
                 group_id=str(actual.get('group_id') or '')
                 group_file=DETAILS.parent/'店内分组'/(group_id+'.json')
                 if group_id and (ROOT/group_file).exists():
@@ -136,7 +138,7 @@ def builds(data):
                     lines.append(f"- 店内分组：{group.get('group_name','')} · {group_id}；{ref(group_file,parent,'平台分组回执')}。")
                 images = actual.get('main_image', {}).get('images', [])
                 if images:
-                    lines.append('- 当前正式主图按官方图链匹配本地素材；旧图片不按槽位继承。')
+                    lines.append(f'- {prefix}正式主图按官方图链匹配本地素材；图片不按槽位继承。')
                     for slot, url in enumerate(images, 1):
                         item = indexed_image(url, product, asset_index)
                         asset = cache.get('assets', {}).get(url, {})

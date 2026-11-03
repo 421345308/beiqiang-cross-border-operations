@@ -73667,219 +73667,239 @@
       "id": "1601943312845",
       "product_id": "HR003",
       "model": "BQ1003-A",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr003-26nc0099",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Slip-On-Driving_1601943312845.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr003-taihao-k0099",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T07:41:18.012510+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "at": "2026-11-03T09:18:52.184420+00:00",
+        "score": "5.00",
+        "scope": "正式API验收；公开页未逐条核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       ],
-      "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "K0099 为四色打孔绒面套脚豆豆鞋，旧鞋来源与素材保留历史；订单供货及大码价格另核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T07:41:18.012510+00:00",
+        "at": "2026-11-03T09:18:52.184420+00:00",
         "model": "BQ1003-A",
-        "title": "Men's Perforated Suede Slip-On Loafers for Smart Casual Collections",
+        "title": "Mens Perforated Suede Slip On Driving Loafers with Rubber Sole",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H8829601093dd42fd8eb5bbcc87be3b455.jpg",
-          "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
-          "https://sc04.alicdn.com/kf/Hb0195f8e857c4eb2ad86ca61d06b96859.png",
-          "https://sc04.alicdn.com/kf/H499c3a93e62f417abc57cf58d6890567D.png",
-          "https://sc04.alicdn.com/kf/H3e2cd834c5704bc4840994681c22005aR.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg",
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg",
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction."
+        "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Slip-On-Driving_1601943312845.html",
+        "sku": {
+          "BQ1003-A-RED-EU47": 109919071798,
+          "BQ1003-A-RED-EU48": 109919071799,
+          "BQ1003-A-RED-EU45": 109919071796,
+          "BQ1003-A-RED-EU46": 109919071797,
+          "BQ1003-A-RED-EU43": 109919071794,
+          "BQ1003-A-RED-EU44": 109919071795,
+          "BQ1003-A-RED-EU41": 109919071792,
+          "BQ1003-A-RED-EU42": 109919071793,
+          "BQ1003-A-RED-EU49": 109919071800,
+          "BQ1003-A-RED-EU50": 109919071801,
+          "BQ1003-A-BLUE-EU44": 109919071782,
+          "BQ1003-A-BLUE-EU45": 109919071783,
+          "BQ1003-A-BLUE-EU42": 109919071780,
+          "BQ1003-A-BLUE-EU43": 109919071781,
+          "BQ1003-A-BLUE-EU40": 109919071778,
+          "BQ1003-A-BLUE-EU41": 109919071779,
+          "BQ1003-A-BLUE-EU38": 109919071776,
+          "BQ1003-A-BLUE-EU39": 109919071777,
+          "BQ1003-A-RED-EU39": 109919071790,
+          "BQ1003-A-RED-EU40": 109919071791,
+          "BQ1003-A-BLUE-EU50": 109919071788,
+          "BQ1003-A-RED-EU38": 109919071789,
+          "BQ1003-A-BLUE-EU48": 109919071786,
+          "BQ1003-A-BLUE-EU49": 109919071787,
+          "BQ1003-A-BLUE-EU46": 109919071784,
+          "BQ1003-A-BLUE-EU47": 109919071785,
+          "BQ1003-A-GREY-EU41": 109919071766,
+          "BQ1003-A-GREY-EU42": 109919071767,
+          "BQ1003-A-GREY-EU39": 109919071764,
+          "BQ1003-A-GREY-EU40": 109919071765,
+          "BQ1003-A-BLACK-EU50": 109919071762,
+          "BQ1003-A-GREY-EU38": 109919071763,
+          "BQ1003-A-BLACK-EU48": 109919071760,
+          "BQ1003-A-BLACK-EU49": 109919071761,
+          "BQ1003-A-GREY-EU49": 109919071774,
+          "BQ1003-A-GREY-EU50": 109919071775,
+          "BQ1003-A-GREY-EU47": 109919071772,
+          "BQ1003-A-GREY-EU48": 109919071773,
+          "BQ1003-A-GREY-EU45": 109919071770,
+          "BQ1003-A-GREY-EU46": 109919071771,
+          "BQ1003-A-GREY-EU43": 109919071768,
+          "BQ1003-A-GREY-EU44": 109919071769,
+          "BQ1003-A-BLACK-EU38": 109919071750,
+          "BQ1003-A-BLACK-EU39": 109919071751,
+          "BQ1003-A-BLACK-EU46": 109919071758,
+          "BQ1003-A-BLACK-EU47": 109919071759,
+          "BQ1003-A-BLACK-EU44": 109919071756,
+          "BQ1003-A-BLACK-EU45": 109919071757,
+          "BQ1003-A-BLACK-EU42": 109919071754,
+          "BQ1003-A-BLACK-EU43": 109919071755,
+          "BQ1003-A-BLACK-EU40": 109919071752,
+          "BQ1003-A-BLACK-EU41": 109919071753
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "15.76"
+          },
+          {
+            "start_quantity": 50,
+            "price": "14.71"
+          },
+          {
+            "start_quantity": 100,
+            "price": "13.66"
+          }
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/当前图库与货号.json",
-        "at": "2026-10-21T07:41:18.012510+00:00",
-        "observed_at": "2026-10-19T18:41:21.973015+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_API_PASS_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943312845/最新get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943312845/最新render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_get.json",
-        "at": "2026-11-02T02:48:53.008556+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943312845/最新get.json",
+        "scope": "K0099正式回读"
       },
       "platform_group": {
         "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "scope": "正式回读店内分组，采购意图另记。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:48:53.008556+00:00",
+        "at": "2026-11-03T09:18:52.184420+00:00",
         "model": "BQ1003-A",
-        "title": "Men's Perforated Suede Slip On Loafers with Leather Lining and Rubber Sole",
+        "title": "Mens Perforated Suede Slip On Driving Loafers with Rubber Sole",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H8829601093dd42fd8eb5bbcc87be3b455.jpg",
-          "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
-          "https://sc04.alicdn.com/kf/Hb0195f8e857c4eb2ad86ca61d06b96859.png",
-          "https://sc04.alicdn.com/kf/H499c3a93e62f417abc57cf58d6890567D.png",
-          "https://sc04.alicdn.com/kf/H3e2cd834c5704bc4840994681c22005aR.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg",
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg",
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction."
+        "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Slip-On-Driving_1601943312845.html",
+        "sku": {
+          "BQ1003-A-RED-EU47": 109919071798,
+          "BQ1003-A-RED-EU48": 109919071799,
+          "BQ1003-A-RED-EU45": 109919071796,
+          "BQ1003-A-RED-EU46": 109919071797,
+          "BQ1003-A-RED-EU43": 109919071794,
+          "BQ1003-A-RED-EU44": 109919071795,
+          "BQ1003-A-RED-EU41": 109919071792,
+          "BQ1003-A-RED-EU42": 109919071793,
+          "BQ1003-A-RED-EU49": 109919071800,
+          "BQ1003-A-RED-EU50": 109919071801,
+          "BQ1003-A-BLUE-EU44": 109919071782,
+          "BQ1003-A-BLUE-EU45": 109919071783,
+          "BQ1003-A-BLUE-EU42": 109919071780,
+          "BQ1003-A-BLUE-EU43": 109919071781,
+          "BQ1003-A-BLUE-EU40": 109919071778,
+          "BQ1003-A-BLUE-EU41": 109919071779,
+          "BQ1003-A-BLUE-EU38": 109919071776,
+          "BQ1003-A-BLUE-EU39": 109919071777,
+          "BQ1003-A-RED-EU39": 109919071790,
+          "BQ1003-A-RED-EU40": 109919071791,
+          "BQ1003-A-BLUE-EU50": 109919071788,
+          "BQ1003-A-RED-EU38": 109919071789,
+          "BQ1003-A-BLUE-EU48": 109919071786,
+          "BQ1003-A-BLUE-EU49": 109919071787,
+          "BQ1003-A-BLUE-EU46": 109919071784,
+          "BQ1003-A-BLUE-EU47": 109919071785,
+          "BQ1003-A-GREY-EU41": 109919071766,
+          "BQ1003-A-GREY-EU42": 109919071767,
+          "BQ1003-A-GREY-EU39": 109919071764,
+          "BQ1003-A-GREY-EU40": 109919071765,
+          "BQ1003-A-BLACK-EU50": 109919071762,
+          "BQ1003-A-GREY-EU38": 109919071763,
+          "BQ1003-A-BLACK-EU48": 109919071760,
+          "BQ1003-A-BLACK-EU49": 109919071761,
+          "BQ1003-A-GREY-EU49": 109919071774,
+          "BQ1003-A-GREY-EU50": 109919071775,
+          "BQ1003-A-GREY-EU47": 109919071772,
+          "BQ1003-A-GREY-EU48": 109919071773,
+          "BQ1003-A-GREY-EU45": 109919071770,
+          "BQ1003-A-GREY-EU46": 109919071771,
+          "BQ1003-A-GREY-EU43": 109919071768,
+          "BQ1003-A-GREY-EU44": 109919071769,
+          "BQ1003-A-BLACK-EU38": 109919071750,
+          "BQ1003-A-BLACK-EU39": 109919071751,
+          "BQ1003-A-BLACK-EU46": 109919071758,
+          "BQ1003-A-BLACK-EU47": 109919071759,
+          "BQ1003-A-BLACK-EU44": 109919071756,
+          "BQ1003-A-BLACK-EU45": 109919071757,
+          "BQ1003-A-BLACK-EU42": 109919071754,
+          "BQ1003-A-BLACK-EU43": 109919071755,
+          "BQ1003-A-BLACK-EU40": 109919071752,
+          "BQ1003-A-BLACK-EU41": 109919071753
+        },
+        "price_currency": "USD",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "15.76"
+          },
+          {
+            "start_quantity": 50,
+            "price": "14.71"
+          },
+          {
+            "start_quantity": 100,
+            "price": "13.66"
+          }
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:33.708425+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:33.708425+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr003-26nc0099",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:40:09.220407+00:00",
-          "old_model": "HR003-A",
-          "planned_model": "BQ1003-A",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:21.973015+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:16.155015+00:00",
-          "before": "Men's Perforated Suede Slip-On Loafers for Smart Casual Collections",
-          "target": "Men's Perforated Suede Slip On Loafers with Leather Lining and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:48:53.008556+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_K0099；当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR003-A"
@@ -73937,21 +73957,230 @@
         "state": "FORMAL_PRICE_PASS_API",
         "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943312845/verification.json",
         "public": "NOT_REQUESTED_API_ACCEPTANCE"
+      },
+      "before_K0099": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-21T07:41:18.012510+00:00",
+          "scope": "价格API闭环；公开呈现未核"
+        },
+        "catalog_fields": {
+          "at": "2026-10-21T07:41:18.012510+00:00",
+          "model": "BQ1003-A",
+          "title": "Men's Perforated Suede Slip-On Loafers for Smart Casual Collections",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H8829601093dd42fd8eb5bbcc87be3b455.jpg",
+            "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+            "https://sc04.alicdn.com/kf/Hb0195f8e857c4eb2ad86ca61d06b96859.png",
+            "https://sc04.alicdn.com/kf/H499c3a93e62f417abc57cf58d6890567D.png",
+            "https://sc04.alicdn.com/kf/H3e2cd834c5704bc4840994681c22005aR.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction."
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:48:53.008556+00:00",
+          "model": "BQ1003-A",
+          "title": "Men's Perforated Suede Slip On Loafers with Leather Lining and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H8829601093dd42fd8eb5bbcc87be3b455.jpg",
+            "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+            "https://sc04.alicdn.com/kf/Hb0195f8e857c4eb2ad86ca61d06b96859.png",
+            "https://sc04.alicdn.com/kf/H499c3a93e62f417abc57cf58d6890567D.png",
+            "https://sc04.alicdn.com/kf/H3e2cd834c5704bc4840994681c22005aR.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Slip-On_1601943312845.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction."
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_get.json",
+          "at": "2026-11-02T02:48:53.008556+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_PRICE_PASS_API",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/当前图库与货号.json",
+          "at": "2026-10-21T07:41:18.012510+00:00",
+          "observed_at": "2026-10-19T18:41:21.973015+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:33.708425+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:33.708425+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943312845/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr003-26nc0099",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:40:09.220407+00:00",
+            "old_model": "HR003-A",
+            "planned_model": "BQ1003-A",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943312845/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:21.973015+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:16.155015+00:00",
+            "before": "Men's Perforated Suede Slip-On Loafers for Smart Casual Collections",
+            "target": "Men's Perforated Suede Slip On Loafers with Leather Lining and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:48:53.008556+00:00"
+          }
+        }
       }
     },
     {
       "id": "1601943335928",
       "product_id": "HR003",
       "model": "BQ1003-B",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Moccasins-with-Genuine_1601943335928.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr003-26nc0099",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Mens-Suede-Driving-Moccasins-with-Perforated_1601943335928.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr003-taihao-k0099",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T07:38:25.390943+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "at": "2026-11-03T09:25:29.343604+00:00",
+        "score": "5.00",
+        "scope": "正式API验收；公开页未逐条核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -73967,278 +74196,224 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       ],
-      "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "K0099 为四色打孔绒面套脚豆豆鞋，旧鞋来源与素材保留历史；订单供货及大码价格另核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T07:38:25.390943+00:00",
+        "at": "2026-11-03T09:25:29.343604+00:00",
         "model": "BQ1003-B",
-        "title": "Men's Suede Moccasins with Genuine Leather Lining for Everyday Casual Wear",
+        "title": "Mens Suede Driving Moccasins with Perforated Upper and Slip On Design",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H572da19e50c8436ab1682b91b6cef1cd1.jpg",
-          "https://sc04.alicdn.com/kf/H050569e9cf034b53b919b0530c21d7b2B.jpg",
-          "https://sc04.alicdn.com/kf/Hdbe658864777441387b12b1a21e128f1F.png",
-          "https://sc04.alicdn.com/kf/H961fbabc139f4b62a42cc69cdb5f34f2w.png",
-          "https://sc04.alicdn.com/kf/H0323dc757ffc44b5a379647a9e7290a1K.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg",
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg",
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Moccasins-with-Genuine_1601943335928.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Mens-Suede-Driving-Moccasins-with-Perforated_1601943335928.html",
+        "sku": {
+          "BQ1003-B-RED-EU46": 109919248259,
+          "BQ1003-B-RED-EU45": 109919248258,
+          "BQ1003-B-RED-EU44": 109919248257,
+          "BQ1003-B-RED-EU43": 109919248256,
+          "BQ1003-B-RED-EU50": 109919248263,
+          "BQ1003-B-RED-EU49": 109919248262,
+          "BQ1003-B-RED-EU48": 109919248261,
+          "BQ1003-B-RED-EU47": 109919248260,
+          "BQ1003-B-GREY-EU48": 109919248235,
+          "BQ1003-B-GREY-EU47": 109919248234,
+          "BQ1003-B-GREY-EU46": 109919248233,
+          "BQ1003-B-GREY-EU45": 109919248232,
+          "BQ1003-B-BLUE-EU39": 109919248239,
+          "BQ1003-B-BLUE-EU38": 109919248238,
+          "BQ1003-B-GREY-EU50": 109919248237,
+          "BQ1003-B-GREY-EU49": 109919248236,
+          "BQ1003-B-GREY-EU40": 109919248227,
+          "BQ1003-B-GREY-EU39": 109919248226,
+          "BQ1003-B-GREY-EU38": 109919248225,
+          "BQ1003-B-BLACK-EU50": 109919248224,
+          "BQ1003-B-GREY-EU44": 109919248231,
+          "BQ1003-B-GREY-EU43": 109919248230,
+          "BQ1003-B-GREY-EU42": 109919248229,
+          "BQ1003-B-GREY-EU41": 109919248228,
+          "BQ1003-B-RED-EU38": 109919248251,
+          "BQ1003-B-BLUE-EU50": 109919248250,
+          "BQ1003-B-BLUE-EU49": 109919248249,
+          "BQ1003-B-BLUE-EU48": 109919248248,
+          "BQ1003-B-RED-EU42": 109919248255,
+          "BQ1003-B-RED-EU41": 109919248254,
+          "BQ1003-B-RED-EU40": 109919248253,
+          "BQ1003-B-RED-EU39": 109919248252,
+          "BQ1003-B-BLUE-EU43": 109919248243,
+          "BQ1003-B-BLUE-EU42": 109919248242,
+          "BQ1003-B-BLUE-EU41": 109919248241,
+          "BQ1003-B-BLUE-EU40": 109919248240,
+          "BQ1003-B-BLUE-EU47": 109919248247,
+          "BQ1003-B-BLUE-EU46": 109919248246,
+          "BQ1003-B-BLUE-EU45": 109919248245,
+          "BQ1003-B-BLUE-EU44": 109919248244,
+          "BQ1003-B-BLACK-EU45": 109919248219,
+          "BQ1003-B-BLACK-EU44": 109919248218,
+          "BQ1003-B-BLACK-EU43": 109919248217,
+          "BQ1003-B-BLACK-EU42": 109919248216,
+          "BQ1003-B-BLACK-EU49": 109919248223,
+          "BQ1003-B-BLACK-EU48": 109919248222,
+          "BQ1003-B-BLACK-EU47": 109919248221,
+          "BQ1003-B-BLACK-EU46": 109919248220,
+          "BQ1003-B-BLACK-EU41": 109919248215,
+          "BQ1003-B-BLACK-EU40": 109919248214,
+          "BQ1003-B-BLACK-EU39": 109919248213,
+          "BQ1003-B-BLACK-EU38": 109919248212
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H112db03ed3af4655b78b377346f7ee15u.png"
+            "start_quantity": 2,
+            "price": "15.76"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H296f1b961a644d92a6900822c54afc47O.png"
+            "start_quantity": 50,
+            "price": "14.71"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hfbdb4649e2de4db8ba7442be04976f87S.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            "start_quantity": 100,
+            "price": "13.66"
           }
-        ]
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/当前图库与货号.json",
-        "at": "2026-10-21T07:38:25.390943+00:00",
-        "observed_at": "2026-10-19T18:41:24.436269+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_API_PASS_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943335928/最新get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943335928/最新render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
-        "at": "2026-11-02T02:48:56.280523+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943335928/最新get.json",
+        "scope": "K0099正式回读"
       },
       "platform_group": {
         "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "scope": "正式回读店内分组，采购意图另记。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:48:56.280523+00:00",
+        "at": "2026-11-03T09:25:29.343604+00:00",
         "model": "BQ1003-B",
-        "title": "Men's Perforated Suede Moccasins with Genuine Leather Lining and Rubber Sole",
+        "title": "Mens Suede Driving Moccasins with Perforated Upper and Slip On Design",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H572da19e50c8436ab1682b91b6cef1cd1.jpg",
-          "https://sc04.alicdn.com/kf/H050569e9cf034b53b919b0530c21d7b2B.jpg",
-          "https://sc04.alicdn.com/kf/Hdbe658864777441387b12b1a21e128f1F.png",
-          "https://sc04.alicdn.com/kf/H961fbabc139f4b62a42cc69cdb5f34f2w.png",
-          "https://sc04.alicdn.com/kf/H0323dc757ffc44b5a379647a9e7290a1K.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg",
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg",
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Moccasins-with_1601943335928.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Mens-Suede-Driving-Moccasins-with-Perforated_1601943335928.html",
+        "sku": {
+          "BQ1003-B-RED-EU46": 109919248259,
+          "BQ1003-B-RED-EU45": 109919248258,
+          "BQ1003-B-RED-EU44": 109919248257,
+          "BQ1003-B-RED-EU43": 109919248256,
+          "BQ1003-B-RED-EU50": 109919248263,
+          "BQ1003-B-RED-EU49": 109919248262,
+          "BQ1003-B-RED-EU48": 109919248261,
+          "BQ1003-B-RED-EU47": 109919248260,
+          "BQ1003-B-GREY-EU48": 109919248235,
+          "BQ1003-B-GREY-EU47": 109919248234,
+          "BQ1003-B-GREY-EU46": 109919248233,
+          "BQ1003-B-GREY-EU45": 109919248232,
+          "BQ1003-B-BLUE-EU39": 109919248239,
+          "BQ1003-B-BLUE-EU38": 109919248238,
+          "BQ1003-B-GREY-EU50": 109919248237,
+          "BQ1003-B-GREY-EU49": 109919248236,
+          "BQ1003-B-GREY-EU40": 109919248227,
+          "BQ1003-B-GREY-EU39": 109919248226,
+          "BQ1003-B-GREY-EU38": 109919248225,
+          "BQ1003-B-BLACK-EU50": 109919248224,
+          "BQ1003-B-GREY-EU44": 109919248231,
+          "BQ1003-B-GREY-EU43": 109919248230,
+          "BQ1003-B-GREY-EU42": 109919248229,
+          "BQ1003-B-GREY-EU41": 109919248228,
+          "BQ1003-B-RED-EU38": 109919248251,
+          "BQ1003-B-BLUE-EU50": 109919248250,
+          "BQ1003-B-BLUE-EU49": 109919248249,
+          "BQ1003-B-BLUE-EU48": 109919248248,
+          "BQ1003-B-RED-EU42": 109919248255,
+          "BQ1003-B-RED-EU41": 109919248254,
+          "BQ1003-B-RED-EU40": 109919248253,
+          "BQ1003-B-RED-EU39": 109919248252,
+          "BQ1003-B-BLUE-EU43": 109919248243,
+          "BQ1003-B-BLUE-EU42": 109919248242,
+          "BQ1003-B-BLUE-EU41": 109919248241,
+          "BQ1003-B-BLUE-EU40": 109919248240,
+          "BQ1003-B-BLUE-EU47": 109919248247,
+          "BQ1003-B-BLUE-EU46": 109919248246,
+          "BQ1003-B-BLUE-EU45": 109919248245,
+          "BQ1003-B-BLUE-EU44": 109919248244,
+          "BQ1003-B-BLACK-EU45": 109919248219,
+          "BQ1003-B-BLACK-EU44": 109919248218,
+          "BQ1003-B-BLACK-EU43": 109919248217,
+          "BQ1003-B-BLACK-EU42": 109919248216,
+          "BQ1003-B-BLACK-EU49": 109919248223,
+          "BQ1003-B-BLACK-EU48": 109919248222,
+          "BQ1003-B-BLACK-EU47": 109919248221,
+          "BQ1003-B-BLACK-EU46": 109919248220,
+          "BQ1003-B-BLACK-EU41": 109919248215,
+          "BQ1003-B-BLACK-EU40": 109919248214,
+          "BQ1003-B-BLACK-EU39": 109919248213,
+          "BQ1003-B-BLACK-EU38": 109919248212
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H112db03ed3af4655b78b377346f7ee15u.png"
+            "start_quantity": 2,
+            "price": "15.76"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H296f1b961a644d92a6900822c54afc47O.png"
+            "start_quantity": 50,
+            "price": "14.71"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hfbdb4649e2de4db8ba7442be04976f87S.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            "start_quantity": 100,
+            "price": "13.66"
           }
-        ]
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:47.655171+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:10:47.655171+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr003-26nc0099",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:40:07.151644+00:00",
-          "old_model": "HR003-B",
-          "planned_model": "BQ1003-B",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:24.436269+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T21:17:11.901462+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:21.736813+00:00",
-          "before": "Men's Suede Moccasins with Genuine Leather Lining for Everyday Casual Wear",
-          "target": "Men's Perforated Suede Moccasins with Genuine Leather Lining and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:48:56.280523+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_K0099；当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR003-B"
@@ -74296,21 +74471,303 @@
         "state": "FORMAL_PRICE_PASS_API",
         "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943335928/verification.json",
         "public": "NOT_REQUESTED_API_ACCEPTANCE"
+      },
+      "before_K0099": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Moccasins-with-Genuine_1601943335928.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-21T07:38:25.390943+00:00",
+          "scope": "价格API闭环；公开呈现未核"
+        },
+        "catalog_fields": {
+          "at": "2026-10-21T07:38:25.390943+00:00",
+          "model": "BQ1003-B",
+          "title": "Men's Suede Moccasins with Genuine Leather Lining for Everyday Casual Wear",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H572da19e50c8436ab1682b91b6cef1cd1.jpg",
+            "https://sc04.alicdn.com/kf/H050569e9cf034b53b919b0530c21d7b2B.jpg",
+            "https://sc04.alicdn.com/kf/Hdbe658864777441387b12b1a21e128f1F.png",
+            "https://sc04.alicdn.com/kf/H961fbabc139f4b62a42cc69cdb5f34f2w.png",
+            "https://sc04.alicdn.com/kf/H0323dc757ffc44b5a379647a9e7290a1K.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Moccasins-with-Genuine_1601943335928.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H112db03ed3af4655b78b377346f7ee15u.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H296f1b961a644d92a6900822c54afc47O.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hfbdb4649e2de4db8ba7442be04976f87S.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:48:56.280523+00:00",
+          "model": "BQ1003-B",
+          "title": "Men's Perforated Suede Moccasins with Genuine Leather Lining and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/H572da19e50c8436ab1682b91b6cef1cd1.jpg",
+            "https://sc04.alicdn.com/kf/H050569e9cf034b53b919b0530c21d7b2B.jpg",
+            "https://sc04.alicdn.com/kf/Hdbe658864777441387b12b1a21e128f1F.png",
+            "https://sc04.alicdn.com/kf/H961fbabc139f4b62a42cc69cdb5f34f2w.png",
+            "https://sc04.alicdn.com/kf/H0323dc757ffc44b5a379647a9e7290a1K.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Perforated-Suede-Moccasins-with_1601943335928.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H112db03ed3af4655b78b377346f7ee15u.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H296f1b961a644d92a6900822c54afc47O.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hfbdb4649e2de4db8ba7442be04976f87S.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
+          "at": "2026-11-02T02:48:56.280523+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_PRICE_PASS_API",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/当前图库与货号.json",
+          "at": "2026-10-21T07:38:25.390943+00:00",
+          "observed_at": "2026-10-19T18:41:24.436269+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:47.655171+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:10:47.655171+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943335928/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr003-26nc0099",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:40:07.151644+00:00",
+            "old_model": "HR003-B",
+            "planned_model": "BQ1003-B",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943335928/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:24.436269+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T21:17:11.901462+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:21.736813+00:00",
+            "before": "Men's Suede Moccasins with Genuine Leather Lining for Everyday Casual Wear",
+            "target": "Men's Perforated Suede Moccasins with Genuine Leather Lining and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:48:56.280523+00:00"
+          }
+        }
       }
     },
     {
       "id": "1601943467198",
       "product_id": "HR003",
       "model": "BQ1003-C",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr003-26nc0099",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Loafers-with-Rubber_1601943467198.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr003-taihao-k0099",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T07:40:01.242658+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "at": "2026-11-03T09:25:48.750830+00:00",
+        "score": "5.00",
+        "scope": "正式API验收；公开页未逐条核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -74321,278 +74778,224 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       ],
-      "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "K0099 为四色打孔绒面套脚豆豆鞋，旧鞋来源与素材保留历史；订单供货及大码价格另核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T07:40:01.242658+00:00",
+        "at": "2026-11-03T09:25:48.750830+00:00",
         "model": "BQ1003-C",
-        "title": "Men's Suede Casual Loafers with Perforated Upper and Slip On Design",
+        "title": "Mens Perforated Suede Loafers with Rubber Sole for Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/He6682f21542f43fba9d8b99e21266dd5B.png",
-          "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
-          "https://sc04.alicdn.com/kf/He9edf00f3cc3466494350153bb5790e8t.png",
-          "https://sc04.alicdn.com/kf/H498e6eb114bc40ebb0e124713bac29f6t.png",
-          "https://sc04.alicdn.com/kf/Hbe6aa85955f64e5fb0b5556f1bc23da97.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg",
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Loafers-with-Rubber_1601943467198.html",
+        "sku": {
+          "BQ1003-C-RED-EU49": 109919304224,
+          "BQ1003-C-RED-EU50": 109919304225,
+          "BQ1003-C-BLUE-EU40": 109919304202,
+          "BQ1003-C-BLUE-EU41": 109919304203,
+          "BQ1003-C-BLUE-EU38": 109919304200,
+          "BQ1003-C-BLUE-EU39": 109919304201,
+          "BQ1003-C-BLUE-EU44": 109919304206,
+          "BQ1003-C-BLUE-EU45": 109919304207,
+          "BQ1003-C-BLUE-EU42": 109919304204,
+          "BQ1003-C-BLUE-EU43": 109919304205,
+          "BQ1003-C-GREY-EU45": 109919304194,
+          "BQ1003-C-GREY-EU46": 109919304195,
+          "BQ1003-C-GREY-EU43": 109919304192,
+          "BQ1003-C-GREY-EU44": 109919304193,
+          "BQ1003-C-GREY-EU49": 109919304198,
+          "BQ1003-C-GREY-EU50": 109919304199,
+          "BQ1003-C-GREY-EU47": 109919304196,
+          "BQ1003-C-GREY-EU48": 109919304197,
+          "BQ1003-C-RED-EU43": 109919304218,
+          "BQ1003-C-RED-EU44": 109919304219,
+          "BQ1003-C-RED-EU41": 109919304216,
+          "BQ1003-C-RED-EU42": 109919304217,
+          "BQ1003-C-RED-EU47": 109919304222,
+          "BQ1003-C-RED-EU48": 109919304223,
+          "BQ1003-C-RED-EU45": 109919304220,
+          "BQ1003-C-RED-EU46": 109919304221,
+          "BQ1003-C-BLUE-EU48": 109919304210,
+          "BQ1003-C-BLUE-EU49": 109919304211,
+          "BQ1003-C-BLUE-EU46": 109919304208,
+          "BQ1003-C-BLUE-EU47": 109919304209,
+          "BQ1003-C-RED-EU39": 109919304214,
+          "BQ1003-C-RED-EU40": 109919304215,
+          "BQ1003-C-BLUE-EU50": 109919304212,
+          "BQ1003-C-RED-EU38": 109919304213,
+          "BQ1003-C-BLACK-EU38": 109919304174,
+          "BQ1003-C-BLACK-EU39": 109919304175,
+          "BQ1003-C-BLACK-EU50": 109919304186,
+          "BQ1003-C-GREY-EU38": 109919304187,
+          "BQ1003-C-BLACK-EU48": 109919304184,
+          "BQ1003-C-BLACK-EU49": 109919304185,
+          "BQ1003-C-GREY-EU41": 109919304190,
+          "BQ1003-C-GREY-EU42": 109919304191,
+          "BQ1003-C-GREY-EU39": 109919304188,
+          "BQ1003-C-GREY-EU40": 109919304189,
+          "BQ1003-C-BLACK-EU42": 109919304178,
+          "BQ1003-C-BLACK-EU43": 109919304179,
+          "BQ1003-C-BLACK-EU40": 109919304176,
+          "BQ1003-C-BLACK-EU41": 109919304177,
+          "BQ1003-C-BLACK-EU46": 109919304182,
+          "BQ1003-C-BLACK-EU47": 109919304183,
+          "BQ1003-C-BLACK-EU44": 109919304180,
+          "BQ1003-C-BLACK-EU45": 109919304181
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hf258a8b7a8cb4aa6ae6ebc867a5b4b39l.png"
+            "start_quantity": 2,
+            "price": "15.76"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3f1cc98963cd40ef85c303ce6b76ea6d2.png"
+            "start_quantity": 50,
+            "price": "14.71"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H389daf21ddd44c2e9d9e60b6500815ceT.png"
+            "start_quantity": 100,
+            "price": "13.66"
           }
-        ]
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/当前图库与货号.json",
-        "at": "2026-10-21T07:40:01.242658+00:00",
-        "observed_at": "2026-10-19T18:41:24.099040+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_API_PASS_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943467198/最新get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943467198/最新render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_get.json",
-        "at": "2026-11-02T02:48:56.131328+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/.local/本次换款/1601943467198/最新get.json",
+        "scope": "K0099正式回读"
       },
       "platform_group": {
         "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "scope": "正式回读店内分组，采购意图另记。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/当前状态.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:48:56.131328+00:00",
+        "at": "2026-11-03T09:25:48.750830+00:00",
         "model": "BQ1003-C",
-        "title": "Men's Suede Casual Loafers with Perforated Upper Leather Lining and Rubber Sole",
+        "title": "Mens Perforated Suede Loafers with Rubber Sole for Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/He6682f21542f43fba9d8b99e21266dd5B.png",
-          "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
-          "https://sc04.alicdn.com/kf/He9edf00f3cc3466494350153bb5790e8t.png",
-          "https://sc04.alicdn.com/kf/H498e6eb114bc40ebb0e124713bac29f6t.png",
-          "https://sc04.alicdn.com/kf/Hbe6aa85955f64e5fb0b5556f1bc23da97.png",
+          "https://sc04.alicdn.com/kf/H18d4ef93dc7942648a616ee91cc401ee9.jpg",
+          "https://sc04.alicdn.com/kf/H0416c40aec754b778b0d5645c8cadba8Z.jpg",
+          "https://sc04.alicdn.com/kf/Ha08a74ca233244e69bf0df3b41fd7a937.jpg",
+          "https://sc04.alicdn.com/kf/H0ab824f3bfef46b1b60f6e811a691c21K.jpg",
+          "https://sc04.alicdn.com/kf/Haddc4ad62af6475c833978df0c78ba507.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H60c21a2f0e134d528cb9d1f34f29162cf.jpg",
+          "https://sc04.alicdn.com/kf/Hf06bb828e1b548d0945dedf3e6a0d820Q.jpg",
+          "https://sc04.alicdn.com/kf/H71556c627f2d49f4852ab07e60f0e99aZ.jpg",
+          "https://sc04.alicdn.com/kf/H6acbbafbfaec45998c4293d95b2117adJ.jpg"
         ],
         "category_id": 202240835,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Mens-Perforated-Suede-Loafers-with-Rubber_1601943467198.html",
+        "sku": {
+          "BQ1003-C-RED-EU49": 109919304224,
+          "BQ1003-C-RED-EU50": 109919304225,
+          "BQ1003-C-BLUE-EU40": 109919304202,
+          "BQ1003-C-BLUE-EU41": 109919304203,
+          "BQ1003-C-BLUE-EU38": 109919304200,
+          "BQ1003-C-BLUE-EU39": 109919304201,
+          "BQ1003-C-BLUE-EU44": 109919304206,
+          "BQ1003-C-BLUE-EU45": 109919304207,
+          "BQ1003-C-BLUE-EU42": 109919304204,
+          "BQ1003-C-BLUE-EU43": 109919304205,
+          "BQ1003-C-GREY-EU45": 109919304194,
+          "BQ1003-C-GREY-EU46": 109919304195,
+          "BQ1003-C-GREY-EU43": 109919304192,
+          "BQ1003-C-GREY-EU44": 109919304193,
+          "BQ1003-C-GREY-EU49": 109919304198,
+          "BQ1003-C-GREY-EU50": 109919304199,
+          "BQ1003-C-GREY-EU47": 109919304196,
+          "BQ1003-C-GREY-EU48": 109919304197,
+          "BQ1003-C-RED-EU43": 109919304218,
+          "BQ1003-C-RED-EU44": 109919304219,
+          "BQ1003-C-RED-EU41": 109919304216,
+          "BQ1003-C-RED-EU42": 109919304217,
+          "BQ1003-C-RED-EU47": 109919304222,
+          "BQ1003-C-RED-EU48": 109919304223,
+          "BQ1003-C-RED-EU45": 109919304220,
+          "BQ1003-C-RED-EU46": 109919304221,
+          "BQ1003-C-BLUE-EU48": 109919304210,
+          "BQ1003-C-BLUE-EU49": 109919304211,
+          "BQ1003-C-BLUE-EU46": 109919304208,
+          "BQ1003-C-BLUE-EU47": 109919304209,
+          "BQ1003-C-RED-EU39": 109919304214,
+          "BQ1003-C-RED-EU40": 109919304215,
+          "BQ1003-C-BLUE-EU50": 109919304212,
+          "BQ1003-C-RED-EU38": 109919304213,
+          "BQ1003-C-BLACK-EU38": 109919304174,
+          "BQ1003-C-BLACK-EU39": 109919304175,
+          "BQ1003-C-BLACK-EU50": 109919304186,
+          "BQ1003-C-GREY-EU38": 109919304187,
+          "BQ1003-C-BLACK-EU48": 109919304184,
+          "BQ1003-C-BLACK-EU49": 109919304185,
+          "BQ1003-C-GREY-EU41": 109919304190,
+          "BQ1003-C-GREY-EU42": 109919304191,
+          "BQ1003-C-GREY-EU39": 109919304188,
+          "BQ1003-C-GREY-EU40": 109919304189,
+          "BQ1003-C-BLACK-EU42": 109919304178,
+          "BQ1003-C-BLACK-EU43": 109919304179,
+          "BQ1003-C-BLACK-EU40": 109919304176,
+          "BQ1003-C-BLACK-EU41": 109919304177,
+          "BQ1003-C-BLACK-EU46": 109919304182,
+          "BQ1003-C-BLACK-EU47": 109919304183,
+          "BQ1003-C-BLACK-EU44": 109919304180,
+          "BQ1003-C-BLACK-EU45": 109919304181
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hf258a8b7a8cb4aa6ae6ebc867a5b4b39l.png"
+            "start_quantity": 2,
+            "price": "15.76"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3f1cc98963cd40ef85c303ce6b76ea6d2.png"
+            "start_quantity": 50,
+            "price": "14.71"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H389daf21ddd44c2e9d9e60b6500815ceT.png"
+            "start_quantity": 100,
+            "price": "13.66"
           }
-        ]
+        ],
+        "highlights": "Perforations across the upper give this slip-on loafer its distinctive look. Decorative laces frame the vamp, and a rubber driving-style sole finishes the casual profile.",
+        "scope": "正式 API 回读，未逐页核公开展示。"
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:12:06.218246+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:12:06.218246+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr003-26nc0099",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:22:00.730313+00:00",
-          "old_model": "HR003-C",
-          "planned_model": "BQ1003-C",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:41:24.099040+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T07:55:41.773298+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:20.998002+00:00",
-          "before": "Men's Suede Casual Loafers with Perforated Upper and Slip On Design",
-          "target": "Men's Suede Casual Loafers with Perforated Upper Leather Lining and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:48:56.131328+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_K0099；当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR003-C"
@@ -74650,6 +75053,287 @@
         "state": "FORMAL_PRICE_PASS_API",
         "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/降价执行/1601943467198/verification.json",
         "public": "NOT_REQUESTED_API_ACCEPTANCE"
+      },
+      "before_K0099": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-21T07:40:01.242658+00:00",
+          "scope": "价格API闭环；公开呈现未核"
+        },
+        "catalog_fields": {
+          "at": "2026-10-21T07:40:01.242658+00:00",
+          "model": "BQ1003-C",
+          "title": "Men's Suede Casual Loafers with Perforated Upper and Slip On Design",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/He6682f21542f43fba9d8b99e21266dd5B.png",
+            "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+            "https://sc04.alicdn.com/kf/He9edf00f3cc3466494350153bb5790e8t.png",
+            "https://sc04.alicdn.com/kf/H498e6eb114bc40ebb0e124713bac29f6t.png",
+            "https://sc04.alicdn.com/kf/Hbe6aa85955f64e5fb0b5556f1bc23da97.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hf258a8b7a8cb4aa6ae6ebc867a5b4b39l.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3f1cc98963cd40ef85c303ce6b76ea6d2.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H389daf21ddd44c2e9d9e60b6500815ceT.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:48:56.131328+00:00",
+          "model": "BQ1003-C",
+          "title": "Men's Suede Casual Loafers with Perforated Upper Leather Lining and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/He6682f21542f43fba9d8b99e21266dd5B.png",
+            "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+            "https://sc04.alicdn.com/kf/He9edf00f3cc3466494350153bb5790e8t.png",
+            "https://sc04.alicdn.com/kf/H498e6eb114bc40ebb0e124713bac29f6t.png",
+            "https://sc04.alicdn.com/kf/Hbe6aa85955f64e5fb0b5556f1bc23da97.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 202240835,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Suede-Casual-Loafers-with_1601943467198.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Ventilated suede upper: Perforated suede creates openings through the upper while keeping a closed loafer front.\n\nSlip-on entry: The low opening removes the need to tie laces for daily smart-casual dressing.\n\nLeather-lined interior: A genuine-leather lining forms the inside contact layer above the rubber sole construction.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hf258a8b7a8cb4aa6ae6ebc867a5b4b39l.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3f1cc98963cd40ef85c303ce6b76ea6d2.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Habcfba5c918642a0ba1582d393863127k.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H389daf21ddd44c2e9d9e60b6500815ceT.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_get.json",
+          "at": "2026-11-02T02:48:56.131328+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_PRICE_PASS_API",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/当前图库与货号.json",
+          "at": "2026-10-21T07:40:01.242658+00:00",
+          "observed_at": "2026-10-19T18:41:24.099040+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款26NC0099保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:12:06.218246+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:12:06.218246+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943467198/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr003-26nc0099",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "INSUFFICIENT_TRAFFIC_COST_AND_CROSSBORDER_FIT_SELECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:22:00.730313+00:00",
+            "old_model": "HR003-C",
+            "planned_model": "BQ1003-C",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943467198/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:41:24.099040+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T07:55:41.773298+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_旧报价图替换/商品/1601943467198/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:20.998002+00:00",
+            "before": "Men's Suede Casual Loafers with Perforated Upper and Slip On Design",
+            "target": "Men's Suede Casual Loafers with Perforated Upper Leather Lining and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:48:56.131328+00:00"
+          }
+        }
       }
     },
     {
@@ -149818,28 +150502,11 @@
       }
     },
     "HR003": {
-      "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "next_action": "K0099 三条正式审核、色码和评分已核；公开页面尚需按各链接抽检。",
       "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR003/README.md",
       "content_quality_revision": {
-        "at": "2026-10-19T18:41:24.436269+00:00",
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "verified_ids": [
-          "1601943312845",
-          "1601943335928",
-          "1601943467198"
-        ],
-        "pending_ids": [],
-        "evidence": [
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/prepared.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/update_receipt.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/prepared.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/update_receipt.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/prepared.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/update_receipt.json",
-          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json"
-        ]
+        "state": "HISTORICAL_BEFORE_K0099",
+        "scope": "旧款内容记录见 before_K0099。"
       },
       "classification": {
         "platform_category_ids": [
@@ -149847,10 +150514,44 @@
         ],
         "store_groups": [
           {
-            "id": "972130291",
-            "name": "Slip-On Casual Walking Shoes"
+            "id": "972130291"
           }
         ]
+      },
+      "before_K0099": {
+        "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+        "classification": {
+          "platform_category_ids": [
+            202240835
+          ],
+          "store_groups": [
+            {
+              "id": "972130291",
+              "name": "Slip-On Casual Walking Shoes"
+            }
+          ]
+        },
+        "content_quality_revision": {
+          "at": "2026-10-19T18:41:24.436269+00:00",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "verified_ids": [
+            "1601943312845",
+            "1601943335928",
+            "1601943467198"
+          ],
+          "pending_ids": [],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943312845/verification.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943335928/verification.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943467198/verification.json"
+          ]
+        }
       }
     },
     "HR004": {
@@ -149926,7 +150627,7 @@
       }
     },
     "HR005": {
-      "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "next_action": "丰收627整款替换已提交：A/B已审核，C审核中；A/B中文旧标题已更新，其他正式验收和数据同步继续。",
       "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR005/README.md",
       "content_quality_revision": {
         "at": "2026-10-19T18:41:44.978279+00:00",
@@ -149959,10 +150660,15 @@
             "name": "Slip-On Casual Walking Shoes"
           }
         ]
+      },
+      "historical_next_action_before_sooxie": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "replacement_progress": {
+        "state": "IN_REVIEW",
+        "note": "丰收627整款替换已提交：A/B已审核，C审核中；A/B中文旧标题已更新，其他正式验收和数据同步继续。"
       }
     },
     "HR006": {
-      "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "next_action": "兴凯达20181三条整款替换已提交，2026-11-03 17:36均在审核；审核通过后逐条核展示与正式字段，再同步新来源。",
       "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR006/README.md",
       "content_quality_revision": {
         "at": "2026-10-19T18:41:58.451007+00:00",
@@ -149995,6 +150701,11 @@
             "name": "Slip-On Casual Walking Shoes"
           }
         ]
+      },
+      "historical_next_action_before_sooxie": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "replacement_progress": {
+        "state": "IN_REVIEW",
+        "note": "兴凯达20181三条整款替换已提交，2026-11-03 17:36均在审核；审核通过后逐条核展示与正式字段，再同步新来源。"
       }
     },
     "HR007": {
