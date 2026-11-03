@@ -1,4 +1,4 @@
-"""Read-only, object-scoped business MCP over newline-delimited JSON-RPC stdio."""
+"""Object-scoped business MCP over newline-delimited JSON-RPC stdio."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -200,6 +200,12 @@ class DeskTools:
         if name=='get_customer_gmail':
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('邮件往来仅支持当前客户')
             return self.business.app.gmail.customer(self.object_id,force=True)
+        if name=='save_customer_commercial':
+            if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
+            workspace=self.business.app.customer_workspace
+            current=workspace.commercial(self.object_id)
+            body={key:args[key] for key in ('record','owner','next_action','due_at') if key in args}
+            return workspace.save_commercial(self.object_id,{'revision':current['revision'],**body})
         if name=='research_company':
             from prospect_research import research_company
             obj=self.object()
@@ -234,6 +240,9 @@ TOOLS.append({'name':'read_customer_material','description':'按资料ID读取�
 TOOLS.append({'name':'get_customer_gmail','description':'读取当前客户已连接的 Gmail 收发往来与连接状态；只读，不发送或改变邮件。',
               'inputSchema':{'type':'object','properties':{},'additionalProperties':False},
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
+TOOLS.append({'name':'save_customer_commercial','description':'按当前委托将报价、样品、订单的已知事实或内部草稿写入当前客户原档，并可更新下一步；status区分draft、recorded、cancelled。不会发信、报价给客户或创建平台订单。',
+              'inputSchema':{'type':'object','properties':{'record':{'type':'object','properties':{'id':{'type':'string'},'kind':{'type':'string','enum':['quotation','sample','order']},'status':{'type':'string','enum':['draft','recorded','cancelled']},'summary':{'type':'string'},'reference':{'type':'string'},'products':{'type':'string'},'terms':{'type':'string'},'purpose':{'type':'string'},'acceptance':{'type':'string'},'exclusions':{'type':'string'},'actual_result':{'type':'string'},'profit_basis':{'type':'string'}},'required':['kind','status','summary'],'additionalProperties':False},'owner':{'type':'string'},'next_action':{'type':'string'},'due_at':{'type':['string','null']}},'additionalProperties':False},
+              'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}})
 
 
 def dispatch(tools,message):

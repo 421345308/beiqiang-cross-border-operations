@@ -11,6 +11,10 @@ from media_assets import MediaAssets, MediaError
 from resource_library import ResourceLibrary
 from product_changes import ProductChanges
 from product_gallery_changes import GalleryChanges
+from product_gallery_uploads import LocalGalleryPlans
+from product_detail_changes import DetailChanges
+from product_detail_uploads import LocalDetailPlans
+from search_console import SearchConsole
 from alibaba_product_review import AlibabaProductReview
 from business import Business, CHANNEL
 from agent_jobs import AgentJobs, codex_executable
@@ -57,6 +61,11 @@ class Workbench:
         self.library=ResourceLibrary(self)
         self.product_changes=ProductChanges(self)
         self.product_gallery_changes=GalleryChanges(self)
+        self.product_gallery_plans=LocalGalleryPlans(self)
+        self.product_detail_changes=DetailChanges(self)
+        self.product_detail_plans=LocalDetailPlans(self)
+        self.search_console=SearchConsole(self.state)
+        if self.search_console.snapshot().get('site_url'):self.search_console.start_auto()
         self.product_review=AlibabaProductReview(self)
         self.business=Business(self)
         self.customer_workspace=CustomerWorkspace(self)
@@ -290,6 +299,12 @@ class Handler(BaseHTTPRequestHandler):
                         return self.send_gmail_result('发送授权已恢复。请关闭此页，刷新工作台后继续审核邮件。')
                     except ValueError as exc:return self.send_gmail_result(str(exc),400)
                     except Exception:return self.send_gmail_result('Google 发送授权未完成，请返回工作台重新尝试。',400)
+                if u.path=='/api/desk/search-console/oauth/callback':
+                    try:
+                        app.search_console.finish(value('state'),value('code'))
+                        return self.send_gmail_result('Google 搜索授权成功，请返回工作台选择站点。')
+                    except ValueError as exc:return self.send_gmail_result(str(exc),400)
+                    except Exception:return self.send_gmail_result('Google 搜索授权未完成，请返回工作台重试。',400)
                 if u.path=='/api/desk/bootstrap':
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
@@ -305,6 +320,8 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/gmail/candidates':return self.send_json(app.gmail.buyer_candidates())
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
                 if u.path=='/api/desk/customer-commercial':return self.send_json(app.customer_workspace.commercial(value('object_id')))
+                if u.path=='/api/desk/search-console':return self.send_json(app.search_console.snapshot())
+                if u.path=='/api/desk/search-console/sites':return self.send_json(app.search_console.sites())
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
                 if u.path=='/api/desk/creation-canvas':return self.send_json({'canvas':app.creation_canvas.get(value('object_id'))})
@@ -313,6 +330,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/creation/libtv':return self.send_json(app.creation.libtv_projects())
                 if u.path=='/api/desk/creation/libtv/nodes':return self.send_json(app.creation.libtv_execute('nodes',project_id=value('project_id')))
                 if u.path=='/api/desk/title-diagnosis':return self.send_json(app.product_changes.diagnose(value('product_id')))
+                if u.path=='/api/desk/product-details-diagnosis':return self.send_json(app.product_detail_changes.diagnose(value('product_id')))
                 if u.path=='/api/desk/product-review':return self.send_json(app.product_review.get(value('object_id'),value('listing_id'),refresh=value('refresh')=='1'))
                 if u.path=='/api/desk/channels':return self.send_json(app.channel_overview.snapshot())
                 if u.path=='/api/desk/today':return self.send_json(app.today.snapshot())
@@ -341,6 +359,12 @@ class Handler(BaseHTTPRequestHandler):
             if u.path=='/api/product-gallery-changes':return self.send_json({'changes':app.product_gallery_changes.list_changes()})
             if u.path.startswith('/api/product-gallery-changes/'):
                 return self.send_json(app.product_gallery_changes.get(u.path.split('/')[-1]))
+            if u.path=='/api/product-gallery-plans':return self.send_json({'changes':app.product_gallery_plans.list_plans()})
+            if u.path.startswith('/api/product-gallery-plans/'):return self.send_json(app.product_gallery_plans.get(u.path.split('/')[-1]))
+            if u.path=='/api/product-detail-changes':return self.send_json({'changes':app.product_detail_changes.list_changes()})
+            if u.path.startswith('/api/product-detail-changes/'):return self.send_json(app.product_detail_changes.get(u.path.split('/')[-1]))
+            if u.path=='/api/product-detail-plans':return self.send_json({'changes':app.product_detail_plans.list_plans()})
+            if u.path.startswith('/api/product-detail-plans/'):return self.send_json(app.product_detail_plans.get(u.path.split('/')[-1]))
             if u.path.startswith('/api/product-changes/'):
                 return self.send_json(app.product_changes.get(u.path.split('/')[-1]))
             if u.path.startswith(('/api/canvases','/api/product-drafts','/api/tools/','/api/channel-metrics/')):
@@ -414,6 +438,17 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-commercial']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_commercial(object_id,body))
+            if parts==['api','desk','search-console','oauth','start']:
+                config=body.get('client_config')
+                if not config and app.gmail.status().get('account_email'):
+                    from gmail_oauth import load_credentials
+                    saved=load_credentials(app.gmail.status()['account_email'])
+                    if saved:config={'installed':{k:saved.get(k,'') for k in ('client_id','client_secret')}}
+                redirect='http://127.0.0.1:'+str(self.server.server_port)+'/api/desk/search-console/oauth/callback'
+                return self.send_json({'authorization_url':app.search_console.start(config,redirect)})
+            if parts==['api','desk','search-console','select']:
+                selected=app.search_console.select_site(body.get('site_url'));app.search_console.start_auto();return self.send_json(selected)
+            if parts==['api','desk','search-console','refresh']:return self.send_json(app.search_console.refresh(body.get('start_date'),body.get('end_date')))
             if parts==['api','desk','website-reply']:
                 return self.send_json(app.business.website.reply(body.get('object_id'),body.get('message')))
             if parts==['api','desk','customer-workflow']:
@@ -446,6 +481,21 @@ class Handler(BaseHTTPRequestHandler):
             if len(parts)==4 and parts[:2]==['api','product-gallery-changes']:
                 if parts[3]=='apply':return self.send_json(app.product_gallery_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
                 if parts[3]=='reconcile':return self.send_json(app.product_gallery_changes.reconcile(parts[2]))
+            if parts==['api','product-gallery-plans','prepare']:
+                return self.send_json(app.product_gallery_plans.prepare(body.get('product_id'),body.get('slots'),rationale=body.get('rationale') or '调整商品主图',evidence=body.get('evidence') or [CHANNEL]))
+            if len(parts)==4 and parts[:2]==['api','product-gallery-plans']:
+                if parts[3]=='submit':return self.send_json(app.product_gallery_plans.submit(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
+                if parts[3]=='reconcile':return self.send_json(app.product_gallery_plans.reconcile(parts[2]))
+            if parts==['api','product-detail-changes','prepare']:
+                return self.send_json(app.product_detail_changes.prepare_reorder(body.get('product_id'),body.get('order'),rationale=body.get('rationale') or '调整商品详情图顺序',evidence=body.get('evidence') or [CHANNEL]))
+            if len(parts)==4 and parts[:2]==['api','product-detail-changes']:
+                if parts[3]=='apply':return self.send_json(app.product_detail_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
+                if parts[3]=='reconcile':return self.send_json(app.product_detail_changes.reconcile(parts[2]))
+            if parts==['api','product-detail-plans','prepare']:
+                return self.send_json(app.product_detail_plans.prepare(body.get('product_id'),body.get('slots'),rationale=body.get('rationale') or '调整商品详情图',evidence=body.get('evidence') or [CHANNEL]))
+            if len(parts)==4 and parts[:2]==['api','product-detail-plans']:
+                if parts[3]=='submit':return self.send_json(app.product_detail_plans.submit(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
+                if parts[3]=='reconcile':return self.send_json(app.product_detail_plans.reconcile(parts[2]))
             if len(parts)==4 and parts[:2]==['api','product-changes']:
                 if parts[3]=='apply':return self.send_json(app.product_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
                 if parts[3]=='reconcile':return self.send_json(app.product_changes.reconcile(parts[2]))
@@ -473,6 +523,7 @@ def main():
     except KeyboardInterrupt:pass
     finally:
         app.gmail.stop()
+        app.search_console.stop()
         for job in app.agent_jobs.list_jobs():
             if job['status'] in ('running','queued'):app.agent_jobs.cancel(job['id'])
         for r in app.runs():

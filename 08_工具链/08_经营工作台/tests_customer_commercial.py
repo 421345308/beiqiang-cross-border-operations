@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 from customer_workspace import CustomerWorkspace
+from desk_mcp import DeskTools
 
 
 class CommercialTests(unittest.TestCase):
@@ -32,6 +33,15 @@ class CommercialTests(unittest.TestCase):
         self.assertEqual(self.work.workflow(self.original['id'])['next_action'], 'Confirm selection')
         self.assertEqual(self.original, before)
         self.assertEqual(CustomerWorkspace(self.app).commercial(self.original['id'])['records'], result['records'])
+        self.assertFalse(result['external_action'])
+
+    def test_agent_writes_current_customer_record_without_external_action(self):
+        self.app.customer_workspace=self.work
+        self.app.business.app=self.app
+        tools=DeskTools(self.app.business,self.app.root,self.original['id'])
+        result=tools.call('save_customer_commercial',{'record':{'kind':'quotation','status':'draft','summary':'准备选款报价'},'next_action':'确认尺码'})
+        self.assertEqual(result['records'][0]['summary'],'准备选款报价')
+        self.assertEqual(result['next_action'],'确认尺码')
         self.assertFalse(result['external_action'])
 
     def test_actual_without_attachment_and_partial_edit(self):

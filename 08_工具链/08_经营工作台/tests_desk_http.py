@@ -128,6 +128,48 @@ class DeskHTTPTests(unittest.TestCase):
             prepare.assert_called_once_with('1601',[2,1,3,4,5,6],rationale='调整商品主图展示顺序',evidence=[CHANNEL])
             apply.assert_not_called()
 
+    def test_search_console_routes_read_and_prepare_authorization(self):
+        with patch.object(self.app.search_console,'snapshot',return_value={'state':'not_connected','available':False}), \
+             patch.object(self.app.search_console,'start',return_value='https://accounts.google.com/test') as start:
+            status,result=self.request('/api/desk/search-console');self.assertEqual(status,200);self.assertFalse(result['available'])
+            status,result=self.request('/api/desk/search-console/oauth/start',{'client_config':{'installed':{'client_id':'fixture'}}})
+            self.assertEqual(status,200);self.assertEqual(result['authorization_url'],'https://accounts.google.com/test')
+            self.assertIn('/api/desk/search-console/oauth/callback',start.call_args.args[1])
+
+    def test_gallery_replacement_and_detail_routes_only_prepare(self):
+        result={'ok':True,'change':{'id':'plan1'}}
+        with patch.object(self.app.product_gallery_plans,'prepare',return_value=result) as gallery, \
+             patch.object(self.app.product_detail_changes,'prepare_reorder',return_value=result) as detail, \
+             patch.object(self.app.product_detail_plans,'prepare',return_value=result) as detail_plan:
+            self.assertEqual(self.request('/api/product-gallery-plans/prepare',{'product_id':'1601','slots':[1,2,3,4,5,{'path':'image.jpg'}]})[0],200)
+            self.assertEqual(self.request('/api/product-detail-changes/prepare',{'product_id':'1601','order':[2,1]})[0],200)
+            self.assertEqual(self.request('/api/product-detail-plans/prepare',{'product_id':'1601','slots':[1,{'path':'image.jpg'}]})[0],200)
+            gallery.assert_called_once();detail.assert_called_once();detail_plan.assert_called_once()
+
+    def test_detail_sort_routes_exclude_and_reject_replacement_changes(self):
+        from tests_product_detail_uploads import DetailUploadTests
+        from product_detail_changes import DetailChanges
+        fixture=DetailUploadTests();fixture.setUp()
+        self.addCleanup(fixture.tearDown)
+        fixture.app.db.close()
+        import sqlite3
+        fixture.app.db=sqlite3.connect(':memory:',check_same_thread=False)
+        fixture.plans=type(fixture.plans)(fixture.app,fixture.client,fixture.plans.uploader)
+        self.app.product_detail_changes=DetailChanges(fixture.app,fixture.client)
+        self.app.product_detail_plans=fixture.plans
+        plan=fixture.plan();submitted=fixture.submit(plan)['change'];change_id=submitted['changeId']
+        status,listed=self.request('/api/product-detail-changes')
+        self.assertEqual(status,200);self.assertEqual(listed['changes'],[])
+        for path,body in [(f'/api/product-detail-changes/{change_id}',None),
+                          (f'/api/product-detail-changes/{change_id}/reconcile',{}),
+                          (f'/api/product-detail-changes/{change_id}/apply',{'confirmed':True,'expected_version':'unused'})]:
+            status,result=self.request(path,body)
+            self.assertEqual(status,200);self.assertFalse(result['ok'])
+            self.assertEqual(result['error']['code'],'CHANGE_KIND_MISMATCH')
+        fixture.client.product['struct_detail']['detail_image']['images'][0]['image_url']='https://sc04.alicdn.com/kf/Hnew.png'
+        status,result=self.request(f'/api/product-detail-plans/{plan["id"]}/reconcile',{})
+        self.assertEqual(status,200);self.assertEqual(result['change']['state'],'local_synced')
+
     def test_alibaba_manual_inquiry_to_analysis_and_queue(self):
         from tests_customer_analysis import response
         original='Please send a quotation for 500 pairs of walking shoes.'

@@ -547,6 +547,98 @@ test('商品主图调整先预览顺序，准备方案不自动提交', async ()
   assert.deepEqual(prepared,{product_id:'123',order:[2,1,3,4,5,6]});assert.match(h.elements.page.textContent,/主图调整方案/);assert.equal(submitted,false);
 });
 
+test('主图可选择本商品素材并生成替换方案',async()=>{
+  const h=harness('#/object/product%3A1'),original=h.originalFetch;h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];
+  const urls=Array.from({length:6},(_,i)=>`https://sc04.alicdn.com/kf/${i}.jpg`);let prepared;
+  h.interceptFetch(async(path,options={})=>{
+    if(String(path).startsWith('/api/desk/product-review'))return {ok:true,json:async()=>({listings:[{id:'123'}],selected:{id:'123',state:'ready',local:{},platform:{title:'Live',main_images:urls.map(url=>({url})),detail_images:[],company_images:[]},comparison:{}}})};
+    if(path==='/api/product-gallery-plans/prepare'){prepared=JSON.parse(options.body);return {ok:true,json:async()=>({ok:true,change:{id:'p1',version:'v1',state:'prepared',before:urls,previews:[{previewRef:'商品图.jpg'},...urls.slice(1).map(url=>({url}))]}})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await walk(h.elements.page).find(node=>node.tagName==='BUTTON' && node.textContent==='替换图片').click();
+  await walk(h.elements.page).find(node=>node.tagName==='BUTTON' && node.textContent==='真实主图').click();
+  await findButton(h.elements.page,'生成主图调整方案').click();await settle();
+  assert.deepEqual(prepared.slots,[{path:'商品图.jpg'},2,3,4,5,6]);assert.match(h.elements.page.textContent,/主图调整方案/);
+});
+
+test('详情图按平台图片组调整并准备方案',async()=>{
+  const h=harness('#/object/product%3A1'),original=h.originalFetch;h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];let prepared;
+  const rows=[{image_url:'https://example.com/a.jpg',image_set:{name:'Detail shot'}},{image_url:'https://example.com/b.jpg',image_set:{name:'Scene image'}}];
+  h.interceptFetch(async(path,options={})=>{
+    if(String(path).startsWith('/api/desk/product-review'))return {ok:true,json:async()=>({listings:[{id:'123'}],selected:{id:'123',state:'ready',local:{},platform:{title:'Live',main_images:[],detail_images:rows.map(row=>({url:row.image_url})),company_images:[]},comparison:{}}})};
+    if(String(path).startsWith('/api/desk/product-details-diagnosis'))return {ok:true,json:async()=>({ok:true,change:{platform:{detail_images:rows},detailGroups:[{roleName:'Detail shot',slots:[1]},{roleName:'Scene image',slots:[2]}]}})};
+    if(path==='/api/product-detail-changes/prepare'){prepared=JSON.parse(options.body);return {ok:true,json:async()=>({ok:true,change:{id:'d1',version:'v1',diff:{before:rows,after:[rows[1],rows[0]]},submission:{state:'not-submitted'}}})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'读取详情图分组').click();await settle();
+  const move=walk(h.elements.page).filter(node=>node.tagName==='BUTTON' && node.textContent==='整组前移');await move[1].click();
+  await findButton(h.elements.page,'生成详情图调整方案').click();await settle();
+  assert.deepEqual(prepared,{product_id:'123',order:[2,1]});assert.match(h.elements.page.textContent,/详情图调整方案/);
+});
+
+test('详情图可选择商品素材准备替换，不自动提交',async()=>{
+  const h=harness('#/object/product%3A1'),original=h.originalFetch;h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];let prepared;
+  const rows=[{image_url:'https://example.com/a.jpg',image_set:{name:'Detail shot'}}];
+  h.interceptFetch(async(path,options={})=>{
+    if(String(path).startsWith('/api/desk/product-review'))return {ok:true,json:async()=>({listings:[{id:'123'}],selected:{id:'123',state:'ready',local:{},platform:{title:'Live',main_images:[],detail_images:rows.map(row=>({url:row.image_url})),company_images:[]},comparison:{}}})};
+    if(String(path).startsWith('/api/desk/product-details-diagnosis'))return {ok:true,json:async()=>({ok:true,change:{platform:{detail_images:rows},detailGroups:[{roleName:'Detail shot',slots:[1]}]}})};
+    if(path==='/api/product-detail-plans/prepare'){prepared=JSON.parse(options.body);return {ok:true,json:async()=>({ok:true,change:{id:'dp1',version:'v1',state:'prepared',before:rows,previews:[{previewRef:'商品图.jpg'}]}})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'读取可替换的详情图').click();await settle();
+  await findButton(h.elements.page,'替换图片').click();await walk(h.elements.page).find(node=>node.tagName==='BUTTON' && node.textContent==='真实主图').click();
+  await findButton(h.elements.page,'生成详情图替换方案').click();await settle();
+  assert.deepEqual(prepared,{product_id:'123',slots:[{path:'商品图.jpg'}]});assert.match(h.elements.page.textContent,/详情图替换方案/);
+});
+
+for(const mode of ['gallery-order','gallery-replace','detail-order','detail-replace']) {
+  for(const outcome of ['submitted','business_rejected','outcome_unknown',...(mode.endsWith('replace')?['uploaded_submission_blocked','uploaded_preparation_failed','upload_outcome_unknown']:[])]) {
+    test(`${mode}提交反馈以平台实际结果为准：${outcome}`,async()=>{
+      const h=harness('#/object/product%3A1'),original=h.originalFetch;
+      h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];
+      const urls=Array.from({length:6},(_,i)=>`https://sc04.alicdn.com/kf/${i}.jpg`);
+      const rows=[{image_url:urls[0],image_set:{name:'Detail shot'}}];
+      const local=mode.endsWith('replace'), detail=mode.startsWith('detail');
+      const endpoint=detail?(local?'product-detail-plans':'product-detail-changes'):(local?'product-gallery-plans':'product-gallery-changes');
+      let change=local?{id:'review1',version:'v1',productId:'123',createdAt:'2026-11-03',state:'prepared',before:detail?rows:urls,previews:[{previewRef:'商品图.jpg'}]}:{id:'review1',version:'v1',productId:'123',createdAt:'2026-11-03',state:'prepared',diff:{before:detail?rows:urls,after:detail?rows:urls},submission:{state:'not-submitted'}};
+      let writes=0;
+      h.interceptFetch(async(path,options={})=>{
+        if(String(path).startsWith('/api/desk/product-review'))return {ok:true,json:async()=>({listings:[{id:'123'}],selected:{id:'123',state:'ready',local:{},platform:{title:'Live',main_images:urls.map(url=>({url})),detail_images:rows.map(row=>({url:row.image_url})),company_images:[]},comparison:{}}})};
+        if(path===`/api/${endpoint}`)return {ok:true,json:async()=>({changes:[change]})};
+        if(path==='/api/product-gallery-plans' || path==='/api/product-gallery-changes')return {ok:true,json:async()=>({changes:[]})};
+        if(path===`/api/${endpoint}/review1/${local?'submit':'apply'}`){
+          writes++;
+          const submitted={state:outcome,submission:{state:outcome==='business_rejected'?'business-rejected':outcome==='outcome_unknown'?'outcome-unknown':'submitted'}};
+          change={...change,state:outcome,version:'v2',...(local?{changeId:'formal1',submissionResult:outcome==='uploaded_submission_blocked'?{ok:false,error:{code:'PLATFORM_VERSION_CONFLICT'}}:{ok:true,change:submitted}}:{submission:submitted.submission})};
+          return {ok:true,json:async()=>({ok:true,change})};
+        }
+        if(path===`/api/${endpoint}/review1/reconcile`){
+          const formal={state:'formal_pending',submission:{state:'submitted'},formal:{state:'pending',status:'approved'},localSync:{state:'not-synced'}};
+          change={...change,...(local?{state:'formal_pending',formalResult:{ok:true,change:formal}}:formal)};
+          return {ok:true,json:async()=>({ok:true,change})};
+        }
+        return original(path,options);
+      });
+      await h.ui.bootstrap();await settle();
+      await findButton(h.elements.page,detail?(local?'查看已有详情图替换方案':'查看已有详情图方案'):'查看已有主图方案').click();await settle();
+      await walk(h.elements.page).find(node=>node.tagName==='BUTTON' && node.textContent.startsWith('查看 ') && node.textContent.endsWith(' 的方案')).click();
+      await findButton(h.elements.page,detail?(local?'确认提交详情图替换':'确认提交详情图顺序'):'确认提交主图方案').click();await settle();
+      assert.equal(writes,1);
+      if(outcome==='submitted'){
+        assert.match(h.elements.page.textContent,/已提交，请回读平台结果/);
+        await findButton(h.elements.page,detail?(local?'回读详情图替换结果':'回读详情图结果'):'回读平台和本地结果').click();await settle();
+        assert.match(h.elements.page.textContent,local?/正式结果尚未核对通过/:/平台：待核对/);
+        assert.doesNotMatch(h.elements.page.textContent,/审核中|平台已回读并同步本地/);
+      }
+      else {
+        assert.doesNotMatch(h.elements.page.textContent,/已提交，请回读平台结果/);
+        const expected={business_rejected:/平台未受理商品修改/,outcome_unknown:/提交结果未知/,uploaded_submission_blocked:/商品提交未完成/,uploaded_preparation_failed:/商品方案未准备完成/,upload_outcome_unknown:/图片上传结果待核对/};
+        assert.match(h.elements.page.textContent,expected[outcome]);
+      }
+    });
+  }
+}
+
 test('客户商机可记录报价并保存下一步', async () => {
   const h=harness('#/object/customer%3Adeal'),original=h.originalFetch;
   h.objects.push({id:'customer:deal',kind:'customer',title:'测试客户',assets:[]});let saved;
@@ -691,6 +783,21 @@ test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', as
   assert.ok(text.includes('其他已接入渠道'));
   assert.ok(text.includes('未接通的能力 1 项'));
   assert.ok(text.includes('询盘与报价未验证接通'));
+});
+test('独立站搜索数据连接入口及真实读取结果展示',async()=>{
+  const h=harness('#/channels'),original=h.originalFetch;let state={state:'not_connected',available:false};
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/channels')return {ok:true,json:async()=>({channels:[{id:'website',title:'独立站',connection:{total:0},data:{}}]})};
+    if(path==='/api/desk/search-console')return {ok:true,json:async()=>structuredClone(state)};
+    if(path==='/api/desk/search-console/oauth/start')return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=test'})};
+    if(path==='/api/desk/search-console/refresh')return {ok:true,json:async()=>({state:'ready',available:true,site_url:'https://www.beiqiang.online/',period:{start:'2026-10-01',end:'2026-10-28'},tables:{totals:[{impressions:100,clicks:5,ctr:0.05}],queries:[{keys:['walking shoes'],impressions:30,clicks:2}]}})};
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'连接 Google 搜索数据').click();
+  assert.ok(walk(h.elements.page).some(node=>node.tagName==='A' && node.textContent.includes('继续 Google 登录并授权')));
+  state={state:'ready',site_url:'https://www.beiqiang.online/',available:true,tables:{totals:[]},period:{}};await h.ui.renderRoute();await settle();
+  await findButton(h.elements.page,'更新搜索数据').click();await settle();
+  assert.match(h.elements.page.textContent,/展示 100 · 点击 5/);assert.match(h.elements.page.textContent,/walking shoes/);
 });
 test('渠道经营分析保留历史期和空数据，筛选重点行动并进入精确关联商品', async () => {
   const h=harness('#/channels');

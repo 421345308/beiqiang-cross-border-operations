@@ -40,11 +40,13 @@ class ContextTests(unittest.TestCase):
     def test_customer_workflow_is_reused_and_creation_is_excluded(self):
         with tempfile.TemporaryDirectory() as folder:
             profile = {'workflow': {'next_action': '回复样品方案'}, 'stale': True}
-            business = SimpleNamespace(app=SimpleNamespace(customer_workspace=SimpleNamespace(profile=lambda oid: profile)),
+            commercial = {'records':[{'kind':'quotation','summary':'已准备报价'}], 'next_action':'回复样品方案'}
+            business = SimpleNamespace(app=SimpleNamespace(customer_workspace=SimpleNamespace(profile=lambda oid: profile,commercial=lambda oid:commercial)),
                 get_object=lambda oid: {'id': oid, 'kind': 'customer', 'source': 'object:'+oid})
             result = DeskTools(business, folder, 'customer:intake:one').call('get_business_context', {})
             self.assertEqual(result['customer_brief']['workflow'], profile['workflow'])
             self.assertTrue(result['customer_brief']['stale'])
+            self.assertEqual(result['customer_commercial']['records'][0]['summary'],'已准备报价')
             business.get_object = lambda oid: {'kind': 'creation'}
             with self.assertRaises(ValueError):
                 DeskTools(business, folder, 'creation:one').call('get_business_context', {})

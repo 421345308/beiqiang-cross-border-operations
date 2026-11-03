@@ -50,7 +50,7 @@
   async function api(path, body) {
     const response = await fetch(path, body === undefined ? { cache: 'no-store' } : { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Workbench-Token': S.token }, body: JSON.stringify(body) }); let value;
     try { value = await response.json(); } catch { throw new Error('暂时无法读取服务结果，请稍后重新读取。'); }
-    const errors={NO_CHANGE:'主图顺序没有变化，请先调整图片。',SIX_IMAGE_GALLERY_REQUIRED:'当前链接不是六张主图，暂不支持在此调整。',GALLERY_SCHEMA_UNVERIFIED:'平台未返回完整的主图编辑信息，请刷新后重试。',GALLERY_SCHEMA_MISMATCH:'平台主图刚发生变化，请刷新商品后重新调整。',GALLERY_IMAGE_UNAVAILABLE:'未能读取当前主图，请刷新后重试。',GALLERY_IMAGE_NOT_OFFICIAL:'当前主图无法匹配国际站图片银行。',IMAGE_BANK_UNAVAILABLE:'图片银行暂时无法读取，请稍后重试。',IMAGE_BANK_ASSET_NOT_FOUND:'图片银行未找到对应主图，请检查图片后再操作。',IMAGE_BANK_ASSET_AMBIGUOUS:'图片银行中有重复的对应图片，需要先确认。',PLATFORM_VERSION_CONFLICT:'平台商品已变化，请刷新后重新准备方案。',LOCAL_VERSION_CONFLICT:'本地商品记录已变化，请重新读取后准备方案。',PLATFORM_NOT_APPROVED:'商品仍在平台审核中，请审核完成后再调整。'};
+    const errors={NO_CHANGE:'图片顺序没有变化，请先调整。',SIX_IMAGE_GALLERY_REQUIRED:'当前链接不是六张主图，暂不支持在此调整。',GALLERY_SCHEMA_UNVERIFIED:'平台未返回完整的主图编辑信息，请刷新后重试。',GALLERY_SCHEMA_MISMATCH:'平台主图刚发生变化，请刷新商品后重新调整。',GALLERY_IMAGE_UNAVAILABLE:'未能读取当前主图，请刷新后重试。',GALLERY_IMAGE_NOT_OFFICIAL:'当前主图无法匹配国际站图片银行。',IMAGE_BANK_UNAVAILABLE:'图片银行暂时无法读取，请稍后重试。',IMAGE_BANK_ASSET_NOT_FOUND:'图片银行未找到对应主图，请检查图片后再操作。',IMAGE_BANK_ASSET_AMBIGUOUS:'图片银行中有重复的对应图片，需要先确认。',LOCAL_IMAGE_FORMAT_UNSUPPORTED:'请选择 JPG 或 PNG 图片。',INVALID_LOCAL_IMAGE:'所选图片无法读取，或文件超过 5 MB。',DUPLICATE_GALLERY_IMAGE:'主图中有重复图片，请选择不同的图片。',DETAIL_TYPE_UNVERIFIED:'当前商品的详情类型暂不支持在此调整。',DETAIL_REORDER_WITHIN_GROUP_ONLY:'请保持每组图片连续，整组移动。',DETAIL_SCHEMA_MISMATCH:'平台详情图刚发生变化，请重新读取分组。',DETAIL_IMAGES_UNAVAILABLE:'平台未返回可调整的详情图。',PLATFORM_VERSION_CONFLICT:'平台商品已变化，请刷新后重新准备方案。',LOCAL_VERSION_CONFLICT:'本地商品记录已变化，请重新读取后准备方案。',PLATFORM_NOT_APPROVED:'商品仍在平台审核中，请审核完成后再调整。'};
     if (!response.ok || value.ok === false) throw new Error(typeof value.error === 'string' ? value.error.slice(0, 400) : value.error?.message || errors[value.error?.code] || '这次操作未完成，请稍后再试。');
     return value;
   }
@@ -229,11 +229,34 @@
     }
     S.page = ['products', 'customers', 'library', 'channels', 'creation'].includes(kind) ? kind : 'overview'; setNav(S.page); if (S.page === 'overview') renderOverview(); else if (S.page === 'library') await window.renderCustomerLibrary(); else if (S.page === 'channels') await renderChannels(); else if (S.page === 'creation') await renderCreation(route.query.get('item')); else renderSearchPage(S.page, route.query.get('q') || '');
   }
+  function mountSearchConsole(card) {
+    const section=el('section',undefined,'search-console-panel'), content=el('div');section.append(el('h3','Google 搜索表现'),content);card.append(section);
+    async function load(){try{draw(await api('/api/desk/search-console'));}catch(error){content.replaceChildren(el('p',error.message,'muted'));}}
+    function draw(data){
+      content.replaceChildren();
+      if(data.available && data.tables){
+        const total=data.tables.totals?.[0] || {};content.append(el('p',`${data.period?.start || ''} 至 ${data.period?.end || ''} · 展示 ${total.impressions ?? 0} · 点击 ${total.clicks ?? 0} · 点击率 ${((total.ctr || 0)*100).toFixed(1)}%`),el('p',`上次更新：${time(data.last_success_at)}`,'muted'));
+        for(const [name,title] of [['queries','买家搜索词'],['pages','网站页面'],['countries','国家']]){const rows=data.tables[name] || [];if(!rows.length)continue;const group=el('details');group.append(el('summary',title));for(const row of rows.slice(0,10))group.append(el('p',`${row.keys?.[0] || ''} · 展示 ${row.impressions ?? 0} · 点击 ${row.clicks ?? 0}`));content.append(group);}
+      } else content.append(el('p',data.error || (data.state==='select_site'?'Google 已授权，请选择要分析的网站。':data.site_url?'已选网站，等待首次读取搜索数据。':'连接 Google 后查看本站搜索词与页面表现。'),'muted'));
+      const feedback=el('p','','agent-feedback');
+      if(data.state==='not_connected' || data.state==='error'){
+        const options=el('details'), file=el('input');file.type='file';file.accept='.json,application/json';file.setAttribute('aria-label','Google 客户端 JSON');options.append(el('summary','如现有 Google 客户端不可用，选择客户端文件'),file);content.append(options);
+        const connect=button('连接 Google 搜索数据',async()=>{connect.disabled=true;feedback.textContent='正在准备授权…';try{let config=null;if(file.files?.[0])config=JSON.parse(await file.files[0].text());const result=await api('/api/desk/search-console/oauth/start',{client_config:config});const a=link('继续 Google 登录并授权 ↗',result.authorization_url);if(!a)throw Error('未能准备授权链接');feedback.replaceChildren(a,el('span',' 完成授权后回到此页，点击重新读取。'));}catch(error){feedback.textContent=error.message;}finally{connect.disabled=false;}},'quiet');content.append(connect);
+      }
+      if(data.state==='select_site' || data.site_url){
+        const choose=button('选择网站',async()=>{choose.disabled=true;feedback.textContent='正在读取可用网站…';try{const value=await api('/api/desk/search-console/sites');const select=el('select');select.setAttribute('aria-label','选择搜索网站');for(const row of value.items || []){const option=el('option',row.siteUrl);option.value=row.siteUrl;select.append(option);}if(!(value.items || []).length)throw Error('当前 Google 账号没有可读取的网站。');select.value=(value.items || []).find(row=>row.siteUrl==='https://www.beiqiang.online/')?.siteUrl || value.items[0].siteUrl;const save=button('使用这个网站',async()=>{try{await api('/api/desk/search-console/select',{site_url:select.value});feedback.textContent='已选择网站，正在后台更新搜索数据。';await load();}catch(error){feedback.textContent=error.message;}},'quiet');feedback.replaceChildren(select,save);}catch(error){feedback.textContent=error.message;}finally{choose.disabled=false;}},'quiet');content.append(choose);
+      }
+      if(data.site_url){const refresh=button('更新搜索数据',async()=>{refresh.disabled=true;feedback.textContent='正在读取 Google 搜索数据…';try{draw(await api('/api/desk/search-console/refresh',{}));}catch(error){feedback.textContent=error.message;refresh.disabled=false;}},'quiet');content.append(refresh);}
+      content.append(feedback);
+      if(data.state==='not_loaded')setTimeout(()=>{if(section.isConnected!==false)load();},4000);
+    }
+    load();
+  }
   async function renderChannels() {
     const page = $('page'); page.replaceChildren(heading('渠道', '从渠道继续经营', '查看已有数据和可以直接进入的工作。'));
     try { const data=await api('/api/desk/channels'); if (S.page !== 'channels') return; const grid=el('div',undefined,'overview-grid');
       for (const item of data.channels || []) { if (item.connection?.state === 'not_integrated') continue; const card=el('section',undefined,'card'); card.append(el('h2',item.title));
-        if (item.id === 'website') { card.append(el('p',websiteText()),el('p',item.connection?.total == null ? '询盘数量暂不可用' : `现有网站询盘：${item.connection.total} 条`),button('查看网站询盘',()=>{location.hash='/customers?view=inquiries';},'quiet')); }
+        if (item.id === 'website') { card.append(el('p',websiteText()),el('p',item.connection?.total == null ? '询盘数量暂不可用' : `现有网站询盘：${item.connection.total} 条`),button('查看网站询盘',()=>{location.hash='/customers?view=inquiries';},'quiet'));mountSearchConsole(card); }
         else if (item.id === 'alibaba') { const stamp=item.connection?.last_success_at; card.append(el('p',stamp ? `最近成功读取：${time(stamp)}` : '尚无可展示的近期读取记录。')); if(item.data?.ok && item.data.metrics) { const metrics=item.data.metrics; const labels={search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors:'访客',inquiries:'询盘',tm_buyers:'TM买家',marketing_clicks:'营销点击'}; card.append(el('p',`历史数据 ${item.data.period || ''} · ${item.data.timezone || ''}`)); const line=Object.entries(labels).filter(([k])=>metrics[k] != null).map(([k,v])=>`${v} ${metrics[k]}`).join(' · '); if(line)card.append(el('p',line)); card.append(el('p','商品口径汇总，人数未去重；不用于计算转化率。','muted')); } card.append(button('查看商品',()=>{location.hash='/products';},'quiet'),button('查看订单买家',()=>{location.hash='/customers?view=inquiries&source=orders';},'quiet')); }
         else {
           const detail = item.data || {};
