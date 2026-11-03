@@ -24,7 +24,15 @@
 
 数据优先使用已有的一手经营结果：国际站按正式商品链接ID关联曝光、点击、询盘和订单；网站按搜索词、落地页、流量与有效询盘分析；市场趋势用于发现需求方向，不代替真实采购反馈。不同渠道、国家、统计时间和商品版本分开比较；页面要告诉负责人该做什么，来源与原始数据按需查看。数据不足时给出可做的下一步，不伪造指标或把旧数当实时数。
 
-接入顺序按业务价值和可用权限推进：先用已有国际站逐链接经营报表和网站询盘，再接已授权的Search Console及网站统计，随后补Google Trends和其他适合的数据源；具体自动刷新频率以真实接口能力为准。Google Trends [官方API](https://developers.google.com/search/apis/trends)目前须申请Alpha测试资格，可先使用[官方CSV导出](https://support.google.com/trends/answer/4365538)；网页指数是相对搜索兴趣，不是搜索量，不同查询设置不可直接拼接比较。未取得接口或数据时，不宣称已自动更新。
+接入顺序按业务价值和可用权限推进：先用已有国际站逐链接经营报表和网站询盘，再核实账号权限并接入Search Console及网站统计，随后补Google Trends和其他适合的数据源；具体自动刷新频率以真实接口能力为准。Google Trends [官方API](https://developers.google.com/search/apis/trends)目前须申请Alpha测试资格，可先使用[官方CSV导出](https://support.google.com/trends/answer/4365538)；网页指数是相对搜索兴趣，不是搜索量，不同查询设置不可直接拼接比较。未取得接口或数据时，不宣称已自动更新。
+
+### 经营分析与Agent能力：研究建议（2026-11-03）
+
+优先利用已授权国际站商品、图片、视频和订单接口；数据管家自然流量接口此前实测权限不足，不能把商品API等同于流量API。独立站采用[Search Console](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)观察查询、页面和国家，[GA4](https://developers.google.com/analytics/devguides/reporting/data/v1/basics)在已有账号权限和实际事件采集的基础上分析访问到询盘。市场研究可用[UN Comtrade](https://uncomtrade.org/docs/un-comtrade-api/)比较国家和鞋类HS统计（不提供买家名单），[TikTok Creative Center](https://ads.tiktok.com/resources/help/article/creative-center)研究公开创意和趋势；Google Places有计费和使用限制，亚马逊SP-API以授权店铺为前提。国际站询盘与聊天、抖店接入仍按负责人决定暂缓。免费优先，申请与付费按实际需求和授权处理。
+
+Agent工作时由现有产品中心、最新负责人决定、客户往来、渠道正式记录及当前任务生成面向对象的上下文：当前目标、有效事实、历史约定、数据时间和下一动作。保留各业务唯一事实源，不创建另一套人工维护的知识库；旧摘要与最新业务源冲突时先更新原入口。界面、桌面Agent和既有官方客户端逐步共用能实际调用的业务动作：查商品与客户、研究买家、生成选款与报价、准备渠道字段和素材、按已有授权提交、回读并回写。将已有国际站商品/图库/视频能力接入工作流，不从零重复开发；各动作的实际范围以应用README为准。
+
+优先交付三个贯通案例：①真实客户往来→需求判断→匹配商品→可审核的报价及附件→记录结果与下一步；②某条国际站商品链接→当前图文及经营表现→生成具体修改→按既有授权执行与回读→在可比期间观察效果；③独立站搜索词和落地页→匹配商品与目标买家→提出页面改进并比较有效询盘。借鉴[Pipedrive的下一行动](https://support.pipedrive.com/en/article/activities)、[ERPNext销售单据关联](https://docs.frappe.io/erpnext/selling)及[Akeneo的渠道化商品信息](https://help.akeneo.com/v7-your-first-steps-with-akeneo/v7-understand-product-completeness)，以有效采购讨论、样品、订单和贡献利润判断成效，而非以接口数量和生成报告数量判断完成。
 
 旧版问题不只是外观：菜单按工具划分；资料与业务对象脱节；任务主要从Markdown表格抽取；Agent限定为单篇原文的精确替换提案；画布和平台动作另走按钮。第一包已用对象内任务和共用业务读取替代默认入口；渠道执行及创作尚待继续贯通。
 
