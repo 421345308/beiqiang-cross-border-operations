@@ -660,6 +660,25 @@ test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', as
   assert.ok(text.includes('未接通的能力 1 项'));
   assert.ok(text.includes('询盘与报价未验证接通'));
 });
+test('渠道经营分析保留历史期和空数据，筛选重点行动并进入精确关联商品', async () => {
+  const h=harness('#/channels');
+  h.interceptFetch(async(path,options)=>path==='/api/desk/channels'?{ok:true,json:async()=>({channels:[{id:'alibaba',title:'国际站',data:{},product_analysis:{available:true,period:'2026-10-11~2026-10-17',notice:'历史统计，不代表当前表现',total:2,items:[
+    {listing_id:'11',model:'BQ001',action:'已有咨询，改善有效采购承接',object_id:'product:BQ001',association:'matched',metrics:{inquiries:0}},
+    {listing_id:'12',model:'BQ001',action:'换款与统计窗口重叠，先按新鞋核对',association:'unmatched',metrics:{}}
+  ]}}]})}:h.originalFetch(path,options));
+  await h.ui.bootstrap();await settle();
+  assert.match(h.elements.page.textContent,/历史统计期：2026-10-11~2026-10-17/);
+  assert.match(h.elements.page.textContent,/不代表当前表现/);
+  assert.match(h.elements.page.textContent,/询盘 0/);
+  assert.match(h.elements.page.textContent,/搜索曝光 无报表数据/);
+  assert.match(h.elements.page.textContent,/此历史链接尚未关联当前商品/);
+  const filter=h.elements.page.querySelector('select');filter.value='已有咨询，改善有效采购承接';filter.listeners.change();
+  assert.doesNotMatch(h.elements.page.textContent,/链接 12/);
+  await findButton(h.elements.page,'查看当前商品与平台链接').click();
+  assert.equal(h.location.hash,'/object/product%3ABQ001');
+  assert.equal(h.requests.some(row=>row.payload),false);
+});
+
 test('同行清单展示真实店铺，登记买家进入原客户研究并保留关联', async () => {
   const h = harness('#/customers?view=competitors');
   h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'休闲鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',credit_code:'123456789012345678',source_url:'https://example.com/company'},sales:{note:'单款 224 sold，周期不明',source_url:'https://www.alibaba.com/picks/shoes.html'},buyers:[{id:'candidate:old',company:'Known Buyer'}]}],excluded:[{company:'Old Shop',note:'店铺打开未确认',buyers:[]}],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));

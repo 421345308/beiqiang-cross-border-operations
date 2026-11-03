@@ -1,10 +1,40 @@
 import tempfile
+import json
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
-from channel_overview import ChannelOverview
+from channel_overview import ChannelOverview, REPORT
 
 class OverviewTest(unittest.TestCase):
+    def test_exact_listing_join_history_priority_and_nulls(self):
+        with tempfile.TemporaryDirectory() as root:
+            path=Path(root)/REPORT;path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({'summary':{'period':'2026-10-11~2026-10-17'},'products':[
+                {'id':'1','model':'BQ001','current_action':'样本较少，补需求与竞品依据'},
+                {'id':'2','model':'BQ001','current_action':'已有咨询，改善有效采购承接','week41':{'inquiries':0}},
+                {'id':'3','current_action':'换款与统计窗口重叠，先按新鞋核对'}]}),encoding='utf8')
+            class Business:
+                def list_objects(self,kind):
+                    return [{'id':'product:BQ001','channel_listings':[{'id':'2'},{'id':'3'}]},
+                            {'id':'product:BQ002','channel_listings':[{'id':'3'}]}]
+            result=ChannelOverview(SimpleNamespace(root=Path(root),business=Business()),None).product_analysis()
+            self.assertEqual(result['period'],'2026-10-11~2026-10-17')
+            self.assertEqual(result['items'][0]['listing_id'],'2')
+            rows={row['listing_id']:row for row in result['items']}
+            self.assertEqual(rows['2']['object_id'],'product:BQ001')
+            self.assertEqual(rows['2']['metrics']['inquiries'],0)
+            self.assertIsNone(rows['1']['metrics']['inquiries'])
+            self.assertEqual(rows['1']['association'],'unmatched')
+            self.assertIsNone(rows['3']['object_id'])
+            self.assertEqual(rows['3']['association'],'ambiguous')
+
+    def test_missing_or_invalid_analysis_is_unavailable(self):
+        with tempfile.TemporaryDirectory() as root:
+            overview=ChannelOverview(SimpleNamespace(root=Path(root)),None)
+            self.assertFalse(overview.product_analysis()['available'])
+            path=Path(root)/REPORT;path.parent.mkdir(parents=True);path.write_text('{',encoding='utf8')
+            self.assertFalse(overview.product_analysis()['available'])
+
     def test_snapshot_never_refreshes_and_keeps_historical_scope(self):
         class Website:
             def status(self, start_refresh=True):

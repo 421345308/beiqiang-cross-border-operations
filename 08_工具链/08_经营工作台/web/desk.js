@@ -240,6 +240,33 @@
           if (detail.observed_at) card.append(el('p', `上次观测：${time(detail.observed_at)}`, 'muted'));
           for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
         }
+        if (item.id === 'alibaba' && item.product_analysis) {
+          const analysis=item.product_analysis, section=el('section',undefined,'channel-product-analysis');
+          section.append(el('h3','商品经营分析'),el('p',analysis.notice,'muted'));
+          if(analysis.available) {
+            section.append(el('p',`历史统计期：${analysis.period || '未提供'} · ${analysis.timezone || ''} · 观测：${time(analysis.observed_at)}`));
+            const filter=el('select'), label=el('label','按重点行动筛选 '), list=el('div'), more=el('div');
+            const counts=new Map();for(const row of analysis.items || [])counts.set(row.action,(counts.get(row.action)||0)+1);
+            const all=el('option',`全部链接（${analysis.total}）`);all.value='';filter.append(all);
+            for(const [action,count] of counts){const option=el('option',`${action}（${count}）`);option.value=action;filter.append(option);}
+            label.append(filter);section.append(label,list,more);let limit=20;
+            function draw(){
+              const rows=(analysis.items || []).filter(row=>!filter.value || row.action===filter.value);list.replaceChildren();more.replaceChildren();
+              for(const row of rows.slice(0,limit)){
+                const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.listing_id}`),el('p',row.action));
+                const labels={search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors:'访客',inquiries:'询盘',tm_buyers:'TM买家'};
+                entry.append(el('p',Object.entries(labels).map(([key,title])=>`${title} ${row.metrics?.[key] ?? '无报表数据'}`).join(' · ')));
+                if(row.object_id)entry.append(button('查看当前商品与平台链接',()=>goObject(row.object_id),'quiet'));
+                else entry.append(el('p',row.association==='ambiguous'?'此链接关联多个商品，先核商品对应。':'此历史链接尚未关联当前商品。','muted'));
+                list.append(entry);
+              }
+              more.append(el('p',`显示 ${Math.min(limit,rows.length)} / ${rows.length} 条历史链接`,'muted'));
+              if(rows.length>limit)more.append(button('再显示20条',()=>{limit+=20;draw();},'quiet'));
+            }
+            filter.addEventListener('change',()=>{limit=20;draw();});draw();
+          }
+          card.append(section);
+        }
         const gaps=(item.gaps || []).filter(gap=>!gap.includes('妙手尚未接工作台调用'));
         if (gaps.length) {
           const box=el('details',undefined,'channel-gaps');

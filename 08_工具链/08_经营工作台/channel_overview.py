@@ -1,9 +1,47 @@
 """Read-only channel overview. Viewing never contacts a platform."""
 from pathlib import Path
+import json
+
+REPORT = '02_Alibaba运营/01_店铺与全店诊断/经营复核.json'
 
 class ChannelOverview:
     def __init__(self, app, workspaces):
         self.app, self.workspaces = app, workspaces
+
+    def product_analysis(self):
+        """Historical listing evidence joined only by exact current platform ID."""
+        try:
+            report = json.loads((Path(self.app.root) / REPORT).read_text(encoding='utf-8-sig'))
+            summary = report['summary']
+            products = report['products']
+            if not isinstance(summary, dict) or not isinstance(products, list):
+                raise ValueError('invalid report')
+        except (OSError, ValueError, KeyError, TypeError):
+            return {'available': False, 'notice': '历史商品经营档案暂不可读。', 'items': []}
+        business = getattr(self.app, 'business', None)
+        matches = {}
+        for obj in business.list_objects(kind='product') if business else []:
+            for listing in obj.get('channel_listings') or []:
+                if listing.get('id') is not None:
+                    matches.setdefault(str(listing['id']), set()).add(obj['id'])
+        priority = {'已有咨询，改善有效采购承接': 0, '有访客无咨询，优先核流量与报价': 1,
+                    '有曝光低点击，核关键词与首图': 2, '曝光不足，核类目需求与检索覆盖': 3}
+        rows = []
+        for row in products:
+            if not isinstance(row, dict) or row.get('id') is None:
+                continue
+            listing_id = str(row['id'])
+            objects = matches.get(listing_id, set())
+            metrics = row.get('week41') if isinstance(row.get('week41'), dict) else {}
+            rows.append({'listing_id': listing_id, 'model': row.get('model') or '',
+                         'title': row.get('title') or '', 'action': row.get('current_action') or '查看原经营记录',
+                         'metrics': {k: metrics.get(k) for k in ('search_impressions', 'search_clicks', 'visitors', 'inquiries', 'tm_buyers')},
+                         'object_id': next(iter(objects)) if len(objects) == 1 else None,
+                         'association': 'matched' if len(objects) == 1 else 'ambiguous' if objects else 'unmatched'})
+        rows.sort(key=lambda row: (priority.get(row['action'], 4), -(row['metrics'].get('search_impressions') or 0), row['listing_id']))
+        return {'available': True, 'period': summary.get('period'), 'observed_at': summary.get('observed_at'),
+                'timezone': summary.get('timezone'), 'items': rows, 'total': len(rows),
+                'notice': '历史统计与当时建议，仅供选择核查顺序；不代表当前表现。换款与统计窗口重叠时，先核当前鞋款。缺报表数据保留为空，人数不去重，不合并计算转化率。'}
 
     def snapshot(self):
         receipts = self.workspaces.receipts()
@@ -24,7 +62,7 @@ class ChannelOverview:
                     'scope': '最近50条工具回执中的记录；历史成功不代表当前在线'}
         return {'channels': [
             {'id':'alibaba','title':'国际站','connection':history('alibaba'),
-             'data':metrics,'actions':['connection-check','products','product','orders','order'],
+             'data':metrics,'product_analysis':self.product_analysis(),'actions':['connection-check','products','product','orders','order'],
              'gaps':['自然流量实时指标未接通；本地指标保留原日期','询盘与报价未验证接通','标题可准备并人工审核；其他商品字段尚未接入']},
             {'id':'website','title':'独立站','connection':web_status,
              'data':{'source':'网站询盘连接器缓存','scope':'询盘读取状态，不代表网站流量或销售额'},
