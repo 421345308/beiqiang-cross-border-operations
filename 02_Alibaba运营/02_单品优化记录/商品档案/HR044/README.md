@@ -2,7 +2,7 @@
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`ADOPTED`。下一步：本轮标题与功能亮点已正式核验 2/2 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。
+来源状态：`ADOPTED`。下一步：1533三条换款及包装修订已审核；A/C桌面公开图文和包装已核，B保持不展示；手机端尚未逐张实测。
 
 ## 当前资料与实物证据
 
@@ -10,103 +10,72 @@
 - 供货分类依据：[复用图审依据.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%AE%A1%E4%BE%9D%E6%8D%AE.json)
 - 供货分类依据：[复用图库绑定.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%BA%93%E7%BB%91%E5%AE%9A.json)
 - 供货分类依据：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
-- 本地事实/准备字段：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
-- 当前素材目录：[BQ1044](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044)
-- 当前主图库按商品ID对应（含最新统一工厂图）：
-  - [1601943753087 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943753087/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
-  - [1601943650718 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943650718/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
-  - [1601943607919 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943607919/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+- 供货分类依据：[1533候选准备.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/1533%E5%80%99%E9%80%89%E5%87%86%E5%A4%87.md)
+- 本地事实/准备字段：[1533候选准备.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/1533%E5%80%99%E9%80%89%E5%87%86%E5%A4%87.md)
+- 当前素材目录：[BQ1044_1533](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533)
 
 ## 采购来源（内部使用）
 
-- 已采用记录：[MB SHOES (Made-in-China店铺，法律公司名未核) / L795](https://mbshoes.en.made-in-china.com/product/AUIRTgzbHwWN/China-Casual-British-Style-Men-s-Anti-Slip-Loafers-Soft-Leather-Lightweiqht-Comfortable-Business-Shoes-Winter-Spring-Versatile-Trendy.html)
-  - 保存的标价：USD 8.34 / 双；原观察日期：2026-10-21。供方公开单价/数量档见latest_public_quote；不是已确认订单采购成本。适用包装、检验、服务、运税等费用逐单核，不从样品费反推。
-  - 供方店铺入口：[https://mbshoes.en.made-in-china.com](https://mbshoes.en.made-in-china.com)
-  - 来源原件：[复用图审依据.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%AE%A1%E4%BE%9D%E6%8D%AE.json)
-  - 来源原件：[复用图库绑定.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%BA%93%E7%BB%91%E5%AE%9A.json)
-  - 来源原件：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
+- 已采用记录：[华胜鞋业 / 1533](https://huasheng.sooxie.com/detail/2449394)
+  - 保存的标价：CNY 75.00 / 双；原观察日期：2026-11-03。搜鞋网公开参考价；非已确认订单采购成本，具体色码、数量、包装、运费及交期按订单确认。
+  - 供方店铺入口：[https://huasheng.sooxie.com](https://huasheng.sooxie.com)
+  - 来源原件：[1533候选准备.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/1533%E5%80%99%E9%80%89%E5%87%86%E5%A4%87.md)
 
 ## 国际站链接与本地正式字段
 
 ### BQ1044-C · 1601943607919
 
 - 平台链接：[1601943607919](https://www.alibaba.com/product-detail/Men-s-Slip-On-Casual-Shoes_1601943607919.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/formal_get.json)；UTC 2026-11-02T02:10:49.801485+00:00。
-- 当前正式标题：Men's PU Slip On Penny Loafers with Mesh Lining and Rubber Sole for Casual Wear
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/.local/isolated1533/%E5%95%86%E5%93%81/1601943607919/package_baseline/latest_get.json)；时间 2026-11-03T05:38:18.245126+00:00。
+- 当前正式标题：Men's Slip On Penny Loafers Microfiber Leather Shoes with Stitched Apron Toe and Rubber Sole
 - 审核/展示：approved / Y；平台类目ID：202240835。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_ad205f410cd54bf7.jpg) · 1200×1200
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_5ac0e167aa8b2e04.jpg) · 1200×1200
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_008f3f9f29eb5069.jpg) · 1200×1200
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_08d9aeb9f619a991.jpg) · 1200×1200
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_393593c1f0a41dd2.jpg) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
-- 本地同步状态：`FORMAL_PRICE_PASS_API`。
-- 标题搜索优化：`FORMAL_APPROVED_PUBLIC_PENDING`；审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页
-  - 标题证据：[20261102_full_batch_03_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_plan.json)
-  - 标题证据：[20261102_full_batch_03_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_receipt.json)
-  - 标题证据：[20261102_full_batch_03_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_verification.json)
-  - 标题证据：[20261102_full_batch_03_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_get.json)
-  - 标题证据：[20261102_full_batch_03_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_verification.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
-  - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/prepared.json)
-  - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/update_receipt.json)
-  - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/verification.json)
+- 当前正式主图按官方图链匹配本地素材；旧图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M1.jpg)；官方来源 https://sc04.alicdn.com/kf/H44c6c087e2d14e3cb10ca5023151a55fS.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hb0de0761db6742ccac5b4e91c0a8901dw.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H2041fc6b11ad4ff084e218f4c9db8777j.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M4.jpg)；官方来源 https://sc04.alicdn.com/kf/H8be3801e2e924e4b9c3dffba32c8843e7.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H35e4ec67688f4f5d9b589d2f0426e5f7S.jpg
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
+- 本地同步状态：`REPLACEMENT_PUBLIC_QA_PENDING`。
 
 ### BQ1044-A · 1601943650718
 
 - 平台链接：[1601943650718](https://www.alibaba.com/product-detail/Men-s-Penny-Loafers-with-Slip_1601943650718.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/formal_get.json)；UTC 2026-11-02T02:10:49.846857+00:00。
-- 当前正式标题：Men's PU Penny Loafers with Slip On Design and Mesh Lining for Business Casual Wear
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/.local/isolated1533/%E5%95%86%E5%93%81/1601943650718/package_baseline/latest_get.json)；时间 2026-11-03T05:31:32.301741+00:00。
+- 当前正式标题：Men's Penny Loafers Microfiber Leather Slip On Shoes with Rubber Sole for Business Casual Wear
 - 审核/展示：approved / Y；平台类目ID：202240835。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_ad205f410cd54bf7.jpg) · 1200×1200
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_5ac0e167aa8b2e04.jpg) · 1200×1200
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_008f3f9f29eb5069.jpg) · 1200×1200
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_08d9aeb9f619a991.jpg) · 1200×1200
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_393593c1f0a41dd2.jpg) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
-- 本地同步状态：`FORMAL_PRICE_PASS_API`。
-- 标题搜索优化：`FORMAL_APPROVED_PUBLIC_PENDING`；审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页
-  - 标题证据：[20261102_full_batch_03_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_plan.json)
-  - 标题证据：[20261102_full_batch_03_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_receipt.json)
-  - 标题证据：[20261102_full_batch_03_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_verification.json)
-  - 标题证据：[20261102_full_batch_03_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_get.json)
-  - 标题证据：[20261102_full_batch_03_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_verification.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
-  - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943650718/prepared.json)
-  - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943650718/update_receipt.json)
-  - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943650718/verification.json)
+- 当前正式主图按官方图链匹配本地素材；旧图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M1.jpg)；官方来源 https://sc04.alicdn.com/kf/H44c6c087e2d14e3cb10ca5023151a55fS.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hb0de0761db6742ccac5b4e91c0a8901dw.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H2041fc6b11ad4ff084e218f4c9db8777j.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M4.jpg)；官方来源 https://sc04.alicdn.com/kf/H8be3801e2e924e4b9c3dffba32c8843e7.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H35e4ec67688f4f5d9b589d2f0426e5f7S.jpg
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
+- 本地同步状态：`REPLACEMENT_PUBLIC_QA_PENDING`。
 
 ### BQ1044-B · 1601943753087
 
 - 平台链接：[1601943753087](https://www.alibaba.com/product-detail/Men-s-Casual-Loafers-with-Apron_1601943753087.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943753087/formal_get.json)；UTC 2026-10-16T15:31:00.232704+00:00。
-- 当前正式标题：Men's Casual Loafers with Apron Toe Stitching and a Low Top Profile
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/2026-11-03_%E7%BC%BA%E8%B4%A7%E5%A4%8D%E6%A0%B8/.local/isolated1533/%E5%95%86%E5%93%81/1601943753087/package_baseline/restore_off_after_get.json)；时间 2026-11-03T05:39:14.242923+00:00。
+- 当前正式标题：Men's Business Casual Slip On Loafers Microfiber Leather Penny Strap Shoes for Wholesale
 - 审核/展示：approved / N；平台类目ID：202240835。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_247bca120f3e29a8.jpg) · 1200×1200
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_5ac0e167aa8b2e04.jpg) · 1200×1200
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_008f3f9f29eb5069.jpg) · 1200×1200
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_08d9aeb9f619a991.jpg) · 1200×1200
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_393593c1f0a41dd2.jpg) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
-- 本地同步状态：`PERFORMANCE_ACTION_DOUBLE_SYNC_PASS`。
-- 标题搜索优化：`DRAFT_OFFLINE_HOLD`；拟标题：Men's Slip On PU Casual Loafers with Apron Toe Stitching and Rubber Sole；原下架状态，历史内容更新曾导致重新展示，先核实保持下架的可靠方式，尚未提交。
-  - 标题证据：[restore_company_original_offline.py](../../../../08_%E5%B7%A5%E5%85%B7%E9%93%BE/01_%E4%B8%9A%E5%8A%A1%E8%84%9A%E6%9C%AC/%E5%95%86%E5%93%81%E5%9B%BE%E7%89%87%E4%B8%8E%E5%AE%A1%E8%AE%A1/restore_company_original_offline.py)
-- 本轮优化：`FORMAL_OFFLINE_NON_TARGET_PASS`；重复弱链接已下架；保留同源有咨询入口 1601943650718，不重建弱链接。
-  - 变更证据：[prepared.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943753087/%E9%87%8D%E5%A4%8D%E5%BC%B1%E9%93%BE%E6%8E%A5%E4%B8%8B%E6%9E%B6/prepared.json)
-  - 变更证据：[receipt.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943753087/%E9%87%8D%E5%A4%8D%E5%BC%B1%E9%93%BE%E6%8E%A5%E4%B8%8B%E6%9E%B6/receipt.json)
-  - 变更证据：[verification.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943753087/%E9%87%8D%E5%A4%8D%E5%BC%B1%E9%93%BE%E6%8E%A5%E4%B8%8B%E6%9E%B6/verification.json)
+- 当前正式主图按官方图链匹配本地素材；旧图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M1.jpg)；官方来源 https://sc04.alicdn.com/kf/H44c6c087e2d14e3cb10ca5023151a55fS.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hb0de0761db6742ccac5b4e91c0a8901dw.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H2041fc6b11ad4ff084e218f4c9db8777j.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M4.jpg)；官方来源 https://sc04.alicdn.com/kf/H8be3801e2e924e4b9c3dffba32c8843e7.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044_1533/BQ1044_1533_M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H35e4ec67688f4f5d9b589d2f0426e5f7S.jpg
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
+- 本地同步状态：`REPLACEMENT_PUBLIC_QA_PENDING`。
 
 ## 其他原始/正式证据
 
@@ -170,6 +139,7 @@
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943607919/V8/public_verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943650718/V8/public_verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943753087/V8/public_verification.json)
+- [来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR044/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943607919/verification.json)

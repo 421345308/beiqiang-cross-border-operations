@@ -2,12 +2,55 @@
 import json
 import os
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
+import re
 from product_asset_store import ALIASES, read, resolve_legacy_asset
 
 ROOT = Path(__file__).resolve().parents[2]
 DETAILS = Path('02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品')
 AREA = Path('02_Alibaba运营/02_单品优化记录/商品档案')
+ASSET_INDEX = Path('00_总控台/产品中心/数据/素材索引.json')
+
+
+def official_image_key(url):
+    """Identify the same Alibaba image across its short and long CDN paths."""
+    parts = urlsplit(url)
+    host = (parts.hostname or '').lower()
+    if host != 'alicdn.com' and not host.endswith('.alicdn.com'):
+        return None
+    match = re.match(r'^/kf/([^/]+)', parts.path)
+    if not match:
+        return None
+    return re.sub(r'\.(?:jpe?g|png|webp|gif)$', '', match.group(1), flags=re.I)
+
+
+def formal_snapshot(listing):
+    """A registered receipt is authoritative; missing it never revives an older shoe."""
+    registered = listing.get('formal_fields') or {}
+    path = Path(registered['file']) if registered.get('file') else DETAILS / listing['id'] / 'formal_get.json'
+    if not (ROOT / path).is_file():
+        return path, None, None
+    snap = read(ROOT / path)
+    actual = (snap.get('response') or {}).get('product') or snap.get('product')
+    return path, actual, snap.get('observed_at_utc') or snap.get('observed_at') or registered.get('at')
+
+
+def indexed_image(url, product, index):
+    owners = {product['id'], product.get('current_model'), *product.get('aliases', [])}
+    candidates = []
+    for item in index.get('files', []):
+        if not owners.intersection(item.get('products', [])) or not item.get('file'):
+            continue
+        urls = item.get('official_urls') or []
+        if url in urls:
+            candidates.append((0, item))
+        elif official_image_key(url) and any(official_image_key(u) == official_image_key(url) for u in urls):
+            candidates.append((1, item))
+    if not candidates:
+        return None
+    best = min(rank for rank, _ in candidates)
+    matches = {item['file']: item for rank, item in candidates if rank == best}
+    return next(iter(matches.values())) if len(matches) == 1 else None
 
 
 def builds(data):
@@ -15,6 +58,7 @@ def builds(data):
     migration_index = read(ALIASES) if ALIASES.exists() else {}
     cache_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json'
     cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
+    asset_index = read(ROOT / ASSET_INDEX) if (ROOT / ASSET_INDEX).exists() else {}
     sources = {s['id']: s for s in data['sources']}
     links = {}
     for listing in data['listings']:
@@ -81,26 +125,34 @@ def builds(data):
         lines += ['', '## 国际站链接与本地正式字段', '']
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
-            path = DETAILS / pid / 'formal_get.json'
+            path, actual, observed_at = formal_snapshot(listing)
             lines += [f"### {listing['model']} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
-            if (ROOT/path).exists():
-                snap = json.loads((ROOT/path).read_text(encoding='utf-8'))
-                actual = snap['response']['product']
-                lines += [f"- 正式回读：{ref(path,parent,'完整商品字段')}；UTC {snap['observed_at_utc']}。", f"- 当前正式标题：{actual.get('subject','')}", f"- 审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
+            if actual:
+                lines += [f"- 正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- 当前正式标题：{actual.get('subject','')}", f"- 审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
                 group_id=str(actual.get('group_id') or '')
                 group_file=DETAILS.parent/'店内分组'/(group_id+'.json')
                 if group_id and (ROOT/group_file).exists():
                     group=json.loads((ROOT/group_file).read_text(encoding='utf-8'))['response'].get('product_group',{})
                     lines.append(f"- 店内分组：{group.get('group_name','')} · {group_id}；{ref(group_file,parent,'平台分组回执')}。")
-                roles=cache.get('products',{}).get(pid,{})
-                if roles:
-                    lines.append('- 本地平台素材：'+ref(cache_path.relative_to(ROOT),parent,'唯一素材索引')+'；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。')
-                    for slot,url in enumerate(actual.get('main_image',{}).get('images',[]),1):
-                        asset=cache.get('assets',{}).get(url,{})
-                        lines.append(f"  - M{slot}：{ref(asset['file'],parent,'本地原图')} · {asset.get('width','')}×{asset.get('height','')}" if asset.get('state')=='SAVED' else f'  - M{slot}：本地图片待补；官方来源 {url}')
-                else:lines.append('- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。')
+                images = actual.get('main_image', {}).get('images', [])
+                if images:
+                    lines.append('- 当前正式主图按官方图链匹配本地素材；旧图片不按槽位继承。')
+                    for slot, url in enumerate(images, 1):
+                        item = indexed_image(url, product, asset_index)
+                        asset = cache.get('assets', {}).get(url, {})
+                        if item and (ROOT / item['file']).is_file():
+                            lines.append(f"  - M{slot}：{ref(item['file'],parent,'本地原图')}；官方来源 {url}")
+                        elif asset.get('state') == 'SAVED' and asset.get('file') and resolve_legacy_asset(asset['file'], migration_index=migration_index).is_file():
+                            lines.append(f"  - M{slot}：{ref(asset['file'],parent,'本地原图')}；官方来源 {url}")
+                        else:
+                            lines.append(f'  - M{slot}：本地图片待补；官方来源 {url}')
+                else:
+                    lines.append('- 当前正式回读未返回主图；不继承旧图库。')
             else:
-                lines.append('- 当前完整正式回读：待补；历史ID未检出不自动判定删除。')
+                if listing.get('formal_fields', {}).get('file'):
+                    lines.append(f"- 已登记的正式回读缺失或无商品字段：{ref(path,parent,'登记的回读')}；不回退旧字段。")
+                else:
+                    lines.append('- 当前完整正式回读：待补；历史ID未检出不自动判定删除。')
             presence=listing.get('observation',{}).get('current_presence')
             if presence:
                 lines.append(f"- 较新目录/原ID存在性：`{presence['state']}`；UTC {presence['at']}；{ref(presence['evidence'],parent,'精确回读证据')}。以上正式字段保留原核验日期；未返回原因未知，不重复创建。")
@@ -135,6 +187,12 @@ def sync_formal_references(data):
     seen = 0
     for listing in data['listings']:
         path = DETAILS / listing['id'] / 'formal_get.json'
+        registered = (listing.get('formal_fields') or {}).get('file')
+        if registered and Path(registered).as_posix() != path.as_posix():
+            _, actual, _ = formal_snapshot(listing)
+            if actual:
+                seen += 1
+            continue
         if not (ROOT/path).exists():
             continue
         snap = json.loads((ROOT/path).read_text(encoding='utf-8'))

@@ -3,6 +3,36 @@
   "updated_on": "2026-10-21",
   "sources": [
     {
+      "id": "src-hr009-lvzhu-sc22",
+      "url": "https://lvzhu.sooxie.com/detail/2544706",
+      "shop_url": "https://lvzhu.sooxie.com",
+      "supplier": "绿竹鞋业",
+      "model": "SC22",
+      "price": "45.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "搜鞋网公开参考价；非已确认订单采购成本，具体色码、数量、包装、运费及交期按订单确认。",
+      "observed_at": "2026-11-03",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/备选_8979与SC22/核图结果.md"
+      ]
+    },
+    {
+      "id": "src-hr044-huasheng-1533",
+      "url": "https://huasheng.sooxie.com/detail/2449394",
+      "shop_url": "https://huasheng.sooxie.com",
+      "supplier": "华胜鞋业",
+      "model": "1533",
+      "price": "75.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "搜鞋网公开参考价；非已确认订单采购成本，具体色码、数量、包装、运费及交期按订单确认。",
+      "observed_at": "2026-11-03",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/2026-11-03_缺货复核/1533候选准备.md"
+      ]
+    },
+    {
       "id": "src-038a36798455",
       "url": "https://luqi.sooxie.com/detail/2410682",
       "shop_url": "https://luqi.sooxie.com",
@@ -10100,6 +10130,34 @@
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/补充来源身份核验.json",
         "scope": "Exact photographed colour source reference, not physical stock or fixed quotation."
       }
+    },
+    {
+      "id": "src-hr001-deshuai-9009",
+      "url": "https://deshuai.sooxie.com/detail/2280929",
+      "shop_url": "https://deshuai.sooxie.com",
+      "supplier": "德帅鞋业",
+      "model": "9009",
+      "price": "128.00",
+      "currency": "CNY",
+      "unit": "双",
+      "observed_at": "2026-11-03",
+      "price_terms": "供方公开价格；不代表实时库存、最终订单价格或授权。",
+      "source_materials": {
+        "upper": "头层牛皮",
+        "lining": "猪皮",
+        "outsole": "橡胶",
+        "midsole": "unknown"
+      },
+      "colors": [
+        "Black"
+      ],
+      "page_size_range": "38–46",
+      "detail_size_range": "38–44",
+      "adopted_size_range": "38–44",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR001/搜鞋替代候选.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR001/.local/本轮搜鞋/9009_observation.json"
+      ]
     }
   ],
   "imported_evidence": [

@@ -97,7 +97,9 @@ class Business:
             obj['source_role']='adopted' if adopted else ('reference' if source else 'missing')
             obj['publication_disposition']=product.get('publication_disposition') or {}
             if obj['publication_disposition'].get('state')=='OWNER_REPORTED_UNAVAILABLE_REPLACEMENT_PENDING':
-                obj['summary']='负责人反馈原款无货 · 暂停新推荐 · 正在找替代款'
+                obj['summary']='负责人反馈原款无货 · 暂停新推荐 · 替换进行中'
+            elif obj['publication_disposition'].get('state')=='PLATFORM_REPLACED_PUBLIC_QA_PENDING':
+                obj['summary']='新款已审核 · 公开页面验收中'
             obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
             obj['facts']=[_fact('共用产品ID',pid),_fact('来源状态',state_label),_fact('别名',product.get('aliases',[])),
                 _fact('原始资料包',product.get('raw_packages') or '原档未列出原包路径')]
@@ -119,6 +121,10 @@ class Business:
                 current=listing.get('current_platform_fields') or {};historic=listing.get('catalog_fields') or {}
                 status={'approved':'已审核','modified':'修改审核中','pending':'待审核','published':'已发布'}.get(current.get('status'),current.get('status') or '未记录审核状态')
                 obj['facts'].append(_fact('Alibaba '+str(listing.get('id')),' · '.join(str(v) for v in [current.get('title') or historic.get('title'),status,current.get('at')] if v)))
+                pending=listing.get('pending_replacement') or {}
+                if pending.get('state') in ('SUBMITTED_REVIEW_PENDING','APPROVED_PUBLIC_QA_PENDING'):
+                    phase='审核中' if pending['state']=='SUBMITTED_REVIEW_PENDING' else '公开验收中'
+                    obj['facts'].append(_fact('换款审核 '+str(listing.get('id')),f"{pending.get('source_model','新款')} · {phase} · {pending.get('observed_at','')}"))
                 url=current.get('url') or listing.get('url')
                 if isinstance(url,str) and url.startswith('https://'):obj['links'].append({'label':'Alibaba '+str(listing.get('id')),'url':url})
             # Finished assets are indexed under both stable identity and current model.
@@ -143,7 +149,7 @@ class Business:
             core={k:product[k] for k in ('id','current_model','aliases','source_state','raw_packages','notes','supply_mode','publication_disposition') if k in product}
             core['source_state_label']=state_label;core['classification']=classification;core['existing_specifications']=specifications
             source_core={k:source[k] for k in ('id','supplier','model','url','price','currency','observed_at','price_terms') if k in source}
-            channel_core=[{'id':v.get('id'),'url':v.get('url'),'current':{k:v.get('current_platform_fields',{}).get(k) for k in ('title','status','at','price_tiers')},'historical_title':v.get('catalog_fields',{}).get('title')} for v in listings]
+            channel_core=[{'id':v.get('id'),'url':v.get('url'),'current':{k:v.get('current_platform_fields',{}).get(k) for k in ('title','status','at','price_tiers')},'pending_replacement':v.get('pending_replacement') or {},'historical_title':v.get('catalog_fields',{}).get('title')} for v in listings]
             obj['channel_listings']=channel_core
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
                 'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,

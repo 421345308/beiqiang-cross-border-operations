@@ -1,0 +1,79 @@
+{
+  "state": "APPROVED_READ_BACK_A_C_ON_B_OFF",
+  "source_url": "https://lvzhu.sooxie.com/detail/2544706",
+  "supplier": "绿竹鞋业",
+  "source_model": "SC22",
+  "source_price_cny": "45.00",
+  "source_date": "2026-11-03",
+  "supplier_attributes": {
+    "upper": "太空革",
+    "lining": "混合材质",
+    "outsole": "未说明",
+    "midsole": "未说明",
+    "closure": "系带"
+  },
+  "targets": {
+    "1601943434630": {
+      "model": "BQ1009-A",
+      "display_before": "Y"
+    },
+    "1601943411769": {
+      "model": "BQ1009-B",
+      "display_before": "N"
+    },
+    "1601943520149": {
+      "model": "BQ1009-C",
+      "display_before": "Y"
+    }
+  },
+  "category_id": 201334413,
+  "colors": [
+    "White",
+    "Black"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "attr_values": {
+    "Place of Origin": "China",
+    "Midsole Material": "other",
+    "Outsole Material": "other",
+    "Lining Material": "other",
+    "Closure Type": "Lace-up",
+    "Toe Style": "other"
+  },
+  "upper_material": "omit optional; 太空革 has no specific validated composition mapping",
+  "fx_cny_per_usd": "6.6609",
+  "fx_time": "2026-11-03 12:54:18",
+  "tiers": [
+    [
+      2,
+      "10.14"
+    ],
+    [
+      50,
+      "9.46"
+    ],
+    [
+      100,
+      "8.79"
+    ]
+  ],
+  "commercial_scope": "公开供方价格参考；未含运费税检验和包装费用；非逐码库存与净利润",
+  "titles": {
+    "1601943434630": "Men's Low Top Lace Up Casual Shoes with Stitched Toe Panels",
+    "1601943411769": "Men's Lace Up Casual Shoes with Low Top Profile and Textured Sole",
+    "1601943520149": "Men's Low Top Casual Walking Shoes with Lace Up Closure"
+  },
+  "highlights": "Low-top casual shoes with a lace-up front. Stitched panels frame the toe, while a curved heel completes the everyday profile.",
+  "photo_scope": "真实来源原图完整留存，候选成图为原照片等比缩放并加留白，未改鞋体或去标",
+  "inventory": "OMIT_OPTIONAL_INVENTORY",
+  "company": "Preserve approved factory image F1, existing company image, introduction, FAQ",
+  "source_state": "用户2026-11-03选定SC22；逐单采购和供货确认",
+  "sku_ids": "平台重建了12个规格 ID；以各商品亮点修正/最新get.json为准"
+}

@@ -11,6 +11,18 @@ class ProductProjectionTests(BusinessTests):
         self.write(PRODUCTS,rows)
         self.assertIn('暂停新推荐',self.business.list_objects('product')[0]['summary'])
 
+    def test_pending_replacement_is_visible_without_overwriting_formal_fields(self):
+        self.product()
+        import json
+        from business import CHANNEL
+        data=json.loads((self.root/CHANNEL).read_text(encoding='utf8'))
+        listing=data['listings'][0]
+        listing['pending_replacement']={'state':'SUBMITTED_REVIEW_PENDING','source_model':'1533','observed_at':'2026-11-03'}
+        self.write(CHANNEL,data)
+        obj=self.business.get_object('product:BQ009')
+        self.assertTrue(any(f['label'].startswith('换款审核') and '1533' in f['value'] for f in obj['facts']))
+        self.assertEqual(obj['channel_listings'][0]['pending_replacement']['state'],'SUBMITTED_REVIEW_PENDING')
+
     def test_current_model_and_reference_source_are_distinct_in_list(self):
         self.product()
         import json

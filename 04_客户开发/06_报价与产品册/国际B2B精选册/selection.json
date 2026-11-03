@@ -1,14 +1,78 @@
 {
-  "edition": "2026-10-29",
+  "edition": "2026-11-03",
   "purpose": "Buyer-facing editorial selection; canonical product and supply facts remain in product centre and referenced channel sources.",
   "products": [
-    {"code":"BQ008","id":"1601939625569","group":"core","name":"Layered sneakers","line":"A layered sneaker for a sport-inspired range.","detail":"Lace-up sneakers with a layered design.","role":"Layered sneakers"},
-    {"code":"BQ009","id":"1601939675350","group":"core","name":"Everyday sneakers","line":"A clean sneaker option for everyday ranges.","detail":"Lace-up sneakers with a clean profile.","role":"Everyday sneakers"},
-    {"code":"BQ031","id":"10000046439033","group":"core","name":"Wide-toe knit lace-up","line":"A wider toe shape and an extended size selection.","detail":"Knit upper, EVA sole and heel pull tab.","role":"Wide-toe option"},
-    {"code":"BQ001","id":"10000042821848","group":"alternative","name":"Wide-toe knit slip-on","line":"A slip-on alternative for an everyday knit assortment.","detail":"Knitted textile upper, EVA sole and a wide toe shape.","role":"Knit slip-on"},
-    {"code":"BQ003","id":"10000043200726","group":"alternative","name":"Textured knit lace-up","line":"A different knit texture and raised toe-cap profile.","detail":"Knit textile upper, lace-up fastening and EVA sole.","role":"Knit lace-up"},
-    {"code":"BQ1009","id":"1601943434630","group":"complement","name":"White low-top casual","line":"A simple white-shoe option to round out a casual range.","detail":"Low-top lace-up profile with a contrasting heel detail.","role":"White low-top"},
-    {"code":"BQ-LQ2597","id":"1601973797610","group":"complement","name":"Panelled casual lace-up","line":"Contrast overlays and a size range reaching EU 48.","detail":"Mesh upper with overlays, lace-up fastening and a wide toe shape.","role":"Larger-size option"},
-    {"code":"BQ-C2627","id":"1601969885846","group":"complement","name":"Seasonal casual clog","line":"A separate warm-season option for buyers who carry clogs.","detail":"EVA upper, ventilation openings and a pivoting heel strap.","role":"Seasonal addition"}
+    {
+      "code": "BQ008",
+      "id": "1601939625569",
+      "group": "core",
+      "name": "Layered sneakers",
+      "line": "A layered sneaker for a sport-inspired range.",
+      "detail": "Lace-up sneakers with a layered design.",
+      "role": "Layered sneakers"
+    },
+    {
+      "code": "BQ009",
+      "id": "1601939675350",
+      "group": "core",
+      "name": "Everyday sneakers",
+      "line": "A clean sneaker option for everyday ranges.",
+      "detail": "Lace-up sneakers with a clean profile.",
+      "role": "Everyday sneakers"
+    },
+    {
+      "code": "BQ031",
+      "id": "10000046439033",
+      "group": "core",
+      "name": "Wide-toe knit lace-up",
+      "line": "A wider toe shape and an extended size selection.",
+      "detail": "Knit upper, EVA sole and heel pull tab.",
+      "role": "Wide-toe option"
+    },
+    {
+      "code": "BQ001",
+      "id": "10000042821848",
+      "group": "alternative",
+      "name": "Wide-toe knit slip-on",
+      "line": "A slip-on alternative for an everyday knit assortment.",
+      "detail": "Knitted textile upper, EVA sole and a wide toe shape.",
+      "role": "Knit slip-on"
+    },
+    {
+      "code": "BQ003",
+      "id": "10000043200726",
+      "group": "alternative",
+      "name": "Textured knit lace-up",
+      "line": "A different knit texture and raised toe-cap profile.",
+      "detail": "Knit textile upper, lace-up fastening and EVA sole.",
+      "role": "Knit lace-up"
+    },
+    {
+      "code": "BQ1009",
+      "id": "1601943520149",
+      "group": "complement",
+      "name": "Low-top casual lace-up",
+      "line": "A clean low-top style for an everyday casual range.",
+      "detail": "Lace-up low-top with a contrasting collar.",
+      "role": "Low-top casual"
+    },
+    {
+      "code": "BQ-LQ2597",
+      "id": "1601973797610",
+      "group": "complement",
+      "name": "Panelled casual lace-up",
+      "line": "Contrast overlays and a size range reaching EU 48.",
+      "detail": "Mesh upper with overlays, lace-up fastening and a wide toe shape.",
+      "role": "Larger-size option"
+    },
+    {
+      "code": "BQ-C2627",
+      "id": "1601969885846",
+      "group": "complement",
+      "name": "Seasonal casual clog",
+      "line": "A separate warm-season option for buyers who carry clogs.",
+      "detail": "EVA upper, ventilation openings and a pivoting heel strap.",
+      "role": "Seasonal addition"
+    }
   ]
 }
