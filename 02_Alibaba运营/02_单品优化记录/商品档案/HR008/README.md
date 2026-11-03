@@ -2,117 +2,82 @@
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`ADOPTED`。下一步：379 三条已通过 API 提交，当前审核中；审核后核原展示状态并同步新来源。
+来源状态：`ADOPTED`。下一步：379 三条正式审核、色码与价格已核；公开页面尚需按各链接抽检。
 
 ## 当前资料与实物证据
 
 - 当前供货类型（内部）：外采；SOURCE_ROUTE_EVIDENCED。货号不随供货路径永久绑定，转产后更新证据与生效范围。
-- 供货分类依据：[ROOT_images_approved.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR008_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/ROOT_images_approved.json)
-- 供货分类依据：[bank_manifest.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR008_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/bank_manifest.json)
-- 供货分类依据：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
-- 本地事实/准备字段：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
-- 当前素材目录：[BQ1008](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008)
-- 当前主图库按商品ID对应（含最新统一工厂图）：
-  - [1601943451227 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943451227/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
-  - [1601943422371 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943422371/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
-  - [1601943348656 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943348656/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+- 供货分类依据：[当前状态.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81.md)
+- 本地事实/准备字段：[当前状态.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81.md)
+- 当前素材目录：[379_铭爵_BQ1008](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008)
+- 原始包：[379_铭爵_2026-11-03](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_2026-11-03)
 
 ## 采购来源（内部使用）
 
-- 已采用记录：[Quanzhou Binfeng Import & Export Co., Ltd. / 661](https://binfengshoes.en.made-in-china.com/product/exDpdCFYrOVQ/China-New-Casual-MID-Low-Leather-Panel-Shoes-Fashionable-Lightweight-White-Shoes-Sneakers.html)
-  - 保存的标价：USD 未核当前进货报价 / 双；原观察日期：2026-09-28。历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。
-  - 供方店铺入口：[https://binfengshoes.en.made-in-china.com](https://binfengshoes.en.made-in-china.com)
-  - 来源原件：[ROOT_images_approved.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR008_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/ROOT_images_approved.json)
-  - 来源原件：[bank_manifest.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR008_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/bank_manifest.json)
-  - 来源原件：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
+- 已采用记录：[铭爵 / 379](https://mingjue.sooxie.com/detail/2580146)
+  - 保存的标价：CNY 89.00 / 双；原观察日期：2026-11-03。页面公开拿货价，不代表可供数量、实际成交价或大码加价；按订单确认。
+  - 供方店铺入口：[https://mingjue.sooxie.com](https://mingjue.sooxie.com)
+  - 来源原件：[当前状态.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81.md)
+  - 来源原件：[379换款计划.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/379%E6%8D%A2%E6%AC%BE%E8%AE%A1%E5%88%92.json)
 
 ## 国际站链接与本地正式字段
 
 ### BQ1008-A · 1601943348656
 
-- 平台链接：[1601943348656](https://www.alibaba.com/product-detail/Unisex-PU-Lace-Up-Casual-Sneakers_1601943348656.html)
-- 换款前历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/formal_get.json)；时间 2026-11-02T03:23:20.845408+00:00。
-- 换款前历史正式标题：Unisex PU Lace up Round Toe Casual Sneakers with Mesh Lining and Layered Rubber Sole
-- 换款前历史审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 平台链接：[1601943348656](https://www.alibaba.com/product-detail/Men-s-No-Tie-Casual-Sneakers_1601943348656.html)
+- 当前正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/.local/%E6%9C%AC%E6%AC%A1%E6%8D%A2%E6%AC%BE/1601943348656/%E6%9C%80%E6%96%B0get.json)；时间 待补。
+- 当前正式标题：Men's No Tie Casual Sneakers with Stitched Toe and Rubber Sole
+- 当前审核/展示：approved / Y；平台类目ID：201334413。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 换款前历史正式主图按官方图链匹配本地素材；图片不按槽位继承。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_08ffc4e9e3badf2b.webp)；官方来源 https://sc04.alicdn.com/kf/H4fcf7a0bea564ee2b406c633cdef05bcZ.jpg
-  - M2：本地图片待补；官方来源 https://sc04.alicdn.com/kf/Hd2975a71686f47c4a7b4ade9d9d53007B.png
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_cd758546e9daa8bd.png)；官方来源 https://sc04.alicdn.com/kf/Hb63c282bd72d442da8a6888c3470749e7.png
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_3e054c910e4389ac.png)；官方来源 https://sc04.alicdn.com/kf/Hf2179942d9bb4b83970fcb4578666b798.png
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_0e850517035cfc9c.png)；官方来源 https://sc04.alicdn.com/kf/H1d32386f3754498c92419ba2cd555c58c.png
+- 当前正式主图按官方图链匹配本地素材；图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M1.jpg)；官方来源 https://sc04.alicdn.com/kf/Hcabff33dd4f24254a05b5c8497479078m.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd3f2ee7822744a0293935735842ba1e7h.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H0071ff6f24f34fbea53f9d7a2d738385l.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M4.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd51b9c3bca504b83a3d614cddebfad7do.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H34bca56cf2ab4744941abb227212a6c91.jpg
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
-- 标题搜索优化：`APPROVED_DIFFERENT_TITLE_PUBLIC_PENDING`；负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果
-  - 标题证据：[20261102_full_batch_12_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_plan.json)
-  - 标题证据：[20261102_full_batch_12_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_receipt.json)
-  - 标题证据：[20261102_full_batch_12_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_verification.json)
-  - 标题证据：[20261102_full_batch_12_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_approved_get.json)
-  - 标题证据：[20261102_full_batch_12_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943348656/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_approved_verification.json)
-  - 标题证据：[20条标题与生意助手对照.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/20261102/%E5%85%A8%E9%87%8F%E6%A0%87%E9%A2%98%E5%A4%8D%E6%A0%B8/20%E6%9D%A1%E6%A0%87%E9%A2%98%E4%B8%8E%E7%94%9F%E6%84%8F%E5%8A%A9%E6%89%8B%E5%AF%B9%E7%85%A7.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
-  - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/prepared.json)
-  - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/update_receipt.json)
-  - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/verification.json)
+- 本地同步状态：`FORMAL_API_PASS_PUBLIC_QA_PENDING`。
+- 本轮优化：`HISTORICAL_COPY_ARCHIVED`；
 
 ### BQ1008-B · 1601943422371
 
-- 平台链接：[1601943422371](https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Shoes_1601943422371.html)
-- 换款前历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/formal_get.json)；时间 2026-11-02T03:23:20.802774+00:00。
-- 换款前历史正式标题：Unisex Low Top PU Lace Up Casual Sneakers with Mesh Lining and Rubber Sole
-- 换款前历史审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 平台链接：[1601943422371](https://www.alibaba.com/product-detail/Men-s-Low-Top-Slip-On_1601943422371.html)
+- 当前正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/.local/%E6%9C%AC%E6%AC%A1%E6%8D%A2%E6%AC%BE/1601943422371/%E6%9C%80%E6%96%B0get.json)；时间 待补。
+- 当前正式标题：Men's Low Top Slip On Sneakers with Decorative Laces and Rubber Sole
+- 当前审核/展示：approved / Y；平台类目ID：201334413。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 换款前历史正式主图按官方图链匹配本地素材；图片不按槽位继承。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_49595a44ae25250d.webp)；官方来源 https://sc04.alicdn.com/kf/H43cc0abed37645a895afe7df26fe2026L.jpg
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_c4b09e466ee6ef5d.webp)；官方来源 https://sc04.alicdn.com/kf/Hd4db2a46cae74aa0949851841bcd30283.jpg
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_7ef206002e3eb7f5.png)；官方来源 https://sc04.alicdn.com/kf/H814d27000c234fcaa383bd91856b6413q.png
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_c681777732bcaed1.png)；官方来源 https://sc04.alicdn.com/kf/H73e7f5f8ecf444778de07df75a174b15o.png
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_31b4eca541622c0f.png)；官方来源 https://sc04.alicdn.com/kf/He7d43cb1130d45c6adb0e35a8b7f52eeJ.png
+- 当前正式主图按官方图链匹配本地素材；图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M1.jpg)；官方来源 https://sc04.alicdn.com/kf/Hcabff33dd4f24254a05b5c8497479078m.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd3f2ee7822744a0293935735842ba1e7h.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H0071ff6f24f34fbea53f9d7a2d738385l.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M4.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd51b9c3bca504b83a3d614cddebfad7do.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H34bca56cf2ab4744941abb227212a6c91.jpg
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
-- 标题搜索优化：`FORMAL_APPROVED_PUBLIC_PENDING`；审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页
-  - 标题证据：[20261102_full_batch_12_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_plan.json)
-  - 标题证据：[20261102_full_batch_12_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_receipt.json)
-  - 标题证据：[20261102_full_batch_12_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_verification.json)
-  - 标题证据：[20261102_full_batch_12_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_approved_get.json)
-  - 标题证据：[20261102_full_batch_12_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943422371/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_12_approved_verification.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
-  - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943422371/prepared.json)
-  - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943422371/update_receipt.json)
-  - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943422371/verification.json)
+- 本地同步状态：`FORMAL_API_PASS_PUBLIC_QA_PENDING`。
+- 本轮优化：`HISTORICAL_COPY_ARCHIVED`；
 
 ### BQ1008-C · 1601943451227
 
-- 平台链接：[1601943451227](https://www.alibaba.com/product-detail/Unisex-Low-Top-Casual-Sneakers-with_1601943451227.html)
-- 换款前历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/formal_get.json)；时间 2026-11-02T02:10:41.238997+00:00。
-- 换款前历史正式标题：Unisex Round Toe PU Lace-Up Casual Sneakers with Mesh Lining and Rubber Sole
-- 换款前历史审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 平台链接：[1601943451227](https://www.alibaba.com/product-detail/Men-s-Casual-Slip-On-Shoes_1601943451227.html)
+- 当前正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/.local/%E6%9C%AC%E6%AC%A1%E6%8D%A2%E6%AC%BE/1601943451227/%E6%9C%80%E6%96%B0get.json)；时间 待补。
+- 当前正式标题：Men's Casual Slip On Shoes with Stitched Toe and No Tie Lace Design
+- 当前审核/展示：approved / Y；平台类目ID：201334413。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
-- 换款前历史正式主图按官方图链匹配本地素材；图片不按槽位继承。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_8b0fd89265a72e13.png)；官方来源 https://sc04.alicdn.com/kf/H97a7d59218944d96be5fb47f8beeab5ae.png
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_8d3c73ece708369e.png)；官方来源 https://sc04.alicdn.com/kf/Hcb154d76e80549be8df865dce58922e0A.png
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_65b92fe91494e845.png)；官方来源 https://sc04.alicdn.com/kf/Hbc3a8e2d944c4d2b8508e99b000a7cd52.png
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1008/BQ1008_902ffe48a0b34fc4.png)；官方来源 https://sc04.alicdn.com/kf/H5d1b49ddb5684496b0297ae2e551721dt.png
-  - M5：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H7ca20ddd01d04b9e8d91df51db15d7ab3.png
+- 当前正式主图按官方图链匹配本地素材；图片不按槽位继承。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M1.jpg)；官方来源 https://sc04.alicdn.com/kf/Hcabff33dd4f24254a05b5c8497479078m.jpg
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M2.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd3f2ee7822744a0293935735842ba1e7h.jpg
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M3.jpg)；官方来源 https://sc04.alicdn.com/kf/H0071ff6f24f34fbea53f9d7a2d738385l.jpg
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M4.jpg)；官方来源 https://sc04.alicdn.com/kf/Hd51b9c3bca504b83a3d614cddebfad7do.jpg
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/379_%E9%93%AD%E7%88%B5_BQ1008/M5.jpg)；官方来源 https://sc04.alicdn.com/kf/H34bca56cf2ab4744941abb227212a6c91.jpg
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png)；官方来源 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
-- 标题搜索优化：`APPROVED_DIFFERENT_TITLE_PUBLIC_PENDING`；负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果
-  - 标题证据：[20261102_full_batch_03_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_plan.json)
-  - 标题证据：[20261102_full_batch_03_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_receipt.json)
-  - 标题证据：[20261102_full_batch_03_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_verification.json)
-  - 标题证据：[20261102_full_batch_03_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_get.json)
-  - 标题证据：[20261102_full_batch_03_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943451227/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_03_approved_verification.json)
-  - 标题证据：[20条标题与生意助手对照.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/20261102/%E5%85%A8%E9%87%8F%E6%A0%87%E9%A2%98%E5%A4%8D%E6%A0%B8/20%E6%9D%A1%E6%A0%87%E9%A2%98%E4%B8%8E%E7%94%9F%E6%84%8F%E5%8A%A9%E6%89%8B%E5%AF%B9%E7%85%A7.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
-  - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943451227/prepared.json)
-  - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943451227/update_receipt.json)
-  - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943451227/verification.json)
+- 本地同步状态：`FORMAL_API_PASS_PUBLIC_QA_PENDING`。
+- 本轮优化：`HISTORICAL_COPY_ARCHIVED`；
 
 ## 其他原始/正式证据
 
@@ -180,6 +145,7 @@
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943348656/V8/public_verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943422371/V8/public_verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943451227/V8/public_verification.json)
+- [来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR008/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943348656/verification.json)
