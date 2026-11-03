@@ -74656,16 +74656,16 @@
       "id": "1601943397351",
       "product_id": "HR004",
       "model": "BQ1004-A",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr004-25qlfan15-36",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Synthetic-Leather-Lace-Up_1601943397351.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr004-qianlan-3881",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T21:17:17.555125+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T08:54:01.718856+00:00",
+        "score": "5.00",
+        "scope": "正式回读及中文公开页关键字段；其余图片及语言待核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -74681,297 +74681,521 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "3881为五色系带围条鞋；旧鞋来源和图片按历史保留。实时库存及订单条件另核；中文公开页关键字段已核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T21:17:17.555125+00:00",
+        "at": "2026-11-03T08:54:01.718856+00:00",
         "model": "BQ1004-A",
-        "title": "Men's Leather Lace Up Casual Shoes with Round Apron Toe and Rubber Soles",
+        "title": "Men's Synthetic Leather Lace Up Casual Shoes with Apron Toe and Rubber Outsole",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
-          "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
-          "https://sc04.alicdn.com/kf/Hcdeca02e10ca42389c2db25bf714937eA.png",
-          "https://sc04.alicdn.com/kf/He8fc03c6a9e043bfbb5af75d5cd69e05d.png",
-          "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg",
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Synthetic-Leather-Lace-Up_1601943397351.html",
+        "sku": {
+          "BQ1004-A-GRAY-EU41": 109918702211,
+          "BQ1004-A-GRAY-EU40": 109918702210,
+          "BQ1004-A-GRAY-EU39": 109918702209,
+          "BQ1004-A-BLUE-EU48": 109918702208,
+          "BQ1004-A-GRAY-EU45": 109918702215,
+          "BQ1004-A-GRAY-EU44": 109918702214,
+          "BQ1004-A-GRAY-EU43": 109918702213,
+          "BQ1004-A-GRAY-EU42": 109918702212,
+          "BQ1004-A-GRAY-EU48": 109918702218,
+          "BQ1004-A-GRAY-EU47": 109918702217,
+          "BQ1004-A-GRAY-EU46": 109918702216,
+          "BQ1004-A-BEIGE-EU45": 109918702195,
+          "BQ1004-A-BEIGE-EU44": 109918702194,
+          "BQ1004-A-BEIGE-EU43": 109918702193,
+          "BQ1004-A-BEIGE-EU42": 109918702192,
+          "BQ1004-A-BLUE-EU39": 109918702199,
+          "BQ1004-A-BEIGE-EU48": 109918702198,
+          "BQ1004-A-BEIGE-EU47": 109918702197,
+          "BQ1004-A-BEIGE-EU46": 109918702196,
+          "BQ1004-A-BLUE-EU43": 109918702203,
+          "BQ1004-A-BLUE-EU42": 109918702202,
+          "BQ1004-A-BLUE-EU41": 109918702201,
+          "BQ1004-A-BLUE-EU40": 109918702200,
+          "BQ1004-A-BLUE-EU47": 109918702207,
+          "BQ1004-A-BLUE-EU46": 109918702206,
+          "BQ1004-A-BLUE-EU45": 109918702205,
+          "BQ1004-A-BLUE-EU44": 109918702204,
+          "BQ1004-A-BROWN-EU39": 109918702179,
+          "BQ1004-A-BLACK-EU48": 109918702178,
+          "BQ1004-A-BLACK-EU47": 109918702177,
+          "BQ1004-A-BLACK-EU46": 109918702176,
+          "BQ1004-A-BROWN-EU43": 109918702183,
+          "BQ1004-A-BROWN-EU42": 109918702182,
+          "BQ1004-A-BROWN-EU41": 109918702181,
+          "BQ1004-A-BROWN-EU40": 109918702180,
+          "BQ1004-A-BROWN-EU47": 109918702187,
+          "BQ1004-A-BROWN-EU46": 109918702186,
+          "BQ1004-A-BROWN-EU45": 109918702185,
+          "BQ1004-A-BROWN-EU44": 109918702184,
+          "BQ1004-A-BEIGE-EU41": 109918702191,
+          "BQ1004-A-BEIGE-EU40": 109918702190,
+          "BQ1004-A-BEIGE-EU39": 109918702189,
+          "BQ1004-A-BROWN-EU48": 109918702188,
+          "BQ1004-A-BLACK-EU41": 109918702171,
+          "BQ1004-A-BLACK-EU40": 109918702170,
+          "BQ1004-A-BLACK-EU39": 109918702169,
+          "BQ1004-A-BLACK-EU45": 109918702175,
+          "BQ1004-A-BLACK-EU44": 109918702174,
+          "BQ1004-A-BLACK-EU43": 109918702173,
+          "BQ1004-A-BLACK-EU42": 109918702172
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H78e02c0a01d047e981a564501b7cc3e1d.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H572d4c842656408c991dfb585a43cf9dR.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hc07d4fb91a714a4093a234b1d2494717B.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H58f529b600434dcca32f55871aec4619B.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/当前图库与货号.json",
-        "at": "2026-10-16T04:28:00.876803+00:00",
-        "observed_at": "2026-10-19T18:42:00.346370+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943397351/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943397351/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_get.json",
-        "at": "2026-11-02T02:48:58.988938+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943397351/latest_get.json",
+        "scope": "3881正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "973003809",
+        "scope": "Lace-Up Casual Shoes，正式回读。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:48:58.988938+00:00",
+        "at": "2026-11-03T08:54:01.718856+00:00",
         "model": "BQ1004-A",
-        "title": "Men's Leather Lace Up Casual Shoes with Apron Toe Leather Lining and Rubber Sole",
+        "title": "Men's Synthetic Leather Lace Up Casual Shoes with Apron Toe and Rubber Outsole",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
-          "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
-          "https://sc04.alicdn.com/kf/Hcdeca02e10ca42389c2db25bf714937eA.png",
-          "https://sc04.alicdn.com/kf/He8fc03c6a9e043bfbb5af75d5cd69e05d.png",
-          "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg",
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Synthetic-Leather-Lace-Up_1601943397351.html",
+        "sku": {
+          "BQ1004-A-GRAY-EU41": 109918702211,
+          "BQ1004-A-GRAY-EU40": 109918702210,
+          "BQ1004-A-GRAY-EU39": 109918702209,
+          "BQ1004-A-BLUE-EU48": 109918702208,
+          "BQ1004-A-GRAY-EU45": 109918702215,
+          "BQ1004-A-GRAY-EU44": 109918702214,
+          "BQ1004-A-GRAY-EU43": 109918702213,
+          "BQ1004-A-GRAY-EU42": 109918702212,
+          "BQ1004-A-GRAY-EU48": 109918702218,
+          "BQ1004-A-GRAY-EU47": 109918702217,
+          "BQ1004-A-GRAY-EU46": 109918702216,
+          "BQ1004-A-BEIGE-EU45": 109918702195,
+          "BQ1004-A-BEIGE-EU44": 109918702194,
+          "BQ1004-A-BEIGE-EU43": 109918702193,
+          "BQ1004-A-BEIGE-EU42": 109918702192,
+          "BQ1004-A-BLUE-EU39": 109918702199,
+          "BQ1004-A-BEIGE-EU48": 109918702198,
+          "BQ1004-A-BEIGE-EU47": 109918702197,
+          "BQ1004-A-BEIGE-EU46": 109918702196,
+          "BQ1004-A-BLUE-EU43": 109918702203,
+          "BQ1004-A-BLUE-EU42": 109918702202,
+          "BQ1004-A-BLUE-EU41": 109918702201,
+          "BQ1004-A-BLUE-EU40": 109918702200,
+          "BQ1004-A-BLUE-EU47": 109918702207,
+          "BQ1004-A-BLUE-EU46": 109918702206,
+          "BQ1004-A-BLUE-EU45": 109918702205,
+          "BQ1004-A-BLUE-EU44": 109918702204,
+          "BQ1004-A-BROWN-EU39": 109918702179,
+          "BQ1004-A-BLACK-EU48": 109918702178,
+          "BQ1004-A-BLACK-EU47": 109918702177,
+          "BQ1004-A-BLACK-EU46": 109918702176,
+          "BQ1004-A-BROWN-EU43": 109918702183,
+          "BQ1004-A-BROWN-EU42": 109918702182,
+          "BQ1004-A-BROWN-EU41": 109918702181,
+          "BQ1004-A-BROWN-EU40": 109918702180,
+          "BQ1004-A-BROWN-EU47": 109918702187,
+          "BQ1004-A-BROWN-EU46": 109918702186,
+          "BQ1004-A-BROWN-EU45": 109918702185,
+          "BQ1004-A-BROWN-EU44": 109918702184,
+          "BQ1004-A-BEIGE-EU41": 109918702191,
+          "BQ1004-A-BEIGE-EU40": 109918702190,
+          "BQ1004-A-BEIGE-EU39": 109918702189,
+          "BQ1004-A-BROWN-EU48": 109918702188,
+          "BQ1004-A-BLACK-EU41": 109918702171,
+          "BQ1004-A-BLACK-EU40": 109918702170,
+          "BQ1004-A-BLACK-EU39": 109918702169,
+          "BQ1004-A-BLACK-EU45": 109918702175,
+          "BQ1004-A-BLACK-EU44": 109918702174,
+          "BQ1004-A-BLACK-EU43": 109918702173,
+          "BQ1004-A-BLACK-EU42": 109918702172
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H78e02c0a01d047e981a564501b7cc3e1d.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H572d4c842656408c991dfb585a43cf9dR.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hc07d4fb91a714a4093a234b1d2494717B.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H58f529b600434dcca32f55871aec4619B.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:00.923768+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:00.923768+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr004-25qlfan15-36",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:28:00.876803+00:00",
-          "old_model": "HR004-A",
-          "planned_model": "BQ1004-A",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:42:00.346370+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T21:17:17.555125+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:26.558741+00:00",
-          "before": "Men's Leather Lace Up Casual Shoes with Round Apron Toe and Rubber Soles",
-          "target": "Men's Leather Lace Up Casual Shoes with Apron Toe Leather Lining and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:48:58.988938+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_3881，当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR004-A"
-      ]
+      ],
+      "before_3881": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-20T21:17:17.555125+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-20T21:17:17.555125+00:00",
+          "model": "BQ1004-A",
+          "title": "Men's Leather Lace Up Casual Shoes with Round Apron Toe and Rubber Soles",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
+            "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
+            "https://sc04.alicdn.com/kf/Hcdeca02e10ca42389c2db25bf714937eA.png",
+            "https://sc04.alicdn.com/kf/He8fc03c6a9e043bfbb5af75d5cd69e05d.png",
+            "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H78e02c0a01d047e981a564501b7cc3e1d.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H572d4c842656408c991dfb585a43cf9dR.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hc07d4fb91a714a4093a234b1d2494717B.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H58f529b600434dcca32f55871aec4619B.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:48:58.988938+00:00",
+          "model": "BQ1004-A",
+          "title": "Men's Leather Lace Up Casual Shoes with Apron Toe Leather Lining and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
+            "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
+            "https://sc04.alicdn.com/kf/Hcdeca02e10ca42389c2db25bf714937eA.png",
+            "https://sc04.alicdn.com/kf/He8fc03c6a9e043bfbb5af75d5cd69e05d.png",
+            "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943397351.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H78e02c0a01d047e981a564501b7cc3e1d.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H572d4c842656408c991dfb585a43cf9dR.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hc07d4fb91a714a4093a234b1d2494717B.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H58f529b600434dcca32f55871aec4619B.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_get.json",
+          "at": "2026-11-02T02:48:58.988938+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/当前图库与货号.json",
+          "at": "2026-10-16T04:28:00.876803+00:00",
+          "observed_at": "2026-10-19T18:42:00.346370+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:00.923768+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:00.923768+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943397351/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr004-25qlfan15-36",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:28:00.876803+00:00",
+            "old_model": "HR004-A",
+            "planned_model": "BQ1004-A",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943397351/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:42:00.346370+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T21:17:17.555125+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:26.558741+00:00",
+            "before": "Men's Leather Lace Up Casual Shoes with Round Apron Toe and Rubber Soles",
+            "target": "Men's Leather Lace Up Casual Shoes with Apron Toe Leather Lining and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:48:58.988938+00:00"
+          }
+        }
+      }
     },
     {
       "id": "1601943405519",
       "product_id": "HR004",
       "model": "BQ1004-B",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Lace-Up_1601943405519.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr004-25qlfan15-36",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Moc-Toe_1601943405519.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr004-qianlan-3881",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:55:53.931257+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T08:54:01.707823+00:00",
+        "score": "5.00",
+        "scope": "正式回读及中文公开页关键字段；其余图片及语言待核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -74985,306 +75209,530 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "3881为五色系带围条鞋；旧鞋来源和图片按历史保留。实时库存及订单条件另核；中文公开页关键字段已核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:55:53.931257+00:00",
+        "at": "2026-11-03T08:54:01.707823+00:00",
         "model": "BQ1004-B",
-        "title": "Men's Two Eyelet Lace Up Shoes with Leather Upper and Genuine Leather Lining",
+        "title": "Men's Lace Up Moc Toe Casual Walking Shoes with Synthetic Leather Upper",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hb2f4ec849de546dd96eb22a108023acbq.jpg",
-          "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
-          "https://sc04.alicdn.com/kf/H96dd29d518c2477399baf684c1f68646a.png",
-          "https://sc04.alicdn.com/kf/He174d8f7ddff47b7b3b20b80f61cd0c0u.png",
-          "https://sc04.alicdn.com/kf/He41bdafb9c04418bb910eb5b0e5f37e1H.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg",
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Lace-Up_1601943405519.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Moc-Toe_1601943405519.html",
+        "sku": {
+          "BQ1004-B-GRAY-EU44": 109918745331,
+          "BQ1004-B-GRAY-EU43": 109918745330,
+          "BQ1004-B-GRAY-EU42": 109918745329,
+          "BQ1004-B-GRAY-EU41": 109918745328,
+          "BQ1004-B-GRAY-EU48": 109918745335,
+          "BQ1004-B-GRAY-EU47": 109918745334,
+          "BQ1004-B-GRAY-EU46": 109918745333,
+          "BQ1004-B-GRAY-EU45": 109918745332,
+          "BQ1004-B-BEIGE-EU48": 109918745315,
+          "BQ1004-B-BEIGE-EU47": 109918745314,
+          "BQ1004-B-BEIGE-EU46": 109918745313,
+          "BQ1004-B-BEIGE-EU45": 109918745312,
+          "BQ1004-B-BLUE-EU42": 109918745319,
+          "BQ1004-B-BLUE-EU41": 109918745318,
+          "BQ1004-B-BLUE-EU40": 109918745317,
+          "BQ1004-B-BLUE-EU39": 109918745316,
+          "BQ1004-B-BLUE-EU46": 109918745323,
+          "BQ1004-B-BLUE-EU45": 109918745322,
+          "BQ1004-B-BLUE-EU44": 109918745321,
+          "BQ1004-B-BLUE-EU43": 109918745320,
+          "BQ1004-B-GRAY-EU40": 109918745327,
+          "BQ1004-B-GRAY-EU39": 109918745326,
+          "BQ1004-B-BLUE-EU48": 109918745325,
+          "BQ1004-B-BLUE-EU47": 109918745324,
+          "BQ1004-B-BROWN-EU42": 109918745299,
+          "BQ1004-B-BROWN-EU41": 109918745298,
+          "BQ1004-B-BROWN-EU40": 109918745297,
+          "BQ1004-B-BROWN-EU39": 109918745296,
+          "BQ1004-B-BROWN-EU46": 109918745303,
+          "BQ1004-B-BROWN-EU45": 109918745302,
+          "BQ1004-B-BROWN-EU44": 109918745301,
+          "BQ1004-B-BROWN-EU43": 109918745300,
+          "BQ1004-B-BEIGE-EU40": 109918745307,
+          "BQ1004-B-BEIGE-EU39": 109918745306,
+          "BQ1004-B-BROWN-EU48": 109918745305,
+          "BQ1004-B-BROWN-EU47": 109918745304,
+          "BQ1004-B-BEIGE-EU44": 109918745311,
+          "BQ1004-B-BEIGE-EU43": 109918745310,
+          "BQ1004-B-BEIGE-EU42": 109918745309,
+          "BQ1004-B-BEIGE-EU41": 109918745308,
+          "BQ1004-B-BLACK-EU40": 109918745287,
+          "BQ1004-B-BLACK-EU39": 109918745286,
+          "BQ1004-B-BLACK-EU44": 109918745291,
+          "BQ1004-B-BLACK-EU43": 109918745290,
+          "BQ1004-B-BLACK-EU42": 109918745289,
+          "BQ1004-B-BLACK-EU41": 109918745288,
+          "BQ1004-B-BLACK-EU48": 109918745295,
+          "BQ1004-B-BLACK-EU47": 109918745294,
+          "BQ1004-B-BLACK-EU46": 109918745293,
+          "BQ1004-B-BLACK-EU45": 109918745292
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3f1e5e3f846b417e86cfe3205cab8c70U.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hbb8c53f19c5142eab10aac2be5be4984H.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H4bfb08f471b1449c9e5fae9e83440bcc7.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/当前图库与货号.json",
-        "at": "2026-10-16T04:27:59.689217+00:00",
-        "observed_at": "2026-10-19T19:49:59.535451+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果"
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943405519/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943405519/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_get.json",
-        "at": "2026-11-02T02:49:02.047899+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943405519/latest_get.json",
+        "scope": "3881正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "973003809",
+        "scope": "Lace-Up Casual Shoes，正式回读。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:49:02.047899+00:00",
+        "at": "2026-11-03T08:54:01.707823+00:00",
         "model": "BQ1004-B",
-        "title": "Men's Two Eyelet Genuine Leather Upper Lace up Shoes with Round Toe Leather Lining and Rubber Sole",
+        "title": "Men's Lace Up Moc Toe Casual Walking Shoes with Synthetic Leather Upper",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hb2f4ec849de546dd96eb22a108023acbq.jpg",
-          "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
-          "https://sc04.alicdn.com/kf/H96dd29d518c2477399baf684c1f68646a.png",
-          "https://sc04.alicdn.com/kf/He174d8f7ddff47b7b3b20b80f61cd0c0u.png",
-          "https://sc04.alicdn.com/kf/He41bdafb9c04418bb910eb5b0e5f37e1H.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg",
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Genuine-Leather_1601943405519.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Moc-Toe_1601943405519.html",
+        "sku": {
+          "BQ1004-B-GRAY-EU44": 109918745331,
+          "BQ1004-B-GRAY-EU43": 109918745330,
+          "BQ1004-B-GRAY-EU42": 109918745329,
+          "BQ1004-B-GRAY-EU41": 109918745328,
+          "BQ1004-B-GRAY-EU48": 109918745335,
+          "BQ1004-B-GRAY-EU47": 109918745334,
+          "BQ1004-B-GRAY-EU46": 109918745333,
+          "BQ1004-B-GRAY-EU45": 109918745332,
+          "BQ1004-B-BEIGE-EU48": 109918745315,
+          "BQ1004-B-BEIGE-EU47": 109918745314,
+          "BQ1004-B-BEIGE-EU46": 109918745313,
+          "BQ1004-B-BEIGE-EU45": 109918745312,
+          "BQ1004-B-BLUE-EU42": 109918745319,
+          "BQ1004-B-BLUE-EU41": 109918745318,
+          "BQ1004-B-BLUE-EU40": 109918745317,
+          "BQ1004-B-BLUE-EU39": 109918745316,
+          "BQ1004-B-BLUE-EU46": 109918745323,
+          "BQ1004-B-BLUE-EU45": 109918745322,
+          "BQ1004-B-BLUE-EU44": 109918745321,
+          "BQ1004-B-BLUE-EU43": 109918745320,
+          "BQ1004-B-GRAY-EU40": 109918745327,
+          "BQ1004-B-GRAY-EU39": 109918745326,
+          "BQ1004-B-BLUE-EU48": 109918745325,
+          "BQ1004-B-BLUE-EU47": 109918745324,
+          "BQ1004-B-BROWN-EU42": 109918745299,
+          "BQ1004-B-BROWN-EU41": 109918745298,
+          "BQ1004-B-BROWN-EU40": 109918745297,
+          "BQ1004-B-BROWN-EU39": 109918745296,
+          "BQ1004-B-BROWN-EU46": 109918745303,
+          "BQ1004-B-BROWN-EU45": 109918745302,
+          "BQ1004-B-BROWN-EU44": 109918745301,
+          "BQ1004-B-BROWN-EU43": 109918745300,
+          "BQ1004-B-BEIGE-EU40": 109918745307,
+          "BQ1004-B-BEIGE-EU39": 109918745306,
+          "BQ1004-B-BROWN-EU48": 109918745305,
+          "BQ1004-B-BROWN-EU47": 109918745304,
+          "BQ1004-B-BEIGE-EU44": 109918745311,
+          "BQ1004-B-BEIGE-EU43": 109918745310,
+          "BQ1004-B-BEIGE-EU42": 109918745309,
+          "BQ1004-B-BEIGE-EU41": 109918745308,
+          "BQ1004-B-BLACK-EU40": 109918745287,
+          "BQ1004-B-BLACK-EU39": 109918745286,
+          "BQ1004-B-BLACK-EU44": 109918745291,
+          "BQ1004-B-BLACK-EU43": 109918745290,
+          "BQ1004-B-BLACK-EU42": 109918745289,
+          "BQ1004-B-BLACK-EU41": 109918745288,
+          "BQ1004-B-BLACK-EU48": 109918745295,
+          "BQ1004-B-BLACK-EU47": 109918745294,
+          "BQ1004-B-BLACK-EU46": 109918745293,
+          "BQ1004-B-BLACK-EU45": 109918745292
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H3f1e5e3f846b417e86cfe3205cab8c70U.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hbb8c53f19c5142eab10aac2be5be4984H.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H4bfb08f471b1449c9e5fae9e83440bcc7.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:12.589518+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:12.589518+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr004-25qlfan15-36",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:27:59.689217+00:00",
-          "old_model": "HR004-B",
-          "planned_model": "BQ1004-B",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T19:49:59.535451+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "phase_priority": 1,
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T07:55:53.931257+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "APPROVED_DIFFERENT_TITLE_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:33.124999+00:00",
-          "before": "Men's Two Eyelet Lace Up Shoes with Leather Upper and Genuine Leather Lining",
-          "target": "Men's Two Eyelet Leather Lace Up Shoes with Apron Toe Leather Lining and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_approved_verification.json",
-            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261102/全量标题复核/20条标题与生意助手对照.json"
-          ],
-          "next_action": "负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果",
-          "reviewed_at": "2026-11-02T02:49:02.047899+00:00",
-          "later_title": "Men's Two Eyelet Genuine Leather Upper Lace up Shoes with Round Toe Leather Lining and Rubber Sole",
-          "later_at": "2026-11-02T02:49:02.047899+00:00",
-          "later_title_origin": {
-            "evidence": "Maxwell潜力商品孵化标题优化日志的原标题和优化后标题与本次提交及后续正式标题逐字对应",
-            "generation_time": "2026-11-02 10:33:33",
-            "trigger_or_writer": "Maxwell潜力商品孵化的标题优化"
-          }
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_3881，当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR004-B"
-      ]
+      ],
+      "before_3881": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Lace-Up_1601943405519.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-20T07:55:53.931257+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-20T07:55:53.931257+00:00",
+          "model": "BQ1004-B",
+          "title": "Men's Two Eyelet Lace Up Shoes with Leather Upper and Genuine Leather Lining",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hb2f4ec849de546dd96eb22a108023acbq.jpg",
+            "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
+            "https://sc04.alicdn.com/kf/H96dd29d518c2477399baf684c1f68646a.png",
+            "https://sc04.alicdn.com/kf/He174d8f7ddff47b7b3b20b80f61cd0c0u.png",
+            "https://sc04.alicdn.com/kf/He41bdafb9c04418bb910eb5b0e5f37e1H.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Lace-Up_1601943405519.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3f1e5e3f846b417e86cfe3205cab8c70U.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hbb8c53f19c5142eab10aac2be5be4984H.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H4bfb08f471b1449c9e5fae9e83440bcc7.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:49:02.047899+00:00",
+          "model": "BQ1004-B",
+          "title": "Men's Two Eyelet Genuine Leather Upper Lace up Shoes with Round Toe Leather Lining and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hb2f4ec849de546dd96eb22a108023acbq.jpg",
+            "https://sc04.alicdn.com/kf/H252b38a693424d7bacf80f94104b6aa9d.jpg",
+            "https://sc04.alicdn.com/kf/H96dd29d518c2477399baf684c1f68646a.png",
+            "https://sc04.alicdn.com/kf/He174d8f7ddff47b7b3b20b80f61cd0c0u.png",
+            "https://sc04.alicdn.com/kf/He41bdafb9c04418bb910eb5b0e5f37e1H.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Two-Eyelet-Genuine-Leather_1601943405519.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H3f1e5e3f846b417e86cfe3205cab8c70U.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hbb8c53f19c5142eab10aac2be5be4984H.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H4bfb08f471b1449c9e5fae9e83440bcc7.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_get.json",
+          "at": "2026-11-02T02:49:02.047899+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/当前图库与货号.json",
+          "at": "2026-10-16T04:27:59.689217+00:00",
+          "observed_at": "2026-10-19T19:49:59.535451+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:12.589518+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:12.589518+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943405519/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr004-25qlfan15-36",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:27:59.689217+00:00",
+            "old_model": "HR004-B",
+            "planned_model": "BQ1004-B",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943405519/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T19:49:59.535451+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "phase_priority": 1,
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T07:55:53.931257+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943405519/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "APPROVED_DIFFERENT_TITLE_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:33.124999+00:00",
+            "before": "Men's Two Eyelet Lace Up Shoes with Leather Upper and Genuine Leather Lining",
+            "target": "Men's Two Eyelet Leather Lace Up Shoes with Apron Toe Leather Lining and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943405519/.local/标题优化/20261102_full_batch_10_approved_verification.json",
+              "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261102/全量标题复核/20条标题与生意助手对照.json"
+            ],
+            "next_action": "负责人决定保持自动标题优化开启；核新增词与买家公开页及经营效果",
+            "reviewed_at": "2026-11-02T02:49:02.047899+00:00",
+            "later_title": "Men's Two Eyelet Genuine Leather Upper Lace up Shoes with Round Toe Leather Lining and Rubber Sole",
+            "later_at": "2026-11-02T02:49:02.047899+00:00",
+            "later_title_origin": {
+              "evidence": "Maxwell潜力商品孵化标题优化日志的原标题和优化后标题与本次提交及后续正式标题逐字对应",
+              "generation_time": "2026-11-02 10:33:33",
+              "trigger_or_writer": "Maxwell潜力商品孵化的标题优化"
+            }
+          }
+        }
+      }
     },
     {
       "id": "1601943421458",
       "product_id": "HR004",
       "model": "BQ1004-C",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Leather-Shoes-with_1601943421458.html",
-      "record_type": "当前实款正式绑定",
-      "bound_source_id": "src-hr-hr004-25qlfan15-36",
-      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Apron-Toe_1601943421458.html",
+      "record_type": "已采用搜鞋网来源",
+      "bound_source_id": "src-hr004-qianlan-3881",
+      "source_relation": "ADOPTED_SOURCE",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:55:56.708164+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-11-03T08:54:01.891002+00:00",
+        "score": "5.00",
+        "scope": "正式回读及中文公开页关键字段；其余图片及语言待核。"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -75295,282 +75743,506 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       ],
-      "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+      "notes": "3881为五色系带围条鞋；旧鞋来源和图片按历史保留。实时库存及订单条件另核；中文公开页关键字段已核。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:55:56.708164+00:00",
+        "at": "2026-11-03T08:54:01.891002+00:00",
         "model": "BQ1004-C",
-        "title": "Men's Casual Leather Shoes with Lace Up Closure for Smart Casual Outfits",
+        "title": "Men's Lace Up Apron Toe Shoes with Rubber Outsole for Everyday Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hf23ee196edb640f1bc7bef7c461dc9d0b.png",
-          "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
-          "https://sc04.alicdn.com/kf/H67b3dde4b11b42079f9b63164c0c301bG.png",
-          "https://sc04.alicdn.com/kf/He61c5366b2b64620a6b7ae4365f85762O.png",
-          "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Leather-Shoes-with_1601943421458.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Apron-Toe_1601943421458.html",
+        "sku": {
+          "BQ1004-C-BLUE-EU44": 109918608929,
+          "BQ1004-C-BLUE-EU43": 109918608928,
+          "BQ1004-C-BLUE-EU46": 109918608931,
+          "BQ1004-C-BLUE-EU45": 109918608930,
+          "BQ1004-C-BLUE-EU48": 109918608933,
+          "BQ1004-C-BLUE-EU47": 109918608932,
+          "BQ1004-C-GRAY-EU40": 109918608935,
+          "BQ1004-C-GRAY-EU39": 109918608934,
+          "BQ1004-C-GRAY-EU42": 109918608937,
+          "BQ1004-C-GRAY-EU41": 109918608936,
+          "BQ1004-C-GRAY-EU44": 109918608939,
+          "BQ1004-C-GRAY-EU43": 109918608938,
+          "BQ1004-C-GRAY-EU46": 109918608941,
+          "BQ1004-C-GRAY-EU45": 109918608940,
+          "BQ1004-C-GRAY-EU48": 109918608943,
+          "BQ1004-C-GRAY-EU47": 109918608942,
+          "BQ1004-C-BROWN-EU48": 109918608913,
+          "BQ1004-C-BROWN-EU47": 109918608912,
+          "BQ1004-C-BEIGE-EU40": 109918608915,
+          "BQ1004-C-BEIGE-EU39": 109918608914,
+          "BQ1004-C-BEIGE-EU42": 109918608917,
+          "BQ1004-C-BEIGE-EU41": 109918608916,
+          "BQ1004-C-BEIGE-EU44": 109918608919,
+          "BQ1004-C-BEIGE-EU43": 109918608918,
+          "BQ1004-C-BEIGE-EU46": 109918608921,
+          "BQ1004-C-BEIGE-EU45": 109918608920,
+          "BQ1004-C-BEIGE-EU48": 109918608923,
+          "BQ1004-C-BEIGE-EU47": 109918608922,
+          "BQ1004-C-BLUE-EU40": 109918608925,
+          "BQ1004-C-BLUE-EU39": 109918608924,
+          "BQ1004-C-BLUE-EU42": 109918608927,
+          "BQ1004-C-BLUE-EU41": 109918608926,
+          "BQ1004-C-BLACK-EU42": 109918608897,
+          "BQ1004-C-BLACK-EU41": 109918608896,
+          "BQ1004-C-BLACK-EU44": 109918608899,
+          "BQ1004-C-BLACK-EU43": 109918608898,
+          "BQ1004-C-BLACK-EU46": 109918608901,
+          "BQ1004-C-BLACK-EU45": 109918608900,
+          "BQ1004-C-BLACK-EU48": 109918608903,
+          "BQ1004-C-BLACK-EU47": 109918608902,
+          "BQ1004-C-BROWN-EU40": 109918608905,
+          "BQ1004-C-BROWN-EU39": 109918608904,
+          "BQ1004-C-BROWN-EU42": 109918608907,
+          "BQ1004-C-BROWN-EU41": 109918608906,
+          "BQ1004-C-BROWN-EU44": 109918608909,
+          "BQ1004-C-BROWN-EU43": 109918608908,
+          "BQ1004-C-BROWN-EU46": 109918608911,
+          "BQ1004-C-BROWN-EU45": 109918608910,
+          "BQ1004-C-BLACK-EU40": 109918608895,
+          "BQ1004-C-BLACK-EU39": 109918608894
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hf0d66295aa2b46308e28fa6134765698J.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/He58fae3869e94b3786640753bfecf3ddu.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H0cf11a09f77d45578a4e5b0b2bead5d9B.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/当前图库与货号.json",
-        "at": "2026-10-16T04:27:54.523775+00:00",
-        "observed_at": "2026-10-19T18:42:08.648511+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json",
-        "title_state": "PENDING_PUBLIC_VERIFY",
-        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        "state": "FORMAL_READBACK_PUBLIC_QA_PENDING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943421458/latest_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943421458/approved_render.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_get.json",
-        "at": "2026-11-02T02:48:59.244980+00:00",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        "file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/.local/3881替换_20261103/执行/商品/1601943421458/latest_get.json",
+        "scope": "3881正式回读"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "973003809",
+        "scope": "Lace-Up Casual Shoes，正式回读。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/搜鞋替代候选.md"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T02:48:59.244980+00:00",
+        "at": "2026-11-03T08:54:01.891002+00:00",
         "model": "BQ1004-C",
-        "title": "Men's Leather Lace Up Casual Shoes with Stitched Apron Toe and Rubber Sole",
+        "title": "Men's Lace Up Apron Toe Shoes with Rubber Outsole for Everyday Casual Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hf23ee196edb640f1bc7bef7c461dc9d0b.png",
-          "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
-          "https://sc04.alicdn.com/kf/H67b3dde4b11b42079f9b63164c0c301bG.png",
-          "https://sc04.alicdn.com/kf/He61c5366b2b64620a6b7ae4365f85762O.png",
-          "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+          "https://sc04.alicdn.com/kf/H4f60a702a52d4fa2997279efb2c82134s.jpg",
+          "https://sc04.alicdn.com/kf/H5708984f43fd43b8abda9d17bb402598q.jpg",
+          "https://sc04.alicdn.com/kf/H9f38ce5d4a9b4aeab99d4c2281ad061by.jpg",
+          "https://sc04.alicdn.com/kf/Hbaa46de4fb534302a5e3a7bd269ecadbM.jpg",
+          "https://sc04.alicdn.com/kf/H56b043225bcd4a99babb02c6e7852804j.jpg",
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+        ],
+        "detail_images": [
+          "https://sc04.alicdn.com/kf/H533d81c73af644da881bed3a661838d0v.jpg",
+          "https://sc04.alicdn.com/kf/H2635addfad6444789c652a57b5402829U.jpg",
+          "https://sc04.alicdn.com/kf/H825393365fc0497eb0fab0c359018b9ft.jpg",
+          "https://sc04.alicdn.com/kf/H0d2c2914856c42c28f5a72ae20f31cf8J.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943421458.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
-        "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
-        "detail_images": [
+        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Apron-Toe_1601943421458.html",
+        "sku": {
+          "BQ1004-C-BLUE-EU44": 109918608929,
+          "BQ1004-C-BLUE-EU43": 109918608928,
+          "BQ1004-C-BLUE-EU46": 109918608931,
+          "BQ1004-C-BLUE-EU45": 109918608930,
+          "BQ1004-C-BLUE-EU48": 109918608933,
+          "BQ1004-C-BLUE-EU47": 109918608932,
+          "BQ1004-C-GRAY-EU40": 109918608935,
+          "BQ1004-C-GRAY-EU39": 109918608934,
+          "BQ1004-C-GRAY-EU42": 109918608937,
+          "BQ1004-C-GRAY-EU41": 109918608936,
+          "BQ1004-C-GRAY-EU44": 109918608939,
+          "BQ1004-C-GRAY-EU43": 109918608938,
+          "BQ1004-C-GRAY-EU46": 109918608941,
+          "BQ1004-C-GRAY-EU45": 109918608940,
+          "BQ1004-C-GRAY-EU48": 109918608943,
+          "BQ1004-C-GRAY-EU47": 109918608942,
+          "BQ1004-C-BROWN-EU48": 109918608913,
+          "BQ1004-C-BROWN-EU47": 109918608912,
+          "BQ1004-C-BEIGE-EU40": 109918608915,
+          "BQ1004-C-BEIGE-EU39": 109918608914,
+          "BQ1004-C-BEIGE-EU42": 109918608917,
+          "BQ1004-C-BEIGE-EU41": 109918608916,
+          "BQ1004-C-BEIGE-EU44": 109918608919,
+          "BQ1004-C-BEIGE-EU43": 109918608918,
+          "BQ1004-C-BEIGE-EU46": 109918608921,
+          "BQ1004-C-BEIGE-EU45": 109918608920,
+          "BQ1004-C-BEIGE-EU48": 109918608923,
+          "BQ1004-C-BEIGE-EU47": 109918608922,
+          "BQ1004-C-BLUE-EU40": 109918608925,
+          "BQ1004-C-BLUE-EU39": 109918608924,
+          "BQ1004-C-BLUE-EU42": 109918608927,
+          "BQ1004-C-BLUE-EU41": 109918608926,
+          "BQ1004-C-BLACK-EU42": 109918608897,
+          "BQ1004-C-BLACK-EU41": 109918608896,
+          "BQ1004-C-BLACK-EU44": 109918608899,
+          "BQ1004-C-BLACK-EU43": 109918608898,
+          "BQ1004-C-BLACK-EU46": 109918608901,
+          "BQ1004-C-BLACK-EU45": 109918608900,
+          "BQ1004-C-BLACK-EU48": 109918608903,
+          "BQ1004-C-BLACK-EU47": 109918608902,
+          "BQ1004-C-BROWN-EU40": 109918608905,
+          "BQ1004-C-BROWN-EU39": 109918608904,
+          "BQ1004-C-BROWN-EU42": 109918608907,
+          "BQ1004-C-BROWN-EU41": 109918608906,
+          "BQ1004-C-BROWN-EU44": 109918608909,
+          "BQ1004-C-BROWN-EU43": 109918608908,
+          "BQ1004-C-BROWN-EU46": 109918608911,
+          "BQ1004-C-BROWN-EU45": 109918608910,
+          "BQ1004-C-BLACK-EU40": 109918608895,
+          "BQ1004-C-BLACK-EU39": 109918608894
+        },
+        "price_currency": "USD",
+        "price_tiers": [
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/Hf0d66295aa2b46308e28fa6134765698J.png"
+            "start_quantity": 2,
+            "price": "14.49"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/He58fae3869e94b3786640753bfecf3ddu.png"
+            "start_quantity": 50,
+            "price": "13.69"
           },
           {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
-          },
-          {
-            "image_set": {
-              "name": "Other product images",
-              "id": "350"
-            },
-            "image_url": "https://sc04.alicdn.com/kf/H0cf11a09f77d45578a4e5b0b2bead5d9B.png"
+            "start_quantity": 100,
+            "price": "12.99"
           }
-        ]
+        ],
+        "scope": "正式回读；中文买家页关键字段已核，其他图片及语言未逐项核。",
+        "highlights": "Lace-up closure: A low-cut casual shoe with a traditional lace-up front.\nApron-toe styling: The stitched toe outline creates a clean casual profile.\nMaterial details: Synthetic upper and rubber outsole as listed in the source specifications.\nFive photographed colours: Black, brown, beige, blue and gray; view the colour images when selecting.\nEU 39–48: Share your required colours, sizes and quantities for an order-specific quotation."
       },
       "optimization": {
-        "factory_gallery": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:26.607707+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
-          "company_target_verified": true,
-          "scope_formal_accepted": true
-        },
-        "company_bundle": {
-          "asset_version": 8,
-          "at": "2026-10-12T22:11:26.607707+00:00",
-          "state": "FORMAL_PASS",
-          "scope": [
-            "companyImage",
-            "companyDesc",
-            "companyFaqDesc"
-          ],
-          "formal_binding_verified": true,
-          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
-          "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/immediate_prewrite_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/public_verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verify_error.json"
-          ],
-          "source_state_unchanged": true,
-          "product_highlights_preserved": true,
-          "historical_source_and_highlights_deferred": true,
-          "completed_this_scope": true,
-          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
-        },
-        "source_binding_reconciliation": {
-          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
-          "source_id": "src-hr-hr004-25qlfan15-36",
-          "at": "2026-10-13T09:10:15.657479+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
-          ],
-          "platform_mutation": "NONE"
-        },
-        "operating_selection": {
-          "at": "2026-10-13T17:20:16.578802+00:00",
-          "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
-          "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-          "not_quality_score": true,
-          "historical_period_does_not_prove_new_replacement_demand": true
-        },
-        "model_factory_normalization": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "at": "2026-10-16T04:27:54.523775+00:00",
-          "old_model": "HR004-C",
-          "planned_model": "BQ1004-C",
-          "actual_score": "5.00",
-          "gallery_slot": 6,
-          "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/update_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/verification.json"
-          ],
-          "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
-          "next_action": "当前正式字段/实际评分通过，来源与本地同步"
-        },
-        "content_quality_revision": {
-          "at": "2026-10-19T18:42:08.648511+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json"
-          ]
-        },
-        "content_gallery_revision": {
-          "at": "2026-10-20T07:55:56.708164+00:00",
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
-          "evidence": [
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/计划.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/prepared.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/update_receipt.json",
-            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json"
-          ]
-        },
-        "title_search": {
-          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
-          "at": "2026-11-02T02:23:27.965665+00:00",
-          "before": "Men's Casual Leather Shoes with Lace Up Closure for Smart Casual Outfits",
-          "target": "Men's Leather Lace Up Casual Shoes with Stitched Apron Toe and Rubber Sole",
-          "scope": [
-            "productTitle"
-          ],
-          "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
-          "public_status": "NOT_CHECKED",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_plan.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_verification.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_approved_get.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_approved_verification.json"
-          ],
-          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
-          "reviewed_at": "2026-11-02T02:48:59.244980+00:00"
-        }
+        "state": "HISTORICAL_COPY_ARCHIVED",
+        "scope": "旧款优化记录保留在 before_3881，当前以正式回读为准。"
       },
       "legacy_model_aliases": [
         "HR004-C"
-      ]
+      ],
+      "before_3881": {
+        "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Leather-Shoes-with_1601943421458.html",
+        "record_type": "当前实款正式绑定",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
+        "observation": {
+          "audit": "approved",
+          "display": "Y",
+          "at": "2026-10-20T07:55:56.708164+00:00",
+          "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
+          "score": "5.00"
+        },
+        "catalog_fields": {
+          "at": "2026-10-20T07:55:56.708164+00:00",
+          "model": "BQ1004-C",
+          "title": "Men's Casual Leather Shoes with Lace Up Closure for Smart Casual Outfits",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hf23ee196edb640f1bc7bef7c461dc9d0b.png",
+            "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
+            "https://sc04.alicdn.com/kf/H67b3dde4b11b42079f9b63164c0c301bG.png",
+            "https://sc04.alicdn.com/kf/He61c5366b2b64620a6b7ae4365f85762O.png",
+            "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Leather-Shoes-with_1601943421458.html",
+          "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hf0d66295aa2b46308e28fa6134765698J.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He58fae3869e94b3786640753bfecf3ddu.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H0cf11a09f77d45578a4e5b0b2bead5d9B.png"
+            }
+          ]
+        },
+        "current_platform_fields": {
+          "at": "2026-11-02T02:48:59.244980+00:00",
+          "model": "BQ1004-C",
+          "title": "Men's Leather Lace Up Casual Shoes with Stitched Apron Toe and Rubber Sole",
+          "keywords": [
+            ""
+          ],
+          "main_images": [
+            "https://sc04.alicdn.com/kf/Hf23ee196edb640f1bc7bef7c461dc9d0b.png",
+            "https://sc04.alicdn.com/kf/Hd7a6157404c4454c915adaf780a91126M.jpg",
+            "https://sc04.alicdn.com/kf/H67b3dde4b11b42079f9b63164c0c301bG.png",
+            "https://sc04.alicdn.com/kf/He61c5366b2b64620a6b7ae4365f85762O.png",
+            "https://sc04.alicdn.com/kf/Heaf3e468e1bf4c0386a67847a1cbc802Q.png",
+            "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
+          ],
+          "category_id": 201334413,
+          "display": "Y",
+          "status": "approved",
+          "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943421458.html",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+          "highlights": "Adjustable instep fit: Front laces allow the opening and tension to be adjusted over the foot.\n\nApron-toe construction: A rounded stitched forefoot pairs a cowhide leather upper with a genuine-leather lining.\n\nCasual rubber sole: Rubber midsole and outsole layers complete the closed-front everyday shoe.",
+          "detail_images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hf0d66295aa2b46308e28fa6134765698J.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He58fae3869e94b3786640753bfecf3ddu.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7c07f24a25734f8c9771140e16e70109d.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H0cf11a09f77d45578a4e5b0b2bead5d9B.png"
+            }
+          ]
+        },
+        "formal_fields": {
+          "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_get.json",
+          "at": "2026-11-02T02:48:59.244980+00:00",
+          "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
+        },
+        "local_sync": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_get.json",
+          "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/formal_render.json",
+          "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/当前图库与货号.json",
+          "at": "2026-10-16T04:27:54.523775+00:00",
+          "observed_at": "2026-10-19T18:42:08.648511+00:00",
+          "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json",
+          "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json",
+          "title_state": "PENDING_PUBLIC_VERIFY",
+          "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
+        },
+        "platform_group": {
+          "id": "972130291",
+          "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+          "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        },
+        "notes": "现有真实鞋款25QLFAN15-36保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
+        "optimization": {
+          "factory_gallery": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:26.607707+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+            "company_target_verified": true,
+            "scope_formal_accepted": true
+          },
+          "company_bundle": {
+            "asset_version": 8,
+            "at": "2026-10-12T22:11:26.607707+00:00",
+            "state": "FORMAL_PASS",
+            "scope": [
+              "companyImage",
+              "companyDesc",
+              "companyFaqDesc"
+            ],
+            "formal_binding_verified": true,
+            "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+            "evidence": [
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/after_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/before_render.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/immediate_prewrite_get.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/manifest.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/prepared.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/public_verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_once.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/update_receipt.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verification.json",
+              "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943421458/V8/verify_error.json"
+            ],
+            "source_state_unchanged": true,
+            "product_highlights_preserved": true,
+            "historical_source_and_highlights_deferred": true,
+            "completed_this_scope": true,
+            "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+          },
+          "source_binding_reconciliation": {
+            "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+            "source_id": "src-hr-hr004-25qlfan15-36",
+            "at": "2026-10-13T09:10:15.657479+00:00",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json"
+            ],
+            "platform_mutation": "NONE"
+          },
+          "operating_selection": {
+            "at": "2026-10-13T17:20:16.578802+00:00",
+            "decision": "CONTACT_SIGNAL_KEEP_SIMILAR_DIRECTION",
+            "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+            "not_quality_score": true,
+            "historical_period_does_not_prove_new_replacement_demand": true
+          },
+          "model_factory_normalization": {
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "at": "2026-10-16T04:27:54.523775+00:00",
+            "old_model": "HR004-C",
+            "planned_model": "BQ1004-C",
+            "actual_score": "5.00",
+            "gallery_slot": 6,
+            "factory_asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/prepared.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/manifest.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/update_once.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/update_receipt.json",
+              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943421458/verification.json"
+            ],
+            "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
+            "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+          },
+          "content_quality_revision": {
+            "at": "2026-10-19T18:42:08.648511+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
+            "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json"
+            ]
+          },
+          "content_gallery_revision": {
+            "at": "2026-10-20T07:55:56.708164+00:00",
+            "state": "FORMAL_FIELDS_SCORE_PASS",
+            "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+            "evidence": [
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/计划.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/图片银行.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/prepared.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/update_receipt.json",
+              "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_旧报价图替换/商品/1601943421458/verification.json"
+            ]
+          },
+          "title_search": {
+            "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+            "at": "2026-11-02T02:23:27.965665+00:00",
+            "before": "Men's Casual Leather Shoes with Lace Up Closure for Smart Casual Outfits",
+            "target": "Men's Leather Lace Up Casual Shoes with Stitched Apron Toe and Rubber Sole",
+            "scope": [
+              "productTitle"
+            ],
+            "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
+            "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
+            "public_status": "NOT_CHECKED",
+            "evidence": [
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_plan.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_receipt.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_verification.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_approved_get.json",
+              "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943421458/.local/标题优化/20261102_full_batch_10_approved_verification.json"
+            ],
+            "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+            "reviewed_at": "2026-11-02T02:48:59.244980+00:00"
+          }
+        }
+      }
     },
     {
       "id": "1601943335751",
@@ -149182,11 +149854,11 @@
       }
     },
     "HR004": {
-      "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+      "next_action": "3881三条正式审核、评分及中文公开页关键字段已核；其他语言和图片按需复核。",
       "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR004/README.md",
       "content_quality_revision": {
         "at": "2026-10-19T19:49:59.535451+00:00",
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "HISTORICAL_BEFORE_3881",
         "verified_ids": [
           "1601943397351",
           "1601943405519",
@@ -149203,7 +149875,8 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/prepared.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json"
-        ]
+        ],
+        "historical_state_before_3881": "FORMAL_FIELDS_SCORE_PASS"
       },
       "classification": {
         "platform_category_ids": [
@@ -149211,10 +149884,45 @@
         ],
         "store_groups": [
           {
-            "id": "972130291",
-            "name": "Slip-On Casual Walking Shoes"
+            "id": "973003809",
+            "name": "Lace-Up Casual Shoes"
           }
         ]
+      },
+      "before_3881": {
+        "next_action": "本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。",
+        "classification": {
+          "platform_category_ids": [
+            201334413
+          ],
+          "store_groups": [
+            {
+              "id": "972130291",
+              "name": "Slip-On Casual Walking Shoes"
+            }
+          ]
+        },
+        "content_quality_revision": {
+          "at": "2026-10-19T19:49:59.535451+00:00",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "verified_ids": [
+            "1601943397351",
+            "1601943405519",
+            "1601943421458"
+          ],
+          "pending_ids": [],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943397351/verification.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943405519/verification.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/prepared.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943421458/verification.json"
+          ]
+        }
       }
     },
     "HR005": {

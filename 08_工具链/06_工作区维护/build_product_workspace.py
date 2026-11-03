@@ -198,8 +198,13 @@ function render(){const q=$('q').value.trim().toLowerCase(),state=$('state').val
         # Export formal per-link bindings only. Candidate URLs never become a supply assertion.
         s=sources.get(link.get('bound_source_id'),{})
         obs=link.get('observation',{})
+        current=link.get('current_platform_fields') or {}
+        evidence=list(link.get('evidence',[]))
+        formal_file=(link.get('formal_fields') or {}).get('file')
+        if formal_file and formal_file not in evidence:
+            evidence.append(formal_file)
         route=p.get('supply_mode',{})
-        writer.writerow(dict(zip(FIELDS,[link.get('record_type',''),link['model'],link['id'],link.get('url',''),s.get('supplier',''),s.get('shop_url',''),s.get('model',''),s.get('url',''),s.get('price',''),s.get('currency',''),s.get('unit',''),s.get('price_terms',''),s.get('observed_at',''),data['updated_on'],';'.join(link.get('evidence',[])),link.get('source_relation',''),obs.get('audit',''),obs.get('display',''),obs.get('at',''),link.get('notes',''),{'EXTERNAL_FACTORY':'外采','OWN_FACTORY':'自产'}.get(route.get('current'),'待核'),route.get('state',''),' / '.join(link.get('legacy_model_aliases',[]))])) )
+        writer.writerow(dict(zip(FIELDS,[link.get('record_type',''),link['model'],link['id'],current.get('url') or link.get('url',''),s.get('supplier',''),s.get('shop_url',''),s.get('model',''),s.get('url',''),s.get('price',''),s.get('currency',''),s.get('unit',''),s.get('price_terms',''),s.get('observed_at',''),data['updated_on'],';'.join(evidence),link.get('source_relation',''),current.get('status') or obs.get('audit',''),current.get('display') or obs.get('display',''),current.get('at') or obs.get('at',''),link.get('notes',''),{'EXTERNAL_FACTORY':'外采','OWN_FACTORY':'自产'}.get(route.get('current'),'待核'),route.get('state',''),' / '.join(link.get('legacy_model_aliases',[]))])) )
     from product_dossiers import builds
     return {TOTAL:('\n'.join(md)).encode('utf-8'),QUERY:page.encode('utf-8'),CSV:output.getvalue().encode('utf-8-sig'),**builds(data)}
 
