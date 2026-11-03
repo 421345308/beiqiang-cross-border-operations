@@ -127,10 +127,10 @@ def builds(data):
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
             path, actual, observed_at = formal_snapshot(listing)
+            prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
             model_label=('历史编号 · ' if re.fullmatch(r'HR[-_]?\d+(?:-[A-Z]+)?',listing['model'],re.I) else '')+listing['model']
             lines += [f"### {model_label} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
             if actual:
-                prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
                 absent=(listing.get('observation',{}).get('current_presence') or {}).get('state')=='CURRENT_CATALOG_ABSENT_AND_EXACT_GET_NO_PRODUCT'
                 prefix='换款前历史' if prior else '历史' if absent else '当前'
                 lines += [f"- {prefix}正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- {prefix}正式标题：{actual.get('subject','')}", f"- {prefix}审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
@@ -161,20 +161,21 @@ def builds(data):
             presence=listing.get('observation',{}).get('current_presence')
             if presence:
                 lines.append(f"- 较新目录/原ID存在性：`{presence['state']}`；UTC {presence['at']}；{ref(presence['evidence'],parent,'精确回读证据')}。以上正式字段保留原核验日期；未返回原因未知，不重复创建。")
-            lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
+            history_label='换款前历史' if prior else ''
+            lines.append(f"- {history_label}本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
             if listing.get('optimization'):
                 opt = listing['optimization']
                 title_opt = opt.get('title_search')
                 if title_opt:
-                    lines.append(f"- 标题搜索优化：`{title_opt.get('state','')}`；{title_opt.get('next_action','')}")
+                    lines.append(f"- {history_label}标题搜索优化：`{title_opt.get('state','')}`；{title_opt.get('next_action','')}")
                     for evidence in title_opt.get('evidence', []):
                         lines.append(f'  - 标题证据：{ref(evidence,parent)}')
                 current_opt=opt.get('content_quality_revision') or opt.get('product_performance_review') or opt.get('model_factory_normalization') or opt.get('family_color_expansion') or opt.get('real_source_creation') or opt
-                lines += [f"- 本轮优化：`{current_opt.get('state','')}`；{current_opt.get('next_action','')}"]
+                lines += [f"- {history_label+'优化' if prior else '本轮优化'}：`{current_opt.get('state','')}`；{current_opt.get('next_action','')}"]
                 for path in current_opt.get('evidence', []):
                     lines.append(f'  - 变更证据：{ref(path,parent)}')
                 if opt.get('gallery'):
-                    lines.append(f"- 图库调整：`{opt['gallery'].get('state','')}`。")
+                    lines.append(f"- {history_label}图库调整：`{opt['gallery'].get('state','')}`。")
                     for path in opt['gallery'].get('evidence',[]):lines.append(f'  - 图库证据：{ref(path,parent)}')
             lines.append('')
         if not links.get(product['id']):
