@@ -664,16 +664,16 @@ test('同行清单展示真实店铺，登记买家进入原客户研究并保�
   const h = harness('#/customers?view=competitors');
   h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'休闲鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',credit_code:'123456789012345678',source_url:'https://example.com/company'},sales:{note:'单款 224 sold，周期不明',source_url:'https://www.alibaba.com/picks/shoes.html'},buyers:[{id:'candidate:old',company:'Known Buyer'}]}],excluded:[{company:'Old Shop',note:'店铺打开未确认',buyers:[]}],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
   await h.ui.bootstrap(); await settle();
-  assert.match(h.elements.page.textContent,/Shoe Factory/); assert.doesNotMatch(h.elements.page.textContent,/Old Shop|另外 1 家暂未列入/);
+  assert.match(h.elements.page.textContent,/鞋业有限公司/); assert.doesNotMatch(h.elements.page.textContent,/Old Shop|另外 1 家暂未列入/);
   assert.ok(walk(h.elements.page).some(node => node.tagName === 'A' && node.href === 'https://shoe.en.alibaba.com/'));
-  assert.match(h.elements.page.textContent,/中文检索名：鞋业有限公司/); assert.match(h.elements.page.textContent,/123456789012345678/);
+  assert.match(h.elements.page.textContent,/统一社会信用代码：123456789012345678/);
   assert.ok(walk(h.elements.page).some(node => node.tagName === 'A' && node.href === 'https://example.com/company'));
   const search=walk(h.elements.page).find(node=>node['aria-label']==='搜索同行');
-  search.value='123456789012345678'; search.listeners.input(); assert.match(h.elements.page.textContent,/Shoe Factory/);
-  search.value='不存在的公司'; search.listeners.input(); assert.doesNotMatch(h.elements.page.textContent,/Shoe Factory/);
+  search.value='123456789012345678'; search.listeners.input(); assert.match(h.elements.page.textContent,/鞋业有限公司/);
+  search.value='不存在的公司'; search.listeners.input(); assert.doesNotMatch(h.elements.page.textContent,/鞋业有限公司/);
   search.value=''; search.listeners.input();
-  await findButton(h.elements.page,'复制中文名').click(); assert.equal(h.clipboard(),'鞋业有限公司');
-  await findButton(h.elements.page,'复制公司名').click(); assert.equal(h.clipboard(),'Shoe Factory');
+  await findButton(h.elements.page,'复制公司名').click(); assert.equal(h.clipboard(),'鞋业有限公司');
+  await findButton(h.elements.page,'复制信用代码').click(); assert.equal(h.clipboard(),'123456789012345678');
   await findButton(h.elements.page,'登记买家').click(); const dialog=walk(h.body).find(node=>node.tagName==='DIALOG');
   walk(dialog).find(node=>node['aria-label']==='买家公司名称').value='New Buyer';
   walk(dialog).find(node=>node['aria-label']==='国家或市场（选填）').value='US';
@@ -684,17 +684,20 @@ test('同行清单展示真实店铺，登记买家进入原客户研究并保�
   assert.match(h.location.hash,/customers\?view=development&item=/); assert.equal(h.requests.some(row=>/send|outreach/.test(row.path)),false);
 });
 
-test('一键复制全部同行公司名，优先中文并包含无中文名的同行', async () => {
+test('复制海关查询名单时包含公司全称及代码，不混入未查明的店铺名', async () => {
   const h = harness('#/customers?view=competitors');
   h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[
-    {id:'EX001',company:'Shoe Factory',direction:'鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',source_url:'https://example.com/company'},buyers:[]},
-    {id:'EX002',company:'Other Shoe Co., Ltd.',direction:'鞋',store_url:'https://other.en.alibaba.com/',buyers:[]}
+    {id:'EX001',company:'Shoe Factory',direction:'鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',credit_code:'91350200065858374U',source_url:'https://example.com/company'},buyers:[]},
+    {id:'EX002',company:'Other Shoe Co., Ltd.',direction:'鞋',store_url:'https://other.en.alibaba.com/',buyers:[]},
+    {id:'EX003',company:'Third Shoes',direction:'鞋',store_url:'https://third.en.alibaba.com/',identity:{name:'第三鞋业有限公司',source_url:'https://example.com/third'},buyers:[]}
   ],excluded:[{company:'Old Shop'}],existing_buyers:[]})} : h.originalFetch(path, options));
   await h.ui.bootstrap(); await settle();
-  const copy = findButton(h.elements.page, '一键复制全部公司名');
-  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\nOther Shoe Co., Ltd.');
-  const search=walk(h.elements.page).find(node=>node['aria-label']==='搜索同行'); search.value='鞋业有限公司'; search.listeners.input();
-  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\nOther Shoe Co., Ltd.');
+  assert.match(h.elements.page.textContent,/2 家有公司全称 · 1 家未查到/);
+  const copy = findButton(h.elements.page, '复制公司及信用代码');
+  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\t91350200065858374U\n第三鞋业有限公司\t信用代码未查到');
+  await findButton(h.elements.page, '只复制公司名').click(); assert.equal(h.clipboard(), '鞋业有限公司\n第三鞋业有限公司');
+  const search=walk(h.elements.page).find(node=>node['aria-label']==='搜索同行'); search.value='91350200065858374U'; search.listeners.input();
+  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\t91350200065858374U');
 });
 
 test('同行登记遇到已有公司时打开原客户，不重复建立', async () => {

@@ -99,9 +99,9 @@
         "basis": "国际站店铺页面直接显示公司名称"
       },
       "company_zh_evidence": {
-        "source_url": "https://www.cnverify.com/company/Dongguan-Ai-Mei-Cheng-Shoes-Co-Ltd",
+        "source_url": "https://dgamr.dg.gov.cn/scjdgl/1200/201911/45d90caf8a5c40179befc15f86043445/files/c842ae8a84da4fb6aaf67747457718ba.pdf",
         "additional_source_urls": [
-          "https://dgamr.dg.gov.cn/scjdgl/1200/201911/45d90caf8a5c40179befc15f86043445/files/c842ae8a84da4fb6aaf67747457718ba.pdf",
+          "https://www.cnverify.com/company/Dongguan-Ai-Mei-Cheng-Shoes-Co-Ltd",
           "https://www.job5156.com/dongguan/job_gHXOwitS01z26uzaVT4Hzw"
         ],
         "checked_date": "2026-11-02",
@@ -508,11 +508,11 @@
       "company_zh": "宜福（晋江）贸易有限公司",
       "official_website": "",
       "registered_address": "",
-      "unified_credit_code": "",
-      "registration_status": "第三方资料对应中英文名，展会资料的英文名及成立年份相符；信用代码未取得",
+      "unified_credit_code": "913505825934720615",
+      "registration_status": "GLEIF历史法人识别记录列出中文名和信用代码，注册地址与第三方中英文资料对应；LEI已过期，不代表当前工商状态",
       "product_direction": "针织休闲鞋/拖鞋",
       "target_markets": "",
-      "source_urls": "https://www.alibaba.com/countrysearch/CN/knitted-shoes.html | https://www.alibaba.com/countrysearch/CN/jinjiang-hotel.html | https://www.cnverify.com/company/Happy-China-Jinjiang-Ltd | https://expophlse.com/exhibitors/happy",
+      "source_urls": "https://www.alibaba.com/countrysearch/CN/knitted-shoes.html | https://www.alibaba.com/countrysearch/CN/jinjiang-hotel.html | https://www.cnverify.com/company/Happy-China-Jinjiang-Ltd | https://expophlse.com/exhibitors/happy | https://api.gleif.org/api/v1/lei-records/8368007DN8WJ9XR57N82",
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA_CATEGORY+HISTORICAL_STORE_MAPPING",
       "evidence_grade": "E1",
@@ -526,12 +526,13 @@
         "basis": "国际站店铺页面直接显示公司名称"
       },
       "company_zh_evidence": {
-        "source_url": "https://www.cnverify.com/company/Happy-China-Jinjiang-Ltd",
+        "source_url": "https://api.gleif.org/api/v1/lei-records/8368007DN8WJ9XR57N82",
         "additional_source_urls": [
+          "https://www.cnverify.com/company/Happy-China-Jinjiang-Ltd",
           "https://expophlse.com/exhibitors/happy"
         ],
-        "checked_date": "2026-11-02",
-        "basis": "CNVerify列出中英文名称及2012-05-10成立；2026年展会参展商资料显示同英文名与2012年，经营鞋类。"
+        "checked_date": "2026-11-03",
+        "basis": "GLEIF记录显示中文全称、信用代码和晋江梅岭街道江滨花园地址，与CNVerify的中英文公司名和地址对应；后者显示成立于2012-05-10。该LEI已过期，最近更新2022-10-14，不代表当前工商状态。"
       }
     },
     {
@@ -856,11 +857,11 @@
       "company_zh": "洛阳锦世源进出口有限公司",
       "official_website": "",
       "registered_address": "",
-      "unified_credit_code": "",
-      "registration_status": "第三方搜索索引对应中英文名，成立日期与国际站资料一致；信用代码未取得",
+      "unified_credit_code": "91410381MA9K4B1T7W",
+      "registration_status": "第三方公开企业资料列出中文名及信用代码；中英文名及成立日期与国际站资料相互对应，非营业执照原件或实时工商回读",
       "product_direction": "女式飞织、套脚及休闲步行鞋",
       "target_markets": "",
-      "source_urls": "https://jsyshoes.en.alibaba.com/ | https://www.accio.com/plp/nike-zoom-streak-fly | https://www.cnverify.com/company/Luoyang-Jinshiyuan-Import-And-Export-Co-Ltd | https://suppliers.alibaba.com/luoyang-jinshiyuan-import-and-export-co-ltd_2212632898596",
+      "source_urls": "https://jsyshoes.en.alibaba.com/ | https://www.accio.com/plp/nike-zoom-streak-fly | https://www.cnverify.com/company/Luoyang-Jinshiyuan-Import-And-Export-Co-Ltd | https://suppliers.alibaba.com/luoyang-jinshiyuan-import-and-export-co-ltd_2212632898596 | https://www.tendata.com/en/buyer/luoyang-jinshiyuan-import-and-export-co-ltd-CHNfe4a9630b59b8a78a062e986d8f03ffa.html",
       "checked_date": "2026-11-02",
       "access_mode": "FIRECRAWL_OFFICIAL_API；首页直接显示公司及鞋类",
       "evidence_grade": "E2",
@@ -880,12 +881,13 @@
         "note": "Accio聚合页面曾展示单款 330 sold，统计周期未注明。"
       },
       "company_zh_evidence": {
-        "source_url": "https://www.cnverify.com/company/Luoyang-Jinshiyuan-Import-And-Export-Co-Ltd",
+        "source_url": "https://www.tendata.com/en/buyer/luoyang-jinshiyuan-import-and-export-co-ltd-CHNfe4a9630b59b8a78a062e986d8f03ffa.html",
         "additional_source_urls": [
+          "https://www.cnverify.com/company/Luoyang-Jinshiyuan-Import-And-Export-Co-Ltd",
           "https://suppliers.alibaba.com/luoyang-jinshiyuan-import-and-export-co-ltd_2212632898596"
         ],
-        "checked_date": "2026-11-02",
-        "basis": "CNVerify搜索索引显示完整中英文名及2021-08-24成立日，与国际站供应商资料同日；另一次打开页面的缓存对中文名部分脱敏。"
+        "checked_date": "2026-11-03",
+        "basis": "Firecrawl于2026-11-03读到Tendata页面列明中文公司全称及统一社会信用代码；CNVerify中英文名及2021-08-24成立日与国际站供应商资料对应。未取得营业执照原件或实时工商回读。"
       }
     }
   ],

@@ -342,25 +342,32 @@
     const page = $('page'), serial = S.loadSerial;
     const current = () => S.page === 'customers' && serial === S.loadSerial && parseRoute().query.get('view') === 'competitors';
     page.replaceChildren(heading('客户开发', '同行找客户', '从国际站同行入手，找到买家后直接在这里登记、继续研究。'), customerTabs('competitors'));
-    const explanation = el('p', '查海关时结合地址、货描和日期核对出口方。批量复制优先中文名，未找到中文名的使用英文。', 'competitor-intro');
+    const explanation = el('p', '优先用公司登记全称和统一社会信用代码查询海关。信息来自公开企业资料，实际出口主体以海关记录为准。', 'competitor-intro');
     const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司名、信用代码或鞋类'; search.setAttribute('aria-label', '搜索同行');
     const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar competitor-search-bar'), list = el('div', undefined, 'row-list competitor-list');
     bar.append(search, count); page.append(explanation, bar, list);
     let data;
     try { data = await api('/api/desk/competitors'); } catch (error) { if (current()) message(error.message); return; }
     if (!current()) return;
-    const copyAll = button('一键复制全部公司名', async () => {
-      const names = (data.items || []).map(item => text(item.identity?.name).trim() || text(item.company).trim()).filter(Boolean);
-      if (!names.length) { toast('当前没有可复制的公司名称。'); return; }
+    function matchingRows() {
+      const query = search.value.trim().toLocaleLowerCase();
+      return (data.items || []).filter(item => `${item.company} ${item.direction} ${item.identity?.name || ''} ${item.identity?.credit_code || ''}`.toLocaleLowerCase().includes(query));
+    }
+    async function copyCompanies(includeCode) {
+      const rows = matchingRows().filter(item => text(item.identity?.name).trim());
+      const names = rows.map(item => includeCode ? `${item.identity.name}\t${item.identity.credit_code || '信用代码未查到'}` : item.identity.name);
+      if (!names.length) { toast('当前没有可复制的公司全称。'); return; }
       if (!navigator.clipboard?.writeText) { toast('当前页面无法使用剪贴板。'); return; }
-      try { await navigator.clipboard.writeText(names.join('\n')); toast(`已复制 ${names.length} 家公司名称，每家一行。`); }
+      try { await navigator.clipboard.writeText(names.join('\n')); toast(`已复制 ${names.length} 家公司${includeCode ? '及信用代码' : '名称'}。`); }
       catch { toast('复制未成功，请检查浏览器剪贴板权限。'); }
-    }, 'primary competitor-copy-all');
-    bar.append(copyAll);
+    }
+    bar.append(button('复制公司及信用代码', () => copyCompanies(true), 'primary competitor-copy-all'),
+      button('只复制公司名', () => copyCompanies(false), 'quiet'));
     function openBuyer(id) { location.hash = `/customers?view=development&item=${encodeURIComponent(id)}`; }
     function addBuyer(company) {
       const dialog = el('dialog', undefined, 'intake-dialog competitor-dialog'), form = el('div', undefined, 'competitor-form');
-      dialog.append(el('h2', `登记 ${company.company} 的买家线索`), el('p', '填入查询到的公司，保存后可继续研究其业务与联系方式。', 'muted'));
+      const competitorName = company.identity?.name || company.company;
+      dialog.append(el('h2', `登记 ${competitorName} 的买家线索`), el('p', '填入查询到的公司，保存后可继续研究其业务与联系方式。', 'muted'));
       const name = addField(form, '买家公司名称', '', false, '例如：ABC Footwear Inc.'), country = addField(form, '国家或市场（选填）'), note = addField(form, '线索说明（选填）', '', true, '可填写查询来源、货描、日期等');
       const feedback = el('div', undefined, 'inline-error');
       const save = button('保存并查看客户', async () => {
@@ -372,7 +379,7 @@
         try {
           const description = note.value.trim();
           const created = await api('/api/desk/discovery', { kind: 'candidate', company: companyName, country: country.value.trim(),
-            target: `从同行 ${company.company} 研究中登记的买家线索。`,
+            target: `从同行 ${competitorName} 研究中登记的买家线索。`,
             evidence: description ? [{text: description, url: '', observed_at: ''}] : [],
             next_action: '核对具体来源及买家公司业务、采购入口。', related_competitors: [company.id] });
           const item = created.item || created;
@@ -387,19 +394,32 @@
       const row = el('div', undefined, 'competitor-buyers'); row.append(el('span', '相关买家线索：'));
       buyers.forEach(buyer => row.append(button(buyer.company, () => openBuyer(buyer.id), 'quiet'))); host.append(row);
     }
-    function paint() {
-      list.replaceChildren(); const query = search.value.trim().toLocaleLowerCase();
-      const rows = (data.items || []).filter(item => `${item.company} ${item.direction} ${item.identity?.name || ''} ${item.identity?.credit_code || ''}`.toLocaleLowerCase().includes(query));
-      count.textContent = `${rows.length} 家同行`;
-      for (const item of rows) {
+    function competitorCard(item) {
         const card = el('article', undefined, 'card competitor-row'), info = el('div', undefined, 'competitor-main'), actions = el('div', undefined, 'competitor-actions');
-        info.append(el('h3', item.company), el('p', item.direction));
-        if (item.identity) { const identity = el('p', `中文检索名：${item.identity.name}${item.identity.credit_code ? ` · 信用代码：${item.identity.credit_code}` : ''}`, 'competitor-identity'); const source = link('来源 ↗', item.identity.source_url); if (source) identity.append(el('span', ' '), source); info.append(identity); }
+        info.append(el('h3', item.identity?.name || '公司全称尚未查到'));
+        if (item.identity?.name) {
+          const identity = el('p', `统一社会信用代码：${item.identity.credit_code || '未查到'}`, 'competitor-identity');
+          const source = link('查看公开资料 ↗', item.identity.source_url); if (source) identity.append(el('span', ' '), source);
+          info.append(identity);
+        } else info.append(el('p', `店铺显示名称：${item.company}`, 'competitor-identity'));
+        if (item.direction) info.append(el('p', item.direction));
         if (item.sales) { const sold = el('p', item.sales.note, 'competitor-sales'); const source = link('销量依据 ↗', item.sales.source_url); if (source) sold.append(el('span', ' '), source); info.append(sold); }
         buyerLinks(info, item.buyers); const shop = link('查看国际站店铺 ↗', item.store_url); if (shop) actions.append(shop);
-        if (item.identity) actions.append(button('复制中文名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择中文公司名称后复制。'); return; } await navigator.clipboard.writeText(item.identity.name); toast('中文公司名已复制。'); }, 'quiet'));
-        actions.append(button('复制公司名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择公司名称后复制。'); return; } await navigator.clipboard.writeText(item.company); toast('公司名已复制。'); }, 'quiet'), button('登记买家', () => addBuyer(item), 'primary'));
-        card.append(info, actions); list.append(card);
+        if (item.identity?.name) actions.append(button('复制公司名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择公司名称后复制。'); return; } await navigator.clipboard.writeText(item.identity.name); toast('公司全称已复制。'); }, 'quiet'));
+        if (item.identity?.credit_code) actions.append(button('复制信用代码', async () => { if (!navigator.clipboard?.writeText) { toast('请选择信用代码后复制。'); return; } await navigator.clipboard.writeText(item.identity.credit_code); toast('信用代码已复制。'); }, 'quiet'));
+        actions.append(button('登记买家', () => addBuyer(item), 'primary'));
+        card.append(info, actions); return card;
+    }
+    function paint() {
+      list.replaceChildren(); const rows = matchingRows();
+      const known = rows.filter(item => text(item.identity?.name).trim()), missing = rows.filter(item => !text(item.identity?.name).trim());
+      count.textContent = `${known.length} 家有公司全称 · ${missing.length} 家未查到`;
+      for (const item of known) list.append(competitorCard(item));
+      if (missing.length) {
+        const section = el('details', undefined, 'competitor-excluded');
+        section.open = !!search.value.trim();
+        section.append(el('summary', `${missing.length} 家店铺尚未找到公司全称`));
+        missing.forEach(item => section.append(competitorCard(item))); list.append(section);
       }
       if (!rows.length) empty(list, '没有找到匹配的同行。');
     }
