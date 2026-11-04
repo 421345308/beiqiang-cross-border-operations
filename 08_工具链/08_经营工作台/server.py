@@ -23,6 +23,7 @@ from inquiry_intake import InquiryIntake
 from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
+from product_creation import ProductCreation
 from gmail_sync import GmailService
 from gmail_drafts import GmailDrafts
 from gmail_translation import GmailTranslator
@@ -74,6 +75,7 @@ class Workbench:
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
         self.creation_canvas=CreationCanvas(self)
+        self.product_creation=ProductCreation(self)
         # 「今天」聚合页依赖的两个只读诊断器：商品资料缺口 + 跨对象待办。
         self.product_gaps=ProductGaps(self)
         self.today=Today(self,gaps=self.product_gaps)
@@ -325,6 +327,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
                 if u.path=='/api/desk/creation-canvas':return self.send_json({'canvas':app.creation_canvas.get(value('object_id'))})
+                if u.path=='/api/desk/product-creation':return self.send_json(app.product_creation.options(value('product_id')))
                 if u.path=='/api/desk/creation':return self.send_json({'projects':app.creation.list_projects(value('q'))})
                 if u.path=='/api/desk/creation/item':return self.send_json(app.creation.get_project(value('id')))
                 if u.path=='/api/desk/creation/libtv':return self.send_json(app.creation.libtv_projects())
@@ -426,6 +429,8 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','gmail','candidates','dismiss']:return self.send_json(app.gmail.dismiss_candidate(body.get('message_id')))
             if parts==['api','desk','creation-canvas']:
                 return self.send_json({'canvas':app.creation_canvas.save(body)})
+            if parts==['api','desk','product-creation','add']:
+                return self.send_json(app.product_creation.add_to_canvas(body.get('product_id'),body.get('project_id'),body.get('path'),body.get('version')))
             if parts==['api','desk','creation','libtv','create']:
                 return self.send_json(app.creation.libtv_execute('create_project',name=body.get('name'),workspace_id=body.get('workspace_id','0')))
             if parts==['api','desk','creation','libtv','text']:

@@ -19,6 +19,26 @@ from tests_agent_jobs import Process
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_product_media_can_be_reused_in_existing_creation_canvas(self):
+        from media_assets import MediaAssets
+        media=self.root/'01_产品资产/02_成品素材/BQ009/shoe.png'
+        media.parent.mkdir(parents=True,exist_ok=True)
+        media.write_bytes(b'\x89PNG\r\n\x1a\nfixture')
+        self.app.media=MediaAssets(self.root)
+        base=self.root/'05_内容与视频'; project=base/'fixture';project.mkdir(parents=True)
+        (base/'README.md').write_text('[作品](fixture/PROJECT.md)',encoding='utf8')
+        (project/'PROJECT.md').write_text('# 测试作品\n',encoding='utf8')
+        code, options=self.request('/api/desk/product-creation?'+urlencode({'product_id':'product:BQ009'}))
+        self.assertEqual(code,200)
+        self.assertEqual(len(options['assets']),1)
+        pid=options['projects'][0]['id'];path=options['assets'][0]['path']
+        code,result=self.request('/api/desk/product-creation/add',{'product_id':'product:BQ009','project_id':pid,'path':path,'version':''})
+        self.assertEqual(code,200);self.assertTrue(result['added'])
+        code,readback=self.request('/api/desk/creation-canvas?'+urlencode({'object_id':pid}))
+        self.assertEqual(readback['canvas']['nodes'][-1]['data']['media_path'],path)
+        code,_=self.request('/api/desk/product-creation/add',{'product_id':'product:BQ009','project_id':pid,'path':path,'version':''})
+        self.assertEqual(code,409)
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
         generator=self.root/'08_工具链/06_工作区维护/build_b2b_workbench.py';generator.parent.mkdir(parents=True)

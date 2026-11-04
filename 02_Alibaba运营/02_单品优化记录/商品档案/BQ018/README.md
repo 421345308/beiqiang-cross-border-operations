@@ -1,5 +1,7 @@
 # BQ018 商品档案
 
+**2026-11-04 BQ018-O1 闭合属性修复，审核待核：** 商品 `1601939589890` 提交前官方评分为 3.90，诊断指出标题的 `No Tie Elastic Laces` 与属性 `Closure Type: Lace-up` 冲突。既有来源记录将 A116 描述为“一脚蹬”，逐款文案审查另记载止扣弹力绳及针织套脚口；普通套脚不等于免手穿。依据本商品当前 Schema，单次仅提交闭合方式 `Lace-up → Slip-On`，保留原标题及其他属性；请求 `212cbf3217937725207732497` 业务受理。即时正式 get 已读到 `Slip-On`，但状态为 `modified/N`，仍在审核；其他属性与非目标字段一致。详情图片顺序发生变化，完整角色和 URL 集合相同，顺序需审核后核对。原件、当前 Schema、请求、回执及即时比较保存在本款 `.local/20261104_O1闭合修正/`，提交前评分在工作台 `.local/alibaba/quality-20261104-full/scores/1601939589890.json`。渠道数据已记待正式验收；下一步核审核后正式字段、展示状态、评分和买家公开页，不能以即时回读或历史 5.0 报完成，结果不明不重发。
+
 **2026-11-02价格：**本款 4 条链接提交 2–49 双 9.50、50 双起 9.00 美元；逐链接审核及公开状态见[国际站商品数据](../../../05_扩品工程/数据/国际站商品.json)，[回读示例](2026-11-02_价格调整/10000044007878/verification.json)。
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
@@ -57,9 +59,9 @@
 ### BQ018-O1 / A116 · 1601939589890
 
 - 平台链接：[1601939589890](https://www.alibaba.com/product-detail/All-Black-Walking-Shoes-Breathable-Knit_1601939589890.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/formal_get.json)；UTC 2026-11-02T02:48:59.636539+00:00。
+- 最新正式回读：本款 `.local/20261104_O1闭合修正/after_get.json`；UTC 2026-11-04 06:09，审核中。此前 [11月2日完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/formal_get.json)留作历史。
 - 当前正式标题：Custom Logo Knit Slip On Walking Shoes with No Tie Elastic Laces and EVA Sole OEM ODM
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 审核/展示：modified / N，待复审；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -70,14 +72,14 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ018/BQ018_cf99508b4a786321.jpg) · 900×900
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
   - M6：[本地原图](E:/%E8%B4%9D%E5%BC%BA%E7%A6%BB%E7%BA%BF%E5%BD%92%E6%A1%A3/%E4%BA%A7%E5%93%81%E6%97%A7%E6%A1%A3/%E5%8E%86%E5%8F%B2%E5%88%B6%E4%BD%9C%E8%B5%84%E6%96%99/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/BQ018_A116/05_AI%E5%80%99%E9%80%89/M2_colors.png) · 1254×1254
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
-- 标题搜索优化：`FORMAL_APPROVED_PUBLIC_PENDING`；审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页
+- 本地同步状态：`PENDING_PLATFORM_VERIFY`；闭合修复已提交并即时回读，待审核及评分。
+- 2026-11-02 标题优化历史：`FORMAL_APPROVED_PUBLIC_PENDING`；当前属性更新另行复审，详情顺序以后续回读为准。
   - 标题证据：[20261102_full_batch_07_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_07_plan.json)
   - 标题证据：[20261102_full_batch_07_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_07_receipt.json)
   - 标题证据：[20261102_full_batch_07_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_07_verification.json)
   - 标题证据：[20261102_full_batch_07_approved_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_07_approved_get.json)
   - 标题证据：[20261102_full_batch_07_approved_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589890/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_07_approved_verification.json)
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
+- 历史内容优化：`FORMAL_FIELDS_SCORE_PASS`；不覆盖本次闭合修复待审核状态。
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589890/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589890/update_receipt.json)
   - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589890/verification.json)

@@ -19,6 +19,7 @@ ASSETS='00_总控台/产品中心/数据/素材索引.json'
 CHANNEL='02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
 DOUYIN_CHANNEL='09_国内电商/抖店/数据/渠道产品对应.json'
 WEBSITE_CATALOG='03_独立站/03_网站源码/app/data/reviewed-catalog.json'
+WEBSITE_EXPORT='03_独立站/03_网站源码/public/llms.txt'
 CRM='04_客户开发/04_发送与跟进记录/客户开发跟进表_20260802.csv'
 SKIP={'node_modules','outputs','_build','build','dist','cache','__pycache__','backups'}
 SOURCE_STATES={'ADOPTED':'已采纳供货来源','OWNER_CONFIRMED':'负责人确认本厂','RAW_PACKAGE':'已有原始数据包','MAPPED':'已建立来源对应','MISSING':'来源缺失，待补证','CANDIDATE':'候选来源，尚未采纳','HOLD_SOURCE':'来源待核实，暂停承诺'}
@@ -42,6 +43,31 @@ def _now():return datetime.now(timezone.utc).isoformat()
 def _stable(value):return hashlib.sha256(value.encode('utf8')).hexdigest()[:20]
 def _clean(value):return re.sub(r'\s+',' ',str(value)).strip()
 def _fact(label,value):return {'label':label,'value':value}
+def _website_catalog(root):
+    """Read the site's generated code/URL export; it is not a live-page check."""
+    export=root/WEBSITE_EXPORT
+    if export.is_file():
+        body=export.read_text(encoding='utf-8-sig')
+        marker='## Current website product pages'
+        if body.count(marker)!=1:return {},False,WEBSITE_EXPORT
+        lines=body.split(marker,1)[1].split('\n## ',1)[0].splitlines()
+        rows=[line.strip() for line in lines if line.strip()]
+        mapping={}
+        for row in rows:
+            match=re.fullmatch(r'- (BQ[A-Z0-9-]+): .+ — https://www\.beiqiang\.online/products/([a-z0-9-]+)/',row)
+            if not match:return {},False,WEBSITE_EXPORT
+            code,slug=match.groups();mapping.setdefault(code,[]).append(slug)
+        return mapping,bool(rows),WEBSITE_EXPORT
+    # Older workspaces may contain the reviewed subset without the generated export.
+    file=root/WEBSITE_CATALOG
+    if not file.is_file():return {},False,WEBSITE_CATALOG
+    rows=json.loads(file.read_text(encoding='utf-8-sig'))
+    if not isinstance(rows,list):raise ValueError('网站商品原档结构发生变化：'+WEBSITE_CATALOG)
+    mapping={}
+    for row in rows:
+        code=row.get('code');slug=row.get('slug')
+        if isinstance(code,str) and code and isinstance(slug,str) and re.fullmatch(r'[a-z0-9-]+',slug):mapping.setdefault(code,[]).append(slug)
+    return mapping,True,WEBSITE_CATALOG
 def _object(oid,kind,title,source,subtitle='',summary='',content=''):
     return {'id':oid,'kind':kind,'title':title,'subtitle':subtitle,'source':source,'summary':summary,
             'facts':[],'assets':[],'links':[],'related':[],'content':content}
@@ -76,16 +102,7 @@ class Business:
                 douyin_map.setdefault(pid,[]).append(row)
         douyin_file=self.root/DOUYIN_CHANNEL
         stores={row.get('key'):row.get('name') for row in self._json(DOUYIN_CHANNEL,'stores')}
-        # The website has several sources. This JSON is the structured subset with
-        # explicit code and slug; absence here does not mean absence from the site.
-        website_file=self.root/WEBSITE_CATALOG; website_map={}
-        if website_file.is_file():
-            website_rows=json.loads(website_file.read_text(encoding='utf-8-sig'))
-            if not isinstance(website_rows,list):raise ValueError('网站商品原档结构发生变化：'+WEBSITE_CATALOG)
-            for row in website_rows:
-                code=row.get('code');slug=row.get('slug')
-                if isinstance(code,str) and code and isinstance(slug,str) and re.fullmatch(r'[a-z0-9-]+',slug):
-                    website_map.setdefault(code,[]).append(slug)
+        website_map,website_available,website_source=_website_catalog(self.root)
         channel_file=self.root/CHANNEL
         channel_states=json.loads(channel_file.read_text(encoding='utf-8-sig')).get('product_state',{}) if channel_file.is_file() else {}
         result=[]
@@ -185,8 +202,8 @@ class Business:
                      'observation':v.get('observation') or {}, 'identity_evidence':v.get('identity_evidence')}
                     for v in douyin_map.get(pid,[])]
             slugs=website_map.get(pid,[])
-            website={'state':'matched' if len(slugs)==1 else ('ambiguous' if len(slugs)>1 else ('not_in_subset' if website_file.is_file() else 'source_unavailable')),
-                     'url':f'https://www.beiqiang.online/products/{slugs[0]}/' if len(slugs)==1 else '', 'source':WEBSITE_CATALOG}
+            website={'state':'matched' if len(slugs)==1 else ('ambiguous' if len(slugs)>1 else ('not_in_subset' if website_available else 'source_unavailable')),
+                     'url':f'https://www.beiqiang.online/products/{slugs[0]}/' if len(slugs)==1 else '', 'source':website_source}
             obj['other_channels']={'douyin':{'source_available':douyin_file.is_file(),'listings':douyin},'website':website}
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
                 'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,'other_channels':obj['other_channels'],

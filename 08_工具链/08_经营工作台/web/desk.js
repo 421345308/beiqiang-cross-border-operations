@@ -142,7 +142,7 @@
     }
     const website=channels.website || {};
     if (website.state==='matched') { const p=el('p','独立站：源码商品对应 · '), a=link('打开商品页 ↗',website.url); if(a)p.append(a); section.append(p,el('p','源码对应不代表当前线上已验收。','muted')); }
-    else section.append(el('p', website.state==='ambiguous' ? '独立站：商品对应有歧义，暂不生成链接' : website.state==='source_unavailable' ? '独立站：商品对应资料暂不可读' : '独立站：已查范围未找到对应，其他网站商品资料尚未接入'));
+    else section.append(el('p', website.state==='ambiguous' ? '独立站：商品对应有歧义，暂不生成链接' : website.state==='source_unavailable' ? '独立站：商品对应资料暂不可读' : '独立站：已读目录未找到对应，不能据此判断线上状态'));
     host.append(section);
   }
   function productCategory(object) { const d=object.category && object.category !== '其他' ? object.category : productDescription(object); return /靴/.test(d) ? 'boot' : /洞洞/.test(d) ? 'clog' : /凉鞋|拖鞋|半拖/.test(d) ? 'sandal' : /乐福|豆豆/.test(d) ? 'loafer' : /套脚|袜套|一脚蹬/.test(d) ? 'slip' : /系带/.test(d) ? 'lace' : 'other'; }
@@ -281,6 +281,28 @@
           if (detail.observed_at) card.append(el('p', `上次观测：${time(detail.observed_at)}`, 'muted'));
           if (item.id === 'douyin') card.append(el('p', '抖店实时经营数据尚未接入。', 'muted'), button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'), button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'));
           else for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
+        }
+        if (item.id === 'alibaba' && item.quality) {
+          const quality=item.quality, section=el('section',undefined,'channel-quality');
+          section.append(el('h3','商品质量分'),el('p',quality.notice,'muted'));
+          if(quality.available){
+            section.append(el('p',`汇总完成：${time(quality.observed_at)} · 评分采集：${quality.score_observed_from ? time(quality.score_observed_from) : '未知'} 至 ${quality.score_observed_to ? time(quality.score_observed_to) : '未知'} · 目录 ${quality.catalog_total ?? '未知'} · 已检查 ${quality.selected ?? '未知'} · 有评分 ${quality.scored ?? '未知'} · 失败 ${quality.error_count} · 无评分 ${quality.missing_score_count} · ${quality.complete ? '全量检查完成' : '结果不完整'} · 低于 5.0：${quality.below_5_count}`));
+            if(quality.catalog_state_counts) section.append(el('p',`平台目录字段：${Object.entries(quality.catalog_state_counts).map(([state,count])=>`${state} ${count}`).join(' · ')}；字段状态不代表买家页验收。`,'muted'));
+            for(const row of quality.below_5 || []){
+              const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.id} · ${row.score} 分`));
+              if(row.platform_reason)entry.append(el('p',`平台提示：${row.platform_reason}`));
+              if(row.problems?.length)entry.append(el('p',`平台诊断代码：${row.problems.join('、')}`,'muted'));
+              const objectId=row.object_id || (item.product_analysis?.items || []).find(value=>String(value.listing_id)===String(row.id))?.object_id;
+              if(objectId)entry.append(button('查看当前商品',()=>{location.hash=`/object/${encodeURIComponent(objectId)}?listing=${encodeURIComponent(row.id)}`;},'quiet'));
+              section.append(entry);
+            }
+            const otherIssues=(quality.issues || []).filter(row=>!(typeof row.score==='number' && row.score<5));
+            if(otherIssues.length){
+              const details=el('details'), summary=el('summary',`其他有平台问题的商品：${otherIssues.length}`);details.append(summary);
+              for(const row of otherIssues){const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.id} · ${row.score ?? '无评分'} 分`));if(row.platform_reason)entry.append(el('p',`平台提示：${row.platform_reason}`));entry.append(el('p',`平台诊断代码：${(row.problems || []).join('、')}`,'muted'));const objectId=row.object_id || (item.product_analysis?.items || []).find(value=>String(value.listing_id)===String(row.id))?.object_id;if(objectId)entry.append(button('查看当前商品',()=>{location.hash=`/object/${encodeURIComponent(objectId)}?listing=${encodeURIComponent(row.id)}`;},'quiet'));details.append(entry);}section.append(details);
+            }
+          }
+          card.append(section);
         }
         if (item.id === 'alibaba' && item.product_analysis) {
           const analysis=item.product_analysis, section=el('section',undefined,'channel-product-analysis');
@@ -1021,6 +1043,29 @@
     for (const item of candidates) if (!shown.includes(item) && shown.length < 6) shown.push(item);
     return { shown, more: all.filter(item => !shown.includes(item)) };
   }
+  function mountProductCreation(host, object) {
+    const box=el('details',undefined,'card'), body=el('div'), feedback=el('p','','agent-feedback');
+    box.append(el('summary','用于内容创作'),el('p','选择这款商品的素材和已有创作项目，将素材引用加入项目画布。'),body,feedback);host.append(box);
+    let loaded=false;
+    box.addEventListener('toggle',async()=>{
+      if(!box.open || loaded)return; feedback.textContent='正在读取可用素材与项目…';
+      try{
+        const data=await api(`/api/desk/product-creation?product_id=${encodeURIComponent(object.id)}`);
+        const assets=el('select'), projects=el('select');assets.setAttribute('aria-label','选择商品素材');projects.setAttribute('aria-label','选择创作项目');
+        const firstAsset=el('option','请选择商品素材');firstAsset.value='';assets.append(firstAsset);
+        const firstProject=el('option','请选择创作项目');firstProject.value='';projects.append(firstProject);
+        for(const item of data.assets || []){const option=el('option',`${item.label || item.name} · ${item.name}`);option.value=item.path;assets.append(option);}
+        for(const item of data.projects || []){const option=el('option',item.title);option.value=item.id;projects.append(option);}
+        const add=button('加入项目画布',async()=>{
+          if(!assets.value || !projects.value){feedback.textContent='请选择素材和创作项目。';return;}
+          const projectId=projects.value, path=assets.value;add.disabled=true;feedback.textContent='正在加入画布…';
+          try{const current=await api(`/api/desk/creation-canvas?object_id=${encodeURIComponent(projectId)}`);const result=await api('/api/desk/product-creation/add',{product_id:object.id,project_id:projectId,path,version:current.canvas.version});feedback.replaceChildren(el('span',result.notice+' '),button('打开创作项目',()=>{location.hash=`/creation?item=${encodeURIComponent(projectId)}`;},'quiet'));}
+          catch(error){feedback.textContent=error.message;}finally{add.disabled=false;}
+        },'quiet');
+        body.append(assets,projects,add);feedback.textContent=data.notice || '';loaded=true;
+      }catch(error){feedback.textContent=error.message;}
+    });
+  }
   function renderObject(object, requestedArtifact) {
     const page = $('page'), top = el('div', undefined, 'detail-top'), info = el('div'); info.append(el('span', objectKind(object), 'eyebrow'), el('h1', text(object.title))); if (object.subtitle && object.kind !== 'customer') info.append(el('p', object.kind === 'product' && /[A-Za-z]/.test(text(object.subtitle)) ? `平台原文：${text(object.subtitle)}` : displayText(object.subtitle))); if (object.kind === 'product') info.append(el('p', '集中查看产品事实、来源依据和素材，继续整理可用的选款资料。'));  top.append(info, button('返回列表', () => { location.hash = object.kind === 'product' ? '/products' : object.kind === 'prospect' ? '/customers?view=development' : '/customers?view=inquiries'; }, 'quiet')); page.replaceChildren(top);
     const layout = el('div', undefined, 'object-layout'), main = el('div', undefined, 'object-main'); const hero = el('section', undefined, 'card detail-hero'), asset = firstImage(object), facts = el('div'); if (asset) hero.append(image(asset, 'hero-image')); else hero.style.gridTemplateColumns = '1fr'; facts.append(el('h2', object.kind === 'product' ? '商品资料' : '需求与背景')); const summaryParagraph = el('p', object.kind === 'customer' ? '原始需求在下方，可在当前对话中让我整理中文解读。' : text(object.summary), object.kind === 'customer' ? 'agent-copy customer-need' : 'agent-copy'); if (object.kind === 'customer') facts.append(summaryParagraph); if(object.kind==='product')appendProductLinks(facts,object); const dl = el('dl', undefined, 'object-facts'); const factGroups = summaryFacts(object); for (const item of factGroups.shown) dl.append(el('dt', text(item.label)), el('dd', displayText(item.value) || '资料未提供')); facts.append(dl); if (object.kind !== 'product' && (factGroups.more.length || object.source)) { const details = el('details', undefined, 'extra-facts'); details.append(el('summary', '更多档案与渠道信息')); const more = el('dl', undefined, 'object-facts'); for (const item of factGroups.more) more.append(el('dt', text(item.label)), el('dd', displayText(item.value) || '资料未提供')); details.append(more, el('div', `来源：${text(object.source) || '来源未提供'}`, 'object-source')); facts.append(details); } hero.append(facts); if (object.kind !== 'customer') main.append(hero);
@@ -1030,6 +1075,7 @@
       function renderAssets() { grid.replaceChildren(); for (const item of object.assets.slice(0, expanded ? object.assets.length : 6)) { const row = el('div', undefined, 'asset-item'), src = safeUrl(item.url); if (imageAsset(item) && src) row.append(image(item, '')); row.append(el('div', assetLabel(item), 'asset-label')); if (src) row.append(button('预览', () => previewAsset(item), 'quiet')); grid.append(row); } }
       materials.append(grid); if (object.assets.length > 6) { const toggle = button(`展开全部 ${object.assets.length} 份素材`, () => { expanded = !expanded; toggle.textContent = expanded ? '收起素材' : `展开全部 ${object.assets.length} 份素材`; renderAssets(); }, 'quiet asset-toggle'); materials.append(toggle); } renderAssets(); main.append(materials);
     }
+    if(object.kind==='product')mountProductCreation(main,object);
     if (object.content && object.kind !== 'customer' && object.kind !== 'product') { const source = el('details', undefined, 'card object-source-details'); source.append(el('summary', object.kind === 'product' ? '查看原始资料' : '查看来源正文与完整需求'), el('pre', text(object.content), 'source-body')); main.append(source); }
     if ((object.kind !== 'product' && (object.links || []).length) || (object.related || []).length) { const related = el('section', undefined, 'card'); related.append(el('h2', '关联与出处')); const links = el('div', undefined, 'related-links'); if (object.kind !== 'product') for (const item of object.links || []) { const a = link(item.label || '打开来源', item.url); if (a) links.append(a); } for (const item of object.related || []) { const id = typeof item === 'string' ? item : item.id || item.object_id; if (id) links.append(button(typeof item === 'string' ? objectById(id)?.title || '关联资料' : item.title || item.label || '关联资料', () => goObject(id))); } related.append(links); main.append(related); }
     let conversationMessages, replyArea;

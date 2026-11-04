@@ -1,6 +1,7 @@
 """Read-only channel overview. Viewing never contacts a platform."""
 from pathlib import Path
 import json
+from alibaba_quality import latest_quality
 
 REPORT = '02_Alibaba运营/01_店铺与全店诊断/经营复核.json'
 
@@ -60,9 +61,19 @@ class ChannelOverview:
             return {'latest_attempt': {k: latest.get(k) for k in ('at','operation','ok')} if latest else None,
                     'last_success_at': success.get('at') if success else None,
                     'scope': '最近50条工具回执中的记录；历史成功不代表当前在线'}
+        quality = latest_quality(self.app.root)
+        matches = {}
+        business = getattr(self.app, 'business', None)
+        for obj in business.list_objects(kind='product') if business else []:
+            for listing in obj.get('channel_listings') or []:
+                if listing.get('id') is not None:
+                    matches.setdefault(str(listing['id']), set()).add(obj['id'])
+        for row in (quality.get('below_5') or []) + (quality.get('issues') or []):
+            linked = matches.get(str(row.get('id')), set())
+            row['object_id'] = next(iter(linked)) if len(linked) == 1 else None
         return {'channels': [
             {'id':'alibaba','title':'国际站','connection':history('alibaba'),
-             'data':metrics,'product_analysis':self.product_analysis(),'actions':['connection-check','products','product','orders','order'],
+             'data':metrics,'product_analysis':self.product_analysis(),'quality':quality,'actions':['connection-check','products','product','orders','order'],
              'gaps':['自然流量实时指标未接通；本地指标保留原日期','询盘与报价未验证接通','标题、主图和详情图支持准备变更；具体提交与正式回读状态须逐商品核对，其他字段尚未接入']},
             {'id':'website','title':'独立站','connection':web_status,
              'data':{'source':'网站询盘连接器缓存','scope':'询盘读取状态，不代表网站流量或销售额'},

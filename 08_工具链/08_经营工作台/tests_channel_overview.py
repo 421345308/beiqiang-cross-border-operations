@@ -1,6 +1,7 @@
 import tempfile
 import json
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 from types import SimpleNamespace
 from channel_overview import ChannelOverview, REPORT
@@ -55,5 +56,19 @@ class OverviewTest(unittest.TestCase):
         self.assertTrue(web['connection']['stale'])
         self.assertIsNone(douyin['connection']['last_success_at'])
         self.assertEqual(douyin['actions'],['读取抖店商品'])
+        self.assertFalse(ali['quality']['available'])
+
+    def test_quality_links_only_unique_current_listing_identity(self):
+        class Business:
+            def list_objects(self,kind):
+                return [{'id':'product:A','channel_listings':[{'id':'11'},{'id':'22'}]},
+                        {'id':'product:B','channel_listings':[{'id':'22'}]}]
+        class Workspaces:
+            def receipts(self):return []
+            def metrics(self):return {}
+        with tempfile.TemporaryDirectory() as root, patch('channel_overview.latest_quality',return_value={'below_5':[{'id':'11'},{'id':'22'}]}):
+            quality=ChannelOverview(SimpleNamespace(root=Path(root),business=Business()),Workspaces()).snapshot()['channels'][0]['quality']
+        self.assertEqual(quality['below_5'][0]['object_id'],'product:A')
+        self.assertIsNone(quality['below_5'][1]['object_id'])
 
 if __name__=='__main__':unittest.main()

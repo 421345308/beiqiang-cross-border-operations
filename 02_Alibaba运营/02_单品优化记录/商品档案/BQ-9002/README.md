@@ -2,7 +2,9 @@
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`ADOPTED`。下一步：正式审核通过并展示；已核首图、标题、色码和价格，公开页面按需抽查。
+来源状态：`ADOPTED`。下一步：核主图补充后的正式审核、质量评分及新增图片公开展示。
+
+2026-11-04：本款因主图数量问题提交补图，最新正式回读 `modified/N`、四张主图已回读，非目标字段与写前一致，审核及新图公开验收待完成；即时质量分4.40。详情、时间和原始回执见[当前状态](../../../05_扩品工程/执行记录/BQ-9002/当前状态.md)。
 
 ## 当前资料与实物证据
 
@@ -23,14 +25,17 @@
 ### BQ-9002 · 1602003801096
 
 - 平台链接：[1602003801096](https://www.alibaba.com/product-detail/Men-s-Knit-Slip-On-Walking_1602003801096.html)
-- 当前正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/BQ-9002/.local/%E7%8B%AC%E7%AB%8B%E5%A4%8D%E6%A0%B8/1602003801096/get.json)；时间 2026-11-03T13:54:19.543195+00:00。
+- 最新正式回读：[完整商品字段](../../../05_扩品工程/执行记录/BQ-9002/.local/质量补图/latest-get.json)；2026-11-04 补图后，审核中。上一轮审核通过回读保留在[独立复核](../../../05_扩品工程/执行记录/BQ-9002/.local/独立复核/1602003801096/get.json)。
 - 当前正式标题：Men's Knit Slip-On Walking Shoes with Bubble Sole for Wholesale, OEM ODM Factory Customization
-- 当前审核/展示：approved / Y；平台类目ID：201334413。
+- 最新审核/展示：modified / N；平台类目ID：201334413。买家页仍可见先前版本，不将其等同于新增图片已公开。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 当前正式主图按官方图链匹配本地素材；图片不按槽位继承。
   - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/9002_%E8%B4%9D%E5%BC%BA/01_%E5%9B%BD%E9%99%85%E7%AB%99/M1_9002_%E7%A1%AE%E8%AE%A4%E9%A6%96%E5%9B%BE.png)；官方来源 https://sc04.alicdn.com/kf/H7fe5d1d5582543738159259275a79dc96.png
-- 本地同步状态：`APPROVED_PUBLIC_QA_PENDING`。
+  - M2：本款两色/EU尺码选择，官方回读 https://sc04.alicdn.com/kf/H32d8f07fa67247e8858522985d27e2857.jpg
+  - M3：本款浅灰鞋底实拍，官方回读 https://sc04.alicdn.com/kf/H8a14a447ab6947bb9bc31fe1e64914a9j.jpg
+  - M4：贝强工厂合作概览，官方回读 https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png
+- 本地同步状态：`PENDING_PLATFORM_VERIFY`。
 
 ## 其他原始/正式证据
 

@@ -2,6 +2,25 @@ import unittest
 from unittest.mock import patch
 from tests_business import BusinessTests
 class ProductProjectionTests(BusinessTests):
+    def test_website_generated_export_covers_core_and_detects_duplicate_codes(self):
+        from business import WEBSITE_EXPORT
+        self.product()
+        export=self.root/WEBSITE_EXPORT;export.parent.mkdir(parents=True,exist_ok=True)
+        export.write_text('# Site\n\n## Current website product pages\n\n- BQ009: Shoes — https://www.beiqiang.online/products/bq009/\n- BQ-009: Other — https://www.beiqiang.online/products/other/\n',encoding='utf8')
+        site=self.business.get_object('product:BQ009')['other_channels']['website']
+        self.assertEqual(site['source'],WEBSITE_EXPORT)
+        self.assertEqual(site['url'],'https://www.beiqiang.online/products/bq009/')
+        with export.open('a',encoding='utf8') as out:out.write('- BQ009: Other — https://www.beiqiang.online/products/another/\n')
+        site=self.business.get_object('product:BQ009')['other_channels']['website']
+        self.assertEqual(site['state'],'ambiguous');self.assertEqual(site['url'],'')
+
+    def test_website_export_with_unrecognized_format_is_unavailable(self):
+        from business import WEBSITE_EXPORT
+        self.product()
+        export=self.root/WEBSITE_EXPORT;export.parent.mkdir(parents=True,exist_ok=True)
+        export.write_text('## Current website product pages\n- changed format\n',encoding='utf8')
+        self.assertEqual(self.business.get_object('product:BQ009')['other_channels']['website']['state'],'source_unavailable')
+
     def test_cross_channel_projection_uses_only_explicit_product_ids(self):
         from business import DOUYIN_CHANNEL, WEBSITE_CATALOG
         self.product()

@@ -70,6 +70,20 @@ function harness(hash = '#/overview') {
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, clipboard: () => local.get('clipboard'), setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
+test('商品素材明确选择后引用到选定创作画布', async () => {
+  const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
+  h.interceptFetch(async(path,options={})=>{
+    const url=new URL(path,'http://127.0.0.1:8766');
+    if(url.pathname==='/api/desk/product-creation')return {ok:true,json:async()=>({assets:[{path:'商品图.jpg',name:'商品图.jpg',label:'主图'}],projects:[{id:'creation:one',title:'创作项目'}],notice:'原文件不变'})};
+    if(url.pathname==='/api/desk/creation-canvas')return {ok:true,json:async()=>({canvas:{version:'v1'}})};
+    if(url.pathname==='/api/desk/product-creation/add'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({added:true,notice:'已加入'})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();const box=walk(h.elements.page).find(x=>x.tagName==='DETAILS' && x.textContent.includes('用于内容创作'));box.open=true;await box.listeners.toggle();await settle();
+  await findButton(box,'加入项目画布').click();assert.equal(calls.length,0);
+  walk(box).find(x=>x['aria-label']==='选择商品素材').value='商品图.jpg';walk(box).find(x=>x['aria-label']==='选择创作项目').value='creation:one';
+  await findButton(box,'加入项目画布').click();await settle();assert.deepEqual(calls[0],{product_id:'product:1',project_id:'creation:one',path:'商品图.jpg',version:'v1'});assert.ok(box.textContent.includes('已加入'));
+});
 test('业务对象可继续已保存的 Agent 会话，续接请求携带原工作编号', async () => {
   const h=harness('#/object/product%3A1'), original=h.originalFetch, calls=[];
   h.jobs.push({id:'saved-job',object_id:'product:1',instruction:'原研究',status:'completed',session_id:'saved-session',summary:'已有结果',updated_at:'2026-11-03T00:00:00Z'});
@@ -823,6 +837,13 @@ test('独立站搜索数据连接入口及真实读取结果展示',async()=>{
   state={state:'ready',site_url:'https://www.beiqiang.online/',available:true,tables:{totals:[]},period:{}};await h.ui.renderRoute();await settle();
   await findButton(h.elements.page,'更新搜索数据').click();await settle();
   assert.match(h.elements.page.textContent,/展示 100 · 点击 5/);assert.match(h.elements.page.textContent,/walking shoes/);
+});
+test('国际站质量诊断保留覆盖与失败信息并按链接进入商品', async () => {
+  const h=harness('#/channels');
+  h.interceptFetch(async(path,options)=>path==='/api/desk/channels'?{ok:true,json:async()=>({channels:[{id:'alibaba',title:'国际站',data:{},quality:{available:true,notice:'采集结果，非实时',observed_at:'2026-11-04T05:00:00Z',catalog_total:10,selected:2,scored:1,error_count:1,missing_score_count:1,complete:false,below_5_count:1,below_5:[{id:'11',model:'BQ001',score:4.5,problems:['price'],platform_reason:'平台指出价格不一致'}]},product_analysis:{available:false,notice:'历史档案不可用',items:[{listing_id:'11',object_id:'product:BQ001'}]}}]})}:h.originalFetch(path,options));
+  await h.ui.bootstrap();await settle();
+  assert.match(h.elements.page.textContent,/结果不完整/);assert.match(h.elements.page.textContent,/低于 5.0：1/);assert.match(h.elements.page.textContent,/平台指出价格不一致/);assert.match(h.elements.page.textContent,/price/);
+  await findButton(h.elements.page,'查看当前商品').click();assert.match(h.location.hash,/product%3ABQ001/);
 });
 test('渠道经营分析保留历史期和空数据，筛选重点行动并进入精确关联商品', async () => {
   const h=harness('#/channels');

@@ -1,5 +1,11 @@
 # 国际站扩品工具
 
+## 全店质量分只读诊断
+
+`quality_diagnostic.py --output <本机私有目录>` 先完整分页并核商品ID与数量，再逐链接读取官方质量分与实际问题；结果的 `complete` 只在目录完整、所有目标成功且均取得分数时为真。平台返回错误和未出分分开保存，不推断具体原因，也不将质量分当作流量、询盘或公开页面验收。示例输出可放 `08_工具链/08_经营工作台/.local/alibaba/quality-<日期>`；列表与逐商品原始回执留本地，不提交公开Git。
+
+中断后使用相同输出目录加 `--resume`，复用已完整核对的目录和已有回执，继续读取其他商品；`--resume --rebuild-only` 只用现有回执重建汇总，不访问平台，并保留已有错误。目录和各项评分有各自时间，汇总时间仅表示生成汇总的时刻。`--max-items N` 仅供抽样检验，抽样不会标为全店完成。传输与签名复用官方客户端，读取限制和权限按真实响应判断，不修改代理或证书校验。
+
 货号与主图库工厂图统一使用 `normalize_models_factory_gallery.py freeze/bank/prepare/submit/verify` 和 `sync_models_factory_gallery.py`，唯一状态在HR实源替换当前入口的`货号与共用主图/`。HR货号迁移为稳定BQ1001–BQ1067，原SKU ID/色码/价格保全，外采/自产独立记内部当前供货路径，旧型号保留可查别名。F1方图只上传一次，逐图组选择位置保留唯一结构/底纹/颜色信息。当前既有官方客户端native传输实测正常且更快，仍验证TLS、不自动重放未知写入；每ID一次账本。原HR和路崎verify/sync入口遇到本期账本后路由当前控制器，不让旧模型或旧工厂图快照覆盖新值。后续新建路崎商品也读取共享工厂入口的F1，C1–C6继续用于公司详情。
 
 `audit_models_factory_prepared.py` 对精确当前Schema检查未改主图、属性、SKU ID/价格/库存/色码值；`test_model_factory_preservation.py`验证无序回读比较不放过丢图、换角色、换URL、丢SKU或商业数据变化。product.get的公司/详情图库行按完整角色/名称/URL及重复数比较，Schema实际顺序另核。`repair_model_factory_quality.py`保留一个标题及两条类目修正的历史账本与只读核验，已停用其部分字段类目准备路线；两条同ID实际重置规格后，`recover_category_reset_skus.py`按原正式快照恢复全部60/27项SKU数据，显式记录平台重发87个内部ID。中央契约及提交入口禁止缺少完整saleProp/sku/ladderPrice的类目更新。映射通过哈希、完整色码/图/价格及当前Schema绑定独立核验，不忽略或伪造身份变化。`audit_models_factory_completion.py --refresh-catalog`只读全目录并与本地逐ID对账，当前平台退回与目标字段已返回分开记录；不把一次approved或5.00当永久状态。唯一规则见商品SOP，当前事实见执行入口。

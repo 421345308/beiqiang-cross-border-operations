@@ -33536,16 +33536,16 @@
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md",
         "current_formal_by_id": {
-          "1602003801096": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/.local/独立复核/1602003801096/get.json"
+          "1602003801096": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/.local/质量补图/latest-get.json"
         },
-        "state": "SUBMITTED_NEW_N_REVIEW_PENDING",
+        "state": "MODIFIED_REVIEW_PENDING",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-9002",
         "finished_asset_count": 7
       },
       "publication_disposition": {
-        "state": "NEW_APPROVED_PUBLIC_QA_PENDING",
-        "scope": "2026-11-03 正式回读 approved/Y，核心字段独立核对通过；公开页面尚未验收。",
+        "state": "MODIFIED_REVIEW_PENDING",
+        "scope": "2026-11-04主图补充后正式回读modified/N；审核、评分与新图公开验收待完成。",
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md"
       }
     }
