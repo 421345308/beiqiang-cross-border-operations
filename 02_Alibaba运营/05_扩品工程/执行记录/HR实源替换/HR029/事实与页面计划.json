@@ -1,6 +1,21 @@
 {
   "candidate": "shnx_2527411",
   "source_artno": "726C",
+  "observation_2026_11_04": {
+    "additional_source": "https://bpxy.sooxie.com/detail/2536625",
+    "additional_source_supplier": "奔跑鞋行",
+    "additional_source_price_cny_per_pair": 33,
+    "source_note": "公开页显示军绿、黑色及39–44码；图片与已采用726C高度一致，具体供货关系和实际库存未确认；不改变原采用来源。",
+    "source_evidence": ["02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/奔跑726C来源页信息.png", "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/奔跑726C来源页视觉比对.png"],
+    "competitor": "https://www.alibaba.com/product-detail/Durable-Men-s-Green-Mesh-Patchwork_1601933464256.html",
+    "competitor_supplier": "Ruian Nuolaide Shoe Industry Co., Ltd.",
+    "competitor_model": "726C",
+    "competitor_price_usd_per_pair": 4.71,
+    "competitor_moq_pairs": 50,
+    "fx_reference": "https://exchangerate.dev/exchange-rates/usd-cny，2026-11-04 07:50 UTC，1 USD = 6.6768 CNY，仅用于参考换算",
+    "comparison": "图片的鞋头、侧面FASHION、网片、后跟及鞋底轮廓高度一致；颜色绿/黑、尺码39–44。贝强A/B买家页50–99双为6.92美元/双，标价高2.21美元；包装、贸易条款、运费、材料版本及实际成交条件未对齐。以6.6768元/美元参考汇率折算，竞品标价约31.45元，低于公开来源33元/双，未覆盖其他费用，不据此自动降价。",
+    "status": "PUBLIC_OBSERVATION_NOT_EQUIVALENT_TRANSACTION"
+  },
   "supplier": "四海鞋业",
   "source_url": "https://shnx.sooxie.com/detail/2527411",
   "source_price_cny": 33,
