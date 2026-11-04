@@ -1,6 +1,6 @@
 """Local workbench with shared SQLite execution and draft records."""
 from __future__ import annotations
-import argparse, difflib, hashlib, importlib.util, json, mimetypes, os, re, secrets, shutil, signal, sqlite3, subprocess, threading, uuid
+import argparse, difflib, hashlib, importlib.util, json, mimetypes, os, re, secrets, shutil, signal, sqlite3, subprocess, threading, time, uuid
 from html import escape
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -29,6 +29,7 @@ from gmail_drafts import GmailDrafts
 from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
 from today import Today
+from miaoshou_bridge import MiaoshouBridge, BridgeError
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -44,6 +45,34 @@ def stop_process(proc):
     proc.wait(timeout=10)
 class Conflict(ValueError): pass
 
+def miaoshou_target(root):
+    """Read only the configured shop identity; never return the saved session."""
+    profile=Path(root)/'08_工具链/01_业务脚本/抖店妙手/.local/shops/brand/session.json'
+    try:
+        with profile.open(encoding='utf-8-sig') as f:value=json.load(f).get('expectedShopId')
+        if not isinstance(value,str) or not re.fullmatch(r'[0-9]{1,40}',value):raise ValueError()
+        return value
+    except (OSError,ValueError,TypeError,AttributeError):raise ValueError('品牌店目标身份未配置，不能配对') from None
+
+def miaoshou_read(bridge,body,timeout=20):
+    if set(body)-{'shop','page','pageSize','isDraft'} or body.get('shop')!='brand':raise ValueError('请选择已配置的品牌店')
+    if 'pageSize' in body and (type(body['pageSize']) is not int or body['pageSize'] not in (20,40,50,100)):raise ValueError('每页最多读取100条商品')
+    params={key:body[key] for key in ('page','pageSize','isDraft') if key in body}
+    try:
+        task=bridge.submit('products',params)['task_id'];deadline=time.monotonic()+timeout
+        while time.monotonic()<deadline:
+            value=bridge.get_result(task)
+            if value['state']=='done':
+                result=value['result']
+                if result.get('ok'):
+                    data=dict(result.get('data',{}));data.pop('shopId',None)
+                    return {'shop':'brand','mode':'live','ok':True,'data':data,'pagination':result.get('pagination'),'collectedAt':now(),'notice':'本次浏览器读取；仅返回当前页。'}
+                return {'shop':'brand','mode':'live','ok':False,'error':result.get('error','request_failed')}
+            time.sleep(.2)
+        return {'shop':'brand','mode':'live','ok':False,'error':'bridge_timeout'}
+    except BridgeError as e:
+        return {'shop':'brand','mode':'live','ok':False,'error':str(e)}
+
 class Workbench:
     def __init__(self, root, state=None):
         self.root=Path(root).resolve(); self.state=Path(state or HERE/'.local'); self.state.mkdir(parents=True,exist_ok=True)
@@ -51,6 +80,7 @@ class Workbench:
         self.parser=importlib.util.module_from_spec(spec); spec.loader.exec_module(self.parser)
         self.sources=[p.relative_to(self.parser.ROOT).as_posix() for p in self.parser.SOURCES]
         self.token=secrets.token_urlsafe(32); self.lock=threading.RLock(); self.processes={}
+        self.miaoshou_bridge=MiaoshouBridge(); self.miaoshou_agent_token=secrets.token_urlsafe(32); self.miaoshou_agent_url=None
         self.db=sqlite3.connect(self.state/'runs.sqlite3',check_same_thread=False)
         self.db.execute('CREATE TABLE IF NOT EXISTS runs (id TEXT PRIMARY KEY, data TEXT NOT NULL)')
         for run in self.runs():
@@ -268,18 +298,33 @@ class Workbench:
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
     def send_json(self,obj,status=200):
-        data=json.dumps(obj,ensure_ascii=False).encode();self.send_response(status);self.send_header('Content-Type','application/json; charset=utf-8');self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+        data=json.dumps(obj,ensure_ascii=False).encode();self.send_response(status);self.send_header('Content-Type','application/json; charset=utf-8');self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)))
+        if getattr(self,'bridge_origin',None):self.send_header('Access-Control-Allow-Origin',self.bridge_origin);self.send_header('Vary','Origin')
+        self.end_headers();self.wfile.write(data)
     def send_gmail_result(self,message,status=200):
         data=('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Gmail 授权</title>'
               '<body style="font-family:sans-serif;padding:2rem;line-height:1.8"><h1>Gmail 连接</h1><p>'+escape(message)+'</p>'
               '<p><a href="/">返回工作台</a></p></body></html>').encode('utf-8')
         self.send_response(status);self.send_header('Content-Type','text/html; charset=utf-8');self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
-    def check_host(self):
+    def check_host(self,allow_extension=False):
         allowed={'127.0.0.1:'+str(self.server.server_port),'localhost:'+str(self.server.server_port)}
         if self.headers.get('Host') not in allowed:raise PermissionError('仅允许本机工作台访问')
         origin=self.headers.get('Origin')
-        if origin and origin not in {'http://'+h for h in allowed}:raise PermissionError('来源不受信任')
+        if origin and origin not in {'http://'+h for h in allowed} and not (allow_extension and re.fullmatch(r'chrome-extension://[a-p]{32}',origin)):raise PermissionError('来源不受信任')
+    def do_OPTIONS(self):
+        self.bridge_origin=None
+        try:
+            path=urlsplit(self.path).path; origin=self.headers.get('Origin','')
+            if path not in {'/api/desk/miaoshou-bridge/'+x for x in ('pair','poll','complete')} or not re.fullmatch(r'chrome-extension://[a-p]{32}',origin):raise PermissionError('来源不受信任')
+            self.check_host(allow_extension=True)
+            headers={x.strip().lower() for x in self.headers.get('Access-Control-Request-Headers','').split(',') if x.strip()}
+            if self.headers.get('Access-Control-Request-Method')!='POST' or not headers.issubset({'content-type','authorization'}):raise PermissionError('请求不受支持')
+            self.send_response(204);self.send_header('Access-Control-Allow-Origin',origin);self.send_header('Vary','Origin');self.send_header('Access-Control-Allow-Methods','POST');self.send_header('Access-Control-Allow-Headers','Content-Type, Authorization')
+            if self.headers.get('Access-Control-Request-Private-Network')=='true':self.send_header('Access-Control-Allow-Private-Network','true')
+            self.send_header('Content-Length','0');self.end_headers()
+        except PermissionError as e:self.send_json({'error':str(e)},403)
     def do_GET(self):
+        self.bridge_origin=None
         try:
             self.check_host();u=urlsplit(self.path);app=self.server.app
             if u.path=='/api/library/candidates':return self.send_json({'items':app.library.candidates(parse_qs(u.query).get('q',[''])[0])})
@@ -393,17 +438,50 @@ class Handler(BaseHTTPRequestHandler):
         except (ValueError,KeyError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'读取失败，请检查本地业务文件'},500)
     def do_POST(self):
+        self.bridge_origin=None
         try:
-            self.check_host();app=self.server.app
-            if not secrets.compare_digest(self.headers.get('X-Workbench-Token',''),app.token):raise PermissionError('请求令牌无效，请刷新页面')
+            path=urlsplit(self.path).path; app=self.server.app
+            extension=path in {'/api/desk/miaoshou-bridge/'+x for x in ('pair','poll','complete')}
+            if extension:
+                origin=self.headers.get('Origin','')
+                if not re.fullmatch(r'chrome-extension://[a-p]{32}',origin):raise PermissionError('来源不受信任')
+                self.check_host(allow_extension=True);self.bridge_origin=origin
+            else:
+                self.check_host()
+                if path=='/api/desk/miaoshou-bridge/agent-read':
+                    if self.headers.get('Origin')!='http://127.0.0.1:'+str(self.server.server_port) or not secrets.compare_digest(self.headers.get('X-Bridge-Agent-Token',''),app.miaoshou_agent_token):raise PermissionError('请求令牌无效')
+                else:
+                    if path in {'/api/desk/miaoshou-bridge/'+x for x in ('issue','status','read')} and self.headers.get('Origin')!='http://'+self.headers.get('Host',''):raise PermissionError('来源不受信任')
+                    if not secrets.compare_digest(self.headers.get('X-Workbench-Token',''),app.token):raise PermissionError('请求令牌无效，请刷新页面')
             if self.headers.get('Content-Type','').split(';')[0]!='application/json':raise ValueError('请求必须使用JSON')
             size=int(self.headers.get('Content-Length','0'))
-            path=urlsplit(self.path).path
-            limit=26000000 if path=='/api/desk/gmail/attachment' else 550000 if path=='/api/desk/creation-canvas' else 256000 if path=='/api/canvases' else 240000 if path=='/api/desk/gmail/draft' else 64000
+            limit=26000000 if path=='/api/desk/gmail/attachment' else 1000000 if path=='/api/desk/miaoshou-bridge/complete' else 550000 if path=='/api/desk/creation-canvas' else 256000 if path=='/api/canvases' else 240000 if path=='/api/desk/gmail/draft' else 64000
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if parts==['api','library']:return self.send_json(app.library.add(body))
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if extension:
+                bridge=app.miaoshou_bridge
+                try:
+                    if path.endswith('/pair'):
+                        if set(body)!={'code','shop_id'}:raise BridgeError('invalid_input')
+                        return self.send_json(bridge.pair(body['code'],origin,body['shop_id']))
+                    auth=self.headers.get('Authorization','')
+                    if not auth.startswith('Bearer '):raise BridgeError('unauthorized')
+                    token=auth[7:]
+                    if path.endswith('/poll'):
+                        if body:raise BridgeError('invalid_input')
+                        return self.send_json({'task':bridge.poll(origin,token)})
+                    if set(body)!={'task_id','payload'}:raise BridgeError('invalid_input')
+                    return self.send_json(bridge.complete(origin,token,body['task_id'],body['payload']))
+                except BridgeError as e:return self.send_json({'error':str(e)},403 if str(e) in ('unauthorized','pairing_failed') else 400)
+            if path=='/api/desk/miaoshou-bridge/issue':
+                if body:raise ValueError('请求格式无效')
+                return self.send_json(app.miaoshou_bridge.issue_pairing(miaoshou_target(app.root)))
+            if path=='/api/desk/miaoshou-bridge/status':
+                if body:raise ValueError('请求格式无效')
+                return self.send_json(app.miaoshou_bridge.status())
+            if path in ('/api/desk/miaoshou-bridge/read','/api/desk/miaoshou-bridge/agent-read'):return self.send_json(miaoshou_read(app.miaoshou_bridge,body))
             if parts==['api','library','update']:return self.send_json(app.library.update(body))
             if parts==['api','library','remove']:return self.send_json(app.library.remove(body.get('id')))
             if parts==['api','desk','gmail','connect']:
@@ -528,6 +606,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--root',type=Path,default=HERE.parents[1]);parser.add_argument('--port',type=int,default=8765);args=parser.parse_args()
     app=Workbench(args.root);server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler);server.app=app
+    app.miaoshou_agent_url='http://127.0.0.1:'+str(server.server_port)+'/api/desk/miaoshou-bridge/agent-read'
     print('贝强工作台 http://127.0.0.1:%s （本地资料、视频与具名渠道操作）'%args.port,flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

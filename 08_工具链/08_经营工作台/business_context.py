@@ -39,8 +39,8 @@ def _commercial_product_refs(business, commercial):
 
 def build_context(desk):
     obj = desk.call('get_object', {})
-    if obj.get('kind') not in ('product', 'customer', 'prospect'):
-        raise ValueError('业务上下文仅支持商品和客户')
+    if obj.get('kind') not in ('product', 'customer', 'prospect', 'channel'):
+        raise ValueError('业务上下文不支持该对象类型')
     records = []
     # These are shared policy/goal sources, not arbitrary workspace retrieval.
     for relative, role in [('AGENTS.md', 'current-owner-decisions-and-boundaries'),
@@ -60,7 +60,7 @@ def build_context(desk):
     sources = desk.sources()
     current = []
     for source in sources:
-        if source['role'] in ('current-object-source', 'current-channel-records'):
+        if source['role'] in ('current-object-source', 'current-channel-records', 'current-channel-source'):
             try:
                 record = desk.read(source['path'], limit=20000)
                 current.append({**record, 'role': source['role'], 'available': True})

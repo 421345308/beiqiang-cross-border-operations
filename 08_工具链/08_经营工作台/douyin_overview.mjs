@@ -54,8 +54,12 @@ export async function readShop(profile, {load=async p=>JSON.parse(await readFile
   const data=result.data?.items ? {items:result.data.items.map(row=>Object.fromEntries(['name','title','status'].filter(key=>row[key]!==undefined).map(key=>[key,row[key]])))} : undefined;
   return {...base,...result,...(data?{data}: {})};
 }
-export async function readShops({checkUnbound=false}={}){return {shops:await Promise.all(profiles.map(profile=>readShop(profile,{checkUnbound}))),notice:'按店隔离读取；未执行任何平台修改。列表为第一页，完整目录需显式继续分页。'};}
+export async function readShops({checkUnbound=false,shop='all',reader=readShop}={}){
+  if(!['all','brand','legacy'].includes(shop))throw Error('invalid shop');
+  const selected=shop==='all' ? profiles : profiles.filter(profile=>profile.id===shop);
+  return {shops:await Promise.all(selected.map(profile=>reader(profile,{checkUnbound}))),notice:'按店隔离读取；未执行任何平台修改。列表为第一页，完整目录需显式继续分页。'};
+}
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  try { process.stdout.write(JSON.stringify(process.argv.includes('--snapshot-only') ? await readBrandSnapshot() : await readShops({checkUnbound:process.argv.includes('--check-unbound')}))); } catch { process.stdout.write(JSON.stringify({shops:[],error:'抖店数据暂不可读'})); process.exitCode=1; }
+  try { const shopArg=process.argv.find(arg=>arg.startsWith('--shop=')); const shop=shopArg ? shopArg.slice('--shop='.length) : 'all'; process.stdout.write(JSON.stringify(process.argv.includes('--snapshot-only') ? await readBrandSnapshot() : await readShops({checkUnbound:process.argv.includes('--check-unbound'),shop}))); } catch { process.stdout.write(JSON.stringify({shops:[],error:'抖店数据暂不可读'})); process.exitCode=1; }
 }

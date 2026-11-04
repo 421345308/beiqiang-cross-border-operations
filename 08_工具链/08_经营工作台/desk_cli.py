@@ -47,7 +47,11 @@ def open_business(root=None, state=None):
     return app
 
 
-def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None, material_id=None, start=0):
+def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None, material_id=None, start=0, shop=None, page=1, page_size=100):
+    if area == 'douyin':
+        from douyin_agent import read_store
+        if operation=='live':return read_store(shop,operation,page=page,page_size=page_size)
+        return read_store(shop,operation)
     if area == 'materials':
         if operation=='list':return {'materials':business.app.library.for_object(object_id)}
         if operation=='read':return business.app.library.read_for_object(object_id,material_id,start=start)
@@ -92,6 +96,10 @@ def main(argv=None):
     parser.add_argument('--root', type=Path)
     parser.add_argument('--state', type=Path)
     areas = parser.add_subparsers(dest='area', required=True)
+    douyin=areas.add_parser('douyin').add_subparsers(dest='operation', required=True)
+    for operation in ('check','snapshot'):
+        douyin.add_parser(operation).add_argument('--shop',choices=('brand','legacy'),required=True)
+    live=douyin.add_parser('live');live.add_argument('--shop',choices=('brand','legacy'),required=True);live.add_argument('--page',type=int,default=1);live.add_argument('--page-size',type=int,default=100)
     objects = areas.add_parser('objects').add_subparsers(dest='operation', required=True)
     listing = objects.add_parser('list')
     listing.add_argument('--kind', default='')
@@ -122,7 +130,7 @@ def main(argv=None):
         result = invoke(app.business, args.area, args.operation, object_id=getattr(args, 'object_id', None),
                         kind=getattr(args, 'kind', ''), query=getattr(args, 'query', ''),
                         title=getattr(args, 'title', None), content=content,
-                        artifact_id=getattr(args, 'artifact_id', None),material_id=getattr(args,'material_id',None),start=getattr(args,'start',0))
+                        artifact_id=getattr(args, 'artifact_id', None),material_id=getattr(args,'material_id',None),start=getattr(args,'start',0),shop=getattr(args,'shop',None),page=getattr(args,'page',1),page_size=getattr(args,'page_size',100))
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except ValueError as exc:

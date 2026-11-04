@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readShop,readBrandSnapshot} from './douyin_overview.mjs';
+import {readShop,readShops,readBrandSnapshot} from './douyin_overview.mjs';
 import {createHash} from 'node:crypto';
 const profile={id:'brand',title:'品牌店',url:new URL('file:///C:/private/session.json')};
 test('missing identity does not contact platform',async()=>{let calls=0;const row=await readShop(profile,{load:async()=>({cookie:'secret'}),factory:()=>{calls++;}});assert.equal(calls,0);assert.equal(row.error.code,'target_missing');assert.ok(!JSON.stringify(row).includes('secret'));});
@@ -23,4 +23,9 @@ test('missing and invalid brand snapshots fail closed without sensitive errors',
   for(const load of [async()=>{throw Error('private data');},snapshotLoader('123,shoe\n',{sha256:'bad'}),snapshotLoader('123,shoe,extra\n'),snapshotLoader('123,"unterminated\n'),snapshotLoader('123,shoe\n',{capturedAt:'bad'})]) {
     const data=await readBrandSnapshot({load});assert.equal(data.available,false);assert.ok(!JSON.stringify(data).includes('private data'));assert.ok(!('items' in data));
   }
+});
+test('single-shop read never contacts the other shop',async()=>{
+  const calls=[];const result=await readShops({shop:'brand',checkUnbound:true,reader:async(profile,options)=>{calls.push([profile.id,options.checkUnbound]);return {id:profile.id,ok:false};}});
+  assert.deepEqual(calls,[['brand',true]]);assert.equal(result.shops.length,1);
+  await assert.rejects(()=>readShops({shop:'other',reader:async()=>{throw Error('must not run');}}));
 });

@@ -124,6 +124,20 @@ class AgentJobTests(unittest.TestCase):
         self.assertNotIn('PRIVATE',json.dumps(result))
         self.assertNotIn('private-command',json.dumps(result))
 
+    def test_douyin_channel_uses_shared_executor_and_saves_to_channel(self):
+        self.app.business.obj={'id':'channel:douyin','kind':'channel','title':'抖店运营','source':'抖店/README.md'}
+        self.app.miaoshou_agent_token='test-dedicated-token'
+        self.app.miaoshou_agent_url='http://127.0.0.1:8766/test'
+        self.options['content']='# 结果\ntest-dedicated-token'
+        result=self.wait(self.jobs.start('channel:douyin','检查品牌店商品'))
+        self.assertEqual(result['status'],'completed')
+        self.assertEqual(self.app.business.artifacts[0]['object_id'],'channel:douyin')
+        self.assertIn('抖店经营任务',self.processes[0].stdin.value)
+        self.assertEqual(self.kwargs['env']['BEIQIANG_MIAOSHOU_BRIDGE_TOKEN'],'test-dedicated-token')
+        self.assertEqual(self.kwargs['env']['BEIQIANG_MIAOSHOU_BRIDGE_URL'],'http://127.0.0.1:8766/test')
+        self.assertNotIn('test-dedicated-token',self.app.business.artifacts[0]['content'])
+        self.assertIn('[redacted]',self.app.business.artifacts[0]['content'])
+
     def test_command_actual_help_flags_and_tools_not_disabled(self):
         self.wait(self.jobs.start('product:shoe','读取依据'))
         self.assertEqual(self.command[self.command.index('-m')+1],MODEL)

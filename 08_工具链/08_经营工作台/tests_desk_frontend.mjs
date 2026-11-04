@@ -70,6 +70,16 @@ function harness(hash = '#/overview') {
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, clipboard: () => local.get('clipboard'), setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
+test('抖店经营对象沿用 Agent 任务入口并返回渠道', async () => {
+  const h=harness('#/object/channel%3Adouyin');
+  h.objects.push({id:'channel:douyin',kind:'channel',title:'抖店运营',summary:'按店铺经营',source:'抖店资料',facts:[],assets:[]});
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('按店铺经营'));
+  assert.ok(h.elements.page.textContent.includes('Agent'));
+  await findButton(h.elements.page,'返回列表').click();
+  assert.equal(h.location.hash,'/channels?view=douyin');
+});
+
 test('商品素材明确选择后引用到选定创作画布', async () => {
   const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
   h.interceptFetch(async(path,options={})=>{
@@ -839,6 +849,20 @@ test('抖店仅在用户点击后分店检查，明确展示过期、未绑定�
   await findButton(h.elements.page,'检查两店连接').click();await settle();assert.equal(calls,1);
   assert.match(h.elements.page.textContent,/目标未绑定/);assert.match(h.elements.page.textContent,/会话已过期/);
   assert.match(h.elements.page.textContent,/平台总数 120 款/);assert.match(h.elements.page.textContent,/真实商品/);assert.match(h.elements.page.textContent,/仅第一页/);
+});
+test('品牌店实时连接按需发码并如实展示连接状态',async()=>{
+  const h=harness('#/channels?view=douyin'),original=h.originalFetch;let calls=[];
+  h.interceptFetch(async(path,options)=>{
+    if(path==='/api/desk/channels')return {ok:true,json:async()=>({channels:[{id:'douyin',title:'抖店',data:{},gaps:[]}]})};
+    if(path==='/api/desk/miaoshou-bridge/issue'){calls.push(path);return {ok:true,json:async()=>({code:'once-code',expires_in:300})};}
+    if(path==='/api/desk/miaoshou-bridge/status'){calls.push(path);return {ok:true,json:async()=>({paired:true,online:false})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.deepEqual(calls,[]);
+  await findButton(h.elements.page,'连接品牌店实时数据').click();await settle();
+  assert.match(h.elements.page.textContent,/once-code/);assert.match(h.elements.page.textContent,/5 分钟内有效/);
+  await findButton(h.elements.page,'复制连接码').click();assert.equal(h.clipboard(),'once-code');
+  await findButton(h.elements.page,'检查实时连接').click();await settle();assert.match(h.elements.page.textContent,/暂未在线/);
 });
 test('品牌店手动快照单独读取并标明时间和非实时',async()=>{
   const h=harness('#/channels?view=douyin'),original=h.originalFetch;let calls=0;

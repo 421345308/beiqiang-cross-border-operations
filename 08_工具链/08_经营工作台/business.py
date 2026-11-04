@@ -356,6 +356,9 @@ class Business:
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')
+        if object_id=='channel:douyin':
+            return _object(object_id,'channel','抖店运营','09_国内电商/抖店/README.md',
+                subtitle='国内抖店',summary='按店铺接续商品、内容和经营工作；店铺状态及数据时间以实际读取为准。')
         if object_id.startswith('creation:'):
             from creation import Creation
             return {**Creation(self.root).get_project(object_id),'subtitle':'创作项目','facts':[]}
@@ -375,6 +378,7 @@ class Business:
 
     def _artifact_base(self,object_id):
         obj=self.get_object(object_id)
+        if object_id=='channel:douyin':return self.root/'09_国内电商/抖店/.local/成果'/_stable(object_id)
         if object_id.startswith('customer:website-'):
             reference=object_id.removeprefix('customer:website-')
             return self.root/'04_客户开发/.local/网站询盘'/reference

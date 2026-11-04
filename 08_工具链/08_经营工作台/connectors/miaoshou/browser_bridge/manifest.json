@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "贝强妙手只读连接（待审查原型）",
+  "version": "0.1.0",
+  "description": "仅从当前正常登录的妙手店铺读取身份和商品分页。",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://v2-dd.chengji-inc.com/*", "http://127.0.0.1:8766/*"],
+  "background": {"service_worker": "worker.js"},
+  "action": {"default_popup": "popup.html"},
+  "content_scripts": [{"matches": ["https://v2-dd.chengji-inc.com/*"], "js": ["content.js"], "all_frames": false}]
+}

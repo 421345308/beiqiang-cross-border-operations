@@ -42,7 +42,7 @@ class DeskTools:
         if not isinstance(q,str) or type(limit) is not int or not 1<=limit<=20:
             raise ValueError('来源查询无效，最多20条')
         obj=self.object();paths={};source=obj.get('source')
-        if obj.get('kind') in ('product','customer','prospect'):
+        if obj.get('kind') in ('product','customer','prospect','channel'):
             paths['AGENTS.md']='current-owner-decisions-and-boundaries'
             paths['00_总控台/当前状态.md']='current-goals-and-priorities'
         if obj.get('kind')=='creation':source='object:'+self.object_id
@@ -81,6 +81,10 @@ class DeskTools:
                         for ref in [(row.get('formal_fields')or{}).get('file'),(row.get('local_sync')or{}).get('current_fields_file')]:
                             if isinstance(ref,str):paths[ref]='current-formal-readback'
             paths['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md']='applicable-sop'
+        elif obj.get('kind')=='channel' and self.object_id=='channel:douyin':
+            paths['09_国内电商/抖店/README.md']='current-channel-source'
+            paths['09_国内电商/抖店/AGENTS.md']='applicable-sop'
+            paths['08_工具链/01_业务脚本/抖店妙手/README.md']='channel-tool-guide'
         elif obj.get('kind')!='creation':
             paths['00_总控台/产品中心/产品矩阵与供货能力.md']='company-capabilities'
             paths['02_Alibaba运营/01_店铺与全店诊断/店铺首页优化方案_2026-09-14.md']='company-facts'
@@ -163,6 +167,11 @@ class DeskTools:
         return result
 
     def call(self,name,args):
+        if name=='read_douyin_store':
+            if self.read_only:raise ValueError('自动邮件整理不访问店铺数据')
+            from douyin_agent import read_store
+            if args.get('mode')=='live':return read_store(args.get('shop'),'live',page=args.get('page',1),page_size=args.get('page_size',100),is_draft=args.get('is_draft'))
+            return read_store(args.get('shop'),args.get('mode'))
         if name=='get_business_context':
             from business_context import build_context
             return build_context(self)
@@ -265,6 +274,9 @@ TOOLS.append({'name':'read_customer_material','description':'按资料ID读取�
 TOOLS.append({'name':'get_customer_gmail','description':'读取当前客户已连接的 Gmail 收发往来与连接状态；只读，不发送或改变邮件。',
               'inputSchema':{'type':'object','properties':{},'additionalProperties':False},
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
+TOOLS.append({'name':'read_douyin_store','description':'按指定店铺只读检查旧连接、读取手动快照，或通过已配对浏览器桥实时读取品牌店商品分页。快照非实时；实时连接失败时返回实际错误，旧店尚无浏览器桥。不会修改平台。',
+              'inputSchema':{'type':'object','properties':{'shop':{'type':'string','enum':['brand','legacy']},'mode':{'type':'string','enum':['check','snapshot','live']},'page':{'type':'integer','minimum':1},'page_size':{'type':'integer','enum':[20,40,50,100]},'is_draft':{'type':'boolean'}},'required':['shop','mode'],'additionalProperties':False},
+              'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
 TOOLS.append({'name':'save_customer_commercial','description':'按当前委托将报价、样品、订单的已知事实或内部草稿写入当前客户原档，并可更新下一步；status区分draft、recorded、cancelled。不会发信、报价给客户或创建平台订单。',
               'inputSchema':{'type':'object','properties':{'record':{'type':'object','properties':{'id':{'type':'string'},'kind':{'type':'string','enum':['quotation','sample','order']},'status':{'type':'string','enum':['draft','recorded','cancelled']},'summary':{'type':'string'},'reference':{'type':'string'},'products':{'type':'string'},'terms':{'type':'string'},'purpose':{'type':'string'},'acceptance':{'type':'string'},'exclusions':{'type':'string'},'actual_result':{'type':'string'},'profit_basis':{'type':'string'}},'required':['kind','status','summary'],'additionalProperties':False},'owner':{'type':'string'},'next_action':{'type':'string'},'due_at':{'type':['string','null']}},'additionalProperties':False},
               'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}})
@@ -276,7 +288,7 @@ def dispatch(tools,message):
     if method=='initialize':
         result={'protocolVersion':'2024-11-05','capabilities':{'tools':{}},'serverInfo':{'name':'beiqiang-business','version':'1.0'}}
     elif method=='ping':result={}
-    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if not tools.read_only or tool['annotations'].get('readOnlyHint')]}
+    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if not tools.read_only or (tool['annotations'].get('readOnlyHint') and tool['name']!='read_douyin_store')]}
     elif method=='tools/call':
         params=message.get('params') or {}
         try:

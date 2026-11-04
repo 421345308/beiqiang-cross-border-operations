@@ -7,6 +7,17 @@ from desk_mcp import DeskTools, PRODUCTS, CHANNEL
 
 
 class ContextTests(unittest.TestCase):
+    def test_douyin_context_reads_current_channel_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            source=root/'09_国内电商/抖店/README.md'
+            source.parent.mkdir(parents=True)
+            source.write_text('当前抖店经营资料', encoding='utf8')
+            business=SimpleNamespace(get_object=lambda oid:{'id':oid,'kind':'channel','source':'09_国内电商/抖店/README.md'})
+            result=DeskTools(business, root, 'channel:douyin').call('get_business_context', {})
+            self.assertEqual(result['kind'], 'channel')
+            self.assertEqual(result['current_sources'][0]['content'], '当前抖店经营资料')
+
     def test_customer_commercial_product_links_keep_status_and_require_exact_ids(self):
         with tempfile.TemporaryDirectory() as folder:
             commercial={'records':[{'id':'q1','kind':'quotation','status':'draft','products':'BQ009 / BQ001；BQ009-W1'},
