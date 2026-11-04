@@ -304,7 +304,18 @@
                 if(data.notice)result.append(el('p',data.notice,'muted'));
               }catch(error){result.replaceChildren(el('p',error.message));}finally{check.disabled=false;}
             },'quiet');
-            card.append(check,button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'),button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'),result);
+            const snapshotResult=el('div'), snapshot=button('查看品牌店商品快照',async()=>{
+              snapshot.disabled=true;snapshotResult.replaceChildren(el('p','正在读取本地快照…'));
+              try {
+                const data=await api('/api/desk/douyin?snapshot=1');
+                if(S.page!=='channels' || serial!==S.loadSerial)return;
+                snapshotResult.replaceChildren();
+                if(!data.available){snapshotResult.append(el('p',data.message || '本地快照暂不可用。'));return;}
+                const section=el('section',undefined,'artifact-row');section.append(el('h3',data.shop),el('p',`${data.source} · ${time(data.capturedAt)} · ${data.count} 条`),el('p',data.notice,'muted'));
+                const details=el('details');details.append(el('summary','查看快照商品标题'));for(const product of data.items || [])details.append(el('p',text(product.title)));section.append(details);snapshotResult.append(section);
+              } catch {snapshotResult.replaceChildren(el('p','本地快照暂不可读。'));} finally {snapshot.disabled=false;}
+            },'quiet');
+            card.append(check,snapshot,button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'),button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'),result,snapshotResult);
           }
           else for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
         }

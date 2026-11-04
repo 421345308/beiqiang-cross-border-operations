@@ -26,6 +26,9 @@ class DeskHTTPTests(unittest.TestCase):
             self.assertNotIn('--check-unbound',execute.call_args.args[0])
             status,_=self.request('/api/desk/douyin?check_unbound=1');self.assertEqual(status,200)
             self.assertIn('--check-unbound',execute.call_args.args[0])
+            status,_=self.request('/api/desk/douyin?snapshot=1');self.assertEqual(status,200)
+            self.assertIn('--snapshot-only',execute.call_args.args[0])
+            self.assertNotIn('--check-unbound',execute.call_args.args[0])
 
     def test_product_media_can_be_reused_in_existing_creation_canvas(self):
         from media_assets import MediaAssets

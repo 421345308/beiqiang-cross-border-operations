@@ -840,6 +840,17 @@ test('抖店仅在用户点击后分店检查，明确展示过期、未绑定�
   assert.match(h.elements.page.textContent,/目标未绑定/);assert.match(h.elements.page.textContent,/会话已过期/);
   assert.match(h.elements.page.textContent,/平台总数 120 款/);assert.match(h.elements.page.textContent,/真实商品/);assert.match(h.elements.page.textContent,/仅第一页/);
 });
+test('品牌店手动快照单独读取并标明时间和非实时',async()=>{
+  const h=harness('#/channels?view=douyin'),original=h.originalFetch;let calls=0;
+  h.interceptFetch(async(path,options)=>{
+    if(path==='/api/desk/channels')return {ok:true,json:async()=>({channels:[{id:'douyin',title:'抖店',data:{},gaps:[]}]})};
+    if(path==='/api/desk/douyin?snapshot=1'){calls++;return {ok:true,json:async()=>({available:true,shop:'品牌店',source:'妙手全店商品导出（SPU）',capturedAt:'2026-11-04T18:49:43+08:00',count:1,items:[{title:'商品标题'}],notice:'手动快照，非实时；原文件仅含商品 ID 和标题，不包含库存、价格或状态。'})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.equal(calls,0);
+  await findButton(h.elements.page,'查看品牌店商品快照').click();await settle();assert.equal(calls,1);
+  assert.match(h.elements.page.textContent,/妙手全店商品导出/);assert.match(h.elements.page.textContent,/非实时/);assert.match(h.elements.page.textContent,/商品标题/);assert.match(h.elements.page.textContent,/不包含库存/);
+});
 test('独立站搜索数据连接入口及真实读取结果展示',async()=>{
   const h=harness('#/channels'),original=h.originalFetch;let state={state:'not_connected',available:false};
   h.interceptFetch(async(path,options={})=>{

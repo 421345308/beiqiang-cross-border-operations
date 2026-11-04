@@ -343,6 +343,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/douyin':
                     args=['node',str(HERE/'douyin_overview.mjs')]
                     if value('check_unbound')=='1':args.append('--check-unbound')
+                    if value('snapshot')=='1':args.append('--snapshot-only')
                     run=subprocess.run(args,capture_output=True,text=True,encoding='utf8',timeout=45,**({'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {}))
                     if run.returncode:raise ValueError('抖店数据暂不可读')
                     return self.send_json(json.loads(run.stdout))
