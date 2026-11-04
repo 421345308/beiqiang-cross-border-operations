@@ -82,8 +82,10 @@ class BridgeServerTests(unittest.TestCase):
         with patch.dict(os.environ,{},clear=True):self.assertEqual(read_store('brand','live')['error'],'bridge_service_unavailable')
         with patch.dict(os.environ,{'BEIQIANG_MIAOSHOU_BRIDGE_URL':'http://127.0.0.1:1/api/desk/miaoshou-bridge/agent-read','BEIQIANG_MIAOSHOU_BRIDGE_TOKEN':'private'}):
             self.assertEqual(read_store('brand','live')['error'],'bridge_service_unavailable')
-        bridge=SimpleNamespace(submit=lambda *args:{'task_id':'x'},get_result=lambda task_id:{'state':'running'})
+        cancelled=[]
+        bridge=SimpleNamespace(submit=lambda *args:{'task_id':'x'},get_result=lambda task_id:{'state':'running'},cancel=cancelled.append)
         self.assertEqual(miaoshou_read(bridge,{'shop':'brand'},timeout=.01)['error'],'bridge_timeout')
+        self.assertEqual(cancelled,['x'])
 
 
 if __name__=='__main__':unittest.main()

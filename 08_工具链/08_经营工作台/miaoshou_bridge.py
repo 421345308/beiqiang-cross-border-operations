@@ -78,6 +78,7 @@ class MiaoshouBridge:
             if draft is not None:
                 clean["isDraft"] = draft
         with self.lock:
+            self._prune()
             if not self.status()["online"]:
                 raise BridgeError("bridge_disconnected")
             task_id = secrets.token_urlsafe(18)
@@ -87,6 +88,7 @@ class MiaoshouBridge:
     def poll(self, origin, token):
         with self.lock:
             self._auth(origin, token)
+            self._prune()
             for task_id, task in self.tasks.items():
                 self._expire(task)
                 if task["state"] == "queued":
@@ -124,7 +126,7 @@ class MiaoshouBridge:
         rows, total = payload.get("items"), payload.get("total")
         page, size = task["params"]["page"], task["params"]["pageSize"]
         if (not isinstance(rows, list) or type(total) is not int or total < 0 or len(rows) > size
-                or total < len(rows) or (not rows and (page - 1) * size < total)
+                or len(rows) > max(0, total - (page - 1) * size) or (not rows and (page - 1) * size < total)
                 or (page * size < total and len(rows) != size)):
             raise BridgeError("schema_changed")
         clean, seen = [], set()
@@ -149,7 +151,21 @@ class MiaoshouBridge:
             if not task:
                 raise BridgeError("invalid_input")
             self._expire(task)
-            return {"state": task["state"], **({"result": task["result"]} if task["state"] == "done" else {})}
+            result = {"state": task["state"], **({"result": task["result"]} if task["state"] == "done" else {})}
+            if task["state"] == "done":
+                del self.tasks[task_id]
+            return result
+
+    def cancel(self, task_id):
+        with self.lock:
+            self.tasks.pop(task_id, None)
+
+    def _prune(self):
+        # A client can disappear before consuming its result. Keep a bounded
+        # grace period for that caller, then drop the task and its data.
+        cutoff = self.clock() - 120
+        for task_id in [key for key, task in self.tasks.items() if task["created"] <= cutoff]:
+            del self.tasks[task_id]
 
     def _expire(self, task):
         if task["state"] != "done" and self.clock() - task["created"] >= 60:

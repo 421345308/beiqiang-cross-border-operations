@@ -69,6 +69,7 @@ def miaoshou_read(bridge,body,timeout=20):
                     return {'shop':'brand','mode':'live','ok':True,'data':data,'pagination':result.get('pagination'),'collectedAt':now(),'notice':'本次浏览器读取；仅返回当前页。'}
                 return {'shop':'brand','mode':'live','ok':False,'error':result.get('error','request_failed')}
             time.sleep(.2)
+        bridge.cancel(task)
         return {'shop':'brand','mode':'live','ok':False,'error':'bridge_timeout'}
     except BridgeError as e:
         return {'shop':'brand','mode':'live','ok':False,'error':str(e)}
