@@ -63,7 +63,7 @@ class ChannelOverview:
         return {'channels': [
             {'id':'alibaba','title':'国际站','connection':history('alibaba'),
              'data':metrics,'product_analysis':self.product_analysis(),'actions':['connection-check','products','product','orders','order'],
-             'gaps':['自然流量实时指标未接通；本地指标保留原日期','询盘与报价未验证接通','标题可准备并人工审核；其他商品字段尚未接入']},
+             'gaps':['自然流量实时指标未接通；本地指标保留原日期','询盘与报价未验证接通','标题、主图和详情图支持准备变更；具体提交与正式回读状态须逐商品核对，其他字段尚未接入']},
             {'id':'website','title':'独立站','connection':web_status,
              'data':{'source':'网站询盘连接器缓存','scope':'询盘读取状态，不代表网站流量或销售额'},
              'actions':['读取网站询盘','刷新网站询盘'],

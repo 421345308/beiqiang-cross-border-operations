@@ -263,6 +263,15 @@ test('商品详情将供货链接与多个国际站商品链接集中展示', as
   assert.equal(links.querySelectorAll('a').length,3);
 });
 
+test('商品详情区分抖店历史记录与独立站源码对应', async () => {
+  const h=harness('#/object/product%3A1');
+  h.objects[0].other_channels={douyin:{source_available:true,listings:[{store:'旧店',source_model:'A1',version:'加绒',observation:{record_updated_on:'2026-10-15'}}]},website:{state:'matched',url:'https://www.beiqiang.online/products/bq009/'}};
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('旧店')); assert.ok(h.elements.page.textContent.includes('历史记录，非实时状态'));
+  assert.ok(h.elements.page.textContent.includes('源码对应不代表当前线上已验收'));
+  assert.ok(walk(h.elements.page).some(item=>item.href==='https://www.beiqiang.online/products/bq009/'));
+});
+
 test('客户开发可搜索分类，并把已结束跟进与当前客户分开', async () => {
   const h=harness('#/customers?view=development'); h.discovery.candidates.push(
     {id:'candidate:1',kind:'candidate',title:'英国批发公司',business_category:'批发商',business_summary:'经营休闲鞋',contact_status_label:'未联系'},
@@ -789,13 +798,13 @@ test('商品页按资料缺口排序，并保留退回全部商品的出口', as
   assert.equal(h.elements.page.textContent.includes('资料齐全的款'), false);
 });
 
-test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', async () => {
+test('渠道页区分已接入与未接入的渠道', async () => {
   const h = harness('#/channels'); const original = h.originalFetch;
   h.interceptFetch(async (path, options) => String(path).startsWith('/api/desk/channels') ? { ok: true, json: async () => ({ channels: [{ id: 'alibaba', title: '国际站', data: {}, gaps: ['询盘与报价未验证接通'] }, { id: 'douyin', title: '抖店', connection: {state:'not_integrated'}, data: { available: false }, gaps: ['成交、流量和售后指标未接通'] }, { id: 'another', title: '其他已接入渠道', connection: {state:'ready'}, data:{scope:'经营数据'} }] }) } : original(path, options));
   await h.ui.bootstrap(); await settle();
   const text = h.elements.page.textContent;
   assert.ok(text.includes('国际站'));
-  assert.equal(text.includes('抖店'), false);
+  assert.ok(text.includes('抖店实时经营数据尚未接入'));
   assert.ok(text.includes('其他已接入渠道'));
   assert.ok(text.includes('未接通的能力 1 项'));
   assert.ok(text.includes('询盘与报价未验证接通'));
@@ -881,4 +890,23 @@ test('同行登记遇到已有公司时打开原客户，不重复建立', async
   const dialog=walk(h.body).find(node=>node.tagName==='DIALOG'); walk(dialog).find(node=>node['aria-label']==='买家公司名称').value=' known buyer ';
   await findButton(dialog,'保存并查看客户').click(); assert.equal(h.requests.some(row=>row.path==='/api/desk/discovery' && row.payload),false);
   await findButton(dialog,'打开已有客户').click(); assert.match(h.location.hash,/candidate%3Aold/);
+});
+
+test('总览提供四条业务线的独立入口，抖店状态不伪装为实时数据', async () => {
+  const h = harness(); await h.ui.bootstrap(); await settle();
+  const entries = h.elements.page.querySelector('.business-entrances');
+  for (const [title, hash] of [['外贸客户','/customers'], ['国际站运营','/channels?view=alibaba'], ['抖店运营','/channels?view=douyin'], ['内容创作中心','/creation']]) {
+    const card = entries.children.find(item => item.querySelector('h2')?.textContent === title);
+    assert.ok(card, `Missing ${title}`); await findButton(card, '打开 →').click(); assert.equal(h.location.hash, hash);
+  }
+  h.interceptFetch(async (path, options) => String(path) === '/api/desk/channels'
+    ? {ok:true, json:async()=>({channels:[{id:'alibaba',title:'国际站',connection:{},data:{}},{id:'douyin',title:'抖店',connection:{state:'not_integrated'},data:{available:true,scope:'原业务档案；不是实时经营指标'},gaps:['成交数据未接通']}]})}
+    : h.originalFetch(path,options));
+  h.location.hash='#/channels?view=douyin'; await h.ui.renderRoute(); await settle();
+  assert.ok(h.elements.page.textContent.includes('抖店实时经营数据尚未接入'));
+  assert.ok(h.elements.page.textContent.includes('原业务档案；不是实时经营指标'));
+  assert.equal(h.elements.page.textContent.includes('国际站'),false);
+  await findButton(h.elements.page,'进入内容创作').click(); assert.equal(h.location.hash,'/creation');
+  h.location.hash='#/channels?view=alibaba'; await h.ui.renderRoute(); await settle();
+  assert.ok(h.elements.page.textContent.includes('国际站')); assert.equal(h.elements.page.textContent.includes('抖店'),false);
 });

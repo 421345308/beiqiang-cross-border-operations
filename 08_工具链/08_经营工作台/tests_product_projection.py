@@ -2,6 +2,28 @@ import unittest
 from unittest.mock import patch
 from tests_business import BusinessTests
 class ProductProjectionTests(BusinessTests):
+    def test_cross_channel_projection_uses_only_explicit_product_ids(self):
+        from business import DOUYIN_CHANNEL, WEBSITE_CATALOG
+        self.product()
+        self.write(DOUYIN_CHANNEL,{'stores':[{'key':'old','name':'旧店'},{'key':'new','name':'新店'}],'listings':[
+            {'product_id':'BQ009','identity_state':'MATCHED_SOURCE_MODEL','store_key':'old','source_model':'A1','version':'加绒','observation':{'record_updated_on':'2026-10-15'}},
+            {'product_id':'BQ009','identity_state':'MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE','store_key':'new','source_model':'A1-R','version':'常规'},
+            {'product_id':None,'identity_state':'PENDING_CANONICAL_BINDING','source_model':'BQ009'},
+            {'product_id':'BQ009','identity_state':'PENDING_CANONICAL_BINDING','source_model':'unconfirmed'}]})
+        self.write(WEBSITE_CATALOG,[{'code':'BQ009','slug':'bq009'},{'code':'BQ-009','slug':'other'}])
+        channels=self.business.get_object('product:BQ009')['other_channels']
+        self.assertEqual([v['version'] for v in channels['douyin']['listings']],['加绒','常规'])
+        self.assertEqual(channels['douyin']['listings'][0]['observation']['record_updated_on'],'2026-10-15')
+        self.assertEqual(channels['website']['url'],'https://www.beiqiang.online/products/bq009/')
+        self.write(WEBSITE_CATALOG,[{'code':'BQ009','slug':'bq009'},{'code':'BQ009','slug':'another'}])
+        website=self.business.get_object('product:BQ009')['other_channels']['website']
+        self.assertEqual(website['state'],'ambiguous');self.assertEqual(website['url'],'')
+
+    def test_cross_channel_missing_source_is_not_offline_status(self):
+        self.product();channels=self.business.get_object('product:BQ009')['other_channels']
+        self.assertFalse(channels['douyin']['source_available'])
+        self.assertEqual(channels['website']['state'],'source_unavailable')
+
     def test_unavailable_product_shows_replacement_status(self):
         self.product()
         import json

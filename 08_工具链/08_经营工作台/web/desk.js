@@ -109,7 +109,7 @@
   function businessEntrances() {
     const grid = el('div', undefined, 'business-entrances'), products = S.objects.filter(item => item.kind === 'product' && !/^HR[-_]?\d+$/i.test(item.title || '')).length;
     const website = typeof S.websiteStatus.total === 'number' ? S.websiteStatus.total : S.objects.filter(item => item.source_type === 'website' || String(item.id).startsWith('customer:website-')).length;
-    for (const [title, note, hash] of [['商品', `已接入 ${products} 款商品 · 查资料、选素材、整理选款`, '/products'], ['客户', '查看客户需求、往来与开发进展', '/customers'], ['网站询盘', S.websiteStatus.observed_at ? `已读取 ${website} 条询盘 · 查看客户需求` : '询盘正在读取', '/customers?view=inquiries&q=%E7%BD%91%E7%AB%99']]) { const card = el('article', undefined, 'card business-entry'); card.append(el('h2', title), el('p', note), button('打开 →', () => { location.hash = hash; }, 'quiet')); grid.append(card); }
+    for (const [title, note, hash] of [['外贸客户', '查看客户需求、往来与开发进展', '/customers'], ['国际站运营', '查看商品与已有经营记录', '/channels?view=alibaba'], ['抖店运营', '查看渠道状态并继续商品与内容工作', '/channels?view=douyin'], ['内容创作中心', '继续创作项目与画布', '/creation'], ['商品中心', `已接入 ${products} 款商品 · 查资料、选素材、整理选款`, '/products'], ['独立站运营', S.websiteStatus.observed_at ? `已读取 ${website} 条询盘 · 查看搜索与询盘` : '查看搜索连接与询盘状态', '/channels?view=website']]) { const card = el('article', undefined, 'card business-entry'); card.append(el('h2', title), el('p', note), button('打开 →', () => { location.hash = hash; }, 'quiet')); grid.append(card); }
     return grid;
   }
   function image(asset, cls) { const src = safeUrl(asset?.url); if (!src) return null; const img = el('img', undefined, cls); img.src = src; img.alt = assetLabel(asset); img.loading = 'lazy'; img.referrerPolicy = 'no-referrer'; img.addEventListener('error', () => img.remove()); return img; }
@@ -120,6 +120,7 @@
     else if(supply.kind==='external') { const row=el('p','外采供货'); if(supply.model)row.append(el('span',' · '+text(supply.model))); const a=link('查看供货商品',supply.url); if(a)row.append(el('span',' · '),a); host.append(row); }
   }
   function appendProductLinks(host, object) {
+    appendOtherChannels(host, object);
     const supply = object.supply || {}, listings = (object.links || []).filter(item => /^Alibaba \d+$/.test(item.label || ''));
     if (supply.kind !== 'own' && !safeUrl(supply.url) && !listings.length) return;
     const section = el('div', undefined, 'product-links'), links = el('div', undefined, 'related-links');
@@ -128,6 +129,21 @@
     else if (supply.kind === 'external') { links.append(el('span', '外采供货')); const source = link(supply.model ? `供货商品 ${supply.model} ↗` : '供货商品 ↗', supply.url); if (source) links.append(source); }
     for (const item of listings) { const a = link(`国际站商品 ${item.label.split(' ')[1]} ↗`, item.url); if (a) links.append(a); }
     section.append(links); host.append(section);
+  }
+  function appendOtherChannels(host, object) {
+    const channels=object.other_channels; if (!channels) return;
+    const section=el('div', undefined, 'product-links'); section.append(el('h3','抖店与独立站'));
+    const douyin=channels.douyin || {}, rows=douyin.listings || [];
+    if (!douyin.source_available) section.append(el('p','抖店对应资料暂不可读'));
+    else if (!rows.length) section.append(el('p','抖店：未找到明确商品对应，不能据此判断是否上架'));
+    else for (const row of rows) {
+      const observed=row.observation || {};
+      section.append(el('p', `抖店 · ${text(row.store)} · ${text(row.source_model)} · ${text(row.version)}${observed.record_updated_on ? ' · 原记录 '+text(observed.record_updated_on) : ''}（历史记录，非实时状态）`));
+    }
+    const website=channels.website || {};
+    if (website.state==='matched') { const p=el('p','独立站：源码商品对应 · '), a=link('打开商品页 ↗',website.url); if(a)p.append(a); section.append(p,el('p','源码对应不代表当前线上已验收。','muted')); }
+    else section.append(el('p', website.state==='ambiguous' ? '独立站：商品对应有歧义，暂不生成链接' : website.state==='source_unavailable' ? '独立站：商品对应资料暂不可读' : '独立站：已查范围未找到对应，其他网站商品资料尚未接入'));
+    host.append(section);
   }
   function productCategory(object) { const d=object.category && object.category !== '其他' ? object.category : productDescription(object); return /靴/.test(d) ? 'boot' : /洞洞/.test(d) ? 'clog' : /凉鞋|拖鞋|半拖/.test(d) ? 'sandal' : /乐福|豆豆/.test(d) ? 'loafer' : /套脚|袜套|一脚蹬/.test(d) ? 'slip' : /系带/.test(d) ? 'lace' : 'other'; }
   function tile(object) {
@@ -253,16 +269,18 @@
     load();
   }
   async function renderChannels() {
-    const page = $('page'); page.replaceChildren(heading('渠道', '从渠道继续经营', '查看已有数据和可以直接进入的工作。'));
-    try { const data=await api('/api/desk/channels'); if (S.page !== 'channels') return; const grid=el('div',undefined,'overview-grid');
-      for (const item of data.channels || []) { if (item.connection?.state === 'not_integrated') continue; const card=el('section',undefined,'card'); card.append(el('h2',item.title));
+    const page = $('page'), serial = S.loadSerial, selected = parseRoute().query.get('view'); page.replaceChildren(heading('渠道', '从渠道继续经营', '查看已有数据和可以直接进入的工作。'));
+    try { const data=await api('/api/desk/channels'); if (S.page !== 'channels' || serial !== S.loadSerial) return; const grid=el('div',undefined,'overview-grid');
+      if (selected) page.append(button('查看全部渠道', () => { location.hash = '/channels'; }, 'quiet'));
+      for (const item of data.channels || []) { if (selected && item.id !== selected) continue; const card=el('section',undefined,'card'); card.append(el('h2',item.title));
         if (item.id === 'website') { card.append(el('p',websiteText()),el('p',item.connection?.total == null ? '询盘数量暂不可用' : `现有网站询盘：${item.connection.total} 条`),button('查看网站询盘',()=>{location.hash='/customers?view=inquiries';},'quiet'));mountSearchConsole(card); }
         else if (item.id === 'alibaba') { const stamp=item.connection?.last_success_at; card.append(el('p',stamp ? `最近成功读取：${time(stamp)}` : '尚无可展示的近期读取记录。')); if(item.data?.ok && item.data.metrics) { const metrics=item.data.metrics; const labels={search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors:'访客',inquiries:'询盘',tm_buyers:'TM买家',marketing_clicks:'营销点击'}; card.append(el('p',`历史数据 ${item.data.period || ''} · ${item.data.timezone || ''}`)); const line=Object.entries(labels).filter(([k])=>metrics[k] != null).map(([k,v])=>`${v} ${metrics[k]}`).join(' · '); if(line)card.append(el('p',line)); card.append(el('p','商品口径汇总，人数未去重；不用于计算转化率。','muted')); } card.append(button('查看商品',()=>{location.hash='/products';},'quiet'),button('查看订单买家',()=>{location.hash='/customers?view=inquiries&source=orders';},'quiet')); }
         else {
           const detail = item.data || {};
           card.append(el('p', detail.available === false ? '当前未取到该渠道数据。' : (text(detail.scope) || '暂无可展示的指标。')));
           if (detail.observed_at) card.append(el('p', `上次观测：${time(detail.observed_at)}`, 'muted'));
-          for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
+          if (item.id === 'douyin') card.append(el('p', '抖店实时经营数据尚未接入。', 'muted'), button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'), button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'));
+          else for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
         }
         if (item.id === 'alibaba' && item.product_analysis) {
           const analysis=item.product_analysis, section=el('section',undefined,'channel-product-analysis');

@@ -17,6 +17,8 @@ PRODUCTS='00_总控台/产品中心/数据/产品.json'
 SUPPLY='00_总控台/产品中心/数据/供应来源.json'
 ASSETS='00_总控台/产品中心/数据/素材索引.json'
 CHANNEL='02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
+DOUYIN_CHANNEL='09_国内电商/抖店/数据/渠道产品对应.json'
+WEBSITE_CATALOG='03_独立站/03_网站源码/app/data/reviewed-catalog.json'
 CRM='04_客户开发/04_发送与跟进记录/客户开发跟进表_20260802.csv'
 SKIP={'node_modules','outputs','_build','build','dist','cache','__pycache__','backups'}
 SOURCE_STATES={'ADOPTED':'已采纳供货来源','OWNER_CONFIRMED':'负责人确认本厂','RAW_PACKAGE':'已有原始数据包','MAPPED':'已建立来源对应','MISSING':'来源缺失，待补证','CANDIDATE':'候选来源，尚未采纳','HOLD_SOURCE':'来源待核实，暂停承诺'}
@@ -67,6 +69,23 @@ class Business:
             for pid in asset.get('products',[]):asset_map.setdefault(pid,[]).append(asset)
         channel_map={}
         for row in self._json(CHANNEL,'listings'):channel_map.setdefault(row.get('product_id'),[]).append(row)
+        douyin_map={}
+        for row in self._json(DOUYIN_CHANNEL,'listings'):
+            pid=row.get('product_id')
+            if isinstance(pid,str) and pid and row.get('identity_state') in ('MATCHED_SOURCE_MODEL','MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE'):
+                douyin_map.setdefault(pid,[]).append(row)
+        douyin_file=self.root/DOUYIN_CHANNEL
+        stores={row.get('key'):row.get('name') for row in self._json(DOUYIN_CHANNEL,'stores')}
+        # The website has several sources. This JSON is the structured subset with
+        # explicit code and slug; absence here does not mean absence from the site.
+        website_file=self.root/WEBSITE_CATALOG; website_map={}
+        if website_file.is_file():
+            website_rows=json.loads(website_file.read_text(encoding='utf-8-sig'))
+            if not isinstance(website_rows,list):raise ValueError('网站商品原档结构发生变化：'+WEBSITE_CATALOG)
+            for row in website_rows:
+                code=row.get('code');slug=row.get('slug')
+                if isinstance(code,str) and code and isinstance(slug,str) and re.fullmatch(r'[a-z0-9-]+',slug):
+                    website_map.setdefault(code,[]).append(slug)
         channel_file=self.root/CHANNEL
         channel_states=json.loads(channel_file.read_text(encoding='utf-8-sig')).get('product_state',{}) if channel_file.is_file() else {}
         result=[]
@@ -161,8 +180,16 @@ class Business:
             source_core={k:source[k] for k in ('id','supplier','model','url','price','currency','observed_at','price_terms') if k in source}
             channel_core=[{'id':v.get('id'),'url':v.get('url'),'current':{k:v.get('current_platform_fields',{}).get(k) for k in ('title','status','at','price_tiers')},'pending_replacement':v.get('pending_replacement') or {},'historical_title':v.get('catalog_fields',{}).get('title')} for v in listings]
             obj['channel_listings']=channel_core
+            douyin=[{'store':stores.get(v.get('store_key')) or v.get('store_key'), 'source_model':v.get('source_model'),
+                     'version':v.get('version'), 'identity_state':v.get('identity_state'),
+                     'observation':v.get('observation') or {}, 'identity_evidence':v.get('identity_evidence')}
+                    for v in douyin_map.get(pid,[])]
+            slugs=website_map.get(pid,[])
+            website={'state':'matched' if len(slugs)==1 else ('ambiguous' if len(slugs)>1 else ('not_in_subset' if website_file.is_file() else 'source_unavailable')),
+                     'url':f'https://www.beiqiang.online/products/{slugs[0]}/' if len(slugs)==1 else '', 'source':WEBSITE_CATALOG}
+            obj['other_channels']={'douyin':{'source_available':douyin_file.is_file(),'listings':douyin},'website':website}
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
-                'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,
+                'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,'other_channels':obj['other_channels'],
                 'full_index':PRODUCTS,'boundary':'标题/用途候选不是材料、功能、自有工厂或供货承诺的证明。完整回执按原档路径查阅。'},ensure_ascii=False,indent=2)
             result.append(obj)
         return result
