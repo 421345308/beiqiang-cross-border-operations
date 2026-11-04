@@ -330,7 +330,9 @@
               try {const data=await api('/api/desk/miaoshou-bridge/status',{});if(S.page==='channels' && serial===S.loadSerial)bridgeResult.replaceChildren(el('p',data.online?'连接在线；读取时会再次核验妙手登录及店铺。':data.paired?'已配对，但当前页面暂未在线。':'尚未配对实时连接。'));}
               catch(error){bridgeResult.replaceChildren(el('p',error.message));}finally{bridgeStatus.disabled=false;}
             },'quiet');
-            card.append(check,snapshot,pair,bridgeStatus,button('交给 Agent 经营抖店',()=>{location.hash='/object/channel%3Adouyin';},'quiet'),button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'),button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'),result,snapshotResult,bridgeResult);
+            const actions=el('div',undefined,'channel-actions');
+            actions.append(pair,bridgeStatus,button('交给 Agent 经营抖店',()=>{location.hash='/object/channel%3Adouyin';},'quiet'),check,snapshot,button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'),button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'));
+            card.append(actions,result,snapshotResult,bridgeResult);
           }
           else for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
         }
