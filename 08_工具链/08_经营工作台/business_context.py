@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 _PRODUCT_REFERENCE = re.compile(r'(?<![A-Za-z0-9-])(?:BQ|HR)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?![A-Za-z0-9-])', re.I)
 
 def _commercial_product_refs(business, commercial):
-    """Resolve explicit codes in a customer's own commercial records, without aliases."""
+    """Resolve explicit codes against product IDs and recorded current models, not aliases."""
     records=(commercial or {}).get('records') or []
     references=[]
     for record in records:
@@ -21,7 +21,11 @@ def _commercial_product_refs(business, commercial):
     by_id={}
     for product in products:
         oid=product.get('id','')
-        if oid.startswith('product:'):by_id.setdefault(oid.removeprefix('product:').upper(),[]).append(product)
+        if not oid.startswith('product:'):continue
+        codes={oid.removeprefix('product:').upper()}
+        current=product.get('current_model')
+        if isinstance(current,str) and current.strip():codes.add(current.strip().upper())
+        for code in codes:by_id.setdefault(code,[]).append(product)
     result=[]
     for ref in references:
         matches=by_id.get(ref['code'],[])

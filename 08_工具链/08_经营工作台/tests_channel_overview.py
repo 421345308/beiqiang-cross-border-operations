@@ -71,4 +71,17 @@ class OverviewTest(unittest.TestCase):
         self.assertEqual(quality['below_5'][0]['object_id'],'product:A')
         self.assertIsNone(quality['below_5'][1]['object_id'])
 
+    def test_historical_quality_keeps_snapshot_and_shows_separate_official_record(self):
+        from channel_overview import CHANNEL
+        class Workspaces:
+            def receipts(self):return []
+            def metrics(self):return {}
+        with tempfile.TemporaryDirectory() as root, patch('channel_overview.latest_quality',return_value={'below_5':[{'id':'11','score':3.9}],'below_5_count':1}):
+            path=Path(root)/CHANNEL;path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({'listings':[{'id':'11','observation':{'score':'5.00','score_scope':'2026-11-04 18:16 北京时间官方评分回读'}}]}),encoding='utf8')
+            quality=ChannelOverview(SimpleNamespace(root=Path(root)),Workspaces()).snapshot()['channels'][0]['quality']
+        self.assertEqual(quality['below_5_count'],1)
+        self.assertEqual(quality['below_5'][0]['score'],3.9)
+        self.assertEqual(quality['below_5'][0]['recorded_score']['score'],'5.00')
+
 if __name__=='__main__':unittest.main()

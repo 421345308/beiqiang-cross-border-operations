@@ -74,14 +74,16 @@ test('商品素材明确选择后引用到选定创作画布', async () => {
   const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
   h.interceptFetch(async(path,options={})=>{
     const url=new URL(path,'http://127.0.0.1:8766');
-    if(url.pathname==='/api/desk/product-creation')return {ok:true,json:async()=>({assets:[{path:'商品图.jpg',name:'商品图.jpg',label:'主图'}],projects:[{id:'creation:one',title:'创作项目'}],notice:'原文件不变'})};
+    if(url.pathname==='/api/desk/product-creation')return {ok:true,json:async()=>({assets:[{path:'商品图.jpg',name:'商品图.jpg',label:'主图',kind:'image',url:'/api/media/file?path=商品图.jpg'}],projects:[{id:'creation:one',title:'创作项目'}],notice:'原文件不变'})};
     if(url.pathname==='/api/desk/creation-canvas')return {ok:true,json:async()=>({canvas:{version:'v1'}})};
     if(url.pathname==='/api/desk/product-creation/add'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({added:true,notice:'已加入'})};}
     return original(path,options);
   });
   await h.ui.bootstrap();await settle();const box=walk(h.elements.page).find(x=>x.tagName==='DETAILS' && x.textContent.includes('用于内容创作'));box.open=true;await box.listeners.toggle();await settle();
   await findButton(box,'加入项目画布').click();assert.equal(calls.length,0);
-  walk(box).find(x=>x['aria-label']==='选择商品素材').value='商品图.jpg';walk(box).find(x=>x['aria-label']==='选择创作项目').value='creation:one';
+  const asset=walk(box).find(x=>x['aria-label']==='选择商品素材'), project=walk(box).find(x=>x['aria-label']==='选择创作项目');asset.value='商品图.jpg';asset.listeners.change();project.value='creation:one';project.listeners.change();
+  assert.ok(box.textContent.includes('已选素材：主图'));assert.ok(box.textContent.includes('目标项目：创作项目'));assert.ok(walk(box).some(x=>x.tagName==='IMG' && x.alt==='主图'));
+  await findButton(box,'预览选中素材').click();assert.ok(walk(h.body).some(x=>x.tagName==='DIALOG' && x.open && walk(x).some(y=>y.tagName==='IMG' && y.alt==='主图')));
   await findButton(box,'加入项目画布').click();await settle();assert.deepEqual(calls[0],{product_id:'product:1',project_id:'creation:one',path:'商品图.jpg',version:'v1'});assert.ok(box.textContent.includes('已加入'));
 });
 test('业务对象可继续已保存的 Agent 会话，续接请求携带原工作编号', async () => {
@@ -818,10 +820,25 @@ test('渠道页区分已接入与未接入的渠道', async () => {
   await h.ui.bootstrap(); await settle();
   const text = h.elements.page.textContent;
   assert.ok(text.includes('国际站'));
-  assert.ok(text.includes('抖店实时经营数据尚未接入'));
+  assert.ok(text.includes('成交、流量和售后指标尚未接入'));
   assert.ok(text.includes('其他已接入渠道'));
   assert.ok(text.includes('未接通的能力 1 项'));
   assert.ok(text.includes('询盘与报价未验证接通'));
+});
+test('抖店仅在用户点击后分店检查，明确展示过期、未绑定及商品首页',async()=>{
+  const h=harness('#/channels?view=douyin'),original=h.originalFetch;let calls=0;
+  h.interceptFetch(async(path,options)=>{
+    if(path==='/api/desk/channels')return {ok:true,json:async()=>({channels:[{id:'douyin',title:'抖店',data:{scope:'原业务档案'},gaps:[]}]})};
+    if(path==='/api/desk/douyin?check_unbound=1'){calls++;return {ok:true,json:async()=>({shops:[
+      {id:'legacy',title:'既有零售店',ok:false,error:{code:'target_missing',message:'目标未绑定'},session:{state:'expired',message:'会话已过期，且目标店铺尚未绑定'}},
+      {id:'brand',title:'品牌店',ok:true,collectedAt:'2026-11-04T08:00:00Z',pagination:{returned:1,total:120},data:{items:[{title:'真实商品'}]}}
+    ],notice:'仅第一页'})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.equal(calls,0);
+  await findButton(h.elements.page,'检查两店连接').click();await settle();assert.equal(calls,1);
+  assert.match(h.elements.page.textContent,/目标未绑定/);assert.match(h.elements.page.textContent,/会话已过期/);
+  assert.match(h.elements.page.textContent,/平台总数 120 款/);assert.match(h.elements.page.textContent,/真实商品/);assert.match(h.elements.page.textContent,/仅第一页/);
 });
 test('独立站搜索数据连接入口及真实读取结果展示',async()=>{
   const h=harness('#/channels'),original=h.originalFetch;let state={state:'not_connected',available:false};
@@ -840,9 +857,9 @@ test('独立站搜索数据连接入口及真实读取结果展示',async()=>{
 });
 test('国际站质量诊断保留覆盖与失败信息并按链接进入商品', async () => {
   const h=harness('#/channels');
-  h.interceptFetch(async(path,options)=>path==='/api/desk/channels'?{ok:true,json:async()=>({channels:[{id:'alibaba',title:'国际站',data:{},quality:{available:true,notice:'采集结果，非实时',observed_at:'2026-11-04T05:00:00Z',catalog_total:10,selected:2,scored:1,error_count:1,missing_score_count:1,complete:false,below_5_count:1,below_5:[{id:'11',model:'BQ001',score:4.5,problems:['price'],platform_reason:'平台指出价格不一致'}]},product_analysis:{available:false,notice:'历史档案不可用',items:[{listing_id:'11',object_id:'product:BQ001'}]}}]})}:h.originalFetch(path,options));
+  h.interceptFetch(async(path,options)=>path==='/api/desk/channels'?{ok:true,json:async()=>({channels:[{id:'alibaba',title:'国际站',data:{},quality:{available:true,notice:'采集结果，非实时',observed_at:'2026-11-04T05:00:00Z',catalog_total:10,selected:2,scored:1,error_count:1,missing_score_count:1,complete:false,below_5_count:1,below_5:[{id:'11',model:'BQ001',score:4.5,problems:['price'],platform_reason:'平台指出价格不一致',recorded_score:{score:'5.00',scope:'2026-11-04 18:16 北京时间官方评分回读'}}]},product_analysis:{available:false,notice:'历史档案不可用',items:[{listing_id:'11',object_id:'product:BQ001'}]}}]})}:h.originalFetch(path,options));
   await h.ui.bootstrap();await settle();
-  assert.match(h.elements.page.textContent,/结果不完整/);assert.match(h.elements.page.textContent,/低于 5.0：1/);assert.match(h.elements.page.textContent,/平台指出价格不一致/);assert.match(h.elements.page.textContent,/price/);
+  assert.match(h.elements.page.textContent,/结果不完整/);assert.match(h.elements.page.textContent,/采集时低于 5.0：1/);assert.match(h.elements.page.textContent,/平台指出价格不一致/);assert.match(h.elements.page.textContent,/price/);assert.match(h.elements.page.textContent,/商品档案另有评分 5.00/);
   await findButton(h.elements.page,'查看当前商品').click();assert.match(h.location.hash,/product%3ABQ001/);
 });
 test('渠道经营分析保留历史期和空数据，筛选重点行动并进入精确关联商品', async () => {
@@ -924,7 +941,7 @@ test('总览提供四条业务线的独立入口，抖店状态不伪装为实�
     ? {ok:true, json:async()=>({channels:[{id:'alibaba',title:'国际站',connection:{},data:{}},{id:'douyin',title:'抖店',connection:{state:'not_integrated'},data:{available:true,scope:'原业务档案；不是实时经营指标'},gaps:['成交数据未接通']}]})}
     : h.originalFetch(path,options));
   h.location.hash='#/channels?view=douyin'; await h.ui.renderRoute(); await settle();
-  assert.ok(h.elements.page.textContent.includes('抖店实时经营数据尚未接入'));
+  assert.ok(h.elements.page.textContent.includes('成交、流量和售后指标尚未接入'));
   assert.ok(h.elements.page.textContent.includes('原业务档案；不是实时经营指标'));
   assert.equal(h.elements.page.textContent.includes('国际站'),false);
   await findButton(h.elements.page,'进入内容创作').click(); assert.equal(h.location.hash,'/creation');

@@ -19,6 +19,14 @@ from tests_agent_jobs import Process
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_douyin_unbound_session_probe_requires_explicit_query(self):
+        result=type('Result',(),{'returncode':0,'stdout':'{"shops":[]}'})()
+        with patch('server.subprocess.run',return_value=result) as execute:
+            status,_=self.request('/api/desk/douyin');self.assertEqual(status,200)
+            self.assertNotIn('--check-unbound',execute.call_args.args[0])
+            status,_=self.request('/api/desk/douyin?check_unbound=1');self.assertEqual(status,200)
+            self.assertIn('--check-unbound',execute.call_args.args[0])
+
     def test_product_media_can_be_reused_in_existing_creation_canvas(self):
         from media_assets import MediaAssets
         media=self.root/'01_产品资产/02_成品素材/BQ009/shoe.png'

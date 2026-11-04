@@ -4,6 +4,7 @@ import json
 from alibaba_quality import latest_quality
 
 REPORT = '02_Alibaba运营/01_店铺与全店诊断/经营复核.json'
+CHANNEL = '02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
 
 class ChannelOverview:
     def __init__(self, app, workspaces):
@@ -63,6 +64,16 @@ class ChannelOverview:
                     'scope': '最近50条工具回执中的记录；历史成功不代表当前在线'}
         quality = latest_quality(self.app.root)
         matches = {}
+        observations = {}
+        try:
+            rows = json.loads((Path(self.app.root) / CHANNEL).read_text(encoding='utf-8-sig')).get('listings', [])
+            for listing in rows:
+                observation = listing.get('observation') or {}
+                scope = observation.get('score_scope')
+                if listing.get('id') is not None and observation.get('score') is not None and isinstance(scope, str) and '官方评分' in scope:
+                    observations[str(listing['id'])] = {'score': str(observation['score']), 'scope': scope}
+        except (OSError, ValueError, TypeError, AttributeError):
+            pass
         business = getattr(self.app, 'business', None)
         for obj in business.list_objects(kind='product') if business else []:
             for listing in obj.get('channel_listings') or []:
@@ -71,6 +82,7 @@ class ChannelOverview:
         for row in (quality.get('below_5') or []) + (quality.get('issues') or []):
             linked = matches.get(str(row.get('id')), set())
             row['object_id'] = next(iter(linked)) if len(linked) == 1 else None
+            row['recorded_score'] = observations.get(str(row.get('id')))
         return {'channels': [
             {'id':'alibaba','title':'国际站','connection':history('alibaba'),
              'data':metrics,'product_analysis':self.product_analysis(),'quality':quality,'actions':['connection-check','products','product','orders','order'],

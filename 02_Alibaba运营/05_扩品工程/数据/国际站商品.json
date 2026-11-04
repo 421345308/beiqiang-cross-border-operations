@@ -43413,13 +43413,13 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-04T08:18:45+00:00",
-        "scope": "闭合属性提交后即时官方回读，复审与公开页面待核",
-        "score": null,
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-04T10:16:29+00:00",
+        "scope": "闭合属性修复后官方审核及字段回读；未登录买家页跳转登录，公开验收待完成",
+        "score": "5.00",
         "sku_count": 39,
-        "score_scope": "写前评分3.90；提交后待复核"
+        "score_scope": "2026-11-04 18:16 北京时间官方评分回读"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939641542/prepared.json",
@@ -43559,8 +43559,8 @@
         ]
       },
       "local_sync": {
-        "state": "PENDING_PLATFORM_VERIFY",
-        "current_fields_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/after_get.json",
+        "state": "FORMAL_APPROVED_SCORE_PASS_PUBLIC_PENDING",
+        "current_fields_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/recheck_get_20261104T101617Z.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939641542/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939641542/当前图库与货号.json",
         "at": "2026-10-17T12:33:08.364144+00:00",
@@ -43573,22 +43573,27 @@
         "price_state": "APPROVED",
         "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/2026-11-02_价格调整/1601939641542/verification.json",
         "closure_repair": {
-          "state": "SUBMITTED_PENDING_REVIEW",
+          "state": "FORMAL_APPROVED_SCORE_PASS_PUBLIC_PENDING",
           "before": "Lace-up",
           "observed_after": "Slip-On",
           "request_id": "213f5a2117937803175123525",
           "pre_submit_score": "3.90",
-          "post_submit_score": null,
+          "post_submit_score": "5.00",
           "receipt": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/submission.json",
           "audit": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/after_audit.json",
           "detail_order_changed": true,
-          "next_action": "复审后逐链接核正式字段、质量分、详情顺序和公开页面；结果不明不重发"
+          "next_action": "两次独立未登录买家页访问均跳转登录；公开页面闭合属性与详情呈现待验。",
+          "approved_get": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/recheck_get_20261104T101617Z.json",
+          "approved_score": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/recheck_score_20261104T101617Z.json",
+          "approved_at": "2026-11-04T10:16:29+00:00",
+          "detail_order_recovered": true,
+          "public_status": "LOGIN_REDIRECT_NOT_VERIFIED"
         }
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/after_get.json",
-        "at": "2026-11-04T08:18:45+00:00",
-        "scope": "闭合修复后即时正式get；审核中"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939641542/recheck_get_20261104T101617Z.json",
+        "at": "2026-11-04T10:16:29+00:00",
+        "scope": "审核后官方正式 get；买家公开页待验"
       },
       "platform_group": {
         "id": "916810944",
@@ -43596,7 +43601,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-04T08:18:45+00:00",
+        "at": "2026-11-04T10:16:29+00:00",
         "model": "BQ018-R1 / A116",
         "title": "Lightweight Knit Slip On Walking Shoes with Elastic Laces Heel Loop and EVA Sole",
         "keywords": [
@@ -43611,10 +43616,10 @@
           "https://sc04.alicdn.com/kf/Ha02cbd242f054afb82a40f7352c65b491.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Lightweight-Knit-Slip-On-Walking-Shoes_1601939641542.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+        "scope": "审核后官方正式字段回读；详情与修复前一致，未重新核库存或公开页面",
         "highlights": "No-tie lace design: Elastic cords with end stoppers keep the laced sneaker appearance without a conventional bow knot.\n\nTextured knit upper: The knitted forefoot and instep form a textile upper around the slip-on opening.\n\nHeel pull loop: A rear grip point helps guide the foot into the shoe when putting it on.",
         "sku_count": 39,
         "colour_EU": {
@@ -43872,13 +43877,13 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-04T08:20:15+00:00",
-        "scope": "闭合属性提交后即时官方回读，复审与公开页面待核",
-        "score": null,
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-04T10:16:42+00:00",
+        "scope": "闭合属性修复后官方审核及字段回读；未登录买家页跳转登录，公开验收待完成",
+        "score": "5.00",
         "sku_count": 39,
-        "score_scope": "写前评分3.90；提交后待复核"
+        "score_scope": "2026-11-04 18:16 北京时间官方评分回读"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939726170/prepared.json",
@@ -44018,8 +44023,8 @@
         ]
       },
       "local_sync": {
-        "state": "PENDING_PLATFORM_VERIFY",
-        "current_fields_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/after_get.json",
+        "state": "FORMAL_APPROVED_SCORE_PASS_PUBLIC_PENDING",
+        "current_fields_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/recheck_get_20261104T101629Z.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939726170/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939726170/当前图库与货号.json",
         "at": "2026-10-17T12:33:08.435213+00:00",
@@ -44032,22 +44037,27 @@
         "price_state": "APPROVED",
         "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/2026-11-02_价格调整/1601939726170/verification.json",
         "closure_repair": {
-          "state": "SUBMITTED_PENDING_REVIEW",
+          "state": "FORMAL_APPROVED_SCORE_PASS_PUBLIC_PENDING",
           "before": "Lace-up",
           "observed_after": "Slip-On",
           "request_id": "210829b717937804080684232",
           "pre_submit_score": "3.90",
-          "post_submit_score": null,
+          "post_submit_score": "5.00",
           "receipt": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/submission.json",
           "audit": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/after_audit.json",
           "detail_order_changed": false,
-          "next_action": "复审后逐链接核正式字段、质量分、详情顺序和公开页面；结果不明不重发"
+          "next_action": "两次独立未登录买家页访问均跳转登录；公开页面闭合属性与详情呈现待验。",
+          "approved_get": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/recheck_get_20261104T101629Z.json",
+          "approved_score": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/recheck_score_20261104T101629Z.json",
+          "approved_at": "2026-11-04T10:16:42+00:00",
+          "detail_order_recovered": true,
+          "public_status": "LOGIN_REDIRECT_NOT_VERIFIED"
         }
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/after_get.json",
-        "at": "2026-11-04T08:20:15+00:00",
-        "scope": "闭合修复后即时正式get；审核中"
+        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ018/.local/quality_repair_rw/1601939726170/recheck_get_20261104T101629Z.json",
+        "at": "2026-11-04T10:16:42+00:00",
+        "scope": "审核后官方正式 get；买家公开页待验"
       },
       "platform_group": {
         "id": "916810944",
@@ -44055,7 +44065,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-04T08:20:15+00:00",
+        "at": "2026-11-04T10:16:42+00:00",
         "model": "BQ018-W1 / A116",
         "title": "Wholesale Breathable Knit Slip On Walking Shoes with No Tie Elastic Laces and EVA Sole",
         "keywords": [
@@ -44070,10 +44080,10 @@
           "https://sc04.alicdn.com/kf/Ha02cbd242f054afb82a40f7352c65b491.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Wholesale-Breathable-Knit-Slip-On-Walking_1601939726170.html",
-        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
+        "scope": "审核后官方正式字段回读；详情与修复前一致，未重新核库存或公开页面",
         "highlights": "No-tie lace design: Elastic cords with end stoppers keep the laced sneaker appearance without a conventional bow knot.\n\nTextured knit upper: The knitted forefoot and instep form a textile upper around the slip-on opening.\n\nHeel pull loop: A rear grip point helps guide the foot into the shoe when putting it on.",
         "sku_count": 39,
         "colour_EU": {

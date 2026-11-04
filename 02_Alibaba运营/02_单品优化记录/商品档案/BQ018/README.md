@@ -1,6 +1,8 @@
 # BQ018 商品档案
 
-**2026-11-04 16:18–16:20（北京时间）R1/W1闭合属性修复：** `1601939641542` 与 `1601939726170` 分别基于各自当前 Schema 单次提交 `Closure Type: Lace-up → Slip-On`，本款原始“一脚蹬”、针织套脚口与弹力绳止扣依据同 O1。两条提交均获得平台业务成功，即时正式回读均为 `Slip-On`、`modified/N`，审核及公开呈现待核；其他属性和非详情正式字段与写前一致。R1 的四张详情图角色与 URL 多重集合一致但顺序变化；W1 结构化详情及顺序一致。两条写前评分均为3.90，提交后评分尚未复核。各自 Schema、基线、载荷、单次账本、回执与比较在 `.local/quality_repair_rw/<商品ID>/`；审核后逐链接核正式字段、评分、详情顺序及买家页面，结果不明不重发。
+**2026-11-04 18:16（北京时间）R1/W1正式复核：** `1601939641542` 与 `1601939726170` 均为 `approved/Y`，闭合属性 `Slip-On`，实际质量分 **5.00**，平台问题标记全部为 false。两条当前完整结构化详情与修复前一致，包含详情图顺序；R1此前即时顺序变化已恢复。两个未登录买家链接分别跳转阿里登录页，本轮未能核对公开页图文与闭合方式。正式 get 和评分回执分别保存在 `.local/quality_repair_rw/<商品ID>/recheck_get_20261104T1016*.json` 与 `recheck_score_20261104T1016*.json`；正式回读与公开视觉验收分开。
+
+**2026-11-04 16:18–16:20（北京时间）R1/W1闭合属性修复的历史即时回读：** `1601939641542` 与 `1601939726170` 分别基于各自当前 Schema 单次提交 `Closure Type: Lace-up → Slip-On`，本款原始“一脚蹬”、针织套脚口与弹力绳止扣依据同 O1。两条提交均获得平台业务成功，即时正式回读均为 `Slip-On`、`modified/N`，审核及公开呈现待核；其他属性和非详情正式字段与写前一致。R1 的四张详情图角色与 URL 多重集合一致但顺序变化；W1 结构化详情及顺序一致。两条写前评分均为3.90，提交后评分尚未复核。各自 Schema、基线、载荷、单次账本、回执与比较在 `.local/quality_repair_rw/<商品ID>/`；审核后逐链接核正式字段、评分、详情顺序及买家页面，结果不明不重发。
 
 **2026-11-04 16:10（北京时间）正式复核：** `1601939589890` 已为 `approved/Y`，闭合属性为 `Slip-On`，质量分为 **5.00**。本次正式回读的标题、主图、SKU及结构化详情（含图片顺序）与本轮修复前一致；属性修复不再处于审核中。未登录买家浏览器访问目标链接时被重定向至阿里登录页，故本轮未核到买家页面的闭合方式或详情呈现，公开验收仍待完成。正式 get 与评分原件分别为本款 `.local/20261104_O1闭合修正/latest_get_20261104.json`、`latest_score_20261104.json`；请求ID分别为 `0bbb3b2417937798036605723`、`21501be117937798096134104`。下段保留提交后的即时历史状态。
 
@@ -91,7 +93,8 @@
 ### BQ018-R1 / A116 · 1601939641542
 
 - 平台链接：[1601939641542](https://www.alibaba.com/product-detail/For-Casual-Walking-Shoes-Breathable-Knit_1601939641542.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939641542/formal_get.json)；UTC 2026-11-02T02:48:56.740922+00:00。
+- 最新正式回读：`.local/quality_repair_rw/1601939641542/recheck_get_20261104T101617Z.json`；2026-11-04 18:16（北京时间），评分5.00，买家页待验。
+- 历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939641542/formal_get.json)；UTC 2026-11-02T02:48:56.740922+00:00。
 - 当前正式标题：Lightweight Knit Slip On Walking Shoes with Elastic Laces Heel Loop and EVA Sole
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -119,7 +122,8 @@
 ### BQ018-W1 / A116 · 1601939726170
 
 - 平台链接：[1601939726170](https://www.alibaba.com/product-detail/Wholesale-Black-White-Walking-Style-Shoes_1601939726170.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939726170/formal_get.json)；UTC 2026-11-02T02:48:56.580973+00:00。
+- 最新正式回读：`.local/quality_repair_rw/1601939726170/recheck_get_20261104T101629Z.json`；2026-11-04 18:16（北京时间），评分5.00，买家页待验。
+- 历史正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939726170/formal_get.json)；UTC 2026-11-02T02:48:56.580973+00:00。
 - 当前正式标题：Wholesale Breathable Knit Slip On Walking Shoes with No Tie Elastic Laces and EVA Sole
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。

@@ -279,19 +279,46 @@
           const detail = item.data || {};
           card.append(el('p', detail.available === false ? '当前未取到该渠道数据。' : (text(detail.scope) || '暂无可展示的指标。')));
           if (detail.observed_at) card.append(el('p', `上次观测：${time(detail.observed_at)}`, 'muted'));
-          if (item.id === 'douyin') card.append(el('p', '抖店实时经营数据尚未接入。', 'muted'), button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'), button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'));
+          if (item.id === 'douyin') {
+            card.append(el('p', '成交、流量和售后指标尚未接入；可手动检查连接并读取各店在售商品首页。', 'muted'));
+            const result=el('div'), check=button('检查两店连接',async()=>{
+              check.disabled=true;result.replaceChildren(el('p','正在分别检查两家店…'));
+              try{
+                const data=await api('/api/desk/douyin?check_unbound=1');
+                if(S.page!=='channels' || serial!==S.loadSerial)return;
+                result.replaceChildren();
+                for(const shop of data.shops || []){
+                  const section=el('section',undefined,'artifact-row');section.append(el('h3',shop.title || '店铺'));
+                  if(shop.ok){
+                    const page=shop.pagination || {},items=shop.data?.items || [];
+                    section.append(el('p',`读取成功 · ${shop.collectedAt ? time(shop.collectedAt) : '时间未提供'} · 本页 ${page.returned ?? items.length} 款 · 平台总数 ${page.total ?? '未提供'} 款`),el('p','仅在售商品第一页；平台填报库存不等于实物库存。','muted'));
+                    if(items.length){const details=el('details');details.append(el('summary','查看本页商品'));for(const product of items)details.append(el('p',text(product.title || product.name || '未提供商品名称')));section.append(details);}
+                  } else {
+                    section.append(el('p',shop.error?.message || '店铺读取失败'));
+                    if(shop.session?.message)section.append(el('p',shop.session.message));
+                    if(shop.error?.code==='session_expired' || shop.session?.state==='expired')section.append(el('p','请正常续登并恢复该店本地连接；网页登录本身不一定更新工作台会话。','muted'));
+                  }
+                  result.append(section);
+                }
+                if(!(data.shops || []).length)result.append(el('p',data.error || '未取得店铺检查结果。'));
+                if(data.notice)result.append(el('p',data.notice,'muted'));
+              }catch(error){result.replaceChildren(el('p',error.message));}finally{check.disabled=false;}
+            },'quiet');
+            card.append(check,button('查看商品中心', () => { location.hash = '/products'; }, 'quiet'),button('进入内容创作', () => { location.hash = '/creation'; }, 'quiet'),result);
+          }
           else for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
         }
         if (item.id === 'alibaba' && item.quality) {
           const quality=item.quality, section=el('section',undefined,'channel-quality');
           section.append(el('h3','商品质量分'),el('p',quality.notice,'muted'));
           if(quality.available){
-            section.append(el('p',`汇总完成：${time(quality.observed_at)} · 评分采集：${quality.score_observed_from ? time(quality.score_observed_from) : '未知'} 至 ${quality.score_observed_to ? time(quality.score_observed_to) : '未知'} · 目录 ${quality.catalog_total ?? '未知'} · 已检查 ${quality.selected ?? '未知'} · 有评分 ${quality.scored ?? '未知'} · 失败 ${quality.error_count} · 无评分 ${quality.missing_score_count} · ${quality.complete ? '全量检查完成' : '结果不完整'} · 低于 5.0：${quality.below_5_count}`));
+            section.append(el('p',`汇总完成：${time(quality.observed_at)} · 评分采集：${quality.score_observed_from ? time(quality.score_observed_from) : '未知'} 至 ${quality.score_observed_to ? time(quality.score_observed_to) : '未知'} · 目录 ${quality.catalog_total ?? '未知'} · 已检查 ${quality.selected ?? '未知'} · 有评分 ${quality.scored ?? '未知'} · 失败 ${quality.error_count} · 无评分 ${quality.missing_score_count} · ${quality.complete ? '全量检查完成' : '结果不完整'} · 采集时低于 5.0：${quality.below_5_count}`));
             if(quality.catalog_state_counts) section.append(el('p',`平台目录字段：${Object.entries(quality.catalog_state_counts).map(([state,count])=>`${state} ${count}`).join(' · ')}；字段状态不代表买家页验收。`,'muted'));
             for(const row of quality.below_5 || []){
               const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.id} · ${row.score} 分`));
-              if(row.platform_reason)entry.append(el('p',`平台提示：${row.platform_reason}`));
-              if(row.problems?.length)entry.append(el('p',`平台诊断代码：${row.problems.join('、')}`,'muted'));
+              if(row.platform_reason)entry.append(el('p',`采集时平台提示：${row.platform_reason}`));
+              if(row.problems?.length)entry.append(el('p',`采集时平台诊断代码：${row.problems.join('、')}`,'muted'));
+              if(row.recorded_score?.scope)entry.append(el('p',`商品档案另有评分 ${row.recorded_score.score} · ${row.recorded_score.scope}`));
               const objectId=row.object_id || (item.product_analysis?.items || []).find(value=>String(value.listing_id)===String(row.id))?.object_id;
               if(objectId)entry.append(button('查看当前商品',()=>{location.hash=`/object/${encodeURIComponent(objectId)}?listing=${encodeURIComponent(row.id)}`;},'quiet'));
               section.append(entry);
@@ -299,7 +326,7 @@
             const otherIssues=(quality.issues || []).filter(row=>!(typeof row.score==='number' && row.score<5));
             if(otherIssues.length){
               const details=el('details'), summary=el('summary',`其他有平台问题的商品：${otherIssues.length}`);details.append(summary);
-              for(const row of otherIssues){const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.id} · ${row.score ?? '无评分'} 分`));if(row.platform_reason)entry.append(el('p',`平台提示：${row.platform_reason}`));entry.append(el('p',`平台诊断代码：${(row.problems || []).join('、')}`,'muted'));const objectId=row.object_id || (item.product_analysis?.items || []).find(value=>String(value.listing_id)===String(row.id))?.object_id;if(objectId)entry.append(button('查看当前商品',()=>{location.hash=`/object/${encodeURIComponent(objectId)}?listing=${encodeURIComponent(row.id)}`;},'quiet'));details.append(entry);}section.append(details);
+              for(const row of otherIssues){const entry=el('article',undefined,'artifact-row');entry.append(el('h4',`${row.model || '商品'} · 链接 ${row.id} · ${row.score ?? '无评分'} 分`));if(row.platform_reason)entry.append(el('p',`采集时平台提示：${row.platform_reason}`));entry.append(el('p',`采集时平台诊断代码：${(row.problems || []).join('、')}`,'muted'));const objectId=row.object_id || (item.product_analysis?.items || []).find(value=>String(value.listing_id)===String(row.id))?.object_id;if(objectId)entry.append(button('查看当前商品',()=>{location.hash=`/object/${encodeURIComponent(objectId)}?listing=${encodeURIComponent(row.id)}`;},'quiet'));details.append(entry);}section.append(details);
             }
           }
           card.append(section);
@@ -1056,13 +1083,29 @@
         const firstProject=el('option','请选择创作项目');firstProject.value='';projects.append(firstProject);
         for(const item of data.assets || []){const option=el('option',`${item.label || item.name} · ${item.name}`);option.value=item.path;assets.append(option);}
         for(const item of data.projects || []){const option=el('option',item.title);option.value=item.id;projects.append(option);}
+        const selection=el('div',undefined,'creation-asset-selection');selection.setAttribute('aria-live','polite');
+        function showSelection(){
+          selection.replaceChildren();
+          const selectedAsset=(data.assets || []).find(item=>item.path===assets.value);
+          const selectedProject=(data.projects || []).find(item=>item.id===projects.value);
+          if(selectedAsset){
+            selection.append(el('p',`已选素材：${assetLabel(selectedAsset)} · ${text(selectedAsset.name)}`));
+            if(imageAsset(selectedAsset)){
+              const thumb=image(selectedAsset,'');
+              if(thumb){thumb.style.maxWidth='220px';thumb.style.maxHeight='160px';thumb.style.objectFit='contain';selection.append(thumb);}
+            }
+            if(safeUrl(selectedAsset.url))selection.append(button('预览选中素材',()=>previewAsset(selectedAsset),'quiet'));
+          }
+          if(selectedProject)selection.append(el('p',`目标项目：${text(selectedProject.title)}`));
+        }
+        assets.addEventListener('change',showSelection);projects.addEventListener('change',showSelection);
         const add=button('加入项目画布',async()=>{
           if(!assets.value || !projects.value){feedback.textContent='请选择素材和创作项目。';return;}
           const projectId=projects.value, path=assets.value;add.disabled=true;feedback.textContent='正在加入画布…';
           try{const current=await api(`/api/desk/creation-canvas?object_id=${encodeURIComponent(projectId)}`);const result=await api('/api/desk/product-creation/add',{product_id:object.id,project_id:projectId,path,version:current.canvas.version});feedback.replaceChildren(el('span',result.notice+' '),button('打开创作项目',()=>{location.hash=`/creation?item=${encodeURIComponent(projectId)}`;},'quiet'));}
           catch(error){feedback.textContent=error.message;}finally{add.disabled=false;}
         },'quiet');
-        body.append(assets,projects,add);feedback.textContent=data.notice || '';loaded=true;
+        body.append(assets,projects,selection,add);feedback.textContent=data.notice || '';loaded=true;
       }catch(error){feedback.textContent=error.message;}
     });
   }

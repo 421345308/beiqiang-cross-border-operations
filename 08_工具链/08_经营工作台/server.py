@@ -341,7 +341,9 @@ class Handler(BaseHTTPRequestHandler):
                     product_id=value('product_id')
                     return self.send_json(app.product_gaps.for_product(product_id) if product_id else app.product_gaps.summary(limit=int(value('limit') or 12)))
                 if u.path=='/api/desk/douyin':
-                    run=subprocess.run(['node',str(HERE/'douyin_overview.mjs')],capture_output=True,text=True,encoding='utf8',timeout=45,**({'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {}))
+                    args=['node',str(HERE/'douyin_overview.mjs')]
+                    if value('check_unbound')=='1':args.append('--check-unbound')
+                    run=subprocess.run(args,capture_output=True,text=True,encoding='utf8',timeout=45,**({'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {}))
                     if run.returncode:raise ValueError('抖店数据暂不可读')
                     return self.send_json(json.loads(run.stdout))
                 if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())

@@ -33,6 +33,16 @@ class ContextTests(unittest.TestCase):
         self.assertEqual(refs[0]['match'],'ambiguous')
         self.assertNotIn('product',refs[0])
 
+    def test_customer_product_refs_accept_confirmed_current_model_but_not_ambiguous_identity(self):
+        from business_context import _commercial_product_refs
+        products=[{'id':'product:HR049','current_model':'BQ1049','title':'BQ1049', 'aliases':['BQ1057']}]
+        business=SimpleNamespace(list_objects=lambda kind:products)
+        refs=_commercial_product_refs(business,{'records':[{'products':'BQ1049 / HR049 / BQ1057'}]})
+        self.assertEqual([r['match'] for r in refs],['exact','exact','unmatched'])
+        self.assertEqual(refs[0]['product']['id'],'product:HR049')
+        products.append({'id':'product:BQ1049','current_model':'BQ1049'})
+        self.assertEqual(_commercial_product_refs(business,{'records':[{'products':'BQ1049'}]})[0]['match'],'ambiguous')
+
     def test_current_sources_scope_and_fresh_owner_decisions(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
