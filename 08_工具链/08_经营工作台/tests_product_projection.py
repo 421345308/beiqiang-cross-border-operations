@@ -2,6 +2,45 @@ import unittest
 from unittest.mock import patch
 from tests_business import BusinessTests
 class ProductProjectionTests(BusinessTests):
+    def test_website_uses_explicit_current_model_for_historical_identity(self):
+        import json
+        from business import PRODUCTS, WEBSITE_CATALOG
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        data['products'][0].update({'id':'HR049','current_model':'BQ1049','aliases':['BQ1057']})
+        self.write(PRODUCTS,data)
+        self.write(WEBSITE_CATALOG,[{'code':'BQ1049','slug':'bq1049'},{'code':'BQ1057','slug':'bq1057'}])
+        site=self.business.get_object('product:HR049')['other_channels']['website']
+        self.assertEqual(site['state'],'matched')
+        self.assertEqual(site['url'],'https://www.beiqiang.online/products/bq1049/')
+
+    def test_duplicate_current_model_and_cross_identity_are_ambiguous(self):
+        import json
+        from business import PRODUCTS, WEBSITE_CATALOG
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        data['products'][0].update({'id':'HR049','current_model':'BQ1049'})
+        data['products'].append({'id':'HR050','current_model':'BQ1049'})
+        self.write(PRODUCTS,data)
+        self.write(WEBSITE_CATALOG,[{'code':'BQ1049','slug':'bq1049'}])
+        self.assertEqual(self.business.get_object('product:HR049')['other_channels']['website']['state'],'ambiguous')
+        self.assertEqual(self.business.get_object('product:HR050')['other_channels']['website']['state'],'ambiguous')
+        data['products'][1]={'id':'BQ1049'}
+        self.write(PRODUCTS,data)
+        self.assertEqual(self.business.get_object('product:HR049')['other_channels']['website']['state'],'ambiguous')
+        self.assertEqual(self.business.get_object('product:BQ1049')['other_channels']['website']['state'],'ambiguous')
+
+    def test_two_distinct_website_codes_for_one_product_are_ambiguous(self):
+        import json
+        from business import PRODUCTS, WEBSITE_CATALOG
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        data['products'][0].update({'id':'BQ009','current_model':'BQ1049'})
+        self.write(PRODUCTS,data)
+        self.write(WEBSITE_CATALOG,[{'code':'BQ009','slug':'bq009'},{'code':'BQ1049','slug':'bq1049'}])
+        site=self.business.get_object('product:BQ009')['other_channels']['website']
+        self.assertEqual(site['state'],'ambiguous');self.assertEqual(site['url'],'')
+
     def test_website_generated_export_covers_core_and_detects_duplicate_codes(self):
         from business import WEBSITE_EXPORT
         self.product()

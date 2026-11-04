@@ -105,8 +105,15 @@ class Business:
         website_map,website_available,website_source=_website_catalog(self.root)
         channel_file=self.root/CHANNEL
         channel_states=json.loads(channel_file.read_text(encoding='utf-8-sig')).get('product_state',{}) if channel_file.is_file() else {}
+        products=self._json(PRODUCTS,'products')
+        # Only explicit product identities and recorded current models claim a
+        # website code. Multiple product records claiming a code are ambiguous.
+        website_owners={}
+        for index,product in enumerate(products):
+            codes={value for value in (product.get('id'),product.get('current_model')) if isinstance(value,str) and value}
+            for code in codes:website_owners.setdefault(code,set()).add(index)
         result=[]
-        for product in self._json(PRODUCTS,'products'):
+        for product in products:
             pid=product.get('id')
             if not isinstance(pid,str) or not pid:continue
             listings=channel_map.get(pid,[])
@@ -201,9 +208,12 @@ class Business:
                      'version':v.get('version'), 'identity_state':v.get('identity_state'),
                      'observation':v.get('observation') or {}, 'identity_evidence':v.get('identity_evidence')}
                     for v in douyin_map.get(pid,[])]
-            slugs=website_map.get(pid,[])
-            website={'state':'matched' if len(slugs)==1 else ('ambiguous' if len(slugs)>1 else ('not_in_subset' if website_available else 'source_unavailable')),
-                     'url':f'https://www.beiqiang.online/products/{slugs[0]}/' if len(slugs)==1 else '', 'source':website_source}
+            codes={value for value in (pid,product.get('current_model')) if isinstance(value,str) and value}
+            matches=[(code,slug) for code in codes for slug in website_map.get(code,[])]
+            ambiguous=len(matches)>1 or any(len(website_owners.get(code,set()))>1 for code,_ in matches)
+            matched=len(matches)==1 and not ambiguous
+            website={'state':'matched' if matched else ('ambiguous' if ambiguous else ('not_in_subset' if website_available else 'source_unavailable')),
+                     'url':f'https://www.beiqiang.online/products/{matches[0][1]}/' if matched else '', 'source':website_source}
             obj['other_channels']={'douyin':{'source_available':douyin_file.is_file(),'listings':douyin},'website':website}
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
                 'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,'other_channels':obj['other_channels'],
