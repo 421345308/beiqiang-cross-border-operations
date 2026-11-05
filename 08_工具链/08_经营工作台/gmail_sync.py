@@ -296,6 +296,7 @@ class GmailService:
             now=datetime.now(timezone.utc).isoformat()
             self.app.db.execute('INSERT INTO gmail_reply_events (object_id,message_id,dispatch_state,job_id,updated_at,last_error) VALUES (?,?,?,?,?,NULL) ON CONFLICT(object_id,message_id) DO UPDATE SET dispatch_state=excluded.dispatch_state,updated_at=excluded.updated_at,last_error=NULL',(object_id,mid,'dispatching',None,now))
             self.app.db.commit()
+        job_id=None
         try:
             result=self.on_new_reply(object_id,copy.deepcopy(message),copy.deepcopy(context))
             job_id=result.get('id') if isinstance(result,dict) else None
