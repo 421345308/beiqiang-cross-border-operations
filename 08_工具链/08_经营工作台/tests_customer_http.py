@@ -33,16 +33,16 @@ class CustomerHTTPTests(unittest.TestCase):
         created=self.intake();oid=created['object_id']
         status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
         self.assertEqual(status,200);self.assertIn(oid,[r['object_id'] for r in queue['items']])
-        status,flow=self.request('/api/desk/customer-workflow',{'object_id':oid,'state':'preparing','priority':'high','next_action':'先准备合作回复'})
+        status,flow=self.request('/api/desk/customer-workflow',{'revision':self.app.customer_workspace.workflow(oid)['revision'],'object_id':oid,'state':'preparing','priority':'high','next_action':'先准备合作回复'})
         self.assertEqual(status,200);self.assertEqual(flow['state'],'preparing')
         status,profile=self.request('/api/desk/customer-profile?'+urlencode({'object_id':oid}))
         self.assertEqual(status,200);self.assertFalse(profile['stale'])
-        status,saved=self.request('/api/desk/customer-profile',{'object_id':oid,'source_hash':profile['source_hash'],'operator_context':'此数量是估计值，先讨论合作方式'})
+        status,saved=self.request('/api/desk/customer-profile',{'revision':profile['revision'],'object_id':oid,'source_hash':profile['source_hash'],'operator_context':'此数量是估计值，先讨论合作方式'})
         self.assertEqual(status,200);self.assertEqual(saved['workflow']['priority'],'high')
         brief=self.tools(oid).call('get_object',{})['customer_brief']
         self.assertEqual(brief['operator_context'],'此数量是估计值，先讨论合作方式')
         self.assertEqual(brief['workflow']['next_action'],'先准备合作回复')
-        status,closed=self.request('/api/desk/customer-workflow',{'object_id':oid,'state':'archived'})
+        status,closed=self.request('/api/desk/customer-workflow',{'revision':self.app.customer_workspace.workflow(oid)['revision'],'object_id':oid,'state':'archived'})
         self.assertEqual(status,200)
         status,active=self.request('/api/desk/inquiry-queue?bucket=active')
         self.assertNotIn(oid,[r['object_id'] for r in active['items']])
@@ -56,7 +56,7 @@ class CustomerHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);self.assertEqual(obj['source_type'],'manual_import');self.assertEqual(obj['original_text'],original)
         status,profile=self.request('/api/desk/customer-profile?'+urlencode({'object_id':oid}))
         self.assertEqual(status,200);self.assertEqual(profile['original_text'],original)
-        status,saved=self.request('/api/desk/customer-profile',{'object_id':oid,'source_hash':profile['source_hash'],
+        status,saved=self.request('/api/desk/customer-profile',{'revision':profile['revision'],'object_id':oid,'source_hash':profile['source_hash'],
             'original_language':'en','translation_zh':'我们需要800双。请确认可供尺码、样品费用和交期。',
             'analysis':{'intent':'采购条件询问，尚未成交','fit':'待逐款核实','next_action':'确认鞋款及所需尺码',
                 'facts':['原文询问800双'],'inferences':['可能在比较供应商，需核实'],'basis':['已录入原邮件正文'],'missing':['具体鞋款']}})

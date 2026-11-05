@@ -270,6 +270,18 @@ class DeskTools:
         if name=='get_customer_commercial':
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
             return self.business.app.customer_workspace.commercial(self.object_id)
+        if name in ('get_customer_profile','save_customer_profile','get_customer_workflow','save_customer_workflow'):
+            if self.object().get('kind') not in ('customer','prospect'):raise ValueError('客户资料工具仅支持当前客户')
+            workspace=self.business.app.customer_workspace
+            if name.startswith('get_'):
+                if args:raise ValueError('客户读取工具不接受其他对象或参数')
+                return workspace.profile(self.object_id) if name=='get_customer_profile' else workspace.workflow(self.object_id)
+            if self.read_only:raise ValueError('当前自动整理任务只读')
+            if not isinstance(args.get('revision'),str) or not args['revision']:raise ValueError('保存前必须读取并传入revision')
+            if name=='save_customer_profile':
+                if not isinstance(args.get('source_hash'),str) or not args['source_hash']:raise ValueError('保存分析前必须读取并传入source_hash')
+                return workspace.save_profile(self.object_id,args)
+            return workspace.save_workflow(self.object_id,args)
         if name=='save_customer_commercial':
             if self.read_only:raise ValueError('当前自动整理任务只读')
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
@@ -330,6 +342,32 @@ TOOLS.append({'name':'get_customer_commercial','description':'读取当前客户
 TOOLS.append({'name':'save_customer_commercial','description':'按当前委托将报价、样品、订单的已知事实或内部草稿写入当前客户原档，并可更新下一步；必须传入get_customer_commercial返回的revision，版本冲突时重新读取并合并。不会发信、报价给客户或创建平台订单。',
               'inputSchema':{'type':'object','properties':{'revision':{'type':'string'},'record':{'type':'object','properties':{'id':{'type':'string'},'kind':{'type':'string','enum':['quotation','sample','order']},'status':{'type':'string','enum':['draft','recorded','cancelled']},'summary':{'type':'string'},'reference':{'type':'string'},'products':{'type':'string'},'terms':{'type':'string'},'purpose':{'type':'string'},'acceptance':{'type':'string'},'exclusions':{'type':'string'},'actual_result':{'type':'string'},'profit_basis':{'type':'string'}},'required':['kind','status','summary'],'additionalProperties':False},'owner':{'type':'string'},'next_action':{'type':'string'},'due_at':{'type':['string','null']}},'required':['revision'],'additionalProperties':False},
               'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}})
+
+def _customer_tools():
+    from customer_workspace import SOURCE_FIELDS, ANALYSIS_FIELDS
+    import customer_workflow
+    text=lambda maximum:{'type':'string','maxLength':maximum}
+    mapping=lambda fields:{'type':'object','properties':fields,'additionalProperties':False}
+    # CustomerWorkspace._mapping preserves JSON values for these named fields,
+    # including structured claims/evidence and legacy lists, numbers or nulls.
+    # Restrict field names here; do not narrow existing saved value types.
+    derived_value={'description':'保留原有JSON类型；可为文字、列表、结构化事实对象或空值。每组派生资料合计最多50000字符，由客户服务校验。'}
+    profile={'revision':{'type':'string','minLength':1},'source_hash':{'type':'string','minLength':1},
+             'original_language':text(80),'translation_zh':text(50000),'source_note':text(10000),
+             'operator_context':text(12000),'cleaned':mapping({key:derived_value for key in sorted(SOURCE_FIELDS)}),
+             'analysis':mapping({key:derived_value for key in sorted(ANALYSIS_FIELDS)}),
+             'message_translations':{'type':'array','maxItems':500,'items':{**mapping({'message_id':{'type':'string','minLength':1},'translation_zh':{**text(20000),'minLength':1}}),'required':['message_id','translation_zh']}},
+             'evidence':{'type':'array','maxItems':50,'items':{'oneOf':[text(4000),mapping({key:text(4000) for key in ('text','url','path','observed_at')})]}}}
+    workflow={'revision':{'type':'string','minLength':1},
+              **{key:{'type':'string','enum':list(values)} for key,values in [('state',customer_workflow.STATES),('priority',customer_workflow.PRIORITIES),('bucket',customer_workflow.BUCKETS)]},
+              'due_at':{'type':['string','null']},'next_action':text(4000),'note':text(4000)}
+    for kind,fields,required in [('profile',profile,['revision','source_hash']),('workflow',workflow,['revision'])]:
+        yield {'name':'get_customer_'+kind,'description':'读取当前绑定客户的'+('内部派生分析及原文、source_hash、revision。' if kind=='profile' else '推进安排及revision。')+'保存前必须保留本次读取的版本；不读取其他客户。',
+               'inputSchema':mapping({}),'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}}
+        yield {'name':'save_customer_'+kind,'description':'按当前委托保存当前绑定客户的'+('内部派生分析' if kind=='profile' else '内部推进安排')+'；传入实际读取快照的revision'+('与source_hash' if kind=='profile' else '')+'，冲突后重新读取并合并，禁止用新版本直接重试旧成果。不发信，不改原文，不修改其他客户。',
+               'inputSchema':{**mapping(fields),'required':required},'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
+
+TOOLS.extend(_customer_tools())
 
 
 def dispatch(tools,message):

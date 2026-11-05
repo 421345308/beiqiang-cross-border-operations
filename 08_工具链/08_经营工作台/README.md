@@ -2,6 +2,25 @@
 
 入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
 
+## 客户分析与推进安排的版本保护（2026-11-06）
+
+客户分析和推进安排的读取与保存由 `customer_workspace.py` 统一处理。页面保存必须带实际读取的 revision；分析还须带原来源 `source_hash`。同一数据库中的受支持写入在短事务内核对版本：缺版本返回 HTTP 400，旧版本返回 409；页面保留未保存输入，不自动重试。客户分析 Agent 启动及续接时记录输入版本，人工或其他入口修改相关上下文后，旧成果转为 `needs_input`，不会覆盖。旧任务没有记录版本时也不盲目保存。已确认发送后的客户状态更新携带流程版本，更新冲突不会重发邮件。
+
+`desk_mcp.py` 提供 `get_customer_profile` / `save_customer_profile` 与 `get_customer_workflow` / `save_customer_workflow`，只对当前绑定客户工作，保存必须使用此前读取的版本；只读模式禁止保存。`desk_cli.py capabilities list --query customer_` 可发现这些定义，但 CLI 尚无对应的独立客户读写命令。版本字段从现有资料计算，不需要 SQLite 迁移；调用旧接口的外部客户端需先更新并读取版本。
+
+已用两个独立进程竞争相同分析和流程快照，各有一方成功、另一方冲突；双连接还验证提交后插入人工修改时，后续自动步骤沿用自己的旧版本而冲突。真实本机 HTTP 与 MCP 交叉写入也验证旧版本被拒绝。隔离数据下实际启动全新的无界面 Chrome，加载工作台页面，分析和流程两处均验证冲突提示、输入保留及另一方新值保留；用户可先复制输入，再明确放弃本次修改并读取新值。后台刷新失败及主动重读失败也不会清空正在编辑的内容。测试不是已登录桌面浏览器验收。未读取真实邮箱、未发送邮件、未修改真实客户。
+
+**真实 Agent 验收：** 事务快照修复前后分别在临时工作区对合成客户启动一次现有 `AgentJobs` draft；修复后的 Codex CLI / `gpt-6.1-sol` 任务以 attempt 1 完成并保存会话，耗时 83.526 秒。CLI 记录显示调用 `get_business_context`、上述四个客户工具并重新读取两项结果，均成功。服务回读确认分析摘要和下一动作均为测试标记，原始需求未改变。随后补强原来源发生变化时的冲突分类，以合成数据竞争测试验证。轨迹未出现联网搜索或命令执行；draft 后端仍允许网络，不声称本次处于网络硬隔离。只含合成数据与工具名称的本地验收结果留在 `99_临时区/客户MCP真实Codex验收/`，私有运行日志不入公开仓库。可用 `BEIQIANG_LIVE_CODEX=1` 显式运行 `python -X utf8 -m unittest tests_customer_live_codex -v` 重现，默认跳过且会消耗一次模型调用。
+
+**本轮回归（2026-11-06）：** 在本目录执行下列命令，共 264 项，其中 261 项通过、3 项为默认跳过的真实浏览器及两项真实 Codex 集成；另执行前端模拟 DOM 测试 101 项全部通过。将 `BEIQIANG_RUN_BROWSER_TEST=1` 后单独执行 `python -X utf8 -m unittest tests_customer_browser -v`，真实 Chrome 1 项通过；可通过 `BEIQIANG_TEST_CHROME` 指定浏览器路径。测试使用临时工作区和合成客户，真实浏览器不使用现有用户配置。
+
+```powershell
+python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency tests_customer_revision_concurrency tests_customer_revision_race tests_customer_outcome_unknown tests_customer_analysis tests_customer_workspace tests_customer_workflow tests_customer_conversation tests_customer_http tests_customer_revision_http tests_customer_mcp_revision tests_customer_browser tests_customer_live_codex tests_business_context tests_desk_http tests_gmail_drafts tests_gmail_send_authorization tests_gmail_event_safety tests_gmail_sync tests_gmail_job_integration tests_gmail_mailbox tests_gmail_filter tests_gmail_translation tests_agent_jobs tests_job_recovery tests_runtime_backend tests_mcp_dossier
+node --test tests_desk_frontend.mjs
+```
+
+仍有限制：跨数据库、绕开服务的手工文件修改、未纳入版本的外部来源竞争，以及文件和 SQLite 之间的崩溃原子性没有解决。Gmail 仅将已持久化事件/确认纳入版本；非派发事件和各进程独立邮件缓存尚无完整共享观察版本。冲突后页面没有并排合并界面，须保留输入、重新读取并人工核对。事件与 Job 仍缺只读对账及人工关联入口，也没有通用 Router、父子任务依赖或 Watchdog。
+
 ## Gmail 事件与 Agent 任务关联（2026-11-05）
 
 现有 Gmail 新回复事件使用 `gmail_reply_events` 去重，旧表增量迁移 `job_id`、`updated_at`、`last_error`。满足现有筛选条件的回复先原子认领事件，再发布缓存并在锁外调用现有 Agent Job；成功时持久化实际 Job ID。已确认邮件不会被认领；若确认发生在认领之后，不会撤销已开始的回调。仅能证明尚未创建任务的同客户忙碌情况使用 `deferred` 并按间隔重试；回调异常、无 Job ID、旧 `failed` 或中断的 `dispatching` 均须核对，不自动重播。
@@ -12,7 +31,7 @@
 
 MCP 客户商机写入要求先调用 `get_customer_commercial` 读取 revision，再传给 `save_customer_commercial`；版本不一致时重新读取合并。revision 覆盖商机、已保存 workflow、原来源 hash、已持久 Gmail 事件及确认标识；不依赖各进程私有邮件缓存。客户分析、工作流和商机的受支持写入口用同一 SQLite 短事务串行化派生 JSON 读改写；其他数据库及绕开服务的直接文件写入不受保护。
 
-远端改造提交：[0c16d6f](https://github.com/421345308/beiqiang-cross-border-operations/commit/0c16d6f5c21762b51b3338ba59409c05bf4a4e6b)、[51ee035](https://github.com/421345308/beiqiang-cross-border-operations/commit/51ee0357c60c6109048f7e0b77d9be0f8f09f5ff)、[ae1585b](https://github.com/421345308/beiqiang-cross-border-operations/commit/ae1585b399cccf53aa0be6a3dae0e012fff4210f)。本机回归覆盖 Agent 旧 revision、下一步变化、双进程不同字段及同 revision 竞争。文件和 SQLite 不能保证断电原子；写入结果不明时 HTTP/MCP及客户分析任务提示先核对，不能盲目重试。分析及工作流尚无客户端派生版本，同字段基于旧视图的后写仍可能覆盖。
+远端改造提交：[0c16d6f](https://github.com/421345308/beiqiang-cross-border-operations/commit/0c16d6f5c21762b51b3338ba59409c05bf4a4e6b)、[51ee035](https://github.com/421345308/beiqiang-cross-border-operations/commit/51ee0357c60c6109048f7e0b77d9be0f8f09f5ff)、[ae1585b](https://github.com/421345308/beiqiang-cross-border-operations/commit/ae1585b399cccf53aa0be6a3dae0e012fff4210f)。本机回归覆盖 Agent 旧 revision、下一步变化、双进程不同字段及同 revision 竞争。文件和 SQLite 不能保证断电原子；写入结果不明时 HTTP/MCP及客户分析任务提示先核对，不能盲目重试。2026-11-05 留下的分析和工作流客户端版本缺口，已按上节继续修复。
 
 **本机迁移与端到端验收：** [本轮修复及测试提交 `c81a104d86434f0233da9b1c640b1a2fe830bce7`](https://github.com/421345308/beiqiang-cross-border-operations/commit/c81a104d86434f0233da9b1c640b1a2fe830bce7)。加载前真实 SQLite 事件表为三列、4条记录；使用 SQLite 在线备份并核完整性后重启，迁移后三个新列出现，原4条及其状态均保留。`tests_gmail_job_integration.py` 用合成来信与临时数据库，贯通 Gmail 过滤与事件持久化、`Workbench._gmail_reply`、真实 `AgentJobs`、事件回写 Job ID 与状态查询；另以显式启用的测试调用真实 Codex 完成隔离的模拟回复任务，未连接真实邮箱、未发信。常规测试默认跳过这项真实模型调用。
 
@@ -22,7 +41,7 @@ MCP 客户商机写入要求先调用 `get_customer_commercial` 读取 revision�
 python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency tests_customer_outcome_unknown tests_customer_analysis tests_customer_workspace tests_customer_workflow tests_business_context tests_desk_http tests_gmail_event_safety tests_gmail_sync tests_gmail_job_integration tests_gmail_mailbox tests_gmail_filter tests_agent_jobs tests_job_recovery tests_runtime_backend
 ```
 
-**下一轮三个候选：**（1）为客户分析和工作流增加贯穿 UI、MCP 与 Agent 的派生版本，并设计共享的邮箱观察版本；（2）建立事件与 Job 的可查询对账和人工接续，明确 claim 后崩溃/回执不明处理；（3）在现有执行器上增加持久父子任务、依赖及 Worker Session，再基于可观测状态逐步引入 Fast/Slow Path 和 Watchdog。以上均不是本轮已实现能力。
+**2026-11-05 接续候选：** 分析和工作流的页面、MCP 与 Agent 版本保护已按上节实现；共享邮箱观察版本仍未实现。事件与 Job 的可查询对账和人工接续，以及持久父子任务、依赖、Worker Session、Fast/Slow Path 和 Watchdog 均继续待做。
 
 ## Agent Runtime 代码审计与接续（2026-11-05）
 
@@ -34,10 +53,10 @@ python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency 
 | 动态规划与多 Agent | **部分实现**：普通 Codex 任务可使用现有多 Agent 功能，不同业务对象任务可并行；没有工作台可查的父子任务、依赖、委派范围或汇总协议。单服务内同对象和旧进程检查不是跨进程协调。 |
 | 状态和恢复 | **部分实现**：SQLite `agent_jobs(id,data)` 存任务状态、事件、尝试与 session；服务启动将活动任务标失败，需核旧进程/成果后手动继续会话。此前真实验证取消并继续；服务崩溃仅用真实 PID 模拟，未实现步骤检查点、局部重试或外部恰好一次。旧 `server.py` 的 `runs` 为另一条兼容路径。 |
 | 上下文和成果 | **部分实现**：`business.py`、`business_context.py` 和 `desk_mcp.py` 读取原对象及资料；`business_artifacts` 只存索引，成果正文留原对象 `.local`。创作项目上下文仍有专门分支；不是统一的跨任务共享上下文或事实库。 |
-| 能力发现和共用服务 | **部分实现**：`desk_mcp.py` 的 19 项静态工具及 `desk_cli.py capabilities list` 支持基础发现，未按对象/实际连接状态完整筛选，UI 另有静态清单。画布和商品素材的 UI/MCP/CLI 共用 `creation_canvas.py`、`product_creation.py`；国际站商品修改和 LibTV 等并非都已暴露给 MCP/CLI。 |
+| 能力发现和共用服务 | **部分实现**：`desk_mcp.py` 的静态工具定义及 `desk_cli.py capabilities list` 支持基础发现，当前数量和具体定义以代码为准；未按对象/实际连接状态完整筛选，UI 另有静态清单。画布和商品素材的 UI/MCP/CLI 共用 `creation_canvas.py`、`product_creation.py`；国际站商品修改和 LibTV 等并非都已暴露给 MCP/CLI。 |
 | 多模型、外部任务与费用 | **未完整实现**：当前真实执行后端是 Codex CLI；外部平台任务和本地任务没有统一状态同步。业务日志是受控本地诊断，并非统一可追踪的跨服务账本；未知耗费与账单不能据此推算。 |
 
-**仍需处理：** 客户分析与工作流缺少客户端派生版本；未满足 Gmail 派发条件的缓存变化不保证跨进程可见。下一轮优先补这些版本边界与持久邮箱观察，再做事件与任务对账、人工接续，并逐步建立父子任务与 Worker/Watchdog；具体取舍按实际业务瓶颈决定。
+**仍需处理：** 分析与工作流的客户端派生版本已按上节接通；未满足 Gmail 派发条件的缓存变化仍不保证跨进程可见。下一轮优先处理持久邮箱观察、事件与任务对账及人工接续，再逐步建立父子任务与 Worker/Watchdog；具体取舍按实际业务瓶颈决定。
 
 **本轮改造：** [代码与架构审计提交 `84cec8164f148f573152a2f67815607982ad0c9b`](https://github.com/421345308/beiqiang-cross-border-operations/commit/84cec8164f148f573152a2f67815607982ad0c9b)。`codex_backend.py` 提取 Codex 命令、进程创建与输出事件转换；`agent_jobs.py` 仍负责任务状态、业务上下文、进程管理、取消及成果写入，并接受可信 Python 调用方注入符合当前契约的后端。默认模型和普通任务、邮件整理、客户分析的权限与命令保留；`tests_runtime_backend.py` 验证注入、事件与用量边界，既有执行器及恢复测试保护兼容性。该接口仍依赖本地子进程、PID、标准流和最终文件，**不是**多提供商或远端执行器已接通。
 

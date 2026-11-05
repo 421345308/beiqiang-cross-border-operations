@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.request import getproxies
 import customer_analysis
 from customer_workspace import CustomerWriteOutcomeUnknown
+from workspaces import WorkspaceConflict
 from codex_backend import CodexBackend, MODEL
 
 ACTIVE = ('queued', 'running')
@@ -152,6 +153,7 @@ class AgentJobs:
         job = {'id': uuid.uuid4().hex, 'object_id': object_id, 'title': title,
                'instruction': instruction.strip(), 'status': 'queued', 'summary': '',
                'mode':mode,'source_hash':profile['source_hash'] if profile else None,'profile_saved':False,
+               'profile_revision':profile['revision'] if profile else None,
                'error': None, 'events': [], 'artifact_id': None, 'session_id': None, 'attempt': 0,
                'created_at': now(), 'updated_at': now()}
         self._event(job, 'queued', '工作已排队，成果将保存到当前业务对象。')
@@ -183,6 +185,8 @@ class AgentJobs:
                 profile = self.app.customer_workspace.profile(job['object_id'])
                 obj = {**obj, '_customer_profile': profile}
                 job['source_hash'] = profile['source_hash']
+                job['profile_revision'] = profile['revision']
+                job['profile_saved'] = False
             job.update(status='queued', instruction=instruction.strip(), error=None, process_id=None)
             self._event(job, 'queued', '继续原会话；先核对已有成果及实际外部状态。')
             self._save(job)
@@ -399,7 +403,9 @@ class AgentJobs:
                     if current['source_hash']!=job['source_hash']:
                         job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='原来源已变化，请重新核对。',error='分析依据已过期，本次未覆盖客户派生资料。')
                         self._event(job,'needs_input',job['error']);self._save(job);return
-                    saved=self.app.customer_workspace.save_profile(job['object_id'],{'source_hash':job['source_hash'],**result})
+                    if not job.get('profile_revision'):
+                        raise WorkspaceConflict('原任务没有客户分析版本，请读取当前资料后继续原任务。')
+                    saved=self.app.customer_workspace.save_profile(job['object_id'],{**result,'source_hash':job['source_hash'],'revision':job['profile_revision']})
                     if saved.get('stale') or saved.get('derived_source_hash')!=job['source_hash']:raise JobFailure('客户派生资料保存回读未命中本次来源。')
                     job.update(status='completed',profile_saved=True,artifact_id=None,error=None,summary=result['analysis']['next_action'][:300] or '完整中文译文与客户分析已保存。')
                     self._event(job,'completed','完整中文译文与客户分析已回存当前客户，未另建重复Markdown成果。')
@@ -420,6 +426,13 @@ class AgentJobs:
             with self.lock:
                 job = self.get_job(job_id)
                 if job['status'] in ACTIVE:
+                    if isinstance(exc,WorkspaceConflict) and job.get('mode')=='customer_analysis':
+                        job.update(status='needs_input',profile_saved=False,artifact_id=None,
+                                   summary='客户分析已变化，请核对后继续。',
+                                   error='客户派生资料已变化或缺少原版本，本次未覆盖；请核对当前资料后继续原任务。')
+                        self._event(job,'needs_input',job['error'])
+                        self._save(job)
+                        return
                     if isinstance(exc,CustomerWriteOutcomeUnknown):
                         job.update(status='needs_input',profile_saved=False,
                                    error='客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续；未自动重试。')

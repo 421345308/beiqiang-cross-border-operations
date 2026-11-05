@@ -7,6 +7,7 @@ import threading
 from types import SimpleNamespace
 import unittest
 from customer_workspace import CustomerWorkspace,CANDIDATES
+from workspaces import WorkspaceConflict
 
 class CustomerTests(unittest.TestCase):
     def setUp(self):
@@ -18,6 +19,18 @@ class CustomerTests(unittest.TestCase):
             return copy.deepcopy(self.obj)
         self.app=SimpleNamespace(root=self.root,db=sqlite3.connect(':memory:'),lock=threading.RLock(),business=SimpleNamespace(get_object=get_object))
         self.addCleanup(self.app.db.close);self.work=CustomerWorkspace(self.app)
+    def test_analysis_old_snapshot_cannot_overwrite_new_analysis_or_workflow_context(self):
+        oid=self.obj['id'];observed=self.work.profile(oid)
+        saved=self.work.save_profile(oid,{'revision':observed['revision'],'source_hash':observed['source_hash'],'translation_zh':'First edit'})
+        with self.assertRaises(WorkspaceConflict):
+            self.work.save_profile(oid,{'revision':observed['revision'],'source_hash':observed['source_hash'],'translation_zh':'Stale edit'})
+        workflow=self.work.workflow(oid)
+        self.work.save_workflow(oid,{'revision':workflow['revision'],'next_action':'Human workflow edit'})
+        with self.assertRaises(WorkspaceConflict):
+            self.work.save_profile(oid,{'revision':saved['revision'],'source_hash':saved['source_hash'],'translation_zh':'Stale context'})
+        self.assertEqual(self.work.profile(oid)['translation_zh'],'First edit')
+        self.assertEqual(self.work.workflow(oid)['next_action'],'Human workflow edit')
+
     def candidates(self):
         path=self.root/CANDIDATES;path.parent.mkdir(parents=True)
         path.write_text(json.dumps([{'id':'stable-company','company':'Real Buyer','website':'https://buyer.test','source_url':'https://buyer.test/about','market_hint':'US hint, not confirmed','discovery_note':'Check product fit','discovered_at':'2026-10-21','review':{'state':'未核验'},'analysis':{'tier':'PRIORITIZE','method':'rules'},'contacts':[{'kind':'email','value':'business@buyer.test','delivery_status':'unknown','permission':'not_confirmed'}],'pages':[{'url':'https://buyer.test/about','title':'About','checked_at':'2026-10-21'}]},
@@ -33,7 +46,7 @@ class CustomerTests(unittest.TestCase):
         self.assertFalse(profile['stale']);self.assertFalse((self.root/'04_客户开发').exists())
     def test_translation_analysis_are_derived_file_only_and_original_unchanged(self):
         before=copy.deepcopy(self.obj);profile=self.work.profile(self.obj['id'])
-        saved=self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'original_language':'en','translation_zh':'需要定制样品。',
+        saved=self.work.save_profile(self.obj['id'],{'revision':profile['revision'],'source_hash':profile['source_hash'],'original_language':'en','translation_zh':'需要定制样品。',
             'analysis':{'intent':'待核实','fit':'需核样品能力','facts':[{'claim':'要求定制样品','evidence':'original_text'}],'inferences':['可能是品牌开发需求'],'missing':['实际鞋款规格'],'next_action':'询问样品要求'},
             'source_note':'后台记录存在，不证明自然获客；归因字段为空。','evidence':[{'path':'原迁移证据.json','text':'已人工核元数据','observed_at':'2026-10-31'}]})
         self.assertEqual(saved['translation_zh'],'需要定制样品。');self.assertEqual(self.obj,before)
@@ -44,10 +57,10 @@ class CustomerTests(unittest.TestCase):
         self.assertEqual(CustomerWorkspace(self.app).profile(self.obj['id'])['translation_zh'],'需要定制样品。')
         self.assertEqual([r[1] for r in self.app.db.execute('PRAGMA table_info(customer_profiles)')],['object_id','path'])
     def test_source_change_marks_old_translation_stale_and_refuses_stale_save(self):
-        old=self.work.profile(self.obj['id']);self.work.save_profile(self.obj['id'],{'source_hash':old['source_hash'],'translation_zh':'旧译文'})
+        old=self.work.profile(self.obj['id']);self.work.save_profile(self.obj['id'],{'revision':old['revision'],'source_hash':old['source_hash'],'translation_zh':'旧译文'})
         self.record['requirements']='Different need';self.obj['content']=json.dumps(self.record)
         current=self.work.profile(self.obj['id']);self.assertTrue(current['stale']);self.assertEqual(current['translation_zh'],'旧译文')
-        with self.assertRaisesRegex(ValueError,'原来源已变化'):self.work.save_profile(self.obj['id'],{'source_hash':old['source_hash'],'translation_zh':'Bad overwrite'})
+        with self.assertRaisesRegex(ValueError,'原来源已变化'):self.work.save_profile(self.obj['id'],{'revision':old['revision'],'source_hash':old['source_hash'],'translation_zh':'Bad overwrite'})
         self.assertEqual(self.work.profile(self.obj['id'])['translation_zh'],'旧译文')
     def test_source_type_alibaba_order_is_not_misclassified_as_natural_website_lead(self):
         self.obj.update(id='customer:order-buyer-1',source_type='alibaba_order_buyer',content=json.dumps({'company':'Order Buyer','quantity':100}))
@@ -79,7 +92,7 @@ class CustomerTests(unittest.TestCase):
         self.assertEqual(CustomerWorkspace(self.app).get_discovery(task['id'])['next_action'],'人工核对目标')
     def test_unsupported_original_mutation_or_claim_fields_rejected(self):
         profile=self.work.profile(self.obj['id'])
-        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'original_text':'overwrite'})
+        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'revision':profile['revision'],'source_hash':profile['source_hash'],'original_text':'overwrite'})
         with self.assertRaises(ValueError):self.work.create_discovery({'kind':'candidate','company':'Buyer','sent':True})
 
 if __name__=='__main__':unittest.main()
@@ -89,7 +102,7 @@ class MessageTranslationTests(CustomerTests):
         self.obj['content']=json.dumps(self.record)
         before=copy.deepcopy(self.obj)
         profile=self.work.profile(self.obj['id'])
-        saved=self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'message_translations':[{'message_id':'m1','translation_zh':'起订量多少？'},{'message_id':'m2','translation_zh':'请选择款式。'}]})
+        saved=self.work.save_profile(self.obj['id'],{'revision':profile['revision'],'source_hash':profile['source_hash'],'message_translations':[{'message_id':'m1','translation_zh':'起订量多少？'},{'message_id':'m2','translation_zh':'请选择款式。'}]})
         self.assertEqual(saved['conversation'][0]['translation_zh'],'起订量多少？')
         self.assertEqual(self.work.profile(self.obj['id'])['conversation'][1]['translation_zh'],'请选择款式。')
         self.assertEqual(before,self.obj)
@@ -98,8 +111,8 @@ class MessageTranslationTests(CustomerTests):
         self.assertEqual(updated['conversation'][0]['translation_zh'],'')
         self.assertTrue(updated['conversation'][0]['translation_stale'])
         self.assertEqual(updated['conversation'][1]['translation_zh'],'请选择款式。')
-        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'message_translations':[]})
-        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':updated['source_hash'],'message_translations':[{'message_id':'foreign','translation_zh':'错误'}]})
+        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'revision':profile['revision'],'source_hash':profile['source_hash'],'message_translations':[]})
+        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'revision':updated['revision'],'source_hash':updated['source_hash'],'message_translations':[{'message_id':'foreign','translation_zh':'错误'}]})
 
 class DiscoveryOrganizationTests(CustomerTests):
     def test_business_fields_persist_and_source_is_untouched(self):

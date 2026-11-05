@@ -10,6 +10,7 @@ import unittest
 from unittest.mock import patch
 from agent_jobs import AgentJobs
 from customer_workspace import CustomerWorkspace
+from workspaces import WorkspaceConflict
 from customer_analysis import (parse_result,prompt,SCHEMA,COMPANY_CONTEXT_SOURCES,CLEANED,ANALYSIS_TEXT,ANALYSIS_LIST,
                               LEGACY_ANALYSIS_TEXT,LEGACY_ANALYSIS_LIST)
 from tests_agent_jobs import Process, join_job_threads, stop_job_threads
@@ -77,6 +78,107 @@ class CustomerAnalysisTests(unittest.TestCase):
         while not self.processes and time.monotonic()<deadline:time.sleep(.01)
         changed=json.loads(self.obj['content']);changed['requirements']='A new request supersedes the old one.';self.obj['content']=json.dumps(changed);gate.set()
         done=self.wait(job);self.assertEqual(done['status'],'needs_input');self.assertFalse(done['profile_saved'])
+        self.assertEqual(self.app.customer_workspace.profile(self.obj['id'])['translation_zh'],'')
+
+    def test_source_change_inside_save_window_requires_review_without_retry(self):
+        workspace=self.app.customer_workspace
+        saved=self.edit_analysis('Existing human decision must survive')
+        row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',
+                                (self.obj['id'],)).fetchone()
+        derived_path=self.root/row[0]
+        previous_bytes=derived_path.read_bytes()
+        real_save=workspace.save_profile
+        detected=[]
+
+        def change_source_then_save(oid,body):
+            # Reaching this wrapper proves the Agent's earlier source check
+            # passed. Change the source only at the real service save boundary.
+            current=workspace.profile(oid)
+            self.assertEqual(current['source_hash'],body['source_hash'])
+            self.assertEqual(current['revision'],body['revision'])
+            changed=json.loads(self.obj['content'])
+            changed['requirements']='New synthetic request arriving just before save.'
+            self.obj['content']=json.dumps(changed)
+            try:
+                return real_save(oid,body)
+            except WorkspaceConflict:
+                detected.append('real source conflict')
+                raise
+
+        with patch.object(workspace,'save_profile',side_effect=change_source_then_save) as saving:
+            done=self.wait(self.start())
+            self.assertEqual(saving.call_count,1)
+        self.assertEqual(detected,['real source conflict'])
+        self.assertEqual(done['status'],'needs_input')
+        self.assertFalse(done['profile_saved'])
+        self.assertIsNone(done['artifact_id'])
+        self.assertEqual(derived_path.read_bytes(),previous_bytes)
+        current=workspace.profile(self.obj['id'])
+        self.assertNotEqual(current['source_hash'],saved['source_hash'])
+        self.assertTrue(current['stale'])
+        self.assertEqual(current['analysis']['next_action'],'Existing human decision must survive')
+        self.assertEqual(current['translation_zh'],saved['translation_zh'])
+        self.assertEqual(len(self.processes),1)
+        self.assertEqual(len(self.jobs.list_jobs()),1)
+        self.assertEqual(done['attempt'],1)
+        self.assertEqual(self.artifacts,[])
+        self.assertFalse(self.app.db.in_transaction)
+
+    def wait_for_process(self, count):
+        deadline=time.monotonic()+2
+        while (len(self.processes)<count or not self.processes[count-1].stdin.value) and time.monotonic()<deadline:time.sleep(.01)
+        self.assertEqual(len(self.processes),count)
+        self.assertTrue(self.processes[count-1].stdin.value)
+
+    def edit_analysis(self, text):
+        profile=self.app.customer_workspace.profile(self.obj['id'])
+        return self.app.customer_workspace.save_profile(self.obj['id'],{
+            'source_hash':profile['source_hash'],'revision':profile['revision'],
+            'analysis':{'next_action':text}})
+
+    def test_manual_edit_during_generation_requires_review_without_overwrite(self):
+        gate=threading.Event();self.options['gate']=gate;job=self.start()
+        self.wait_for_process(1)
+        saved=self.edit_analysis('人工决定先确认样品目的')
+        gate.set();done=self.wait(job)
+        self.assertEqual(done['status'],'needs_input');self.assertFalse(done['profile_saved'])
+        self.assertIsNone(done['artifact_id']);self.assertEqual(len(self.processes),1)
+        current=self.app.customer_workspace.profile(self.obj['id'])
+        self.assertEqual(current['revision'],saved['revision'])
+        self.assertEqual(current['analysis']['next_action'],'人工决定先确认样品目的')
+
+    def test_resume_refreshes_snapshot_and_still_rejects_later_manual_edit(self):
+        first=self.wait(self.start());self.assertEqual(first['status'],'completed')
+        saved=self.edit_analysis('恢复前的人工说明')
+        gate=threading.Event();self.options['gate']=gate
+        resumed=self.jobs.resume(first['id'],'结合最新说明重新分析')
+        self.assertEqual(resumed['profile_revision'],saved['revision'])
+        self.assertFalse(resumed['profile_saved'])
+        self.wait_for_process(2)
+        self.assertIn('恢复前的人工说明',self.processes[1].stdin.value)
+        latest=self.edit_analysis('恢复执行期间再次人工修改')
+        gate.set();done=self.wait(resumed)
+        self.assertEqual(done['status'],'needs_input');self.assertFalse(done['profile_saved'])
+        self.assertEqual(self.app.customer_workspace.profile(self.obj['id'])['revision'],latest['revision'])
+        self.assertEqual(len(self.processes),2)
+
+    def test_resume_after_manual_edit_uses_new_revision_and_can_save(self):
+        first=self.wait(self.start());self.assertEqual(first['status'],'completed')
+        saved=self.edit_analysis('按新情况重新核对')
+        resumed=self.jobs.resume(first['id'],'重新核对最新分析')
+        self.assertEqual(resumed['profile_revision'],saved['revision'])
+        done=self.wait(resumed)
+        self.assertEqual(done['status'],'completed');self.assertTrue(done['profile_saved'])
+        self.assertEqual(self.app.customer_workspace.profile(self.obj['id'])['analysis']['next_action'],
+                         response()['analysis']['next_action'])
+
+    def test_legacy_running_job_without_profile_revision_does_not_save(self):
+        gate=threading.Event();self.options['gate']=gate;job=self.start()
+        self.wait_for_process(1)
+        with self.jobs.lock:
+            legacy=self.jobs.get_job(job['id']);legacy.pop('profile_revision');self.jobs._save(legacy)
+        gate.set();done=self.wait(job)
+        self.assertEqual(done['status'],'needs_input');self.assertFalse(done['profile_saved'])
         self.assertEqual(self.app.customer_workspace.profile(self.obj['id'])['translation_zh'],'')
 
     def test_invalid_json_or_extra_claim_fields_fail_without_saving(self):

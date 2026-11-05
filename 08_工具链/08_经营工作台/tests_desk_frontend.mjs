@@ -30,7 +30,7 @@ function harness(hash = '#/overview') {
   for (const id of ['page', 'reload', 'desk-notice', 'save-indicator', 'connection', 'page-name', 'breadcrumb']) { elements[id] = new Element(id === 'reload' ? 'button' : 'div'); elements[id].id = id; body.append(elements[id]); }
   const nav = ['overview', 'products', 'customers', 'library'].map(name => { const item = new Element('a'); item.dataset.nav = name; body.append(item); return item; });
   const requests = [], objects = [{ id: 'product:1', kind: 'product', title: '<img src=x onerror=alert(1)>真实商品', subtitle: '实际款号', source: '商品原档案', facts: [{ label: '材料', value: '已核材料' }], assets: [{ path: '商品图.jpg', label: '真实主图', url: '/api/media/file?path=商品图.jpg' }], content: '很长的原文', related: [] }];
-  const profile = { object_id: 'customer:record', source_type: 'website', source_hash: 'hash-1', provenance: { source_hash: 'hash-1', source_verification: { state: 'unverified', note: '来源待核' } }, original_text: 'Please send sample information.', translation_zh: '请提供样品信息。', cleaned: { company: '示例公司', quantity: '未提供' }, analysis: { intent: '尚待确认', fit: '尚待核对', basis: [], missing: ['采购数量'], next_action: '确认采购数量', facts: [], inferences: [], recommendations: ['核实来源'] } }; const discovery = { tasks: [], candidates: [] };
+  const profile = { object_id: 'customer:record', source_type: 'website', revision: 'profile-revision-1', source_hash: 'hash-1', provenance: { source_hash: 'hash-1', source_verification: { state: 'unverified', note: '来源待核' } }, original_text: 'Please send sample information.', translation_zh: '请提供样品信息。', cleaned: { company: '示例公司', quantity: '未提供' }, analysis: { intent: '尚待确认', fit: '尚待核对', basis: [], missing: ['采购数量'], next_action: '确认采购数量', facts: [], inferences: [], recommendations: ['核实来源'] } }; const discovery = { tasks: [], candidates: [] };
   const artifacts = [{ id: 'a1', object_id: 'product:1', title: '现有选款资料', content: '原成果', updated_at: '2026-10-31T01:00:00Z' }]; const jobs = []; let web = { state: 'loading' };
   // 「今天」与商品缺口为 2026-11-01 新增接口；默认空态，测试里按需替换。
   let today = { generated_at: '2026-11-01T00:00:00Z', groups: { decide: [], act: [], watch: [] }, counts: { decide: 0, act: 0, watch: 0 }, labels: { decide: '等你拍板', act: '今天能推', watch: '在跑，不用动手' }, sources: {} };
@@ -509,7 +509,7 @@ test('customer analysis preserves original and background updates retain unsaved
   assert.equal(ctx.profileHost.textContent.includes('翻译并分析原始需求'),false);h.jobs.push({id:'background',object_id:'customer:record',status:'running',updated_at:'2026-10-31T08:00:00Z'});
   h.profile.translation_zh = '新的完整中文译文'; h.jobs[0].status = 'completed'; h.jobs[0].updated_at = '2026-10-31T09:00:00Z'; h.jobs[0].profile_saved = true; h.jobs[0].artifact_id = null; await h.ui.poll(); await settle(); assert.ok(ctx.profileHost.textContent.includes('新的完整中文译文')); assert.equal(h.artifacts.length, 1);
   await findButton(ctx.profileHost, '编辑解读与分析').click(); const edit = ctx.profileHost.querySelector('textarea'); edit.value = '人工尚未保存的中文解释'; h.jobs[0].updated_at = '2026-10-31T10:00:00Z'; await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('textarea'), edit); assert.equal(edit.value, '人工尚未保存的中文解释');
-  await findButton(ctx.profileHost, '保存中文解读与分析').click(); const save = h.requests.find(item => item.path === '/api/desk/customer-profile' && item.payload); assert.equal(save.payload.source_hash, 'hash-1'); assert.equal(save.payload.translation_zh, '人工尚未保存的中文解释'); assert.equal(Object.hasOwn(save.payload, 'original_text'), false);
+  await findButton(ctx.profileHost, '保存中文解读与分析').click(); const save = h.requests.find(item => item.path === '/api/desk/customer-profile' && item.payload); assert.equal(save.payload.source_hash, 'hash-1'); assert.equal(save.payload.revision, 'profile-revision-1'); assert.equal(save.payload.translation_zh, '人工尚未保存的中文解释'); assert.equal(Object.hasOwn(save.payload, 'original_text'), false);
 });
 
 test('analysis creates a linked research task with evidence and never sends outreach', async () => {
@@ -541,7 +541,7 @@ test('inquiry queue separates history, sorts priority, and shows workflow not ra
 });
 
 test('customer detail prioritizes secretary brief, hides JSON and history, saves named workflow with token', async () => {
- const h = harness('#/object/customer%3Arecord'); h.objects.push({id:'customer:record',kind:'customer',title:'实际客户',content:'{"internal_schema":"never show"}',facts:[{label:'技术字段',value:'not in briefing'}],assets:[]}); Object.assign(h.profile.analysis,{brief:'先确认开发边界，再讨论样品',core_need:'开发专用鞋底',questions_now:['使用场景？','验收标准？','目标数量？','非当前问题'],recommended_reply:'先给现有能力及开发边界'}); h.profile.workflow={state:'preparing',priority:'high',next_action:'准备开发范围回复',allowed_transitions:[{state:'waiting_customer',label:'等客户'}]}; await h.ui.bootstrap(); await settle(); const page=h.elements.page,ctx=h.ui.S.detail; assert.ok(page.textContent.includes('先确认开发边界')); assert.equal(page.textContent.includes('internal_schema'),false); assert.equal(page.textContent.includes('非当前问题'),false); const history=walk(page).find(item=>item.tagName==='DETAILS'&&item.children[0]?.textContent==='回复草稿与工作成果'); assert.ok(history); assert.equal(Boolean(history.open),false); const editor=ctx.profileHost.querySelector('.workflow-editor'), next=walk(editor).find(item=>item['aria-label']==='下一动作'); next.value='等待客户补充使用场景'; await next.listeners.input(); await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('.workflow-editor'),editor); await findButton(editor,'保存推进安排').click(); const request=h.requests.find(item=>item.path==='/api/desk/customer-workflow'); assert.equal(request.payload.next_action,'等待客户补充使用场景'); assert.equal(request.options.headers['X-Workbench-Token'],'fixture-token');
+ const h = harness('#/object/customer%3Arecord'); h.objects.push({id:'customer:record',kind:'customer',title:'实际客户',content:'{"internal_schema":"never show"}',facts:[{label:'技术字段',value:'not in briefing'}],assets:[]}); Object.assign(h.profile.analysis,{brief:'先确认开发边界，再讨论样品',core_need:'开发专用鞋底',questions_now:['使用场景？','验收标准？','目标数量？','非当前问题'],recommended_reply:'先给现有能力及开发边界'}); h.profile.workflow={revision:'workflow-revision-1',state:'preparing',priority:'high',next_action:'准备开发范围回复',allowed_transitions:[{state:'waiting_customer',label:'等客户'}]}; await h.ui.bootstrap(); await settle(); const page=h.elements.page,ctx=h.ui.S.detail; assert.ok(page.textContent.includes('先确认开发边界')); assert.equal(page.textContent.includes('internal_schema'),false); assert.equal(page.textContent.includes('非当前问题'),false); const history=walk(page).find(item=>item.tagName==='DETAILS'&&item.children[0]?.textContent==='回复草稿与工作成果'); assert.ok(history); assert.equal(Boolean(history.open),false); const editor=ctx.profileHost.querySelector('.workflow-editor'), next=walk(editor).find(item=>item['aria-label']==='下一动作'); next.value='等待客户补充使用场景'; await next.listeners.input(); await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('.workflow-editor'),editor); await findButton(editor,'保存推进安排').click(); const request=h.requests.find(item=>item.path==='/api/desk/customer-workflow'); assert.equal(request.payload.next_action,'等待客户补充使用场景'); assert.equal(request.payload.revision,'workflow-revision-1'); assert.equal(request.options.headers['X-Workbench-Token'],'fixture-token');
 });
 
 
@@ -982,4 +982,103 @@ test('总览提供四条业务线的独立入口，抖店状态不伪装为实�
   await findButton(h.elements.page,'进入内容创作').click(); assert.equal(h.location.hash,'/creation');
   h.location.hash='#/channels?view=alibaba'; await h.ui.renderRoute(); await settle();
   assert.ok(h.elements.page.textContent.includes('国际站')); assert.equal(h.elements.page.textContent.includes('抖店'),false);
+});
+
+
+test('customer revision conflicts preserve both editors and never retry stale saves', async () => {
+  for (const kind of ['profile', 'workflow']) {
+    const h = harness('#/object/customer%3Arecord');
+    h.objects.push({id:'customer:record',kind:'customer',title:'测试客户',assets:[]});
+    h.profile.workflow = {revision:'workflow-read-revision',state:'new',priority:'normal',next_action:'原安排',allowed_transitions:[]};
+    await h.ui.bootstrap(); await settle();
+    const ctx = h.ui.S.detail;
+    if (kind === 'profile') await findButton(ctx.profileHost,'编辑解读与分析').click();
+    const editor = kind === 'profile' ? ctx.profileHost : ctx.profileHost.querySelector('.workflow-editor');
+    const input = kind === 'profile' ? editor.querySelector('textarea') : walk(editor).find(item=>item['aria-label']==='下一动作');
+    input.value = '保留这份尚未保存的修改';
+    if (input.listeners.input) await input.listeners.input();
+    const path = kind === 'profile' ? '/api/desk/customer-profile' : '/api/desk/customer-workflow';
+    const attempts = [];
+    h.interceptFetch(async (url, options={}) => {
+      if (url === path && options.body) {
+        attempts.push(JSON.parse(options.body));
+        return {ok:false,status:409,json:async()=>({error:'资料已在其他页面更新，请重新读取后核对；本次输入仍保留。'})};
+      }
+      return h.originalFetch(url, options);
+    });
+    // Another writer changes the server version after this form was opened.
+    h.profile.translation_zh = '另一方最新译文';
+    h.profile.workflow.next_action = '另一方最新安排';
+    h.profile.revision = 'profile-new-revision';
+    h.profile.workflow.revision = 'workflow-new-revision';
+    await findButton(editor,kind === 'profile' ? '保存中文解读与分析' : '保存推进安排').click();
+    await h.ui.poll(); await settle();
+    assert.equal(attempts.length,1);
+    assert.equal(attempts[0].revision,kind === 'profile' ? 'profile-revision-1' : 'workflow-read-revision');
+    assert.equal(input.value,'保留这份尚未保存的修改');
+    assert.equal(kind === 'profile' ? ctx.profileEditing : ctx.workflowEditing,true);
+    assert.ok(editor.textContent.includes('资料已在其他页面更新'));
+    assert.equal(h.elements['save-indicator'].textContent,'');
+    assert.equal(kind === 'profile' ? ctx.profileHost.querySelector('textarea') : ctx.profileHost.querySelector('.workflow-editor'),kind === 'profile' ? input : editor);
+    assert.ok(editor.textContent.includes('请先复制需要保留的内容'));
+    h.interceptFetch(async (url,options={}) => String(url).startsWith('/api/desk/customer-profile?')
+      ? {ok:false,status:503,json:async()=>({error:'读取暂不可用'})} : h.originalFetch(url,options));
+    await findButton(editor,'放弃本次修改并重新读取').click(); await settle();
+    assert.equal(input.value,'保留这份尚未保存的修改');
+    assert.equal(kind === 'profile' ? ctx.profileEditing : ctx.workflowEditing,true);
+    assert.ok(editor.textContent.includes('重新读取未完成，本次输入仍保留'));
+    h.interceptFetch((url,options)=>h.originalFetch(url,options));
+    await findButton(editor,'放弃本次修改并重新读取').click(); await settle();
+    assert.equal(ctx.profileEditing,false); assert.equal(ctx.workflowEditing,false);
+    assert.equal(ctx.profile.revision,'profile-new-revision');
+    assert.equal(ctx.profile.workflow.revision,'workflow-new-revision');
+    if (kind === 'profile') await findButton(ctx.profileHost,'编辑解读与分析').click();
+    const reopened = kind === 'profile' ? ctx.profileHost.querySelector('textarea') : walk(ctx.profileHost.querySelector('.workflow-editor')).find(item=>item['aria-label']==='下一动作');
+    assert.equal(reopened.value,kind === 'profile' ? '另一方最新译文' : '另一方最新安排');
+    assert.notEqual(reopened,input);
+    reopened.value='核对最新资料后的新修改';
+    if (reopened.listeners.input) await reopened.listeners.input();
+    h.interceptFetch((url,options)=>h.originalFetch(url,options));
+    await findButton(ctx.profileHost,kind === 'profile' ? '保存中文解读与分析' : '保存推进安排').click(); await settle();
+    const saved=h.requests.filter(item=>item.path===path && item.payload).at(-1);
+    assert.equal(saved.payload.revision,kind === 'profile' ? 'profile-new-revision' : 'workflow-new-revision');
+    assert.equal(kind === 'profile' ? h.profile.translation_zh : h.profile.workflow.next_action,'核对最新资料后的新修改');
+
+  }
+});
+
+
+test('background profile failure after editing starts preserves both customer drafts', async () => {
+  for (const kind of ['profile','workflow']) {
+    for (const failure of ['http','network']) {
+      const h=harness('#/object/customer%3Arecord');
+      h.objects.push({id:'customer:record',kind:'customer',title:'测试客户',assets:[]});
+      h.profile.workflow={revision:'workflow-read-revision',state:'new',next_action:'原安排',allowed_transitions:[]};
+      await h.ui.bootstrap(); await settle();
+      const ctx=h.ui.S.detail;
+      let failRead;
+      const pendingRead=new Promise((resolve,reject)=>{
+        failRead=()=>failure==='network' ? reject(new Error('fixture network failure'))
+          : resolve({ok:false,status:503,json:async()=>({error:'fixture HTTP failure'})});
+      });
+      let reads=0;
+      h.interceptFetch((url,options={})=>String(url).startsWith('/api/desk/customer-profile?')
+        ? (reads++,pendingRead) : h.originalFetch(url,options));
+      // Begin a real background refresh while no form is being edited.
+      h.jobs.push({id:'refresh-trigger',object_id:'customer:record',status:'completed',updated_at:'new'});
+      await h.ui.poll(); await settle();
+      assert.ok(reads>0,'background request must start before editing');
+      if(kind==='profile') await findButton(ctx.profileHost,'编辑解读与分析').click();
+      const editor=kind==='profile' ? ctx.profileHost : ctx.profileHost.querySelector('.workflow-editor');
+      const input=kind==='profile' ? editor.querySelector('textarea') : walk(editor).find(item=>item['aria-label']==='下一动作');
+      input.value='网络等待期间开始输入的草稿';
+      if(input.listeners.input) await input.listeners.input();
+      failRead(); await settle();
+      assert.equal(kind==='profile' ? ctx.profileEditing : ctx.workflowEditing,true);
+      assert.equal(kind==='profile' ? ctx.profileHost.querySelector('textarea') : walk(ctx.profileHost.querySelector('.workflow-editor')).find(item=>item['aria-label']==='下一动作'),input);
+      assert.equal(input.value,'网络等待期间开始输入的草稿');
+      assert.equal(ctx.profileHost.textContent.includes('fixture HTTP failure'),false);
+      assert.equal(ctx.profileHost.textContent.includes('fixture network failure'),false);
+    }
+  }
 });

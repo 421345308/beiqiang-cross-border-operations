@@ -27,6 +27,8 @@ def competing_writer(root,database,operation,revision,ready,start,held,release,r
     app=None
     try:
         app,work=open_workspace(root,database)
+        profile_snapshot=work.profile(OID) if operation=='analysis' else None
+        workflow_snapshot=work.workflow(OID) if operation=='workflow' else None
         original_write=work._write
         original_read=work._saved_profile
         if operation in ('analysis','commercial_first'):
@@ -43,10 +45,10 @@ def competing_writer(root,database,operation,revision,ready,start,held,release,r
         ready.set()
         if not start.wait(10):raise RuntimeError('start timed out')
         if operation=='analysis':
-            profile=work.profile(OID)
-            work.save_profile(OID,{'source_hash':profile['source_hash'],'analysis':{'intent':'analysis kept'}})
+            profile=profile_snapshot
+            work.save_profile(OID,{'revision':profile['revision'],'source_hash':profile['source_hash'],'analysis':{'intent':'analysis kept'}})
         elif operation=='workflow':
-            work.save_workflow(OID,{'next_action':'workflow kept'})
+            work.save_workflow(OID,{'revision':workflow_snapshot['revision'],'next_action':'workflow kept'})
         elif operation=='commercial_first':
             work.save_commercial(OID,{'revision':revision,'owner':'first'})
         else:
@@ -66,7 +68,7 @@ class CustomerConcurrencyTests(unittest.TestCase):
         self.addCleanup(self.app.db.close)
         # An existing indexed profile makes the competing read observable.
         profile=self.work.profile(OID)
-        self.work.save_profile(OID,{'source_hash':profile['source_hash'],'analysis':{'fit':'existing'}})
+        self.work.save_profile(OID,{'revision':profile['revision'],'source_hash':profile['source_hash'],'analysis':{'fit':'existing'}})
 
     def run_competing(self,first,second,revision=None):
         ctx=multiprocessing.get_context('spawn')
@@ -110,21 +112,21 @@ class CustomerConcurrencyTests(unittest.TestCase):
         self.assertEqual(self.work.commercial(OID)['owner'],'first')
 
     def test_failed_validation_releases_transaction_and_rejects_nested(self):
-        with self.assertRaises(ValueError):self.work.save_workflow(OID,{'priority':'bad'})
+        with self.assertRaises(ValueError):self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'priority':'bad'})
         self.assertFalse(self.app.db.in_transaction)
         with patch.object(self.work,'_write',side_effect=OSError('write failed')):
-            with self.assertRaises(OSError):self.work.save_workflow(OID,{'next_action':'not persisted'})
+            with self.assertRaises(OSError):self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'not persisted'})
         self.assertFalse(self.app.db.in_transaction)
         self.app.db.execute('BEGIN')
         try:
             with self.assertRaisesRegex(RuntimeError,'已有数据库事务'):
-                self.work.save_workflow(OID,{'next_action':'must not commit caller transaction'})
+                self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'must not commit caller transaction'})
             self.assertTrue(self.app.db.in_transaction)
         finally:self.app.db.rollback()
         with self.work._profile_write():
             with self.assertRaisesRegex(RuntimeError,'不能提前提交'):
                 self.work._store_profile(OID,{},commit=True)
-        self.assertEqual(self.work.save_workflow(OID,{'next_action':'recovered'})['next_action'],'recovered')
+        self.assertEqual(self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'recovered'})['next_action'],'recovered')
 
     def test_index_failure_restores_existing_and_removes_first_created_profile(self):
         row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(OID,)).fetchone()
@@ -133,23 +135,23 @@ class CustomerConcurrencyTests(unittest.TestCase):
         self.app.db.execute("CREATE TRIGGER refuse_customer BEFORE INSERT ON customer_profiles BEGIN SELECT RAISE(ABORT, 'fixture index failure'); END")
         self.app.db.commit()
         with self.assertRaises(sqlite3.IntegrityError):
-            self.work.save_workflow(OID,{'next_action':'should not persist'})
+            self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'should not persist'})
         self.assertEqual(existing.read_bytes(),before)
         self.assertFalse(self.app.db.in_transaction)
         new_id='customer:website-new'
         new_path=self.root/'04_客户开发/.local/网站询盘/new/客户分析.json'
         with self.assertRaises(sqlite3.IntegrityError):
-            self.work.save_workflow(new_id,{'next_action':'should not persist'})
+            self.work.save_workflow(new_id,{'revision':self.work.workflow(new_id)['revision'],'next_action':'should not persist'})
         self.assertFalse(new_path.exists())
         self.assertIsNone(self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(new_id,)).fetchone())
         self.app.db.execute('DROP TRIGGER refuse_customer');self.app.db.commit()
-        self.assertEqual(self.work.save_workflow(OID,{'next_action':'after failure'})['next_action'],'after failure')
+        self.assertEqual(self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'after failure'})['next_action'],'after failure')
 
     def test_sqlite_automatic_rollback_reports_uncertain_file_outcome(self):
         self.app.db.execute("CREATE TRIGGER rollback_customer BEFORE INSERT ON customer_profiles BEGIN SELECT RAISE(ROLLBACK, 'fixture'); END")
         self.app.db.commit()
         with self.assertRaisesRegex(CustomerWriteOutcomeUnknown,'结果不明'):
-            self.work.save_workflow(OID,{'next_action':'may have been written'})
+            self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'may have been written'})
         self.assertFalse(self.app.db.in_transaction)
         # Once SQLite has released the lock, blindly restoring could overwrite
         # an intervening process. The caller must inspect the current file.
@@ -158,8 +160,8 @@ class CustomerConcurrencyTests(unittest.TestCase):
     def test_process_local_gmail_cache_does_not_create_false_conflict(self):
         pending={'value':False}
         self.app.gmail=SimpleNamespace(peek=lambda oid:{'reply_pending':pending['value']})
-        self.work.save_workflow(OID,{'state':'preparing'})
-        self.work.save_workflow(OID,{'state':'waiting_customer','next_action':'wait'})
+        self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'state':'preparing'})
+        self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'state':'waiting_customer','next_action':'wait'})
         old=self.work.commercial(OID)
         pending['value']=True
         new=self.work.commercial(OID)

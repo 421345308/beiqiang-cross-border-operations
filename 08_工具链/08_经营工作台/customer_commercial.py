@@ -95,4 +95,5 @@ def save(workspace, object_id, body):
         data['updated_at'] = datetime.now(timezone.utc).isoformat()
         saved.update(object_id=object_id, commercial=data)
         workspace._store_profile(object_id, saved, commit=False)
-    return view(workspace, object_id)
+        result = view(workspace, object_id)
+    return result

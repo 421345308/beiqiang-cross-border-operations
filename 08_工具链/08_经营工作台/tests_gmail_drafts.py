@@ -27,7 +27,7 @@ class DraftTests(unittest.TestCase):
                           'reply_to':'Sales <sales@example.test>','subject':'Samples',
                           'rfc_message_id':'<buyer-1@example.test>','mail_kind':'conversation'}]
         self.calls, self.linked, self.updates, self.syncs = [], [], [], []
-        self.profile = {'state':'preparing','allowed_transitions':[{'state':'waiting_customer'}]}
+        self.profile = {'revision':'fixture-workflow-revision','state':'preparing','allowed_transitions':[{'state':'waiting_customer'}]}
         self.mail = SimpleNamespace(status=lambda:{'account_email':'seller@example.test'},
             peek=lambda oid:{'messages':self.messages,'reply_pending':True},
             link_sent_address=lambda oid,address:self.linked.append((oid,address)),
@@ -89,7 +89,7 @@ class DraftTests(unittest.TestCase):
         files={p.get_filename():p.get_payload(decode=True) for p in message.iter_attachments()}
         self.assertEqual(files,{'鞋子.jpg':b'photo-data','catalog.pdf':b'%PDF test material'})
         self.assertEqual(self.linked,[(self.oid,'sales@example.test')]);self.assertEqual(self.syncs,[(self.oid,True)])
-        self.assertTrue(any(row[0]=='workflow' and row[1]['state']=='waiting_customer' for row in self.updates))
+        self.assertTrue(any(row[0]=='workflow' and row[1]['state']=='waiting_customer' and row[1]['revision']=='fixture-workflow-revision' for row in self.updates))
         with self.assertRaises(ValueError):self.service.send(self.oid,draft['version'])
         self.assertEqual(len(self.calls),1)
         self.assertEqual(self.service.new(self.oid)['status'],'draft')
@@ -109,6 +109,34 @@ class DraftTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.service.send(self.oid,draft['version'])
         self.service.request=lambda url,token:{'messages':[{'id':'deadbeef','threadId':'20'}]}
         self.assertEqual(self.service.reconcile(self.oid)['status'],'sent')
+        self.assertEqual(len(self.calls),1)
+
+    def test_workflow_conflict_after_confirmed_send_does_not_retry_mail(self):
+        from workspaces import WorkspaceConflict
+        draft=self.fill()
+        workspace=self.service.app.customer_workspace
+        with patch.object(workspace,'save_workflow',side_effect=WorkspaceConflict('fixture conflict')):
+            sent=self.service.send(self.oid,draft['version'])
+        self.assertEqual(sent['status'],'sent')
+        self.assertIn('客户状态暂未更新',sent['sync_note'])
+        self.assertEqual(len(self.calls),1)
+        self.assertEqual(self.service.get(self.oid)['status'],'sent')
+        with self.assertRaises(ValueError):self.service.send(self.oid,draft['version'])
+        self.assertEqual(len(self.calls),1)
+
+    def test_sent_mail_uses_new_workflow_revision_for_second_transition(self):
+        draft=self.fill()
+        self.profile.update(state='new',allowed_transitions=[])
+        workspace=self.service.app.customer_workspace
+        def transition(oid,body):
+            self.updates.append(('workflow',body))
+            return {'revision':'second-revision','state':body['state']}
+        with patch.object(workspace,'save_workflow',side_effect=transition):
+            sent=self.service.send(self.oid,draft['version'])
+        rows=[row[1] for row in self.updates if row[0]=='workflow']
+        self.assertEqual(sent['status'],'sent')
+        self.assertEqual([(row['state'],row['revision']) for row in rows],
+                         [('preparing','fixture-workflow-revision'),('waiting_customer','second-revision')])
         self.assertEqual(len(self.calls),1)
 
     def test_google_rejection_keeps_draft_for_correction(self):

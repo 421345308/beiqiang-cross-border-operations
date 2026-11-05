@@ -57,7 +57,7 @@ class CommercialTests(unittest.TestCase):
 
     def test_workflow_change_invalidates_commercial_editor_revision(self):
         observed=self.work.commercial(self.original['id'])
-        self.work.save_workflow(self.original['id'],{'next_action':'Human changed next step'})
+        self.work.save_workflow(self.original['id'],{'revision':self.work.workflow(self.original['id'])['revision'],'next_action':'Human changed next step'})
         with self.assertRaisesRegex(ValueError,'已变化'):
             self.work.save_commercial(self.original['id'],{'revision':observed['revision'],'owner':'Stale editor'})
         self.assertEqual(self.work.commercial(self.original['id'])['next_action'],'Human changed next step')

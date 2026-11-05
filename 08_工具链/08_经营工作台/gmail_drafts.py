@@ -310,8 +310,8 @@ class GmailDrafts:
                 self.app.gmail.acknowledge(oid)
             flow = self.app.customer_workspace.workflow(oid)
             if flow.get('state') != 'waiting_customer' and not any(x.get('state') == 'waiting_customer' for x in flow.get('allowed_transitions', [])):
-                self.app.customer_workspace.save_workflow(oid, {'state': 'preparing', 'bucket': 'active'})
-            self.app.customer_workspace.save_workflow(oid, {'state': 'waiting_customer', 'bucket': 'active', 'next_action': '等待客户回复，收到后继续处理'})
+                flow = self.app.customer_workspace.save_workflow(oid, {'revision':flow['revision'], 'state': 'preparing', 'bucket': 'active'})
+            self.app.customer_workspace.save_workflow(oid, {'revision':flow['revision'], 'state': 'waiting_customer', 'bucket': 'active', 'next_action': '等待客户回复，收到后继续处理'})
             if oid.startswith('prospect:'):
                 self.app.customer_workspace.update_discovery(oid[len('prospect:'):],
                     {'contact_status_label': '邮件已发送，等待客户回复', 'next_action': '等待客户回复，收到后继续处理'})

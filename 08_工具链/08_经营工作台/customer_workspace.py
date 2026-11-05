@@ -15,6 +15,7 @@ from pathlib import Path
 import tempfile
 from uuid import uuid4
 import customer_workflow
+from workspaces import WorkspaceConflict
 
 CANDIDATES='04_客户开发/02_目标名单/.local/客户发现助手/candidates.json'
 SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','email','products','timeline','destination','budget','source_notes'}
@@ -28,6 +29,10 @@ class CustomerWriteOutcomeUnknown(RuntimeError):
 
 def _now():return datetime.now(timezone.utc).isoformat()
 def _hash(value):return hashlib.sha256(value.encode('utf8')).hexdigest()
+def _revision(kind,object_id,value):
+    """A stable version of the persisted inputs actually used by an editor."""
+    return _hash(json.dumps({'kind':kind,'object_id':object_id,'inputs':value},
+                            ensure_ascii=False,sort_keys=True,separators=(',',':')))
 def _text(value,maximum=20000):
     if not isinstance(value,str) or len(value)>maximum or '\x00' in value:raise ValueError('文字格式无效或超过长度限制')
     return value
@@ -185,6 +190,7 @@ class CustomerWorkspace:
 
     def profile(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id);saved=self._saved_profile(object_id)
+        gmail=self._gmail_revision_inputs(object_id)
         cleaned={'company':record.get('company'),'country':record.get('country'),'quantity':record.get('quantity'),
                  'need':record.get('requirements'),'stage':record.get('status'),'contact_name':record.get('name'),'email':record.get('email')}
         cleaned.update(saved.get('cleaned',{}))
@@ -202,20 +208,24 @@ class CustomerWorkspace:
         provenance={'source':obj.get('source'),'source_hash':source_hash,'observed_at':record.get('receivedAt') or record.get('checked_at'),
             'acquisition':'unknown','source_verification':{'state':'unverified','note':'仅确认原来源有这份记录；未核实访客身份、自然获客或渠道归因。' if source_type=='website' else '沿原业务记录读取；研究资料不等于采购意向或已触达。'},
             'evidence_notes':saved.get('source_note',''),'evidence':saved.get('evidence',[])}
-        return {'object_id':object_id,'source_type':source_type,'provenance':provenance,'original_text':original,
+        return {'object_id':object_id,'revision':_revision('analysis',object_id,{'source_hash':source_hash,'saved':saved,'gmail':gmail}),
+            'source_type':source_type,'provenance':provenance,'original_text':original,
             'original_language':saved.get('original_language') or record.get('original_language') or record.get('language') or ('zh' if source_type=='alibaba_order_buyer' else 'unknown'),
             'conversation':conversation,'translation_zh':saved.get('translation_zh',''),'cleaned':cleaned,'analysis':analysis,
             'source_hash':source_hash,'derived_source_hash':saved.get('source_hash'),
             'stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
             'operator_context':saved.get('operator_context',''),
-            'workflow':self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record)),
+            'workflow':self._workflow_view(object_id,source_type,record,source_hash,saved,gmail),
             'derivation':'人工或Agent派生资料；facts为列明依据的摘录，inferences为判断，不改原文。'}
 
     def save_profile(self,object_id,body):
-        if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context','message_translations'}:raise ValueError('不支持的客户分析字段')
+        if not isinstance(body,dict) or set(body)-{'revision','source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context','message_translations'}:raise ValueError('不支持的客户分析字段')
+        if not isinstance(body.get('revision'),str) or not body['revision']:raise ValueError('请先读取客户分析版本，再保存')
+        if not isinstance(body.get('source_hash'),str) or not body['source_hash']:raise ValueError('请先读取原来源版本，再保存')
         with self._profile_write():
             current=self.profile(object_id)
-            if body.get('source_hash')!=current['source_hash']:raise ValueError('原来源已变化，请刷新后重新核对派生资料')
+            if body['source_hash']!=current['source_hash']:raise WorkspaceConflict('原来源已变化，请刷新后重新核对派生资料')
+            if body['revision']!=current['revision']:raise WorkspaceConflict('客户资料已变化，请重新读取并合并后再保存')
             saved=self._saved_profile(object_id)
             for key,limit in [('original_language',80),('translation_zh',50000),('source_note',10000),('operator_context',12000)]:
                 if key in body:saved[key]=_text(body[key],limit)
@@ -237,7 +247,11 @@ class CustomerWorkspace:
             if 'evidence' in body:saved['evidence']=_evidence(body['evidence'])
             saved.update(object_id=object_id,source_hash=current['source_hash'],updated_at=_now())
             self._store_profile(object_id,saved,commit=False)
-        return self.profile(object_id)
+            # Capture the version of our own write before releasing the DB
+            # lock. A later writer must not supply the version for a caller's
+            # next step, which could otherwise overwrite that later edit.
+            result=self.profile(object_id)
+        return result
 
     def _store_profile(self,object_id,saved,*,commit=True):
         if commit and hasattr(self,'_profile_undo'):
@@ -254,9 +268,19 @@ class CustomerWorkspace:
         self.app.db.execute('INSERT OR REPLACE INTO customer_profiles VALUES (?,?)',(object_id,relative))
         if commit:self.app.db.commit()
 
+    def _workflow_view(self,object_id,source_type,record,source_hash,saved,gmail):
+        flow=self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record))
+        # The page can fill an empty workflow next action from the analysis.
+        # Include that fallback as well as the persisted workflow, original
+        # source and shared Gmail observations; never hash a process-local cache.
+        flow['revision']=_revision('workflow',object_id,{'source_hash':source_hash,
+            'workflow':saved.get('workflow') or {},'analysis_next_action':(saved.get('analysis') or {}).get('next_action'),
+            'gmail':gmail})
+        return flow
+
     def workflow(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id)
-        return self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'),record=record))
+        return self._workflow_view(object_id,source_type,record,source_hash,self._saved_profile(object_id),self._gmail_revision_inputs(object_id))
 
     def commercial(self,object_id):
         import customer_commercial
@@ -267,12 +291,18 @@ class CustomerWorkspace:
         return customer_commercial.save(self,object_id,body)
 
     def save_workflow(self,object_id,body):
+        if not isinstance(body,dict):raise ValueError('询盘经营状态字段无效')
+        revision=body.get('revision')
+        if not isinstance(revision,str) or not revision:raise ValueError('请先读取客户推进安排版本，再保存')
         with self._profile_write():
-            row=customer_workflow.update(self.workflow(object_id),body,record=self._source(object_id)[2])
+            current=self.workflow(object_id)
+            if revision!=current['revision']:raise WorkspaceConflict('客户推进安排已变化，请重新读取并合并后再保存')
+            row=customer_workflow.update(current,{key:value for key,value in body.items() if key!='revision'},record=self._source(object_id)[2])
             saved=self._saved_profile(object_id)
             saved.update(object_id=object_id,workflow=row)
             self._store_profile(object_id,saved,commit=False)
-        return self.workflow(object_id)
+            result=self.workflow(object_id)
+        return result
 
     def queue(self,bucket='active',state='',q=''):
         if bucket not in customer_workflow.BUCKETS or state and state not in customer_workflow.STATES or not isinstance(q,str):raise ValueError('询盘队列查询无效')

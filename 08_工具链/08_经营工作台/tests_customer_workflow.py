@@ -11,6 +11,17 @@ from customer_workspace import CustomerWorkspace
 from customer_workflow import STATES
 
 class WorkflowTests(unittest.TestCase):
+    def test_workflow_snapshot_survives_unrelated_analysis_but_rejects_workflow_edit(self):
+        from workspaces import WorkspaceConflict
+        oid='customer:website-one';observed=self.work.workflow(oid)
+        profile=self.work.profile(oid)
+        self.work.save_profile(oid,{'revision':profile['revision'],'source_hash':profile['source_hash'],'translation_zh':'Unrelated translation'})
+        saved=self.work.save_workflow(oid,{'revision':observed['revision'],'note':'Operator edit'})
+        with self.assertRaises(WorkspaceConflict):
+            self.work.save_workflow(oid,{'revision':observed['revision'],'note':'Stale operator edit'})
+        self.assertEqual(self.work.workflow(oid)['note'],'Operator edit')
+        self.assertNotEqual(saved['revision'],observed['revision'])
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.rows={}
@@ -34,60 +45,60 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(self.work.queue('history')['items'][0]['object_id'],'customer:oldcrm')
     def test_progress_graph_same_state_updates_and_ended_reopen(self):
         oid='customer:website-one'
-        with self.assertRaises(ValueError):self.work.save_workflow(oid,{'state':'won'})
-        first=self.work.save_workflow(oid,{'state':'preparing','next_action':'Prepare answer'})
+        with self.assertRaises(ValueError):self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'won'})
+        first=self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'preparing','next_action':'Prepare answer'})
         self.assertEqual(first['pending_party'],'internal')
-        waiting=self.work.save_workflow(oid,{'state':'waiting_customer'})
+        waiting=self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'waiting_customer'})
         self.assertEqual(waiting['pending_party'],'customer')
-        self.work.save_workflow(oid,{'state':'quoting'})
-        won=self.work.save_workflow(oid,{'state':'won'})
+        self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'quoting'})
+        won=self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'won'})
         self.assertEqual(won['bucket'],'archive');self.assertEqual(won['pending_label'],'已结束')
         self.assertEqual({r['state'] for r in won['allowed_transitions']},{'new','preparing'})
-        with self.assertRaises(ValueError):self.work.save_workflow(oid,{'state':'sampling'})
-        reopen=self.work.save_workflow(oid,{'bucket':'active'})
+        with self.assertRaises(ValueError):self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'sampling'})
+        reopen=self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'bucket':'active'})
         self.assertEqual(reopen['state'],'new');self.assertEqual(reopen['bucket'],'active')
-        same=self.work.save_workflow(oid,{'state':'new','priority':'high'})
+        same=self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'new','priority':'high'})
         self.assertEqual(same['priority'],'high');self.assertEqual(len(same['history']),len(reopen['history']))
     def test_history_can_choose_real_current_stage_and_archive_lost(self):
-        activated=self.work.save_workflow('customer:oldcrm',{'bucket':'active','state':'sampling','note':'Manually confirmed current sample discussion'})
+        activated=self.work.save_workflow('customer:oldcrm',{'revision':self.work.workflow('customer:oldcrm')['revision'],'bucket':'active','state':'sampling','note':'Manually confirmed current sample discussion'})
         self.assertEqual(activated['bucket'],'active');self.assertEqual(activated['state'],'sampling')
-        ended=self.work.save_workflow('customer:oldcrm',{'state':'lost'})
+        ended=self.work.save_workflow('customer:oldcrm',{'revision':self.work.workflow('customer:oldcrm')['revision'],'state':'lost'})
         self.assertEqual(ended['bucket'],'archive');self.assertEqual(self.work.queue('history')['items'],[])
         self.assertEqual(self.work.queue('archive')['items'][0]['object_id'],'customer:oldcrm')
     def test_priority_explicit_due_sort_and_queue_filters(self):
         now=datetime.now(timezone.utc)
-        self.work.save_workflow('customer:intake:two',{'priority':'urgent','next_action':'Urgent confirmed task'})
-        self.work.save_workflow('customer:website-one',{'priority':'high','due_at':(now-timedelta(days=1)).isoformat()})
+        self.work.save_workflow('customer:intake:two',{'revision':self.work.workflow('customer:intake:two')['revision'],'priority':'urgent','next_action':'Urgent confirmed task'})
+        self.work.save_workflow('customer:website-one',{'revision':self.work.workflow('customer:website-one')['revision'],'priority':'high','due_at':(now-timedelta(days=1)).isoformat()})
         rows=self.work.queue()['items'];self.assertEqual(rows[0]['object_id'],'customer:intake:two')
         self.assertTrue(rows[1]['workflow']['overdue']);self.assertEqual(self.work.queue()['counts']['overdue'],1)
         self.assertEqual(len(self.work.queue(q='Urgent confirmed')['items']),1)
-        self.work.save_workflow('customer:website-one',{'due_at':''})
+        self.work.save_workflow('customer:website-one',{'revision':self.work.workflow('customer:website-one')['revision'],'due_at':''})
         self.assertEqual(self.work.queue()['counts']['overdue'],0)
-        with self.assertRaises(ValueError):self.work.save_workflow('customer:website-one',{'due_at':'next Friday'})
-        with self.assertRaises(ValueError):self.work.save_workflow('customer:website-one',{'priority':'inferred_urgent'})
+        with self.assertRaises(ValueError):self.work.save_workflow('customer:website-one',{'revision':self.work.workflow('customer:website-one')['revision'],'due_at':'next Friday'})
+        with self.assertRaises(ValueError):self.work.save_workflow('customer:website-one',{'revision':self.work.workflow('customer:website-one')['revision'],'priority':'inferred_urgent'})
     def test_same_profile_file_preserves_analysis_and_workflow_in_both_directions(self):
         oid='customer:website-one';profile=self.work.profile(oid)
-        saved=self.work.save_profile(oid,{'source_hash':profile['source_hash'],'translation_zh':'需要鞋。',
+        saved=self.work.save_profile(oid,{'revision':profile['revision'],'source_hash':profile['source_hash'],'translation_zh':'需要鞋。',
             'operator_context':'这条数量为表单必填，不能当真实订单数量。',
             'analysis':{'brief':'采购条件待核','core_need':'选择合适鞋款','secondary_requests':['样品费用'],
                 'conflicts':[],'questions_now':['实际采购数量？'],'recommended_reply':'先确认鞋款。'}})
         path=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(oid,)).fetchone()[0]
-        self.work.save_workflow(oid,{'state':'preparing','note':'Internal only, no email sent'})
+        self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'preparing','note':'Internal only, no email sent'})
         self.assertEqual(self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(oid,)).fetchone()[0],path)
         current=self.work.profile(oid);self.assertEqual(current['translation_zh'],'需要鞋。');self.assertEqual(current['workflow']['state'],'preparing')
-        self.work.save_profile(oid,{'source_hash':profile['source_hash'],'analysis':{'next_action':'核实采购数量'}})
+        self.work.save_profile(oid,{'revision':current['revision'],'source_hash':current['source_hash'],'analysis':{'next_action':'核实采购数量'}})
         final=self.work.profile(oid);self.assertEqual(final['workflow']['state'],'preparing');self.assertIn('不能当真实',final['operator_context'])
         row=next(row for row in self.work.queue()['items'] if row['object_id']==oid)
         self.assertEqual(row['analysis']['brief'],'采购条件待核');self.assertEqual(row['analysis']['questions_now'],['实际采购数量？'])
-        with self.assertRaises(ValueError):self.work.save_profile(oid,{'source_hash':profile['source_hash'],'workflow':{'state':'won'}})
+        with self.assertRaises(ValueError):self.work.save_profile(oid,{'revision':profile['revision'],'source_hash':profile['source_hash'],'workflow':{'state':'won'}})
     def test_workflow_only_does_not_falsely_mark_empty_analysis_stale(self):
         oid='customer:website-one';original=copy.deepcopy(self.rows[oid])
-        self.work.save_workflow(oid,{'next_action':'Check actual request'})
+        self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'next_action':'Check actual request'})
         profile=self.work.profile(oid);self.assertFalse(profile['stale']);self.assertIsNone(profile['derived_source_hash'])
         self.assertEqual(self.rows[oid],original)
     def test_recent_transition_history_is_bounded_and_persists(self):
         oid='customer:website-one'
-        for i in range(26):self.work.save_workflow(oid,{'state':'preparing' if i%2==0 else 'waiting_customer'})
+        for i in range(26):self.work.save_workflow(oid,{'revision':self.work.workflow(oid)['revision'],'state':'preparing' if i%2==0 else 'waiting_customer'})
         current=CustomerWorkspace(self.app).workflow(oid)
         self.assertEqual(len(current['history']),20);self.assertEqual(current['history'][-1]['to'],'waiting_customer')
         self.assertEqual(current['history'][-1]['to_label'],'等客户')
@@ -143,6 +154,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(flow['customer_reply_label'],'客户有新回复')
         # The page sends every displayed field even when only the note was edited.
         body={key:flow[key] for key in ('state','priority','bucket','due_at','next_action','note')}
+        body['revision']=flow['revision']
         body['note']='Reviewed page, preparing response'
         result=self.work.save_workflow(oid,body)
         self.assertEqual(result['state'],'new')
@@ -157,6 +169,6 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(profile['original_language'],'zh');self.assertIn('不是买家原话',profile['original_text'])
         self.assertIn('订单编号：71',profile['original_text']);self.assertIn('数量：12 pair',profile['original_text'])
         self.assertFalse(profile['original_text'].startswith('{'))
-        with self.assertRaises(ValueError):self.work.save_workflow('customer:order',{'state':'preparing'})
+        with self.assertRaises(ValueError):self.work.save_workflow('customer:order',{'revision':self.work.workflow('customer:order')['revision'],'state':'preparing'})
 
 if __name__=='__main__':unittest.main()

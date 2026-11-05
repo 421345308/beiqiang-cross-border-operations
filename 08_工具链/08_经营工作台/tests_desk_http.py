@@ -244,8 +244,8 @@ class DeskHTTPTests(unittest.TestCase):
 
     def test_gmail_reply_enters_customer_queue_and_dispatches_draft(self):
         oid='customer:website-BQ-REAL'
-        self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
-        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'waiting_customer'})
         self.app.gmail._cache[oid]={'status':{'state':'connected'},'messages':[],
                                     'reply_pending':True,'next_action':'阅读客户新邮件'}
         status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
@@ -330,8 +330,8 @@ class DeskHTTPTests(unittest.TestCase):
         import base64
         oid='customer:website-BQ-REAL';buyer='buyer@example.test';account='seller@example.test'
         self.website.fetch=lambda:{'ok':True,'records':[{'reference':'BQ-REAL','company':'Fixture buyer','email':buyer,'requirements':'Need footwear'}]}
-        self.website.refresh(wait=True);self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
-        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        self.website.refresh(wait=True);self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'waiting_customer'})
         saved={}
         def request(url,*,token=None,form=None):
             if form and form.get('grant_type')=='authorization_code':return {'access_token':'fixture-access','refresh_token':'fixture-refresh','scope':SCOPE}
@@ -365,8 +365,8 @@ class DeskHTTPTests(unittest.TestCase):
         oid='customer:website-BQ-REAL';buyer='buyer@example.test';account='seller@example.test'
         self.website.fetch=lambda:{'ok':True,'records':[{'reference':'BQ-REAL','company':'Fixture buyer','email':buyer,'requirements':'Need footwear'}]}
         self.website.refresh(wait=True)
-        self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
-        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'revision':self.app.customer_workspace.workflow(oid)['revision'],'state':'waiting_customer'})
         class Mailbox:
             def __init__(self):self.messages=[]
             def context(self,emails,force=False):
