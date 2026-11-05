@@ -46,7 +46,9 @@ Data：原商品/客户/渠道/项目档案和素材；SQLite 存现有索引与
 
 `business.py`、`business_context.py`、`creation_canvas.py`、`product_creation.py`、渠道及客户服务继续作为业务能力来源；`server.py`、`desk_mcp.py`、`desk_cli.py` 是入口而非平行事实库。对象及关联原档按需读取，保留时效、范围与来源。核心动作需要共享服务验证，而不是依赖 UI 文案或提示词；现有独立插件和 CLI 不自动纳入工作台门禁。
 
-当前有一项明确的写入风险：`desk_mcp.py` 的 `save_customer_commercial` 保存时重读最新 revision，不能发现 Agent 决策后的人为更改；`customer_commercial.py` 的 revision 也未覆盖独立 workflow 中的下一步。不能宣称此链路具备完整并发保护。下一轮应围绕真实客户记录统一相关版本边界并验证 UI/Agent 交错写入，包含跨进程限制；客户外发规则不因此改变。
+2026-11-05 已修复一类可复现的客户商机陈旧写入：`customer_commercial.py` 的 revision 现在同时覆盖商机数据与持久化 workflow 状态；MCP 新增只读 `get_customer_commercial`，`save_customer_commercial` 必须携带 Agent 实际读取到的 revision，不再在写入前替 Agent 重取最新版本。冲突返回版本冲突，要求重新读取和合并。回归测试覆盖 Agent 读取后人工修改，以及下一步变化使旧 revision 失效。
+
+此修复阻止了该 MCP 调用路径静默覆盖较新的同进程编辑，但不等于完整并发保护：`customer_workspace.py` 的派生 JSON 文件仍依赖进程内 `app.lock`，独立工作台进程之间的文件写入协调尚未验证；其他客户分析/工作流写入口也需纳入统一版本边界。下一步应先完成跨进程一致性设计与交错写入测试，再推广到其他客户派生资料。客户外发规则不因此改变。
 
 ### 外部参考与取舍
 
