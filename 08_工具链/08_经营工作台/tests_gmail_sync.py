@@ -157,6 +157,27 @@ class Tests(unittest.TestCase):
         self.assertEqual(s.dismiss_candidate('x')['items'],[]);s.scan_once();self.assertEqual(s.buyer_candidates()['items'],[])
     def test_revision(self):
         s=self.connect();self.mail.messages=[message()];s.customer('customer:1');rev=s.revision;s.customer('customer:1');self.assertEqual(s.revision,rev);self.mail.state='error';s.customer('customer:1');self.assertGreater(s.revision,rev)
+    def test_reply_event_persists_agent_job_link_and_deduplicates_after_restart(self):
+        s=self.connect();calls=[]
+        def callback(*args):
+            calls.append(args[1]['id'])
+            return {'id':'agent-job-123'}
+        s.on_new_reply=callback;self.mail.messages=[message('reply')]
+        s.customer('customer:1')
+        row=self.db.execute('SELECT dispatch_state,job_id,last_error FROM gmail_reply_events WHERE object_id=? AND message_id=?',('customer:1','reply')).fetchone()
+        self.assertEqual(row,('dispatched','agent-job-123',None))
+        restored=self.service();restored.customer('customer:1')
+        self.assertEqual(calls,['reply'])
+
+    def test_legacy_reply_event_table_is_migrated_without_losing_rows(self):
+        self.db.execute('CREATE TABLE gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
+        self.db.execute('INSERT INTO gmail_reply_events VALUES (?,?,?)',('customer:1','old-event','dispatched'));self.db.commit()
+        s=self.service()
+        columns={row[1] for row in self.db.execute('PRAGMA table_info(gmail_reply_events)')}
+        self.assertTrue({'job_id','updated_at','last_error'}.issubset(columns))
+        row=self.db.execute('SELECT dispatch_state,job_id FROM gmail_reply_events WHERE object_id=? AND message_id=?',('customer:1','old-event')).fetchone()
+        self.assertEqual(row,('dispatched',None))
+
     def test_callback_failure_retry_and_latest_only(self):
         s=self.connect();calls=[]
         def callback(*args):calls.append(args[1]['id']);raise RuntimeError('oops')
