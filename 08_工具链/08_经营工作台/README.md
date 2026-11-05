@@ -14,7 +14,7 @@ MCP 客户商机写入要求先调用 `get_customer_commercial` 读取 revision�
 
 远端改造提交：[0c16d6f](https://github.com/421345308/beiqiang-cross-border-operations/commit/0c16d6f5c21762b51b3338ba59409c05bf4a4e6b)、[51ee035](https://github.com/421345308/beiqiang-cross-border-operations/commit/51ee0357c60c6109048f7e0b77d9be0f8f09f5ff)、[ae1585b](https://github.com/421345308/beiqiang-cross-border-operations/commit/ae1585b399cccf53aa0be6a3dae0e012fff4210f)。本机回归覆盖 Agent 旧 revision、下一步变化、双进程不同字段及同 revision 竞争。文件和 SQLite 不能保证断电原子；写入结果不明时 HTTP/MCP及客户分析任务提示先核对，不能盲目重试。分析及工作流尚无客户端派生版本，同字段基于旧视图的后写仍可能覆盖。
 
-**本机迁移与端到端验收：** 加载前真实 SQLite 事件表为三列、4条记录；使用 SQLite 在线备份并核完整性后重启，迁移后三个新列出现，原4条及其状态均保留。`tests_gmail_job_integration.py` 用合成来信与临时数据库，贯通 Gmail 过滤与事件持久化、`Workbench._gmail_reply`、真实 `AgentJobs`、事件回写 Job ID 与状态查询；另以显式启用的测试调用真实 Codex 完成隔离的模拟回复任务，未连接真实邮箱、未发信。常规测试默认跳过这项真实模型调用。
+**本机迁移与端到端验收：** [本轮修复及测试提交 `c81a104d86434f0233da9b1c640b1a2fe830bce7`](https://github.com/421345308/beiqiang-cross-border-operations/commit/c81a104d86434f0233da9b1c640b1a2fe830bce7)。加载前真实 SQLite 事件表为三列、4条记录；使用 SQLite 在线备份并核完整性后重启，迁移后三个新列出现，原4条及其状态均保留。`tests_gmail_job_integration.py` 用合成来信与临时数据库，贯通 Gmail 过滤与事件持久化、`Workbench._gmail_reply`、真实 `AgentJobs`、事件回写 Job ID 与状态查询；另以显式启用的测试调用真实 Codex 完成隔离的模拟回复任务，未连接真实邮箱、未发信。常规测试默认跳过这项真实模型调用。
 
 **回归命令与结果（本机 2026-11-05）：** 在本目录执行以下命令，共 208 项，其中 207 项通过、1 项为上述真实模型可选测试的默认跳过；另设环境变量 `BEIQIANG_RUN_LIVE_CODEX_TEST=1` 单独运行 `tests_gmail_job_integration.GmailJobIntegrationTests.test_synthetic_reply_runs_real_codex_without_real_mail_or_send`，1 项通过。测试的邮件、客户和 Job 使用临时数据；不会证明真实 Gmail 送达、人工审核或经营效果。
 
