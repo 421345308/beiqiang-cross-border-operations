@@ -11,15 +11,14 @@ import re
 import shutil
 import signal
 import subprocess
-import sys
 import threading
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import getproxies
 import customer_analysis
+from codex_backend import CodexBackend, MODEL
 
-MODEL = 'gpt-6.1-sol'
 ACTIVE = ('queued', 'running')
 
 
@@ -77,8 +76,9 @@ def now():
 
 
 class AgentJobs:
-    def __init__(self, app):
+    def __init__(self, app, backend=None):
         self.app = app
+        self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
         self.lock = threading.RLock()
         self.processes = {}
         self.threads = {}
@@ -274,23 +274,7 @@ class AgentJobs:
 
     @staticmethod
     def command(exe, folder, final, *, root, state, object_id, session_id=None, mode='draft'):
-        mcp_args=[str(Path(__file__).with_name('desk_mcp.py').resolve()),'--root',str(Path(root).resolve()),
-                  '--state',str(Path(state).resolve()),'--object-id',object_id,'--audit',str(folder/'source-reads.jsonl')]
-        extraction = mode in ('mail_draft', 'customer_analysis')
-        if extraction:
-            mcp_args.append('--read-only')
-        command = [exe, '--ask-for-approval', 'never', '-s', 'read-only' if extraction else 'workspace-write', '-C', str(Path(root).resolve())]
-        if not extraction:
-            command.append('--search')
-        command.append('exec')
-        if session_id:
-            command += ['resume', session_id]
-        features = (['--ignore-user-config', '--disable', 'multi_agent', '--disable', 'apps', '--disable', 'plugins', '--disable', 'remote_plugin']
-                    if extraction else ['--enable', 'multi_agent', '-c', 'sandbox_workspace_write.network_access=true'])
-        return command + features + [
-                '-c','mcp_servers.beiqiang_business.command='+json.dumps(sys.executable),
-                '-c','mcp_servers.beiqiang_business.args='+json.dumps(mcp_args,ensure_ascii=False),
-                '-m', MODEL, '--skip-git-repo-check', '--json', '-o', str(final), '-']
+        return CodexBackend.command(exe,folder,final,root=root,state=state,object_id=object_id,session_id=session_id,mode=mode)
 
     def _work(self, job_id, obj):
         process = None
@@ -303,9 +287,10 @@ class AgentJobs:
                     return
                 job['status'] = 'running'
                 job['attempt'] = job.get('attempt', 0) + 1
+                job.setdefault('attempt_usage',[]).append({'attempt':job['attempt'],'turns':[],'cost':None})
                 self._event(job, 'starting', '正在启动Codex，读取当前对象与相关资料。')
                 self._save(job)
-            exe = codex_executable()
+            exe = self.backend.resolve_executable()
             if not exe:
                 raise JobFailure('未找到Codex CLI，请检查本机安装与PATH。')
             folder = (Path(self.app.state) / 'agent-jobs' / job_id / ('attempt-' + str(job['attempt']))).resolve()
@@ -319,8 +304,7 @@ class AgentJobs:
                        if job.get('session_id') else '') + self._prompt(job, obj))
             flags = ({'creationflags': subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP}
                      if os.name == 'nt' else {'start_new_session': True})
-            command=self.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id'],session_id=job.get('session_id'),mode=job.get('mode','draft'))
-            if schema is not None:command[-1:-1]=['--output-schema',str(schema)]
+            command=self.backend.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id'],session_id=job.get('session_id'),mode=job.get('mode','draft'),schema_path=schema)
             env=child_environment()
             env.pop('BEIQIANG_MIAOSHOU_BRIDGE_TOKEN',None)
             env.pop('BEIQIANG_MIAOSHOU_BRIDGE_URL',None)
@@ -330,9 +314,7 @@ class AgentJobs:
                 if token and url:
                     env['BEIQIANG_MIAOSHOU_BRIDGE_TOKEN']=token
                     env['BEIQIANG_MIAOSHOU_BRIDGE_URL']=url
-            process = subprocess.Popen(command, stdin=subprocess.PIPE,
-                                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                                       text=True, encoding='utf-8', errors='replace', env=env, **flags)
+            process = self.backend.spawn(command,env=env,flags=flags)
             with self.lock:
                 self.processes[job_id] = process
                 current = self.get_job(job_id)
@@ -351,46 +333,37 @@ class AgentJobs:
             failed = False
             for line in process.stdout:
                 self._diagnostic(folder, line)
-                try:
-                    event = json.loads(line)
-                except (ValueError, TypeError):
-                    continue  # Never send CLI diagnostics or command output to UI.
-                kind = event.get('type') if isinstance(event, dict) else None
-                item = event.get('item') or {} if isinstance(event, dict) else {}
-                if kind == 'thread.started' and isinstance(event.get('thread_id'), str):
-                    try:
-                        session_id = str(uuid.UUID(event['thread_id']))
-                    except ValueError:
-                        continue
+                event = self.backend.parse_event(line)
+                if not event:continue  # Never send CLI diagnostics or command output to UI.
+                kind=event.get('kind')
+                if kind == 'session':
                     with self.lock:
                         current = self.get_job(job_id)
                         if current['status'] in ACTIVE:
-                            current['session_id'] = session_id
+                            current['session_id'] = event['session_id']
                             self._save(current)
-                elif kind == 'turn.completed':
+                elif kind == 'completed':
                     completed = True
+                    with self.lock:
+                        current=self.get_job(job_id)
+                        # A completed event can already be buffered when a user
+                        # cancels. Retain its usage without changing job status;
+                        # do not attach an old event to a later attempt.
+                        if current.get('attempt')==job['attempt']:
+                            entry=next((row for row in reversed(current.get('attempt_usage',[])) if row['attempt']==job['attempt']),None)
+                            if entry is not None:entry['turns'].append({'tokens':event.get('usage')})
+                            self._save(current)
                     self._progress(job_id, 'turn.completed', '模型已返回本轮结果，正在核对成果。')
-                elif kind == 'turn.failed':
+                elif kind == 'failed':
                     failed = True
                     self._progress(job_id, 'error', 'Codex报告执行错误。')
-                elif kind == 'error':
+                elif kind == 'reconnecting':
                     self._progress(job_id, 'reconnecting', '连接暂时中断，Codex正在恢复；尚未判定任务失败。')
-                elif kind in ('item.started', 'item.completed') and isinstance(item, dict):
-                    item_type = item.get('type')
-                    if item_type in ('command_execution', 'tool_call', 'mcp_tool_call', 'web_search'):
-                        if kind == 'item.completed':
-                            self._progress(job_id, 'tool.completed', '一项资料工具步骤已结束。')
-                        elif item_type == 'web_search':
-                            self._progress(job_id, 'search', '正在检索公开资料。')
-                        elif re.search(r'\brg\b|\bgrep\b|select-string|findstr', str(item.get('command', '')), re.I):
-                            self._progress(job_id, 'search', '正在项目资料中检索依据。')
-                        elif item_type == 'command_execution':
-                            self._progress(job_id, 'read', '正在读取和核对项目资料。')
-                        else:
-                            self._progress(job_id, 'tool', '正在调用资料工具。')
-                    elif item_type == 'agent_message' and kind == 'item.completed':
-                        excerpt = re.sub(r'\s+', ' ', self._clean(item.get('text', ''))).strip()[:180]
-                        self._progress(job_id, 'message', excerpt or 'Agent已产出一段回复。')
+                elif kind == 'progress':
+                    self._progress(job_id,event['event'],event['text'])
+                elif kind == 'message':
+                    excerpt = re.sub(r'\s+', ' ', self._clean(event.get('text', ''))).strip()[:180]
+                    self._progress(job_id, 'message', excerpt or 'Agent已产出一段回复。')
             code = process.wait()
             self._diagnostic(folder, '\n[process exit] ' + str(code) + '\n')
             with self.lock:

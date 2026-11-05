@@ -2,6 +2,29 @@
 
 入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
 
+## Agent Runtime 代码审计与接续（2026-11-05）
+
+审计基线：GitHub `main` 与本地 HEAD 均为 `8233301b7133b475867a069c3f937d0ce2d9c2f6`，另有不属于本任务的未提交文件；以下按实际代码而非设计目标分类。目标边界及决策见 [ARCHITECTURE.md](ARCHITECTURE.md)，产品体验见 [PRODUCT.md](PRODUCT.md)。
+
+| 能力 | 当前判断与代码依据 |
+| --- | --- |
+| 自主执行和连续工具调用 | **部分实现**：`agent_jobs.py` 启动持久 Codex 会话，`desk_mcp.py` 提供业务工具，Agent 可连续调用；业务提示、业务成果与状态仍耦合在执行器中。正常任务和邮件提取使用不同权限配置。 |
+| 动态规划与多 Agent | **部分实现**：普通 Codex 任务可使用现有多 Agent 功能，不同业务对象任务可并行；没有工作台可查的父子任务、依赖、委派范围或汇总协议。单服务内同对象和旧进程检查不是跨进程协调。 |
+| 状态和恢复 | **部分实现**：SQLite `agent_jobs(id,data)` 存任务状态、事件、尝试与 session；服务启动将活动任务标失败，需核旧进程/成果后手动继续会话。此前真实验证取消并继续；服务崩溃仅用真实 PID 模拟，未实现步骤检查点、局部重试或外部恰好一次。旧 `server.py` 的 `runs` 为另一条兼容路径。 |
+| 上下文和成果 | **部分实现**：`business.py`、`business_context.py` 和 `desk_mcp.py` 读取原对象及资料；`business_artifacts` 只存索引，成果正文留原对象 `.local`。创作项目上下文仍有专门分支；不是统一的跨任务共享上下文或事实库。 |
+| 能力发现和共用服务 | **部分实现**：`desk_mcp.py` 的 19 项静态工具及 `desk_cli.py capabilities list` 支持基础发现，未按对象/实际连接状态完整筛选，UI 另有静态清单。画布和商品素材的 UI/MCP/CLI 共用 `creation_canvas.py`、`product_creation.py`；国际站商品修改和 LibTV 等并非都已暴露给 MCP/CLI。 |
+| 多模型、外部任务与费用 | **未完整实现**：当前真实执行后端是 Codex CLI；外部平台任务和本地任务没有统一状态同步。业务日志是受控本地诊断，并非统一可追踪的跨服务账本；未知耗费与账单不能据此推算。 |
+
+**重要风险：** `desk_mcp.py` 保存客户商机时自行重读最新 revision，而 `customer_commercial.py` revision 又不包括独立 workflow 的下一步；Agent 与人的交错编辑仍可能覆盖。该风险尚未修复，不能把画布的原子版本保护推广到客户资料。下一轮优先围绕真实客户记录统一版本边界并测试交错写入，再渐进建设可发现的能力目录及可持久化子任务；具体取舍按当时业务瓶颈决定。
+
+**本轮改造：** `codex_backend.py` 提取 Codex 命令、进程创建与输出事件转换；`agent_jobs.py` 仍负责任务状态、业务上下文、进程管理、取消及成果写入，并接受可信 Python 调用方注入符合当前契约的后端。默认模型和普通任务、邮件整理、客户分析的权限与命令保留；`tests_runtime_backend.py` 验证注入、事件与用量边界，既有执行器及恢复测试保护兼容性。该接口仍依赖本地子进程、PID、标准流和最终文件，**不是**多提供商或远端执行器已接通。
+
+每次尝试的 `attempt_usage` 保存实际观察到的每个完成事件中的已知非负 token 字段；未报告是 `null`，没有完成事件是空列表，费用是 `null`。取消后观察到的缓冲事件可记录用量，但不改变取消状态或发布成果；无法观察的耗费仍未知。缓存输入、推理输出等字段可能包含于其他字段，不直接相加；这里不是账单。原始诊断按既有上限留本地，不写入公开仓库。
+
+**自动验证：** 在工作台目录运行 `python -X utf8 -m unittest tests_runtime_backend tests_agent_jobs tests_job_recovery tests_customer_analysis tests_gmail_translation tests_desk_http tests_canvas_agent tests_canvas_concurrency tests_product_creation tests_mcp_dossier`，本轮 90 项通过。独立复核了普通、邮件和客户分析三模式的新建与恢复命令；替身后端验证接口只证明本地适配契约。真实任务及运行回读见下方验收记录，商业或平台效果不由代码测试推断。
+
+**真实执行验收：** 重启加载后，用 `product:BQ009` 发起只读内部选款审阅，任务 `87a5be1c640f4a7bbdbd91e1f490bd13` 经实际 Codex 完成、保留 session 并保存原对象成果 `79bac9a226394990b679b007401a2db2`；读取审计有11条，其中9次成功读取来源。SQLite 回读本次一条完成事件的 input 566,960、cached input 484,736、output 5,696、reasoning output 2,797 tokens，cost 为未知；字段可能包含关系，不相加，数字只说明该次实际回报，不代表效率提升或账单。原文及诊断留本地对应任务，不向公开仓库提交。成果是内部审阅，未实时查询或修改平台，也未发送客户。
+
 2026-11-05 按 [Agent增量架构](ARCHITECTURE.md)接续：内部 Agent 可读取并保存当前创作项目画布，也可查询已索引商品素材并将其引用到当前项目；与页面共用业务服务及版本。CLI 用 `capabilities list --query canvas` 查询现有 MCP 工具定义，`product-creation options <商品ID>` 查素材和项目，`product-creation add` 复用素材；工具定义中的连接、权限和费用不能当作已验证状态。独立数据库连接同时写同一画布时由 SQLite 原子检查版本，冲突须重新读取合并；这不覆盖手动文件编辑或其他服务，也不是跨进程任务锁。
 
 真实对象验证：BQ009 经商品服务查得40项本机可用素材；ZX9507 原创作画布保留原节点，新增工厂侧面原图引用和可编辑R03方案，Agent服务保存后由本机工作台接口回读，旧版本保存返回冲突。两款未被错误关联；ZX9507 共用商品身份仍待核。2026-11-05续验：项目页面已列出原10秒成片，在页面播放并观察进度从0秒到3秒；R03节点经页面编辑、保存、刷新及Agent工具回读，内容一致。成片索引只复用受控媒体根，不代表作品审美或发布验收。画布保存在本机数据库，跨机器共享未验证。
@@ -133,4 +156,4 @@ BQ009真实任务首次接续发现，产品记录已指定唯一当前档案，
 
 画布依赖与构建：在 `creation-canvas/` 执行 `npm ci` 和 `npm run build`；依赖和构建产物留本机，源码与锁定版本随项目同步。运行时不连接npm。画布是本地布局，不会自动同步到LibTV；LibTV入口读取官方画布，两个视图分别表示各自数据。
 
-桌面Agent在本目录执行 `python -X utf8 desk_cli.py canvas get <项目ID>` 读取画布；保存使用 `canvas save <项目ID> --content-file <JSON>`，先取当前version。内部Sol使用只读 `get_creation_canvas`，需要画布变更时由桌面Agent或人在画布操作。
+桌面Agent在本目录执行 `python -X utf8 desk_cli.py canvas get <项目ID>` 读取画布；保存使用 `canvas save <项目ID> --content-file <JSON>`，先取当前version。内部普通任务可用 `get_creation_canvas` 和 `save_creation_canvas` 读写同一画布，自动邮件整理等只读模式不能写入。
