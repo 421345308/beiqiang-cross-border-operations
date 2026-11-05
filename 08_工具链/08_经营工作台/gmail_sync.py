@@ -58,6 +58,10 @@ class GmailService:
         self.path=Path(app.state)/'gmail.json'
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
+            columns={row[1] for row in app.db.execute('PRAGMA table_info(gmail_reply_events)')}
+            if 'job_id' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN job_id TEXT')
+            if 'updated_at' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN updated_at TEXT')
+            if 'last_error' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN last_error TEXT')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_acknowledged (object_id TEXT PRIMARY KEY,message_id TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_inbox_dismissed (account TEXT NOT NULL,message_id TEXT NOT NULL,PRIMARY KEY(account,message_id))')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_customer_addresses (object_id TEXT NOT NULL,address TEXT NOT NULL,PRIMARY KEY(object_id,address))')
@@ -281,27 +285,36 @@ class GmailService:
         with self.lock:
             if self.clock()<self._retry_at.get((object_id,mid),0):return
         with self.app.lock:
-            existing=self.app.db.execute('SELECT dispatch_state FROM gmail_reply_events WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone()
+            existing=self.app.db.execute('SELECT dispatch_state,job_id FROM gmail_reply_events WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone()
             if existing and existing[0]!='failed':
                 if existing[0]=='dispatching':
                     with self.lock:
-                        note='上次客户回复处理结果未确认，请人工接续，避免重复启动'
+                        note='上次客户回复处理结果未确认，请核对原事件与任务，避免重复启动'
                         if self._cache[object_id].get('callback_error')!=note:self.revision+=1
                         self._cache[object_id]['callback_error']=note
                 return
-            self.app.db.execute('INSERT OR REPLACE INTO gmail_reply_events VALUES (?,?,?)',(object_id,mid,'dispatching'));self.app.db.commit()
+            now=datetime.now(timezone.utc).isoformat()
+            self.app.db.execute('INSERT INTO gmail_reply_events (object_id,message_id,dispatch_state,job_id,updated_at,last_error) VALUES (?,?,?,?,?,NULL) ON CONFLICT(object_id,message_id) DO UPDATE SET dispatch_state=excluded.dispatch_state,updated_at=excluded.updated_at,last_error=NULL',(object_id,mid,'dispatching',None,now))
+            self.app.db.commit()
         try:
-            self.on_new_reply(object_id,copy.deepcopy(message),copy.deepcopy(context))
-            state='dispatched'
-        except Exception:
+            result=self.on_new_reply(object_id,copy.deepcopy(message),copy.deepcopy(context))
+            job_id=result.get('id') if isinstance(result,dict) else None
+            state='dispatched' if isinstance(job_id,str) and job_id else 'dispatched_unlinked'
+            error=None if job_id else '回调未返回可关联的任务ID'
+        except Exception as exc:
             state='failed'
+            error=type(exc).__name__
         with self.app.lock:
-            self.app.db.execute('UPDATE gmail_reply_events SET dispatch_state=? WHERE object_id=? AND message_id=?',(state,object_id,mid));self.app.db.commit()
+            self.app.db.execute('UPDATE gmail_reply_events SET dispatch_state=?,job_id=?,updated_at=?,last_error=? WHERE object_id=? AND message_id=?',
+                                (state,job_id if state in ('dispatched','dispatched_unlinked') else None,datetime.now(timezone.utc).isoformat(),error,object_id,mid))
+            self.app.db.commit()
         with self.lock:
             if state=='failed':
                 self._retry_at[(object_id,mid)]=self.clock()+self.interval
-                self._cache[object_id]['callback_error']='客户回复已同步，后续处理未启动；下轮同步重试，也可人工接续';self.revision+=1
-            elif self._cache[object_id].pop('callback_error',None):self.revision+=1
+                self._cache[object_id]['callback_error']='客户回复已同步，后续任务未启动；下轮同步重试，也可人工接续'
+                self.revision+=1
+            else:
+                if self._cache[object_id].pop('callback_error',None):self.revision+=1
 
     def scan_once(self):
         if not self._mailbox:return self.status()
