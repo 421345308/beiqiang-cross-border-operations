@@ -40,9 +40,17 @@ class CreationCanvas:
         payload={'title':project['title'],'nodes':nodes,'edges':edges}
         encoded=json.dumps(payload,ensure_ascii=False,allow_nan=False)
         if len(encoded)>500000:raise ValueError('画布内容过长')
+        expected=body.get('version','')
+        if not isinstance(expected,str):raise CanvasConflict('这份画布已被其他页面更新，请重新打开')
         with self.app.lock:
-            row=self.app.db.execute('SELECT version FROM creation_canvases WHERE object_id=?',(object_id,)).fetchone()
-            if (row[0] if row else '') != body.get('version',''):raise CanvasConflict('这份画布已被其他页面更新，请重新打开')
             version=uuid.uuid4().hex
-            self.app.db.execute('INSERT OR REPLACE INTO creation_canvases VALUES (?,?,?)',(object_id,encoded,version));self.app.db.commit()
+            # The comparison and write must be one SQLite statement. app.lock only
+            # protects this connection; CLI and server use independent connections.
+            if expected=='':
+                cursor=self.app.db.execute('INSERT OR IGNORE INTO creation_canvases VALUES (?,?,?)',(object_id,encoded,version))
+            else:
+                cursor=self.app.db.execute('UPDATE creation_canvases SET data=?,version=? WHERE object_id=? AND version=?',(encoded,version,object_id,expected))
+            changed=cursor.rowcount
+            self.app.db.commit()
+            if changed!=1:raise CanvasConflict('这份画布已被其他页面更新，请重新打开')
         return {**payload,'object_id':object_id,'version':version}

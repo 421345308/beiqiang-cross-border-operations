@@ -38,6 +38,8 @@ def open_business(root=None, state=None):
         from media_assets import MediaAssets
         from resource_library import ResourceLibrary
         app.media = MediaAssets(app.root)
+        from product_creation import ProductCreation
+        app.product_creation = ProductCreation(app)
         app.library = ResourceLibrary(app)
         from gmail_sync import GmailService
         app.gmail = GmailService(app)
@@ -47,7 +49,21 @@ def open_business(root=None, state=None):
     return app
 
 
-def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None, material_id=None, start=0, shop=None, page=1, page_size=100):
+def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None, material_id=None, start=0, shop=None, page=1, page_size=100, project_id=None, media_path=None, version=None):
+    if area == 'capabilities' and operation == 'list':
+        from desk_mcp import TOOLS
+        term = query.casefold().strip()
+        matched = [tool for tool in TOOLS if not term or term in (tool['name'] + ' ' + tool['description']).casefold()]
+        return {'interface': 'business MCP, scoped to current object', 'availability': 'unknown',
+                'cost': 'unknown', 'notice': '工具定义不证明连接、权限或额度可用；调用时返回实际状态。',
+                'capabilities': matched}
+    if area == 'product-creation':
+        service = business.app.product_creation
+        if operation == 'options':return service.options(object_id)
+        if operation == 'add':
+            if version is None:raise ValueError('请先读取画布并提供其version')
+            return service.add_to_canvas(object_id, project_id, media_path, version)
+        raise ValueError('不支持的商品素材动作')
     if area == 'douyin':
         from douyin_agent import read_store
         if operation=='live':return read_store(shop,operation,page=page,page_size=page_size)
@@ -96,6 +112,8 @@ def main(argv=None):
     parser.add_argument('--root', type=Path)
     parser.add_argument('--state', type=Path)
     areas = parser.add_subparsers(dest='area', required=True)
+    capabilities = areas.add_parser('capabilities').add_subparsers(dest='operation', required=True)
+    capabilities.add_parser('list').add_argument('--query', default='')
     douyin=areas.add_parser('douyin').add_subparsers(dest='operation', required=True)
     for operation in ('check','snapshot'):
         douyin.add_parser(operation).add_argument('--shop',choices=('brand','legacy'),required=True)
@@ -120,6 +138,13 @@ def main(argv=None):
     canvas_save = canvas.add_parser('save')
     canvas_save.add_argument('object_id')
     canvas_save.add_argument('--content-file', type=Path, help='省略时stdin读取含version/nodes/edges的JSON')
+    product_creation = areas.add_parser('product-creation').add_subparsers(dest='operation', required=True)
+    product_creation.add_parser('options').add_argument('object_id')
+    add_media = product_creation.add_parser('add')
+    add_media.add_argument('object_id')
+    add_media.add_argument('--project-id', required=True)
+    add_media.add_argument('--media-path', required=True)
+    add_media.add_argument('--version', required=True, help='先读取画布；空版本用 --version ""')
     args = parser.parse_args(argv)
     app = None
     try:
@@ -130,7 +155,7 @@ def main(argv=None):
         result = invoke(app.business, args.area, args.operation, object_id=getattr(args, 'object_id', None),
                         kind=getattr(args, 'kind', ''), query=getattr(args, 'query', ''),
                         title=getattr(args, 'title', None), content=content,
-                        artifact_id=getattr(args, 'artifact_id', None),material_id=getattr(args,'material_id',None),start=getattr(args,'start',0),shop=getattr(args,'shop',None),page=getattr(args,'page',1),page_size=getattr(args,'page_size',100))
+                        artifact_id=getattr(args, 'artifact_id', None),material_id=getattr(args,'material_id',None),start=getattr(args,'start',0),shop=getattr(args,'shop',None),page=getattr(args,'page',1),page_size=getattr(args,'page_size',100),project_id=getattr(args,'project_id',None),media_path=getattr(args,'media_path',None),version=getattr(args,'version',None))
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except ValueError as exc:
