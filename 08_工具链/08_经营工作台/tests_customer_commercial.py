@@ -39,10 +39,28 @@ class CommercialTests(unittest.TestCase):
         self.app.customer_workspace=self.work
         self.app.business.app=self.app
         tools=DeskTools(self.app.business,self.app.root,self.original['id'])
-        result=tools.call('save_customer_commercial',{'record':{'kind':'quotation','status':'draft','summary':'准备选款报价'},'next_action':'确认尺码'})
+        current=tools.call('get_customer_commercial',{})
+        result=tools.call('save_customer_commercial',{'revision':current['revision'],'record':{'kind':'quotation','status':'draft','summary':'准备选款报价'},'next_action':'确认尺码'})
         self.assertEqual(result['records'][0]['summary'],'准备选款报价')
         self.assertEqual(result['next_action'],'确认尺码')
         self.assertFalse(result['external_action'])
+
+    def test_agent_stale_revision_cannot_overwrite_human_edit(self):
+        self.app.customer_workspace=self.work
+        self.app.business.app=self.app
+        tools=DeskTools(self.app.business,self.app.root,self.original['id'])
+        observed=tools.call('get_customer_commercial',{})
+        self.work.save_commercial(self.original['id'],{'revision':observed['revision'],'owner':'Human edit'})
+        with self.assertRaisesRegex(ValueError,'已变化'):
+            tools.call('save_customer_commercial',{'revision':observed['revision'],'owner':'Stale Agent'})
+        self.assertEqual(self.work.commercial(self.original['id'])['owner'],'Human edit')
+
+    def test_workflow_change_invalidates_commercial_editor_revision(self):
+        observed=self.work.commercial(self.original['id'])
+        self.work.save_workflow(self.original['id'],{'next_action':'Human changed next step'})
+        with self.assertRaisesRegex(ValueError,'已变化'):
+            self.work.save_commercial(self.original['id'],{'revision':observed['revision'],'owner':'Stale editor'})
+        self.assertEqual(self.work.commercial(self.original['id'])['next_action'],'Human changed next step')
 
     def test_actual_without_attachment_and_partial_edit(self):
         result = self.save(record={'kind': 'sample', 'status': 'recorded', 'summary': 'Agreement confirmed',
