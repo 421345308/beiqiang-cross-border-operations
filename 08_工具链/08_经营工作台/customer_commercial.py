@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from uuid import uuid4
+from workspaces import WorkspaceConflict
 
 KINDS = {'quotation': '报价', 'sample': '样品', 'order': '订单'}
 STATUSES = {'draft': '内部准备', 'recorded': '实际记录', 'cancelled': '已取消'}
@@ -30,7 +31,12 @@ def view(workspace, object_id):
     saved = workspace._saved_profile(object_id)
     data = deepcopy(saved.get('commercial') or {'records': []})
     flow = workspace.workflow(object_id)
-    return {'object_id': object_id, 'revision': _revision(data), **data,
+    # The editable revision must cover both commercial records and the persisted
+    # workflow fields shown in this editor. Otherwise a next-action edit can be
+    # silently overwritten while the commercial-only hash remains unchanged.
+    flow_data = saved.get('workflow') or {}
+    revision = _revision({'commercial': data, 'workflow': flow_data})
+    return {'object_id': object_id, 'revision': revision, **data,
             'owner': data.get('owner', ''),
             'next_action': flow.get('next_action', ''), 'due_at': flow.get('due_at'),
             'source': obj.get('source', ''),
@@ -45,7 +51,7 @@ def save(workspace, object_id, body):
     with workspace.app.lock:
         current = view(workspace, object_id)
         if body.get('revision') != current['revision']:
-            raise ValueError('商机已变化，请刷新后再保存')
+            raise WorkspaceConflict('客户商机或下一步已变化，请重新读取后合并再保存')
         saved = workspace._saved_profile(object_id)
         data = deepcopy(saved.get('commercial') or {'records': []})
         if 'owner' in body:
