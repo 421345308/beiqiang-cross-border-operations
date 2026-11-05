@@ -121,6 +121,23 @@ class AgentJobs:
             self._event(job, kind, text)
             self._save(job)
 
+    def _check_object_available(self, object_id, *, exclude=None):
+        """Prevent a new writer bypassing an interrupted job's live child.
+
+        Called under self.lock. A terminal job can still own a live child after
+        an unclean restart or cancellation; an unknown PID state is not proof
+        that it is safe to start another writer for the same business object.
+        """
+        for row in self.list_jobs():
+            if row.get('object_id') != object_id or row.get('id') == exclude:
+                continue
+            if row.get('status') in ACTIVE:
+                raise ValueError('该对象已有工作正在执行，请在原工作结束后继续。')
+            if row.get('id') in self.threads:
+                raise ValueError('该对象先前工作正在收尾，请稍后继续。')
+            if row.get('process_id') and self._pid_alive(row['process_id']) is not False:
+                raise ValueError('该对象先前进程仍在运行或无法确认已退出，请先核对原任务和已有成果。')
+
     def start(self, object_id, instruction, mode='draft'):
         if mode not in ('draft','customer_analysis','mail_draft'):raise ValueError('不支持的工作模式')
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
@@ -138,8 +155,7 @@ class AgentJobs:
                'created_at': now(), 'updated_at': now()}
         self._event(job, 'queued', '工作已排队，成果将保存到当前业务对象。')
         with self.lock:
-            if any(j['object_id'] == object_id and j['status'] in ACTIVE for j in self.list_jobs()):
-                raise ValueError('该对象已有工作正在执行，请在原工作结束后继续。')
+            self._check_object_available(object_id)
             self._save(job)
             thread = threading.Thread(target=self._work, args=(job['id'], obj), daemon=True,
                                       name='business-agent-' + job['id'][:8])
@@ -160,8 +176,7 @@ class AgentJobs:
                 raise ValueError('这项工作没有可恢复的 Codex 会话；请核对已有成果后新建工作。')
             if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
                 raise ValueError('先前进程仍在运行或无法确认已退出，暂不能并行恢复。')
-            if any(j['id'] != job_id and j['object_id'] == job['object_id'] and j['status'] in ACTIVE for j in self.list_jobs()):
-                raise ValueError('该对象已有其他工作正在执行。')
+            self._check_object_available(job['object_id'], exclude=job_id)
             obj = self.app.business.get_object(job['object_id'])
             if job.get('mode') == 'customer_analysis':
                 profile = self.app.customer_workspace.profile(job['object_id'])

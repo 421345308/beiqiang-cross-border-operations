@@ -1,6 +1,7 @@
 """Read-only creation catalog over original project records and official LibTV CLI."""
 from pathlib import Path
 import hashlib
+import os
 import re
 
 MEDIA={'.mp4','.webm','.mov','.png','.jpg','.jpeg','.wav','.mp3','.html'}
@@ -81,9 +82,27 @@ class Creation:
             from urllib.parse import unquote
             for ref in re.findall(r'\]\(([^)]+)\)',content)[:200]:
                 if '://' in ref:continue
-                asset=(path.parent/unquote(ref.split('#')[0])).absolute()
-                if not any(asset.resolve().is_relative_to(root) for root in self.allowed_roots) or asset.suffix.lower() not in MEDIA:continue
-                if asset.is_file():assets.append({'path':asset.relative_to(self.root).as_posix(),'name':asset.name,'type':asset.suffix.lower()[1:]})
+                decoded=unquote(ref.split('#')[0])
+                if ':' in decoded or any(ord(c)<32 for c in decoded):continue
+                # Normalize the project-relative Markdown path lexically first.
+                # Resolving it directly would lose the trusted 成片 junction's
+                # workspace identity and expose an unusable absolute E: path.
+                asset=Path(os.path.abspath(path.parent/decoded))
+                if not asset.is_relative_to(self.root) or asset.suffix.lower() not in MEDIA:continue
+                relative=asset.relative_to(self.root).as_posix()
+                finished=self.root/'05_内容与视频'/'成片'
+                if asset.is_relative_to(finished):
+                    # The media service checks the explicitly configured root,
+                    # nested junctions, private paths and real file signatures.
+                    # HTML is intentionally not served as media.
+                    from media_assets import MediaAssets, MediaError
+                    try:media=MediaAssets(self.root).resolve(relative)
+                    except (MediaError,OSError,ValueError):continue
+                    assets.append({'path':media['path'],'name':media['name'],'type':asset.suffix.lower()[1:]})
+                else:
+                    try:allowed=any(asset.resolve().is_relative_to(root) for root in self.allowed_roots) and asset.is_file()
+                    except (OSError,RuntimeError,ValueError):continue
+                    if allowed:assets.append({'path':relative,'name':asset.name,'type':asset.suffix.lower()[1:]})
             links=[]
             for url in re.findall(r'https://[^\s<>\)\]"\x27]+',content):
                 from urllib.parse import urlsplit

@@ -15,7 +15,7 @@ from urllib.parse import urlencode, parse_qs, urlsplit
 from unittest.mock import patch
 import server
 from business import PRODUCTS,SUPPLY,ASSETS,CHANNEL
-from tests_agent_jobs import Process
+from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
@@ -88,7 +88,7 @@ class DeskHTTPTests(unittest.TestCase):
     def tearDown(self):
         self.http.shutdown();self.thread.join(2);self.http.server_close()
         for process in self.processes:process.kill()
-        for thread in self.app.agent_jobs.threads.values():thread.join(3)
+        stop_job_threads(self.app.agent_jobs)
         self.stop.stop();self.which.stop();self.popen.stop();self.app.db.close();self.temp.cleanup()
 
     def request(self,path,body=None,token=True):

@@ -12,7 +12,7 @@ from agent_jobs import AgentJobs
 from customer_workspace import CustomerWorkspace
 from customer_analysis import (parse_result,prompt,SCHEMA,COMPANY_CONTEXT_SOURCES,CLEANED,ANALYSIS_TEXT,ANALYSIS_LIST,
                               LEGACY_ANALYSIS_TEXT,LEGACY_ANALYSIS_LIST)
-from tests_agent_jobs import Process
+from tests_agent_jobs import Process, join_job_threads, stop_job_threads
 
 def response():
     return {'original_language':'en','translation_zh':'我们需要500双样品，请确认鞋款规格和样品费用。',
@@ -42,15 +42,14 @@ class CustomerAnalysisTests(unittest.TestCase):
         self.stop=patch.object(AgentJobs,'_stop',side_effect=lambda process:process.kill());self.stop.start()
     def tearDown(self):
         for process in self.processes:process.kill()
-        for thread in self.jobs.threads.values():thread.join(3)
+        stop_job_threads(self.jobs)
         self.stop.stop();self.which.stop();self.popen.stop();self.app.db.close();self.temp.cleanup()
     def wait(self,job):
         deadline=time.monotonic()+4
         while time.monotonic()<deadline:
             row=self.jobs.get_job(job['id'])
             if row['status'] not in ('queued','running'):
-                thread=self.jobs.threads.get(job['id'])
-                if thread:thread.join(2)
+                join_job_threads(self.jobs,job['id'])
                 return row
             time.sleep(.01)
         self.fail('Analysis fixture did not terminate')

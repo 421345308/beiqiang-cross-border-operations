@@ -85,6 +85,24 @@ class Process:
         if self.gate: self.gate.set()
 
 
+def join_job_threads(jobs, job_id=None):
+    # A worker removes itself from threads before its final database write,
+    # while still holding jobs.lock. Take the snapshot under that same lock.
+    with jobs.lock:
+        threads = ([jobs.threads[job_id]] if job_id in jobs.threads else []) if job_id else list(jobs.threads.values())
+    for thread in threads:
+        thread.join(10)
+        if thread.is_alive():
+            raise AssertionError('Agent worker did not terminate before fixture cleanup')
+
+
+def stop_job_threads(jobs):
+    for job in jobs.list_jobs():
+        if job['status'] in ('queued', 'running'):
+            jobs.cancel(job['id'])
+    join_job_threads(jobs)
+
+
 class AgentJobTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
@@ -101,7 +119,7 @@ class AgentJobTests(unittest.TestCase):
 
     def tearDown(self):
         for process in self.processes: process.kill()
-        for thread in list(self.jobs.threads.values()): thread.join(3)
+        stop_job_threads(self.jobs)
         self.stop.stop();self.which.stop();self.popen.stop();self.app.db.close();self.tmp.cleanup()
 
     def wait(self, job):
@@ -109,11 +127,30 @@ class AgentJobTests(unittest.TestCase):
         while time.monotonic()<deadline:
             current=self.jobs.get_job(job['id'])
             if current['status'] not in ('queued','running'):
-                thread=self.jobs.threads.get(job['id'])
-                if thread: thread.join(2)
+                join_job_threads(self.jobs,job['id'])
                 return current
             threading.Event().wait(.01)
         self.fail('Job did not terminate')
+
+    def test_fixture_waits_for_worker_final_database_write(self):
+        entered=threading.Event();release=threading.Event();joined=threading.Event()
+        original=self.jobs._save
+        def delay_final_save(job):
+            if job.get('status')=='completed' and job.get('process_id') is None:
+                entered.set()
+                if not release.wait(3):raise AssertionError('fixture did not release worker')
+            return original(job)
+        try:
+            with patch.object(self.jobs,'_save',side_effect=delay_final_save):
+                self.jobs.start('product:shoe','整理')
+                self.assertTrue(entered.wait(3))
+                waiter=threading.Thread(target=lambda:(join_job_threads(self.jobs),joined.set()))
+                waiter.start()
+                self.assertFalse(joined.wait(.1))
+                release.set();waiter.join(3)
+                self.assertTrue(joined.is_set())
+        finally:
+            release.set()
 
     def test_async_completed_markdown_saved_to_same_object(self):
         result=self.wait(self.jobs.start('product:shoe','整理选款资料'))

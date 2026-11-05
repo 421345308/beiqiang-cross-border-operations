@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -63,6 +64,22 @@ class DeskTools:
             product=next((r for r in rows if r.get('id')==self.object_id.removeprefix('product:')),None)
             paths[CHANNEL]='current-channel-records'
             if product:
+                # Only a product explicitly declaring this canonical archive
+                # convention may expose its exact ID's own existing dossier.
+                # Do not infer aliases or let an object choose arbitrary paths.
+                pid=product.get('id')
+                local=product.get('local_assets') or {}
+                if (isinstance(local,dict) and local.get('state')=='SINGLE_CURRENT_FACT_ENTRY'
+                        and isinstance(pid,str) and re.fullmatch(r'[A-Za-z0-9_-]{1,64}',pid)):
+                    dossier='02_Alibaba运营/02_单品优化记录/商品档案/'+pid+'/README.md'
+                    try:
+                        file=self._safe_path(dossier)
+                        first=''
+                        if file.is_file():
+                            with file.open(encoding='utf-8-sig') as stream:first=stream.readline().strip()
+                        if first==f'# {pid} 商品档案':paths[dossier]='current-product-dossier'
+                    except (OSError,UnicodeError,ValueError):
+                        pass
                 for key in ('raw_packages',):
                     for ref in product.get(key,[]):
                         if isinstance(ref,str):paths[ref]=key
