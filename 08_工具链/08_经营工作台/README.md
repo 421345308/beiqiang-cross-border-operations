@@ -2,6 +2,12 @@
 
 入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
 
+## 客户商机写入冲突修复（2026-11-05）
+
+MCP 客户商机写入现在要求先调用 `get_customer_commercial` 读取 revision，再将同一 revision 传给 `save_customer_commercial`。保存时不会代 Agent 获取最新版本。revision 覆盖商机记录与已保存 workflow 状态（含下一步/截止时间）；版本不一致时返回冲突，必须重新读取并合并。新增测试覆盖 Agent 读取后人工编辑、workflow 下一步变更使旧 revision 失效，以及正常 Agent 读写。
+
+代码提交：[0c16d6f](https://github.com/421345308/beiqiang-cross-border-operations/commit/0c16d6f5c21762b51b3338ba59409c05bf4a4e6b)、[51ee035](https://github.com/421345308/beiqiang-cross-border-operations/commit/51ee0357c60c6109048f7e0b77d9be0f8f09f5ff)、[ae1585b](https://github.com/421345308/beiqiang-cross-border-operations/commit/ae1585b399cccf53aa0be6a3dae0e012fff4210f)。本环境没有连接用户本地工作台，以上新增回归测试尚未在用户本机执行；不要将其标记为测试通过。该修复覆盖 MCP 传入陈旧 revision 的路径，不代表跨进程 JSON 文件写入已获得原子保护。
+
 ## Agent Runtime 代码审计与接续（2026-11-05）
 
 审计基线：GitHub `main` 与本地 HEAD 均为 `8233301b7133b475867a069c3f937d0ce2d9c2f6`，另有不属于本任务的未提交文件；以下按实际代码而非设计目标分类。目标边界及决策见 [ARCHITECTURE.md](ARCHITECTURE.md)，产品体验见 [PRODUCT.md](PRODUCT.md)。
