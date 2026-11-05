@@ -266,13 +266,16 @@ class DeskTools:
         if name=='get_customer_gmail':
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('邮件往来仅支持当前客户')
             return self.business.app.gmail.customer(self.object_id,force=True)
+        if name=='get_customer_commercial':
+            if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
+            return self.business.app.customer_workspace.commercial(self.object_id)
         if name=='save_customer_commercial':
             if self.read_only:raise ValueError('当前自动整理任务只读')
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
-            workspace=self.business.app.customer_workspace
-            current=workspace.commercial(self.object_id)
+            revision=args.get('revision')
+            if not isinstance(revision,str) or not revision:raise ValueError('保存商机前必须读取并传入revision')
             body={key:args[key] for key in ('record','owner','next_action','due_at') if key in args}
-            return workspace.save_commercial(self.object_id,{'revision':current['revision'],**body})
+            return self.business.app.customer_workspace.save_commercial(self.object_id,{'revision':revision,**body})
         if name=='research_company':
             from prospect_research import research_company
             obj=self.object()
@@ -322,8 +325,9 @@ TOOLS.append({'name':'get_customer_gmail','description':'读取当前客户已�
 TOOLS.append({'name':'read_douyin_store','description':'按指定店铺只读检查旧连接、读取手动快照，或通过已配对浏览器桥实时读取品牌店商品分页。快照非实时；实时连接失败时返回实际错误，旧店尚无浏览器桥。不会修改平台。',
               'inputSchema':{'type':'object','properties':{'shop':{'type':'string','enum':['brand','legacy']},'mode':{'type':'string','enum':['check','snapshot','live']},'page':{'type':'integer','minimum':1},'page_size':{'type':'integer','enum':[20,40,50,100]},'is_draft':{'type':'boolean'}},'required':['shop','mode'],'additionalProperties':False},
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
-TOOLS.append({'name':'save_customer_commercial','description':'按当前委托将报价、样品、订单的已知事实或内部草稿写入当前客户原档，并可更新下一步；status区分draft、recorded、cancelled。不会发信、报价给客户或创建平台订单。',
-              'inputSchema':{'type':'object','properties':{'record':{'type':'object','properties':{'id':{'type':'string'},'kind':{'type':'string','enum':['quotation','sample','order']},'status':{'type':'string','enum':['draft','recorded','cancelled']},'summary':{'type':'string'},'reference':{'type':'string'},'products':{'type':'string'},'terms':{'type':'string'},'purpose':{'type':'string'},'acceptance':{'type':'string'},'exclusions':{'type':'string'},'actual_result':{'type':'string'},'profit_basis':{'type':'string'}},'required':['kind','status','summary'],'additionalProperties':False},'owner':{'type':'string'},'next_action':{'type':'string'},'due_at':{'type':['string','null']}},'additionalProperties':False},
+TOOLS.append({'name':'get_customer_commercial','description':'读取当前客户报价、样品、订单及下一步，并返回保存所需的revision；保存前必须使用本次读取的revision。', 'inputSchema':{'type':'object','properties':{},'additionalProperties':False},'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}})
+TOOLS.append({'name':'save_customer_commercial','description':'按当前委托将报价、样品、订单的已知事实或内部草稿写入当前客户原档，并可更新下一步；必须传入get_customer_commercial返回的revision，版本冲突时重新读取并合并。不会发信、报价给客户或创建平台订单。',
+              'inputSchema':{'type':'object','properties':{'revision':{'type':'string'},'record':{'type':'object','properties':{'id':{'type':'string'},'kind':{'type':'string','enum':['quotation','sample','order']},'status':{'type':'string','enum':['draft','recorded','cancelled']},'summary':{'type':'string'},'reference':{'type':'string'},'products':{'type':'string'},'terms':{'type':'string'},'purpose':{'type':'string'},'acceptance':{'type':'string'},'exclusions':{'type':'string'},'actual_result':{'type':'string'},'profit_basis':{'type':'string'}},'required':['kind','status','summary'],'additionalProperties':False},'owner':{'type':'string'},'next_action':{'type':'string'},'due_at':{'type':['string','null']}},'required':['revision'],'additionalProperties':False},
               'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}})
 
 
