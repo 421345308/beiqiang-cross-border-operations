@@ -35,7 +35,10 @@ def view(workspace, object_id):
     # workflow fields shown in this editor. Otherwise a next-action edit can be
     # silently overwritten while the commercial-only hash remains unchanged.
     flow_data = saved.get('workflow') or {}
-    revision = _revision({'commercial': data, 'workflow': flow_data})
+    # Use shared persisted observations, not Gmail's per-process cache or the
+    # clock-derived overdue display. The event table is not a complete mailbox.
+    revision = _revision({'commercial': data, 'workflow': flow_data,
+                          'source_hash':source_hash,'gmail':workspace._gmail_revision_inputs(object_id)})
     return {'object_id': object_id, 'revision': revision, **data,
             'owner': data.get('owner', ''),
             'next_action': flow.get('next_action', ''), 'due_at': flow.get('due_at'),
@@ -48,7 +51,7 @@ def view(workspace, object_id):
 def save(workspace, object_id, body):
     if not isinstance(body, dict) or set(body) - {'revision', 'record', 'owner', 'next_action', 'due_at'}:
         raise ValueError('不支持的客户商机字段')
-    with workspace.app.lock:
+    with workspace._profile_write():
         current = view(workspace, object_id)
         if body.get('revision') != current['revision']:
             raise WorkspaceConflict('客户商机或下一步已变化，请重新读取后合并再保存')
@@ -91,5 +94,5 @@ def save(workspace, object_id, body):
             saved['workflow'] = customer_workflow.update(flow, flow_body, record=workspace._source(object_id)[2])
         data['updated_at'] = datetime.now(timezone.utc).isoformat()
         saved.update(object_id=object_id, commercial=data)
-        workspace._store_profile(object_id, saved)
+        workspace._store_profile(object_id, saved, commit=False)
     return view(workspace, object_id)

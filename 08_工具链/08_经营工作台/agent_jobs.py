@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import getproxies
 import customer_analysis
+from customer_workspace import CustomerWriteOutcomeUnknown
 from codex_backend import CodexBackend, MODEL
 
 ACTIVE = ('queued', 'running')
@@ -419,6 +420,12 @@ class AgentJobs:
             with self.lock:
                 job = self.get_job(job_id)
                 if job['status'] in ACTIVE:
+                    if isinstance(exc,CustomerWriteOutcomeUnknown):
+                        job.update(status='needs_input',profile_saved=False,
+                                   error='客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续；未自动重试。')
+                        self._event(job,'needs_input',job['error'])
+                        self._save(job)
+                        return
                     error = str(exc) if isinstance(exc, JobFailure) else {
                         '启动': '启动Codex失败，请查看本机任务诊断日志。',
                         '模型执行': 'Codex运行中断，请查看本机任务诊断日志。',

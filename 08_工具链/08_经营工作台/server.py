@@ -18,13 +18,13 @@ from search_console import SearchConsole
 from alibaba_product_review import AlibabaProductReview
 from business import Business, CHANNEL
 from agent_jobs import AgentJobs, codex_executable
-from customer_workspace import CustomerWorkspace
+from customer_workspace import CustomerWorkspace, CustomerWriteOutcomeUnknown
 from inquiry_intake import InquiryIntake
 from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
 from product_creation import ProductCreation
-from gmail_sync import GmailService
+from gmail_sync import GmailDispatchDeferred, GmailService
 from gmail_drafts import GmailDrafts
 from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
@@ -117,7 +117,9 @@ class Workbench:
 
     def _gmail_reply(self,object_id,message,context):
         if any(job.get('object_id')==object_id and job.get('status') in ('queued','running') for job in self.agent_jobs.list_jobs()):
-            raise ValueError('该客户已有工作正在执行')
+            # This check happens before job creation, so the reply can safely
+            # remain deferred until the existing customer task has ended.
+            raise GmailDispatchDeferred('该客户已有工作正在执行')
         instruction=('客户在 Gmail 发来新邮件。先调用 get_customer_gmail 读取已同步往来，判断最新邮件的真实意图与已有答复；'
                      '如提示正文被截断，说明需要在 Gmail 查看完整原文，不虚构缺失内容；'
                      '用中文整理客户要求、我们如何承接和下一步，再准备英文回复草稿及完整中文对照。'
@@ -600,6 +602,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({'error':'接口不存在'},404)
         except MediaError as e:self.send_json({'error':str(e)},e.status)
         except PermissionError as e:self.send_json({'error':str(e)},403)
+        except CustomerWriteOutcomeUnknown:self.send_json({'code':'outcome_unknown','error':'客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续。'},500)
         except (Conflict,WorkspaceConflict,CanvasConflict) as e:self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'操作失败，请检查本地运行环境'},500)

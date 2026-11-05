@@ -3,11 +3,28 @@ from __future__ import annotations
 import copy
 from datetime import datetime, timedelta, timezone
 import json
+import sqlite3
 from pathlib import Path
 import threading
 import time
 from gmail_mailbox import GmailMailbox, normalize_email, test_credentials, save_password, credential_available
 from gmail_oauth import GmailDependencyError, GmailOAuth, GmailOAuthMailbox, parse_addresses, credentials_available as oauth_credentials_available
+
+
+class GmailDispatchDeferred(Exception):
+    """Callback definitely did not create a job; retry later is safe.
+
+    Raise only before invoking the job creation service, never for an unknown
+    outcome after it has been invoked.
+    """
+
+
+def _add_event_column(db,name):
+    try:db.execute('ALTER TABLE gmail_reply_events ADD COLUMN '+name+' TEXT')
+    except sqlite3.OperationalError:
+        # A separate process may have migrated the same column after our
+        # PRAGMA snapshot. Only suppress the error when the column now exists.
+        if name not in {row[1] for row in db.execute('PRAGMA table_info(gmail_reply_events)')}:raise
 
 
 def _timestamp(value):
@@ -52,16 +69,14 @@ class GmailService:
         self.oauth=oauth_factory();self.oauth_mailbox_factory=oauth_mailbox_factory;self.oauth_credential_checker=oauth_credential_checker
         self.lock=threading.RLock();self._stop=threading.Event();self._thread=None
         self._cache={};self._mailbox=None;self._account='';self._connected_at=None;self.revision=0
-        self._retry_at={}
         self._inbox={'status':{'state':'loading','last_success_at':None},'items':[]}
         self._state='not_connected';self._error=None;self._last_success=None;self._auth_mode='';self._publishing_status='';self._authorized_at=None
         self.path=Path(app.state)/'gmail.json'
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
             columns={row[1] for row in app.db.execute('PRAGMA table_info(gmail_reply_events)')}
-            if 'job_id' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN job_id TEXT')
-            if 'updated_at' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN updated_at TEXT')
-            if 'last_error' not in columns:app.db.execute('ALTER TABLE gmail_reply_events ADD COLUMN last_error TEXT')
+            for column in ('job_id','updated_at','last_error'):
+                if column not in columns:_add_event_column(app.db,column)
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_acknowledged (object_id TEXT PRIMARY KEY,message_id TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_inbox_dismissed (account TEXT NOT NULL,message_id TEXT NOT NULL,PRIMARY KEY(account,message_id))')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_customer_addresses (object_id TEXT NOT NULL,address TEXT NOT NULL,PRIMARY KEY(object_id,address))')
@@ -240,6 +255,12 @@ class GmailService:
                 incoming=[m for m in messages if m.get('direction')=='inbound' and m.get('mail_kind')!='automatic']
                 selected=[max(incoming,key=lambda m:_timestamp(m.get('sent_at')) or 0)] if incoming and result.get('reply_pending') else []
             self.translator.apply(account,messages,[m.get('id') for m in selected],retry=bool(force and _context is None))
+        # Persist an eligible event before exposing this reply via peek/UI.
+        # The callback still runs after publication so it can read the cache.
+        dispatch=self._claim_dispatch(object_id,result) if emails and result.get('status',{}).get('state')=='connected' else None
+        if dispatch is not None and not dispatch[2] and dispatch[3] and dispatch[3][0]=='acknowledged':
+            result['reply_pending']=False
+            result['next_action']='已标记处理，可继续跟进客户'
         with self.lock:
             result['status'].update(self._authorization_details())
             old=self._cache.get(object_id)
@@ -247,7 +268,7 @@ class GmailService:
             signature=lambda r: (r.get('reply_pending'),r.get('status',{}).get('state'),[(m.get('id'),m.get('direction')) for m in r.get('messages',[])])
             if old is None or signature(old)!=signature(result):self.revision+=1
             self._cache[object_id]=copy.deepcopy(result)
-        if emails and result.get('status',{}).get('state')=='connected':self._dispatch(object_id,result)
+        self._execute_dispatch(object_id,result,dispatch)
         return self.peek(object_id)
 
     def acknowledge(self,object_id):
@@ -265,6 +286,10 @@ class GmailService:
         return self.peek(object_id)
 
     def _dispatch(self,object_id,context):
+        self._execute_dispatch(object_id,context,self._claim_dispatch(object_id,context))
+
+    def _claim_dispatch(self,object_id,context):
+        """Choose and durably claim one eligible reply without invoking a job."""
         if not self.on_new_reply or not context.get('reply_pending'):return
         flow=self._workflow(object_id)
         if flow.get('bucket') == 'archive':return
@@ -282,40 +307,75 @@ class GmailService:
         if not candidates:return
         message=max(candidates,key=lambda m:(_timestamp(m['sent_at']),str(m['id'])))
         mid=str(message['id'])
-        with self.lock:
-            if self.clock()<self._retry_at.get((object_id,mid),0):return
         with self.app.lock:
-            existing=self.app.db.execute('SELECT dispatch_state,job_id FROM gmail_reply_events WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone()
-            if existing and existing[0]!='failed':
-                if existing[0]=='dispatching':
-                    with self.lock:
-                        note='上次客户回复处理结果未确认，请核对原事件与任务，避免重复启动'
-                        if self._cache[object_id].get('callback_error')!=note:self.revision+=1
-                        self._cache[object_id]['callback_error']=note
-                return
-            now=datetime.now(timezone.utc).isoformat()
-            self.app.db.execute('INSERT INTO gmail_reply_events (object_id,message_id,dispatch_state,job_id,updated_at,last_error) VALUES (?,?,?,?,?,NULL) ON CONFLICT(object_id,message_id) DO UPDATE SET dispatch_state=excluded.dispatch_state,updated_at=excluded.updated_at,last_error=NULL',(object_id,mid,'dispatching',None,now))
+            now=datetime.fromtimestamp(self.clock(),timezone.utc).isoformat()
+            cutoff=datetime.fromtimestamp(self.clock()-self.interval,timezone.utc).isoformat()
+            # The claim must be one SQLite write, not a process-local lock or
+            # SELECT followed by UPSERT: other services use their own locks.
+            claim=self.app.db.execute('INSERT OR IGNORE INTO gmail_reply_events (object_id,message_id,dispatch_state,job_id,updated_at,last_error) SELECT ?,?,?,?,?,NULL WHERE NOT EXISTS (SELECT 1 FROM gmail_acknowledged WHERE object_id=? AND message_id=?)',(object_id,mid,'dispatching',None,now,object_id,mid))
+            claimed=claim.rowcount==1
+            if not claimed:
+                # Only an explicit pre-creation deferral may be retried. A
+                # conditional update makes the due claim atomic across services.
+                claim=self.app.db.execute("UPDATE gmail_reply_events SET dispatch_state='dispatching',updated_at=?,last_error=NULL WHERE object_id=? AND message_id=? AND dispatch_state='deferred' AND updated_at IS NOT NULL AND updated_at<=? AND NOT EXISTS (SELECT 1 FROM gmail_acknowledged WHERE object_id=? AND message_id=?)",(now,object_id,mid,cutoff,object_id,mid))
+                claimed=claim.rowcount==1
             self.app.db.commit()
+            if claimed:existing=None
+            elif self.app.db.execute('SELECT 1 FROM gmail_acknowledged WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone():existing=('acknowledged',None)
+            else:existing=self.app.db.execute('SELECT dispatch_state,job_id FROM gmail_reply_events WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone()
+        return message,mid,claimed,existing
+
+    def _execute_dispatch(self,object_id,context,dispatch):
+        """Run only an already-claimed callback, outside both locks."""
+        if dispatch is None:return
+        message,mid,claimed,existing=dispatch
+        if not claimed:
+            if existing and existing[0] in ('dispatching','failed','outcome_unknown','dispatched_unlinked','deferred'):
+                self._dispatch_warning(object_id,deferred=existing[0]=='deferred')
+            elif existing and existing[0]=='dispatched':
+                if isinstance(existing[1],str) and existing[1].strip():self._clear_dispatch_warning(object_id)
+                else:self._dispatch_warning(object_id)  # legacy dispatched rows predate job linkage
+            elif existing and existing[0]=='acknowledged':
+                self._clear_dispatch_warning(object_id)
+            return
         job_id=None
         try:
             result=self.on_new_reply(object_id,copy.deepcopy(message),copy.deepcopy(context))
             job_id=result.get('id') if isinstance(result,dict) else None
-            state='dispatched' if isinstance(job_id,str) and job_id else 'dispatched_unlinked'
-            error=None if job_id else '回调未返回可关联的任务ID'
+            state='dispatched' if isinstance(job_id,str) and job_id.strip() else 'dispatched_unlinked'
+            error=None if state=='dispatched' else '回调未返回可关联的任务ID'
+        except GmailDispatchDeferred:
+            state='deferred'
+            error='已有工作进行中，稍后再次检查'
         except Exception as exc:
-            state='failed'
+            # A callback can create a job and fail before returning its ID.
+            # Never infer that it did not start, including after a restart.
+            state='outcome_unknown'
             error=type(exc).__name__
         with self.app.lock:
             self.app.db.execute('UPDATE gmail_reply_events SET dispatch_state=?,job_id=?,updated_at=?,last_error=? WHERE object_id=? AND message_id=?',
-                                (state,job_id if state in ('dispatched','dispatched_unlinked') else None,datetime.now(timezone.utc).isoformat(),error,object_id,mid))
+                                (state,job_id if state=='dispatched' else None,datetime.fromtimestamp(self.clock(),timezone.utc).isoformat(),error,object_id,mid))
             self.app.db.commit()
+        if state in ('outcome_unknown','dispatched_unlinked','deferred'):
+            self._dispatch_warning(object_id,deferred=state=='deferred')
+        else:
+            self._clear_dispatch_warning(object_id)
+
+    def _dispatch_warning(self,object_id,*,deferred=False):
         with self.lock:
-            if state=='failed':
-                self._retry_at[(object_id,mid)]=self.clock()+self.interval
-                self._cache[object_id]['callback_error']='客户回复已同步，后续任务未启动；下轮同步重试，也可人工接续'
-                self.revision+=1
-            else:
-                if self._cache[object_id].pop('callback_error',None):self.revision+=1
+            cached=self._cache.get(object_id)
+            if cached is not None:
+                note=('已有工作正在执行，客户回复已保留，稍后再次检查' if deferred else
+                      '客户回复处理结果未确认，请核对原事件与任务，避免重复启动')
+                if cached.get('callback_error')!=note:self.revision+=1
+                cached['callback_error']=note
+
+    def _clear_dispatch_warning(self,object_id):
+        with self.lock:
+            cached=self._cache.get(object_id)
+            if cached and cached.get('callback_error') in ('已有工作正在执行，客户回复已保留，稍后再次检查',
+                                                            '客户回复处理结果未确认，请核对原事件与任务，避免重复启动'):
+                del cached['callback_error'];self.revision+=1
 
     def scan_once(self):
         if not self._mailbox:return self.status()

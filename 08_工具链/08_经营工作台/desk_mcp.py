@@ -6,6 +6,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from customer_workspace import CustomerWriteOutcomeUnknown
 
 TEXT = {'.txt', '.csv', '.json', '.md'}
 DENY = {'.git', '.codex', '.config', 'credentials', 'secrets', 'node_modules'}
@@ -343,6 +344,8 @@ def dispatch(tools,message):
         try:
             value=tools.call(params.get('name'),params.get('arguments') or {})
             result={'content':[{'type':'text','text':json.dumps(value,ensure_ascii=False)}],'isError':False}
+        except CustomerWriteOutcomeUnknown:
+            result={'content':[{'type':'text','text':json.dumps({'code':'outcome_unknown','message':'客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续。'},ensure_ascii=False)}],'isError':True}
         except ValueError as exc:
             from workspaces import WorkspaceConflict
             if isinstance(exc,WorkspaceConflict):

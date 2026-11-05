@@ -178,10 +178,10 @@ class Tests(unittest.TestCase):
         row=self.db.execute('SELECT dispatch_state,job_id FROM gmail_reply_events WHERE object_id=? AND message_id=?',('customer:1','old-event')).fetchone()
         self.assertEqual(row,('dispatched',None))
 
-    def test_callback_failure_retry_and_latest_only(self):
+    def test_callback_failure_is_unknown_and_latest_only(self):
         s=self.connect();calls=[]
         def callback(*args):calls.append(args[1]['id']);raise RuntimeError('oops')
-        s.on_new_reply=callback;self.mail.messages=[message('old'),message('latest',at='2026-11-01T03:00:00Z')];s.customer('customer:1');self.assertEqual(calls,['latest']);self.assertIn('callback_error',s.peek('customer:1'));s.customer('customer:1');self.assertEqual(len(calls),1);self.now+=121;s.customer('customer:1');self.assertEqual(calls,['latest','latest'])
+        s.on_new_reply=callback;self.mail.messages=[message('old'),message('latest',at='2026-11-01T03:00:00Z')];s.customer('customer:1');self.assertEqual(calls,['latest']);self.assertIn('callback_error',s.peek('customer:1'));s.customer('customer:1');self.now+=121;s.customer('customer:1');self.assertEqual(calls,['latest'])
     def test_no_email_explicit(self):
         s=self.connect();self.app.business.objects['customer:1']['content']='{}';r=s.customer('customer:1');self.assertEqual(r['status']['state'],'no_contact_email');self.assertIn('邮箱',r['next_action'])
     def test_status_mapping(self):

@@ -5,6 +5,7 @@ SQLite contains identity/path indexes only. No model or network call here.
 """
 from __future__ import annotations
 import copy
+from contextlib import contextmanager
 from datetime import datetime,timezone
 import hashlib
 import json
@@ -20,6 +21,10 @@ SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','ema
 ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions',
                  'brief','core_need','recommended_reply','secondary_requests','conflicts','questions_now'}
 DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone','related_competitors','discovery_reason'}
+
+class CustomerWriteOutcomeUnknown(RuntimeError):
+    """The profile file and its index must be checked before retrying."""
+
 
 def _now():return datetime.now(timezone.utc).isoformat()
 def _hash(value):return hashlib.sha256(value.encode('utf8')).hexdigest()
@@ -61,6 +66,54 @@ class CustomerWorkspace:
             app.db.execute('CREATE TABLE IF NOT EXISTS customer_profiles (object_id TEXT PRIMARY KEY,path TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS customer_discovery (id TEXT PRIMARY KEY,kind TEXT NOT NULL,path TEXT NOT NULL)')
             app.db.commit()
+
+    @contextmanager
+    def _profile_write(self):
+        """Serialize profile read/modify/write across connections to this database.
+
+        The lock also keeps unrelated users of the shared connection out of the
+        transaction. A caller-owned transaction is rejected rather than silently
+        committing or rolling it back. Files and SQLite are not crash-atomic.
+        """
+        with self.app.lock:
+            if self.app.db.in_transaction:
+                raise RuntimeError('客户资料保存不能嵌入已有数据库事务')
+            self.app.db.execute('BEGIN IMMEDIATE')
+            self._profile_undo=[]
+            try:
+                yield
+                try:self.app.db.commit()
+                except BaseException as exc:
+                    # A failed commit with no active transaction is ambiguous:
+                    # do not pretend that either the DB or file was rolled back.
+                    if not self.app.db.in_transaction:
+                        raise CustomerWriteOutcomeUnknown('客户资料提交结果不明，请先核对当前资料和上一版再继续') from exc
+                    raise
+            except BaseException as exc:
+                if self.app.db.in_transaction:
+                    restore_error=None
+                    try:
+                        for path,previous in reversed(self._profile_undo):
+                            if path.is_symlink() or not path.resolve().is_relative_to(self.root):
+                                raise OSError('客户资料路径已变化')
+                            if previous is None:
+                                if path.exists():path.unlink()
+                            else:self._atomic(path,previous)
+                    except Exception as error:restore_error=error
+                    finally:
+                        try:self.app.db.rollback()
+                        except Exception as error:
+                            if restore_error is None:restore_error=error
+                    if restore_error:
+                        raise CustomerWriteOutcomeUnknown('客户资料恢复失败，保存结果不明；请核对当前资料和上一版') from restore_error
+                else:
+                    # SQLite may automatically roll back and release its lock
+                    # during a statement. Another writer can now have changed
+                    # the file, so restoring it here would risk overwriting them.
+                    raise CustomerWriteOutcomeUnknown('客户资料保存结果不明，请先核对当前资料和上一版再继续') from exc
+                raise
+            finally:
+                del self._profile_undo
 
     def _read(self,path):
         target=self.root/path
@@ -108,6 +161,14 @@ class CustomerWorkspace:
         with self.app.lock:row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(object_id,)).fetchone()
         return self._read(row[0]) if row else {}
 
+    def _gmail_revision_inputs(self,object_id):
+        """Only persisted observations; this is not a complete mailbox view."""
+        with self.app.lock:
+            tables={row[0] for row in self.app.db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('gmail_reply_events','gmail_acknowledged')")}
+            events=[row[0] for row in self.app.db.execute('SELECT message_id FROM gmail_reply_events WHERE object_id=? ORDER BY message_id',(object_id,))] if 'gmail_reply_events' in tables else []
+            ack=self.app.db.execute('SELECT message_id FROM gmail_acknowledged WHERE object_id=?',(object_id,)).fetchone() if 'gmail_acknowledged' in tables else None
+            return {'events':events,'acknowledged':ack[0] if ack else None}
+
     def _mail_workflow(self,object_id,flow):
         service=getattr(self.app,'gmail',None)
         if not service or flow.get('bucket')!='active' or flow.get('state') in customer_workflow.ENDED:return flow
@@ -152,7 +213,7 @@ class CustomerWorkspace:
 
     def save_profile(self,object_id,body):
         if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context','message_translations'}:raise ValueError('不支持的客户分析字段')
-        with self.app.lock:
+        with self._profile_write():
             current=self.profile(object_id)
             if body.get('source_hash')!=current['source_hash']:raise ValueError('原来源已变化，请刷新后重新核对派生资料')
             saved=self._saved_profile(object_id)
@@ -175,17 +236,23 @@ class CustomerWorkspace:
             if 'analysis' in body:saved['analysis']={**saved.get('analysis',{}),**_mapping(body['analysis'],ANALYSIS_FIELDS)}
             if 'evidence' in body:saved['evidence']=_evidence(body['evidence'])
             saved.update(object_id=object_id,source_hash=current['source_hash'],updated_at=_now())
-            self._store_profile(object_id,saved)
+            self._store_profile(object_id,saved,commit=False)
         return self.profile(object_id)
 
-    def _store_profile(self,object_id,saved):
+    def _store_profile(self,object_id,saved,*,commit=True):
+        if commit and hasattr(self,'_profile_undo'):
+            raise RuntimeError('客户资料事务中不能提前提交')
         if object_id.startswith('customer:website-'):
             reference=object_id.removeprefix('customer:website-')
             if not reference or any(c not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-' for c in reference):raise ValueError('网站询盘ID无效')
             path=self.root/'04_客户开发/.local/网站询盘'/reference/'客户分析.json'
         else:path=self.root/'04_客户开发/.local/客户分析'/(_hash(object_id)[:24]+'.json')
+        if hasattr(self,'_profile_undo'):
+            if path.is_symlink() or not path.resolve().is_relative_to(self.root):raise ValueError('派生资料路径无效')
+            self._profile_undo.append((path,path.read_bytes() if path.exists() else None))
         relative=self._write(path,saved)
-        self.app.db.execute('INSERT OR REPLACE INTO customer_profiles VALUES (?,?)',(object_id,relative));self.app.db.commit()
+        self.app.db.execute('INSERT OR REPLACE INTO customer_profiles VALUES (?,?)',(object_id,relative))
+        if commit:self.app.db.commit()
 
     def workflow(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id)
@@ -200,11 +267,11 @@ class CustomerWorkspace:
         return customer_commercial.save(self,object_id,body)
 
     def save_workflow(self,object_id,body):
-        with self.app.lock:
+        with self._profile_write():
             row=customer_workflow.update(self.workflow(object_id),body,record=self._source(object_id)[2])
             saved=self._saved_profile(object_id)
             saved.update(object_id=object_id,workflow=row)
-            self._store_profile(object_id,saved)
+            self._store_profile(object_id,saved,commit=False)
         return self.workflow(object_id)
 
     def queue(self,bucket='active',state='',q=''):
