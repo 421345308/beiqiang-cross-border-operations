@@ -7,10 +7,13 @@ from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
 import hashlib
 import json
+import os
+from contextlib import contextmanager
 import mimetypes
 from pathlib import Path, PureWindowsPath
 import re
 import threading
+from customer_batches import backfill_contact_suppressions, contact_suppressed
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -49,25 +52,39 @@ class GmailDrafts:
         self.app = app
         self.token_provider, self.sender, self.request, self.grant_reader = token_provider, sender, request, grant_reader
         self.lock = threading.RLock()
+        self._transaction = False
         self.directory = Path(app.state) / 'gmail-attachments'
         self.oauth = GmailOAuth(scope=READ_SCOPE+' '+SEND_SCOPE, grant_handler=self._save_grant)
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_drafts (object_id TEXT PRIMARY KEY, data TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_sent_receipts (message_id TEXT PRIMARY KEY, object_id TEXT NOT NULL, data TEXT NOT NULL)')
-            # A previous process may have stopped after Google accepted a request.
-            for oid, value in app.db.execute('SELECT object_id,data FROM gmail_drafts').fetchall():
-                draft = json.loads(value)
-                if draft.get('status') == 'sending':
-                    draft['status'] = 'unknown'
-                    draft['error'] = '上次发送结果尚未确认，请先核对 Gmail 已发送邮件。'
-                    app.db.execute('UPDATE gmail_drafts SET data=? WHERE object_id=?', (json.dumps(draft, ensure_ascii=False), oid))
+            backfill_contact_suppressions(app)
+            # Another worker may still own a live send. Reopening never changes
+            # its claim; interrupted sends are reconciled explicitly by Message-ID.
             app.db.commit()
+
+    @contextmanager
+    def _write(self):
+        with self.lock, self.app.lock:
+            if self.app.db.in_transaction:
+                raise RuntimeError('邮件保存不能嵌入已有事务')
+            self.app.db.execute('BEGIN IMMEDIATE')
+            self._transaction = True
+            try:
+                yield
+                self.app.db.commit()
+            except BaseException:
+                self.app.db.rollback()
+                raise
+            finally:
+                self._transaction = False
 
     def _put(self, draft):
         with self.app.lock:
             self.app.db.execute('INSERT OR REPLACE INTO gmail_drafts VALUES (?,?)',
                                 (draft['object_id'], json.dumps(draft, ensure_ascii=False)))
-            self.app.db.commit()
+            if not self._transaction:
+                self.app.db.commit()
         return draft
 
     def _saved(self, object_id):
@@ -129,19 +146,20 @@ class GmailDrafts:
 
     def get(self, object_id):
         obj = self._object(object_id)
-        with self.lock:
+        with self._write():
             draft = self._saved(object_id)
             if draft is None:
                 draft = self._put(self._new(obj))
-            return {**draft, 'can_send': self._can_send(self._account())}
+        return {**draft, 'can_send': self._can_send(self._account())}
 
     def new(self, object_id):
         obj = self._object(object_id)
-        with self.lock:
+        with self._write():
             old = self._saved(object_id)
             if old and old.get('status') != 'sent':
                 raise ValueError('当前邮件尚未发送或发送结果未确认，请继续处理原草稿')
-            return {**self._put(self._new(obj)), 'can_send': self._can_send(self._account())}
+            draft = self._put(self._new(obj))
+        return {**draft, 'can_send': self._can_send(self._account())}
 
     def _editable(self, object_id, version):
         self._object(object_id)
@@ -159,7 +177,7 @@ class GmailDrafts:
     def save(self, object_id, version, fields):
         if not isinstance(fields, dict) or set(fields) - {'to', 'subject', 'body_en', 'body_zh'}:
             raise ValueError('邮件内容格式不正确')
-        with self.lock:
+        with self._write():
             draft = self._editable(object_id, version)
             for key, value in fields.items():
                 if not isinstance(value, str) or '\x00' in value or len(value) > (100000 if key.startswith('body') else 500):
@@ -190,7 +208,7 @@ class GmailDrafts:
         return item, self._attachment_bytes(item)
 
     def add_attachment(self, object_id, version, *, filename='', data='', resource_id=''):
-        with self.lock:
+        with self._write():
             draft = self._editable(object_id, version)
             if resource_id:
                 item = next((r for r in self.app.library.list() if r['id'] == resource_id), None)
@@ -222,15 +240,16 @@ class GmailDrafts:
             return self._changed(draft)
 
     def remove_attachment(self, object_id, version, attachment_id):
-        with self.lock:
+        with self._write():
             draft = self._editable(object_id, version)
             item = next((x for x in draft['attachments'] if x['id'] == attachment_id), None)
             if not item:
                 raise ValueError('附件不存在')
             draft['attachments'].remove(item)
-            if item['source'] == 'upload':
-                (self.directory / item['id']).unlink(missing_ok=True)
-            return self._changed(draft)
+            result = self._changed(draft)
+        if item['source'] == 'upload':
+            (self.directory / item['id']).unlink(missing_ok=True)
+        return result
 
     def _message(self, draft):
         recipient = normalize_email(draft.get('to'))
@@ -264,32 +283,60 @@ class GmailDrafts:
                 raise ValueError('原邮件线程无效，请更新邮件往来后重新起草') from None
         return msg['Message-ID'], payload
 
-    def send(self, object_id, version):
+    def send(self, object_id, version, *, before_claim=None):
+        # Prepare bytes and credentials before taking the short database claim.
         with self.lock:
             draft = self._editable(object_id, version)
+            with self.app.lock:
+                if contact_suppressed(self.app,object_id,draft.get('to','')):
+                    raise ValueError('客户或收件地址已标记不联系，不能发送')
             if not draft.get('account') or draft['account'] != self._account():
                 raise ValueError('邮箱连接已变化，请重新连接并检查草稿')
             message_id, payload = self._message(draft)
             token = self.token_provider(draft['account'])
-            draft.update(status='sending', message_id=str(message_id), error='', updated_at=now())
+        with self._write():
+            draft = self._editable(object_id, version)
+            if draft['account'] != self._account():
+                raise ValueError('邮箱连接已变化，请重新连接并检查草稿')
+            if before_claim is not None:
+                before_claim(draft)
+            # Shared across every batch, UI, MCP and direct single-mail call.
+            # This runs in the same write transaction as the send claim, so a
+            # concurrent DNC commit cannot be bypassed by an older draft view.
+            backfill_contact_suppressions(self.app)
+            if contact_suppressed(self.app,object_id,draft.get('to','')):
+                raise ValueError('客户或收件地址已标记不联系，不能发送；更改批次审核状态不会解除抑制')
+            draft.update(status='sending', message_id=str(message_id), sender_pid=os.getpid(), error='', updated_at=now())
             self._put(draft)
         try:
             result = self.sender(token, payload)
             if not isinstance(result, dict) or not result.get('id'):
                 raise OSError('missing Gmail message id')
         except SendRejected as exc:
-            with self.lock:
-                draft.update(status='draft', error=str(exc), updated_at=now())
-                self._put(draft)
+            self._send_result(draft, 'draft', str(exc))
             raise
         except Exception:
-            with self.lock:
-                draft.update(status='unknown', error='发送结果尚未确认，请先核对 Gmail 已发送邮件。', updated_at=now())
-                return self._put(draft)
+            return self._send_result(draft, 'unknown', '发送结果尚未确认，请先核对 Gmail 已发送邮件。')
         return self._sent(draft, result)
 
+    def _send_result(self, snapshot, status, error):
+        with self._write():
+            current = self._saved(snapshot['object_id'])
+            if not current or current.get('message_id') != snapshot.get('message_id') or current.get('status') not in ('sending', 'unknown'):
+                return current
+            current.update(status=status, error=error, updated_at=now())
+            return self._put(current)
+
     def _sent(self, draft, result):
-        with self.lock:
+        with self._write():
+            current = self._saved(draft['object_id'])
+            if not current or current.get('message_id') != draft.get('message_id'):
+                return current
+            if current.get('status') == 'sent':
+                return current
+            if current.get('status') not in ('sending', 'unknown'):
+                return current
+            draft = current
             thread = result.get('threadId') or ''
             draft.update(status='sent', gmail_id=str(result['id']), gmail_thread_id=str(thread), sent_at=now(), error='',
                          gmail_url=('https://mail.google.com/mail/u/?authuser=' + draft['account'] + '#all/' + str(thread)) if thread else '')
@@ -297,7 +344,6 @@ class GmailDrafts:
             with self.app.lock:
                 self.app.db.execute('INSERT OR REPLACE INTO gmail_sent_receipts VALUES (?,?,?)',
                                     (draft['message_id'], draft['object_id'], json.dumps(draft, ensure_ascii=False)))
-                self.app.db.commit()
         self._after_send(draft)
         return draft
 
@@ -324,8 +370,12 @@ class GmailDrafts:
         except Exception:
             problems.append('邮件回读暂未完成')
         if problems:
-            draft['sync_note'] = '；'.join(problems) + '，可稍后刷新。'
-            self._put(draft)
+            with self._write():
+                current = self._saved(oid)
+                if current and current.get('message_id') == draft.get('message_id') and current.get('status') == 'sent':
+                    current['sync_note'] = '；'.join(problems) + '，可稍后刷新。'
+                    self._put(current)
+                    draft.update(current)
 
     def reconcile(self, object_id):
         with self.lock:
@@ -338,11 +388,43 @@ class GmailDrafts:
         found = result.get('messages') or []
         if found:
             return self._sent(draft, found[0])
-        draft['error'] = '暂未在已发送邮件中找到，请稍后再次核对；不要重复发送。'
-        return self._put(draft)
+        status = draft['status']
+        if status == 'sending' and not self._sender_alive(draft):
+            status = 'unknown'
+        return self._send_result(draft, status, '暂未在已发送邮件中找到，请稍后再次核对；不要重复发送。')
+
+    @staticmethod
+    def _sender_alive(draft):
+        pid = draft.get('sender_pid')
+        if not isinstance(pid, int) or pid <= 0:
+            return False
+        if pid == os.getpid():
+            return True
+        try:
+            # On Windows os.kill(pid, 0) is not a harmless liveness probe.
+            if os.name == 'nt':
+                import ctypes
+                kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+                kernel.OpenProcess.restype = ctypes.c_void_p
+                handle = kernel.OpenProcess(0x1000, False, pid)
+                if not handle:
+                    return ctypes.get_last_error() != 87
+                try:
+                    code = ctypes.c_ulong()
+                    if not kernel.GetExitCodeProcess(ctypes.c_void_p(handle), ctypes.byref(code)):
+                        return True
+                    return code.value == 259
+                finally:
+                    kernel.CloseHandle(ctypes.c_void_p(handle))
+            os.kill(pid, 0)
+            return True
+        except ProcessLookupError:
+            return False
+        except (PermissionError, OSError):
+            return True
 
     def resume_unsent(self, object_id, confirmed):
-        with self.lock:
+        with self._write():
             draft = self._saved(object_id)
             if not confirmed or not draft or draft.get('status') != 'unknown':
                 raise ValueError('请先在 Gmail 已发送邮件中核对实际结果')

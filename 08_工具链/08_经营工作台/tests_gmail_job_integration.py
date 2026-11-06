@@ -70,6 +70,11 @@ class GmailJobIntegrationTests(unittest.TestCase):
                 self.assertEqual(job['status'],'completed')
                 self.assertEqual(job['mode'],'mail_draft')
                 self.assertEqual(job['object_id'],'customer:1')
+                self.assertEqual(job['source_event'],{'kind':'gmail_reply','object_id':'customer:1','message_id':'test-inbound'})
+                from gmail_event_reconcile import GmailEventReconcile
+                event=GmailEventReconcile(app).list_events('customer:1')['events'][0]
+                self.assertEqual(event['relation'],'explicit_event_link')
+                self.assertEqual(event['job']['id'],job_id)
                 self.assertEqual(job['artifact_id'],'test-artifact')
                 self.assertEqual(backend.commands[0]['mode'],'mail_draft')
                 service().customer('customer:1')

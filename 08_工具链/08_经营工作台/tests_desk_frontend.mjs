@@ -134,7 +134,8 @@ test('客户邮件在本地保存、添加资料并审核后才发送，刷新�
     if(url.pathname==='/api/library')return {ok:true,json:async()=>({items:[{id:'mat1',title:'产品目录',path:'catalog.pdf'}]})};
     if(url.pathname==='/api/desk/gmail/attachment'){draft={...draft,version:'v3',attachments:[{id:'a1',name:'catalog.pdf',size:1000}]};return {ok:true,json:async()=>structuredClone(draft)};}
     if(url.pathname==='/api/desk/gmail/send-oauth/start')return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=fixture'})};
-    if(url.pathname==='/api/desk/gmail/send'){draft={...draft,status:'sent',sent_at:'2026-11-02T00:00:00Z',gmail_url:'https://mail.google.com/mail/u/0/#all/20'};return {ok:true,json:async()=>structuredClone(draft)};}
+    if(url.pathname==='/api/desk/gmail/send-preflight')return {ok:true,json:async()=>({...draft,can_confirm:true,plan_id:'single-plan',reasons:[],checks:{status:'clear'}})};
+    if(url.pathname==='/api/desk/gmail/send'){draft={...draft,status:'sent',sent_at:'2026-11-02T00:00:00Z',gmail_url:'https://mail.google.com/mail/u/0/#all/20'};return {ok:true,json:async()=>({status:'sent',message_id:'fixture-message',gmail_id:'fixture-gmail'})};}
     return original(path,options);
   });
   await h.ui.bootstrap();await settle();
@@ -149,8 +150,9 @@ test('客户邮件在本地保存、添加资料并审核后才发送，刷新�
   assert.ok(composer.textContent.includes('您好，这是我们的鞋子。'));assert.ok(composer.textContent.includes('Hello buyer, here are our shoes.'));
   assert.ok(composer.textContent.includes('收件人：buyer@example.test'));assert.ok(composer.textContent.includes('catalog.pdf'));
   assert.equal(calls.filter(x=>x.path==='/api/desk/gmail/send').length,0);
+  assert.equal(walk(composer).some(row=>row.tagName==='BUTTON' && row.textContent==='确认发送这封邮件'),false);await findButton(composer,'检查这封邮件的发送条件').click();await settle();
   await findButton(composer,'确认发送这封邮件').click();await settle();
-  assert.equal(calls.filter(x=>x.path==='/api/desk/gmail/send').length,1);assert.ok(composer.textContent.includes('邮件已由 Gmail 接收'));
+  assert.equal(calls.filter(x=>x.path==='/api/desk/gmail/send').length,1);assert.deepEqual(calls.find(x=>x.path==='/api/desk/gmail/send').payload,{object_id:'customer:mail',version:'v3',plan_id:'single-plan',confirmed:true});assert.ok(composer.textContent.includes('邮件已由 Gmail 接收'));
 });
 
 test('邮件翻译进行中及失败时显示状态，并可重试', async () => {
@@ -1080,5 +1082,223 @@ test('background profile failure after editing starts preserves both customer dr
       assert.equal(ctx.profileHost.textContent.includes('fixture HTTP failure'),false);
       assert.equal(ctx.profileHost.textContent.includes('fixture network failure'),false);
     }
+  }
+});
+
+
+test('开发批次同页逐客审核，携带当前版本并保留筛选且不隐式发送', async () => {
+  const h=harness('#/customers?view=batches'), original=h.originalFetch, calls=[];
+  h.objects.push({id:'customer:batch-one',kind:'customer',title:'Batch Buyer',summary:'采购休闲鞋',facts:[{label:'匹配产品',value:'BQ001'}],links:[{label:'公司来源',url:'https://example.org'}],assets:[]});
+  let draftVersion=7,draftBody='Hello Buyer';
+  let batch={id:'batch-1',title:'欧洲休闲鞋',revision:1,items:[{object_id:'customer:batch-one',item_revision:1,review_state:'pending',customer:{title:'Batch Buyer',country:'德国'},draft:{version:7,status:'draft',to:'buyer@example.org',attachment_count:1},quality:{reasons:[]}}]};
+  h.interceptFetch(async(path,options={})=>{
+    const url=new URL(path,'http://127.0.0.1:8766');
+    if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};
+    if(url.pathname.endsWith('/items/review')){const payload=JSON.parse(options.body);calls.push(payload);if(payload.item_revision!==batch.items[0].item_revision || (payload.review_state==='approved' && payload.draft_version!==batch.items[0].draft.version))return {ok:false,json:async()=>({error:'草稿或批次已变化，请重新读取'})};batch={...batch,revision:batch.revision+1,items:batch.items.map(row=>row.object_id===payload.object_id?{...row,item_revision:row.item_revision+1,review_state:payload.review_state,change_request:payload.change_request}:row)};return {ok:true,json:async()=>batch};}
+    if(url.pathname==='/api/desk/customer-batches/revise'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({batch,job:{id:'batch-job',object_id:'customer:batch-one',status:'running',instruction:'只修改此客户'}})};}
+    if(url.pathname==='/api/customer-batches/batch-1')return {ok:true,json:async()=>batch};
+    if(url.pathname==='/api/desk/gmail/customer')return {ok:true,json:async()=>({status:{state:'connected'},messages:[{direction:'inbound',translation_zh:'请提供样品',translation_state:'ready',sent_at:'2026-11-01',url:'https://mail.google.com/mail/u/0/#all/test'}]})};
+    if(url.pathname==='/api/desk/gmail/draft'){if(options.body){const payload=JSON.parse(options.body);draftVersion++;draftBody=payload.fields.body_en;batch={...batch,items:batch.items.map(row=>({...row,draft:{...row.draft,version:draftVersion}}))};}return {ok:true,json:async()=>({version:draftVersion,status:'draft',to:'buyer@example.org',subject:'休闲鞋合作',body_en:draftBody,body_zh:'您好',attachments:[],can_send:true})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const search=walk(h.elements.page).find(x=>x['aria-label']==='搜索批次内客户');search.value='Batch';search.listeners.input();
+  await findButton(h.elements.page,'审阅这位客户').click();await settle();
+  assert.ok(h.elements.page.textContent.includes('请提供样品'));assert.ok(h.elements.page.textContent.includes('BQ001'));
+  await findButton(h.elements.page,'查看并审核').click();await settle();assert.equal(walk(h.elements.page).some(x=>x.tagName==='BUTTON' && x.textContent==='确认发送这封邮件'),false);assert.ok(h.elements.page.textContent.includes('停止联系、退信和重复检查'));
+  const change=walk(h.elements.page).find(x=>x['aria-label']==='仅此客户的修改要求');change.value='强调此客户休闲鞋方向';
+  await findButton(h.elements.page,'保存修改要求').click();await settle();
+  assert.equal(calls[0].object_id,'customer:batch-one');assert.equal(calls[0].change_request,'强调此客户休闲鞋方向');assert.equal(search.value,'Batch');
+  // Another customer's Agent updates B after A is opened; A keeps its own snapshot.
+  batch={...batch,revision:5,items:[...batch.items,{object_id:'customer:batch-two',item_revision:6,review_state:'changes_requested',customer:{title:'Second Buyer'},draft:{version:2,status:'draft'},quality:{reasons:[]}}]};
+  await findButton(h.elements.page,'通过').click();await settle();assert.equal(calls[1].draft_version,7);assert.equal(calls[1].item_revision,2);assert.equal(calls[1].revision,undefined);assert.ok(h.elements.page.textContent.includes('已保存审核状态'));
+  await findButton(h.elements.page,'交给 Agent 修改此客户').click();await settle();assert.deepEqual(calls[2],{batch_id:'batch-1',object_id:'customer:batch-one',item_revision:3,draft_version:7,instruction:'强调此客户休闲鞋方向'});assert.ok(h.elements.page.textContent.includes('只修改此客户'));
+  assert.equal(h.requests.filter(row=>row.path==='/api/desk/gmail/send').length,0);
+  draftVersion=8;batch={...batch,revision:7,items:batch.items.map(row=>({...row,item_revision:4,draft:{...row.draft,version:8}}))};
+  const reads=h.requests.filter(row=>row.path==='/api/customer-batches/batch-1').length;
+  await findButton(h.elements.page,'通过').click();await settle();assert.equal(calls[3].draft_version,7);assert.equal(calls[3].item_revision,3);assert.ok(h.elements.page.textContent.includes('草稿或批次已变化，请重新读取'));assert.equal(h.requests.filter(row=>row.path==='/api/customer-batches/batch-1').length,reads);
+  h.location.hash='#/customers?view=development';await h.ui.renderRoute();await settle();h.location.hash='#/customers?view=batches';await h.ui.renderRoute();await settle();
+  assert.equal(walk(h.elements.page).find(x=>x['aria-label']==='搜索批次内客户').value,'Batch');assert.ok(h.elements.page.textContent.includes('Batch Buyer'));
+  const en=walk(h.elements.page).find(x=>x['aria-label']==='英文正文（发送给客户）');en.value='Updated for this buyer';en.listeners.input();
+  await findButton(h.elements.page,'保存草稿').click();await settle();const before=calls.length;
+  await findButton(h.elements.page,'通过').click();await settle();assert.equal(calls.length,before);assert.ok(h.elements.page.textContent.includes('请重新读取本客户'));
+  await findButton(h.elements.page,'重新读取本客户与草稿').click();await settle();assert.equal(walk(h.elements.page).find(x=>x['aria-label']==='英文正文（发送给客户）').value,'Updated for this buyer');
+  await findButton(h.elements.page,'通过').click();await settle();assert.equal(calls.at(-1).draft_version,9);assert.equal(calls.at(-1).item_revision,4);
+});
+
+
+test('批次研究选择上限与逐项启动结果，发送仅在完整检查后确认且只提交一次', async()=>{
+  const h=harness('#/customers?view=batches'), original=h.originalFetch, calls=[];
+  const items=Array.from({length:9},(_,i)=>({object_id:`customer:bulk-${i}`,item_revision:1,review_state:i===8?'pending':'approved',review_stale:i===7,customer:{title:`Buyer ${i}`},draft:{version:1,status:'draft',to:`buyer${i}@example.org`,subject:`Proposal ${i}`},quality:{reasons:[]}}));
+  const batch={id:'bulk-batch',title:'Bulk Review',revision:3,items};let checkStatus='unknown',sendMode='results',waitForPreflight=false,releasePreflight;
+  h.interceptFetch(async(path,options={})=>{
+    const url=new URL(path,'http://127.0.0.1:8766'),payload=options.body?JSON.parse(options.body):null;
+    if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};
+    if(url.pathname==='/api/customer-batches/bulk-batch')return {ok:true,json:async()=>batch};
+    if(url.pathname==='/api/desk/customer-batches/research'){calls.push({type:'research',payload});return {ok:true,json:async()=>({results:payload.object_ids.map((id,i)=>({object_id:id,status:i?'blocked':'started',reason:i?'客户不联系':'',job:i?undefined:{id:'research-1',object_id:id,status:'running'}}))})};}
+    if(url.pathname.endsWith('/preflight')){calls.push({type:'preflight',payload});if(waitForPreflight)await new Promise(resolve=>{releasePreflight=resolve;});return {ok:true,json:async()=>({plan_id:'plan-1',can_confirm:checkStatus==='clear',expires_at:'2026-11-06T12:00:00Z',items:payload.object_ids.map(id=>({...items.find(row=>row.object_id===id).draft,object_id:id,checks:{status:checkStatus,reasons:checkStatus==='clear'?[]:[{message:'退信覆盖未知'}]},can_confirm:checkStatus==='clear',reasons:checkStatus==='clear'?[]:['退信覆盖未知']}))})};}
+    if(url.pathname.endsWith('/send')){calls.push({type:'send',payload});if(sendMode==='error')throw Error('connection interrupted');return {ok:true,json:async()=>({items:[{object_id:items[0].object_id,to:items[0].draft.to,status:'sent'},{object_id:items[1].object_id,to:items[1].draft.to,status:'unknown'}]})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const field=label=>walk(h.elements.page).find(row=>row['aria-label']===label);
+  for(let i=0;i<9;i++){const check=field(`选择研究 Buyer ${i}`);check.checked=true;check.listeners.change();}
+  await findButton(h.elements.page,'研究所选客户').click();assert.equal(calls.length,0);assert.ok(h.elements.page.textContent.includes('请选择 1–8 位客户'));
+  for(let i=2;i<9;i++){const check=field(`选择研究 Buyer ${i}`);check.checked=false;check.listeners.change();}
+  await findButton(h.elements.page,'研究所选客户').click();await settle();assert.deepEqual(calls[0].payload.object_ids,['customer:bulk-0','customer:bulk-1']);assert.ok(h.elements.page.textContent.includes('Buyer 0 · 已开始'));assert.ok(h.elements.page.textContent.includes('Buyer 1 · 已阻止'));
+  assert.equal(field('选择送检 Buyer 7').disabled,true);assert.equal(field('选择送检 Buyer 8').disabled,true);
+  for(let i=0;i<2;i++){const check=field(`选择送检 Buyer ${i}`);check.checked=true;check.listeners.change();}
+  await findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();assert.ok(h.elements.page.textContent.includes('退信覆盖未知'));assert.equal(walk(h.elements.page).some(row=>row.tagName==='BUTTON' && row.textContent.startsWith('确认发送以上')),false);
+  checkStatus='blocked';await findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();assert.equal(walk(h.elements.page).some(row=>row.tagName==='BUTTON' && row.textContent.startsWith('确认发送以上')),false);
+  checkStatus='clear';await findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();assert.ok(h.elements.page.textContent.includes('buyer0@example.org'));assert.ok(h.elements.page.textContent.includes('Proposal 1'));const confirm=findButton(h.elements.page,'确认发送以上 2 封邮件');await confirm.click();await confirm.click();await settle();assert.equal(calls.filter(row=>row.type==='send').length,1);assert.deepEqual(calls.at(-1).payload,{plan_id:'plan-1',confirmed:true});assert.ok(h.elements.page.textContent.includes('buyer0@example.org · 已发送'));assert.ok(h.elements.page.textContent.includes('buyer1@example.org · 发送结果未知'));
+  sendMode='error';await findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();const retryPlan=findButton(h.elements.page,'确认发送以上 2 封邮件');await retryPlan.click();await retryPlan.click();await settle();assert.equal(calls.filter(row=>row.type==='send').length,2);assert.ok(h.elements.page.textContent.includes('发送结果未知：connection interrupted'));assert.equal(walk(h.elements.page).some(row=>row.tagName==='BUTTON' && row.textContent==='重试发送'),false);
+  waitForPreflight=true;const pending=findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();const changed=field('选择送检 Buyer 1');changed.checked=false;changed.listeners.change();releasePreflight();await pending;await settle();assert.equal(walk(h.elements.page).some(row=>row.tagName==='BUTTON' && row.textContent.startsWith('确认发送以上')),false);
+});
+
+
+test('邮件事件核对按需读取、明确选事件和已有任务、原样快照关联，冲突不重试',async()=>{
+  for(const outcome of ['success','conflict','unknown']){
+    const conflict=outcome!=='success';
+    const h=harness('#/object/customer%3Aevent-test'),original=h.originalFetch,calls=[];
+    h.objects.push({id:'customer:event-test',kind:'customer',title:'Event Buyer',assets:[]});
+    let snapshot={dispatch_state:'outcome_unknown',job_id:null,updated_at:'2026-11-06T01:00:00Z'};
+    h.interceptFetch(async(path,options={})=>{
+      const url=new URL(path,'http://127.0.0.1:8766');
+      if(url.pathname==='/api/desk/gmail/events'){calls.push({type:'read'});return {ok:true,json:async()=>({object_id:'customer:event-test',available:true,automatic_replay:false,events:[{message_id:'event-1',dispatch_state:snapshot.dispatch_state,job_id:null,relation:'unlinked',snapshot:{...snapshot},manual_link_allowed:true},{message_id:'event-2',dispatch_state:'dispatched',job_id:'linked-job',relation:'manually_verified',job:{status:'completed'},manual_link_allowed:false}],candidate_jobs:[{id:'job-choice',valid_record:true,object_id:'customer:event-test',mode:'mail_draft',status:'completed',origin:'manual_review_required',already_linked:false},{id:'linked-job',valid_record:true,object_id:'customer:event-test',mode:'mail_draft',status:'running',already_linked:true}]})};}
+      if(url.pathname==='/api/desk/gmail/events/link'){const payload=JSON.parse(options.body);calls.push({type:'link',payload});if(outcome==='unknown')throw Error('关联提交结果未知');if(conflict)return {ok:false,status:409,json:async()=>({error:'邮件事件已变化，请重新核对快照'})};return {ok:true,json:async()=>({message_id:'event-1',job_id:'job-choice',job_status:'completed',automatic_replay:false})};}
+      if(url.pathname.startsWith('/api/desk/gmail/'))return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};
+      return original(path,options);
+    });
+    await h.ui.bootstrap();await settle();assert.equal(calls.length,0);
+    const box=h.elements.page.querySelector('.gmail-event-reconcile');assert.ok(box);assert.equal(box.open,undefined);box.open=true;await box.listeners.toggle();await settle();assert.equal(calls.length,1);assert.ok(box.textContent.includes('自动重播 = false'));assert.ok(box.textContent.includes('关联 Job ID：linked-job · 任务状态：completed'));assert.ok(box.textContent.includes('relation：manually_verified'));
+    const field=label=>walk(box).find(row=>row['aria-label']===label),event=field('选择要核对的邮件事件'),job=field('选择已有 mail_draft 任务'),note=field('人工核对依据');assert.equal(event.value,'');assert.equal(job.value,'');assert.equal(walk(job).some(row=>row.value==='linked-job'),false);
+    await findButton(box,'确认关联所选邮件与已有任务').click();assert.equal(calls.length,1);
+    event.value='event-1';job.value='job-choice';note.value='已核对原任务产物和此邮件，确认属于同一请求。';const confirm=findButton(box,'确认关联所选邮件与已有任务');await confirm.click();await settle();assert.deepEqual(calls[1].payload,{object_id:'customer:event-test',message_id:'event-1',job_id:'job-choice',snapshot,confirmed:true,manual_note:note.value});await confirm.click();await settle();assert.equal(calls.length,2);
+    if(conflict){assert.ok(box.textContent.includes(outcome==='conflict'?'邮件事件已变化':'关联提交结果未知'));assert.ok(box.textContent.includes('不会自动重试或启动任务'));assert.equal(note.value,'已核对原任务产物和此邮件，确认属于同一请求。');snapshot={dispatch_state:'failed',job_id:null,updated_at:'2026-11-06T02:00:00Z'};await findButton(box,'重新读取邮件事件').click();await settle();assert.equal(calls.length,3);assert.equal(field('选择要核对的邮件事件').value,'');}
+    else assert.ok(box.textContent.includes('已保存关联：邮件 event-1 → Job job-choice'));
+    assert.equal(h.requests.some(row=>row.payload && row.path==='/api/desk/jobs'),false);
+  }
+});
+
+
+test('CRM未匹配人工核查仅对指定未知范围显示，逐项显式确认并绑定原客户快照',async()=>{
+  const eligible={status:'已读取',match_status:'未匹配',stop_state:'未知'};
+  for(const variant of ['success','conflict','matched','failed','stopped','applied','stale']){
+    const h=harness('#/customers?view=batches'),original=h.originalFetch,calls=[];
+    const crm=variant==='matched'?{...eligible,match_status:'已匹配'}:variant==='failed'?{...eligible,status:'读取失败'}:variant==='stopped'?{...eligible,stop_state:'明确停止'}:eligible;
+    let batch={id:'crm-batch',title:'CRM Review',revision:1,items:[{object_id:'customer:crm',item_revision:'original-item',review_state:'pending',customer:{title:'CRM Buyer'},draft:{version:1,status:'draft'},quality:{reasons:[]},checks:{status:'unknown',crm}}]};
+    if(variant==='applied')batch.items[0].checks.crm_manual_review={applied:true,stale:false,recorded_at:'2026-11-06T03:00:00Z',evidence:{aliases:{terms:['Saved Brand'],locations:['Saved registry'],findings:'Saved alias finding'},independent_sends:{locations:['Saved outbox'],findings:'Saved send finding'},stop_records:{locations:['Saved stop list'],findings:'Saved stop finding'}}};
+    if(variant==='stale')batch.items[0].checks.crm_manual_review={applied:false,stale:true,recorded_at:'2026-11-05T03:00:00Z'};
+    h.objects.push({id:'customer:crm',kind:'customer',title:'CRM Buyer',assets:[]});
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766');
+      if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};
+      if(url.pathname==='/api/customer-batches/crm-batch')return {ok:true,json:async()=>batch};
+      if(url.pathname==='/api/desk/customer-batches/crm-review'){const payload=JSON.parse(options.body);calls.push(payload);if(variant==='conflict')return {ok:false,status:409,json:async()=>({error:'客户核对版本已变化'})};return {ok:true,json:async()=>({batch:{...batch,revision:2,items:batch.items.map(row=>({...row,checks:{...row.checks,crm_manual_review:{applied:true,stale:false,recorded_at:'2026-11-06T04:00:00Z',evidence:payload.evidence}}}))}})};}
+      if(url.pathname==='/api/desk/gmail/draft')return {ok:true,json:async()=>({version:1,status:'draft',to:'buyer@example.org',subject:'Proposal',body_en:'Hello',body_zh:'您好',attachments:[],can_send:false})};
+      if(url.pathname.startsWith('/api/desk/gmail/'))return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};
+      return original(path,options);
+    });
+    await h.ui.bootstrap();await settle();await findButton(h.elements.page,'审阅这位客户').click();await settle();const card=h.elements.page.querySelector('.batch-crm-review');
+    if(variant==='applied'){assert.ok(card.textContent.includes('已保存的CRM人工核对依据'));for(const proof of ['Saved Brand','Saved registry','Saved alias finding','Saved outbox','Saved send finding','Saved stop list','Saved stop finding','记录时间：'])assert.ok(card.textContent.includes(proof));assert.equal(walk(card).some(row=>row.tagName==='TEXTAREA' || row.tagName==='INPUT' || row.tagName==='BUTTON'),false);continue;}
+    if(!['success','conflict','stale'].includes(variant)){assert.equal(card,null);continue;}
+    if(variant==='stale'){assert.ok(card.textContent.includes('上次核对已失效'));assert.ok(card.textContent.includes('客户来源、发件账号、收件地址或CRM内容发生变化'));}
+
+    assert.ok(card.textContent.includes('不等于邮件审核、联系许可或发送授权'));assert.ok(card.textContent.includes('不能解除明确退订、拒绝、退信或邮箱检查未知'));
+    const field=label=>walk(card).find(row=>row['aria-label']===label),save=findButton(card,'记录本客户CRM人工核对依据');
+    await save.click();assert.equal(calls.length,0);
+    const expected={};for(const [key,title] of [['aliases','品牌与法律实体别名'],['independent_sends','独立发送记录'],['stop_records','停止联系记录']]){const check=field(`确认已核${title}`);assert.equal(check.checked,false);field(`${title}：具体查询位置`).value=`fixture/${key}.xlsx
+https://example.org/${key}`;field(`${title}：具体核查结果`).value=`已核对${title}，仅限上述位置`;expected[key]={checked:true,locations:[`fixture/${key}.xlsx`,`https://example.org/${key}`],findings:`已核对${title}，仅限上述位置`};}
+    field('实际核对的品牌或法律实体别名').value=`CRM Buyer
+CRM Buyer Legal Ltd`;expected.aliases.terms=['CRM Buyer','CRM Buyer Legal Ltd'];
+    await save.click();assert.equal(calls.length,0);field('确认已核品牌与法律实体别名').checked=true;field('确认已核独立发送记录').checked=true;await save.click();assert.equal(calls.length,0);field('确认已核停止联系记录').checked=true;
+    await save.click();await settle();assert.deepEqual(calls[0],{batch_id:'crm-batch',object_id:'customer:crm',item_revision:'original-item',evidence:expected,confirmed:true});await save.click();assert.equal(calls.length,1);
+    if(variant==='conflict'){assert.ok(card.textContent.includes('客户核对版本已变化'));assert.ok(card.textContent.includes('请重新读取本客户'));assert.equal(field('停止联系记录：具体核查结果').value,expected.stop_records.findings);}else {assert.ok(card.textContent.includes('已记录本客户的人工核对依据'));assert.ok(card.textContent.includes('已保存的CRM人工核对依据'));assert.ok(card.textContent.includes(expected.stop_records.findings));assert.equal(walk(card).some(row=>row.tagName==='TEXTAREA' || row.tagName==='INPUT' || row.tagName==='BUTTON'),false);}
+    assert.equal(h.requests.some(row=>row.payload && row.path==='/api/desk/gmail/send'),false);
+  }
+});
+
+
+test('加入批次按类型、渠道与关键词筛选，选择当前结果保留已选且去重，超过500不截断提交',async()=>{
+  for(const oversized of [false,true]){
+    const h=harness('#/customers?view=batches'),original=h.originalFetch,calls=[];
+    const customers=oversized?Array.from({length:501},(_,i)=>({id:`prospect:many-${i}`,kind:'prospect',title:`Many ${i}`,source_type:'google'})):[{id:'customer:existing',kind:'customer',title:'Existing Buyer',source_type:'website'},{id:'customer:alpha',kind:'customer',title:'Alpha Buyer',summary:'walking shoes',source_type:'website'},{id:'prospect:beta',kind:'prospect',title:'Beta Wholesale',summary:'walking shoes',source_type:'google'},{id:'prospect:other',kind:'prospect',title:'Other Company',source_type:'manual_import'}];h.objects.push(...customers);if(!oversized)h.objects.push({...customers[1]});
+    let batch={id:'add-batch',title:'Add Customers',revision:1,items:oversized?[]:[{object_id:'customer:existing',review_state:'pending',customer:{title:'Existing Buyer'},quality:{reasons:[]}}]};
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766');if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};if(url.pathname==='/api/customer-batches/add-batch')return {ok:true,json:async()=>batch};if(url.pathname==='/api/customer-batches/add-batch/items'){const payload=JSON.parse(options.body);calls.push(payload);batch={...batch,revision:2,items:[...batch.items,...payload.object_ids.map(id=>({object_id:id,review_state:'pending',customer:{title:customers.find(row=>row.id===id).title},quality:{reasons:[]}}))]};return {ok:true,json:async()=>batch};}return original(path,options);});
+    await h.ui.bootstrap();await settle();const box=h.elements.page.querySelector('.batch-add'),field=label=>walk(box).find(row=>row['aria-label']===label);
+    if(oversized){assert.ok(box.textContent.includes('超过批次500个客户上限'));await findButton(box,'选择当前筛选结果').click();assert.ok(box.textContent.includes('本次未新增选择'));assert.ok(box.textContent.includes('已选待加入 0 位'));await findButton(box,'加入所选客户').click();assert.equal(calls.length,0);continue;}
+    assert.equal(field('加入 Existing Buyer').disabled,true);assert.equal(field('加入 Existing Buyer').checked,true);assert.equal(walk(box).filter(row=>row['aria-label']==='加入 Alpha Buyer').length,1);
+    const kind=field('待加入对象类型'),source=field('待加入发现渠道'),query=field('搜索待加入客户');kind.value='customer';kind.listeners.change();source.value='website';source.listeners.change();query.value='walking';query.listeners.input();assert.ok(field('加入 Alpha Buyer'));assert.equal(field('加入 Beta Wholesale'),undefined);await findButton(box,'选择当前筛选结果').click();assert.equal(field('加入 Alpha Buyer').checked,true);
+    kind.value='prospect';kind.listeners.change();source.value='google';source.listeners.change();assert.ok(field('加入 Beta Wholesale'));await findButton(box,'选择当前筛选结果').click();assert.ok(box.textContent.includes('已选待加入 2 位'));
+    kind.value='';kind.listeners.change();source.value='';source.listeners.change();query.value='';query.listeners.input();assert.equal(field('加入 Alpha Buyer').checked,true);assert.equal(field('加入 Beta Wholesale').checked,true);assert.equal(field('加入 Other Company').checked,false);
+    await findButton(box,'加入所选客户').click();await settle();assert.deepEqual(calls,[{revision:1,object_ids:['customer:alpha','prospect:beta']}]);assert.equal(field('加入 Alpha Buyer').disabled,true);assert.equal(field('加入 Beta Wholesale').disabled,true);assert.ok(box.textContent.includes('已选待加入 0 位'));assert.equal(batch.items.length,3);
+  }
+});
+
+
+test('逐封发送先检查并绑定展示快照，阻止未知和错配，发送结果不明保留对账且不重试',async()=>{
+  for(const mode of ['blocked','wrong-to','wrong-subject','wrong-version','wrong-account','wrong-attachment','not_sent','unknown','interrupted','sending']){
+    const h=harness('#/object/customer%3Asingle-safe'),original=h.originalFetch,calls=[];
+    h.objects.push({id:'customer:single-safe',kind:'customer',title:'Single Buyer',assets:[]});
+    let draft={object_id:'customer:single-safe',account:'seller@example.test',to:'buyer@example.test',subject:'Exact subject',body_en:'Exact English body',body_zh:'完整中文正文',attachments:[{id:'att',name:'actual-catalog.pdf',size:10}],version:'visible-v1',status:'draft',can_send:true};
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766'),payload=options.body?JSON.parse(options.body):null;
+      if(url.pathname==='/api/desk/gmail/customer' || url.pathname==='/api/desk/gmail/sync')return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};
+      if(url.pathname==='/api/desk/gmail/draft'){calls.push({type:'draft-read'});return {ok:true,json:async()=>structuredClone(draft)};}
+      if(url.pathname==='/api/desk/gmail/send-preflight'){calls.push({type:'preflight',payload});if(mode==='blocked')return {ok:true,json:async()=>({can_confirm:false,reasons:[{code:'bounce_unknown',status:'unknown',message:'退信检查未知'}]})};const result={object_id:draft.object_id,version:draft.version,account:draft.account,to:draft.to,subject:draft.subject,attachments:draft.attachments,can_confirm:true,plan_id:'visible-plan',checks:{status:'clear'},reasons:[],reply_proof:{reply_message_id:'<real-reply@example.test>'}};if(mode==='wrong-to')result.to='other@example.test';if(mode==='wrong-subject')result.subject='Unseen subject';if(mode==='wrong-version')result.version='unseen-v2';if(mode==='wrong-account')result.account='other-seller@example.test';if(mode==='wrong-attachment')result.attachments=[{name:'unseen.pdf',size:10}];return {ok:true,json:async()=>result};}
+      if(url.pathname==='/api/desk/gmail/send'){calls.push({type:'send',payload});if(mode==='not_sent')return {ok:true,json:async()=>({status:'not_sent',reason:'发送前草稿已变化'})};draft={...draft,status:mode==='sending'?'sending':'unknown',message_id:'<attempt@example.test>',error:'发送结果尚未确认'};if(mode==='interrupted')throw Error('connection interrupted');return {ok:true,json:async()=>({status:mode==='sending'?'sending':'unknown',reason:'等待对账'})};}
+      return original(path,options);
+    });
+    await h.ui.bootstrap();await settle();const panel=h.elements.page.querySelector('.gmail-conversation');await findButton(panel,'写邮件 / 继续草稿').click();await settle();const composer=panel.querySelector('.mail-composer');await findButton(composer,'查看并审核').click();await settle();assert.equal(calls.some(row=>row.type==='preflight'),false);assert.equal(walk(composer).some(row=>row.tagName==='BUTTON' && row.textContent==='确认发送这封邮件'),false);
+    for(const value of ['buyer@example.test','Exact subject','Exact English body','完整中文正文','actual-catalog.pdf'])assert.ok(composer.textContent.includes(value));await findButton(composer,'检查这封邮件的发送条件').click();await settle();assert.deepEqual(calls.find(row=>row.type==='preflight').payload,{object_id:'customer:single-safe',version:'visible-v1'});
+    if(mode==='blocked' || mode.startsWith('wrong-')){assert.equal(walk(composer).some(row=>row.tagName==='BUTTON' && row.textContent==='确认发送这封邮件'),false);assert.equal(calls.some(row=>row.type==='send'),false);assert.ok(composer.textContent.includes(mode==='blocked'?'退信检查未知':'不一致'));continue;}
+    assert.ok(composer.textContent.includes('本次已核实为原客户邮件的回复'));const send=findButton(composer,'确认发送这封邮件');await send.click();await send.click();await settle();assert.equal(calls.filter(row=>row.type==='send').length,1);assert.deepEqual(calls.find(row=>row.type==='send').payload,{object_id:'customer:single-safe',version:'visible-v1',plan_id:'visible-plan',confirmed:true});assert.equal(calls.filter(row=>row.type==='draft-read').length,2);
+    if(mode==='not_sent'){assert.ok(composer.textContent.includes('本次邮件未发送'));assert.ok(composer.textContent.includes('发送前草稿已变化'));assert.ok(findButton(composer,'返回修改并重新检查'));}else{assert.ok(composer.textContent.includes('发送结果尚未确认'));assert.ok(findButton(composer,'核对发送结果'));if(mode!=='sending')assert.ok(findButton(composer,'我已确认未发送，恢复草稿'));}
+    assert.equal(walk(composer).some(row=>row.tagName==='BUTTON' && row.textContent==='确认发送这封邮件'),false);
+  }
+});
+
+
+test('本批次本客户Agent完成自动读回结果，编辑输入保留且其他客户或失败不切换详情',async()=>{
+  for(const scenario of ['clean','mail-edit','review-edit','other-customer','other-batch','failed']){
+    const h=harness('#/customers?view=batches'),original=h.originalFetch,reads=[];
+    h.setWebsite({state:'ready'});h.objects.push({id:'customer:return-a',kind:'customer',title:'Return Alpha',assets:[]},{id:'customer:return-b',kind:'customer',title:'Return Beta',assets:[]});
+    const job={id:'return-job',object_id:scenario==='other-customer'?'customer:return-b':'customer:return-a',batch_id:scenario==='other-batch'?'different-batch':'return-batch',mode:'outreach_draft',status:'running',updated_at:'old'};h.jobs.push(job);
+    let version=1,body='Original Alpha draft',batch={id:'return-batch',title:'Original batch',revision:1,items:[{object_id:'customer:return-a',item_revision:1,review_state:'pending',customer:{title:'Return Alpha'},draft:{version:1,status:'draft'},quality:{reasons:[]}},{object_id:'customer:return-b',item_revision:1,review_state:'pending',customer:{title:'Return Beta'},draft:{version:1,status:'draft'},quality:{reasons:[]}}]};
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766');if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};if(url.pathname==='/api/customer-batches/return-batch')return {ok:true,json:async()=>batch};if(url.pathname==='/api/desk/gmail/draft'){reads.push(url.searchParams.get('object_id'));return {ok:true,json:async()=>({version,status:'draft',account:'seller@example.test',to:'alpha@example.test',subject:'Proposal',body_en:body,body_zh:'中文',attachments:[],can_send:false})};}if(url.pathname==='/api/desk/gmail/customer')return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};return original(path,options);});
+    await h.ui.bootstrap();await settle();const search=walk(h.elements.page).find(row=>row['aria-label']==='搜索批次内客户');search.value='Return';search.listeners.input();await findButton(h.elements.page,'审阅这位客户').click();await settle();const ctx=h.ui.S.detail,field=label=>walk(h.elements.page).find(row=>row['aria-label']===label),en=field('英文正文（发送给客户）'),note=field('本客户审核意见');
+    if(scenario==='mail-edit'){en.value='Human unsaved mail';en.listeners.input();}
+    if(scenario==='review-edit')note.value='Human unsaved review note';
+    version=2;body='Agent latest Alpha draft';batch={...batch,revision:2,items:batch.items.map(row=>row.object_id==='customer:return-a'?{...row,item_revision:2,draft:{version:2,status:'draft'}}:row)};job.status=scenario==='failed'?'failed':'completed';job.updated_at='new';if(scenario==='failed')job.error='Fixture research failed';
+    await h.ui.poll();await settle();assert.equal(h.location.hash,'#/customers?view=batches');assert.equal(field('搜索批次内客户').value,'Return');assert.equal(h.ui.S.batchView.selected,'customer:return-a');
+    if(scenario==='clean'){assert.notEqual(h.ui.S.detail,ctx);assert.equal(field('英文正文（发送给客户）').value,'Agent latest Alpha draft');assert.equal(reads.length,2);assert.ok(h.elements.page.textContent.includes('已在原批次读取最新客户资料与草稿'));}
+    else {assert.equal(h.ui.S.detail,ctx);assert.equal(reads.length,1);if(scenario==='mail-edit'){assert.equal(field('英文正文（发送给客户）'),en);assert.equal(en.value,'Human unsaved mail');assert.ok(h.elements.page.textContent.includes('输入已保留'));}else if(scenario==='review-edit'){assert.equal(field('本客户审核意见'),note);assert.equal(note.value,'Human unsaved review note');assert.ok(h.elements.page.textContent.includes('输入已保留'));}else if(scenario==='failed'){assert.ok(h.elements.page.textContent.includes('Fixture research failed'));assert.equal(en.value,'Original Alpha draft');}else assert.equal(en.value,'Original Alpha draft');}
+  }
+});
+
+
+test('从原批次移除仅取消引用，未保存编辑拦截、冲突保留输入、成功保留筛选',async()=>{
+  for(const scenario of ['success','mail-edit','review-edit','conflict']){
+    const h=harness('#/customers?view=batches'),original=h.originalFetch,calls=[];
+    h.objects.push({id:'customer:remove-a',kind:'customer',title:'Remove Alpha',assets:[]},{id:'customer:remove-b',kind:'customer',title:'Remove Beta',assets:[]});
+    const originalDraft={version:7,status:'draft',to:'alpha@example.test',subject:'Subject',body_en:'Keep this draft',body_zh:'保留草稿',attachments:[]};
+    let batch={id:'remove-batch',title:'Keep original batch',revision:'batch-current',items:[{object_id:'customer:remove-a',review_state:'pending',item_revision:'a',customer:{title:'Remove Alpha'},draft:{version:7,status:'draft'},quality:{reasons:[]}},{object_id:'customer:remove-b',review_state:'pending',item_revision:'b',customer:{title:'Remove Beta'},draft:{version:1,status:'draft'},quality:{reasons:[]}}]};
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766');if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};if(url.pathname==='/api/customer-batches/remove-batch')return {ok:true,json:async()=>batch};if(url.pathname==='/api/customer-batches/remove-batch/items/remove'){calls.push(JSON.parse(options.body));if(scenario==='conflict')return {ok:false,status:409,json:async()=>({error:'批次已变化'})};batch={...batch,revision:'after-remove',items:batch.items.filter(item=>item.object_id!=='customer:remove-a')};return {ok:true,json:async()=>batch};}if(url.pathname==='/api/desk/gmail/draft')return {ok:true,json:async()=>originalDraft};if(url.pathname==='/api/desk/gmail/customer')return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};return original(path,options);});
+    await h.ui.bootstrap();await settle();const field=label=>walk(h.elements.page).find(row=>row['aria-label']===label);field('搜索批次内客户').value='Remove';field('搜索批次内客户').listeners.input();await findButton(h.elements.page,'审阅这位客户').click();await settle();const ctx=h.ui.S.detail,en=field('英文正文（发送给客户）'),note=field('本客户审核意见');if(scenario==='mail-edit'){en.value='Unsent human mail';en.listeners.input();}if(scenario==='review-edit')note.value='Unsaved human review';
+    await findButton(h.elements.page,'从本批次移除').click();await settle();assert.equal(h.location.hash,'#/customers?view=batches');assert.equal(field('搜索批次内客户').value,'Remove');assert.equal(h.ui.S.batchView.id,'remove-batch');
+    if(scenario.endsWith('-edit')){assert.equal(calls.length,0);assert.equal(h.ui.S.detail,ctx);assert.ok(h.elements.page.textContent.includes('当前有未保存'));assert.equal(scenario==='mail-edit'?en.value:note.value,scenario==='mail-edit'?'Unsent human mail':'Unsaved human review');}
+    else {assert.deepEqual(calls,[{revision:'batch-current',object_ids:['customer:remove-a']}]);if(scenario==='success'){assert.equal(h.ui.S.detail,null);assert.equal(h.ui.S.batchView.selected,'');assert.equal(batch.items.length,1);assert.ok(h.objects.some(item=>item.id==='customer:remove-a'));assert.equal(originalDraft.body_en,'Keep this draft');assert.ok(h.elements.page.textContent.includes('客户、草稿和不联系抑制记录仍保留'));}else {assert.equal(h.ui.S.detail,ctx);assert.equal(field('英文正文（发送给客户）'),en);assert.equal(en.value,'Keep this draft');assert.ok(h.elements.page.textContent.includes('批次已变化'));assert.ok(h.elements.page.textContent.includes('本次输入仍保留'));}}
+  }
+});
+
+
+test('旧无拥有者及启动窗口任务提供明确人工核验接续，普通任务不显示且不会自动重跑',async()=>{
+  for(const outcome of ['legacy-success','launch-success','still-running','unknown']){
+    const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];const target={id:'legacy-target',object_id:'product:1',status:'running',session_id:'retained-session',instruction:'Prior work',...(outcome==='launch-success'?{owner_pid:4321,owner_id:'old-owner'}:{})};
+    const peers=[{id:'ordinary-running',object_id:'product:1',status:'running',owner_pid:123,process_id:456},{id:'ordinary-queued',object_id:'product:1',status:'queued',owner_pid:123},{id:'already-failed',object_id:'product:1',status:'failed',session_id:'other-session',owner_pid:123},{id:'different-customer',object_id:'customer:other',status:'running'}];h.jobs.push(target,...peers);const peersBefore=JSON.stringify(peers);
+    h.interceptFetch(async(path,options={})=>{const url=new URL(path,'http://127.0.0.1:8766');if(url.pathname==='/api/desk/job/recover-legacy'){const payload=JSON.parse(options.body);calls.push({type:'recover',payload});if(outcome==='still-running')return {ok:false,json:async()=>({error:'原服务仍存活或无法确认已退出，不能恢复旧记录'})};if(outcome==='unknown')throw Error('connection result unknown');Object.assign(target,{status:'failed',owner_pid:4321,worker_finished:true,error:'已人工核验退出，未自动执行'});return {ok:true,json:async()=>target};}if(url.pathname==='/api/desk/job'){calls.push({type:'read'});return {ok:true,json:async()=>target};}if(url.pathname==='/api/desk/job/resume'){calls.push({type:'resume',payload:JSON.parse(options.body)});Object.assign(target,{status:'running',owner_pid:999,process_id:1000});return {ok:true,json:async()=>target};}return original(path,options);});
+    await h.ui.bootstrap();await settle();const box=h.elements.page.querySelector('.legacy-job-recovery');assert.ok(box);assert.equal(h.elements.page.querySelectorAll('.legacy-job-recovery').length,1);assert.equal(Boolean(box.open),false);assert.ok(box.textContent.includes('可能存在'));assert.ok(box.textContent.includes('依据必须包含') || walk(box).some(row=>row.placeholder?.includes('依据必须包含')));if(outcome==='launch-success')assert.ok(box.textContent.includes('已登记原服务 PID：4321'));
+    const field=label=>walk(box).find(row=>row['aria-label']===label),pid=field('先前工作台进程 PID'),proof=field('原服务及子进程退出的具体核验依据'),confirmed=field('确认已核实原服务及可能存在的子进程均已退出'),submit=findButton(box,'确认核验并标记可恢复');assert.equal(pid.value,'');assert.equal(confirmed.checked,false);
+    await submit.click();assert.equal(calls.length,0);pid.value='4321';proof.value='已核对原服务 PID 4321 的进程身份、退出日志，并确认原服务及可能存在的子进程均已退出。';await submit.click();assert.equal(calls.length,0);confirmed.checked=true;if(outcome==='launch-success'){pid.value='5555';await submit.click();assert.equal(calls.length,0);pid.value='4321';}await submit.click();await submit.click();await settle();assert.deepEqual(calls[0],{type:'recover',payload:{id:'legacy-target',former_owner_pid:4321,evidence:proof.value,confirmed:true}});assert.equal(calls.filter(row=>row.type==='recover').length,1);assert.equal(calls.some(row=>row.type==='resume'),false);assert.equal(JSON.stringify(peers),peersBefore);
+    if(outcome.endsWith('success')){assert.ok(h.elements.page.textContent.includes('已标记为可恢复'));assert.ok(h.elements.page.textContent.includes('尚未启动'));assert.equal(h.elements.page.querySelector('.legacy-job-recovery'),null);const entry=walk(h.elements.page).find(row=>row['aria-label']==='交给 Agent 的工作');entry.value='Continue only after explicit review';await findButton(h.elements.page,'继续这项工作').click();await settle();assert.equal(calls.filter(row=>row.type==='resume').length,1);assert.deepEqual(calls.at(-1).payload,{id:'legacy-target',instruction:'Continue only after explicit review'});}
+    else {assert.ok(box.textContent.includes(outcome==='still-running'?'原服务仍存活':'connection result unknown'));assert.ok(box.textContent.includes('不会自动重试或启动任务'));assert.equal(proof.value.includes('4321'),true);await findButton(box,'重新读取该任务状态').click();await settle();assert.equal(calls.filter(row=>row.type==='recover').length,1);const reread=h.elements.page.querySelector('.legacy-job-recovery');assert.equal(walk(reread).find(row=>row['aria-label']==='确认已核实原服务及可能存在的子进程均已退出').checked,false);}
   }
 });

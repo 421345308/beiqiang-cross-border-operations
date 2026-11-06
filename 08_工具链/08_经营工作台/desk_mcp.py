@@ -12,13 +12,20 @@ TEXT = {'.txt', '.csv', '.json', '.md'}
 DENY = {'.git', '.codex', '.config', 'credentials', 'secrets', 'node_modules'}
 PRODUCTS = '00_总控台/产品中心/数据/产品.json'
 CHANNEL = '02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
+DRAFT_TOOLS = {'get_business_context','get_object','list_sources','read_source','read_product',
+               'list_customer_materials','read_customer_material','get_customer_gmail',
+               'get_customer_profile','get_customer_email_draft','prepare_customer_email_draft',
+               'save_customer_email_draft','add_customer_email_attachment'}
+RESEARCH_TOOLS = DRAFT_TOOLS | {'research_company','save_customer_profile','list_objects'}
 
 
 class DeskTools:
-    def __init__(self, business, root, object_id, audit=None, read_only=False):
+    def __init__(self, business, root, object_id, audit=None, read_only=False, draft_only=False, research_only=False):
         self.business=business;self.root=Path(root).resolve();self.object_id=object_id
         self.audit=Path(audit) if audit else None
         self.read_only=read_only
+        self.draft_only=draft_only
+        self.research_only=research_only
 
     def object(self):
         return self.business.get_object(self.object_id)
@@ -185,6 +192,8 @@ class DeskTools:
         return result
 
     def call(self,name,args):
+        if self.draft_only and name not in DRAFT_TOOLS:raise ValueError('本次任务仅能处理当前客户的邮件草稿')
+        if self.research_only and name not in RESEARCH_TOOLS:raise ValueError('本次任务仅能研究当前客户并准备邮件草稿')
         if name=='read_douyin_store':
             if self.read_only:raise ValueError('自动邮件整理不访问店铺数据')
             from douyin_agent import read_store
@@ -239,6 +248,8 @@ class DeskTools:
                     'content':content[start:start+limit],'start':start,'totalChars':len(content),
                     'nextStart':start+limit if start+limit<len(content) else None}
         if name=='list_objects':
+            if self.research_only and args.get('kind')!='product':
+                raise ValueError('客户研究只能搜索商品；客户资料限当前对象')
             rows=self.business.list_objects(kind=args.get('kind',''),q=args.get('q',''))
             if self.read_only and args.get('kind')!='product':
                 rows=[row for row in rows if row.get('id')==self.object_id]
@@ -270,6 +281,24 @@ class DeskTools:
         if name=='get_customer_commercial':
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('商机记录仅支持当前客户')
             return self.business.app.customer_workspace.commercial(self.object_id)
+        if name in ('get_customer_email_draft','prepare_customer_email_draft','save_customer_email_draft','add_customer_email_attachment'):
+            if self.object().get('kind') not in ('customer','prospect'):raise ValueError('邮件草稿仅支持当前客户')
+            if self.read_only and name!='get_customer_email_draft':raise ValueError('当前自动整理任务只读')
+            if name in ('get_customer_email_draft','prepare_customer_email_draft') and args:
+                raise ValueError('邮件草稿只支持当前客户')
+            app=self.business.app
+            if not hasattr(app,'gmail_drafts'):
+                from gmail_drafts import GmailDrafts
+                app.gmail_drafts=GmailDrafts(app)
+            service=app.gmail_drafts
+            if name=='get_customer_email_draft':return {'draft':service._saved(self.object_id)}
+            if name=='prepare_customer_email_draft':return service.get(self.object_id)
+            if not isinstance(args.get('version'),str) or not args['version']:raise ValueError('请先读取邮件草稿版本')
+            if name=='save_customer_email_draft':
+                if set(args)-{'version','fields'}:raise ValueError('邮件草稿字段无效')
+                return service.save(self.object_id,args['version'],args.get('fields'))
+            if set(args)-{'version','resource_id'}:raise ValueError('邮件附件字段无效')
+            return service.add_attachment(self.object_id,args['version'],resource_id=args.get('resource_id',''))
         if name in ('get_customer_profile','save_customer_profile','get_customer_workflow','save_customer_workflow'):
             if self.object().get('kind') not in ('customer','prospect'):raise ValueError('客户资料工具仅支持当前客户')
             workspace=self.business.app.customer_workspace
@@ -369,6 +398,19 @@ def _customer_tools():
 
 TOOLS.extend(_customer_tools())
 
+TOOLS.extend([
+    {'name':'get_customer_email_draft','description':'只读当前客户已有邮件草稿；没有草稿返回空。版本供后续安全保存，不会发送。',
+     'inputSchema':{'type':'object','properties':{},'additionalProperties':False},'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'prepare_customer_email_draft','description':'为当前客户准备本机邮件草稿；已有草稿沿用，已发送或结果未知的邮件不会覆盖。不发送。',
+     'inputSchema':{'type':'object','properties':{},'additionalProperties':False},'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'save_customer_email_draft','description':'保存当前客户内部邮件草稿；必须传入实际读取的version，冲突时停止并重新核对。不能发送；收件人及正文需负责人审核。',
+     'inputSchema':{'type':'object','properties':{'version':{'type':'string','minLength':1},'fields':{'type':'object','properties':{k:{'type':'string'} for k in ('to','subject','body_en','body_zh')},'additionalProperties':False}},'required':['version','fields'],'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'add_customer_email_attachment','description':'把资料包中的实际文件加入当前客户邮件；先读取草稿version和资料ID，不发送。',
+     'inputSchema':{'type':'object','properties':{'version':{'type':'string','minLength':1},'resource_id':{'type':'string','minLength':1}},'required':['version','resource_id'],'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
+])
+
 
 def dispatch(tools,message):
     method=message.get('method');rid=message.get('id')
@@ -376,7 +418,7 @@ def dispatch(tools,message):
     if method=='initialize':
         result={'protocolVersion':'2024-11-05','capabilities':{'tools':{}},'serverInfo':{'name':'beiqiang-business','version':'1.0'}}
     elif method=='ping':result={}
-    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if not tools.read_only or (tool['annotations'].get('readOnlyHint') and tool['name']!='read_douyin_store')]}
+    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if (not getattr(tools,'draft_only',False) or tool['name'] in DRAFT_TOOLS) and (not getattr(tools,'research_only',False) or tool['name'] in RESEARCH_TOOLS) and (not tools.read_only or (tool['annotations'].get('readOnlyHint') and tool['name']!='read_douyin_store'))]}
     elif method=='tools/call':
         params=message.get('params') or {}
         try:
@@ -388,6 +430,8 @@ def dispatch(tools,message):
             from workspaces import WorkspaceConflict
             if isinstance(exc,WorkspaceConflict):
                 result={'content':[{'type':'text','text':json.dumps({'code':'version_conflict','message':'画布或记录已被其他操作更新，请重新读取并合并后再保存。'},ensure_ascii=False)}],'isError':True}
+            elif params.get('name') in ('get_customer_email_draft','prepare_customer_email_draft','save_customer_email_draft','add_customer_email_attachment'):
+                result={'content':[{'type':'text','text':json.dumps({'code':'draft_unavailable','message':'邮件草稿或附件不可保存，请先读取当前草稿和实际资料；不要发送或覆盖。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in ('save_creation_canvas','product_creation_options','add_product_asset_to_canvas'):
                 safe_messages={'当前自动整理任务只读','画布工具仅支持当前创作项目','画布保存须明确 version、nodes 和 edges；请先读取当前画布','商品创作工具仅支持商品或创作项目','请在目标创作项目中添加商品素材','请先读取当前画布版本','请选择商品','请选择该商品已有素材','请选择已有创作项目','画布内容格式错误','画布节点或连线格式错误','画布节点格式错误','画布节点位置无效','画布连线缺少对应节点','画布内容过长'}
                 message=str(exc) if str(exc) in safe_messages else '参数无效或对象、素材不可用，请重新读取当前资料。'
@@ -408,9 +452,11 @@ def main():
     parser.add_argument('--state',type=Path,required=True);parser.add_argument('--object-id',required=True)
     parser.add_argument('--audit',type=Path)
     parser.add_argument('--read-only',action='store_true')
+    parser.add_argument('--draft-only',action='store_true')
+    parser.add_argument('--research-only',action='store_true')
     args=parser.parse_args();app=open_business(args.root,args.state)
     if args.object_id.startswith('customer:website-'):app.business.refresh_website(wait=True)
-    tools=DeskTools(app.business,args.root,args.object_id,args.audit,read_only=args.read_only)
+    tools=DeskTools(app.business,args.root,args.object_id,args.audit,read_only=args.read_only,draft_only=args.draft_only,research_only=args.research_only)
     try:
         for line in sys.stdin:
             try:reply=dispatch(tools,json.loads(line))

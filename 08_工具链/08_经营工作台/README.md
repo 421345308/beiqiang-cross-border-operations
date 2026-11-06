@@ -2,6 +2,35 @@
 
 入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
 
+## 客户开发批次（2026-11-06）
+
+进入“客户开发 → 开发批次”。可以新建批次，按客户或候选、发现渠道和关键词筛选现有对象并批量加入；同一对象不会重复加入，误选或重复对象可仅从批次移除，不删除原客户或草稿。列表集中显示客户背景、来源、审核状态和草稿情况；打开一位后可查看来源及观察时间、产品匹配、原客户往来、中英文邮件和实际附件。每次最多选择 8 位客户并行研究；单客修改要求只交给绑定该客户和批次的 Agent Job，完成后在没有未保存输入时自动重新读取当前客户。研究及草稿保存在原对象及本地邮件草稿中，不建立第二套 CRM。Agent 没有发信工具，结果仍须重新阅读和审核。
+
+先逐封核对收件人、主题、完整英文及中文对照和实际附件，再标记该版本通过；修改客户资料、草稿、附件或相关邮箱观察后，旧审核会失效。对 CRM 已完整读取但未匹配的客户，可以明确记录实际查过的别名、独立发送记录、停止联系记录及结果；该记录绑定来源、账号、收件人和 CRM 指纹，不改变原 CRM 的未知状态。明确退订、拒绝、退信、重复以及邮箱或退信覆盖不完整，不能通过该记录豁免。
+
+选中已审核邮件后执行本次只读检查，全部通过才出现列明收件人、主题及数量的批次确认。逐封邮件也须先检查，预览通过后才显示最后确认。客户或准确邮箱被标为“不联系”后，其他批次及逐封发送都受到共享抑制。跨批次首次邮件按发件账号和准确收件地址认领；已有客户的最新入站邮件经线程、Message-ID、主题和地址核实后，逐封回复按该入站邮件另行认领。发送只记录 Gmail 实际回执；结果不明、中断及已使用计划不得自动重发，继续使用邮件页面的对账和人工确认未发送后的恢复入口。五分钟确认计划只对当时显示和检查的版本有效。
+
+退信检查使用 Gmail 官方只读批量接口读取候选系统通知，同一账号且官方邮箱水位未变化时在进程内复用候选，逐个地址重新解析；缓存不落盘。检查最多覆盖 3 页、75 封候选，单封超过 12 MiB、批量响应过大、读取失败或内容无法判断时均为未知，不能当作通过。该检查不证明地址可送达、不覆盖其他邮箱及未知别名。[Gmail 批量请求文档](https://developers.google.com/workspace/gmail/api/guides/batch)。
+
+**真实资料验收：** 已在本机私有状态建立一个包含 3 家北美鞋类候选的批次，研究来源、观察日期、产品匹配、个性化英文和完整中文对照及各自实际 PDF 附件均回原对象。1 家待负责人审阅；1 家公开地址只用于特定支持事项、1 家已有历史触达，均暂缓，不当成可立即首封。使用真实工作台 Agent Job 指定修改其中一家邮件的中英文问句，回读确认只有指定问句变化、收件人主题附件和另外两家草稿不变，该客户回原批次待审核。真实工作台的无界面 Chrome 实际加载了三家批次列表。真实 Gmail 对首个候选做过只读检查：当前账号查询覆盖 47 封系统通知，未发现该精确地址的退信；首次读取 43.0 秒、同水位缓存复用 12.1 秒。该结果不是其他邮箱或其他渠道的完整停止联系证明。没有替负责人通过邮件审核，没有发送邮件；客户资料、原始邮件、附件及批次状态留本机，不提交公开仓库。
+
+**多窗口和邮箱：** 不同客户的批次审核按单客快照比较，其他客户更新不应导致本客户输入被覆盖。共享邮箱观察按账号、精确地址范围及 Gmail 官方 `historyId` 持久化元数据，完整观察前后水位一致时才更新；失败、不完整或 IMAP 无可比水位时保持未知，不存正文。Gmail 区的“邮件事件与任务核对”可查看实际事件、任务 ID 及状态；需用户选择并写明依据才关联已有任务，不启动或重播。历史任务没有明确事件来源时不得自动猜配，新 Gmail Job 记录准确事件来源。
+
+同一个 SQLite 数据库内，Agent 对同一对象的创建和续接由短事务原子认领；另一个实例不会把仍存活的拥有者任务误标中断。拥有者及已记录子进程均已退出时才按实际状态标中断，不自动重跑。历史活动任务缺拥有者，或服务在启动子进程后、登记 PID 前崩溃时，可在任务区明确填写原服务 PID 和核验依据；系统确认已记录进程退出后只标记可恢复，仍须先核对可能未登记的子进程及成果，再显式续接。无法确认的状态不会自行释放。
+
+实现及接口分别见 `customer_batches.py`、`outreach_checks.py`、`batch_sending.py`、`single_send_guard.py`、`gmail_bounce_check.py`、`gmail_observations.py`、`gmail_event_reconcile.py`、`desk_mcp.py` 与 `web/desk.js`。工作台、SQLite 和上述保护以同一台本机及同一个数据库为范围；其他邮箱、独立数据库、直接绕过服务的脚本或已在途外发不受同一事务保护。批次并行 Job 尚不是持久父子依赖、通用事件 Router 或 Watchdog；最小跨业务一句话入口的建议见 [ARCHITECTURE.md](ARCHITECTURE.md)。
+
+**本轮验证：** 下列完整 Python 回归 466 项，462 项通过、4 项按默认设置跳过真实浏览器或真实模型；前端 110 项通过。显式启用后，隔离 Chrome 的双客户切换及局部修改 1 项通过；两个隔离客户的真实 Codex 研究任务同时运行并各自保存资料和草稿，1 项通过（54.740 秒）；另有单客草稿修改的真实 Codex 测试通过。真实模型测试消耗模型调用，使用合成客户、不连接真实邮箱、不发送。真实工作台也经无界面 Chrome 加载实际三客户批次，三个实际 PDF 附件均经 HTTP 下载回读、SHA 一致且各 22 页。桌面电脑控制的原生连接在重置后仍不可用；无界面 Chrome 验收不代表桌面控制已恢复。
+
+```powershell
+python -X utf8 -m unittest tests_agent_job_concurrency tests_customer_batches tests_customer_batch_http tests_batch_sending tests_outreach_checks tests_outreach_mcp tests_gmail_bounce_check tests_gmail_draft_concurrency tests_gmail_observations tests_gmail_event_reconcile tests_single_send_guard tests_customer_commercial tests_customer_concurrency tests_customer_revision_concurrency tests_customer_revision_race tests_customer_outcome_unknown tests_customer_analysis tests_customer_workspace tests_customer_workflow tests_customer_conversation tests_customer_http tests_customer_revision_http tests_customer_mcp_revision tests_business_context tests_desk_http tests_gmail_drafts tests_gmail_send_authorization tests_gmail_event_safety tests_gmail_sync tests_gmail_job_integration tests_gmail_mailbox tests_gmail_filter tests_gmail_translation tests_agent_jobs tests_job_recovery tests_runtime_backend tests_mcp_dossier tests_customer_batch_browser tests_outreach_live_codex
+node --test tests_desk_frontend.mjs
+$env:BEIQIANG_RUN_BROWSER_TEST='1'
+python -X utf8 -m unittest tests_customer_batch_browser -v
+$env:BEIQIANG_LIVE_CODEX='1'
+python -X utf8 -m unittest tests_outreach_live_codex -v
+```
+
 ## 客户分析与推进安排的版本保护（2026-11-06）
 
 客户分析和推进安排的读取与保存由 `customer_workspace.py` 统一处理。页面保存必须带实际读取的 revision；分析还须带原来源 `source_hash`。同一数据库中的受支持写入在短事务内核对版本：缺版本返回 HTTP 400，旧版本返回 409；页面保留未保存输入，不自动重试。客户分析 Agent 启动及续接时记录输入版本，人工或其他入口修改相关上下文后，旧成果转为 `needs_input`，不会覆盖。旧任务没有记录版本时也不盲目保存。已确认发送后的客户状态更新携带流程版本，更新冲突不会重发邮件。
@@ -19,7 +48,7 @@ python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency 
 node --test tests_desk_frontend.mjs
 ```
 
-仍有限制：跨数据库、绕开服务的手工文件修改、未纳入版本的外部来源竞争，以及文件和 SQLite 之间的崩溃原子性没有解决。Gmail 仅将已持久化事件/确认纳入版本；非派发事件和各进程独立邮件缓存尚无完整共享观察版本。冲突后页面没有并排合并界面，须保留输入、重新读取并人工核对。事件与 Job 仍缺只读对账及人工关联入口，也没有通用 Router、父子任务依赖或 Watchdog。
+仍有限制：跨数据库、绕开服务的手工文件修改、未纳入版本的外部来源竞争，以及文件和 SQLite 之间的崩溃原子性没有解决。冲突后页面没有并排合并界面，须保留输入、重新读取并人工核对。共享邮箱观察及事件与 Job 对账已按上节继续实现；其覆盖范围有限，也没有通用 Router、父子任务依赖或 Watchdog。
 
 ## Gmail 事件与 Agent 任务关联（2026-11-05）
 
@@ -41,7 +70,7 @@ MCP 客户商机写入要求先调用 `get_customer_commercial` 读取 revision�
 python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency tests_customer_outcome_unknown tests_customer_analysis tests_customer_workspace tests_customer_workflow tests_business_context tests_desk_http tests_gmail_event_safety tests_gmail_sync tests_gmail_job_integration tests_gmail_mailbox tests_gmail_filter tests_agent_jobs tests_job_recovery tests_runtime_backend
 ```
 
-**2026-11-05 接续候选：** 分析和工作流的页面、MCP 与 Agent 版本保护已按上节实现；共享邮箱观察版本仍未实现。事件与 Job 的可查询对账和人工接续，以及持久父子任务、依赖、Worker Session、Fast/Slow Path 和 Watchdog 均继续待做。
+**2026-11-05 接续候选：** 分析和工作流的页面、MCP 与 Agent 版本保护，以及共享邮箱观察和事件与 Job 的可查询对账、人工关联已按上节继续实现。持久父子任务、依赖、Worker Session、Fast/Slow Path 和 Watchdog 并未因批次并行工作而实现。
 
 ## Agent Runtime 代码审计与接续（2026-11-05）
 
@@ -70,7 +99,7 @@ python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency 
 
 真实对象验证：BQ009 经商品服务查得40项本机可用素材；ZX9507 原创作画布保留原节点，新增工厂侧面原图引用和可编辑R03方案，Agent服务保存后由本机工作台接口回读，旧版本保存返回冲突。两款未被错误关联；ZX9507 共用商品身份仍待核。2026-11-05续验：项目页面已列出原10秒成片，在页面播放并观察进度从0秒到3秒；R03节点经页面编辑、保存、刷新及Agent工具回读，内容一致。成片索引只复用受控媒体根，不代表作品审美或发布验收。画布保存在本机数据库，跨机器共享未验证。
 
-任务恢复续验：BQ009和ZX9507两项真实对象工作曾同时运行；BQ009在会话建立后取消，原进程退出后以同一会话接续并完成，ZX9507内容审阅也完成。现对同对象历史任务残留进程、状态不明或线程收尾进行检查，避免启动另一工作；不同对象可并行。这次实际验证的是取消后的接续；重启残留进程保护用本机真实PID模拟，不等于真实崩溃恢复。保护范围限于本工作台执行器可见记录，未覆盖手动CLI、其他服务实例及外部提交；通用步骤检查点尚未实现。
+任务恢复续验：BQ009和ZX9507两项真实对象工作曾同时运行；BQ009在会话建立后取消，原进程退出后以同一会话接续并完成，ZX9507内容审阅也完成。当时对同对象历史任务残留进程、状态不明或线程收尾进行检查；不同对象可并行。那次实际验证的是取消后的接续；重启残留进程保护用本机真实PID模拟，不等于真实崩溃恢复。此后已按客户批次章节扩展为同数据库跨实例原子认领；手动CLI、其他数据库和外部提交仍不受此保护，通用步骤检查点尚未实现。
 
 BQ009真实任务首次接续发现，产品记录已指定唯一当前档案，但该档案未进入Agent来源清单。现按该明确标记、精确型号及档案标题识别原档，并沿用路径安全校验；同一任务再次接续，实际分四段读完53,286字并保存复核成果。历史渠道状态按原日期使用，本次没有实时复核平台。任务及读取证据留本机 `.local/agent-jobs/`，不替代商品原档。
 
@@ -96,7 +125,7 @@ BQ009真实任务首次接续发现，产品记录已指定唯一当前档案，
 
 工作台Agent的 `get_business_context` 现场读取负责人规则、当前目标和重点、当前商品或客户原档、客户报价/样品/订单进展、对应渠道状态和已有下一动作；`list_artifacts`、`read_artifact` 读取当前对象既有成果，优先复用并按需核对原件，不新增独立事实库；`save_customer_commercial` 可按委托把草稿和实际进展写回当前客户。BQ009与已有客户已做真实只读验收；仍需按具体任务读取相关往来和原件。
 
-2026-11-04针对自主经营改造：普通对象任务以项目根目录为工作区，保留用户配置、项目文档、可用插件和持久会话，并启用多 Agent 选项；按本次委托及既有授权执行本地研究、资料与代码修改、测试和适用的 GitHub 同步。同一服务内同一对象只能有一个活动任务，不同对象可并行；涉及共享文件时仍须按总控工作流协调主办和串行 Git 操作，程序没有跨进程文件锁。对象页可新建、取消或按原会话继续工作；失败或重启后先核已有文件和进程，不自动重跑。旧 `--ephemeral` 工作没有可恢复的会话。
+2026-11-04针对自主经营改造：普通对象任务以项目根目录为工作区，保留用户配置、项目文档、可用插件和持久会话，并启用多 Agent 选项；按本次委托及既有授权执行本地研究、资料与代码修改、测试和适用的 GitHub 同步。同对象任务现在按同数据库短事务在不同服务实例间认领，不同对象可并行；涉及共享文件时仍须按总控工作流协调主办和串行 Git 操作，该机制不是通用文件锁。对象页可新建、取消或按原会话继续工作；失败或重启后先核已有文件和进程，不自动重跑。旧 `--ephemeral` 工作没有可恢复的会话。
 
 限制审查：原执行器显式设置了 `read-only`、`--ephemeral`、`--ignore-user-config`、禁用多 Agent/插件和 `project_doc_max_bytes=0`，这些是项目配置而非已证明的平台强制限制；原用途是把对象任务限制为读取与草稿。它们不再用于普通经营任务。客户来信自动触发的草稿和结构化翻译仍使用只读、隔离插件的专用模式；MCP 对该模式也拒绝业务写入。邮件翻译器、停用的旧云 runner 及旧兼容运行接口各自职责不同，本次没有把它们当成普通经营执行器统一放开。
 

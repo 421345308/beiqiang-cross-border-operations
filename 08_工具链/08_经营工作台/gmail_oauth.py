@@ -19,6 +19,7 @@ from urllib.request import Request, urlopen
 
 from gmail_mailbox import normalize_email
 from gmail_filter import classify_mail, new_buyer_summary
+from gmail_observations import begin_observation, finish_observation, history_id
 
 AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth'
 TOKEN_URL = 'https://oauth2.googleapis.com/token'
@@ -260,25 +261,35 @@ class GmailOAuthMailbox:
             old = self._cache.get(key)
             if old and not force and self.clock() - old['last_poll'] < self.ttl:
                 return copy.deepcopy(old['result'])
+        observation = begin_observation(self, customers)
+        before = after = None
+        observation_coverage = True
         status = {'state': 'ready', 'account_email': self.account_email,
                   'last_success_at': old['result']['status'].get('last_success_at') if old else None, 'error': None}
         messages = copy.deepcopy(old['result']['messages']) if old else []
         try:
             token = self._access_token()
+            if observation is not None:
+                before = self._observation_history(token)
             terms = ' '.join('from:' + x + ' to:' + x for x in sorted(customers))
             query = '-in:drafts -in:spam -in:trash {' + terms + '}'
             listing = self.request(GMAIL_URL + 'messages?' + urlencode({'q': query, 'maxResults': self.max_messages}), token=token)
             found = []
             ids=[str(item.get('id') or '') for item in listing.get('messages') or []]
+            observation_coverage = (isinstance(listing.get('messages', []), list)
+                and all(re.fullmatch('[0-9a-fA-F]+',mid) for mid in ids)
+                and (bool(ids) or not listing.get('resultSizeEstimate', 0)))
             ids=[mid for mid in ids if re.fullmatch('[0-9a-fA-F]+',mid)]
             def fetch_message(mid):
                 with self.lock:raw=self._messages.get(mid)
-                if force or raw is None:
+                if force or observation is not None or raw is None:
                     raw=self.request(GMAIL_URL + 'messages/' + mid + '?format=full', token=token)
                     with self.lock:self._messages[mid]=raw
                 return raw
             with ThreadPoolExecutor(max_workers=4) as pool:raw_messages=list(pool.map(fetch_message,ids))
-            for raw in raw_messages:
+            for mid,raw in zip(ids,raw_messages):
+                if not isinstance(raw,dict) or raw.get('id')!=mid or not isinstance(raw.get('payload'),dict):
+                    observation_coverage=False
                 message = parse_api_message(raw, self.account_email, customers)
                 if message:
                     found.append(message)
@@ -297,6 +308,8 @@ class GmailOAuthMailbox:
             with ThreadPoolExecutor(max_workers=4) as pool:thread_results=list(pool.map(fetch_thread,list(threads.items())[:15]))
             for associated,thread in thread_results:
                 if thread is None:thread_incomplete=True;continue
+                if not isinstance(thread.get('messages'),list) or not thread.get('messages'):
+                    observation_coverage=False
                 sent_ids={}
                 for raw in thread.get('messages') or []:
                     if set(raw.get('labelIds') or ()).intersection(('DRAFT','SPAM','TRASH')):continue
@@ -328,8 +341,15 @@ class GmailOAuthMailbox:
             status.update(last_success_at=datetime.fromtimestamp(self.clock(), timezone.utc).isoformat(),
                 loaded_count=len(messages), history_limited=bool(listing.get('nextPageToken')),
                 thread_lookup_incomplete=thread_incomplete,history_note='；'.join(notices) or None)
+            if observation is not None:
+                after = self._observation_history(token)
         except Exception as exc:
             status.update(state='error', error=str(exc) if isinstance(exc, ValueError) else 'Google 邮件连接暂不可用，请检查网络后重试')
+        complete = (observation_coverage and status['state'] == 'ready' and status.get('history_limited') is False
+                    and status.get('thread_lookup_incomplete') is False
+                    and all(isinstance(m.get('body'), str) and not m.get('body_truncated') for m in messages))
+        status['shared_observation'] = finish_observation(self, observation, before=before, after=after,
+            complete=complete, messages=messages, reason='query_failed_or_incomplete')
         dated = [m for m in messages if m['sent_at'] and m.get('mail_kind') not in ('promotion','automatic')]
         latest = max(dated, key=lambda m: (m['sent_at'], m['id']), default=None)
         pending = bool(latest and latest['direction'] == 'inbound') if status['state'] == 'ready' else None
@@ -339,6 +359,20 @@ class GmailOAuthMailbox:
         with self.lock:
             self._cache[key] = {'result': result, 'last_poll': self.clock() if status['state'] == 'ready' else float('-inf')}
         return copy.deepcopy(result)
+
+    def _observation_history(self, token):
+        """A provider watermark, never a message date or local poll timestamp.
+
+        Failure affects only observation certification, not existing sync or
+        automatic dispatch behavior. A complete context needs equal endpoints.
+        """
+        try:
+            value = self.request(GMAIL_URL + 'profile', token=token)
+            if not isinstance(value, dict) or str(value.get('emailAddress') or '').lower() != self.account_email:
+                return None
+            return history_id(value.get('historyId'))
+        except Exception:
+            return None
 
     def buyer_candidates(self, known_emails, linked_ids=()):
         """Find likely new buyer inquiries; source mail remains in Gmail."""

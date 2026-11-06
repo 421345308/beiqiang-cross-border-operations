@@ -18,6 +18,7 @@ import time
 from urllib.parse import urlparse, unquote
 from urllib.request import getproxies
 from gmail_filter import classify_mail
+from gmail_observations import begin_observation, finish_observation
 
 SERVICE = 'Beiqiang.Workdesk.Gmail'
 HOST = 'imap.gmail.com'
@@ -189,6 +190,7 @@ class GmailMailbox:
             old = self._cache.get(key)
             if old and not force and self.clock() - old['last_poll'] < self.ttl:
                 return copy.deepcopy(old['result'])
+            observation = begin_observation(self, customers)
             status = {'state': 'not_configured' if not self.account_email else 'ready',
                       'account_email': self.account_email, 'last_success_at': old['result']['status']['last_success_at'] if old else None,
                       'error': None}
@@ -214,6 +216,10 @@ class GmailMailbox:
                 status['state'] = 'error'
                 status['error'] = ('Gmail服务器拒绝读取或登录，请检查账号设置及连接状态' if isinstance(exc, imaplib.IMAP4.error)
                                    else 'Gmail连接或读取失败（' + type(exc).__name__ + '），请检查网络与代理')
+            # This IMAP implementation does not read a reliable mailbox-wide
+            # MODSEQ. UID/message dates cannot order shared observations.
+            status['shared_observation'] = finish_observation(self, observation,
+                complete=False, reason='imap_watermark_unavailable')
             dated = [m for m in messages if m['sent_at'] and m.get('mail_kind') not in ('promotion','automatic')]
             latest = max(dated, key=lambda m: (m['sent_at'], m['id']), default=None)
             pending = bool(latest and latest['direction'] == 'inbound') if status['state'] == 'ready' else None

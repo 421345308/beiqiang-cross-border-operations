@@ -35,10 +35,10 @@ class JobRecoveryTests(unittest.TestCase):
         self.assertTrue(self.jobs._pid_alive(os.getpid()))
         self.record('interrupted', 'product:BQ009', 'running', os.getpid())
         restarted = AgentJobs(self.app)
-        self.assertEqual(restarted.get_job('interrupted')['status'], 'failed')
-        with self.assertRaisesRegex(ValueError, '先前进程'):
+        self.assertEqual(restarted.get_job('interrupted')['status'], 'running')
+        with self.assertRaisesRegex(ValueError, '已有工作'):
             restarted.start('product:BQ009', '接续商品研究')
-        with self.assertRaisesRegex(ValueError, '先前进程'):
+        with self.assertRaisesRegex(ValueError, '仍在运行'):
             restarted.resume('interrupted', '继续原工作')
         with patch('agent_jobs.threading.Thread', HeldThread):
             job = restarted.start('creation:ZX9507', '准备内容')

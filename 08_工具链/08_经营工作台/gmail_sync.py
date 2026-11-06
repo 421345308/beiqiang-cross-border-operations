@@ -81,6 +81,8 @@ class GmailService:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_inbox_dismissed (account TEXT NOT NULL,message_id TEXT NOT NULL,PRIMARY KEY(account,message_id))')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_customer_addresses (object_id TEXT NOT NULL,address TEXT NOT NULL,PRIMARY KEY(object_id,address))')
             app.db.commit()
+        from gmail_observations import GmailObservations
+        self.observations=GmailObservations(app)
         if self.path.exists():
             try:
                 config=json.loads(self.path.read_text(encoding='utf-8-sig'))
@@ -90,11 +92,17 @@ class GmailService:
                 self._authorized_at=config.get('authorized_at') or self._connected_at
                 checker,factory=(self.oauth_credential_checker,self.oauth_mailbox_factory) if self._auth_mode=='oauth' else (self.credential_checker,self.mailbox_factory)
                 if checker(self._account):
-                    self._mailbox=factory(self._account);self._state='connected'
+                    self._mailbox=self._observe_mailbox(factory(self._account));self._state='connected'
             except GmailDependencyError as exc:
                 self._state='error';self._error=str(exc)
             except Exception:
                 self._state='error';self._error='Gmail本地配置或系统凭据暂不可读'
+
+    def _observe_mailbox(self,mailbox):
+        # The mailbox itself publishes even when a read-only caller invokes
+        # context directly, without GmailService.customer or dispatching.
+        mailbox.observation_store=self.observations
+        return mailbox
 
     def _authorization_details(self):
         at=_timestamp(self._authorized_at)
@@ -112,7 +120,7 @@ class GmailService:
         # No persistence occurs before the supplied credential has passed a real login check.
         self.credential_tester(account,password)
         self.credential_saver(account,password)
-        mailbox=self.mailbox_factory(account)
+        mailbox=self._observe_mailbox(self.mailbox_factory(account))
         # Keep the original sync boundary when reconnecting the same account,
         # so replies received while disconnected are still picked up.
         connected_at=(self._connected_at if self._account==account and _timestamp(self._connected_at) is not None
@@ -134,7 +142,7 @@ class GmailService:
         connected_at=(self._connected_at if self._account==account and _timestamp(self._connected_at) is not None
                       else datetime.fromtimestamp(self.clock(),timezone.utc).isoformat())
         authorized_at=datetime.fromtimestamp(self.clock(),timezone.utc).isoformat()
-        mailbox=self.oauth_mailbox_factory(account)
+        mailbox=self._observe_mailbox(self.oauth_mailbox_factory(account))
         self.path.parent.mkdir(parents=True,exist_ok=True)
         temporary=self.path.with_suffix('.tmp')
         with self.lock:

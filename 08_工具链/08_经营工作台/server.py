@@ -19,6 +19,9 @@ from alibaba_product_review import AlibabaProductReview
 from business import Business, CHANNEL
 from agent_jobs import AgentJobs, codex_executable
 from customer_workspace import CustomerWorkspace, CustomerWriteOutcomeUnknown
+from customer_batches import CustomerBatches
+from batch_sending import BatchSending
+from outreach_checks import OutreachChecks
 from inquiry_intake import InquiryIntake
 from channel_overview import ChannelOverview
 from creation import Creation
@@ -26,6 +29,8 @@ from creation_canvas import CreationCanvas
 from product_creation import ProductCreation
 from gmail_sync import GmailDispatchDeferred, GmailService
 from gmail_drafts import GmailDrafts
+from single_send_guard import SingleSendGuard
+from gmail_event_reconcile import GmailEventReconcile, ReconcileConflict, ReconcileOutcomeUnknown
 from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
 from today import Today
@@ -113,6 +118,11 @@ class Workbench:
         self.gmail=GmailService(self,on_new_reply=self._gmail_reply)
         self.gmail.translator=GmailTranslator(self,self.gmail.translation_changed)
         self.gmail_drafts=GmailDrafts(self)
+        self.outreach_checks=OutreachChecks(self)
+        self.customer_batches=CustomerBatches(self)
+        self.batch_sending=BatchSending(self)
+        self.single_send_guard=SingleSendGuard(self)
+        self.gmail_event_reconcile=GmailEventReconcile(self)
         if self.gmail.status()['state']=='connected':self.gmail.start()
 
     def _gmail_reply(self,object_id,message,context):
@@ -124,7 +134,8 @@ class Workbench:
                      '如提示正文被截断，说明需要在 Gmail 查看完整原文，不虚构缺失内容；'
                      '用中文整理客户要求、我们如何承接和下一步，再准备英文回复草稿及完整中文对照。'
                      '如为自动回复或退信，直接说明实际情况；不自动发送或作未经确认的商业承诺。')
-        return self.agent_jobs.start(object_id,instruction,mode='mail_draft')
+        return self.agent_jobs.start(object_id,instruction,mode='mail_draft',source_event={
+            'kind':'gmail_reply','object_id':object_id,'message_id':str(message['id'])})
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -334,6 +345,14 @@ class Handler(BaseHTTPRequestHandler):
             if u.path=='/api/library':return self.send_json({'items':app.library.list()})
             if u.path=='/api/library/file':return app.library.serve(self,parse_qs(u.query).get('id',[''])[0])
             if u.path=='/api/health':return self.send_json({'ok':True,'model':MODEL,'app':'beiqiang-workbench','root':str(app.root)})
+            if u.path=='/api/customer-batches':return self.send_json(app.customer_batches.list_batches())
+            if re.fullmatch(r'/api/customer-batches/[0-9a-f]{32}',u.path):
+                query=parse_qs(u.query)
+                return self.send_json(app.customer_batches.get(u.path.rsplit('/',1)[1],q=query.get('q',[''])[0],review_state=query.get('review_state',[''])[0]))
+            if re.fullmatch(r'/api/customer-batches/[0-9a-f]{32}/plans/[0-9a-f]{32}',u.path):
+                parts=u.path.strip('/').split('/');plan=app.batch_sending.get(parts[-1])
+                if plan['batch_id']!=parts[2]:raise ValueError('发送计划不属于本批次')
+                return self.send_json(plan)
             if u.path.startswith('/api/desk/'):
                 query=parse_qs(u.query)
                 value=lambda name:query.get(name,[''])[0]
@@ -361,7 +380,12 @@ class Handler(BaseHTTPRequestHandler):
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
                         'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
                 if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
+                if u.path=='/api/desk/gmail/events':return self.send_json(app.gmail_event_reconcile.list_events(value('object_id')))
                 if u.path=='/api/desk/gmail/draft':return self.send_json(app.gmail_drafts.get(value('object_id')))
+                if u.path=='/api/desk/gmail/send-plan':
+                    plan=app.single_send_guard.get(value('id'))
+                    if plan.get('object_id')!=value('object_id'):raise ValueError('发送计划不属于当前客户')
+                    return self.send_json(plan)
                 if u.path=='/api/desk/gmail/attachment':
                     item,data=app.gmail_drafts.attachment(value('object_id'),value('id'))
                     self.send_response(200);self.send_header('Content-Type',mimetypes.guess_type(item['name'])[0] or 'application/octet-stream')
@@ -505,11 +529,18 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(app.gmail_drafts.add_attachment(body.get('object_id'),body.get('version'),filename=body.get('filename',''),data=body.get('data',''),resource_id=body.get('resource_id','')))
             if parts==['api','desk','gmail','attachment','remove']:
                 return self.send_json(app.gmail_drafts.remove_attachment(body.get('object_id'),body.get('version'),body.get('attachment_id')))
+            if parts==['api','desk','gmail','send-preflight']:
+                if set(body)!={'object_id','version'}:raise ValueError('逐封发送检查字段无效')
+                return self.send_json(app.single_send_guard.preflight(body['object_id'],body['version']))
             if parts==['api','desk','gmail','send']:
-                return self.send_json(app.gmail_drafts.send(body.get('object_id'),body.get('version')))
+                if set(body)!={'object_id','version','plan_id','confirmed'}:raise ValueError('请先检查这封邮件并明确确认')
+                return self.send_json(app.single_send_guard.send(body['object_id'],body['version'],body['plan_id'],body['confirmed']))
             if parts==['api','desk','gmail','reconcile']:return self.send_json(app.gmail_drafts.reconcile(body.get('object_id')))
             if parts==['api','desk','gmail','resume-unsent']:return self.send_json(app.gmail_drafts.resume_unsent(body.get('object_id'),body.get('confirmed_not_sent') is True))
             if parts==['api','desk','gmail','ack']:return self.send_json(app.gmail.acknowledge(body.get('object_id')))
+            if parts==['api','desk','gmail','events','link']:
+                if set(body)-{'object_id','message_id','job_id','snapshot','confirmed','manual_note'}:raise ValueError('事件对账字段无效')
+                return self.send_json(app.gmail_event_reconcile.link_existing(body.get('object_id'),body.get('message_id'),body.get('job_id'),body.get('snapshot'),confirmed=body.get('confirmed'),manual_note=body.get('manual_note','')))
             if parts==['api','desk','gmail','candidates','dismiss']:return self.send_json(app.gmail.dismiss_candidate(body.get('message_id')))
             if parts==['api','desk','creation-canvas']:
                 return self.send_json({'canvas':app.creation_canvas.save(body)})
@@ -527,6 +558,60 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-commercial']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_commercial(object_id,body))
+            if parts==['api','customer-batches']:
+                return self.send_json(app.customer_batches.create(body),201)
+            if len(parts)==4 and parts[:2]==['api','customer-batches'] and parts[3]=='items':
+                return self.send_json(app.customer_batches.add_items(parts[2],body))
+            if len(parts)==5 and parts[:2]==['api','customer-batches'] and parts[3:]==['items','remove']:
+                return self.send_json(app.customer_batches.remove_items(parts[2],body))
+            if len(parts)==5 and parts[:2]==['api','customer-batches'] and parts[3:]==['items','review']:
+                object_id=body.pop('object_id',None)
+                return self.send_json(app.customer_batches.review_item(parts[2],object_id,body))
+            if len(parts)==4 and parts[:2]==['api','customer-batches'] and parts[3]=='preflight':
+                return self.send_json(app.batch_sending.preflight(parts[2],body))
+            if len(parts)==4 and parts[:2]==['api','customer-batches'] and parts[3]=='send':
+                return self.send_json(app.batch_sending.send(parts[2],body))
+            if parts==['api','desk','customer-batches','revise']:
+                if set(body)-{'batch_id','object_id','revision','item_revision','draft_version','instruction'}:raise ValueError('客户修改任务字段无效')
+                instruction=body.get('instruction')
+                if not isinstance(instruction,str) or not instruction.strip() or len(instruction)>10000:
+                    raise ValueError('请填写此客户的修改要求')
+                review={'revision':body.get('revision'),'review_state':'changes_requested','change_request':instruction.strip()}
+                if 'item_revision' in body:review['item_revision']=body['item_revision']
+                if 'draft_version' in body:
+                    draft=app.gmail_drafts._saved(body.get('object_id'))
+                    if not draft or draft.get('version')!=body['draft_version']:raise WorkspaceConflict('草稿已变化，请重新读取后交给 Agent')
+                batch=app.customer_batches.review_item(body.get('batch_id'),body.get('object_id'),review)
+                job=app.agent_jobs.start(body.get('object_id'),instruction.strip(),mode='outreach_draft',batch_id=batch['id'])
+                return self.send_json({'batch':app.customer_batches.get(batch['id']),'job':job},201)
+            if parts==['api','desk','customer-batches','crm-review']:
+                if set(body)!={'batch_id','object_id','item_revision','evidence','confirmed'}:raise ValueError('CRM人工核对字段无效')
+                review=app.outreach_checks.record_crm_review(body['batch_id'],body['object_id'],body['item_revision'],body['evidence'],body['confirmed'])
+                return self.send_json({'review':review,'batch':app.customer_batches.get(body['batch_id'])})
+            if parts==['api','desk','customer-batches','research']:
+                if set(body)-{'batch_id','revision','object_ids','instruction'}:raise ValueError('批量研究字段无效')
+                ids=body.get('object_ids');instruction=body.get('instruction') or '结合当前批次目标研究客户并准备个性化邮件。'
+                if not isinstance(ids,list) or not ids or len(ids)>8 or any(not isinstance(oid,str) for oid in ids) or len(set(ids))!=len(ids):
+                    raise ValueError('请选择1至8位不同客户并行研究')
+                if not isinstance(instruction,str) or not instruction.strip() or len(instruction)>10000:raise ValueError('批次研究要求无效')
+                batch=app.customer_batches.get(body.get('batch_id'))
+                if body.get('revision')!=batch['revision']:raise WorkspaceConflict('批次已变化，请刷新后再开始研究')
+                by_id={item['object_id']:item for item in batch['items']}
+                if any(oid not in by_id for oid in ids):raise ValueError('所选客户不在当前批次')
+                results=[]
+                for oid in ids:
+                    item=by_id[oid]
+                    if item['review_state']=='do_not_contact' or item['quality']['suppression_state']=='suppressed':
+                        results.append({'object_id':oid,'status':'blocked','reason':'客户已标记不联系'});continue
+                    checks=item.get('checks') or {}
+                    if checks.get('status')=='blocked':
+                        results.append({'object_id':oid,'status':'blocked','reason':'存在停止联系、退信或重复记录，请先核对'});continue
+                    try:
+                        job=app.agent_jobs.start(oid,instruction.strip(),mode='outreach_research',batch_id=batch['id'])
+                        results.append({'object_id':oid,'status':'started','job':job})
+                    except ValueError as exc:
+                        results.append({'object_id':oid,'status':'not_started','reason':str(exc)})
+                return self.send_json({'batch_id':batch['id'],'results':results},202)
             if parts==['api','desk','search-console','oauth','start']:
                 config=body.get('client_config')
                 if not config and app.gmail.status().get('account_email'):
@@ -560,6 +645,9 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(app.business.website_status())
             if parts==['api','desk','job','cancel']:
                 return self.send_json(app.agent_jobs.cancel(body.get('id')))
+            if parts==['api','desk','job','recover-legacy']:
+                if set(body)!={'id','confirmed','former_owner_pid','evidence'}:raise ValueError('旧任务核验字段无效')
+                return self.send_json(app.agent_jobs.recover_legacy(body['id'],confirmed=body['confirmed'],former_owner_pid=body['former_owner_pid'],evidence=body['evidence']))
             if parts==['api','desk','job','resume']:
                 return self.send_json(app.agent_jobs.resume(body.get('id'),body.get('instruction')))
             if parts==['api','desk','artifacts']:
@@ -603,7 +691,8 @@ class Handler(BaseHTTPRequestHandler):
         except MediaError as e:self.send_json({'error':str(e)},e.status)
         except PermissionError as e:self.send_json({'error':str(e)},403)
         except CustomerWriteOutcomeUnknown:self.send_json({'code':'outcome_unknown','error':'客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续。'},500)
-        except (Conflict,WorkspaceConflict,CanvasConflict) as e:self.send_json({'error':str(e)},409)
+        except ReconcileOutcomeUnknown:self.send_json({'code':'outcome_unknown','error':'事件关联结果不明，请先重新读取事件和任务状态，不要重复操作。'},500)
+        except (Conflict,WorkspaceConflict,CanvasConflict,ReconcileConflict) as e:self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'操作失败，请检查本地运行环境'},500)
 

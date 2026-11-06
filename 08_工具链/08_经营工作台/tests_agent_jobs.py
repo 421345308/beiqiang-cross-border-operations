@@ -1,5 +1,6 @@
 import io
 import json
+import os
 import sqlite3
 import tempfile
 import threading
@@ -282,16 +283,16 @@ class AgentJobTests(unittest.TestCase):
         self.jobs.threads.pop(job['id'],None)
         self.assertFalse(self.processes)
 
-    def test_restart_marks_active_failed_preserves_terminal(self):
+    def test_second_instance_preserves_live_owner_and_terminal(self):
         result=self.wait(self.jobs.start('product:shoe','整理'))
         active={**result,'id':'interrupted-job','status':'running','artifact_id':None}
         self.jobs._save(active)
         other=AgentJobs(self.app)
-        self.assertEqual(other.get_job(active['id'])['status'],'failed')
+        self.assertEqual(other.get_job(active['id'])['status'],'running')
         self.assertEqual(other.get_job(result['id'])['status'],'completed')
-        self.assertIn('重启',other.get_job(active['id'])['error'])
+        self.assertEqual(other.get_job(active['id'])['owner_pid'],os.getpid())
 
-    def test_interrupted_running_job_does_not_publish_late_result(self):
+    def test_second_instance_does_not_interrupt_live_worker_result(self):
         gate=threading.Event();self.options={'gate':gate}
         job=self.jobs.start('product:shoe','整理')
         deadline=time.monotonic()+2
@@ -299,8 +300,8 @@ class AgentJobTests(unittest.TestCase):
         other=AgentJobs(self.app)
         gate.set()
         result=self.wait(job)
-        self.assertEqual(result['status'],'failed')
-        self.assertFalse(self.app.business.artifacts)
+        self.assertEqual(result['status'],'completed')
+        self.assertTrue(self.app.business.artifacts)
 
     def test_cancel_during_process_creation_discards_result(self):
         def spawn(command,**kwargs):

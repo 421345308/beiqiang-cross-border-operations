@@ -14,6 +14,7 @@ import subprocess
 import threading
 import uuid
 from datetime import datetime, timezone
+from contextlib import contextmanager
 from pathlib import Path
 from urllib.request import getproxies
 import customer_analysis
@@ -84,12 +85,44 @@ class AgentJobs:
         self.lock = threading.RLock()
         self.processes = {}
         self.threads = {}
+        self.owner_id = uuid.uuid4().hex
+        self._transaction = False
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS agent_jobs (id TEXT PRIMARY KEY, data TEXT NOT NULL)')
             app.db.commit()
+        with self._write():
+            self._recover_exited_owners()
+
+    @contextmanager
+    def _write(self):
+        with self.lock,self.app.lock:
+            if self.app.db.in_transaction:
+                raise RuntimeError('Agent工作认领不能嵌入已有事务')
+            self.app.db.execute('BEGIN IMMEDIATE')
+            self._transaction=True
+            try:
+                yield
+                self.app.db.commit()
+            except BaseException:
+                self.app.db.rollback()
+                raise
+            finally:self._transaction=False
+
+    def _owner_alive(self,job):
+        return self._pid_alive(job['owner_pid']) if job.get('owner_pid') else None
+
+    def _recover_exited_owners(self):
         for job in self.list_jobs():
-            if job['status'] in ACTIVE:
+            if job['status'] not in ACTIVE:
+                continue
+            # running without a persisted child PID may mean the owner died
+            # between spawn and PID persistence. Missing PID is not proof that
+            # no child exists; require explicit reconciliation of that window.
+            child_exited=(self._pid_alive(job['process_id']) is False if job.get('process_id')
+                          else job['status']=='queued')
+            if self._owner_alive(job) is False and child_exited:
                 job.update(status='failed', error='服务重启中断了执行；未自动重跑，请核对已有成果和进程后继续原会话。', updated_at=now())
+                job['worker_finished']=True
                 self._event(job, 'interrupted', '服务重启，执行已中断。')
                 self._save(job)
 
@@ -97,7 +130,7 @@ class AgentJobs:
         job['updated_at'] = now()
         with self.app.lock:
             self.app.db.execute('INSERT OR REPLACE INTO agent_jobs VALUES (?,?)', (job['id'], json.dumps(job, ensure_ascii=False)))
-            self.app.db.commit()
+            if not self._transaction:self.app.db.commit()
 
     def list_jobs(self):
         with self.app.lock:
@@ -137,16 +170,29 @@ class AgentJobs:
                 raise ValueError('该对象已有工作正在执行，请在原工作结束后继续。')
             if row.get('id') in self.threads:
                 raise ValueError('该对象先前工作正在收尾，请稍后继续。')
+            if row.get('worker_finished') is False and self._owner_alive(row) is not False:
+                raise ValueError('该对象先前工作拥有者仍在收尾或无法确认退出，请稍后核对。')
             if row.get('process_id') and self._pid_alive(row['process_id']) is not False:
                 raise ValueError('该对象先前进程仍在运行或无法确认已退出，请先核对原任务和已有成果。')
 
-    def start(self, object_id, instruction, mode='draft'):
-        if mode not in ('draft','customer_analysis','mail_draft'):raise ValueError('不支持的工作模式')
+    def start(self, object_id, instruction, mode='draft', *, batch_id=None, source_event=None):
+        if mode not in ('draft','customer_analysis','mail_draft','outreach_draft','outreach_research'):raise ValueError('不支持的工作模式')
+        if batch_id is not None and (not isinstance(batch_id,str) or not re.fullmatch(r'[0-9a-f]{32}',batch_id)):
+            raise ValueError('客户批次编号无效')
+        if source_event is not None:
+            if (mode!='mail_draft' or not isinstance(source_event,dict) or
+                    set(source_event)!={'kind','object_id','message_id'} or
+                    source_event.get('kind')!='gmail_reply' or source_event.get('object_id')!=object_id or
+                    not isinstance(source_event.get('message_id'),str) or not source_event['message_id'].strip() or
+                    len(source_event['message_id'])>1000):
+                raise ValueError('邮件事件来源无效')
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
             raise ValueError('请填写要交给Agent的具体工作，最多12000字')
         obj = self.app.business.get_object(object_id)
         if not isinstance(obj, dict) or obj.get('id') != object_id:
             raise ValueError('业务对象无效')
+        if mode in ('outreach_draft','outreach_research') and obj.get('kind') not in ('customer','prospect'):
+            raise ValueError('客户研究和邮件修改仅支持当前客户')
         title = str(obj.get('title') or '业务资料')[:200]
         profile=self.app.customer_workspace.profile(object_id) if mode=='customer_analysis' else None
         if profile is not None:obj={**obj,'_customer_profile':profile}
@@ -156,10 +202,15 @@ class AgentJobs:
                'profile_revision':profile['revision'] if profile else None,
                'error': None, 'events': [], 'artifact_id': None, 'session_id': None, 'attempt': 0,
                'created_at': now(), 'updated_at': now()}
+        job.update(owner_pid=os.getpid(),owner_id=self.owner_id,worker_finished=False)
+        if batch_id is not None:job['batch_id']=batch_id
+        if source_event is not None:job['source_event']=dict(source_event)
         self._event(job, 'queued', '工作已排队，成果将保存到当前业务对象。')
         with self.lock:
-            self._check_object_available(object_id)
-            self._save(job)
+            with self._write():
+                self._recover_exited_owners()
+                self._check_object_available(object_id)
+                self._save(job)
             thread = threading.Thread(target=self._work, args=(job['id'], obj), daemon=True,
                                       name='business-agent-' + job['id'][:8])
             self.threads[job['id']] = thread
@@ -169,12 +220,15 @@ class AgentJobs:
     def resume(self, job_id, instruction):
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
             raise ValueError('请填写继续工作的内容，最多12000字')
-        with self.lock:
+        with self.lock,self._write():
+            self._recover_exited_owners()
             job = self.get_job(job_id)
             if job['status'] in ACTIVE:
                 raise ValueError('这项工作仍在运行。')
             if job_id in self.threads:
                 raise ValueError('上一轮正在收尾，请稍后继续。')
+            if job.get('worker_finished') is False and self._owner_alive(job) is not False:
+                raise ValueError('上一轮拥有者仍在收尾或无法确认退出，暂不能恢复。')
             if not job.get('session_id'):
                 raise ValueError('这项工作没有可恢复的 Codex 会话；请核对已有成果后新建工作。')
             if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
@@ -188,13 +242,44 @@ class AgentJobs:
                 job['profile_revision'] = profile['revision']
                 job['profile_saved'] = False
             job.update(status='queued', instruction=instruction.strip(), error=None, process_id=None)
+            job.update(owner_pid=os.getpid(),owner_id=self.owner_id,worker_finished=False)
             self._event(job, 'queued', '继续原会话；先核对已有成果及实际外部状态。')
             self._save(job)
+        with self.lock:
             thread = threading.Thread(target=self._work, args=(job_id, obj), daemon=True,
                                       name='business-agent-' + job_id[:8])
             self.threads[job_id] = thread
             thread.start()
-            return job
+        return job
+
+    def recover_legacy(self, job_id, *, confirmed, former_owner_pid, evidence):
+        """Mark an old/launch-window ACTIVE record interrupted after proof.
+
+        The operator must identify the original service from logs/process
+        records and check that no unrecorded child remains. A guessed PID,
+        waiting, or a new instance is not evidence.
+        This never starts a worker: normal explicit resume/start follows.
+        """
+        if (confirmed is not True or type(former_owner_pid) is not int or former_owner_pid<=0 or
+                not isinstance(evidence,str) or not 20<=len(evidence.strip())<=4000 or
+                '\x00' in evidence or str(former_owner_pid) not in evidence):
+            raise ValueError('请明确核验原服务身份，提供原服务PID及包含该PID的具体退出核验依据')
+        with self._write():
+            job=self.get_job(job_id)
+            if (job.get('owner_pid') and job['owner_pid']!=former_owner_pid) or job['status'] not in ACTIVE:
+                raise ValueError('此入口只用于原拥有者一致的中断在制记录')
+            if job_id in self.threads or job_id in self.processes:
+                raise ValueError('当前实例仍持有原工作，请先按原任务中断机制处理')
+            if self._pid_alive(former_owner_pid) is not False:
+                raise ValueError('原服务仍存活或无法确认已退出，不能恢复旧记录')
+            if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
+                raise ValueError('原子进程仍存活或无法确认已退出，不能恢复旧记录')
+            job.update(status='failed',owner_pid=former_owner_pid,worker_finished=True,
+                error='已人工核对原服务及子进程退出；未自动重跑，请核对已有成果后显式继续。',
+                legacy_recovery={'former_owner_pid':former_owner_pid,'evidence':evidence.strip(),'checked_at':now()})
+            self._event(job,'interrupted','人工核对旧拥有者及进程退出；保留成果和会话，未自动执行。')
+            self._save(job)
+        return job
 
     @staticmethod
     def _pid_alive(pid):
@@ -239,6 +324,22 @@ class AgentJobs:
         if job.get('mode')=='customer_analysis':
             return ('先调用beiqiang_business.get_business_context读取当前负责人决定、目标和客户原档；结合已有往来与下一动作，不把旧分析当新事实。\n'
                     + customer_analysis.prompt(obj['_customer_profile'],job['instruction']))
+        if job.get('mode')=='outreach_draft':
+            return ('你只负责修改当前绑定客户的一封本地开发邮件草稿。'
+                    '先调用get_customer_profile、get_customer_email_draft及必要的当前客户来源，理解现有事实、完整英文和中文对照、附件及负责人要求。'
+                    '用save_customer_email_draft传入实际读取的version，只修改本次要求的字段；需要资料时使用资料包能力，禁止更换收件人或附件，除非本次明确要求。'
+                    '不得发送邮件、操作其他客户、修改原文或扩大授权。版本冲突时停止并报告，不用新版本强行覆盖。'
+                    '完成后再次读取草稿并报告实际修改，若未保存成功明确说明；结果须由负责人重新审核。\n当前客户：'
+                    +str(job['object_id'])+'\n负责人对本客户的修改要求：\n'+job['instruction'])
+        if job.get('mode')=='outreach_research':
+            return ('你只负责研究当前绑定客户并准备本地开发草稿，不发送邮件或访问其他客户。'
+                    '先读取客户资料、发现来源与历史，核实官网及公开业务证据，保留准确来源URL、观察时间，区分事实与判断；'
+                    '发现明确退订、拒绝、退信或既有触达时停止准备新首封并报告，不猜联系方式或采购意向。'
+                    '通过read_product核实适配鞋款；用get_customer_profile后save_customer_profile将研究、依据、推荐款及不确定性保存回当前对象，必须使用读取的revision与source_hash。'
+                    '证据足够时用prepare_customer_email_draft及save_customer_email_draft准备个性化英文主题正文和完整中文对照；'
+                    '已有草稿必须先读取，不覆盖用户正在编辑的版本；从已关联资料包选择实际附件，不声称未加入的附件已经附上。'
+                    '如来源、地址或附件不足，保存已完成研究并说明缺口，不伪造。禁止发送、批量外联、修改其他对象或使用shell。'
+                    '最终报告实际保存结果及需负责人核对的事项。\n当前客户：'+str(job['object_id'])+'\n批次研究要求：\n'+job['instruction'])
         # Route through shared objects, not a complete project or skill dump.
         related_ids = {r if isinstance(r, str) else r.get('id') for r in obj.get('related', []) if isinstance(r, (str, dict))}
         candidates = self.app.business.list_objects() if related_ids else []
@@ -451,9 +552,10 @@ class AgentJobs:
                 self.processes.pop(job_id, None)
                 self.threads.pop(job_id, None)
                 job = self.get_job(job_id)
+                job['worker_finished'] = True
                 if process is not None and process.poll() is not None and job.get('process_id') == process.pid:
                     job['process_id'] = None
-                    self._save(job)
+                self._save(job)
             if process is not None:
                 for stream in (process.stdin, process.stdout):
                     if stream is not None:
@@ -492,10 +594,12 @@ class AgentJobs:
                 pass
 
     def cancel(self, job_id):
-        with self.lock:
+        with self._write():
             job = self.get_job(job_id)
             if job['status'] not in ACTIVE:
                 return job
+            if job.get('owner_id')!=self.owner_id and self._owner_alive(job) is not False:
+                raise ValueError('该工作由另一实例执行或拥有者状态未知，请在原实例取消并核对进程。')
             job.update(status='cancelled', error=None)
             self._event(job, 'cancelled', '已取消；之前已写入的文件或外部动作需按实际状态核对。')
             self._save(job)

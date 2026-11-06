@@ -289,11 +289,18 @@ class DeskHTTPTests(unittest.TestCase):
                 connection.request('GET','/api/desk/gmail/attachment?'+urlencode({'object_id':oid,'id':draft['attachments'][0]['id']}))
                 response=connection.getresponse();self.assertEqual(response.status,200);self.assertEqual(response.read(),b'picture')
             finally:connection.close()
-            status,result=self.request('/api/desk/gmail/send',{'object_id':oid,'version':draft['version']})
-            self.assertEqual(status,200);self.assertEqual(result['status'],'sent');self.assertEqual(len(sent),1)
-            self.assertEqual(self.app.customer_workspace.workflow(oid)['state'],'waiting_customer')
-            sync.assert_called_with(oid,force=True)
             self.assertEqual(self.request('/api/desk/gmail/send',{'object_id':oid,'version':draft['version']})[0],400)
+            with patch.object(self.app.single_send_guard,'preflight',return_value={'can_confirm':True,'plan_id':'fixture-plan'}) as preflight, \
+                 patch.object(self.app.single_send_guard,'send',side_effect=lambda obj,version,plan,confirmed:drafts.send(obj,version)):
+                status,plan=self.request('/api/desk/gmail/send-preflight',{'object_id':oid,'version':draft['version']})
+                self.assertEqual(status,200);self.assertTrue(plan['can_confirm']);self.assertEqual(len(sent),0)
+                preflight.assert_called_once_with(oid,draft['version'])
+                body={'object_id':oid,'version':draft['version'],'plan_id':plan['plan_id'],'confirmed':True}
+                status,result=self.request('/api/desk/gmail/send',body)
+                self.assertEqual(status,200);self.assertEqual(result['status'],'sent');self.assertEqual(len(sent),1)
+                self.assertEqual(self.app.customer_workspace.workflow(oid)['state'],'waiting_customer')
+                sync.assert_called_with(oid,force=True)
+                self.assertEqual(self.request('/api/desk/gmail/send',body)[0],400)
             self.assertEqual(len(sent),1)
 
     def test_google_oauth_start_and_callback_use_same_workbench_port(self):

@@ -30,11 +30,15 @@ class CodexBackend:
     def command(exe, folder, final, *, root, state, object_id, session_id=None, mode='draft', schema_path=None):
         mcp_args=[str(Path(__file__).with_name('desk_mcp.py').resolve()),'--root',str(Path(root).resolve()),
                   '--state',str(Path(state).resolve()),'--object-id',object_id,'--audit',str(folder/'source-reads.jsonl')]
-        extraction = mode in ('mail_draft', 'customer_analysis')
-        if extraction:
+        extraction = mode in ('mail_draft', 'customer_analysis', 'outreach_draft', 'outreach_research')
+        if mode in ('mail_draft', 'customer_analysis'):
             mcp_args.append('--read-only')
+        elif mode == 'outreach_draft':
+            mcp_args.append('--draft-only')
+        elif mode == 'outreach_research':
+            mcp_args.append('--research-only')
         command = [exe, '--ask-for-approval', 'never', '-s', 'read-only' if extraction else 'workspace-write', '-C', str(Path(root).resolve())]
-        if not extraction:
+        if not extraction or mode=='outreach_research':
             command.append('--search')
         command.append('exec')
         if session_id:

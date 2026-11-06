@@ -172,7 +172,34 @@ class CustomerWorkspace:
             tables={row[0] for row in self.app.db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('gmail_reply_events','gmail_acknowledged')")}
             events=[row[0] for row in self.app.db.execute('SELECT message_id FROM gmail_reply_events WHERE object_id=? ORDER BY message_id',(object_id,))] if 'gmail_reply_events' in tables else []
             ack=self.app.db.execute('SELECT message_id FROM gmail_acknowledged WHERE object_id=?',(object_id,)).fetchone() if 'gmail_acknowledged' in tables else None
-            return {'events':events,'acknowledged':ack[0] if ack else None}
+            result={'events':events,'acknowledged':ack[0] if ack else None}
+            from gmail_observations import revision_observations
+            from gmail_sync import customer_emails
+            obj=self.app.business.get_object(object_id)
+            emails=set(customer_emails(obj))
+            linked=self.app.db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='gmail_customer_addresses'").fetchone()
+            if linked:
+                emails.update(row[0] for row in self.app.db.execute('SELECT address FROM gmail_customer_addresses WHERE object_id=?',(object_id,)))
+            saved=self._saved_profile(object_id)
+            address=str((saved.get('cleaned') or {}).get('email') or '').strip().lower()
+            if address:
+                # Chinese prose may touch a published address. Only ASCII
+                # email characters can extend it into a different address.
+                boundary=r"[A-Za-z0-9_.!#$%&'*+/=?^`{|}~@-]"
+                exact=re.compile(r'(?<!'+boundary+')'+re.escape(address)+r'(?!'+boundary+')',re.I|re.ASCII)
+                if any(exact.search(str(e.get('text') or '')) and str(e.get('url') or '').startswith(('http://','https://')) and e.get('observed_at') for e in saved.get('evidence',[]) if isinstance(e,dict)):
+                    emails.add(address)
+            # Prefer the shared account configuration over a worker's stale
+            # process-local Gmail connection. No network access occurs here.
+            account=''
+            config=Path(getattr(self.app,'state',self.root/'08_工具链/08_经营工作台/.local'))/'gmail.json'
+            if config.exists():
+                try:account=json.loads(config.read_text(encoding='utf8')).get('email','')
+                except (OSError,ValueError,AttributeError):pass
+            else:account=getattr(getattr(self.app,'gmail',None),'_account','')
+            observations=revision_observations(self.app,account,emails)
+            if observations:result['mailbox_observations']=observations
+            return result
 
     def _mail_workflow(self,object_id,flow):
         service=getattr(self.app,'gmail',None)

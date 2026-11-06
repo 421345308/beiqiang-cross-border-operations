@@ -165,10 +165,12 @@ class DraftTests(unittest.TestCase):
         restored=self.service.resume_unsent(self.oid,True)
         self.assertEqual(restored['status'],'draft');self.assertNotEqual(restored['version'],unknown['version'])
 
-    def test_process_interruption_marks_inflight_result_unknown(self):
-        draft=self.fill();draft['status']='sending';self.service._put(draft)
-        reopened=GmailDrafts(self.service.app,grant_reader=lambda account:{})
-        self.assertEqual(reopened.get(self.oid)['status'],'unknown')
+    def test_reopen_preserves_inflight_claim_until_explicit_reconciliation(self):
+        draft=self.fill();draft.update(status='sending',message_id='<interrupted@example.test>');self.service._put(draft)
+        reopened=GmailDrafts(self.service.app,grant_reader=lambda account:{},
+                             token_provider=lambda account:'fixture',request=lambda *a,**kw:{'messages':[]})
+        self.assertEqual(reopened.get(self.oid)['status'],'sending')
+        self.assertEqual(reopened.reconcile(self.oid)['status'],'unknown')
 
 
 if __name__ == '__main__':unittest.main()
