@@ -19,7 +19,7 @@ $env:BEIQIANG_RUN_BROWSER_TEST='1'; python -X utf8 -m unittest tests_customer_ba
 $env:BEIQIANG_LIVE_CODEX='1'; python -X utf8 -m unittest tests_outreach_live_codex.OutreachLiveCodexTests.test_two_research_agents_prepare_separate_synthetic_customers -v
 ```
 
-**桌面控制排障：** 负责人再次重启后，核实个人配置指向已被版本升级移除的运行时与 CLI；已备份原配置并仅修正 `node_repl` 的过期路径。新的只读 Codex 会话实际加载了 `node_repl`，调用 `sky.list_windows` 仍因原生管道不存在报 `os error 2`；应用管理的 `cua_repl` 清单也仍指向旧运行时并报 `os error 3`。这些是两个可见故障，尚不能确定管道未创建的最终原因或声称桌面控制恢复。[官方设置](https://learn.chatgpt.com/docs/computer-use)提供“Settings → Computer use → Control → Any App”入口；电脑控制技能禁止操作 Codex 自身 UI 或绕开助手，需负责人查看该设置的实际状态。隔离 Chrome 测试不代表桌面控制恢复。
+**桌面控制排障：** 负责人确认 Any App 已开启；个人 `node_repl` 配置及应用内置 `cua_repl` 清单均曾指向升级后被移除的旧运行时，现已备份并将版本路径改到本机现有组件，控制权限及通信端点未改变。官方插件重装未生成运行配置，已还原受影响的生成文件；新的只读 Codex 会话实际加载 `node_repl`，`sky.list_windows` 仍因原生管道不存在报 `os error 2`，无法确认桌面控制恢复。当前应用 26.1029.9216.0，官方诊断及系统包管理器均显示有 26.1103.4239.0 更新；包管理器下载长时间无进展，另一次官方地址读取被 Cloudflare 返回 403/1010，已停止并清理空分段，没有绕过拒绝或安装更新。后续可由负责人使用应用自带的正常更新入口，再复测窗口；更新是否解决问题尚未知。备份仅留本机。隔离 Chrome 测试不代表桌面控制恢复。
 
 ## 客户开发批次（2026-11-06）
 
