@@ -23,11 +23,11 @@ class CustomerBatchHTTPTests(unittest.TestCase):
         draft = self.app.gmail_drafts.get(oid)
         status, current = self.request('/api/customer-batches/' + bid)
         self.assertEqual(status, 200); self.assertEqual(current['items'][0]['object_id'], oid)
-        with patch.object(self.app.agent_jobs, 'start', return_value={'id': 'fixture-job'}) as start:
-            status, result = self.request('/api/desk/customer-batches/research', {
-                'batch_id': bid, 'revision': current['revision'], 'object_ids': [oid], 'instruction': 'Research'})
+        research_body = {'batch_id': bid, 'revision': current['revision'], 'object_ids': [oid], 'instruction': 'Research'}
+        with patch.object(self.app.batch_research, 'begin', return_value={'results':[{'status':'started'}]}) as begin:
+            status, result = self.request('/api/desk/customer-batches/research', research_body)
             self.assertEqual(status, 202); self.assertEqual(result['results'][0]['status'], 'started')
-            start.assert_called_once_with(oid, 'Research', mode='outreach_research', batch_id=bid)
+            begin.assert_called_once_with(research_body)
         with patch.object(self.app.agent_jobs, 'start', return_value={'id': 'revision-job'}) as start:
             status, result = self.request('/api/desk/customer-batches/revise', {
                 'batch_id': bid, 'object_id': oid, 'item_revision': current['items'][0]['item_revision'],
@@ -39,6 +39,34 @@ class CustomerBatchHTTPTests(unittest.TestCase):
                 'batch_id': bid, 'object_id': oid, 'item_revision': current['items'][0]['item_revision'],
                 'instruction': 'Stale change'})
             self.assertEqual(status, 409); self.assertEqual(start.call_count, 1)
+
+    def test_research_group_routes_are_explicit_and_csrf_protected(self):
+        batch = self.create_batch(); bid = batch['id']
+        with patch.object(self.app.batch_research, 'list_groups', return_value={'items': []}) as listing, \
+             patch.object(self.app.batch_research, 'continue_group', return_value={'results': []}) as resume:
+            status, _ = self.request('/api/desk/customer-batches/research-groups?batch_id=' + bid)
+            self.assertEqual(status, 200); listing.assert_called_once_with(bid)
+            self.assertEqual(self.request('/api/desk/customer-batches/research-continue', {'group_id':'g'}, token=False)[0],403)
+            resume.assert_not_called()
+            self.assertEqual(self.request('/api/desk/customer-batches/research-continue', {'group_id':'g'})[0],202)
+            resume.assert_called_once_with('g')
+
+    def test_real_research_group_http_deduplicates_and_reads_graph(self):
+        batch=self.create_batch(); oid=batch['items'][0]['object_id']
+        body={'batch_id':batch['id'],'revision':batch['revision'],'object_ids':[oid],
+              'instruction':'Research fixture','request_id':'e'*32}
+        with patch.object(self.app.agent_jobs,'_work',lambda *_:None):
+            status,first=self.request('/api/desk/customer-batches/research',body)
+            self.assertEqual(status,202);self.assertEqual(first['results'][0]['status'],'started')
+            status,again=self.request('/api/desk/customer-batches/research',body)
+            self.assertEqual(status,202);self.assertEqual(again['results'][0]['status'],'existing')
+            self.assertEqual(first['group_id'],again['group_id'])
+            status,graph=self.request('/api/desk/job/graph?id='+first['group_id'])
+            self.assertEqual(status,200);self.assertEqual(len(graph['jobs']),2)
+            status,listed=self.request('/api/desk/customer-batches/research-groups?batch_id='+batch['id'])
+            self.assertEqual(status,200);self.assertEqual(listed['items'][0]['id'],first['group_id'])
+            child=first['results'][0]['job']['id']
+            self.assertEqual(self.request('/api/desk/job/dispatch',{'id':child})[0],400)
 
     def test_sending_routes_require_token_and_use_plan_service(self):
         batch = self.create_batch(); bid = batch['id']; oid = batch['items'][0]['object_id']

@@ -103,7 +103,11 @@ class CustomerWorkspace:
                                 raise OSError('客户资料路径已变化')
                             if previous is None:
                                 if path.exists():path.unlink()
-                            else:self._atomic(path,previous)
+                            elif not path.exists() or path.read_bytes()!=previous:
+                                # A failure before the file changed needs no
+                                # replacement; on Windows an unnecessary
+                                # replace can itself fail due to file sharing.
+                                self._atomic(path,previous)
                     except Exception as error:restore_error=error
                     finally:
                         try:self.app.db.rollback()

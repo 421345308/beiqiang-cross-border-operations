@@ -1155,6 +1155,34 @@ test('批次研究选择上限与逐项启动结果，发送仅在完整检查�
   waitForPreflight=true;const pending=findButton(h.elements.page,'检查所选邮件并准备确认').click();await settle();const changed=field('选择送检 Buyer 1');changed.checked=false;changed.listeners.change();releasePreflight();await pending;await settle();assert.equal(walk(h.elements.page).some(row=>row.tagName==='BUTTON' && row.textContent.startsWith('确认发送以上')),false);
 });
 
+test('批次研究进度可在重载后读取，显式接续缺失客户且不触发发送',async()=>{
+  const h=harness('#/customers?view=batches'),original=h.originalFetch,calls=[];
+  const items=['A','B'].map(name=>({object_id:`customer:${name}`,review_state:'pending',customer:{title:`Buyer ${name}`},quality:{reasons:[]}}));
+  const batch={id:'batch-recovery',title:'Recovery',revision:1,items};
+  let group={id:'group-1',created_at:'2026-11-08T12:00:00Z',instruction:'研究客户',requested:['customer:A','customer:B'],not_planned:['customer:B'],jobs:[{id:'job-a',object_id:'customer:A',status:'completed'}]};
+  h.interceptFetch(async(path,options={})=>{
+    const url=new URL(path,'http://127.0.0.1:8766');
+    if(url.pathname==='/api/customer-batches')return {ok:true,json:async()=>({items:[batch]})};
+    if(url.pathname==='/api/customer-batches/batch-recovery')return {ok:true,json:async()=>batch};
+    if(url.pathname==='/api/desk/customer-batches/research-groups')return {ok:true,json:async()=>({items:[group]})};
+    if(url.pathname==='/api/desk/customer-batches/research-continue'){
+      calls.push(JSON.parse(options.body));group={...group,not_planned:[],jobs:[...group.jobs,{id:'job-b',object_id:'customer:B',status:'running'}]};
+      return {ok:true,json:async()=>({results:[{object_id:'customer:A',status:'existing',job:group.jobs[0]},{object_id:'customer:B',status:'started',job:group.jobs[1]}]})};
+    }
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const panel=h.elements.page.querySelector('.batch-research-groups');
+  assert.ok(panel.textContent.includes('Buyer A · 已形成成果'));
+  assert.ok(panel.textContent.includes('Buyer B · 尚未创建'));
+  await findButton(panel,'继续尚未启动的客户研究').click();await settle();
+  assert.deepEqual(calls,[{group_id:'group-1'}]);
+  assert.ok(panel.textContent.includes('Buyer A · 已形成成果'));
+  assert.ok(panel.textContent.includes('Buyer B · 正在处理'));
+  assert.equal(walk(panel).some(row=>row.tagName==='BUTTON' && row.textContent==='继续尚未启动的客户研究'),false);
+  assert.equal(h.requests.some(row=>row.payload && /\/send$/.test(row.path)),false);
+});
+
 
 test('邮件事件核对按需读取、明确选事件和已有任务、原样快照关联，冲突不重试',async()=>{
   for(const outcome of ['success','conflict','unknown']){

@@ -114,6 +114,14 @@ class TodayTests(unittest.TestCase):
                              {'id': '2', 'object_id': 'product:1', 'status': 'completed', 'updated_at': '2026-11-01T02:00:00Z'}])
         self.assertFalse(any(row['kind'] == 'agent_job' for row in Today(app).snapshot()['groups']['act']))
 
+    def test_new_plans_or_groups_do_not_hide_real_failed_work(self):
+        app = self.app(jobs=[
+            {'id':'failed','object_id':'product:1','status':'failed','updated_at':'2026-11-01T01:00:00Z'},
+            {'id':'planned','object_id':'product:1','status':'planned','updated_at':'2026-11-01T02:00:00Z'},
+            {'id':'group','object_id':'product:1','task_kind':'group','status':'planned','updated_at':'2026-11-01T03:00:00Z'}])
+        self.assertTrue(any(row['kind']=='agent_job' and row['object_id']=='product:1'
+                            for row in Today(app).snapshot()['groups']['act']))
+
     def test_customer_progress_supersedes_older_unfinished_work(self):
         def queue(**_):
             return {'counts': {}, 'items': [{'object_id': 'customer:1', 'title': '买家',

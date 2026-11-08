@@ -18,6 +18,7 @@ from search_console import SearchConsole
 from alibaba_product_review import AlibabaProductReview
 from business import Business, CHANNEL
 from agent_jobs import AgentJobs, codex_executable
+from batch_research import BatchResearch
 from customer_workspace import CustomerWorkspace, CustomerWriteOutcomeUnknown
 from customer_batches import CustomerBatches
 from batch_sending import BatchSending
@@ -120,6 +121,7 @@ class Workbench:
         self.gmail_drafts=GmailDrafts(self)
         self.outreach_checks=OutreachChecks(self)
         self.customer_batches=CustomerBatches(self)
+        self.batch_research=BatchResearch(self)
         self.batch_sending=BatchSending(self)
         self.single_send_guard=SingleSendGuard(self)
         self.gmail_event_reconcile=GmailEventReconcile(self)
@@ -431,6 +433,8 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
+                if u.path=='/api/desk/job/graph':return self.send_json(app.agent_jobs.get_graph(value('id')))
+                if u.path=='/api/desk/customer-batches/research-groups':return self.send_json(app.batch_research.list_groups(value('batch_id')))
                 if u.path=='/api/desk/artifacts':return self.send_json({'artifacts':app.business.list_artifacts(value('object_id') or None)})
             if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
             if u.path=='/api/product-changes':return self.send_json({'changes':app.product_changes.list_changes()})
@@ -589,29 +593,21 @@ class Handler(BaseHTTPRequestHandler):
                 review=app.outreach_checks.record_crm_review(body['batch_id'],body['object_id'],body['item_revision'],body['evidence'],body['confirmed'])
                 return self.send_json({'review':review,'batch':app.customer_batches.get(body['batch_id'])})
             if parts==['api','desk','customer-batches','research']:
-                if set(body)-{'batch_id','revision','object_ids','instruction'}:raise ValueError('批量研究字段无效')
-                ids=body.get('object_ids');instruction=body.get('instruction') or '结合当前批次目标研究客户并准备个性化邮件。'
-                if not isinstance(ids,list) or not ids or len(ids)>8 or any(not isinstance(oid,str) for oid in ids) or len(set(ids))!=len(ids):
-                    raise ValueError('请选择1至8位不同客户并行研究')
-                if not isinstance(instruction,str) or not instruction.strip() or len(instruction)>10000:raise ValueError('批次研究要求无效')
-                batch=app.customer_batches.get(body.get('batch_id'))
-                if body.get('revision')!=batch['revision']:raise WorkspaceConflict('批次已变化，请刷新后再开始研究')
-                by_id={item['object_id']:item for item in batch['items']}
-                if any(oid not in by_id for oid in ids):raise ValueError('所选客户不在当前批次')
-                results=[]
-                for oid in ids:
-                    item=by_id[oid]
-                    if item['review_state']=='do_not_contact' or item['quality']['suppression_state']=='suppressed':
-                        results.append({'object_id':oid,'status':'blocked','reason':'客户已标记不联系'});continue
-                    checks=item.get('checks') or {}
-                    if checks.get('status')=='blocked':
-                        results.append({'object_id':oid,'status':'blocked','reason':'存在停止联系、退信或重复记录，请先核对'});continue
-                    try:
-                        job=app.agent_jobs.start(oid,instruction.strip(),mode='outreach_research',batch_id=batch['id'])
-                        results.append({'object_id':oid,'status':'started','job':job})
-                    except ValueError as exc:
-                        results.append({'object_id':oid,'status':'not_started','reason':str(exc)})
-                return self.send_json({'batch_id':batch['id'],'results':results},202)
+                return self.send_json(app.batch_research.begin(body),202)
+            if parts==['api','desk','customer-batches','research-continue']:
+                if set(body)!={'group_id'}:raise ValueError('研究分组字段无效')
+                return self.send_json(app.batch_research.continue_group(body['group_id']),202)
+            if parts==['api','desk','job','plan']:
+                if set(body)-{'object_id','instruction','mode','parent_job_id','depends_on','idempotency_key'}:raise ValueError('计划字段无效')
+                return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction'),mode=body.get('mode','draft'),parent_job_id=body.get('parent_job_id'),depends_on=body.get('depends_on'),idempotency_key=body.get('idempotency_key'),defer=True),201)
+            if parts==['api','desk','job','dependency']:
+                if set(body)!={'id','depends_on'}:raise ValueError('依赖字段无效')
+                return self.send_json(app.agent_jobs.add_dependency(body['id'],body['depends_on']))
+            if parts==['api','desk','job','dispatch']:
+                if set(body)!={'id'}:raise ValueError('任务字段无效')
+                job=app.agent_jobs.get_job(body['id'])
+                if job.get('batch_id') and job.get('mode')=='outreach_research':raise ValueError('客户批次研究请回到原批次继续')
+                return self.send_json(app.agent_jobs.dispatch(body['id']))
             if parts==['api','desk','search-console','oauth','start']:
                 config=body.get('client_config')
                 if not config and app.gmail.status().get('account_email'):

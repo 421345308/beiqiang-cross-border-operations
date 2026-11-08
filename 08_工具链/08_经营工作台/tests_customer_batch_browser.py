@@ -38,6 +38,11 @@ DRIVER = r'''(() => {
   check(row('Synthetic Beta Buyer').getBoundingClientRect().width>0,'Beta not visible');
   const batch=(await read('/api/customer-batches')).items[0];const url='/api/customer-batches/'+encodeURIComponent(batch.id);
   const before=await read(url), betaBefore=before.items.find(item=>item.object_id==='customer:browser-beta');
+  const groups=document.querySelector('.batch-research-groups');
+  await until(()=>groups?.textContent.includes('Synthetic Beta Buyer · 尚未启动'),'persisted research group not displayed');
+  check(groups.textContent.includes('Synthetic Alpha Buyer · 已形成成果'),'completed child not displayed');
+  button(groups,'继续尚未启动的客户研究').click();
+  await until(()=>!groups.textContent.includes('Synthetic Beta Buyer · 尚未启动'),'planned child did not continue');
   input('搜索批次内客户').value='Synthetic';input('搜索批次内客户').dispatchEvent(new Event('input',{bubbles:true}));
   button(row('Synthetic Alpha Buyer'),'审阅这位客户').click();
   await until(()=>input('英文正文（发送给客户）')?.value==='Alpha original proposal','Alpha draft missing');
@@ -63,7 +68,7 @@ DRIVER = r'''(() => {
   check(input('搜索批次内客户').value==='Synthetic','batch filter lost');
   check((await read(url)).items.length===2,'original batch no longer readable');
   check(sends===0,'outbound operation attempted');
-  out.dataset.state='pass';out.textContent='customers=2; sources=Alpha/Beta; drafts=distinct; Alpha=request-saved; Beta=unchanged; batch=reopened; sends=0';
+  out.dataset.state='pass';out.textContent='customers=2; sources=Alpha/Beta; drafts=distinct; Alpha=request-saved; Beta=unchanged; batch=reopened; research=planned-child-resumed; sends=0';
  })().catch(error=>{out.dataset.state='fail';out.textContent=String(error.stack||error)+' PAGE: '+document.body.innerText.slice(-5000);});
 })();'''
 
@@ -111,6 +116,16 @@ class CustomerBatchBrowserTests(unittest.TestCase):
             for key,label in (('alpha','Alpha'),('beta','Beta')):
                 fixture.app.gmail_drafts._put({'object_id':'customer:browser-'+key,'version':'fixture-'+key,'status':'draft','account':'fixture@example.test','to':key+'@example.test','subject':label+' synthetic proposal','body_en':label+' original proposal','body_zh':label+' 中文草稿','attachments':[],'updated_at':'2026-11-06T00:00:00Z'})
             batch=fixture.app.customer_batches.create({'title':'Synthetic browser batch','object_ids':list(objects)})
+            spec={'type':'customer_batch_research','object_ids':list(objects),'instruction':'Synthetic research',
+                  'revision':batch['revision'],'request_id':'a'*32}
+            group=fixture.app.agent_jobs.create_group('customer:browser-alpha','Synthetic group',batch_id=batch['id'],context=spec)
+            alpha=fixture.app.agent_jobs.start('customer:browser-alpha','Synthetic research',mode='outreach_research',
+                batch_id=batch['id'],parent_job_id=group['id'],idempotency_key=fixture.app.batch_research._child_key('a'*32,'customer:browser-alpha'))
+            fixture.app.agent_jobs.start('customer:browser-beta','Synthetic research',mode='outreach_research',
+                batch_id=batch['id'],parent_job_id=group['id'],idempotency_key=fixture.app.batch_research._child_key('a'*32,'customer:browser-beta'))
+            with fixture.app.agent_jobs._write():
+                alpha.update(status='completed',attempt=1,worker_finished=True)
+                fixture.app.agent_jobs._save(alpha)
             fixture.http.RequestHandlerClass=BatchHandler
             root=fixture.root.resolve();profile=Path(tempfile.mkdtemp(prefix='batch-browser-profile-',dir=root))
             self.assertTrue(profile.resolve().is_relative_to(root))

@@ -2,6 +2,25 @@
 
 入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
 
+## 批次研究进度与中断接续（2026-11-08）
+
+客户批次的每次并行研究现保存为一个不执行的分组及逐客户 Agent 工作；原客户资料和草稿仍是成果来源。打开“本批研究进度与接续”可按客户查看状态和上次阻断原因，刷新后仍能读取；中途中断时明确点击“继续尚未启动的客户研究”，服务再次检查客户仍在批次且没有已知停止或重复阻断，只启动从未执行的子工作。实际启动认领时同一 SQLite 事务再次检查成员和共享抑制；未建立全部客户工作不会显示整个分组已完成。已有工作不会自动重跑，失败或结果不明仍须在原客户任务中核对成果后按现有方式接续。初次请求使用去重键，同一个请求返回原有任务；取消分组不会终止已运行子任务，也不会允许启动其余计划。
+
+`agent_jobs.py` 和 `job_dependencies.py` 在原 SQLite 任务记录上增加分组、父子关系、前置依赖与按任务认领；旧记录无需迁移。`batch_research.py` 连接原批次、任务和页面；`server.py` 暴露任务图及显式计划、依赖和启动接口。依赖完成不会自动启动后续工作，动态分组不作为依赖，任务关系也未绑定业务输入版本；这不是通用自动调度器。`today.py` 不再让尚未执行的计划或分组遮住同对象真实失败任务。
+
+本轮还修复两处检查：CRM 操作记录中“未发现退信、未退订”等明确否定不再误判为停止联系；实际退信、退订及历史触达仍阻断。只读核对实际 CRM 未发现现有同类误判，不能据此宣称某客户可发送。客户资料写入在失败前文件根本未变化时不再无谓替换原文件；真正需要恢复且恢复失败仍报结果不明。
+
+**验证：** 下方客户、Gmail、任务、并发及工作台 Python 回归 507 项，503 项通过、4 项默认跳过真实浏览器/模型；前端 111 项通过。额外启用真实 Chrome 隔离验收，验证双客户切换、单客修改和研究接续，未发送；另从实际批次入口在隔离客户上启动两个真实 Codex 研究子任务，70.030 秒完成，分别保存客户资料和中英文草稿，父分组汇总两个完成，未联网研究或发送。测试不使用真实客户或邮箱。原真实三客户批次、附件和此前准备的草稿继续留本机；未替负责人通过审核或发送。实际本机服务及无界面 Chrome 只读加载原批次，看到三张客户卡与新的研究进度入口。
+
+```powershell
+python -X utf8 -m unittest tests_agent_job_concurrency tests_job_dependencies tests_batch_research tests_customer_batches tests_customer_batch_http tests_batch_sending tests_outreach_checks tests_outreach_mcp tests_gmail_bounce_check tests_gmail_draft_concurrency tests_gmail_observations tests_gmail_event_reconcile tests_single_send_guard tests_customer_commercial tests_customer_concurrency tests_customer_revision_concurrency tests_customer_revision_race tests_customer_outcome_unknown tests_customer_analysis tests_customer_workspace tests_customer_workflow tests_customer_conversation tests_customer_http tests_customer_revision_http tests_customer_mcp_revision tests_business_context tests_desk_http tests_gmail_drafts tests_gmail_send_authorization tests_gmail_event_safety tests_gmail_sync tests_gmail_job_integration tests_gmail_mailbox tests_gmail_filter tests_gmail_translation tests_agent_jobs tests_job_recovery tests_runtime_backend tests_mcp_dossier tests_today tests_customer_batch_browser tests_outreach_live_codex
+node --test --test-reporter=dot tests_desk_frontend.mjs
+$env:BEIQIANG_RUN_BROWSER_TEST='1'; python -X utf8 -m unittest tests_customer_batch_browser -v
+$env:BEIQIANG_LIVE_CODEX='1'; python -X utf8 -m unittest tests_outreach_live_codex.OutreachLiveCodexTests.test_two_research_agents_prepare_separate_synthetic_customers -v
+```
+
+**桌面控制排障：** 负责人再次重启后，核实个人配置指向已被版本升级移除的运行时与 CLI；已备份原配置并仅修正 `node_repl` 的过期路径。新的只读 Codex 会话实际加载了 `node_repl`，调用 `sky.list_windows` 仍因原生管道不存在报 `os error 2`；应用管理的 `cua_repl` 清单也仍指向旧运行时并报 `os error 3`。这些是两个可见故障，尚不能确定管道未创建的最终原因或声称桌面控制恢复。[官方设置](https://learn.chatgpt.com/docs/computer-use)提供“Settings → Computer use → Control → Any App”入口；电脑控制技能禁止操作 Codex 自身 UI 或绕开助手，需负责人查看该设置的实际状态。隔离 Chrome 测试不代表桌面控制恢复。
+
 ## 客户开发批次（2026-11-06）
 
 进入“客户开发 → 开发批次”。可以新建批次，按客户或候选、发现渠道和关键词筛选现有对象并批量加入；同一对象不会重复加入，误选或重复对象可仅从批次移除，不删除原客户或草稿。列表集中显示客户背景、来源、审核状态和草稿情况；打开一位后可查看来源及观察时间、产品匹配、原客户往来、中英文邮件和实际附件。每次最多选择 8 位客户并行研究；单客修改要求只交给绑定该客户和批次的 Agent Job，完成后在没有未保存输入时自动重新读取当前客户。研究及草稿保存在原对象及本地邮件草稿中，不建立第二套 CRM。Agent 没有发信工具，结果仍须重新阅读和审核。
@@ -18,7 +37,7 @@
 
 同一个 SQLite 数据库内，Agent 对同一对象的创建和续接由短事务原子认领；另一个实例不会把仍存活的拥有者任务误标中断。拥有者及已记录子进程均已退出时才按实际状态标中断，不自动重跑。历史活动任务缺拥有者，或服务在启动子进程后、登记 PID 前崩溃时，可在任务区明确填写原服务 PID 和核验依据；系统确认已记录进程退出后只标记可恢复，仍须先核对可能未登记的子进程及成果，再显式续接。无法确认的状态不会自行释放。
 
-实现及接口分别见 `customer_batches.py`、`outreach_checks.py`、`batch_sending.py`、`single_send_guard.py`、`gmail_bounce_check.py`、`gmail_observations.py`、`gmail_event_reconcile.py`、`desk_mcp.py` 与 `web/desk.js`。工作台、SQLite 和上述保护以同一台本机及同一个数据库为范围；其他邮箱、独立数据库、直接绕过服务的脚本或已在途外发不受同一事务保护。批次并行 Job 尚不是持久父子依赖、通用事件 Router 或 Watchdog；最小跨业务一句话入口的建议见 [ARCHITECTURE.md](ARCHITECTURE.md)。
+实现及接口分别见 `customer_batches.py`、`outreach_checks.py`、`batch_sending.py`、`single_send_guard.py`、`gmail_bounce_check.py`、`gmail_observations.py`、`gmail_event_reconcile.py`、`desk_mcp.py` 与 `web/desk.js`。工作台、SQLite 和上述保护以同一台本机及同一个数据库为范围；其他邮箱、独立数据库、直接绕过服务的脚本或已在途外发不受同一事务保护。批次研究现有持久分组和显式接续；通用事件 Router、Watchdog 及最小跨业务一句话入口仍未接入，见 [ARCHITECTURE.md](ARCHITECTURE.md)。
 
 **本轮验证：** 下列完整 Python 回归 466 项，462 项通过、4 项按默认设置跳过真实浏览器或真实模型；前端 110 项通过。显式启用后，隔离 Chrome 的双客户切换及局部修改 1 项通过；两个隔离客户的真实 Codex 研究任务同时运行并各自保存资料和草稿，1 项通过（54.740 秒）；另有单客草稿修改的真实 Codex 测试通过。真实模型测试消耗模型调用，使用合成客户、不连接真实邮箱、不发送。真实工作台也经无界面 Chrome 加载实际三客户批次，三个实际 PDF 附件均经 HTTP 下载回读、SHA 一致且各 22 页。负责人反馈已重启后复验：电脑控制插件在配置中已启用、组件可加载，但未发现原生通信管道；重置 JavaScript 会话后读取窗口仍报系统找不到指定文件（os error 2）。工作台服务本身正常，无界面 Chrome 验收不代表桌面控制已恢复；不要把再次重启当作已验证的解决办法。
 
@@ -48,7 +67,7 @@ python -X utf8 -m unittest tests_customer_commercial tests_customer_concurrency 
 node --test tests_desk_frontend.mjs
 ```
 
-仍有限制：跨数据库、绕开服务的手工文件修改、未纳入版本的外部来源竞争，以及文件和 SQLite 之间的崩溃原子性没有解决。冲突后页面没有并排合并界面，须保留输入、重新读取并人工核对。共享邮箱观察及事件与 Job 对账已按上节继续实现；其覆盖范围有限，也没有通用 Router、父子任务依赖或 Watchdog。
+仍有限制：跨数据库、绕开服务的手工文件修改、未纳入版本的外部来源竞争，以及文件和 SQLite 之间的崩溃原子性没有解决。冲突后页面没有并排合并界面，须保留输入、重新读取并人工核对。共享邮箱观察、事件与 Job 对账及基础任务关系已按上文继续实现；其覆盖范围有限，也没有通用 Router 或 Watchdog。
 
 ## Gmail 事件与 Agent 任务关联（2026-11-05）
 

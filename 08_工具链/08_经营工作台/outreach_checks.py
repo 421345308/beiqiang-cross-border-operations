@@ -64,6 +64,16 @@ BOUNCE = re.compile(r'\b(?:EMAIL_INVALID|invalid (?:email|address)|undeliver(?:a
 STOP_STATES = {'do_not_contact', 'unsubscribed', 'rejected', 'complaint', 'bounced', 'blocked', 'suppressed', '停止联系', '退订', '拒绝联系', '拒绝', '不联系', 'EMAIL_INVALID', 'invalid', 'undeliverable'}
 
 
+def _crm_stop_text(value):
+    """Ignore explicit negative check results, preserving other stop evidence.
+
+    Apply only to CRM operator records, never to a buyer's incoming message.
+    Each field is normalized separately so one field cannot negate another.
+    """
+    return re.sub(r'未发现退信|未停止联系|未拒绝联系|未退订|无退信|'
+                  r'\bnot unsubscribed\b|\bno opt[ -]out\b', '', str(value or ''), flags=re.I)
+
+
 class OutreachChecks:
     def __init__(self, app, *, crm_reader=None):
         self.app = app
@@ -259,10 +269,10 @@ class OutreachChecks:
         elif crm.get('match_status') in {'冲突待核', '读取失败'} or crm.get('stop_state') == '未知':
             reason('crm_scope_unknown', 'CRM身份或停止范围尚未核清')
         for match in crm.get('matches', []):
-            raw = ' '.join(str(match.get(k) or '') for k in ('stop_raw', 'stage', 'next_action_raw'))
-            raw = re.sub(r'未退订|未停止联系|未拒绝联系|无退信|未发现退信|not unsubscribed|no opt.out', '', raw, flags=re.I)
+            raw = ' '.join(_crm_stop_text(match.get(k)) for k in ('stop_raw', 'stage', 'next_action_raw'))
             history = match.get('history') or []
-            if STOP.search(raw) or BOUNCE.search(raw) or any(STOP.search(' '.join(str(h.get(k) or '') for k in ('status', 'outcome', 'notes'))) or BOUNCE.search(' '.join(str(h.get(k) or '') for k in ('status', 'outcome', 'notes'))) for h in history):
+            history_text = [' '.join(_crm_stop_text(h.get(k)) for k in ('status', 'outcome', 'notes')) for h in history]
+            if any(STOP.search(text) or BOUNCE.search(text) for text in [raw, *history_text]):
                 reason('crm_history_suppressed', 'CRM历史中存在明确退订、拒绝或退信', 'blocked')
         # batch_ids denotes object IDs in this batch, never company-name guesses.
         for other_id in sorted(set(batch_ids or [])):

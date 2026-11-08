@@ -167,6 +167,10 @@ class Today:
         sources['agent_jobs'] = {'state': 'ok', 'total': len(jobs)}
         latest = {}
         for job in sorted(jobs, key=lambda j: j.get('updated_at') or j.get('created_at') or '', reverse=True):
+            # A plan or non-executing group must not hide the latest actual
+            # execution for the same business object on the home page.
+            if job.get('task_kind') == 'group' or job.get('status') == 'planned':
+                continue
             latest.setdefault(job.get('object_id') or job.get('id'), job)
         items = []
         for job in latest.values():

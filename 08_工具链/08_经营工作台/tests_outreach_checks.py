@@ -71,6 +71,34 @@ class ChecksTest(unittest.TestCase):
     def test_negative_crm_stop_mark_is_not_a_stop(self):
         self.crm.result['matches']=[dict(stop_raw='未退订',stop_state='未发现明确停止',history=[])]
         self.assertNotIn('crm_history_suppressed',self.codes(self.inspect()))
+    def test_negative_crm_history_checks_do_not_become_stop_records(self):
+        for field in ('status','outcome','notes'):
+            for text in ('未退订','未停止联系','未拒绝联系','无退信','未发现退信',
+                         'not unsubscribed','no opt-out','no opt out'):
+                with self.subTest(field=field,text=text):
+                    self.crm.result['matches']=[dict(history=[{field:text}],latest_touch={'date':'2026-11-06'})]
+                    result=self.inspect()
+                    self.assertNotIn('crm_history_suppressed',self.codes(result))
+                    # Correcting a false stop must not grant first-contact permission.
+                    self.assertIn('previously_contacted',self.codes(result))
+                    self.assertFalse(result['can_auto_send'])
+    def test_negative_crm_checks_preserve_real_stops_in_other_fields_and_rows(self):
+        for history in ([{'status':'未发现退信','notes':'Please unsubscribe us'}],
+                        [{'notes':'未退订；之后收到退信'}],
+                        [{'outcome':'not unsubscribed'}, {'notes':'not interested'}],
+                        [{'status':'无退信','outcome':'EMAIL_INVALID'}]):
+            with self.subTest(history=history):
+                self.crm.result['matches']=[dict(history=history)]
+                result=self.inspect()
+                self.assertIn('crm_history_suppressed',self.codes(result))
+                self.assertEqual(result['status'],'blocked')
+    def test_negative_crm_check_does_not_hide_buyer_optout(self):
+        self.crm.result['matches']=[dict(history=[{'notes':'未退订；未发现退信'}])]
+        self.inbound('Please unsubscribe us.')
+        result=self.inspect()
+        self.assertNotIn('crm_history_suppressed',self.codes(result))
+        self.assertIn('mail_stop',self.codes(result))
+        self.assertEqual(result['status'],'blocked')
     def test_crm_unknown(self):
         self.crm.result=dict(status='读取失败',matches=[])
         result=self.inspect();self.assertEqual(result['status'],'unknown');self.assertIsNone(result['crm']['sha256'])

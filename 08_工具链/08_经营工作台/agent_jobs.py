@@ -21,6 +21,7 @@ import customer_analysis
 from customer_workspace import CustomerWriteOutcomeUnknown
 from workspaces import WorkspaceConflict
 from codex_backend import CodexBackend, MODEL
+from job_dependencies import JobDependencies
 
 ACTIVE = ('queued', 'running')
 
@@ -78,7 +79,7 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-class AgentJobs:
+class AgentJobs(JobDependencies):
     def __init__(self, app, backend=None):
         self.app = app
         self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
@@ -175,7 +176,21 @@ class AgentJobs:
             if row.get('process_id') and self._pid_alive(row['process_id']) is not False:
                 raise ValueError('该对象先前进程仍在运行或无法确认已退出，请先核对原任务和已有成果。')
 
-    def start(self, object_id, instruction, mode='draft', *, batch_id=None, source_event=None):
+    def start(self, object_id, instruction, mode='draft', *, batch_id=None, source_event=None,
+              parent_job_id=None, depends_on=None, idempotency_key=None, defer=False, task_kind='work', context=None):
+        self._validate_plan_options(parent_job_id, depends_on, idempotency_key, defer)
+        if task_kind not in ('work', 'group'):
+            raise ValueError('不支持的任务类型')
+        if context is not None:
+            if task_kind != 'group' or not isinstance(context, dict):
+                raise ValueError('任务分组上下文无效')
+            try:
+                if len(json.dumps(context, ensure_ascii=False)) > 20000:
+                    raise ValueError('任务分组上下文过长')
+            except (TypeError, OverflowError):
+                raise ValueError('任务分组上下文无效')
+        if task_kind == 'group' and depends_on:
+            raise ValueError('分组不执行，前置依赖请添加到实际子任务')
         if mode not in ('draft','customer_analysis','mail_draft','outreach_draft','outreach_research'):raise ValueError('不支持的工作模式')
         if batch_id is not None and (not isinstance(batch_id,str) or not re.fullmatch(r'[0-9a-f]{32}',batch_id)):
             raise ValueError('客户批次编号无效')
@@ -197,7 +212,7 @@ class AgentJobs:
         profile=self.app.customer_workspace.profile(object_id) if mode=='customer_analysis' else None
         if profile is not None:obj={**obj,'_customer_profile':profile}
         job = {'id': uuid.uuid4().hex, 'object_id': object_id, 'title': title,
-               'instruction': instruction.strip(), 'status': 'queued', 'summary': '',
+               'instruction': instruction.strip(), 'initial_instruction': instruction.strip(), 'status': 'queued', 'summary': '',
                'mode':mode,'source_hash':profile['source_hash'] if profile else None,'profile_saved':False,
                'profile_revision':profile['revision'] if profile else None,
                'error': None, 'events': [], 'artifact_id': None, 'session_id': None, 'attempt': 0,
@@ -205,12 +220,23 @@ class AgentJobs:
         job.update(owner_pid=os.getpid(),owner_id=self.owner_id,worker_finished=False)
         if batch_id is not None:job['batch_id']=batch_id
         if source_event is not None:job['source_event']=dict(source_event)
-        self._event(job, 'queued', '工作已排队，成果将保存到当前业务对象。')
+        job.update(task_kind=task_kind, parent_job_id=parent_job_id, depends_on=list(dict.fromkeys(depends_on or [])),
+                   idempotency_key=idempotency_key, context=context)
+        planned = defer or task_kind == 'group' or parent_job_id is not None or bool(depends_on)
+        if planned:
+            job.update(status='planned', owner_pid=None, owner_id=None, worker_finished=True)
+        self._event(job, 'planned' if planned else 'queued',
+                    '计划已保存；需显式启动，尚未执行。' if planned else '工作已排队，成果将保存到当前业务对象。')
         with self.lock:
             with self._write():
                 self._recover_exited_owners()
-                self._check_object_available(object_id)
+                existing = self._existing_plan(job)
+                if existing is not None:
+                    return existing
+                self._validate_links(job)
+                if not planned:self._check_object_available(object_id)
                 self._save(job)
+            if planned:return job
             thread = threading.Thread(target=self._work, args=(job['id'], obj), daemon=True,
                                       name='business-agent-' + job['id'][:8])
             self.threads[job['id']] = thread
@@ -223,6 +249,10 @@ class AgentJobs:
         with self.lock,self._write():
             self._recover_exited_owners()
             job = self.get_job(job_id)
+            if job['status'] == 'planned':
+                raise ValueError('尚未执行的计划请使用 dispatch，不能恢复会话。')
+            self._check_parent_available(job)
+            self._check_dependencies(job)
             if job['status'] in ACTIVE:
                 raise ValueError('这项工作仍在运行。')
             if job_id in self.threads:
@@ -596,9 +626,9 @@ class AgentJobs:
     def cancel(self, job_id):
         with self._write():
             job = self.get_job(job_id)
-            if job['status'] not in ACTIVE:
+            if job['status'] not in (*ACTIVE, 'planned'):
                 return job
-            if job.get('owner_id')!=self.owner_id and self._owner_alive(job) is not False:
+            if job['status'] != 'planned' and job.get('owner_id')!=self.owner_id and self._owner_alive(job) is not False:
                 raise ValueError('该工作由另一实例执行或拥有者状态未知，请在原实例取消并核对进程。')
             job.update(status='cancelled', error=None)
             self._event(job, 'cancelled', '已取消；之前已写入的文件或外部动作需按实际状态核对。')

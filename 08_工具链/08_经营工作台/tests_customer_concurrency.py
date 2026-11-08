@@ -128,6 +128,16 @@ class CustomerConcurrencyTests(unittest.TestCase):
                 self.work._store_profile(OID,{},commit=True)
         self.assertEqual(self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'recovered'})['next_action'],'recovered')
 
+    def test_failure_before_write_does_not_replace_an_unchanged_file(self):
+        row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(OID,)).fetchone()
+        existing=self.root/row[0]; before=existing.read_bytes()
+        with patch.object(self.work,'_write',side_effect=OSError('write failed')), \
+             patch.object(self.work,'_atomic',side_effect=AssertionError('unchanged file must not be replaced')):
+            with self.assertRaisesRegex(OSError,'write failed'):
+                self.work.save_workflow(OID,{'revision':self.work.workflow(OID)['revision'],'next_action':'not persisted'})
+        self.assertEqual(existing.read_bytes(),before)
+        self.assertFalse(self.app.db.in_transaction)
+
     def test_index_failure_restores_existing_and_removes_first_created_profile(self):
         row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(OID,)).fetchone()
         existing=self.root/row[0]

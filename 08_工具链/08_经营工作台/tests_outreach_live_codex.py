@@ -67,15 +67,22 @@ class OutreachLiveCodexTests(unittest.TestCase):
                      if o.get('source_type') == 'manual_import'}
         self.assertEqual(set(customers), {'Synthetic Research Alpha', 'Synthetic Research Beta'})
         jobs = fixture.app.agent_jobs; started = {}
+        batch=fixture.app.customer_batches.create({'title':'Synthetic parallel research','object_ids':list(customers.values())})
+        instruction=('这是隔离合成验收，禁止联网、发信、shell和访问其他客户。'
+            '当前客户名称含 Alpha 时，标记用 SYNTHETIC_RESEARCH_A、收件人 buyer0@example.invalid；'
+            '名称含 Beta 时，标记用 SYNTHETIC_RESEARCH_B、收件人 buyer1@example.invalid。'
+            '只使用当前客户MCP：先get_customer_profile读取实际revision和source_hash，'
+            '再save_customer_profile原样传入revision及source_hash，把analysis.brief设置为当前客户标记。'
+            '然后prepare_customer_email_draft，使用返回version通过save_customer_email_draft保存：'
+            'to用当前客户收件人，subject用当前客户标记，body_en为Synthetic research draft，'
+            'body_zh为模拟研究草稿。无需附件，不要声称发信。保存后各读取一次确认。')
+        created=fixture.app.batch_research.begin({'batch_id':batch['id'],'revision':batch['revision'],
+            'object_ids':list(customers.values()),'instruction':instruction,'request_id':'c'*32})
+        self.assertTrue(all(row['status']=='started' for row in created['results']),created)
+        by_id={row['object_id']:row['job'] for row in created['results']}
         for index, (name, oid) in enumerate(sorted(customers.items())):
             marker = 'SYNTHETIC_RESEARCH_' + ('A' if index == 0 else 'B')
-            instruction = ('这是隔离合成验收，禁止联网、发信、shell和访问其他客户。'
-                '只使用当前客户MCP：先get_customer_profile读取实际revision和source_hash，'
-                '再save_customer_profile原样传入revision及source_hash，把analysis.brief设置为'+marker+'。'
-                '然后prepare_customer_email_draft，使用返回version通过save_customer_email_draft保存：'
-                'to为buyer'+str(index)+'@example.invalid，subject为'+marker+'，body_en为Synthetic research draft，'
-                'body_zh为模拟研究草稿。无需附件，不要声称发信。保存后各读取一次确认。')
-            started[oid] = (jobs.start(oid, instruction, mode='outreach_research', batch_id='b'*32), marker, index)
+            started[oid] = (by_id[oid], marker, index)
         self.assertEqual(len(jobs.threads), 2, 'Both independent research jobs should be active together')
         results = {}
         deadline = time.monotonic() + 240
@@ -98,7 +105,7 @@ class OutreachLiveCodexTests(unittest.TestCase):
                 'profile_saved':profile['analysis'].get('brief') == marker,
                 'draft_saved':draft.get('subject') == marker and draft.get('to') == 'buyer'+str(index)+'@example.invalid'
                     and draft.get('body_zh') == '模拟研究草稿' and draft.get('status') == 'draft',
-                'batch_saved':job.get('batch_id') == 'b'*32,'events':events}
+                'batch_saved':job.get('batch_id') == batch['id'],'events':events}
         print('OUTREACH_PARALLEL_LIVE_RESULT ' + json.dumps(list(results.values()), ensure_ascii=True))
         for result in results.values():
             self.assertEqual(result['status'], 'completed', result)
@@ -107,6 +114,10 @@ class OutreachLiveCodexTests(unittest.TestCase):
             self.assertTrue({'get_customer_profile','save_customer_profile','prepare_customer_email_draft',
                              'save_customer_email_draft'} <= names, result)
             self.assertFalse(any(e['type'] in ('web_search','command_execution') for e in result['events']), result)
+        graph=jobs.get_graph(created['group_id'])
+        self.assertEqual(graph['aggregate']['status'],'completed')
+        self.assertEqual(graph['aggregate']['counts'].get('completed'),2)
+        self.assertEqual(len([job for job in graph['jobs'] if job.get('parent_job_id')==created['group_id']]),2)
 
 
 if __name__ == '__main__': unittest.main()
