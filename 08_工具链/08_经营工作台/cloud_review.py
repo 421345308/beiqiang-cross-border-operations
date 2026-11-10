@@ -138,15 +138,28 @@ class CloudReview:
         rows = self._dispatch_records()[:50]
         return {'dispatches': [{key: item.get(key) for key in ('request_id', 'task_id', 'title', 'status', 'run_id', 'created_at')} for item in rows]}
 
-    def enqueue(self, task_id, task_version, source_version, instruction, model):
+    def enqueue(self, task_id, task_version, source_version, instruction, model, *, public_research=False, product_context=None):
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
             raise ValueError('请填写不超过12000字的任务要求。')
         if model not in ('gpt-6-luna', 'gpt-6.1-sol'):
             raise ValueError('请选择可用模型。')
+        if type(public_research) is not bool or (not public_research and product_context is not None):
+            raise ValueError('公开研究选项无效。')
         task = next((item for item in self.list_tasks()['tasks'] if item['id'] == task_id), None)
         if not task or task['version'] != task_version or task.get('source_version') != source_version:
             raise ValueError('云端任务或资料已变化，请重新读取。')
         source = task.get('source')
+        if public_research and source:
+            raise ValueError('公开联网研究请选择没有私有资料来源的云任务。')
+        if product_context is not None and (not isinstance(product_context,dict) or
+                set(product_context)-{'id','model','title','category'} or
+                not re.fullmatch(r'product:[A-Za-z0-9_-]+',str(product_context.get('id') or '')) or
+                any(not isinstance(value,str) or len(value)>240 for value in product_context.values())):
+            raise ValueError('商品公开摘要无效。')
+        if public_research:
+            dispatch=self.workspace_status().get('dispatch') or {}
+            if dispatch.get('ready') is not True or dispatch.get('public_web_research') is not True or model not in (dispatch.get('models') or []):
+                raise ValueError('云执行器尚未就绪或未报告公开联网研究能力；此任务未提交。')
         if any(item.get('status') == 'pending' and (item.get('task_id') == task_id or (source and item.get('source') == source)) for item in self._dispatch_records()):
             raise ValueError('此任务已有未确认提交，请先核对状态，不要重复提交。')
         content = None
@@ -166,9 +179,11 @@ class CloudReview:
                   'status': 'pending', 'run_id': None, 'created_at': datetime.now(timezone.utc).isoformat()}
         self._save_dispatch(record, new=True)
         try:
-            value = self._call('enqueue', request_id=request_id, task_id=task_id,
-                task_version=task_version, source_version=source_version, source_content=content,
-                instruction=instruction.strip(), model=model)
+            fields={'request_id':request_id,'task_id':task_id,'task_version':task_version,
+                    'source_version':source_version,'source_content':content,
+                    'instruction':instruction.strip(),'model':model}
+            if public_research:fields.update(public_research=True,product_context=product_context)
+            value = self._call('enqueue', **fields)
             run = value.get('run')
             if (not isinstance(run, dict) or not re.fullmatch(r'[0-9a-f]{32}', str(run.get('id', '')))
                     or run.get('task_id') != task_id or run.get('source') != source):

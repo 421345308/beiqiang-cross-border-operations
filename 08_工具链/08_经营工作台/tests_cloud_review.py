@@ -16,6 +16,7 @@ class FakeQueue:
             return {'tasks': [{'id': self.run['task_id'], 'title': '云端任务', 'source': self.run['source'],
                                'version': 1, 'source_version': self.run['source_version'], 'source_hash': self.run['source_hash']}]}
         if action == 'enqueue': return {'run': {'id': self.run['id'], 'task_id': self.run['task_id'], 'source': self.run['source'], 'status': 'queued'}}
+        if action == 'workspace_status': return {'runs':[], 'dispatch':{'ready':True,'public_web_research':True,'models':['gpt-6-luna']}}
         if action == 'request_status': return {'found': True, 'run': {'id': self.run['id'], 'task_id': self.run['task_id'], 'source': self.run['source'], 'status': 'queued'}}
         if action == 'pending_reviews':
             return {'runs': [{key: self.run.get(key) for key in ('id', 'title', 'summary', 'source', 'status', 'updated_at')}]}
@@ -108,6 +109,30 @@ class CloudReviewTests(unittest.TestCase):
         action, payload = next(call for call in self.queue.calls if call[0] == 'enqueue')
         self.assertEqual(payload['source_content'], '旧成果\n')
         self.assertEqual(payload['request_id'], result['request_id'])
+
+    def test_public_research_requires_source_free_task_and_keeps_product_summary_bounded(self):
+        with self.assertRaisesRegex(ValueError,'没有私有资料'):
+            self.bridge.enqueue(self.run['task_id'],1,2,'公开研究','gpt-6-luna',public_research=True)
+        self.run.update(source=None,source_version=None,source_hash=None)
+        result=self.bridge.enqueue(self.run['task_id'],1,None,'公开研究','gpt-6-luna',public_research=True,
+                                   product_context={'id':'product:BQ001','model':'BQ001'})
+        self.assertEqual(result['status'],'queued')
+        payload=next(body for action,body in self.queue.calls if action=='enqueue')
+        self.assertIsNone(payload['source_content'])
+        self.assertTrue(payload['public_research'])
+        self.assertEqual(payload['product_context']['id'],'product:BQ001')
+
+    def test_public_research_is_not_queued_until_runner_explicitly_reports_support(self):
+        self.run.update(source=None,source_version=None,source_hash=None)
+        real_call=self.queue.call
+        def old_runner(action,**body):
+            if action=='workspace_status':return {'runs':[],'dispatch':{'ready':True,'models':['gpt-6-luna']}}
+            return real_call(action,**body)
+        self.queue.call=old_runner
+        with self.assertRaisesRegex(ValueError,'未报告公开联网研究能力'):
+            self.bridge.enqueue(self.run['task_id'],1,None,'公开研究','gpt-6-luna',public_research=True)
+        self.assertFalse(any(action=='enqueue' for action,_ in self.queue.calls))
+        self.assertEqual(self.bridge.dispatches()['dispatches'],[])
 
     def test_lost_submit_response_is_persisted_and_reconciled_without_replay(self):
         real_call = self.queue.call

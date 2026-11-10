@@ -44,6 +44,11 @@ def result_schema(job):
     return INQUIRY_SCHEMA if job.get('kind') == 'inquiry_review' else SCHEMA
 
 def model_input(job):
+    if job.get('research_mode') == 'public_web':
+        # The owner-supplied public brief is distinct from the automatically
+        # appended private control snapshot and any business document.
+        return {'kind':'public_web_research','instruction':job['public_research_brief'],
+                'product_context':job.get('product_context')}
     if job.get('kind') == 'inquiry_review':
         return {'kind': 'inquiry_review', 'instruction': job['instruction'],
                 'inquiry_context': job['inquiry_context']}
@@ -58,6 +63,17 @@ def validate_job(job):
     deadline=datetime.fromisoformat(job['lease_expires_at'].replace('Z','+00:00')).timestamp()
     if len(job['instruction']) > MAX_JOB_INSTRUCTION:
         raise ValueError('Job exceeds supported input size')
+    if job.get('research_mode') is not None:
+        brief=job.get('public_research_brief');product=job.get('product_context')
+        if (job['research_mode'] != 'public_web' or job.get('kind') == 'inquiry_review'
+            or job.get('source') or doc is not None or job.get('inquiry_context') is not None
+            or not isinstance(brief,str) or not brief.strip() or len(brief)>12000):
+            raise ValueError('Invalid public research boundary')
+        if product is not None and (not isinstance(product,dict) or set(product)-{'id','model','title','category'}
+            or not re.fullmatch(r'product:[A-Za-z0-9_-]+',str(product.get('id') or ''))
+            or any(not isinstance(v,str) or len(v)>240 for v in product.values())):
+            raise ValueError('Invalid public product context')
+        return deadline
     if job.get('kind') == 'inquiry_review':
         context = job.get('inquiry_context')
         if not isinstance(context, dict) or not isinstance(context.get('inquiry'), dict) or not isinstance(context.get('handling'), dict):
@@ -202,9 +218,10 @@ def execute_responses(queue, job, deadline):
     monitor.start()
     try:
         queue.call('event', **identity, event={'type': 'turn.started'})
-        proposal, usage, response_id = request_proposal(
-            key=read_api_credential(os.environ), model=job.get('model') or MODEL,
-            schema=result_schema(job), input_data=model_input(job))
+        kwargs={'key':read_api_credential(os.environ), 'model':job.get('model') or MODEL,
+                'schema':result_schema(job), 'input_data':model_input(job)}
+        if job.get('research_mode') == 'public_web':kwargs['web_search']=True
+        proposal, usage, response_id = request_proposal(**kwargs)
         finished.set()
         monitor.join(timeout=25)
         if monitor.is_alive():
@@ -222,6 +239,8 @@ def execute(queue, job, executable, state):
     deadline=validate_job(job)
     if os.environ.get('WORKBENCH_RUNNER_ENGINE', 'codex') == 'responses':
         return execute_responses(queue, job, deadline)
+    if job.get('research_mode'):
+        raise ValueError('Public research requires the Responses engine')
     identity={'run_id':job['id'],'lease_token':job['lease_token']}
     final=None; session=None; usage=None
     # Only schema and generated CLI state exist here; source is passed via stdin.
@@ -333,7 +352,8 @@ def main():
             parser.error('Private worker startup checks failed; run preflight.py for safe check results')
         auth = checked.get('auth', {}).get('method') or 'chatgpt'
         capabilities = {'ready': True, 'auth': auth, 'model': MODEL,
-                        'models': list(API_MODELS if auth == 'api' else (MODEL,))}
+                        'models': list(API_MODELS if auth == 'api' else (MODEL,)),
+                        'public_web_research': engine == 'responses'}
     state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
     state.mkdir(parents=True,exist_ok=True);require_reconciled(state);queue=Queue(endpoint,secret)
     while True:
@@ -362,7 +382,9 @@ def main():
             remove_recovery_marker(claiming)
             raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
         try:
-            response=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {}))
+            claim_options={'run_id': args.run_id} if args.run_id else {}
+            if engine == 'responses':claim_options['public_web_research']=True
+            response=queue.call('claim', **claim_options)
         except ClaimTransactionRolledBack:
             # The private server explicitly confirmed its transaction rolled
             # back; unlike a timeout or generic 409, no claim can have committed.

@@ -13,7 +13,7 @@ class Today:
 
     def snapshot(self):
         sources, items = {}, []
-        for collect in (self._customers, self._prospects, self._mail, self._changes, self._channels, self._jobs):
+        for collect in (self._customers, self._prospects, self._mail, self._changes, self._channels, self._catalog, self._jobs):
             try:
                 items.extend(collect(sources))
             except Exception as exc:
@@ -190,3 +190,24 @@ class Today:
                     '完成后可在对应页面查看成果。', action, severity='low', object_id=oid,
                     updated_at=job.get('updated_at')))
         return items
+
+    def _catalog(self, sources):
+        monitor = getattr(self.app, 'catalog_monitor', None)
+        if not monitor: return []
+        status = monitor.status()
+        sources['alibaba_catalog'] = {key:status.get(key) for key in ('state','stale','last_attempt_at','last_success_at')}
+        action = {'label':'查看国际站状态','type':'open_channels'}
+        if status.get('state') == 'error':
+            return [self._item('act','catalog_status','国际站商品状态采集失败',
+                    '保留上次完整结果，请查看连接和采集时间。',action,severity='high')]
+        if status.get('state') != 'ready': return []
+        comparison=status.get('comparison') or {};changes=status.get('changes') or {}
+        parts=[]
+        if status.get('stale'):parts.append('上次完整采集已过期')
+        if status.get('review_required'):parts.append(str(status['review_required'])+' 条审核状态需核对')
+        if status.get('unknown_state'):parts.append(str(status['unknown_state'])+' 条状态未识别')
+        if comparison.get('different'):parts.append(str(len(comparison['different']))+' 条与本地记录不同')
+        if changes.get('status_or_display'):parts.append(str(len(changes['status_or_display']))+' 条状态较上次变化')
+        if not parts:return []
+        return [self._item('act','catalog_status','国际站商品状态需核对',
+                ' · '.join(parts)+'；不自动修改平台或本地档案。',action)]

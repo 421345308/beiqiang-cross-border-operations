@@ -85,7 +85,9 @@ class ChannelOverview:
             row['recorded_score'] = observations.get(str(row.get('id')))
         return {'channels': [
             {'id':'alibaba','title':'国际站','connection':history('alibaba'),
-             'data':metrics,'product_analysis':self.product_analysis(),'quality':quality,'actions':['connection-check','products','product','orders','order'],
+             'data':metrics,'product_analysis':self.product_analysis(),'quality':quality,
+             'catalog_status':self.app.catalog_monitor.status() if hasattr(self.app,'catalog_monitor') else {'state':'not_loaded','stale':True},
+             'actions':['connection-check','products','product','orders','order'],
              'gaps':['自然流量实时指标未接通；本地指标保留原日期','询盘与报价未验证接通','标题、主图和详情图支持准备变更；具体提交与正式回读状态须逐商品核对，其他字段尚未接入']},
             {'id':'website','title':'独立站','connection':web_status,
              'data':{'source':'网站询盘连接器缓存','scope':'询盘读取状态，不代表网站流量或销售额'},

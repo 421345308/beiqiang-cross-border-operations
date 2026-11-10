@@ -70,6 +70,43 @@ class ResponsesBackendTests(unittest.TestCase):
         self.assertIn('401', str(err.exception))
         self.assertNotIn('private', str(err.exception))
 
+    def test_explicit_public_search_uses_verified_inline_sources_only(self):
+        url='https://example.test/style/123'
+        proposal={'summary':'来源显示一款休闲鞋 '+url,'changes':[],'next_steps':['核对供货条件 '+url]}
+        result=valid_response(proposal)
+        result['output'].insert(1,{'type':'web_search_call','status':'completed',
+                                   'action':{'type':'search','sources':[{'url':url}]}})
+        observed={}
+        def opener(request,timeout):
+            observed.update(json.loads(request.data));return response(result)
+        brief={'kind':'public_web_research','instruction':'查找休闲鞋','product_context':{'id':'product:BQ001'}}
+        value,_,_=responses_backend.request_proposal(key='sk-fixture',model='gpt-6-luna',schema=runner.SCHEMA,
+                                                     input_data=brief,web_search=True,open_request=opener)
+        self.assertEqual(value,proposal)
+        self.assertEqual(observed['tools'],[{'type':'web_search'}])
+        self.assertEqual(observed['max_tool_calls'],3)
+        self.assertEqual(observed['include'],['web_search_call.action.sources'])
+        self.assertFalse(observed['store'])
+        for bad in (
+            dict(result,output=[x for x in result['output'] if x.get('type')!='web_search_call']),
+            dict(result,output=[{'type':'web_search_call','status':'completed','action':{'type':'search','sources':[]}},result['output'][-1]]),
+            valid_response({'summary':'虚假来源 https://bad.example.test/item','changes':[],'next_steps':[]})):
+            with self.subTest(bad=bad), self.assertRaises(responses_backend.ResponsesError):
+                responses_backend.request_proposal(key='sk-fixture',model='gpt-6-luna',schema=runner.SCHEMA,
+                    input_data=brief,web_search=True,open_request=lambda *args,**kwargs:response(bad))
+
+    def test_research_does_not_include_private_control_or_document(self):
+        job={'id':'a'*32,'lease_token':'test','lease_expires_at':'2099-01-01T00:00:00Z',
+             'instruction':'public brief\n\nprivate control','research_mode':'public_web',
+             'public_research_brief':'public brief','product_context':{'id':'product:BQ001','title':'鞋'},
+             'source':None,'document':None}
+        runner.validate_job(job)
+        self.assertNotIn('private control',json.dumps(runner.model_input(job)))
+        job['document']={'content':'private'}
+        with self.assertRaisesRegex(ValueError,'research boundary'):runner.validate_job(job)
+        job['document']=None;job['kind']='inquiry_review'
+        with self.assertRaisesRegex(ValueError,'research boundary'):runner.validate_job(job)
+
     def test_lease_expiry_prevents_submission(self):
         job = {'id': 'a' * 32, 'lease_token': 'fixture',
                'lease_expires_at': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),

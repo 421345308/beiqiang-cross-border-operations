@@ -38,6 +38,7 @@ from today import Today
 from miaoshou_bridge import MiaoshouBridge, BridgeError
 from cloud_review import CloudReview
 from task_workspace import TaskWorkspace
+from alibaba_catalog_monitor import CatalogMonitor
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -108,6 +109,7 @@ class Workbench:
         if self.search_console.snapshot().get('site_url'):self.search_console.start_auto()
         self.product_review=AlibabaProductReview(self)
         self.business=Business(self)
+        self.catalog_monitor=CatalogMonitor(self.root,self.state)
         self.customer_workspace=CustomerWorkspace(self)
         self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
@@ -384,7 +386,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
-                        'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
+                        'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision'],
+                        'catalog_revision':app.catalog_monitor.revision()})
                 if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
                 if u.path=='/api/desk/gmail/send-status':return self.send_json(app.gmail_drafts.authorization_status())
                 if u.path=='/api/desk/gmail/events':return self.send_json(app.gmail_event_reconcile.list_events(value('object_id')))
@@ -502,8 +505,18 @@ class Handler(BaseHTTPRequestHandler):
                 action=body.get('action')
                 if action=='list' and set(body)=={'action'}:return self.send_json(app.cloud_review.list_pending())
                 if action=='tasks' and set(body)=={'action'}:return self.send_json(app.cloud_review.list_tasks())
+                if action=='capabilities' and set(body)=={'action'}:return self.send_json({'dispatch':app.cloud_review.workspace_status().get('dispatch') or {}})
                 if action=='dispatches' and set(body)=={'action'}:return self.send_json(app.cloud_review.dispatches())
-                if action=='enqueue' and set(body)=={'action','task_id','task_version','source_version','instruction','model'}:return self.send_json(app.cloud_review.enqueue(body['task_id'],body['task_version'],body['source_version'],body['instruction'],body['model']))
+                if action=='enqueue' and {'action','task_id','task_version','source_version','instruction','model'} <= set(body) and not set(body)-{'action','task_id','task_version','source_version','instruction','model','public_research','product_id'}:
+                    research=body.get('public_research',False);product_id=body.get('product_id');product=None
+                    if type(research) is not bool or (product_id and not research):raise ValueError('公开研究选项无效')
+                    if product_id:
+                        obj=app.business.get_object(product_id)
+                        if obj.get('kind')!='product' or obj.get('id')!=product_id:raise ValueError('请选择现有商品')
+                        product={'id':product_id,'model':str(obj.get('current_model') or '')[:240],
+                                 'title':str(obj.get('title') or '')[:240],'category':str(obj.get('category') or '')[:240]}
+                    args=(body['task_id'],body['task_version'],body['source_version'],body['instruction'],body['model'])
+                    return self.send_json(app.cloud_review.enqueue(*args,public_research=True,product_context=product) if research else app.cloud_review.enqueue(*args))
                 if action=='reconcile' and set(body)=={'action','request_id'}:return self.send_json(app.cloud_review.reconcile_dispatch(body['request_id']))
                 if action=='preview' and set(body)=={'action','run_id'}:return self.send_json(app.cloud_review.preview(body['run_id']))
                 if action=='apply' and set(body)=={'action','run_id','proposal_hash'}:return self.send_json(app.cloud_review.apply(body['run_id'],body['proposal_hash']))

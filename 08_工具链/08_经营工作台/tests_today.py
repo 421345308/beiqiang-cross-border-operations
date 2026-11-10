@@ -149,5 +149,17 @@ class TodayTests(unittest.TestCase):
         app.gmail.status = lambda: {'state': 'not_connected'}
         self.assertTrue(any(row['kind'] == 'gmail_link' for row in Today(app).snapshot()['groups']['act']))
 
+    def test_catalog_failure_and_actual_differences_are_actionable(self):
+        app=self.app()
+        app.catalog_monitor=SimpleNamespace(status=lambda:{'state':'error','stale':True,'last_attempt_at':'2026-11-10T00:00:00Z'})
+        failed=Today(app).snapshot()
+        self.assertEqual(failed['sources']['alibaba_catalog']['state'],'error')
+        self.assertTrue(any(item['kind']=='catalog_status' and item['severity']=='high' for item in failed['groups']['act']))
+        app.catalog_monitor.status=lambda:{'state':'ready','stale':False,'review_required':1,
+                                           'comparison':{'different':[{'id':'101'}]},'changes':None}
+        item=next(item for item in Today(app).snapshot()['groups']['act'] if item['kind']=='catalog_status')
+        self.assertIn('1 条审核状态需核对',item['judgment'])
+        self.assertIn('1 条与本地记录不同',item['judgment'])
+
 
 if __name__ == '__main__': unittest.main()

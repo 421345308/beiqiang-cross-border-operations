@@ -120,6 +120,37 @@ test('本机明确提交选定任务到云端并携带已读取的版本', async
   assert.ok(h.elements.page.textContent.includes('云端已确认任务'));
 });
 
+test('公开联网研究须显式选择，提交原商品 ID 并显示可点击来源',async()=>{
+ const h=harness(),original=h.originalFetch,calls=[],id='a'.repeat(32),url='https://example.test/shoe';
+ h.interceptFetch(async(path,options={})=>{
+  if(path==='/api/desk/cloud-review'){
+   const body=JSON.parse(options.body);calls.push(body);
+   if(body.action==='tasks')return {ok:true,json:async()=>({tasks:[{id,title:'公开研究',source:null,version:3,source_version:null}]})};
+   if(body.action==='dispatches')return {ok:true,json:async()=>({dispatches:[]})};
+   if(body.action==='capabilities')return {ok:true,json:async()=>({dispatch:{ready:true,public_web_research:true}})};
+   if(body.action==='list')return {ok:true,json:async()=>({runs:[{id,title:'研究',summary:'公开来源 '+url}]})};
+   if(body.action==='enqueue')return {ok:true,json:async()=>({status:'queued'})};
+  }
+  return original(path,options);
+ });
+ await h.ui.bootstrap();await findButton(h.elements.page,'读取可交给云端的任务').click();await settle();
+ const check=walk(h.elements.page).find(x=>x['aria-label']==='公开联网研究');check.checked=true;check.listeners.change();
+ const instruction=walk(h.elements.page).find(x=>x['aria-label']==='云端任务要求');instruction.value='研究公开鞋款';instruction.listeners.input();
+ const product=walk(h.elements.page).find(x=>x['aria-label']==='关联公开商品');product.value='product:1';product.listeners.change();
+ await findButton(h.elements.page,'提交到云端').click();await settle();
+ assert.deepEqual(calls.find(x=>x.action==='enqueue'),{action:'enqueue',task_id:id,task_version:3,source_version:null,instruction:'研究公开鞋款',model:'gpt-6-luna',public_research:true,product_id:'product:1'});
+ await findButton(h.elements.page,'读取云端待审成果').click();await settle();
+ const source=walk(h.elements.page).find(x=>x.tagName==='A' && x.href===url);assert.ok(source);assert.equal(source.rel,'noopener noreferrer');
+});
+test('国际站状态区显示采集时间和精确商品差异，不把未出现当下架',async()=>{
+ const h=harness('#/channels?view=alibaba'),original=h.originalFetch;
+ h.interceptFetch(async(path,opts)=>path==='/api/desk/channels'?{ok:true,json:async()=>({channels:[{id:'alibaba',title:'国际站',connection:{},
+  catalog_status:{state:'ready',stale:false,last_success_at:'2026-11-10T00:00:00Z',total:2,changes:null,
+   comparison:{matched:1,local_not_seen:1,ambiguous_ids:0,different:[{id:'101',product_id:'1',model:'BQ001',local:{status:'approved'},platform:{status:'tbd'}}]}}}]})}:original(path,opts));
+ await h.ui.bootstrap();await settle();assert.match(h.elements.page.textContent,/上次完整读取/);assert.match(h.elements.page.textContent,/状态不同 1 条/);
+ assert.match(h.elements.page.textContent,/未出现不等于下架/);await findButton(h.elements.page,'查看对应商品').click();assert.equal(h.location.hash,'/object/product%3A1');
+});
+
 test('已提交任务重新打开后可以读取云端真实状态', async () => {
   const h=harness(), original=h.originalFetch, requestId='c'.repeat(32), runId='d'.repeat(32), calls=[];
   h.interceptFetch(async(path,options={})=>{

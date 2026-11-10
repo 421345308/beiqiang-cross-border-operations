@@ -47,7 +47,7 @@ class TaskWorkspace:
                 sources[name] = today_sources.get(name, {'state': 'unavailable'})
             for item in today.get('groups', {}).get('act', []):
                 kind, oid = item.get('kind'), item.get('object_id')
-                if kind in ('customer_reply', 'buyer_mail') or (
+                if kind in ('customer_reply', 'buyer_mail', 'catalog_status') or (
                     kind == 'customer_action' and str(oid or '').startswith('customer:website-')
                 ):
                     inbox.append(dict(item))
