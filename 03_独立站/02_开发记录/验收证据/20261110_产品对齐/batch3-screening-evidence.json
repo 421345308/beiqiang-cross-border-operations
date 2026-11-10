@@ -1,0 +1,259 @@
+{
+  "recorded_at_utc": "2026-11-10T19:24:15+00:00",
+  "snapshot_observed_at_utc": "2026-11-10T15:46:25.435675+00:00",
+  "scope": "本批网站选款筛查记录；保留现有照片、图案和平台记录，不等同于认定侵权、许可、实时库存或当前详情展示状态。",
+  "products": [
+    {
+      "product_code": "BQ-LQ020",
+      "alibaba_id": "1601981423612",
+      "disposition": "本批资料不完整",
+      "observation": "清晰各色来源图多含人物或宣传文字；历史平台图组含已记录的生成或版式派生图，不能整体当作原相片。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/020准备/图片银行公开映射.json",
+          "sha256": "0dac55f0a8f3369352606b05c6403d4846559c326d5b16a95fc063d1dfaa55fd"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/020准备/当前来源与色码核对.json",
+          "sha256": "dd5019ac23bb7018f7476b33d2a87fc617b7fb485489379cf5e34fabd5c4bb35"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ026",
+      "alibaba_id": "1601980852086",
+      "disposition": "挂起标识及版本",
+      "observation": "来源图边框有 TAEND RUNNING 字样，鞋面图案归属与实际可销售版本未确认；不认定侵权或授权。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ026/BQ-LQ026_3322e220c805e06f.jpg",
+          "sha256": "3322e220c805e06fa02c515ab51ad2fd4f5ddcf9849c5432da97141c8e41235e"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ027",
+      "alibaba_id": "1601975774322",
+      "disposition": "本批资料不完整",
+      "observation": "只找到一张无人物无宣传文字的单鞋原图，其余可用色图含人物局部或宣传字；不得用生成图反推无标。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/027准备/商品预检与图组策略.json",
+          "sha256": "80fa20283992b458c157ac6378f0e040e62a4dba916edfeb60fc9880e75400c5"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ0922",
+      "alibaba_id": "1601980302105",
+      "disposition": "本批资料不完整",
+      "observation": "目前确认无人物、无文字的原图仅一张；黑灰色其他候选含人物或文字。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ0922/BQ-LQ0922_3e117805e3e8522f.jpg",
+          "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ1628",
+      "alibaba_id": "1601980330662",
+      "disposition": "挂起标识及版本",
+      "observation": "鞋侧两段金色曲线归属未明；旧形状对照未建立明确匹配，也不是许可。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ1628/BQ-LQ1628_f21f60f096a7d41f.jpg",
+          "sha256": "f21f60f096a7d41f77c9cb0942b41ee42a8d290ce8c17acffcc0eca525908d4e"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ1680",
+      "alibaba_id": "1601980486423",
+      "disposition": "挂起标识及核历史尺码",
+      "observation": "来源图鞋侧小字和旋钮图案归属未明。历史 AI 色码图写灰色 EU 33–48，2026-10-19 来源及正式 SKU 为灰色 EU 39–48；该图当时出现在 Detail shot 回读，2026-11-10 状态快照不能证明现今仍展示，需国际站按 ID 只读回查。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ1680/BQ-LQ1680_ce47bd4874468806.jpg",
+          "sha256": "ce47bd487446880606ef807bd8dbcb19b5419661aaabbb54c8ff304af666682e"
+        },
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ1680/BQ-LQ1680_176799614b7069a0.png",
+          "sha256": "176799614b7069a04c01f9185b980a2a46a27454a484c6638f65323fbe9b00b4"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_get.json",
+          "sha256": "ac70cb7c483246de5fd0db18a5e59226b1b7fda59ac2f5516e75529fee6e9062"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_render.json",
+          "sha256": "78cda864a5b3c6dc921ac7cfdbe11a00fddc9cdea5f76999678cae94d8cb404d"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1680准备/图片银行公开映射.json",
+          "sha256": "745d09867e948b12c6ab96821972563ff7e5918af7f20b2e8623f03060414d67"
+        }
+      ],
+      "historical_image_binding": {
+        "role": "D4",
+        "source_image_sha256": "176799614b7069a04c01f9185b980a2a46a27454a484c6638f65323fbe9b00b4",
+        "image_bank_url": "https://sc04.alicdn.com/kf/Hd8f79337c7e74921b05d176abeeebefcK/286385890/Hd8f79337c7e74921b05d176abeeebefcK.png",
+        "cdn_asset_key": "Hd8f79337c7e74921b05d176abeeebefcK",
+        "current_public_display": "unknown",
+        "formal_get_observed_at_utc": "2026-10-19T18:51:15.790951+00:00",
+        "formal_render_observed_at_utc": null
+      }
+    },
+    {
+      "product_code": "BQ-LQ1712",
+      "alibaba_id": "1601979415979",
+      "disposition": "挂起来源图组",
+      "observation": "供方图组一张广告含 WARRIOR 字样；不据此认定鞋标归属，需确认图组使用权和可销售版本。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/01_当前家族来源原图/02.jpg",
+          "sha256": "f27cb0e21ef1671d983f3f15e10a6b8ca82444941be1dfec8d3d2cee5cc180e5"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ2409",
+      "alibaba_id": "1601976084873",
+      "disposition": "挂起标识及版本",
+      "observation": "鞋底 OUTDOOR 字样与彩色星形旋钮图案的归属、可销售版本未确认。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ2409/BQ-LQ2409_395545a681f3c65d.jpg",
+          "sha256": "395545a681f3c65d5145369ccb094d35892e71f38a86d745943e34ce2c4aaefb"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ25019",
+      "alibaba_id": "1601975986800",
+      "disposition": "挂起图组装饰",
+      "observation": "来源图组右上有火球图形，归属与使用依据未确认；不判定商标或擦除图形。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ25019/BQ-LQ25019_211d132994d579ca.jpg",
+          "sha256": "211d132994d579ca2135975b6e322936f450092d1b71c2c2a2f06c8a10278ed2"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ323",
+      "alibaba_id": "1601980289624",
+      "disposition": "挂起素材权利",
+      "observation": "供方来源图上缘有 COPYRIGHT 和 ALL RIGHTS RESERVED 字样，具体主体不清；不能以同组别图无字推定许可。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ323/BQ-LQ323_da8e6e68e19ccba9.jpg",
+          "sha256": "da8e6e68e19ccba992ba80fadc33b1799bd440454d9438abd0345db4769999da"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ2569",
+      "alibaba_id": "1601981563053",
+      "disposition": "本批资料不完整",
+      "observation": "江上为补充色图来源，非产品中心已采用来源；粉色无干净独立静物图。橡胶底文字与正式字段及旧图有冲突，未确定底材。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/家族来源与页面计划.json",
+          "sha256": "a354c83a4aeaa6858b8eecb17236108481e8fde518ba41751404f5992b44c8cc"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-LQ995",
+      "alibaba_id": "1601979365545",
+      "disposition": "本批资料不完整",
+      "observation": "各色可直接展示图不足；候选中有露脸人物且未查到模特授权，涉水画面不证明防水。",
+      "evidence": [
+        {
+          "path": "01_产品资产/01_原始素材/BQ-LQ995/BQ-LQ995_e5d7b77a8aa3d88b.jpg",
+          "sha256": "e5d7b77a8aa3d88bd055349e6387a2419fbb56b143d41fb07acc08ac053d3fc0"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-WBF2888",
+      "alibaba_id": "1601970034464",
+      "disposition": "挂起素材权利",
+      "observation": "原详情图鞋旁纸箱有头像及注册标记，另一图有摄影造型署名；需确认图片使用权和可销售版本。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/F2888_API完整新建_2026-10-02_task2/supplier_originals/detail_14.jpg",
+          "sha256": "38809c34d5e519339f5fd02e7881d5a3a55c65c3c269b1ec8d539aea226a8e9e"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/F2888_API完整新建_2026-10-02_task2/supplier_originals/detail_08.jpg",
+          "sha256": "9a72794c1644df2f0dd05e397000774477537625e83650a4e5cd2cc2c2d05953"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-MJ9968",
+      "alibaba_id": "1601969788941",
+      "disposition": "挂起素材权利",
+      "observation": "供方原详情图人物帽子有 imis 字样；图组含模特及不同展示版本，未见独立摄影使用依据。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/9968_API完整新建_2026-10-02/README.md",
+          "sha256": "2eacee1fb22ad58835a950cefad998fab518505cc160ee886b52a0677e5593dd"
+        }
+      ],
+      "source_images": [
+        {
+          "index": 0,
+          "url": "https://images.xiecdn.com/qdnx/s4k15s4cl95nufblsdw0cdgz74louu3b.jpg!bac",
+          "sha256": "c5c2b3022a44c7147551a9283dda05dda4acb8346155bc7c9ac7af9b5e8704be",
+          "curl_exit": 0
+        },
+        {
+          "index": 4,
+          "url": "https://images.xiecdn.com/qdnx/f5we72a8bj3wwiq60233izr2amrdc8tu.jpg!bac",
+          "sha256": "1dddcf1b819fc52ea2860651c8e7873970f5677cb530c96ea5762a40827be660",
+          "curl_exit": 0
+        }
+      ],
+      "source_images_observed_at_utc": "2026-11-10T19:08:33+00:00"
+    },
+    {
+      "product_code": "BQ-ABH219",
+      "alibaba_id": "1601969936536",
+      "disposition": "挂起素材权利",
+      "observation": "既有视觉候选记录指出鞋盒 Sweet Love 字样及清理背景计划；需找可原样使用且权利明确的图组，不将历史计划当作授权。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/H219_API完整新建_2026-10-02_task2/evidence/candidate.json",
+          "sha256": "ce7c3b6f96f50540afef7cb21c54ca6430defe991578380914f61392fcee0f25"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-D805",
+      "alibaba_id": "1601969877983",
+      "disposition": "挂起标识及版本",
+      "observation": "来源图鞋垫可见 Fashion 字样；其含义、权属及实际销售版本未确认，不认定侵权或授权。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/805_API完整新建_2026-10-02/source/published/02.jpg",
+          "sha256": "e679f1023feac181c7879b0449c911b16b773363a6be96f21db95ac9bead25f3"
+        }
+      ]
+    },
+    {
+      "product_code": "BQ-NS003",
+      "alibaba_id": "1601970690721",
+      "disposition": "本批资料不完整",
+      "observation": "2026-10-20 正式字段七色、75 SKU，旧来源准备表四色且新增色图路径本机缺失；针织文本位置及鞋面字段需核，不能用旧资料覆盖平台。",
+      "evidence": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601970690721/formal_get.json",
+          "sha256": "bf65ef2ef7b4df0d3dc1a3be58c1bfb4067d5173a254c5f7ae3fc4a3fe0c676c"
+        }
+      ]
+    }
+  ]
+}
