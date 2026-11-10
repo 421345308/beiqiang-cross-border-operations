@@ -21,6 +21,10 @@ class FakeQueue:
             return {'runs': [{key: self.run.get(key) for key in ('id', 'title', 'summary', 'source', 'status', 'updated_at')}]}
         if action == 'status':
             return {'run': self.run.copy()}
+        if action == 'review_no_change':
+            if body['expected_version'] != self.run['version']: raise ValueError('version changed')
+            self.run['status'] = 'accepted'
+            return {'run': {'id': self.run['id'], 'status': 'accepted'}}
         raise AssertionError('Unexpected cloud mutation')
 
 
@@ -37,7 +41,7 @@ class CloudReviewTests(unittest.TestCase):
         self.state.mkdir()
         (self.state / 'cloud-bridge').mkdir()
         (self.state / 'cloud-bridge' / 'secret').write_text('fixture-secret-'+'x'*40, encoding='utf-8')
-        self.run = {'id': 'a'*32, 'task_id': 'b'*32, 'title': '云端测试', 'status': 'awaiting_review',
+        self.run = {'id': 'a'*32, 'task_id': 'b'*32, 'title': '云端测试', 'status': 'awaiting_review', 'version': 3,
                     'source': self.source, 'source_version': 2, 'source_hash': hashlib.sha256('旧成果\n'.encode()).hexdigest(),
                     'summary': '建议更新', 'updated_at': '2026-11-10T00:00:00Z',
                     'result': {'summary': '建议更新', 'next_steps': ['核对'],
@@ -62,6 +66,24 @@ class CloudReviewTests(unittest.TestCase):
         with self.assertRaises(ValueError): self.bridge.apply(self.run['id'], preview['proposal_hash'])
         self.assertTrue(self.bridge.preview(self.run['id'])['conflict'])
         self.assertEqual(self.path.read_text(encoding='utf-8'), '人工更新\n')
+
+    def test_no_change_review_requires_the_exact_preview_and_never_writes_source(self):
+        self.run['result']['changes'] = []
+        preview = self.bridge.preview(self.run['id'])
+        with self.assertRaises(ValueError): self.bridge.acknowledge(self.run['id'], 'b'*64)
+        self.assertFalse(any(action == 'review_no_change' for action, _ in self.queue.calls))
+        result = self.bridge.acknowledge(self.run['id'], preview['proposal_hash'])
+        self.assertEqual(result['status'], 'accepted')
+        self.assertEqual(self.path.read_text(encoding='utf-8'), '旧成果\n')
+        self.assertEqual(next(body for action, body in self.queue.calls if action == 'review_no_change')['expected_version'], 3)
+
+    def test_source_free_conclusion_can_be_reviewed_without_creating_a_file(self):
+        self.run.update(source=None, source_version=None, source_hash=None)
+        self.run['result']['changes'] = []
+        preview = self.bridge.preview(self.run['id'])
+        self.assertEqual(len(preview['proposal_hash']), 64)
+        self.assertEqual(self.bridge.acknowledge(self.run['id'], preview['proposal_hash'])['status'], 'accepted')
+        self.assertEqual(self.path.read_text(encoding='utf-8'), '旧成果\n')
 
     def test_cloud_status_change_or_cross_source_is_not_applied(self):
         preview = self.bridge.preview(self.run['id'])

@@ -212,6 +212,8 @@ class CloudReview:
             raise ValueError('云端运行身份不一致，请重新读取。')
         if run.get('status') != 'awaiting_review' or run.get('kind') == 'inquiry_review':
             raise ValueError('此成果不再待审，或应在网站询盘中处理。')
+        if type(run.get('version')) is not int or run['version'] < 1:
+            raise ValueError('云端成果版本无效，请重新读取。')
         if 'source' not in run or 'source_version' not in run:
             raise ValueError('云端服务尚未提供原资料版本，请先完成服务更新。')
         result = run.get('result')
@@ -223,10 +225,10 @@ class CloudReview:
                     'summary': result.get('summary'), 'changes': result.get('changes'),
                     'next_steps': result.get('next_steps')}
         _review.validate(proposal)
-        return proposal
+        return proposal, run['version']
 
     def preview(self, run_id):
-        proposal = self._proposal(run_id)
+        proposal, _ = self._proposal(run_id)
         try:
             preview = _review.review(proposal, self.root)
         except ValueError as error:
@@ -237,13 +239,13 @@ class CloudReview:
             raise
         return {'run_id': run_id, 'source': proposal['source'], 'summary': proposal['summary'],
                 'next_steps': proposal['next_steps'], 'changes': len(proposal['changes']),
-                'diff': preview.get('diff', ''), 'proposal_hash': preview.get('proposal_hash'),
+                'diff': preview.get('diff', ''), 'proposal_hash': preview.get('proposal_hash') or _review.digest(json.dumps(proposal,sort_keys=True,ensure_ascii=False,separators=(',',':'))),
                 'conflict': False}
 
     def apply(self, run_id, expected_hash):
         if not isinstance(expected_hash, str) or not re.fullmatch(r'[0-9a-f]{64}', expected_hash):
             raise ValueError('请先预览当前云端成果。')
-        proposal = self._proposal(run_id)
+        proposal, _ = self._proposal(run_id)
         try:
             current = _review.review(proposal, self.root)
         except ValueError:
@@ -258,3 +260,26 @@ class CloudReview:
             raise ValueError('本地资料已变化或已有写回，请核对后再处理。') from None
         return {'run_id': run_id, 'status': applied['status'],
                 'message': '已写回本地原资料；云端审阅状态仍需同步确认。'}
+
+    def acknowledge(self, run_id, expected_hash):
+        if not isinstance(expected_hash, str) or not re.fullmatch(r'[0-9a-f]{64}', expected_hash):
+            raise ValueError('请先预览当前云端成果。')
+        proposal, version = self._proposal(run_id)
+        if proposal['changes']:
+            raise ValueError('此成果包含原资料修改，请使用写回流程。')
+        try:
+            current = _review.review(proposal, self.root)
+        except ValueError:
+            raise ValueError('本地资料已变化，请重新预览。') from None
+        fingerprint = current.get('proposal_hash') or _review.digest(json.dumps(proposal,sort_keys=True,ensure_ascii=False,separators=(',',':')))
+        if fingerprint != expected_hash:
+            raise ValueError('云端成果已变化，请重新预览。')
+        try:
+            run = self._call('review_no_change', run_id=run_id, expected_version=version).get('run')
+        except CloudRejected as error:
+            raise ValueError(str(error)) from None
+        except ValueError:
+            raise ValueError('云端确认结果尚未核实，请先查看云端状态。') from None
+        if not isinstance(run, dict) or run.get('id') != run_id or run.get('status') != 'accepted':
+            raise ValueError('云端确认结果尚未核实，请先查看云端状态。')
+        return {'run_id': run_id, 'status': 'accepted', 'message': '已确认审阅；本地原资料没有改动。'}

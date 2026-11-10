@@ -1,8 +1,8 @@
 # 原生执行器
 
 配合网站 `self-hosted/deploy/`，独立 `beiqiang-runner` 非root账号。
-2026-11-10 在制：新增 `WORKBENCH_RUNNER_ENGINE=responses` 可明确选择 Responses API 后端，复用现有 API systemd 凭证；本机任务桥使用另一把独立随机密钥，不能复用 runner 凭证。源码和隔离测试已完成，正式服务切换及真实队列回读尚待服务器连接，旧部署继续运行。
-2026-11-10：负责人改选 API 后，新加坡 VPS 的 runner 现运行 `20261110-v9-lockfix`，数据库锁冲突修复与实际内部任务回传见[云端执行入口](../../README.md)。API key 放在服务器 root 0600 文件，通过 systemd `LoadCredential=openai-api-key:<服务器私有文件>` 提供给非root执行器，`WORKBENCH_RUNNER_AUTH=api`；文件内容和实际路径不进入公开仓库。服务依旧按单实例运行、限制内存与 CPU；仅服务器明确确认领取事务已回滚时可继续轮询，未知结果仍停下对账。负责人决定暂不设置金额上限，实际关机后独立执行仍待验收。以下原 ChatGPT 设备登录过程为历史备选，不必重复登录。
+2026-11-10 晚：`WORKBENCH_RUNNER_ENGINE=responses` 已启用，复用原 API systemd 凭证；本机任务桥使用另一把独立随机密钥。当前 runner release `20261110T125724Z-responses` 已完成真实资料任务及本机服务离线执行回读。空闲心跳的暂时性网络失败只在领取之前重试，未知领取或执行结果仍须对账。实际整机关机与长期稳定性待验收。
+2026-11-10：负责人改选 API 后，新加坡 VPS 的 runner 当时运行 `20261110-v9-lockfix`，当前版本见上文；数据库锁冲突修复与实际内部任务回传见[云端执行入口](../../README.md)。API key 放在服务器 root 0600 文件，通过 systemd `LoadCredential=openai-api-key:<服务器私有文件>` 提供给非root执行器，`WORKBENCH_RUNNER_AUTH=api`；文件内容和实际路径不进入公开仓库。服务依旧按单实例运行、限制内存与 CPU；仅服务器明确确认领取事务已回滚时可继续轮询，未知结果仍停下对账。负责人决定暂不设置金额上限，实际关机后独立执行仍待验收。以下原 ChatGPT 设备登录过程为历史备选，不必重复登录。
 
 原安装记录：固定Codex CLI 0.166.0，非root可执行且真实私有挂载/0700写入验证通过。安装固定 `@openai/codex@0.166.0` 到
 `/opt/beiqiang-codex`（将`/opt/beiqiang/runtime/node/bin`加入本次安装PATH后运行

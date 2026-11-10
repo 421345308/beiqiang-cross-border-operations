@@ -29,6 +29,7 @@ class DeskHTTPTests(unittest.TestCase):
             def reconcile_dispatch(self, request_id): return {'request_id': request_id, 'status': 'confirmed'}
             def preview(self, run_id): return {'run_id': run_id, 'proposal_hash': 'b'*64}
             def apply(self, run_id, proposal_hash): return {'run_id': run_id, 'status': 'applied'}
+            def acknowledge(self, run_id, proposal_hash): return {'run_id': run_id, 'status': 'accepted'}
         self.app.cloud_review=Cloud()
         try: denied=self.request('/api/desk/cloud-review', {'action':'list'}, token=False)[0]
         except (ConnectionAbortedError,ConnectionResetError): denied=0  # Windows may reset an unread rejected body.
@@ -38,6 +39,7 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'enqueue','task_id':'b'*32,'task_version':1,'source_version':None,'instruction':'测试','model':'gpt-6-luna'})[1]['status'],'queued')
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'preview','run_id':'a'*32})[1]['proposal_hash'],'b'*64)
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'proposal_hash':'b'*64})[1]['status'],'applied')
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'acknowledge','run_id':'a'*32,'proposal_hash':'b'*64})[1]['status'],'accepted')
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'extra':'x'})[0],400)
 
     def test_douyin_unbound_session_probe_requires_explicit_query(self):

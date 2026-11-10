@@ -502,6 +502,7 @@ class Handler(BaseHTTPRequestHandler):
                 if action=='reconcile' and set(body)=={'action','request_id'}:return self.send_json(app.cloud_review.reconcile_dispatch(body['request_id']))
                 if action=='preview' and set(body)=={'action','run_id'}:return self.send_json(app.cloud_review.preview(body['run_id']))
                 if action=='apply' and set(body)=={'action','run_id','proposal_hash'}:return self.send_json(app.cloud_review.apply(body['run_id'],body['proposal_hash']))
+                if action=='acknowledge' and set(body)=={'action','run_id','proposal_hash'}:return self.send_json(app.cloud_review.acknowledge(body['run_id'],body['proposal_hash']))
                 raise ValueError('云端成果请求字段无效')
             if extension:
                 bridge=app.miaoshou_bridge

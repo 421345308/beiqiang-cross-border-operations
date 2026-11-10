@@ -120,6 +120,43 @@ test('本机明确提交选定任务到云端并携带已读取的版本', async
   assert.ok(h.elements.page.textContent.includes('云端已确认任务'));
 });
 
+test('已提交任务重新打开后可以读取云端真实状态', async () => {
+  const h=harness(), original=h.originalFetch, requestId='c'.repeat(32), runId='d'.repeat(32), calls=[];
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/cloud-review'){
+      const body=JSON.parse(options.body); calls.push(body);
+      if(body.action==='tasks')return {ok:true,json:async()=>({tasks:[]})};
+      if(body.action==='dispatches')return {ok:true,json:async()=>({dispatches:[{request_id:requestId,run_id:runId,title:'经营任务',status:'confirmed'}]})};
+      if(body.action==='reconcile')return {ok:true,json:async()=>({status:'confirmed',run_id:runId,run_status:'awaiting_review'})};
+    }
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'读取可交给云端的任务').click();await settle();
+  assert.ok(h.elements.page.textContent.includes('云端已接收，可查看状态'));
+  await findButton(h.elements.page,'查看云端状态').click();await settle();
+  assert.deepEqual(calls.find(item=>item.action==='reconcile'),{action:'reconcile',request_id:requestId});
+  assert.ok(h.elements.page.textContent.includes('已完成，待审阅'));
+});
+
+test('没有原文修改的成果须先预览再明确确认审阅', async () => {
+  const h=harness(), original=h.originalFetch, id='a'.repeat(32), fingerprint='b'.repeat(64), calls=[];
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/cloud-review'){
+      const body=JSON.parse(options.body);calls.push(body);
+      if(body.action==='list')return {ok:true,json:async()=>({runs:[{id,title:'内部结论',summary:'待审阅'}]})};
+      if(body.action==='preview')return {ok:true,json:async()=>({run_id:id,summary:'已形成总结',next_steps:[],changes:0,proposal_hash:fingerprint,conflict:false})};
+      if(body.action==='acknowledge')return {ok:true,json:async()=>({status:'accepted',message:'已确认审阅；本地原资料没有改动。'})};
+    }
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'读取云端待审成果').click();await settle();
+  assert.ok(!walk(h.elements.page).some(x=>x.tagName==='BUTTON' && x.textContent==='确认已审阅'));
+  await findButton(h.elements.page,'预览成果').click();await settle();
+  await findButton(h.elements.page,'确认已审阅').click();await settle();
+  assert.deepEqual(calls.find(item=>item.action==='acknowledge'),{action:'acknowledge',run_id:id,proposal_hash:fingerprint});
+  assert.ok(h.elements.page.textContent.includes('本地原资料没有改动'));
+});
+
 test('商品素材明确选择后引用到选定创作画布', async () => {
   const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
   h.interceptFetch(async(path,options={})=>{
