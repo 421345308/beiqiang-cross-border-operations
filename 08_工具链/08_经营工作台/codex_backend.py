@@ -55,7 +55,7 @@ class CodexBackend:
     @staticmethod
     def spawn(command, *, env, flags):
         return subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                stderr=subprocess.STDOUT, text=True, encoding='utf-8',
+                                stderr=subprocess.PIPE, text=True, encoding='utf-8',
                                 errors='replace', env=env, **flags)
 
     @staticmethod

@@ -4,9 +4,132 @@ import os
 from pathlib import Path
 import time
 import unittest
+import shutil
+import uuid
 
 import tests_desk_http as http_fixtures
 from tests_agent_jobs import join_job_threads
+
+
+def retain_failed_synthetic_logs(test, fixture):
+    """Keep only opt-in synthetic diagnostics privately when acceptance fails."""
+    result=getattr(getattr(test,'_outcome',None),'result',None)
+    failed=bool(result and any(case is test for case,_ in list(result.failures)+list(result.errors)))
+    if not failed:return
+    destination=Path(__file__).resolve().parent/'.local'/'live-acceptance-failures'/uuid.uuid4().hex
+    source=Path(fixture.app.state)/'agent-jobs'
+    for name in ('diagnostics.log','source-reads.jsonl'):
+        for path in source.glob('*/attempt-*/'+name):
+            target=destination/path.relative_to(source)
+            target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(path,target)
+    print('SYNTHETIC_FAILURE_LOGS '+str(destination))
+
+
+def tool_failed(item):
+    result=item.get('result')
+    return bool(item.get('error') or (isinstance(result,dict) and result.get('isError'))
+                or item.get('status') in ('failed','error','cancelled'))
+
+
+class DiagnosticEnvelopeTests(unittest.TestCase):
+    def test_oversized_completed_tool_keeps_valid_metadata_and_next_event(self):
+        import tempfile
+        from types import SimpleNamespace
+        from agent_jobs import AgentJobs
+        jobs=object.__new__(AgentJobs);jobs.app=SimpleNamespace()
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)
+            large={'type':'item.completed','item':{'id':'call-large','type':'mcp_tool_call',
+                'server':'beiqiang_business','tool':'save_customer_profile','status':'completed',
+                'arguments':{'private':'DO_NOT_RETAIN_ARGUMENT'},'result':{'content':'x'*40000},'error':None}}
+            original=json.dumps(large)+'\n'
+            next_event=json.dumps({'type':'item.completed','item':{'id':'call-next','type':'mcp_tool_call','tool':'get_customer_profile'}})+'\n'
+            old_output=original[:32000]+next_event[:32000]
+            self.assertEqual(len(old_output.splitlines()),1)
+            with self.assertRaises(ValueError):json.loads(old_output)
+            jobs._diagnostic(path,original)
+            jobs._diagnostic(path,json.dumps({'type':'item.completed','item':{'id':'call-next','type':'mcp_tool_call','tool':'get_customer_profile'}})+'\n')
+            lines=(path/'diagnostics.log').read_text(encoding='utf-8').splitlines()
+            self.assertEqual(len(lines),2)
+            first,second=map(json.loads,lines)
+            self.assertEqual(first['type'],'item.completed')
+            self.assertEqual(first['item'],{'id':'call-large','type':'mcp_tool_call','server':'beiqiang_business',
+                                           'tool':'save_customer_profile','status':'completed','error':False})
+            self.assertTrue(first['diagnostic_projection']['truncated'])
+            self.assertNotIn('DO_NOT_RETAIN_ARGUMENT',lines[0])
+            self.assertNotIn('result',first['item'])
+            self.assertEqual(second['item']['id'],'call-next')
+            self.assertLess(len(lines[0]),1000)
+    def test_held_stderr_reader_cannot_block_job_completion(self):
+        import threading
+        from unittest.mock import patch
+        from tests_agent_jobs import AgentJobTests
+        fixture=AgentJobTests(methodName='runTest');fixture.setUp()
+        release=threading.Event();closed=threading.Event()
+        class HeldStderr:
+            def __iter__(self):
+                release.wait(20)
+                return iter(())
+            def close(self):closed.set()
+        original_spawn=fixture.jobs.backend.spawn
+        def spawn(*args,**kwargs):
+            process=original_spawn(*args,**kwargs);process.stderr=HeldStderr();return process
+        original_join=threading.Thread.join
+        def short_join(thread,timeout=None):
+            return original_join(thread,.01 if thread.name.startswith('agent-stderr-') else timeout)
+        try:
+            with patch.object(fixture.jobs.backend,'spawn',side_effect=spawn),patch.object(threading.Thread,'join',short_join):
+                started=time.monotonic()
+                job=fixture.wait(fixture.jobs.start('product:shoe','synthetic only'))
+                self.assertLess(time.monotonic()-started,2)
+                self.assertEqual(job['status'],'completed')
+                self.assertFalse(closed.is_set(),'Main worker must not synchronously close an active reader')
+                log=Path(fixture.app.state)/'agent-jobs'/job['id']/'attempt-1'/'diagnostics.log'
+                self.assertIn('"diagnostic_trace_incomplete": true',log.read_text(encoding='utf-8'))
+            release.set()
+            self.assertTrue(closed.wait(2),'Reader owns and eventually closes stderr')
+        finally:
+            release.set();fixture.tearDown()
+
+    def test_backend_separates_stderr_telemetry_from_json_events(self):
+        import sys
+        import threading
+        from codex_backend import CodexBackend
+        code="import sys; sys.stdout.write('{\"type\":\"item.completed\",\"item\":{\"type\":\"mcp_tool_call\",\"tool\":\"save_customer_profile\"}}');sys.stdout.flush();sys.stderr.write('TELEMETRY\\n');sys.stderr.flush();sys.stdout.write('\\n');sys.stdout.flush()"
+        process=CodexBackend.spawn([sys.executable,'-c',code],env=os.environ.copy(),flags={})
+        captured=[]
+        reader=threading.Thread(target=lambda:captured.extend(process.stderr.readlines()))
+        reader.start()
+        stdout=process.stdout.read();process.wait(timeout=10);reader.join(timeout=10)
+        for stream in (process.stdin,process.stdout,process.stderr):stream.close()
+        self.assertEqual(json.loads(stdout)['item']['tool'],'save_customer_profile')
+        self.assertEqual(captured,['TELEMETRY\n'])
+        # The old STDERR=STDOUT route produces a single invalid JSON line.
+        with self.assertRaises(ValueError):json.loads(stdout.rstrip('\n')+captured[0]+'\n')
+
+    def test_oversized_error_and_size_cap_are_not_successful_complete_trace(self):
+        import tempfile
+        from types import SimpleNamespace
+        from agent_jobs import AgentJobs
+        jobs=object.__new__(AgentJobs);jobs.app=SimpleNamespace()
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)
+            event={'type':'item.completed','item':{'type':'mcp_tool_call','tool':'save_customer_profile',
+                'status':'completed','error':None,'result':{'isError':True,'content':'x'*40000}}}
+            jobs._diagnostic(path,json.dumps(event))
+            projected=json.loads((path/'diagnostics.log').read_text())
+            self.assertTrue(tool_failed(projected['item']))
+            jobs._diagnostic(path,'non JSON diagnostic without newline')
+            jobs._diagnostic(path,json.dumps({'type':'turn.completed'}))
+            lines=(path/'diagnostics.log').read_text().splitlines()
+            self.assertEqual(json.loads(lines[-1])['type'],'turn.completed')
+            (path/'diagnostics.log').write_text('x'*2_000_000)
+            jobs._diagnostic(path,json.dumps(event))
+            size=(path/'diagnostics.log').stat().st_size
+            jobs._diagnostic(path,json.dumps(event))
+            self.assertEqual((path/'diagnostics.log').stat().st_size,size)
+            self.assertTrue(json.loads((path/'diagnostics.log').read_text().splitlines()[-1])['diagnostic_trace_incomplete'])
 
 
 @unittest.skipUnless(os.environ.get('BEIQIANG_LIVE_CODEX') == '1', 'Consumes one real model invocation')
@@ -37,6 +160,7 @@ class OutreachLiveCodexTests(unittest.TestCase):
         join_job_threads(jobs, job['id'])
         final = drafts._saved(oid)
         diagnostics = Path(fixture.app.state) / 'agent-jobs' / job['id'] / 'attempt-1' / 'diagnostics.log'
+        self.assertNotIn('\"diagnostic_trace_incomplete\": true',diagnostics.read_text(encoding='utf8'))
         events = []
         for line in diagnostics.read_text(encoding='utf8').splitlines() if diagnostics.exists() else []:
             try: event = json.loads(line)
@@ -44,7 +168,7 @@ class OutreachLiveCodexTests(unittest.TestCase):
             item = event.get('item') or {}
             if event.get('type') == 'item.completed' and item.get('type') in ('mcp_tool_call', 'tool_call', 'web_search', 'command_execution'):
                 events.append({'type': item.get('type'), 'server': item.get('server'),
-                               'tool': item.get('tool'), 'error': bool(item.get('error'))})
+                               'tool': item.get('tool'), 'error': tool_failed(item)})
         result = {'status': job['status'], 'error': job.get('error'), 'batch_id_saved': job.get('batch_id') == 'a' * 32,
                   'english_updated': final.get('body_en') == marker, 'chinese_updated': final.get('body_zh') == '模拟内容已修改',
                   'recipient_unchanged': final.get('to') == original['to'],
@@ -60,6 +184,7 @@ class OutreachLiveCodexTests(unittest.TestCase):
     def test_two_research_agents_prepare_separate_synthetic_customers(self):
         fixture = http_fixtures.DeskHTTPTests()
         fixture.setUp(); self.addCleanup(fixture.tearDown)
+        self.addCleanup(retain_failed_synthetic_logs,self,fixture)
         fixture.stop.stop(); fixture.which.stop(); fixture.popen.stop()
         for name in ('Synthetic Research Alpha', 'Synthetic Research Beta'):
             fixture.app.inquiry_intake.add({'channel': 'other', 'original_text': 'Synthetic research only: '+name, 'company': name})
@@ -94,13 +219,14 @@ class OutreachLiveCodexTests(unittest.TestCase):
             join_job_threads(jobs, job['id'])
             profile = fixture.app.customer_workspace.profile(oid); draft = fixture.app.gmail_drafts._saved(oid) or {}
             diagnostics = Path(fixture.app.state) / 'agent-jobs' / job['id'] / 'attempt-1' / 'diagnostics.log'
+            self.assertNotIn('\"diagnostic_trace_incomplete\": true',diagnostics.read_text(encoding='utf8'))
             events = []
             for line in diagnostics.read_text(encoding='utf8').splitlines() if diagnostics.exists() else []:
                 try: event = json.loads(line)
                 except ValueError: continue
                 item = event.get('item') or {}
                 if event.get('type') == 'item.completed' and item.get('type') in ('mcp_tool_call','tool_call','web_search','command_execution'):
-                    events.append({'type':item.get('type'),'tool':item.get('tool'),'error':bool(item.get('error'))})
+                    events.append({'type':item.get('type'),'tool':item.get('tool'),'error':tool_failed(item)})
             results[oid] = {'status':job['status'],'error':job.get('error'),
                 'profile_saved':profile['analysis'].get('brief') == marker,
                 'draft_saved':draft.get('subject') == marker and draft.get('to') == 'buyer'+str(index)+'@example.invalid'

@@ -85,6 +85,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
         self.app = app
         self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
         self.lock = threading.RLock()
+        self._diagnostic_lock = threading.RLock()
         self.processes = {}
         self.threads = {}
         self.owner_id = uuid.uuid4().hex
@@ -439,6 +440,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
         process = None
         folder = None
         phase = '启动'
+        stderr_thread = None
         try:
             with self.lock:
                 job = self.get_job(job_id)
@@ -476,6 +478,21 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     env['BEIQIANG_MIAOSHOU_BRIDGE_TOKEN']=token
                     env['BEIQIANG_MIAOSHOU_BRIDGE_URL']=url
             process = self.backend.spawn(command,env=env,flags=flags)
+            stderr = getattr(process, 'stderr', None)
+            if stderr is not None:
+                def drain_stderr():
+                    try:
+                        for diagnostic in stderr:
+                            self._diagnostic(folder, json.dumps({'type':'stderr_diagnostic',
+                                'message':self._clean(diagnostic)[:30000]},ensure_ascii=False)+'\n')
+                    except (OSError,ValueError):
+                        self._diagnostic(folder,json.dumps({'diagnostic_trace_incomplete':True,
+                            'reason':'stderr_reader_failed'})+'\n')
+                    finally:
+                        try:stderr.close()
+                        except (OSError,ValueError):pass
+                stderr_thread = threading.Thread(target=drain_stderr,daemon=True,name='agent-stderr-'+job_id[:8])
+                stderr_thread.start()
             with self.lock:
                 self.processes[job_id] = process
                 current = self.get_job(job_id)
@@ -526,6 +543,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     excerpt = re.sub(r'\s+', ' ', self._clean(event.get('text', ''))).strip()[:180]
                     self._progress(job_id, 'message', excerpt or 'Agent已产出一段回复。')
             code = process.wait()
+            if stderr_thread is not None:stderr_thread.join(timeout=5)
             self._diagnostic(folder, '\n[process exit] ' + str(code) + '\n')
             with self.lock:
                 job = self.get_job(job_id)
@@ -603,6 +621,14 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     self._event(job, 'failed', '本次工作未完成。')
                     self._save(job)
         finally:
+            if stderr_thread is not None:
+                stderr_thread.join(timeout=5)
+                stderr = getattr(process, 'stderr', None)
+                if stderr_thread.is_alive() and stderr is not None:
+                    self._diagnostic(folder,json.dumps({'diagnostic_trace_incomplete':True,
+                        'reason':'stderr_reader_not_finished'})+'\n')
+                    # The reader owns close: synchronous TextIO.close here can
+                    # block on readline's lock if a descendant holds the pipe.
             with self.lock:
                 self.processes.pop(job_id, None)
                 self.threads.pop(job_id, None)
@@ -612,7 +638,10 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     job['process_id'] = None
                 self._save(job)
             if process is not None:
-                for stream in (process.stdin, process.stdout):
+                streams = [process.stdin, process.stdout]
+                if stderr_thread is None or not stderr_thread.is_alive():
+                    streams.append(getattr(process, 'stderr', None))
+                for stream in streams:
                     if stream is not None:
                         stream.close()
 
@@ -622,11 +651,46 @@ class AgentJobs(TaskContinuity, JobDependencies):
         return value.replace(token,'[redacted]') if token else value
 
     def _diagnostic(self, folder, text):
+        if not hasattr(self,'_diagnostic_lock'):
+            self._diagnostic_lock = threading.RLock()
+        with self._diagnostic_lock:
+            self._diagnostic_unlocked(folder,text)
+
+    def _diagnostic_unlocked(self, folder, text):
         path = folder / 'diagnostics.log'
         try:
-            if not path.exists() or path.stat().st_size < 2_000_000:
-                with path.open('a', encoding='utf-8') as stream:
-                    stream.write(self._clean(text)[:32000])
+            if path.exists() and path.stat().st_size >= 2_000_000:
+                marker = json.dumps({'diagnostic_trace_incomplete': True, 'reason': 'diagnostic_size_cap'}) + '\n'
+                # Once marked, never keep appending markers above the cap.
+                with path.open('rb') as stream:
+                    stream.seek(max(0,path.stat().st_size-300))
+                    marked = b'diagnostic_trace_incomplete' in stream.read()
+                if not marked:
+                    with path.open('a',encoding='utf-8') as stream:stream.write('\n'+marker)
+                return
+            value = self._clean(text)
+            if len(value) > 32000:
+                # CLI tool results may exceed the diagnostic excerpt cap.
+                # Keep a valid, bounded event envelope so a real completed
+                # tool call is not lost, and never merge the following line.
+                try:
+                    event = json.loads(value)
+                except (ValueError, TypeError):
+                    event = None
+                if isinstance(event, dict) and isinstance(event.get('item'), dict):
+                    item = event['item']
+                    projected = {key: item[key][:300] for key in ('id','type','server','tool','status')
+                                 if isinstance(item.get(key), str)}
+                    projected['error'] = bool(item.get('error'))
+                    if isinstance(item.get('result'),dict) and 'isError' in item['result']:
+                        projected['result'] = {'isError': item['result']['isError']}
+                    value = json.dumps({'type': event.get('type'), 'item': projected,
+                        'diagnostic_projection': {'truncated': True, 'original_chars': len(value),
+                                                  'omitted': ['arguments','result','output']}}, ensure_ascii=False)
+                else:
+                    value = value[:32000] + '\n[diagnostic excerpt truncated]'
+            with path.open('a', encoding='utf-8') as stream:
+                stream.write(value if value.endswith('\n') else value + '\n')
         except OSError:
             pass  # An unavailable diagnostic file must not lose terminal state.
 
