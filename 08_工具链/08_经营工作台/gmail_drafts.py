@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import base64
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
 import hashlib
@@ -120,9 +120,25 @@ class GmailDrafts:
             return False
         try:
             grant = self.grant_reader(account) or {}
-            return bool(grant.get('refresh_token') and REQUIRED_SCOPES.issubset(_scopes(grant.get('scopes'))))
+            configured = bool(grant.get('refresh_token') and REQUIRED_SCOPES.issubset(_scopes(grant.get('scopes'))))
+            if not configured:
+                return False
+            # Read and send are separately granted. A fresh read grant must not
+            # make an older, seven-day test-mode send grant appear usable.
+            if self.app.gmail.status().get('authorization_expires_at') and grant.get('authorized_at'):
+                authorized = datetime.fromisoformat(grant['authorized_at'].replace('Z', '+00:00'))
+                if authorized.tzinfo is None:
+                    return False
+                if datetime.now(timezone.utc) >= authorized + timedelta(days=7):
+                    return False
+            return True
         except Exception:
             return False
+
+    def authorization_status(self):
+        # This reports saved-grant readiness, not proof that Google will accept
+        # a future send; the send path still refreshes and checks the grant.
+        return {'state':'configured' if self._can_send(self._account()) else 'needs_authorization'}
 
     def _new(self, obj):
         object_id = obj['id']

@@ -115,6 +115,7 @@ class Tests(unittest.TestCase):
         s.finish_oauth('state','code');stored=json.loads((self.app.state/'gmail.json').read_text())
         self.assertEqual(stored['connected_at'],config['connected_at']);self.assertEqual(stored['publishing_status'],'testing')
         self.assertEqual((__import__('datetime').datetime.fromisoformat(s.status()['authorization_expires_at'])-__import__('datetime').datetime.fromisoformat(stored['authorized_at'])).days,7)
+        self.assertEqual(s.buyer_candidates()['status']['authorization_expires_at'],s.status()['authorization_expires_at'])
     def test_answered(self):
         s=self.connect();self.mail.messages=[message(),message('answer','outbound','2026-11-01T03:00:00Z')];self.assertFalse(s.customer('customer:1')['reply_pending']);self.assertEqual(self.events,[])
     def test_promotions_and_automatic_reply_do_not_trigger_drafts(self):

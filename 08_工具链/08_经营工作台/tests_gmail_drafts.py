@@ -1,4 +1,5 @@
 import base64
+from datetime import datetime, timedelta, timezone
 from email import policy
 from email.parser import BytesParser
 import json
@@ -62,6 +63,15 @@ class DraftTests(unittest.TestCase):
         saved=self.fill()
         self.assertEqual(self.service.get(self.oid)['body_zh'],'您好，这是我们的鞋子。')
         self.assertEqual(saved['status'],'draft');self.assertEqual(self.calls,[])
+
+    def test_fresh_read_grant_does_not_hide_expired_testing_send_grant(self):
+        self.mail.status=lambda:{'account_email':'seller@example.test','authorization_expires_at':(datetime.now(timezone.utc)+timedelta(days=7)).isoformat()}
+        self.service.grant_reader=lambda account:{'refresh_token':'fixture','scopes':['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.send'],'authorized_at':(datetime.now(timezone.utc)-timedelta(days=8)).isoformat()}
+        self.assertFalse(self.service.get(self.oid)['can_send'])
+        self.assertEqual(self.service.authorization_status()['state'],'needs_authorization')
+        self.service.grant_reader=lambda account:{'refresh_token':'fixture','scopes':['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.send'],'authorized_at':datetime.now(timezone.utc).isoformat()}
+        self.assertTrue(self.service.get(self.oid)['can_send'])
+        self.assertEqual(self.service.authorization_status()['state'],'configured')
 
     def test_send_grant_is_saved_only_for_the_connected_account(self):
         with patch('gmail_drafts.save_grant') as save:

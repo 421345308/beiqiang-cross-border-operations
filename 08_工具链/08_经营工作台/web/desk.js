@@ -1034,8 +1034,9 @@
     if (activity?.group === 'act' || activity?.group === 'decide') return 'action';
     if (state === 'waiting_customer' || activity?.kind === 'customer_waiting') return 'waiting';
     if ((flow.configured || item.kind === 'inquiry') && state && state !== 'waiting_customer') return 'action';
-    if (/待审核|待回复|收到.*回复|客户.*新.*(?:信|回复)|准备回复/.test(status)) return 'action';
+    if (/待审核|待我回复|收到.*回复|客户.*新.*(?:信|回复)|准备回复/.test(status)) return 'action';
     if (/等待|等客户|已联系|已发|已回复/.test(status) || /等待.*回复|等客户/.test(text(item.next_action))) return 'waiting';
+    if (/待回复/.test(status)) return 'action';
     return 'prospect';
   }
   function customerStageLabel(stage, item) {
@@ -1197,6 +1198,22 @@
           const gmailStatus = mail.status || {}, lastMail = gmailStatus.last_success_at ? ` · 最近检查 ${time(gmailStatus.last_success_at)}` : '';
           const source = el('div', undefined, 'sync-status-line');
           source.append(el('span', '', `sync-indicator ${gmailStatus.state === 'ready' ? 'online' : ''}`), el('span', gmailStatus.state === 'ready' ? `Gmail 已连接 · 运行时约每 2 分钟检查${lastMail}` : gmailStatus.state === 'loading' ? 'Gmail 正在检查来信' : gmailStatus.state === 'error' ? 'Gmail 暂未同步，请检查连接' : 'Gmail 尚未连接'));
+          if(gmailStatus.authorization_expires_at)source.append(el('span',`测试授权预计 ${time(gmailStatus.authorization_expires_at)} 到期`,'artifact-note'));
+          if(gmailStatus.state==='error' || gmailStatus.state==='not_connected'){
+            const feedback=el('span','','agent-feedback'), reconnect=button('重新连接 Gmail',async()=>{
+              reconnect.disabled=true;feedback.textContent='正在准备 Google 授权…';
+              try{const result=await api('/api/desk/gmail/oauth/start',{client_config:null}),authorize=link('继续 Google 登录并授权 ↗',result.authorization_url);if(!authorize)throw Error('未能准备 Google 授权');feedback.replaceChildren(authorize);}
+              catch(error){feedback.textContent=error.message;}finally{reconnect.disabled=false;}
+            },'quiet');source.append(reconnect,feedback);
+          }
+          if(gmailStatus.state==='ready' || gmailStatus.state==='loading')api('/api/desk/gmail/send-status').then(send=>{
+            if(!current() || source.isConnected===false || send.state!=='needs_authorization')return;
+            const feedback=el('span','','agent-feedback'), reconnect=button('恢复 Gmail 发信授权',async()=>{
+              reconnect.disabled=true;feedback.textContent='正在准备 Google 授权…';
+              try{const result=await api('/api/desk/gmail/send-oauth/start',{}),authorize=link('继续 Google 发信授权 ↗',result.authorization_url);if(!authorize)throw Error('未能准备 Google 授权');feedback.replaceChildren(authorize,el('span',' 授权本身不会发送邮件。'));}
+              catch(error){feedback.textContent=error.message;}finally{reconnect.disabled=false;}
+            },'quiet');source.append(el('span','发信授权需要恢复。','inline-error'),reconnect,feedback);
+          }).catch(()=>{});
           const website = S.websiteStatus || {}; const webText = website.observed_at ? `网站询盘 · 页面打开时约 2 分钟刷新 · 最近读取 ${time(website.observed_at)}` : '网站询盘 · 正在读取';
           sync.replaceChildren(source,el('span',webText,'sync-website'),el('span','邮件发送前在 Gmail 审核','sync-review'));
           const known=new Set((data.candidates||[]).flatMap(item=>[item.email,...(item.source_record?.contacts||[]).filter(c=>c?.kind==='email').map(c=>c.value)]).filter(Boolean).map(v=>text(v).trim().toLowerCase()));

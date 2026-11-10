@@ -384,6 +384,7 @@ class Handler(BaseHTTPRequestHandler):
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
                         'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
                 if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
+                if u.path=='/api/desk/gmail/send-status':return self.send_json(app.gmail_drafts.authorization_status())
                 if u.path=='/api/desk/gmail/events':return self.send_json(app.gmail_event_reconcile.list_events(value('object_id')))
                 if u.path=='/api/desk/gmail/draft':return self.send_json(app.gmail_drafts.get(value('object_id')))
                 if u.path=='/api/desk/gmail/send-plan':

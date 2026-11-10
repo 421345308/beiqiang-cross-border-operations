@@ -1,11 +1,14 @@
 import base64
 import hashlib
+import io
 import json
 import threading
 import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
 from urllib.parse import parse_qs, urlsplit
 
-from gmail_oauth import GmailOAuth, GmailOAuthMailbox, SCOPE, parse_api_message
+from gmail_oauth import GmailOAuth, GmailOAuthMailbox, SCOPE, _request, parse_api_message
 
 ACCOUNT='me@example.com'; BUYER='buyer@example.com'; CLIENT='sample.apps.googleusercontent.com'
 CONFIG={'installed':{'client_id':CLIENT,'client_secret':'sample-client-secret'}}
@@ -54,6 +57,13 @@ class OAuthTests(unittest.TestCase):
         self.auth.reader=lambda account:{'client_id':CLIENT,'client_secret':'saved','refresh_token':'old'}
         query=parse_qs(urlsplit(self.auth.start(None,REDIRECT,ACCOUNT)).query)
         self.assertEqual(query['client_id'],[CLIENT])
+
+    def test_expired_grant_reports_reconnect_without_exposing_provider_details(self):
+        error=HTTPError('https://oauth2.googleapis.com/token',400,'fixture',{},
+                        io.BytesIO(b'{"error":"invalid_grant","error_description":"private detail"}'))
+        with patch('gmail_oauth.urlopen',side_effect=error):
+            with self.assertRaisesRegex(ValueError,'授权已失效') as caught: _request('https://oauth2.googleapis.com/token',form={'grant_type':'refresh_token'})
+        self.assertNotIn('private detail',str(caught.exception))
     def test_send_scope_authorization_delivers_grant_to_separate_handler(self):
         scope=SCOPE+' https://www.googleapis.com/auth/gmail.send';grants=[]
         def request(url,*,token=None,form=None):

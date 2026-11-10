@@ -169,7 +169,9 @@ class GmailService:
     def buyer_candidates(self):
         with self.lock:
             if not self._mailbox:return {'status':{'state':'not_connected'},'items':[]}
-            return copy.deepcopy(self._inbox)
+            result=copy.deepcopy(self._inbox)
+            result.setdefault('status',{}).update(self._authorization_details())
+            return result
 
     def dismiss_candidate(self,message_id):
         with self.lock:

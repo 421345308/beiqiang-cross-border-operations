@@ -71,6 +71,12 @@ def _request(url, *, token=None, form=None):
             return json.load(response)
     except HTTPError as exc:
         if exc.code in (400, 401, 403):
+            try:
+                error = json.loads(exc.read(4096)).get('error')
+            except (ValueError, UnicodeError, AttributeError):
+                error = None
+            if error == 'invalid_grant':
+                raise ValueError('Google 授权已失效，请重新连接 Gmail') from None
             raise ValueError('Google 授权或 Gmail 接口不可用，请重新授权并确认已启用 Gmail API') from None
         raise ValueError('Google 服务暂时不可用（HTTP %s）' % exc.code) from None
 

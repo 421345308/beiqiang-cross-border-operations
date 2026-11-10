@@ -329,6 +329,33 @@ test('Gmail 首次筛选时给出可见的进度提示', async () => {
   await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('正在筛选 Gmail 来信'));
 });
 
+test('客户开发页显示测试授权到期时间并提供重新连接入口', async () => {
+  const h=harness('#/customers?view=development'),original=h.originalFetch,calls=[];
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/gmail/candidates')return {ok:true,json:async()=>({status:{state:'error',authorization_expires_at:'2026-11-17T14:35:59Z'},items:[]})};
+    if(path==='/api/desk/gmail/oauth/start'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=fixture'})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('测试授权预计'));
+  await findButton(h.elements.page,'重新连接 Gmail').click();await settle();
+  assert.deepEqual(calls,[{client_config:null}]);
+  assert.ok(walk(h.elements.page).some(x=>x.tagName==='A' && x.textContent==='继续 Google 登录并授权 ↗'));
+});
+
+test('收信恢复后仍单独提示并恢复发信授权', async () => {
+  const h=harness('#/customers?view=development'),original=h.originalFetch,calls=[];
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/gmail/candidates')return {ok:true,json:async()=>({status:{state:'ready'},items:[]})};
+    if(path==='/api/desk/gmail/send-status')return {ok:true,json:async()=>({state:'needs_authorization'})};
+    if(path==='/api/desk/gmail/send-oauth/start'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=fixture'})};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('发信授权需要恢复'));
+  await findButton(h.elements.page,'恢复 Gmail 发信授权').click();await settle();
+  assert.deepEqual(calls,[{}]);assert.ok(h.elements.page.textContent.includes('授权本身不会发送邮件'));
+  assert.ok(walk(h.elements.page).some(x=>x.tagName==='A' && x.textContent==='继续 Google 发信授权 ↗'));
+});
+
 test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {
   const h = harness('#/products'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.equal(walk(h.body).some(item => item.tagName === 'SCRIPT'), false);
   h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); assert.equal(h.elements.page.querySelector('.object-source-details'), null); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
@@ -401,6 +428,20 @@ test('客户工作区把新回复置前，合并当前网站询盘并按下一�
   const actionable=walk(h.elements.page).find(item=>item.className.split(' ').includes('customer-stat') && item.className.split(' ').includes('action')); await actionable.click();
   assert.equal(h.elements.page.querySelectorAll('.customer-list-row').length,1);
   assert.ok(h.elements.page.textContent.includes('新回复客户')); assert.equal(h.elements.page.textContent.includes('待开发客户'),false);
+});
+
+test('已发送并等待客户回复的客户不算我方待处理', async () => {
+  const h=harness('#/customers?view=development');
+  h.discovery.candidates.push(
+    {id:'candidate:waiting',object_id:'prospect:candidate:waiting',kind:'candidate',title:'等待中的客户',contact_status_label:'已发送至官网邮箱，等待回复',next_action:'等待客户回复或退信'},
+    {id:'candidate:review',object_id:'prospect:candidate:review',kind:'candidate',title:'待审核客户',contact_status_label:'首封已发送，补充信待审核'},
+    {id:'candidate:reply',object_id:'prospect:candidate:reply',kind:'candidate',title:'已有新回复',contact_status_label:'已发送，等待回复',gmail_reply_pending:true});
+  await h.ui.bootstrap();await settle();
+  const rows=h.elements.page.querySelectorAll('.customer-list-row'),byName=name=>rows.find(row=>row.querySelector('h3').textContent===name);
+  assert.ok(byName('等待中的客户').className.includes('stage-waiting'));
+  assert.ok(byName('等待中的客户').textContent.includes('等待客户'));
+  assert.ok(byName('待审核客户').className.includes('stage-action'));
+  assert.ok(byName('已有新回复').className.includes('stage-action'));
 });
 
 test('客户详情直接展示公司网站和现有联系方式', async () => {

@@ -287,8 +287,10 @@ class Business:
             obj=_object('customer:website-'+reference,'customer',row.get('company') or row.get('name') or reference,
                 '网站记录 · '+reference,subtitle='网站记录 · '+str(row.get('country') or ''),summary=summary,
                 content=json.dumps(row,ensure_ascii=False,indent=2))
-            labels={'name':'联系人','company':'公司','country':'国家/地区','email':'邮箱','quantity':'采购数量','status':'处理状态','receivedAt':'收到时间'}
-            statuses={'new':'待处理','open':'处理中','handled':'已处理','closed':'已关闭','pending':'待处理','replied':'已回复'}
+            # The website's raw intake status is not the local follow-up state:
+            # an inquiry initially marked new may already be waiting on the buyer.
+            labels={'name':'联系人','company':'公司','country':'国家/地区','email':'邮箱','quantity':'采购数量','status':'网站原始标记','receivedAt':'收到时间'}
+            statuses={'new':'新记录','open':'网站处理中','handled':'网站已处理','closed':'网站已关闭','pending':'网站待处理','replied':'网站已回复'}
             obj['facts']=[_fact('来源','网站原始记录'),_fact('记录编号',reference)]+[
                 _fact(label,statuses.get(row[k],row[k]) if k=='status' else row[k]) for k,label in labels.items() if row.get(k) not in ('',None)]
             obj['conversation']=[{'sender':m.get('sender',''),'body':m.get('body',''),'sent_at':m.get('sentAt','')} for m in (row.get('messages') or []) if isinstance(m,dict)]

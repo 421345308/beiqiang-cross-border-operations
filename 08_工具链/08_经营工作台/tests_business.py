@@ -98,7 +98,7 @@ class BusinessTests(unittest.TestCase):
         self.assertEqual(len(obj['summary']),240);self.assertTrue(obj['summary'].endswith('…'))
         self.assertEqual(json.loads(obj['content'])['requirements'],requirements)
         self.assertNotIn(requirements,json.dumps(obj['facts'],ensure_ascii=False))
-        self.assertEqual(next(f['value'] for f in obj['facts'] if f['label']=='处理状态'),'待处理')
+        self.assertEqual(next(f['value'] for f in obj['facts'] if f['label']=='网站原始标记'),'新记录')
         self.assertEqual(obj['source'],'网站记录 · BQ-LONG')
         self.assertTrue({'联系人','公司','邮箱','采购数量','收到时间'}.issubset({f['label'] for f in obj['facts']}))
     def test_artifact_id_and_object_boundaries(self):
