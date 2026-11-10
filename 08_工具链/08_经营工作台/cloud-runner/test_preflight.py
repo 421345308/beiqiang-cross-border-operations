@@ -121,6 +121,21 @@ class PreflightTests(unittest.TestCase):
         self.env['WORKBENCH_RUNNER_AUTH'] = 'unknown'
         self.assertFalse(self.invoke()['ok'])
 
+    def test_responses_engine_requires_api_credential_but_not_codex_cli(self):
+        credential_dir = Path(self.temp.name) / 'credentials'
+        credential_dir.mkdir(mode=0o700)
+        (credential_dir / 'openai-api-key').write_text('sk-fixture_' + 'x' * 40, encoding='ascii')
+        self.env.update(WORKBENCH_RUNNER_ENGINE='responses', WORKBENCH_RUNNER_AUTH='api',
+                        CREDENTIALS_DIRECTORY=str(credential_dir))
+        result = self.invoke(find_executable=lambda name: None)
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['engine'], 'responses')
+        self.assertEqual(self.calls, [])
+        self.env['WORKBENCH_RUNNER_AUTH'] = 'chatgpt'
+        self.assertFalse(self.invoke(find_executable=lambda name: None)['ok'])
+        self.env['WORKBENCH_RUNNER_ENGINE'] = 'invalid'
+        self.assertFalse(self.invoke()['ok'])
+
     def test_missing_cli_is_failure(self):
         result = self.invoke(find_executable=lambda name: None)
         self.assertFalse(result['ok'])

@@ -163,8 +163,65 @@ def process_flags(platform=None):
         return {'creationflags':subprocess.CREATE_NEW_PROCESS_GROUP|subprocess.CREATE_NO_WINDOW}
     return {'start_new_session':True}
 
+
+def submit_result(queue, identity, result, session, usage):
+    response = queue.call('complete', **identity, result=result, session_id=session, usage=usage)
+    run = response.get('run') if isinstance(response, dict) else None
+    expected = {'summary': result['summary'], 'next_steps': result['next_steps'],
+                'changes': [dict(path=c['path'], reason=c['reason'],
+                                 before=c['before'].replace('\r\n', '\n').replace('\r', '\n'),
+                                 after=c['after'].replace('\r\n', '\n').replace('\r', '\n'))
+                            for c in result['changes']]}
+    if 'fields' in result:
+        expected['fields'] = result['fields']
+    if (not isinstance(run, dict) or run.get('id') != identity['run_id']
+            or run.get('status') != 'awaiting_review' or run.get('result') != expected):
+        raise RuntimeError('Result acknowledgement is incomplete; reconcile before retry')
+
+
+def execute_responses(queue, job, deadline):
+    from preflight import read_api_credential
+    from responses_backend import request_proposal
+    identity = {'run_id': job['id'], 'lease_token': job['lease_token']}
+    finished = threading.Event()
+    lease_failed = []
+
+    def keep_lease():
+        nonlocal deadline
+        while not finished.wait(30):
+            try:
+                renewed = queue.call('heartbeat', **identity)
+                deadline = datetime.fromisoformat(renewed['lease_expires_at'].replace('Z', '+00:00')).timestamp()
+                if deadline <= time.time() + 5:
+                    raise RuntimeError('Lease expired')
+            except Exception:
+                lease_failed.append(True)
+                return
+
+    monitor = threading.Thread(target=keep_lease, daemon=True)
+    monitor.start()
+    try:
+        queue.call('event', **identity, event={'type': 'turn.started'})
+        proposal, usage, response_id = request_proposal(
+            key=read_api_credential(os.environ), model=job.get('model') or MODEL,
+            schema=result_schema(job), input_data=model_input(job))
+        finished.set()
+        monitor.join(timeout=25)
+        if monitor.is_alive():
+            raise RuntimeError('Lease check did not finish; proposal not submitted')
+        if lease_failed or time.time() >= deadline - 5:
+            raise RuntimeError('Job lease expired; proposal not submitted')
+        result = validate_result(job, proposal)
+        submit_result(queue, identity, result, response_id, usage)
+    finally:
+        finished.set()
+        monitor.join(timeout=25)
+
+
 def execute(queue, job, executable, state):
     deadline=validate_job(job)
+    if os.environ.get('WORKBENCH_RUNNER_ENGINE', 'codex') == 'responses':
+        return execute_responses(queue, job, deadline)
     identity={'run_id':job['id'],'lease_token':job['lease_token']}
     final=None; session=None; usage=None
     # Only schema and generated CLI state exist here; source is passed via stdin.
@@ -216,7 +273,7 @@ def execute(queue, job, executable, state):
             if code or not final:raise RuntimeError('CLI failed or returned no proposal')
             if lease_failed or time.time()>=deadline-5:raise RuntimeError('Job lease expired; proposal not submitted')
             result=validate_result(job,json.loads(final))
-            queue.call('complete',**identity,result=result,session_id=session,usage=usage)
+            submit_result(queue,identity,result,session,usage)
         finally:
             finished.set();stop();proc.wait(timeout=15);monitor.join(timeout=25)
 
@@ -251,11 +308,15 @@ def main():
     args=parser.parse_args()
     endpoint=os.environ.get('WORKBENCH_RUNNER_URL','');secret=os.environ.get('WORKBENCH_RUNNER_SECRET','')
     if not endpoint or not secret:parser.error('Set WORKBENCH_RUNNER_URL and WORKBENCH_RUNNER_SECRET in the deployment environment')
-    executable=shutil.which('codex')
-    if not executable:parser.error('Install and authenticate Codex CLI on this execution host first')
     auth_mode = os.environ.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
     if auth_mode not in ('chatgpt', 'api'):
         parser.error('Unsupported runner authentication method')
+    engine = os.environ.get('WORKBENCH_RUNNER_ENGINE', 'codex')
+    if engine not in ('codex', 'responses') or (engine == 'responses' and auth_mode != 'api'):
+        parser.error('Unsupported runner engine or authentication method')
+    executable=shutil.which('codex') if engine == 'codex' else None
+    if engine == 'codex' and not executable:
+        parser.error('Install and authenticate Codex CLI on this execution host first')
     if auth_mode == 'api':
         forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
                      'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')

@@ -90,10 +90,14 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
         result['checks'].append({'name': name, 'ok': bool(ok), 'code': 'OK' if ok else code})
         return bool(ok)
 
-    if not check('cli_version_policy', isinstance(expected_version, str) and bool(re.fullmatch(
-            r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.]+)?', expected_version)), 'INVALID_EXPECTED_VERSION'):
-        return result
-    result['cli']['expected_version'] = expected_version
+    engine = env.get('WORKBENCH_RUNNER_ENGINE', 'codex')
+    engine_ok = check('runner_engine', engine in ('codex', 'responses'), 'INVALID_RUNNER_ENGINE')
+    result['engine'] = engine if engine_ok else None
+    if engine == 'codex':
+        if not check('cli_version_policy', isinstance(expected_version, str) and bool(re.fullmatch(
+                r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.]+)?', expected_version)), 'INVALID_EXPECTED_VERSION'):
+            return result
+        result['cli']['expected_version'] = expected_version
     result['queue']['endpoint_matches'] = env.get('WORKBENCH_RUNNER_URL') == QUEUE_URL
     check('queue_endpoint', result['queue']['endpoint_matches'], 'UNEXPECTED_QUEUE_ENDPOINT')
     secret = env.get('WORKBENCH_RUNNER_SECRET', '')
@@ -103,6 +107,7 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
     # silently replace it, including when API authentication is selected.
     auth_method = env.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
     auth_method_ok = check('auth_method', auth_method in ('chatgpt', 'api'), 'INVALID_AUTH_METHOD')
+    check('engine_auth', engine != 'responses' or auth_method == 'api', 'RESPONSES_API_AUTH_REQUIRED')
     forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
                  'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')
     auth_env_ok = not any(env.get(key) for key in forbidden)
@@ -152,13 +157,15 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
     except (OSError, ValueError, RuntimeError):
         check('storage_writable', False, 'STORAGE_NOT_WRITABLE')
 
-    try:
-        executable = find('codex', path=env.get('PATH')) if find_executable is None else find('codex')
-    except Exception:
-        executable = None
-    result['cli']['available'] = bool(executable)
-    check('cli_path', bool(executable), 'CODEX_NOT_ON_PATH')
-    if executable:
+    executable = None
+    if engine == 'codex':
+        try:
+            executable = find('codex', path=env.get('PATH')) if find_executable is None else find('codex')
+        except Exception:
+            executable = None
+        result['cli']['available'] = bool(executable)
+        check('cli_path', bool(executable), 'CODEX_NOT_ON_PATH')
+    if engine == 'codex' and executable:
         try:
             version = command([executable, '--version'], env)
             matched = re.fullmatch(r'codex-cli (\d+\.\d+\.\d+(?:-[A-Za-z0-9.]+)?)\s*', version.stdout or '')

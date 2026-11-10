@@ -36,6 +36,7 @@ from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
 from today import Today
 from miaoshou_bridge import MiaoshouBridge, BridgeError
+from cloud_review import CloudReview
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -109,6 +110,7 @@ class Workbench:
         self.customer_workspace=CustomerWorkspace(self)
         self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
+        self.cloud_review=CloudReview(self.root,self.state)
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
         self.creation_canvas=CreationCanvas(self)
@@ -491,6 +493,12 @@ class Handler(BaseHTTPRequestHandler):
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if parts==['api','library']:return self.send_json(app.library.add(body))
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if parts==['api','desk','cloud-review']:
+                action=body.get('action')
+                if action=='list' and set(body)=={'action'}:return self.send_json(app.cloud_review.list_pending())
+                if action=='preview' and set(body)=={'action','run_id'}:return self.send_json(app.cloud_review.preview(body['run_id']))
+                if action=='apply' and set(body)=={'action','run_id','proposal_hash'}:return self.send_json(app.cloud_review.apply(body['run_id'],body['proposal_hash']))
+                raise ValueError('云端成果请求字段无效')
             if extension:
                 bridge=app.miaoshou_bridge
                 try:

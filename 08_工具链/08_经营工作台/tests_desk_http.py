@@ -19,6 +19,18 @@ from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_cloud_review_routes_reuse_service_and_require_local_token(self):
+        class Cloud:
+            def list_pending(self): return {'runs': [{'id': 'a'*32, 'title': 'fixture'}]}
+            def preview(self, run_id): return {'run_id': run_id, 'proposal_hash': 'b'*64}
+            def apply(self, run_id, proposal_hash): return {'run_id': run_id, 'status': 'applied'}
+        self.app.cloud_review=Cloud()
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'list'}, token=False)[0],403)
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'list'})[1]['runs'][0]['id'],'a'*32)
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'preview','run_id':'a'*32})[1]['proposal_hash'],'b'*64)
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'proposal_hash':'b'*64})[1]['status'],'applied')
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'extra':'x'})[0],400)
+
     def test_douyin_unbound_session_probe_requires_explicit_query(self):
         result=type('Result',(),{'returncode':0,'stdout':'{"shops":[]}'})()
         with patch('server.subprocess.run',return_value=result) as execute:

@@ -80,6 +80,28 @@ test('抖店经营对象沿用 Agent 任务入口并返回渠道', async () => {
   assert.equal(h.location.hash,'/channels?view=douyin');
 });
 
+test('云端成果先读取预览，明确点击后才按预览版本回写', async () => {
+  const h=harness(), original=h.originalFetch, calls=[], id='a'.repeat(32), fingerprint='b'.repeat(64);
+  h.interceptFetch(async(path, options={})=>{
+    if(path==='/api/desk/cloud-review'){
+      const body=JSON.parse(options.body); calls.push(body);
+      if(body.action==='list')return {ok:true,json:async()=>({runs:[{id,title:'测试成果',summary:'待核对',updated_at:'2026-11-10T00:00:00Z'}]})};
+      if(body.action==='preview')return {ok:true,json:async()=>({run_id:id,summary:'修改建议',next_steps:['继续'],changes:1,diff:'-旧\n+新',proposal_hash:fingerprint,conflict:false})};
+      return {ok:true,json:async()=>({status:'applied',message:'已写回本地原资料；云端审阅状态仍需同步确认。'})};
+    }
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  await findButton(h.elements.page,'读取云端待审成果').click();await settle();
+  assert.deepEqual(calls.map(item=>item.action),['list']);
+  await findButton(h.elements.page,'预览成果').click();await settle();
+  assert.ok(h.elements.page.textContent.includes('-旧\n+新'));
+  assert.deepEqual(calls.map(item=>item.action),['list','preview']);
+  await findButton(h.elements.page,'确认写回本地原资料').click();await settle();
+  assert.deepEqual(calls[2],{action:'apply',run_id:id,proposal_hash:fingerprint});
+  assert.ok(h.elements.page.textContent.includes('云端审阅状态仍需同步确认'));
+});
+
 test('商品素材明确选择后引用到选定创作画布', async () => {
   const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
   h.interceptFetch(async(path,options={})=>{

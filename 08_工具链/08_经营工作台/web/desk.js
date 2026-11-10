@@ -23,7 +23,7 @@
       .finally(() => clearTimeout(timeout));
     return;
   }
-  const S = { token: '', objects: [], jobs: [], artifacts: [], goals: {}, route: '', page: 'overview', object: null, detail: null, edits: new Map(), pending: false, loadSerial: 0, pollBusy: false, websiteStatus: {}, alibabaStatus: {}, gmailRevision: 0, listRefresh: null, lastBootstrapPoll: 0, selectedArtifacts: new Map(), batchView: {id:'', selected:'', query:'', state:''} };
+  const S = { token: '', objects: [], jobs: [], artifacts: [], goals: {}, route: '', page: 'overview', object: null, detail: null, edits: new Map(), pending: false, loadSerial: 0, pollBusy: false, websiteStatus: {}, alibabaStatus: {}, gmailRevision: 0, listRefresh: null, lastBootstrapPoll: 0, selectedArtifacts: new Map(), cloudReview: {open:false,items:[],preview:null,message:'',busy:false}, batchView: {id:'', selected:'', query:'', state:''} };
   const statusNames = { planned: '尚未启动', queued: '等待开始', running: '正在处理', completed: '已形成成果', needs_input: '待补充依据', failed: '未能完成', cancelled: '已停止' };
   const text = value => value === null || value === undefined ? '' : typeof value === 'object' ? Array.isArray(value) ? value.map(text).join(' · ') : Object.values(value).map(text).filter(Boolean).join(' · ') : String(value);
   const valueLabels = { new: '待处理', unknown: '尚待核对', unverified: '待核实', not_checked: '尚未核对', RAW_PACKAGE: '已有原始资料', ADOPTED: '已采纳来源', HOLD_SOURCE: '来源待核实', external: '外采', factory: '工厂供货', reference_only: '仅作参考' };
@@ -228,10 +228,22 @@
   function renderOverview() {
     const page = $('page'), goalsOpen = page.querySelector('.goals')?.open; page.replaceChildren(heading('我的工作台', '今天，从这里继续', '查看客户、商品和正在推进的工作。'));
     page.append(websiteLabel());
+    mountCloudReviews(page);
     const today = el('section', undefined, 'overview-today'); page.append(today); renderToday(today);
     const goals = Object.entries(S.goals || {}).filter(([, value]) => text(value)); if (goals.length) { const details = el('details', undefined, 'card goals'); details.open = !!goalsOpen; details.append(el('summary', '当前方向与重点')); for (const [key, value] of goals) details.append(el('div', `${({ long_term: '长期方向', phase: '当前阶段', focus: '当前重点', priorities: '优先事项', notes: '补充要求' }[key] || '当前要求')}：${text(value)}`)); page.append(details); }
     page.append(sectionHeading('从业务开始', '进入真实对象，而非工具菜单'), businessEntrances()); const recentRows = recentObjects(); if (recentRows.length) { page.append(sectionHeading('继续工作', '近期打开或实际处理过的对象')); const recent = el('div', undefined, 'continue-grid'); recentRows.forEach(object => recent.append(tile(object))); page.append(recent); }
     const artifacts = el('section'); artifacts.append(sectionHeading('最近成果', '打开后可继续编辑')); const list = el('div', undefined, 'row-list'); [...S.artifacts].sort((a, b) => String(b.updated_at || '').localeCompare(String(a.updated_at || ''))).slice(0, 5).forEach(item => list.append(artifactRow(item))); if (!list.children.length) empty(list, '新的选款资料、回复草稿会保存在这里，并关联原商品或客户。'); artifacts.append(list); page.append(artifacts);
+  }
+  function mountCloudReviews(page) {
+    const state=S.cloudReview, box=el('details',undefined,'card cloud-reviews');box.open=state.open;
+    box.addEventListener('toggle',()=>{if(box.isConnected)state.open=box.open;});
+    box.append(el('summary','云端待审成果'),el('p','可先在云端工作台提交已导入资料的任务；电脑重新上线后，在此读取并预览云端成果。网站询盘仍在网站后台审阅。','muted'));
+    const cloudEntry=link('打开云端工作台提交任务 ↗','https://www.beiqiang.online/admin/workbench/');if(cloudEntry)box.append(cloudEntry);
+    const redraw=()=>{if(S.page==='overview')renderOverview();};
+    const load=button('读取云端待审成果',async()=>{if(state.busy)return;state.busy=true;state.message='正在读取云端成果…';redraw();try{const data=await api('/api/desk/cloud-review',{action:'list'});state.items=data.runs || [];state.preview=null;state.message=state.items.length?'请选择一项成果预览。':'云端暂无待审项目成果。';}catch(error){state.message=error.message;}finally{state.busy=false;redraw();}},'quiet');load.disabled=state.busy;box.append(load);
+    for(const item of state.items){const row=el('article',undefined,'agent-job');row.append(el('h3',text(item.title || '云端成果')),el('p',text(item.summary || '待查看')),el('p',`更新时间：${time(item.updated_at)}`,'muted'));const preview=button('预览成果',async()=>{if(state.busy)return;state.busy=true;state.message='正在核对原资料版本…';redraw();try{state.preview=await api('/api/desk/cloud-review',{action:'preview',run_id:item.id});state.message=state.preview.conflict?state.preview.message:'已读取，可核对内容。';}catch(error){state.preview=null;state.message=error.message;}finally{state.busy=false;redraw();}},'quiet');preview.disabled=state.busy;row.append(preview);box.append(row);}
+    const p=state.preview;if(p){const detail=el('section',undefined,'analysis-block');detail.append(el('h3','成果预览'),el('p',text(p.summary)));for(const next of p.next_steps || [])detail.append(el('p',text(next)));if(p.diff)detail.append(el('pre',p.diff,'source-body'));if(p.changes && p.proposal_hash && !p.conflict){const apply=button('确认写回本地原资料',async()=>{if(state.busy)return;state.busy=true;state.message='正在核对并写回…';redraw();try{const result=await api('/api/desk/cloud-review',{action:'apply',run_id:p.run_id,proposal_hash:p.proposal_hash});state.message=result.message;state.preview=null;}catch(error){state.message=error.message;}finally{state.busy=false;redraw();}},'primary');apply.disabled=state.busy;detail.append(apply);}else if(!p.conflict)detail.append(el('p','此成果没有原资料修改，可在云端继续审阅。','muted'));box.append(detail);}
+    box.append(el('p',state.message,'agent-feedback'));page.append(box);
   }
   function parseRoute() { const raw = location.hash.replace(/^#\/?/, '') || 'overview', split = raw.indexOf('?'); return { parts: (split < 0 ? raw : raw.slice(0, split)).split('/'), query: new URLSearchParams(split < 0 ? '' : raw.slice(split + 1)) }; }
   function setNav(page) { const name = ({ overview: '总览', products: '商品', customers: '客户', channels: '渠道', creation: '创作', library: '客户资料包' })[page] || '详情'; $('page-name').textContent = name; document.querySelectorAll('[data-nav]').forEach(item => item.classList.toggle('active', item.dataset.nav === page)); }
