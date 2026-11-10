@@ -1,10 +1,12 @@
 """Offline contract checks; never invokes Codex or the network."""
 import hashlib
+import io
 from pathlib import Path
 import unittest
 from unittest.mock import patch, Mock
 import tempfile
 import json
+from urllib.error import HTTPError
 import runner
 
 
@@ -64,6 +66,62 @@ class RunnerTests(unittest.TestCase):
     def test_queue_endpoint_keeps_secret_off_urls(self):
         for url in ('http://host/api','https://user:secret@host/api','https://host/api?key=x'):
             with self.assertRaises(ValueError):runner.Queue(url,'fake-test-token')
+
+    def test_only_explicit_rolled_back_claim_is_safe_to_recover(self):
+        def http_error(status, body):
+            return HTTPError('https://example.invalid/queue', status, 'fixture', {},
+                             io.BytesIO(json.dumps(body).encode()))
+        queue = runner.Queue('https://example.invalid/queue', 'synthetic-secret')
+        opener = Mock()
+        with patch('urllib.request.build_opener', return_value=opener):
+            opener.open.side_effect = http_error(409, {'code': 'RUNNER_TRANSACTION_ROLLED_BACK'})
+            with self.assertRaises(runner.ClaimTransactionRolledBack): queue.call('claim')
+            for action, status, body in [
+                ('claim', 409, {'error': 'conflict'}),
+                ('claim', 500, {'code': 'RUNNER_TRANSACTION_ROLLED_BACK'}),
+                ('complete', 409, {'code': 'RUNNER_TRANSACTION_ROLLED_BACK'}),
+            ]:
+                opener.open.side_effect = http_error(status, body)
+                with self.assertRaises(HTTPError): queue.call(action)
+
+    def test_confirmed_claim_rollback_clears_marker_and_resumes_idle_worker(self):
+        queue = Mock()
+        attempts = 0
+        def respond(action, **fields):
+            nonlocal attempts
+            if action == 'claim':
+                attempts += 1
+                if attempts == 1: raise runner.ClaimTransactionRolledBack('fixture rollback')
+                return {'job': None}
+            return {}
+        queue.call.side_effect = respond
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py']), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), \
+                    patch('preflight.preflight',return_value={'ok':True}), \
+                    patch.object(runner,'Queue',return_value=queue), \
+                    patch.object(runner.time,'sleep',side_effect=[None, SystemExit('stop fixture')]):
+                with self.assertRaises(SystemExit): runner.main()
+            self.assertEqual([call.args[0] for call in queue.call.call_args_list],
+                             ['heartbeat', 'claim', 'heartbeat', 'claim'])
+            self.assertFalse((Path(directory)/'claiming.json').exists())
+            self.assertFalse((Path(directory)/'active.json').exists())
+
+    def test_targeted_rolled_back_claim_does_not_retry(self):
+        queue = Mock()
+        queue.call.side_effect = lambda action, **fields: (_ for _ in ()).throw(
+            runner.ClaimTransactionRolledBack('fixture rollback')) if action == 'claim' else {}
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py','--run-id',self.job['id']]), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), \
+                    patch.object(runner,'Queue',return_value=queue):
+                with self.assertRaises(runner.ClaimTransactionRolledBack): runner.main()
+            self.assertEqual([call.args[0] for call in queue.call.call_args_list], ['heartbeat','claim'])
+            self.assertFalse((Path(directory)/'claiming.json').exists())
 
     def test_service_does_not_auto_retry(self):
         unit=Path(__file__).with_name('beiqiang-workbench-runner.service.example').read_text()

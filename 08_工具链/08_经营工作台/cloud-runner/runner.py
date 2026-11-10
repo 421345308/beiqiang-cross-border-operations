@@ -13,6 +13,7 @@ import tempfile
 import threading
 import time
 from datetime import datetime
+from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import Request
 
@@ -114,6 +115,10 @@ def validate_result(job, result):
         text = text.replace(before,after,1)
     return result
 
+class ClaimTransactionRolledBack(RuntimeError):
+    """The server confirmed that this claim's database transaction rolled back."""
+
+
 class Queue:
     def __init__(self, endpoint, secret):
         parsed=urlsplit(endpoint)
@@ -127,8 +132,16 @@ class Queue:
         import urllib.request
         class NoRedirect(urllib.request.HTTPRedirectHandler):
             def redirect_request(self,*args,**kwargs): return None
-        with urllib.request.build_opener(NoRedirect).open(request,timeout=20) as response:
-            value=json.loads(response.read(1000000))
+        try:
+            with urllib.request.build_opener(NoRedirect).open(request,timeout=20) as response:
+                value=json.loads(response.read(1000000))
+        except HTTPError as error:
+            if action == 'claim' and error.code == 409:
+                try: detail = json.loads(error.read(8192))
+                except (ValueError, OSError): detail = None
+                if isinstance(detail, dict) and detail.get('code') == 'RUNNER_TRANSACTION_ROLLED_BACK':
+                    raise ClaimTransactionRolledBack('Claim transaction was rolled back') from None
+            raise
         if 'error' in value or value.get('ok') is False: raise RuntimeError('Queue rejected '+action)
         return value
 
@@ -271,7 +284,17 @@ def main():
         if any(p.exists() or p.is_symlink() for p in (active, state / 'blocked.json')):
             remove_recovery_marker(claiming)
             raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
-        response=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {}))
+        try:
+            response=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {}))
+        except ClaimTransactionRolledBack:
+            # The private server explicitly confirmed its transaction rolled
+            # back; unlike a timeout or generic 409, no claim can have committed.
+            remove_recovery_marker(claiming)
+            if args.once or args.run_id:
+                raise
+            print('Claim transaction rolled back; retrying after a short pause.', flush=True)
+            time.sleep(10)
+            continue
         if not isinstance(response, dict) or 'job' not in response:
             raise RuntimeError('Claim response was incomplete; reconcile before proceeding')
         job=response['job']
