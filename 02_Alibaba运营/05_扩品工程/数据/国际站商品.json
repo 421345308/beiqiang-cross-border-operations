@@ -150571,11 +150571,25 @@
           "at": "2026-10-19T18:51:15.790951+00:00",
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "Image/source colour audit continues independently. Do not replay historical copy.",
+          "next_action": "灰色详情图误写EU 33–48，正式SKU及买家选码为EU 39–48；制作离线修正并核对原图，等待负责人决定，不上传；不重放历史文案。",
           "evidence": [
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/prepared.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/verification.json"
+          ]
+        },
+        "gallery": {
+          "state": "GREY_DETAIL_SIZE_CONFLICT_CONFIRMED_NOT_FIXED",
+          "observed_at_utc": "2026-11-10T19:40:28.705442+00:00",
+          "target_detail_image_url": "https://sc04.alicdn.com/kf/Hd8f79337c7e74921b05d176abeeebefcK.png",
+          "original_image_file": "01_产品资产/01_原始素材/BQ-LQ1680/BQ-LQ1680_176799614b7069a0.png",
+          "original_image_sha256": "176799614b7069a04c01f9185b980a2a46a27454a484c6638f65323fbe9b00b4",
+          "issue": "买家页详情图将Grey写为EU 33–48；官方正式SKU及买家灰色选码面板为EU 39–48。",
+          "next_action": "仅制作灰色EU 39–48修正版并对照原图；等待负责人决定，未获后续指令不上传或修改平台。",
+          "offline_replacement": "NOT_PREPARED",
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/买家页核验.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/formal_get.json"
           ]
         }
       },
