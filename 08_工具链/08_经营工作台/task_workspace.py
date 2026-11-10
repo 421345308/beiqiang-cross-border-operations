@@ -56,6 +56,9 @@ class TaskWorkspace:
                         'updated_at': row.get('updated_at')})
         except (ValueError, OSError) as error:
             sources['cloud'] = {'state': 'unavailable', 'reason': str(error), 'observed_at': now()}
+        inbox.sort(key=lambda item: (0 if item.get('severity') == 'high' else 1,
+                                    0 if item.get('group') == 'decide' else 1,
+                                    item.get('updated_at') or ''))
         tasks.sort(key=lambda item: item.get('updated_at') or '', reverse=True)
         return {'tasks': tasks, 'sources': sources, 'inbox': inbox, 'observed_at': now(),
                 'scope': '本机 AgentJobs 与已配对云队列；未登记的桌面聊天和其他数据库不在此列表。'}

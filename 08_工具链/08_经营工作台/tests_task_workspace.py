@@ -57,6 +57,12 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(inbox[0]['action']['task_id'],'local:a')
         self.assertEqual(inbox[0]['judgment'],'需要最新资料')
 
+    def test_inbox_prioritizes_cloud_failure_over_normal_local_blocker(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'needs_input'}]
+        self.cloud['runs']=[{'id':'b','status':'interrupted'}]
+        inbox=self.service.overview()['inbox']
+        self.assertEqual([row['id'] for row in inbox],['cloud:b','local:a'])
+
     def test_invalid_instruction_is_rejected(self):
         for value in (None,'',{},'x'*12001):
             with self.assertRaises(ValueError): self.service.route(value)
