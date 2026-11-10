@@ -1,7 +1,9 @@
 # 原生执行器
 
 配合网站 `self-hosted/deploy/`，独立 `beiqiang-runner` 非root账号。
-2026-10-31已在已有VPS安装固定Codex CLI 0.166.0，非root可执行且真实私有挂载/0700写入验证通过。本机Chrome设备授权页返回`unsupported_country_region_territory`（服务器已取得设备码，服务器侧不可用的结论尚未成立），临时登录服务已停，runner保持inactive/OFF、后端manual_cloud；不绕过地域限制，不宣称真实登录或自动领取通过。以下保留安装命令供重建参考。安装固定 `@openai/codex@0.166.0` 到
+2026-11-10：负责人改选 API 后，新加坡 VPS 的 runner `20261110-v8` 已启用并自动领取内部验收任务，实际回传待审阅；空闲重启后重新心跳。API key 放在服务器 root 0600 文件，通过 systemd `LoadCredential=openai-api-key:<服务器私有文件>` 提供给非root执行器，`WORKBENCH_RUNNER_AUTH=api`；文件内容和实际路径不进入公开仓库。服务依旧按单实例运行、限制内存与 CPU，失败不自动重试。关机独立执行及金额预算上限仍待实际验收/设置。以下原 ChatGPT 设备登录过程为历史备选，不必重复登录。
+
+原安装记录：固定Codex CLI 0.166.0，非root可执行且真实私有挂载/0700写入验证通过。安装固定 `@openai/codex@0.166.0` 到
 `/opt/beiqiang-codex`（将`/opt/beiqiang/runtime/node/bin`加入本次安装PATH后运行
 `npm install --prefix /opt/beiqiang-codex @openai/codex@0.166.0`，
 CLI在 `node_modules/.bin`；创建 `/opt/beiqiang-codex/bin` 指向此目录的软链接）。
@@ -10,12 +12,12 @@ root安装时的umask077可能阻止服务账号遍历。安装后仅对专用
 不得递归修改其他`/opt`路径，也不要跟随包中的软链接到外部。
 Node专用runtime祖先由prepare-host.sh明确设0755，并以两个服务账号实际执行`node --version`。
 最后以`beiqiang-runner`及service相同PATH运行`codex --version`确认目录和可执行入口均可达。
-不要复制桌面凭证；服务器正常ChatGPT设备登录。
+不要复制桌面凭证；如明确切回 ChatGPT，使用服务器正常设备登录。
 
 将runner.py和preflight.py及其本地模块作为同一只读release置于
 `/opt/beiqiang-runner/releases/<version>/`，`current`指向该release。
 runner.env放`/etc/beiqiang/runner.env` root:root 0600。
-安装本service，但先不enable/start。
+新安装时先保持 service 停用，完成预检及指定测试后再按当前授权启用。
 
 `bash verify-mount.sh`在目标机实际创建独立systemd挂载空间，验证
 通过同一preflight函数读取`/proc/self/mountinfo`精确挂载点、非root、0700归属及写入。此结果必须留部署证据；

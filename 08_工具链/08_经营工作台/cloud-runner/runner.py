@@ -17,6 +17,7 @@ from urllib.parse import urlsplit
 from urllib.request import Request
 
 MODEL = 'gpt-6.1-sol'
+API_MODELS = (MODEL, 'gpt-6-luna')
 # API user input <=12000 plus three owner-control fields <=4000 each,
 # with labels/version framing (<1000). This is the combined envelope, not
 # permission to increase the API's individual user-input limit.
@@ -131,9 +132,11 @@ class Queue:
         if 'error' in value or value.get('ok') is False: raise RuntimeError('Queue rejected '+action)
         return value
 
-def command(executable, schema, workdir):
+def command(executable, schema, workdir, model=MODEL):
+    if model not in API_MODELS:
+        raise ValueError('Unsupported model')
     args=[executable,'-s','read-only','-a','never','exec','--ignore-user-config',
-          '-m',MODEL,'--json','--output-schema',str(schema),'--skip-git-repo-check','-C',str(workdir),
+          '-m',model,'--json','--output-schema',str(schema),'--skip-git-repo-check','-C',str(workdir),
           '-c','web_search="disabled"','-c','mcp_servers={}']
     for feature in ('apps','plugins','hooks','shell_tool','unified_exec','browser_use','computer_use',
                     'code_mode','view_image','multi_agent','image_generation','remote_plugin',
@@ -156,7 +159,11 @@ def execute(queue, job, executable, state):
         schema=Path(work)/'proposal.schema.json';schema.write_text(json.dumps(result_schema(job)),encoding='utf-8')
         flags=process_flags()
         child_env={key:value for key,value in os.environ.items() if not key.startswith('WORKBENCH_')}
-        proc=subprocess.Popen(command(executable,schema,work),stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+        if os.environ.get('WORKBENCH_RUNNER_AUTH', 'chatgpt') == 'api':
+            from preflight import read_api_credential
+            child_env['CODEX_API_KEY'] = read_api_credential(os.environ)
+            child_env.pop('CREDENTIALS_DIRECTORY', None)
+        proc=subprocess.Popen(command(executable,schema,work,job.get('model') or MODEL),stdin=subprocess.PIPE,stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace',cwd=work,env=child_env,**flags)
         def stop():
             if proc.poll() is None:
@@ -233,13 +240,26 @@ def main():
     if not endpoint or not secret:parser.error('Set WORKBENCH_RUNNER_URL and WORKBENCH_RUNNER_SECRET in the deployment environment')
     executable=shutil.which('codex')
     if not executable:parser.error('Install and authenticate Codex CLI on this execution host first')
+    auth_mode = os.environ.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
+    if auth_mode not in ('chatgpt', 'api'):
+        parser.error('Unsupported runner authentication method')
+    if auth_mode == 'api':
+        forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
+                     'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')
+        if any(os.environ.get(name) for name in forbidden):
+            parser.error('Unexpected inherited authentication or provider override')
+        from preflight import read_api_credential
+        try: read_api_credential(os.environ)
+        except (OSError, UnicodeError, ValueError): parser.error('Private API credential is unavailable')
     capabilities = None
     if not args.run_id:
         from preflight import preflight
         checked = preflight()
         if not checked['ok']:
             parser.error('Private worker startup checks failed; run preflight.py for safe check results')
-        capabilities = {'ready': True, 'auth': 'chatgpt', 'model': MODEL}
+        auth = checked.get('auth', {}).get('method') or 'chatgpt'
+        capabilities = {'ready': True, 'auth': auth, 'model': MODEL,
+                        'models': list(API_MODELS if auth == 'api' else (MODEL,))}
     state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
     state.mkdir(parents=True,exist_ok=True);require_reconciled(state);queue=Queue(endpoint,secret)
     while True:

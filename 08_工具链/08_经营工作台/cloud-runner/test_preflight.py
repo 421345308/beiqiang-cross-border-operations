@@ -90,6 +90,37 @@ class PreflightTests(unittest.TestCase):
                 self.assertNotIn(self.env[key], json.dumps(result))
                 self.env.pop(key)
 
+    def test_api_mode_requires_systemd_credential_without_claiming_authentication(self):
+        credential_dir = Path(self.temp.name) / 'credentials'
+        credential_dir.mkdir(mode=0o700)
+        credential = credential_dir / 'openai-api-key'
+        credential.write_text('sk-fixture_' + 'x' * 40, encoding='ascii')
+        self.env.update(WORKBENCH_RUNNER_AUTH='api', CREDENTIALS_DIRECTORY=str(credential_dir))
+        result = self.invoke()
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['auth']['method'], 'api')
+        self.assertTrue(result['auth']['credential_configured'])
+        self.assertFalse(result['auth']['authenticated'])
+        self.assertFalse(result['model_access_verified'])
+        self.assertEqual(len(self.calls), 1)  # No saved ChatGPT login or model call.
+        self.assertNotIn('sk-fixture_', json.dumps(result))
+        credential.unlink()
+        self.assertFalse(self.invoke()['ok'])
+
+    def test_api_mode_rejects_inherited_provider_and_bad_credential(self):
+        credential_dir = Path(self.temp.name) / 'credentials'
+        credential_dir.mkdir(mode=0o700)
+        credential = credential_dir / 'openai-api-key'
+        credential.write_text('sk-fixture_' + 'x' * 40, encoding='ascii')
+        self.env.update(WORKBENCH_RUNNER_AUTH='api', CREDENTIALS_DIRECTORY=str(credential_dir),
+                        OPENAI_BASE_URL='https://not-allowed.invalid')
+        self.assertFalse(self.invoke()['ok'])
+        self.env.pop('OPENAI_BASE_URL')
+        credential.write_text('invalid', encoding='ascii')
+        self.assertFalse(self.invoke()['ok'])
+        self.env['WORKBENCH_RUNNER_AUTH'] = 'unknown'
+        self.assertFalse(self.invoke()['ok'])
+
     def test_missing_cli_is_failure(self):
         result = self.invoke(find_executable=lambda name: None)
         self.assertFalse(result['ok'])

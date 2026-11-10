@@ -2,22 +2,26 @@
 
 ## 新加坡现状与中断保护（2026-11-10）
 
-已核实现有新加坡服务器装有 runner，但服务处于禁用、未运行状态，执行账号的 Codex 尚未登录；网站仍是人工 Cloud 模式。需要负责人在官方安全设置允许设备登录并完成授权，才能继续进行云端真实任务和关机验收。不得复制本机登录文件或把安装文件当成自主运行成功。
+负责人开启设备代码登录后，服务器两次设备授权均被官方页面拒绝，未查明根因；没有复制本机登录文件。负责人随后明确选择 API。服务器现用专用 systemd 凭证加载 API key，只在需要时注入 Codex 子进程；密钥未写入源码、命令历史、服务日志、网页或发布包。该密钥已出现在本次对话中，需按官方流程轮换并安全替换服务器凭证。API 与 ChatGPT 订阅分别计费。
 
-代码新增持久标记：发起领取前写 `claiming.json`，收到有效任务后写 `active.json`，服务端确认完成后才清除；领取应答丢失、进程中断或结果未确认时，重启和指定任务模式均暂停，先对照云端运行记录与实际结果，再处理标记。并发进程不能在已有执行标记时再次领取。标记不保存租约或凭证；这是防重复执行的保守中断保护，不是自动续跑。Windows、WSL Ubuntu 及新加坡服务器的隔离测试覆盖应答丢失、进程中断、并发及确认完成；服务器上 27 项通过。已在服务停用时切换 runner release `20261110-v7`，旧 release `20261031-v6` 保留；实际云端任务尚待登录后验收。
+代码新增持久标记：发起领取前写 `claiming.json`，收到有效任务后写 `active.json`，服务端确认完成后才清除；领取应答丢失、进程中断或结果未确认时，重启和指定任务模式均暂停，先对照云端运行记录与实际结果，再处理标记。并发进程不能在已有执行标记时再次领取。标记不保存租约或凭证；这是防重复执行的保守中断保护，不是自动续跑。新加坡服务器通过 30 项隔离测试；runner release `20261110-v8` 实际运行并设为开机启动，旧 release 保留。内部指定任务 `a760037906827db227ac31e99659d6ae` 与自动领取任务 `4f2975ec845b0f7e47e9e13e8980908e` 均真实调用 Luna 并回传待审阅；自动任务用量输入 9,602、输出 542 tokens。空闲状态重启服务后心跳恢复；尚未实际关掉本机验证，也未完成故障中断后真实任务对账恢复。
+
+既有内部测试询盘 `BQ-20261030-E0F00007` 的 Luna 运行 `db0a6c3ee68dd4625cc2e1465fb5bb20` 自动领取并回传；官网详情显示已知需求、缺失信息与下一动作的待审方案，未发送且未覆盖原处理记录。实际输入 10,065、输出 552 tokens。这验证测试询盘链路，不等同于真实客户已收到回复，也不证明实单处理质量。
 
 ## 当前常驻路线（2026-10-31）
 
-自动派发复用原 `runner.py` 与已验证Docker镜像，优先在现有机器验证自建运行；[Render部署包](deploy/README.md)保留为可选参考，当前不采购该服务。实现沿原 `runner.py`，不是网站直接自动启动新版官方Cloud环境。正常ChatGPT登录使用现有Codex套餐，固定Sol；不新增API计费身份。服务器需 `WORKBENCH_RUNNER_MODE=self_hosted`、`WORKBENCH_AUTODISPATCH=enabled`，且收到近期通过启动预检的回报才允许无指定ID领取。任一条件未就绪，界面明确显示排队与原因。原人工Cloud保持指定run_id方式，生产现状仍此模式。
+自动派发复用原 `runner.py`，现有新加坡服务器运行自建单实例；[Render部署包](deploy/README.md)只是历史可选参考，当前不采购该服务。生产已设 `WORKBENCH_RUNNER_MODE=self_hosted`、`WORKBENCH_AUTODISPATCH=enabled`，并由通过预检的执行器报告 `auth=api` 与所支持模型；领取时只选执行器声明支持的模型。每个任务可选择 Luna 或 Sol，费用按 OpenAI API 实际用量计费，未设置金额硬上限。当前只处理明确入队的任务，不自行定时创建经营任务。
 
-无指定run_id的runner启动先检查私有持久目录、Linux非root、固定CLI、ChatGPT身份和正式队列地址，再发ready心跳；失败不领取。执行/结果上报失败将原因及run_id保存到私有 `blocked.json`，重启仍暂停，按部署文档核回执后恢复；不增加自动重试层。指定run_id的一次性调用继续保留。
+无指定run_id的runner启动先检查私有持久目录、Linux非root、固定CLI、明确选择的认证配置和正式队列地址，再发ready心跳；API 凭证格式存在不等于模型和余额已验证。执行/结果上报失败将原因及run_id保存到私有 `blocked.json`，重启仍暂停，按部署文档核回执后恢复；不增加自动重试层。指定run_id的一次性调用继续保留。
 
 2026-10-31 的65项Linux客户端测试全部通过，含13项启动检查；真实本机PostgreSQL+Sol无指定ID领取、回传、审阅采纳验收已完成：运行 `e01caa1d35a207b9f8e5f0173d4d1e71`，会话 `01a18d84-96af-7302-83e6-32b48913aa30`，合成内部测试对象保持待处理，原询盘hash未变。证据 `99_临时区/工作台应用验收/postgres-sol-readback.json`。服务器当前状态见本页顶部；目标机器正常登录、重启续用身份和关闭本机继续执行仍待实际验收，本机成功不代替这些条件。
 
 
 2026-10-30：原生Sol Cloud经标准客户端完成正式网站指定任务回传，实际配对已验收；自托管CLI执行器仍为备用，未部署或购买资源。配套云接口由网站工作台后端维护，本目录不保存第二份任务状态或业务资料。
 
-## 当前首选：OpenAI托管Codex Cloud
+## 历史路线：OpenAI托管Codex Cloud（2026-10-30）
+
+以下为当时的人工 Cloud 路线，当前实际常驻路线见本页顶部。
 
 2026-10-30负责人指出应复用OpenAI提供的云环境，故撤销“必须先提供Linux云主机”的判断。官方支持在网页/桌面创建并发布环境，从手机接续；任务可在本机休眠后运行。[官方云环境文档](https://learn.chatgpt.com/docs/environments/cloud-environments)。不需要先购买服务器，也不需要在托管任务里再嵌套一层Codex CLI登录。
 
@@ -109,9 +113,9 @@ python -X utf8 "08_工具链/08_经营工作台/cloud-runner/review-proposal.py"
 
 ## Runner使用
 
-在选定执行主机完成Codex安装和正常登录后，在部署环境设置 `WORKBENCH_RUNNER_URL=https://<正式主机>/api/workbench-runner` 和 `WORKBENCH_RUNNER_SECRET`。不要把实际密钥放进命令历史、Git或README。
+在选定执行主机完成Codex安装后，在部署环境设置 `WORKBENCH_RUNNER_URL=https://<正式主机>/api/workbench-runner` 和 `WORKBENCH_RUNNER_SECRET`。不要把实际密钥放进命令历史、Git或README。
 
-服务与手动device-auth必须使用同一Linux用户、HOME，以及同一个`CODEX_HOME`（若设置）。Runner保留正常登录身份；`--ignore-user-config`仅隔离用户配置，不绕过规则或跳过认证。开始前确认该用户没有意外的`OPENAI_API_KEY`、自定义API base URL或API-key登录；若发现，先由负责人正常切回ChatGPT登录，不让runner自动改认证。
+ChatGPT 模式下，服务与手动 device-auth 必须使用同一 Linux 用户、HOME 和 `CODEX_HOME`。API 模式需明确设置 `WORKBENCH_RUNNER_AUTH=api`，由 systemd 的 `LoadCredential` 提供名为 `openai-api-key` 的私有凭证，runner 仅向本次 Codex 子进程注入 `CODEX_API_KEY`。两种模式都拒绝意外继承的 API key 或自定义 provider 地址；`--ignore-user-config`仅隔离用户配置，不绕过规则或跳过认证。
 
 ```text
 python runner.py --once

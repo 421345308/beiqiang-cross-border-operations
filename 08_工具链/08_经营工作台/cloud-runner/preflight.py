@@ -53,6 +53,20 @@ def _run(command, env):
                           encoding='utf-8', errors='replace', timeout=20, check=False)
 
 
+def read_api_credential(env):
+    """Read only the systemd-provided credential; never include its value in errors."""
+    directory = Path(env.get('CREDENTIALS_DIRECTORY', ''))
+    if not directory.is_absolute() or directory.is_symlink() or not directory.is_dir():
+        raise ValueError('Systemd credential directory is unavailable')
+    path = directory / 'openai-api-key'
+    if path.is_symlink() or not path.is_file() or path.stat().st_size > 4096:
+        raise ValueError('Systemd API credential is unavailable')
+    key = path.read_text(encoding='ascii').strip()
+    if not re.fullmatch(r'sk-[A-Za-z0-9_-]{20,}', key):
+        raise ValueError('Systemd API credential has an invalid format')
+    return key
+
+
 def preflight(env=None, *, expected_version=None, run_command=None, find_executable=None,
               require_non_root=True, require_mount=True):
     """Return safe evidence; ok means eligible to start, not live/model readiness.
@@ -85,11 +99,22 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
     secret = env.get('WORKBENCH_RUNNER_SECRET', '')
     result['queue']['secret_configured'] = len(secret.encode()) >= 32 and bool(secret.strip()) and not any(c in secret for c in '\r\n')
     check('queue_secret', result['queue']['secret_configured'], 'MISSING_QUEUE_SECRET')
-    # A separate API account/provider must never silently replace the chosen plan.
+    # The configured plan is explicit: inherited credentials/provider overrides never
+    # silently replace it, including when API authentication is selected.
+    auth_method = env.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
+    auth_method_ok = check('auth_method', auth_method in ('chatgpt', 'api'), 'INVALID_AUTH_METHOD')
     forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
                  'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')
     auth_env_ok = not any(env.get(key) for key in forbidden)
     check('auth_environment', auth_env_ok, 'UNEXPECTED_AUTH_OR_PROVIDER_OVERRIDE')
+    if auth_method_ok and auth_method == 'api' and auth_env_ok:
+        try:
+            read_api_credential(env)
+            # Existence/format is not proof of API authorization or model access.
+            result['auth'] = {'method': 'api', 'authenticated': False, 'credential_configured': True}
+            check('api_credential', True, '')
+        except (OSError, UnicodeError, ValueError):
+            check('api_credential', False, 'API_CREDENTIAL_REQUIRED')
     check('runtime_user', not require_non_root or (hasattr(os, 'geteuid') and os.geteuid() != 0), 'NON_ROOT_POSIX_USER_REQUIRED')
 
     try:
@@ -142,7 +167,7 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
             check('cli_version', version.returncode == 0 and actual == expected_version, 'CODEX_VERSION_MISMATCH')
         except Exception:
             check('cli_version', False, 'CODEX_VERSION_CHECK_FAILED')
-        if auth_env_ok:
+        if auth_method_ok and auth_method == 'chatgpt' and auth_env_ok:
             try:
                 auth = command([executable, '-c', 'forced_login_method="chatgpt"', 'login', 'status'], env)
                 # CLI currently emits this fixed status on stderr. Preserve neither stream.

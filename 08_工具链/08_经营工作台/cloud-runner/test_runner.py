@@ -23,6 +23,12 @@ class RunnerTests(unittest.TestCase):
         for name in ('shell_tool','apps','plugins','image_generation'):
             self.assertIn(['--disable',name],[cmd[i:i+2] for i in range(len(cmd)-1)])
 
+    def test_runner_uses_only_supported_per_job_models(self):
+        cmd = runner.command('/opt/codex', '/private/schema.json', '/private/job', 'gpt-6-luna')
+        self.assertEqual(cmd[cmd.index('-m') + 1], 'gpt-6-luna')
+        with self.assertRaisesRegex(ValueError, 'Unsupported model'):
+            runner.command('/opt/codex', '/private/schema.json', '/private/job', 'untrusted-model')
+
     def test_linux_process_is_separate_session(self):
         self.assertEqual(runner.process_flags('posix'),{'start_new_session':True})
 
