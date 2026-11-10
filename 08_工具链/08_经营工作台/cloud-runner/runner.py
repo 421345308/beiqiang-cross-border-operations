@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import signal
@@ -199,6 +200,31 @@ def execute(queue, job, executable, state):
         finally:
             finished.set();stop();proc.wait(timeout=15);monitor.join(timeout=25)
 
+def write_recovery_marker(path, payload):
+    # Existence itself is the safety signal, even after a partial write or crash.
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(fd, 'w', encoding='utf-8') as output:
+        json.dump(payload, output, ensure_ascii=False)
+        output.flush()
+        os.fsync(output.fileno())
+    sync_marker_directory(path.parent)
+
+def sync_marker_directory(directory):
+    if os.name != 'nt':
+        fd = os.open(directory, os.O_RDONLY | os.O_DIRECTORY)
+        try: os.fsync(fd)
+        finally: os.close(fd)
+
+def remove_recovery_marker(path):
+    path.unlink()
+    sync_marker_directory(path.parent)
+
+def require_reconciled(state):
+    for name in ('claiming.json', 'active.json', 'blocked.json'):
+        marker = state / name
+        if marker.exists() or marker.is_symlink():
+            raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--once',action='store_true')
     parser.add_argument('--run-id', help='Execute only this explicitly selected run, then exit')
@@ -215,11 +241,25 @@ def main():
             parser.error('Private worker startup checks failed; run preflight.py for safe check results')
         capabilities = {'ready': True, 'auth': 'chatgpt', 'model': MODEL}
     state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
-    state.mkdir(parents=True,exist_ok=True);queue=Queue(endpoint,secret)
+    state.mkdir(parents=True,exist_ok=True);require_reconciled(state);queue=Queue(endpoint,secret)
     while True:
         queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
-        job=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {})).get('job')
-        if job:
+        claiming, active = state / 'claiming.json', state / 'active.json'
+        write_recovery_marker(claiming, {'at':time.time(), 'requested_run_id':args.run_id or None})
+        # Another process may have finished claiming after this process started.
+        # The exclusive claiming marker serializes this check with every claimant.
+        if any(p.exists() or p.is_symlink() for p in (active, state / 'blocked.json')):
+            remove_recovery_marker(claiming)
+            raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
+        response=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {}))
+        if not isinstance(response, dict) or 'job' not in response:
+            raise RuntimeError('Claim response was incomplete; reconcile before proceeding')
+        job=response['job']
+        if job is not None:
+            if not isinstance(job, dict) or not re.fullmatch(r'[a-f0-9]{32}', str(job.get('id', ''))):
+                raise RuntimeError('Claim response was invalid; reconcile before proceeding')
+            write_recovery_marker(active, {'run_id':job['id'], 'at':time.time()})
+            remove_recovery_marker(claiming)
             try:execute(queue,job,executable,state)
             except Exception as exc:
                 # No automatic replay after an uncertain delivery or execution failure.
@@ -235,6 +275,9 @@ def main():
                     try:queue.call('heartbeat', capabilities={**capabilities, 'ready': False})
                     except Exception:pass
                 raise
+            remove_recovery_marker(active)
+        else:
+            remove_recovery_marker(claiming)
         if args.once or args.run_id:return
         time.sleep(10)
 

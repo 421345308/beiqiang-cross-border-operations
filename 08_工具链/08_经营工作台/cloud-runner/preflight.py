@@ -108,6 +108,9 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
         # Only explicit recovery removes it; never inspect potentially private text.
         blocked = state / 'blocked.json'
         check('execution_pause', not blocked.exists() and not blocked.is_symlink(), 'EXECUTION_PAUSED_REQUIRES_REVIEW')
+        # A crash or lost claim response must be reconciled before another claim.
+        pending = [state / 'claiming.json', state / 'active.json']
+        check('execution_recovery', not any(p.exists() or p.is_symlink() for p in pending), 'EXECUTION_OUTCOME_REQUIRES_REVIEW')
         if os.name != 'nt':
             valid = valid and all(not (p.stat().st_mode & 0o077) and p.stat().st_uid == os.geteuid() for p in (code, state))
         check('storage_paths', valid, 'PRIVATE_STORAGE_PATHS_REQUIRED')

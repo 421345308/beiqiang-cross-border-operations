@@ -146,6 +146,17 @@ class PreflightTests(unittest.TestCase):
         blocked.unlink()  # Explicit test recovery only; production never does this.
         self.assertTrue(self.invoke()['ok'])
 
+    def test_unresolved_claim_or_execution_blocks_restart_without_reading_contents(self):
+        for name in ('claiming.json', 'active.json'):
+            with self.subTest(name=name):
+                marker = Path(self.env['WORKBENCH_RUNNER_STATE']) / name
+                marker.write_text('PRIVATE TASK DATA', encoding='utf-8')
+                result = self.invoke()
+                self.assertFalse(result['ok'])
+                self.assertIn('EXECUTION_OUTCOME_REQUIRES_REVIEW', [x['code'] for x in result['checks']])
+                self.assertNotIn('PRIVATE TASK DATA', json.dumps(result))
+                marker.unlink()
+
     @unittest.skipIf(os.name == 'nt', 'POSIX mode and symlink guarantees')
     def test_private_modes_and_no_symlink_escape(self):
         code = Path(self.env['CODEX_HOME'])

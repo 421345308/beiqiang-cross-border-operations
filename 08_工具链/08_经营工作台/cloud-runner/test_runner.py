@@ -86,5 +86,60 @@ class RunnerTests(unittest.TestCase):
                              ['heartbeat','claim','fail','heartbeat'])
             self.assertFalse(queue.call.call_args.kwargs['capabilities']['ready'])
 
+    def test_lost_claim_response_survives_restart_and_blocks_further_claims(self):
+        queue=Mock()
+        def response(action, **fields):
+            if action=='claim': raise TimeoutError('claim outcome unknown')
+            return {}
+        queue.call.side_effect=response
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py','--run-id',self.job['id']]), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), patch.object(runner,'Queue',return_value=queue):
+                with self.assertRaises(TimeoutError):runner.main()
+                marker=Path(directory)/'claiming.json'
+                self.assertTrue(marker.exists())
+                self.assertEqual(json.loads(marker.read_text())['requested_run_id'],self.job['id'])
+                queue.reset_mock()
+                with self.assertRaisesRegex(RuntimeError,'reconciliation'):runner.main()
+                queue.call.assert_not_called()
+
+    def test_interrupted_execution_leaves_marker_but_confirmed_completion_clears_it(self):
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            queue=Mock();queue.call.side_effect=lambda action, **fields: {'job':self.job} if action=='claim' else {}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py','--run-id',self.job['id']]), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), patch.object(runner,'Queue',return_value=queue):
+                with patch.object(runner,'execute',side_effect=SystemExit('simulated abrupt stop')):
+                    with self.assertRaises(SystemExit):runner.main()
+                active=Path(directory)/'active.json'
+                self.assertEqual(json.loads(active.read_text())['run_id'],self.job['id'])
+                queue.reset_mock()
+                with self.assertRaisesRegex(RuntimeError,'reconciliation'):runner.main()
+                queue.call.assert_not_called()
+                active.unlink()  # Isolated fixture's explicit reconciliation.
+                with patch.object(runner,'execute',return_value=None):runner.main()
+                self.assertFalse(active.exists())
+                self.assertFalse((Path(directory)/'claiming.json').exists())
+
+    def test_concurrent_process_cannot_claim_while_another_job_is_active(self):
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            queue=Mock()
+            active=Path(directory)/'active.json'
+            def heartbeat(action, **fields):
+                if action=='heartbeat': active.write_text('{}')  # Another claimant won after startup.
+                return {}
+            queue.call.side_effect=heartbeat
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py','--run-id',self.job['id']]), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), patch.object(runner,'Queue',return_value=queue):
+                with self.assertRaisesRegex(RuntimeError,'reconciliation'):runner.main()
+                self.assertEqual([call.args[0] for call in queue.call.call_args_list], ['heartbeat'])
+                self.assertTrue(active.exists())
+                self.assertFalse((Path(directory)/'claiming.json').exists())
+
 
 if __name__=='__main__':unittest.main()
