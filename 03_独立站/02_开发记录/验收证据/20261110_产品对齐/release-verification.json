@@ -1,0 +1,253 @@
+{
+  "expected_release": "2026-11-10.4",
+  "all_passed": true,
+  "results": [
+    {
+      "kind": "product_locale",
+      "path": "/products/bq-9002/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 102194,
+      "title": "Knit Slip-On Shoes with Sculpted EVA Sole · BQ-9002 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_locale",
+      "path": "/zh/products/bq-9002/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 103593,
+      "title": "针织套穿立体EVA底休闲鞋 · BQ-9002 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_locale",
+      "path": "/de/products/bq-9002/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 54175,
+      "title": "BQ-9002 · Strick-Slipper mit plastisch geformter EVA-Sohle | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_locale",
+      "path": "/fr/products/bq-9002/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 54520,
+      "title": "BQ-9002 · Chaussures à enfiler en maille avec semelle EVA sculptée | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_locale",
+      "path": "/es/products/bq-9002/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 54256,
+      "title": "BQ-9002 · Calzado de punto sin cordones con suela EVA de relieve | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_link",
+      "path": "/products/bq006/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 107462,
+      "title": "Autumn Winter Chunky Knit Lace-Up Shoes · BQ006 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_link",
+      "path": "/products/bq014/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 103306,
+      "title": "Stretch Textile Slip-On Walking Shoes · BQ014 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_link",
+      "path": "/products/bq015/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 106376,
+      "title": "Autumn Winter Textile Lace-Up Walking Shoes · BQ015 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "product_link",
+      "path": "/products/bq020/",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 105962,
+      "title": "Summer Hollow-Knit Lace-Up Walking Shoes · BQ020 | Beiqiang",
+      "code_present": true,
+      "platform_id_present": true
+    },
+    {
+      "kind": "pdf",
+      "path": "/downloads/beiqiang-footwear-line-sheet-2026.pdf",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 1671319,
+      "retry_verified": true,
+      "matches_local_sha256": true,
+      "sha256": "be4eccd6b35a632d4415cd23d147ad807330d50ca5a633ec68030eb7c7716387"
+    },
+    {
+      "kind": "pdf",
+      "path": "/downloads/beiqiang-footwear-line-sheet-zh-2026.pdf",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 1732370,
+      "matches_local_sha256": true,
+      "retry_verified": true,
+      "sha256": "a30ddfac6a348b36aa6fc58b56864cd3e1ff1499843496c0c8278152a3ae6fd4"
+    },
+    {
+      "kind": "pdf",
+      "path": "/downloads/beiqiang-footwear-line-sheet-de-2026.pdf",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 1594488,
+      "matches_local_sha256": true,
+      "sha256": "c6b14c5c2f40704d1f4b85ec72569ba607c5a8ea7e95e22a97192c1007086bcf"
+    },
+    {
+      "kind": "pdf",
+      "path": "/downloads/beiqiang-footwear-line-sheet-fr-2026.pdf",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 1594127,
+      "matches_local_sha256": true,
+      "sha256": "ad83cfc058c0881bb8c5161158522e3dbaa7b27ffa177e681ec59b134180724b"
+    },
+    {
+      "kind": "pdf",
+      "path": "/downloads/beiqiang-footwear-line-sheet-es-2026.pdf",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 1593715,
+      "matches_local_sha256": true,
+      "sha256": "f112079e8dd652afbc97248bbb80e7905151181cc91cdc25d5eb478a7861c40e"
+    },
+    {
+      "kind": "image",
+      "path": "/catalog-web/bq-9002/01_main.webp",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 68802,
+      "matches_local_sha256": true,
+      "sha256": "459ff8ba0e49f59e2d0c88b7f774429e8814bd5583b7f7ae51976ad0f84e9de1"
+    },
+    {
+      "kind": "image",
+      "path": "/catalog-web/bq-9002/02_dark.webp",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 69174,
+      "matches_local_sha256": true,
+      "sha256": "b9a8b6618e4e786a7c66badb62164c08e4cfceee672ea4c268cf78f122f6ea05"
+    },
+    {
+      "kind": "image",
+      "path": "/catalog-web/bq-9002/03_light_outsole.webp",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 74012,
+      "matches_local_sha256": true,
+      "sha256": "34c901a68cbfbbce31a266352af49bd3aedb1dee73e7d465950f1c83812388c3"
+    },
+    {
+      "kind": "image",
+      "path": "/catalog-web/bq-9002/04_dark_outsole.webp",
+      "ok": true,
+      "curl_exit": 0,
+      "bytes": 82082,
+      "matches_local_sha256": true,
+      "sha256": "f6b9f1b996647a098004d9fab8d1053380138edaf02b0dd69e803a3e2354c1be"
+    }
+  ],
+  "verified_product_links": [
+    {
+      "code": "BQ006",
+      "expected_id": "1601814931739",
+      "curl_exit": 0,
+      "matching_product_links": [
+        "https://www.alibaba.com/product-detail/autumn-winter-chunky-knit-lace-up-shoes_1601814931739.html"
+      ],
+      "ok": true
+    },
+    {
+      "code": "BQ014",
+      "expected_id": "10000043732626",
+      "curl_exit": 0,
+      "matching_product_links": [
+        "https://www.alibaba.com/product-detail/stretch-textile-slip-on-walking-shoes_10000043732626.html"
+      ],
+      "ok": true
+    },
+    {
+      "code": "BQ015",
+      "expected_id": "1601939743040",
+      "curl_exit": 0,
+      "matching_product_links": [
+        "https://www.alibaba.com/product-detail/autumn-winter-textile-lace-up-walking-shoes_1601939743040.html"
+      ],
+      "ok": true
+    },
+    {
+      "code": "BQ020",
+      "expected_id": "1601839073314",
+      "curl_exit": 0,
+      "matching_product_links": [
+        "https://www.alibaba.com/product-detail/summer-hollow-knit-lace-up-walking-shoes_1601839073314.html"
+      ],
+      "ok": true
+    },
+    {
+      "code": "BQ-9002",
+      "expected_id": "1602003801096",
+      "curl_exit": 0,
+      "matching_product_links": [
+        "https://www.alibaba.com/product-detail/knit-slip-on-shoes-with-sculpted-eva-sole_1602003801096.html"
+      ],
+      "ok": true
+    }
+  ],
+  "recorded_at_utc": "2026-11-10T16:56:01+00:00",
+  "website_commit": "99f6e839cb24562401f95bb1752e3dfbbaed29da",
+  "product_commit": "7724e80ecc9c226907f4ae3ccf242111568871f8",
+  "production_release_readback": {
+    "releaseId": "2026-11-10.4",
+    "productCount": 134,
+    "publicLanguages": [
+      "en",
+      "zh",
+      "de",
+      "fr",
+      "es"
+    ]
+  },
+  "deployment_parity": {
+    "ok": true,
+    "origin": "https://www.beiqiang.online",
+    "release_status": 200,
+    "factory_video_status": 206,
+    "english_captions_status": 206,
+    "chinese_captions_status": 206
+  },
+  "notes": [
+    "Release fields and parity are transcribed from the successful production checks.",
+    "Two PDF transfers were repeated after incomplete initial downloads; final SHA-256 matches are recorded.",
+    "Checks are read-only; no production inquiry was submitted."
+  ]
+}
