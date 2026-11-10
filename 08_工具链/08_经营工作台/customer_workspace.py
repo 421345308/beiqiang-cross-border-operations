@@ -207,7 +207,9 @@ class CustomerWorkspace:
 
     def _mail_workflow(self,object_id,flow):
         service=getattr(self.app,'gmail',None)
-        if not service or flow.get('bucket')!='active' or flow.get('state') in customer_workflow.ENDED:return flow
+        # A fresh reply to a historical customer is still actionable; keep the
+        # saved bucket unchanged while exposing the reply in the existing queue.
+        if not service or flow.get('bucket') not in ('active','history') or flow.get('state') in customer_workflow.ENDED:return flow
         mail=service.peek(object_id)
         if mail.get('reply_pending') is not True:return flow
         flow['gmail_reply_pending']=True

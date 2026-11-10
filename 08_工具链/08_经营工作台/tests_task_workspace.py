@@ -1,5 +1,7 @@
 import unittest
+from datetime import datetime, timedelta, timezone
 from types import SimpleNamespace
+from urllib.parse import quote
 from task_workspace import TaskWorkspace
 
 class WorkspaceTests(unittest.TestCase):
@@ -67,6 +69,32 @@ class WorkspaceTests(unittest.TestCase):
         for value in (None,'',{},'x'*12001):
             with self.assertRaises(ValueError): self.service.route(value)
 
+    def test_business_inbox_reuses_customer_decisions_and_exposes_source_health(self):
+        self.app.today=SimpleNamespace(snapshot=lambda:{
+            'sources':{'customers':{'state':'ok'},'prospects':{'state':'ok'},
+                       'gmail':{'state':'error'},'website':{'state':'ready','stale':True}},
+            'groups':{'act':[
+                {'id':'reply:1','kind':'customer_reply','object_id':'customer:one','severity':'high',
+                 'action':{'type':'open_object','object_id':'customer:one'}},
+                {'id':'website:2','kind':'customer_action','object_id':'customer:website-two'},
+                {'id':'other:3','kind':'customer_action','object_id':'customer:other'},
+                {'id':'mail:4','kind':'buyer_mail','action':{'type':'open_development'}}],
+                'watch':[{'id':'wait','kind':'customer_waiting','object_id':'customer:website-three'}]}})
+        result=self.service.overview()
+        self.assertEqual({row['id'] for row in result['inbox']},{'reply:1','website:2','mail:4'})
+        self.assertEqual(result['sources']['gmail']['state'],'error')
+        self.assertTrue(result['sources']['website']['stale'])
+        self.assertEqual(result['tasks'],[])
+
+    def test_business_source_failure_does_not_hide_tasks_or_claim_empty_sources(self):
+        def fail():raise RuntimeError('fixture failure')
+        self.app.today=SimpleNamespace(snapshot=fail)
+        self.jobs=[{'id':'one','object_id':'product:BQ01','status':'failed'}]
+        result=self.service.overview()
+        self.assertEqual(result['tasks'][0]['id'],'local:one')
+        self.assertEqual(result['sources']['customers']['state'],'unavailable')
+        self.assertEqual(result['sources']['gmail']['state'],'unavailable')
+
 
 class WorkspaceHTTPTests(unittest.TestCase):
     from tests_desk_http import DeskHTTPTests as Fixture
@@ -103,6 +131,80 @@ class WorkspaceHTTPTests(unittest.TestCase):
         self.assertEqual(linked['conversations'][-1]['control'],'reference_only')
         self.assertEqual(self.request('/api/desk/job/conversation',body)[0],400)
         self.assertEqual(len(self.processes),0)
+
+    def test_website_customer_reply_lifecycle_uses_same_object_and_task(self):
+        oid='customer:website-BQ-REAL'
+        record={'reference':'BQ-REAL','company':'Fixture buyer','email':'buyer@example.com',
+                'requirements':'Synthetic inquiry','internalTest':False,'messages':[]}
+        self.website.fetch=lambda:{'ok':True,'records':[record,{'reference':'INTERNAL','internalTest':True}]}
+        self.website.refresh(wait=True)
+        planned=self.app.agent_jobs.start(oid,'Review this inquiry',defer=True)
+        def inbox():return self.request('/api/desk/task-overview')[1]
+        def flow():return self.request('/api/desk/customer-workflow?object_id='+quote(oid))[1]
+        def save(**fields):
+            status,result=self.request('/api/desk/customer-workflow',{'object_id':oid,'revision':flow()['revision'],**fields})
+            self.assertEqual(status,200);return result
+        first=inbox()
+        self.assertTrue(any(x.get('kind')=='customer_action' and x.get('object_id')==oid for x in first['inbox']))
+        self.assertEqual(first['tasks'][0]['job_id'],planned['id'])
+        save(state='preparing');save(state='waiting_customer')
+        self.assertFalse(any(x.get('object_id')==oid for x in inbox()['inbox']))
+        at=datetime.now(timezone.utc)
+        def add_message(mid,minutes):
+            record['messages'].append({'id':mid,'sender':'buyer','body':'Synthetic buyer reply',
+                                       'sentAt':(at+timedelta(minutes=minutes)).isoformat()})
+            self.website.refresh(wait=True)
+        add_message('website-1',2)
+        def replies():return [x for x in inbox()['inbox'] if x.get('kind')=='customer_reply' and x.get('object_id')==oid]
+        self.assertEqual(len(replies()),1)
+        self.assertEqual(replies()[0]['action']['object_id'],oid)
+        self.assertEqual(len(replies()),1)
+        save(state='waiting_customer')
+        self.assertEqual(replies(),[])
+        save(bucket='history')
+        add_message('website-2',4)
+        self.assertEqual(len(replies()),1)
+        self.assertEqual(flow()['bucket'],'history')
+        def unavailable():raise OSError('fixture offline')
+        self.website.fetch=unavailable;self.website.refresh(wait=True)
+        stale=inbox()
+        self.assertTrue(stale['sources']['website']['stale'])
+        self.assertNotEqual(stale['sources']['website']['state'],'ready')
+        self.assertEqual(len([x for x in stale['inbox'] if x.get('kind')=='customer_reply' and x.get('object_id')==oid]),1)
+        self.assertEqual(len(self.app.agent_jobs.list_jobs()),1)
+
+    def test_gmail_reply_links_existing_customer_and_job_then_acknowledges(self):
+        from tests_gmail_sync import ACCOUNT, BUYER, Mailbox, message
+        oid='customer:website-BQ-REAL'
+        record={'reference':'BQ-REAL','company':'Fixture buyer','email':BUYER,
+                'requirements':'Synthetic inquiry','internalTest':False,'messages':[]}
+        self.website.fetch=lambda:{'ok':True,'records':[record]};self.website.refresh(wait=True)
+        def flow():return self.request('/api/desk/customer-workflow?object_id='+quote(oid))[1]
+        def save(**fields):
+            status,result=self.request('/api/desk/customer-workflow',{'object_id':oid,'revision':flow()['revision'],**fields})
+            self.assertEqual(status,200);return result
+        save(state='preparing');save(state='waiting_customer');save(bucket='history')
+        mailbox=Mailbox();mail=self.app.gmail
+        mail._account=ACCOUNT;mail._connected_at='2020-01-01T00:00:00Z';mail._mailbox=mailbox
+        at=datetime.now(timezone.utc)
+        mailbox.messages=[message('gmail-1',at=(at+timedelta(minutes=2)).isoformat())]
+        self.assertTrue(mail.customer(oid)['reply_pending'])
+        def replies():
+            result=self.request('/api/desk/task-overview')[1]
+            return [x for x in result['inbox'] if x.get('kind')=='customer_reply' and x.get('object_id')==oid]
+        self.assertEqual(len(replies()),1)
+        jobs=self.app.agent_jobs.list_jobs()
+        self.assertEqual(len(jobs),1)
+        self.assertEqual(jobs[0]['object_id'],oid)
+        self.assertEqual(jobs[0]['source_event']['message_id'],'gmail-1')
+        mail.customer(oid);self.assertEqual(len(self.app.agent_jobs.list_jobs()),1)
+        self.assertEqual(self.request('/api/desk/gmail/ack',{'object_id':oid})[0],200)
+        self.assertEqual(replies(),[])
+        mailbox.messages.append(message('gmail-2',at=(at+timedelta(minutes=3)).isoformat()))
+        mail.on_new_reply=None
+        self.assertTrue(mail.customer(oid)['reply_pending'])
+        self.assertEqual(len(replies()),1)
+        self.assertEqual(flow()['bucket'],'history')
 
 
 if __name__=='__main__': unittest.main()

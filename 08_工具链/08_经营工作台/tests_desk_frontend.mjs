@@ -1453,6 +1453,30 @@ test('统一任务入口区分云端不可用，并从 Inbox 打开真正任务'
  const h=harness('#/tasks');h.interceptFetch(async(path,opts)=>path==='/api/desk/task-overview'?{ok:true,json:async()=>({sources:{local:{state:'ok'},cloud:{state:'unavailable',reason:'离线'}},tasks:[{id:'local:j1',job_id:'j1',origin:'local',title:'待确认任务',status:'needs_input'}],inbox:[{task_id:'local:j1',title:'请补充依据'}]})}:h.originalFetch(path,opts));
  await h.ui.bootstrap();assert.match(h.elements.page.textContent,/云端：暂不可用，离线/);await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Aj1');assert.equal(h.requests.filter(x=>x.payload).length,0);
 });
+test('经营 Inbox 打开原客户和关联任务，来源失效时不冒充空收件箱',async()=>{
+ const h=harness('#/tasks');h.interceptFetch(async(path,opts)=>path==='/api/desk/task-overview'?{ok:true,json:async()=>({
+   sources:{local:{state:'ok'},cloud:{state:'ok'},customers:{state:'ok'},prospects:{state:'ok'},gmail:{state:'error'},website:{state:'ready',stale:true}},
+   tasks:[{id:'local:j1',origin:'local',object_id:'customer:website-one',title:'整理回复',status:'planned'}],
+   inbox:[{id:'customer_reply:one',kind:'customer_reply',title:'客户有新回复',object_id:'customer:website-one',
+           action:{type:'open_object',label:'查看客户',object_id:'customer:website-one'}}]})}:h.originalFetch(path,opts));
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/Gmail：暂不可用/);assert.match(h.elements.page.textContent,/网站询盘：暂未更新/);
+ await findButton(h.elements.page,'打开关联任务：整理回复').click();assert.equal(h.location.hash,'/task/local%3Aj1');
+ await findButton(h.elements.page,'查看客户').click();assert.equal(h.location.hash,'/object/customer%3Awebsite-one');
+ assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('任务页更新 Inbox 和连接状态，保留未提交的任务要求',async()=>{
+ const h=harness('#/tasks'),original=h.originalFetch;let revision=1,items=[],website={state:'ready',stale:false,observed_at:'2026-11-10T00:00:00Z'};
+ h.interceptFetch(async(path,opts)=>{
+   if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({sources:{local:{state:'ok'},cloud:{state:'ok'},gmail:{state:'connected'},website},tasks:[],inbox:items})};
+   if(path==='/api/desk/bootstrap'){const response=await original(path,opts),body=await response.json();return {ok:true,json:async()=>({...body,gmail_revision:revision,website_status:website})};}
+   return original(path,opts);
+ });
+ await h.ui.bootstrap();const input=h.elements.page.querySelectorAll('textarea')[0];input.value='尚未提交的任务要求';
+ items=[{id:'reply:1',kind:'customer_reply',title:'客户有新回复',object_id:'customer:website-one',action:{type:'open_object',label:'查看客户',object_id:'customer:website-one'}}];revision=2;h.ui.S.lastBootstrapPoll=0;
+ await h.ui.poll();assert.match(h.elements.page.textContent,/客户有新回复/);assert.equal(h.elements.page.querySelectorAll('textarea')[0],input);assert.equal(input.value,'尚未提交的任务要求');
+ website={...website,state:'error',stale:true};h.ui.S.lastBootstrapPoll=0;await h.ui.poll();assert.match(h.elements.page.textContent,/网站询盘：暂未更新/);assert.equal(input.value,'尚未提交的任务要求');
+ assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
 test('任务上下文可复制，会话关联带版本且不自动执行',async()=>{
  const h=harness('#/task/local%3Aj1');const writes=[];const ctx={job:{id:'j1',version:7,status:'failed',instruction:'原要求',conversations:[{provider:'chatgpt',conversation_id:'c1',url:'javascript:alert(1)'}]},artifacts:[{id:'a1',content:'已有成果'}],shared_sources:[],capabilities:{}};
  h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({sources:{local:{state:'ok'},cloud:{state:'ok'}},tasks:[{id:'local:j1',job_id:'j1',origin:'local',title:'任务',status:'failed'}]})};if(path.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>ctx};if(path==='/api/desk/job/conversation'){writes.push(JSON.parse(opts.body));return {ok:true,json:async()=>({})};}return h.originalFetch(path,opts);});

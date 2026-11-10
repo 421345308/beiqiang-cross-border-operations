@@ -37,6 +37,25 @@ class TaskWorkspace:
                     'severity':'normal', 'object_id':job.get('object_id'),
                     'action':{'type':'open_task','job_id':job['id'],'task_id':'local:'+job['id'],'label':'核对任务'},
                     'updated_at':job.get('updated_at')})
+        # Reuse the same business decisions as the home page. These are
+        # projections of existing customer records, not new tasks or copies
+        # of inquiry/message data. Website open is not itself a local todo.
+        try:
+            today = self.app.today.snapshot()
+            today_sources = today.get('sources') or {}
+            for name in ('customers', 'prospects', 'gmail', 'website'):
+                sources[name] = today_sources.get(name, {'state': 'unavailable'})
+            for item in today.get('groups', {}).get('act', []):
+                kind, oid = item.get('kind'), item.get('object_id')
+                if kind in ('customer_reply', 'buyer_mail') or (
+                    kind == 'customer_action' and str(oid or '').startswith('customer:website-')
+                ):
+                    inbox.append(dict(item))
+        except Exception:
+            # A missing business source must not make the task list fail or
+            # look as though the customer inbox was successfully read.
+            for name in ('customers', 'prospects', 'gmail', 'website'):
+                sources[name] = {'state': 'unavailable'}
         try:
             cloud = self.app.cloud_review.workspace_status()
             sources['cloud'] = {'state': 'ok', 'observed_at': cloud.get('observed_at'),
@@ -61,7 +80,7 @@ class TaskWorkspace:
                                     item.get('updated_at') or ''))
         tasks.sort(key=lambda item: item.get('updated_at') or '', reverse=True)
         return {'tasks': tasks, 'sources': sources, 'inbox': inbox, 'observed_at': now(),
-                'scope': '本机 AgentJobs 与已配对云队列；未登记的桌面聊天和其他数据库不在此列表。'}
+                'scope': '本机 AgentJobs、已配对云队列及现有客户待办；未登记的桌面聊天和其他数据库不在此列表。'}
 
     def route(self, instruction, object_id=None):
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:

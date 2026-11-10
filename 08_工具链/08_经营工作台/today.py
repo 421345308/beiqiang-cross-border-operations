@@ -123,10 +123,14 @@ class Today:
         for row in inbox.get('items', []):
             if not row.get('is_new') or row.get('answered') is True:
                 continue
-            items.append(self._item('act', 'buyer_mail', '新买家来信：' + (row.get('title') or '潜在买家'),
+            item = self._item('act', 'buyer_mail', '新买家来信：' + (row.get('title') or '潜在买家'),
                 row.get('summary') or '查看邮件并判断是否加入客户。',
                 {'label': '查看来信', 'type': 'open_development'}, severity='high',
-                updated_at=row.get('sent_at')))
+                updated_at=row.get('sent_at'))
+            # Two unrelated buyers can have the same display name. Keep the
+            # actual mailbox message identity when one is available.
+            if row.get('id'): item['id'] = 'buyer_mail:' + str(row['id'])
+            items.append(item)
         return items
 
     def _changes(self, sources):
@@ -152,7 +156,8 @@ class Today:
         for name, label in (('alibaba', '国际站'), ('website', '独立站')):
             try:
                 status = self.app.business.alibaba.status() if name == 'alibaba' else self.app.business.website_status()
-                sources[name] = {'state': status.get('state'), 'observed_at': status.get('observed_at')}
+                sources[name] = {'state': status.get('state'), 'observed_at': status.get('observed_at'),
+                                 'stale': status.get('stale')}
                 if status.get('stale'):
                     stale.append(label)
             except Exception as exc:

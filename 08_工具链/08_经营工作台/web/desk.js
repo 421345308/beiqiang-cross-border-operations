@@ -279,9 +279,19 @@
     const openTask=task=>{location.hash=`/task/${encodeURIComponent(task.id)}`;};
     try {
       const data=await api('/api/desk/task-overview');if(!current())return;
-      const tasks=data.tasks || [];if(data.scope)host.append(el('p',data.scope,'muted'));if(data.sources?.cloud?.truncated)host.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
-      for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=data.sources?.[key];host.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
-      if(data.sources?.cloud?.dispatch){const dispatch=data.sources.cloud.dispatch;host.append(el('p',`云端执行器：${dispatch.ready?'可接收任务':'尚不可执行'}`));for(const reason of dispatch.blocking_reasons || [])host.append(el('p',text(reason),'muted'));}
+      const tasks=data.tasks || [],sourceHost=el('section');host.append(sourceHost);
+      function drawSources(snapshot){
+        sourceHost.replaceChildren();
+        if(snapshot.scope)sourceHost.append(el('p',snapshot.scope,'muted'));
+        if(snapshot.sources?.cloud?.truncated)sourceHost.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
+        for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=snapshot.sources?.[key];sourceHost.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
+        const mail=snapshot.sources?.gmail, website=snapshot.sources?.website;
+        if(mail)sourceHost.append(el('p',`Gmail：${mail.state==='connected'?'已连接'+(mail.last_success_at?` · 上次读取 ${time(mail.last_success_at)}`:''):'暂不可用，不能判断是否有新邮件'}`,'muted'));
+        if(website)sourceHost.append(el('p',`网站询盘：${website.state==='ready' && !website.stale?'已读取'+(website.observed_at?` · ${time(website.observed_at)}`:''):'暂未更新，可能保留上次读取的资料'}`,'muted'));
+        if(['customers','prospects'].some(key=>snapshot.sources?.[key]?.state==='unavailable'))sourceHost.append(el('p','部分客户待办暂不可读，请重新读取。','inline-error'));
+        if(snapshot.sources?.cloud?.dispatch){const dispatch=snapshot.sources.cloud.dispatch;sourceHost.append(el('p',`云端执行器：${dispatch.ready?'可接收任务':'尚不可执行'}`));for(const reason of dispatch.blocking_reasons || [])sourceHost.append(el('p',text(reason),'muted'));}
+      }
+      drawSources(data);
       if(!id){
         const command=el('textarea'),result=el('div');command.setAttribute('aria-label','任务要求');command.placeholder='说明想做什么，先匹配已有任务';
         let routing=false;
@@ -304,12 +314,24 @@
           }catch(error){if(current())result.replaceChildren(el('p',error.message));}finally{routing=false;preview.disabled=false;}
         }
         const preview=button('查找接续任务',()=>routeCommand(),'quiet');host.append(command,preview,result);
-        host.append(sectionHeading('待决策 Inbox','打开任务后核对依据与下一步'));
-        for(const item of data.inbox || []){const task=tasks.find(t=>t.id===(item.task_id || item.id));const row=el('article',undefined,'card');row.append(el('h3',text(item.title || task?.title || '待处理事项')),el('p',text(item.reason || item.judgment || item.summary)));if(task)row.append(button('打开任务',()=>openTask(task),'quiet'));host.append(row);}
-        if(!(data.inbox || []).length)host.append(el('p','已读取来源中暂无待决策事项。','muted'));
-        host.append(sectionHeading('全部任务'));
-        for(const task of tasks){const row=el('article',undefined,'card');row.append(el('h3',text(task.title || task.instruction || task.id)),el('p',`${task.origin==='cloud'?'云端':'本地'} · ${statusNames[task.status] || task.status || '状态未知'} · ${time(task.updated_at)}`),el('p',text(task.summary || task.error)),button('打开任务',()=>openTask(task),'quiet'));if(task.graph?.aggregate){const a=task.graph.aggregate;row.append(el('p',`子任务：${statusNames[a.status] || a.status} · 总计 ${a.total ?? 0} · ${Object.entries(a.counts || {}).map(([status,count])=>`${statusNames[status] || status} ${count}`).join(' · ')}`));}host.append(row);}
-        if(!tasks.length)host.append(el('p','已读取来源中暂无任务。'));
+        const listHost=el('section');host.append(listHost);
+        function drawLists(snapshot){
+          const currentTasks=snapshot.tasks || [];listHost.replaceChildren(sectionHeading('经营 Inbox','查看客户消息和需要处理的任务'));
+          for(const item of snapshot.inbox || []){
+            const task=currentTasks.find(t=>t.id===(item.task_id || item.id)),row=el('article',undefined,'card');
+            row.append(el('h3',text(item.title || task?.title || '待处理事项')),el('p',text(item.reason || item.judgment || item.summary)));
+            if(task)row.append(button('打开任务',()=>openTask(task),'quiet'));
+            else {const action=todayAction(item.action);if(action)row.append(action);}
+            if(item.object_id && !task)for(const related of currentTasks.filter(t=>t.origin==='local' && t.object_id===item.object_id && !['completed','cancelled'].includes(t.status)))row.append(button(`打开关联任务：${text(related.title || related.instruction || '未命名')}`,()=>openTask(related),'quiet'));
+            listHost.append(row);
+          }
+          if(!(snapshot.inbox || []).length)listHost.append(el('p','已读取的来源中暂无待处理事项；连接不可用时请稍后重试。','muted'));
+          listHost.append(sectionHeading('全部任务'));
+          for(const task of currentTasks){const row=el('article',undefined,'card');row.append(el('h3',text(task.title || task.instruction || task.id)),el('p',`${task.origin==='cloud'?'云端':'本地'} · ${statusNames[task.status] || task.status || '状态未知'} · ${time(task.updated_at)}`),el('p',text(task.summary || task.error)),button('打开任务',()=>openTask(task),'quiet'));if(task.graph?.aggregate){const a=task.graph.aggregate;row.append(el('p',`子任务：${statusNames[a.status] || a.status} · 总计 ${a.total ?? 0} · ${Object.entries(a.counts || {}).map(([status,count])=>`${statusNames[status] || status} ${count}`).join(' · ')}`));}listHost.append(row);}
+          if(!currentTasks.length)listHost.append(el('p','已读取来源中暂无任务。'));
+        }
+        drawLists(data);
+        S.listRefresh=async()=>{try{const fresh=await api('/api/desk/task-overview');if(current()){drawSources(fresh);drawLists(fresh);}}catch{if(current())sourceHost.append(el('p','任务和客户待办更新失败，请重新读取。','inline-error'));}};
         return;
       }
       const task=tasks.find(t=>String(t.id)===id);host.append(button('返回任务列表',()=>{location.hash='/tasks';},'quiet'));
@@ -1505,9 +1527,10 @@
       const transitions=S.jobs.filter(job=>['queued','running'].includes(priorStates.get(job.id)) && !isActive(job));
       let objectsChanged = false, dataChanged = false, websiteUpdated = false, gmailUpdated = false;
       if (Date.now() - S.lastBootstrapPoll >= 12000 || ['loading', 'refreshing', 'pending'].includes(S.websiteStatus.state) || ['loading', 'refreshing', 'pending'].includes(S.alibabaStatus.state)) {
-        const result = await api('/api/desk/bootstrap'); S.lastBootstrapPoll = Date.now(); const old = JSON.stringify(S.objects); S.objects = result.objects || S.objects; objectsChanged = old !== JSON.stringify(S.objects); const priorArtifacts = JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); S.artifacts = result.artifacts || S.artifacts; dataChanged = priorArtifacts !== JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); websiteUpdated = !!result.website_status?.observed_at && result.website_status.observed_at !== S.websiteStatus.observed_at; gmailUpdated = (result.gmail_revision || 0) !== S.gmailRevision; S.gmailRevision = result.gmail_revision || 0; S.websiteStatus = result.website_status || S.websiteStatus; S.alibabaStatus = result.alibaba_status || S.alibabaStatus; if (result.csrf_token) S.token = result.csrf_token; updateWebsiteLabels();
+        const result = await api('/api/desk/bootstrap'); S.lastBootstrapPoll = Date.now(); const old = JSON.stringify(S.objects); S.objects = result.objects || S.objects; objectsChanged = old !== JSON.stringify(S.objects); const priorArtifacts = JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); S.artifacts = result.artifacts || S.artifacts; dataChanged = priorArtifacts !== JSON.stringify(S.artifacts.map(item => [item.id, item.updated_at])); websiteUpdated = JSON.stringify([result.website_status?.state,result.website_status?.stale,result.website_status?.observed_at]) !== JSON.stringify([S.websiteStatus.state,S.websiteStatus.stale,S.websiteStatus.observed_at]); gmailUpdated = (result.gmail_revision || 0) !== S.gmailRevision; S.gmailRevision = result.gmail_revision || 0; S.websiteStatus = result.website_status || S.websiteStatus; S.alibabaStatus = result.alibaba_status || S.alibabaStatus; if (result.csrf_token) S.token = result.csrf_token; updateWebsiteLabels();
       }
       if (S.detail) { const ctx = S.detail; if (changed) renderAgentJobs(ctx); if(changed && ctx.batch){if(ctx.batchJobsChanged)await ctx.batchJobsChanged(transitions);else if(S.listRefresh)await S.listRefresh();}if(S.detail!==ctx)return; if(ctx.gmailHost && (gmailUpdated || Date.now()-(ctx.lastGmailRefresh || 0)>=12000))loadGmail(ctx); if(ctx.profileHost && !ctx.profileEditing && !ctx.workflowEditing && (gmailUpdated || (isWebsite(ctx.object) && (websiteUpdated || Date.now()-(ctx.lastProfileRefresh || 0)>=120000)))) {ctx.lastProfileRefresh=Date.now();loadProfile(ctx);} if (changed && ctx.profileHost && !ctx.profileEditing) loadProfile(ctx); if (!ctx.batch && (changed || dataChanged || jobsFor(ctx.object.id).some(isActive))) await refreshArtifacts(ctx); }
+      else if(S.page==='tasks' && parseRoute().parts[0]==='tasks' && (changed || objectsChanged || websiteUpdated || gmailUpdated) && S.listRefresh)await S.listRefresh();
       else if(S.page==='customers' && parseRoute().query.get('view')==='batches' && changed && S.listRefresh)await S.listRefresh();
       else if (S.page === 'overview' && (changed || objectsChanged || dataChanged || websiteUpdated || gmailUpdated)) renderOverview();
       else if ((objectsChanged || (S.page === 'customers' && (websiteUpdated || gmailUpdated))) && S.listRefresh) await S.listRefresh();

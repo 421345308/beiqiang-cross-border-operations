@@ -12,6 +12,9 @@ if(!document.getElementById('page').textContent.includes('云端：'))throw Erro
 if(!document.querySelector('a[data-nav="tasks"]'))throw Error('task navigation missing');
 const until=async(fn,msg)=>{for(let n=0;n<250;n++){const value=fn();if(value)return value;await wait();}throw Error(msg);};
 const button=label=>[...document.querySelectorAll('button')].find(x=>x.textContent===label);
+if(!document.getElementById('page').textContent.includes('Fixture buyer'))throw Error('website inquiry missing from business inbox');
+button('查看客户').click();await until(()=>location.hash.includes('/object/customer%3Awebsite-BQ-REAL') && document.querySelector('.workflow-editor'),'inbox did not open the original customer');
+location.hash='/tasks';await until(()=>document.querySelector('[aria-label="任务要求"]'),'task return failed');
 const instruction=document.querySelector('[aria-label="任务要求"]');instruction.value='BQ009 整理真实商品资料';button('查找接续任务').click();
 await until(()=>button('准备新任务（不启动）'),'command did not resolve BQ009 to create');
 button('准备新任务（不启动）').click();await until(()=>button('确认启动此任务'),'draft task detail not opened');
@@ -22,7 +25,7 @@ location.hash='/tasks';await until(()=>document.querySelector('[aria-label="任�
 location.hash=taskHash;await until(()=>button('确认启动此任务'),'task re-entry failed');
 document.getElementById('reload').click();await until(()=>!document.getElementById('reload').disabled && button('确认启动此任务'),'task refresh failed');
 const response=await fetch('/api/desk/task-overview');const overview=await response.json();if(!overview.tasks.some(t=>t.origin==='local' && t.status==='planned'))throw Error('planned task not persisted');
-out.dataset.state='pass';out.textContent='Real Chrome rendered unified task route with explicit source availability';
+out.dataset.state='pass';out.textContent='Real Chrome opened the synthetic website customer from the business inbox and preserved task routing';
 })().catch(e=>{out.dataset.state='fail';out.textContent=e.stack || String(e);});
 })();'''
 

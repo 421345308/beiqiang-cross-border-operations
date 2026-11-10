@@ -51,7 +51,7 @@ def decorate(object_id,source_type,saved=None,now=None,record=None):
     if row['state'] in ENDED:row['bucket']='archive'
     messages=_messages(record)
     row['customer_reply_pending']=False
-    if source_type=='website' and row['state']=='waiting_customer' and row['bucket']=='active':
+    if source_type=='website' and row['state']=='waiting_customer' and row['bucket'] in ('active','history'):
         entered=next((h.get('at') for h in reversed(row.get('history') or []) if h.get('to')=='waiting_customer'),None)
         try:waiting_since=parse_time(row.get('waiting_since') or entered or row.get('updated_at'))
         except ValueError:waiting_since=None
