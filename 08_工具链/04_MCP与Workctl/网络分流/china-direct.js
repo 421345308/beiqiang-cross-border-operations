@@ -14,6 +14,9 @@ const chinaDirectDomains = [
   'alibaba.com', 'alicdn.com', 'aliimg.com', 'aliyuncs.com',
   '1688.com', 'taobao.com', 'dingtalk.com', 'chengji-inc.com',
   'sooxie.com', 'workbuddy.cn', 'codebuddy.cn',
+  // 腾讯云控制台、微信登录及其实际使用的静态资源，明确使用直连和国内 DNS。
+  'tencent.com', 'tencent-cloud.com', 'tencent-cloud.cn', 'tencentcs.cn',
+  'qcloud.com', 'qcloudimg.com', 'qq.com', 'gtimg.com', 'gtimg.cn',
 ];
 
 function main(config) {
