@@ -496,6 +496,10 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','cloud-review']:
                 action=body.get('action')
                 if action=='list' and set(body)=={'action'}:return self.send_json(app.cloud_review.list_pending())
+                if action=='tasks' and set(body)=={'action'}:return self.send_json(app.cloud_review.list_tasks())
+                if action=='dispatches' and set(body)=={'action'}:return self.send_json(app.cloud_review.dispatches())
+                if action=='enqueue' and set(body)=={'action','task_id','task_version','source_version','instruction','model'}:return self.send_json(app.cloud_review.enqueue(body['task_id'],body['task_version'],body['source_version'],body['instruction'],body['model']))
+                if action=='reconcile' and set(body)=={'action','request_id'}:return self.send_json(app.cloud_review.reconcile_dispatch(body['request_id']))
                 if action=='preview' and set(body)=={'action','run_id'}:return self.send_json(app.cloud_review.preview(body['run_id']))
                 if action=='apply' and set(body)=={'action','run_id','proposal_hash'}:return self.send_json(app.cloud_review.apply(body['run_id'],body['proposal_hash']))
                 raise ValueError('云端成果请求字段无效')

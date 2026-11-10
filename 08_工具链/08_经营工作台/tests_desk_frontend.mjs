@@ -102,6 +102,24 @@ test('云端成果先读取预览，明确点击后才按预览版本回写', as
   assert.ok(h.elements.page.textContent.includes('云端审阅状态仍需同步确认'));
 });
 
+test('本机明确提交选定任务到云端并携带已读取的版本', async () => {
+  const h=harness(), original=h.originalFetch, calls=[], id='a'.repeat(32);
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/cloud-review'){
+      const body=JSON.parse(options.body);calls.push(body);
+      if(body.action==='tasks')return {ok:true,json:async()=>({tasks:[{id,title:'经营任务',source:null,version:3,source_version:null}]})};
+      if(body.action==='dispatches')return {ok:true,json:async()=>({dispatches:[]})};
+      return {ok:true,json:async()=>({run_id:'b'.repeat(32),status:'queued'})};
+    }
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();await findButton(h.elements.page,'读取可交给云端的任务').click();await settle();
+  const input=walk(h.elements.page).find(x=>x['aria-label']==='云端任务要求');input.value='分析下一步';input.listeners.input();
+  await findButton(h.elements.page,'提交到云端').click();await settle();
+  assert.deepEqual(calls.find(item=>item.action==='enqueue'),{action:'enqueue',task_id:id,task_version:3,source_version:null,instruction:'分析下一步',model:'gpt-6-luna'});
+  assert.ok(h.elements.page.textContent.includes('云端已确认任务'));
+});
+
 test('商品素材明确选择后引用到选定创作画布', async () => {
   const h=harness('#/object/product%3A1'),original=h.originalFetch,calls=[];
   h.interceptFetch(async(path,options={})=>{

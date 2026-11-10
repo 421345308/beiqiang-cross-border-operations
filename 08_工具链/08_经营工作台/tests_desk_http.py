@@ -21,12 +21,21 @@ from website_inquiries import WebsiteInquiries
 class DeskHTTPTests(unittest.TestCase):
     def test_cloud_review_routes_reuse_service_and_require_local_token(self):
         class Cloud:
-            def list_pending(self): return {'runs': [{'id': 'a'*32, 'title': 'fixture'}]}
+            calls=0
+            def list_pending(self): self.calls+=1; return {'runs': [{'id': 'a'*32, 'title': 'fixture'}]}
+            def list_tasks(self): return {'tasks': [{'id': 'b'*32, 'version': 1, 'source_version': None}]}
+            def dispatches(self): return {'dispatches': []}
+            def enqueue(self, task_id, task_version, source_version, instruction, model): return {'run_id': 'c'*32, 'status': 'queued'}
+            def reconcile_dispatch(self, request_id): return {'request_id': request_id, 'status': 'confirmed'}
             def preview(self, run_id): return {'run_id': run_id, 'proposal_hash': 'b'*64}
             def apply(self, run_id, proposal_hash): return {'run_id': run_id, 'status': 'applied'}
         self.app.cloud_review=Cloud()
-        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'list'}, token=False)[0],403)
+        try: denied=self.request('/api/desk/cloud-review', {'action':'list'}, token=False)[0]
+        except (ConnectionAbortedError,ConnectionResetError): denied=0  # Windows may reset an unread rejected body.
+        self.assertIn(denied,(0,403));self.assertEqual(self.app.cloud_review.calls,0)
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'list'})[1]['runs'][0]['id'],'a'*32)
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'tasks'})[1]['tasks'][0]['id'],'b'*32)
+        self.assertEqual(self.request('/api/desk/cloud-review', {'action':'enqueue','task_id':'b'*32,'task_version':1,'source_version':None,'instruction':'测试','model':'gpt-6-luna'})[1]['status'],'queued')
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'preview','run_id':'a'*32})[1]['proposal_hash'],'b'*64)
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'proposal_hash':'b'*64})[1]['status'],'applied')
         self.assertEqual(self.request('/api/desk/cloud-review', {'action':'apply','run_id':'a'*32,'extra':'x'})[0],400)
