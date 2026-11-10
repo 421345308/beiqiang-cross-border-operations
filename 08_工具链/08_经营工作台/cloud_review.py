@@ -78,6 +78,18 @@ class CloudReview:
                 raise ValueError('云端任务或版本无效。')
         return {'tasks': tasks}
 
+    def workspace_status(self):
+        """Authenticated bounded projection; unavailable old servers stay unknown."""
+        value = self._call('workspace_status')
+        runs = value.get('runs')
+        if not isinstance(runs, list) or len(runs) > 100:
+            raise ValueError('云端运行列表无效，请更新并核对云服务。')
+        for run in runs:
+            if (not isinstance(run, dict) or not re.fullmatch(r'[0-9a-f]{32}', str(run.get('id', '')))
+                    or run.get('kind') == 'inquiry_review' or not isinstance(run.get('status'), str)):
+                raise ValueError('云端运行身份或状态无效。')
+        return value
+
     def _journal(self):
         if self.bridge_dir.is_symlink() or not self.bridge_dir.is_dir():
             raise ValueError('本机云端连接尚未配置。')

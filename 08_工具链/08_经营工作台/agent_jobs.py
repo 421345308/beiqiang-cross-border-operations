@@ -22,6 +22,7 @@ from customer_workspace import CustomerWriteOutcomeUnknown
 from workspaces import WorkspaceConflict
 from codex_backend import CodexBackend, MODEL
 from job_dependencies import JobDependencies
+from task_continuity import TaskContinuity
 
 ACTIVE = ('queued', 'running')
 
@@ -79,7 +80,7 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-class AgentJobs(JobDependencies):
+class AgentJobs(TaskContinuity, JobDependencies):
     def __init__(self, app, backend=None):
         self.app = app
         self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
@@ -128,6 +129,21 @@ class AgentJobs(JobDependencies):
                 self._save(job)
 
     def _save(self, job):
+        if not self._transaction:
+            with self._write():
+                self._save(job)
+            return
+        # A different service may have linked metadata since this worker read
+        # its state. Serialize and preserve those links rather than replaying
+        # an old snapshot over them.
+        row = self.app.db.execute('SELECT data FROM agent_jobs WHERE id=?', (job['id'],)).fetchone()
+        if row:
+            persisted = self._continuity_defaults(json.loads(row[0]))
+            self._continuity_defaults(job)
+            job['version'] = max(job['version'], persisted['version'])
+            known = {(c['provider'], c['conversation_id']) for c in job['conversations']}
+            job['conversations'].extend(c for c in persisted['conversations'] if (c['provider'], c['conversation_id']) not in known)
+        self._record_continuity(job)
         job['updated_at'] = now()
         with self.app.lock:
             self.app.db.execute('INSERT OR REPLACE INTO agent_jobs VALUES (?,?)', (job['id'], json.dumps(job, ensure_ascii=False)))
@@ -243,12 +259,16 @@ class AgentJobs(JobDependencies):
             thread.start()
         return job
 
-    def resume(self, job_id, instruction):
+    def resume(self, job_id, instruction, *, new_session=False, expected_version=None):
+        if type(new_session) is not bool:
+            raise ValueError("新会话选项无效")
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
             raise ValueError('请填写继续工作的内容，最多12000字')
         with self.lock,self._write():
             self._recover_exited_owners()
             job = self.get_job(job_id)
+            self._continuity_defaults(job)
+            self._check_continuity_version(job, expected_version, required=new_session)
             if job['status'] == 'planned':
                 raise ValueError('尚未执行的计划请使用 dispatch，不能恢复会话。')
             self._check_parent_available(job)
@@ -259,7 +279,7 @@ class AgentJobs(JobDependencies):
                 raise ValueError('上一轮正在收尾，请稍后继续。')
             if job.get('worker_finished') is False and self._owner_alive(job) is not False:
                 raise ValueError('上一轮拥有者仍在收尾或无法确认退出，暂不能恢复。')
-            if not job.get('session_id'):
+            if not new_session and not job.get('session_id'):
                 raise ValueError('这项工作没有可恢复的 Codex 会话；请核对已有成果后新建工作。')
             if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
                 raise ValueError('先前进程仍在运行或无法确认已退出，暂不能并行恢复。')
@@ -271,9 +291,12 @@ class AgentJobs(JobDependencies):
                 job['source_hash'] = profile['source_hash']
                 job['profile_revision'] = profile['revision']
                 job['profile_saved'] = False
+            if new_session:
+                job['session_id'] = None
+            job['continuation_mode'] = 'new_session' if new_session else 'resume'
             job.update(status='queued', instruction=instruction.strip(), error=None, process_id=None)
             job.update(owner_pid=os.getpid(),owner_id=self.owner_id,worker_finished=False)
-            self._event(job, 'queued', '继续原会话；先核对已有成果及实际外部状态。')
+            self._event(job, 'queued', '在原任务显式新开会话；先核对已有成果及实际外部状态。' if new_session else '继续原会话；先核对已有成果及实际外部状态。')
             self._save(job)
         with self.lock:
             thread = threading.Thread(target=self._work, args=(job_id, obj), daemon=True,
@@ -438,6 +461,8 @@ class AgentJobs(JobDependencies):
                 schema.write_text(json.dumps(customer_analysis.SCHEMA,ensure_ascii=False),encoding='utf8')
             prompt = (('继续原工作。先核对上次执行后的实际文件、已完成成果与外部状态，避免重复执行。\n'
                        if job.get('session_id') else '') + self._prompt(job, obj))
+            if job.get('continuation_mode') == 'new_session':
+                prompt = self._continuity_prompt(job_id) + '\n' + prompt
             flags = ({'creationflags': subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP}
                      if os.name == 'nt' else {'start_new_session': True})
             command=self.backend.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id'],session_id=job.get('session_id'),mode=job.get('mode','draft'),schema_path=schema)

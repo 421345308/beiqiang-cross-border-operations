@@ -37,6 +37,7 @@ from product_gaps import ProductGaps
 from today import Today
 from miaoshou_bridge import MiaoshouBridge, BridgeError
 from cloud_review import CloudReview
+from task_workspace import TaskWorkspace
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -111,6 +112,7 @@ class Workbench:
         self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
         self.cloud_review=CloudReview(self.root,self.state)
+        self.task_workspace=TaskWorkspace(self)
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
         self.creation_canvas=CreationCanvas(self)
@@ -434,6 +436,8 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
+                if u.path=='/api/desk/task-overview':return self.send_json(app.task_workspace.overview())
+                if u.path=='/api/desk/task-context':return self.send_json(app.agent_jobs.get_task_context(value('id')))
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
                 if u.path=='/api/desk/job/graph':return self.send_json(app.agent_jobs.get_graph(value('id')))
@@ -653,13 +657,20 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','refresh']:
                 app.business.refresh_website(wait=False)
                 return self.send_json(app.business.website_status())
+            if parts==['api','desk','command']:
+                if set(body)-{'instruction','object_id'}:raise ValueError('目标路由字段无效')
+                return self.send_json(app.task_workspace.route(body.get('instruction'),body.get('object_id')))
+            if parts==['api','desk','job','conversation']:
+                if set(body)-{'id','provider','conversation_id','provenance','url','expected_version'}:raise ValueError('会话关联字段无效')
+                return self.send_json(app.agent_jobs.link_conversation(body.get('id'),provider=body.get('provider'),conversation_id=body.get('conversation_id'),provenance=body.get('provenance'),url=body.get('url'),expected_version=body.get('expected_version')))
             if parts==['api','desk','job','cancel']:
                 return self.send_json(app.agent_jobs.cancel(body.get('id')))
             if parts==['api','desk','job','recover-legacy']:
                 if set(body)!={'id','confirmed','former_owner_pid','evidence'}:raise ValueError('旧任务核验字段无效')
                 return self.send_json(app.agent_jobs.recover_legacy(body['id'],confirmed=body['confirmed'],former_owner_pid=body['former_owner_pid'],evidence=body['evidence']))
             if parts==['api','desk','job','resume']:
-                return self.send_json(app.agent_jobs.resume(body.get('id'),body.get('instruction')))
+                if set(body)-{'id','instruction','new_session','expected_version'}:raise ValueError('任务接续字段无效')
+                return self.send_json(app.agent_jobs.resume(body.get('id'),body.get('instruction'),new_session=body.get('new_session',False),expected_version=body.get('expected_version')))
             if parts==['api','desk','artifacts']:
                 return self.send_json(app.business.save_artifact(body.get('object_id'),body.get('title'),body.get('content'),artifact_id=body.get('id')))
             if parts==['api','media','resolve']:return self.send_json({'media':app.media.resolve(body.get('path',''))})

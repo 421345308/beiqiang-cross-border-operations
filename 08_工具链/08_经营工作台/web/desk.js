@@ -24,7 +24,7 @@
     return;
   }
   const S = { token: '', objects: [], jobs: [], artifacts: [], goals: {}, route: '', page: 'overview', object: null, detail: null, edits: new Map(), pending: false, loadSerial: 0, pollBusy: false, websiteStatus: {}, alibabaStatus: {}, gmailRevision: 0, listRefresh: null, lastBootstrapPoll: 0, selectedArtifacts: new Map(), cloudReview: {open:false,items:[],tasks:[],dispatches:[],dispatchStates:{},taskId:'',instruction:'',model:'gpt-6-luna',preview:null,message:'',busy:false}, batchView: {id:'', selected:'', query:'', state:''} };
-  const statusNames = { planned: '尚未启动', queued: '等待开始', running: '正在处理', completed: '已形成成果', needs_input: '待补充依据', failed: '未能完成', cancelled: '已停止' };
+  const statusNames = { planned: '尚未启动', queued: '等待开始', running: '正在处理', completed: '已形成成果', needs_input: '待补充依据', failed: '未能完成', cancelled: '已停止', awaiting_review:'待审阅', accepted:'已确认', blocked:'受阻', interrupted:'执行中断', outcome_unknown:'执行结果待核对', pending:'提交结果待核对', rejected:'提交未成功' };
   const text = value => value === null || value === undefined ? '' : typeof value === 'object' ? Array.isArray(value) ? value.map(text).join(' · ') : Object.values(value).map(text).filter(Boolean).join(' · ') : String(value);
   const valueLabels = { new: '待处理', unknown: '尚待核对', unverified: '待核实', not_checked: '尚未核对', RAW_PACKAGE: '已有原始资料', ADOPTED: '已采纳来源', HOLD_SOURCE: '来源待核实', external: '外采', factory: '工厂供货', reference_only: '仅作参考' };
   const displayText = value => valueLabels[text(value)] || text(value).replace(/网站询盘/g, '网站记录');
@@ -273,10 +273,70 @@
     }box.append(detail);}
     box.append(el('p',state.message,'agent-feedback'));page.append(box);
   }
+  async function renderTaskWorkspace(id, current) {
+    const page=$('page'); page.replaceChildren(heading('任务','统一任务入口','本地与云端分别读取；未连接不代表没有任务。'));
+    const host=el('div',undefined,'task-workspace');page.append(host);
+    const openTask=task=>{location.hash=`/task/${encodeURIComponent(task.id)}`;};
+    try {
+      const data=await api('/api/desk/task-overview');if(!current())return;
+      const tasks=data.tasks || [];if(data.scope)host.append(el('p',data.scope,'muted'));if(data.sources?.cloud?.truncated)host.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
+      for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=data.sources?.[key];host.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
+      if(data.sources?.cloud?.dispatch){const dispatch=data.sources.cloud.dispatch;host.append(el('p',`云端执行器：${dispatch.ready?'可接收任务':'尚不可执行'}`));for(const reason of dispatch.blocking_reasons || [])host.append(el('p',text(reason),'muted'));}
+      if(!id){
+        const command=el('textarea'),result=el('div');command.setAttribute('aria-label','任务要求');command.placeholder='说明想做什么，先匹配已有任务';
+        let routing=false;
+        async function routeCommand(objectId){
+          if(routing || !command.value.trim())return;routing=true;preview.disabled=true;const instruction=command.value.trim();
+          try{
+            const route=await api('/api/desk/command',{instruction,...(objectId?{object_id:objectId}:{})});if(!current())return;
+            result.replaceChildren(el('p',route.reason || '请核对任务与业务对象，尚未启动执行。'));
+            if(route.action==='choose'){
+              const choices=route.candidates?.length?route.candidates:S.objects;
+              for(const candidate of choices)result.append(button(`选择业务：${text(candidate.title || candidate.id)}`,()=>routeCommand(candidate.id),'quiet'));
+              if(!choices.length)result.append(el('p','当前没有可选择的业务资料，请先重新读取。'));
+            }
+            if(route.action==='continue')for(const job of route.jobs || [])result.append(button(`打开已有任务：${text(job.title || job.instruction || job.id)}`,()=>{location.hash=`/task/${encodeURIComponent('local:'+job.id)}`;},'quiet'));
+            if(route.action==='create' && route.object_id){
+              const object=S.objects.find(o=>o.id===route.object_id),candidate=(route.candidates || []).find(o=>o.id===route.object_id);result.append(el('p',`已确认业务：${text(object?.title || candidate?.title || route.object_id)}`));
+              const key=`desk-${Date.now()}-${Math.random().toString(36).slice(2)}`;let attempted=false;
+              const plan=button('准备新任务（不启动）',async()=>{if(attempted)return;attempted=true;plan.disabled=true;try{const job=await api('/api/desk/job/plan',{object_id:route.object_id,instruction:route.instruction || instruction,mode:'draft',idempotency_key:key});if(current())location.hash=`/task/${encodeURIComponent('local:'+(job.job?.id || job.id))}`;}catch(error){if(current())result.append(el('p',`${error.message} 请重新读取任务列表核对，不会自动重复创建。`));}},'quiet');result.append(plan);
+            }
+          }catch(error){if(current())result.replaceChildren(el('p',error.message));}finally{routing=false;preview.disabled=false;}
+        }
+        const preview=button('查找接续任务',()=>routeCommand(),'quiet');host.append(command,preview,result);
+        host.append(sectionHeading('待决策 Inbox','打开任务后核对依据与下一步'));
+        for(const item of data.inbox || []){const task=tasks.find(t=>t.id===(item.task_id || item.id));const row=el('article',undefined,'card');row.append(el('h3',text(item.title || task?.title || '待处理事项')),el('p',text(item.reason || item.judgment || item.summary)));if(task)row.append(button('打开任务',()=>openTask(task),'quiet'));host.append(row);}
+        if(!(data.inbox || []).length)host.append(el('p','已读取来源中暂无待决策事项。','muted'));
+        host.append(sectionHeading('全部任务'));
+        for(const task of tasks){const row=el('article',undefined,'card');row.append(el('h3',text(task.title || task.instruction || task.id)),el('p',`${task.origin==='cloud'?'云端':'本地'} · ${statusNames[task.status] || task.status || '状态未知'} · ${time(task.updated_at)}`),el('p',text(task.summary || task.error)),button('打开任务',()=>openTask(task),'quiet'));if(task.graph?.aggregate){const a=task.graph.aggregate;row.append(el('p',`子任务：${statusNames[a.status] || a.status} · 总计 ${a.total ?? 0} · ${Object.entries(a.counts || {}).map(([status,count])=>`${statusNames[status] || status} ${count}`).join(' · ')}`));}host.append(row);}
+        if(!tasks.length)host.append(el('p','已读取来源中暂无任务。'));
+        return;
+      }
+      const task=tasks.find(t=>String(t.id)===id);host.append(button('返回任务列表',()=>{location.hash='/tasks';},'quiet'));
+      if(!task)throw Error('未找到任务，或其来源暂不可用。请重新读取。');
+      host.append(el('h2',text(task.title || task.instruction || task.id)),el('p',`${task.origin==='cloud'?'云端':'本地'} · ${statusNames[task.status] || task.status || '状态未知'}`),el('p',text(task.summary || task.error || task.instruction)));
+      if(task.origin==='cloud'){host.append(el('p','云端成果沿现有审核入口预览和确认，不会在此自动写回。'),button('打开云端审核',()=>{S.cloudReview.open=true;location.hash='/overview';},'quiet'));return;}
+      const context=await api(`/api/desk/task-context?id=${encodeURIComponent(task.job_id || task.id)}`);if(!current())return;
+      const job=context.job;if(!job || String(job.id)!==String(task.job_id || task.id))throw Error('返回任务与所选任务不一致。');
+      if(job.status==='planned' && job.task_kind!=='group'){let attempted=false;const start=button('确认启动此任务',async()=>{if(attempted)return;attempted=true;start.disabled=true;try{await api('/api/desk/job/dispatch',{id:job.id});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())host.append(el('p',`${error.message} 请重新读取状态，勿重复启动。`,'inline-error'));}},'primary');host.append(el('p','此任务仅已准备，尚未执行。'),start);}
+      if(context.object)host.append(button('打开关联业务资料',()=>goObject(context.object.id,job.artifact_id || ''),'quiet'));
+      host.append(sectionHeading('任务进展'),el('p',`目标：${text(job.instruction || '未提供')}`),el('p',`当前结果：${text(job.summary || job.error || '尚无结果')}`),el('p',`执行记录：${(job.runs || []).length} 次`));
+      const next=job.next_steps || job.next_step || context.next_steps;if(next)host.append(el('p',`下一步：${text(next)}`));
+      host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
+      const aggregate=task.graph?.aggregate;if(aggregate)host.append(el('p',`子任务汇总：${statusNames[aggregate.status] || aggregate.status} · 总计 ${aggregate.total ?? 0} · ${Object.entries(aggregate.counts || {}).map(([status,count])=>`${statusNames[status] || status} ${count}`).join(' · ')}`));
+      const packet=JSON.stringify(context,null,2),area=el('textarea',undefined,'task-context-packet');area.value=packet;area.readOnly=true;area.setAttribute('aria-label','可恢复任务上下文');host.append(sectionHeading('可恢复上下文'),el('p','包含原任务、现有成果、来源和能力边界。复制到新会话不会自动执行。','muted'),area,button('复制任务上下文',async()=>{try{await navigator.clipboard.writeText(packet);toast('任务上下文已复制。');}catch{area.focus();area.select?.();toast('请从上下文框手动复制。');}},'quiet'));
+      host.append(sectionHeading('会话关联'),el('p','会话链接仅供定位，不表示可以读取或自动继续该会话。','muted'));
+      for(const c of job.conversations || []){const row=el('p',`${text(c.provider)} · ${text(c.conversation_id)}`),a=link('打开会话 ↗',c.url);if(a)row.append(a);host.append(row);}
+      const provider=el('select');for(const name of ['chatgpt','codex']){const option=el('option',name);option.value=name;provider.append(option);}provider.value='chatgpt';provider.setAttribute('aria-label','会话平台');const conversation=el('input');conversation.placeholder='会话 ID';conversation.setAttribute('aria-label','会话 ID');const url=el('input');url.placeholder='会话 https 链接（可选）';url.setAttribute('aria-label','会话链接');const feedback=el('p','','agent-feedback');let busy=false;
+      const associate=button('保存会话关联',async()=>{if(busy)return;if(!conversation.value.trim() || (url.value.trim() && !safeUrl(url.value.trim()))){feedback.textContent='请填写会话 ID，并使用有效的安全链接。';return;}busy=true;associate.disabled=true;try{await api('/api/desk/job/conversation',{id:job.id,provider:provider.value,conversation_id:conversation.value.trim(),provenance:'explicit_manual',...(url.value.trim()?{url:url.value.trim()}:{}),expected_version:job.version});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())feedback.textContent=error.message;}finally{busy=false;associate.disabled=false;}},'quiet');host.append(provider,conversation,url,associate,feedback);
+      if(!isActive(job) && job.status!=='planned' && job.task_kind!=='group'){const instruction=el('textarea');instruction.placeholder='说明接下来要做什么';instruction.setAttribute('aria-label','新会话继续要求');const resume=button('在新本地会话继续',async()=>{if(busy)return;if(!instruction.value.trim()){feedback.textContent='请先填写继续要求。';return;}busy=true;resume.disabled=associate.disabled=true;try{await api('/api/desk/job/resume',{id:job.id,instruction:instruction.value.trim(),new_session:true,expected_version:job.version});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())feedback.textContent=`${error.message} 请重新读取任务状态，不要重复启动。`;}finally{busy=false;}} ,'primary');host.append(sectionHeading('新会话接续'),el('p','明确点击后才启动新的本地执行会话，原任务与成果保留。','muted'),instruction,resume);}
+    }catch(error){if(current())host.append(el('p',error.message,'inline-error'));}
+  }
   function parseRoute() { const raw = location.hash.replace(/^#\/?/, '') || 'overview', split = raw.indexOf('?'); return { parts: (split < 0 ? raw : raw.slice(0, split)).split('/'), query: new URLSearchParams(split < 0 ? '' : raw.slice(split + 1)) }; }
-  function setNav(page) { const name = ({ overview: '总览', products: '商品', customers: '客户', channels: '渠道', creation: '创作', library: '客户资料包' })[page] || '详情'; $('page-name').textContent = name; document.querySelectorAll('[data-nav]').forEach(item => item.classList.toggle('active', item.dataset.nav === page)); }
+  function setNav(page) { const name = ({ overview: '总览', tasks: '任务', products: '商品', customers: '客户', channels: '渠道', creation: '创作', library: '客户资料包' })[page] || '详情'; $('page-name').textContent = name; document.querySelectorAll('[data-nav]').forEach(item => item.classList.toggle('active', item.dataset.nav === page)); }
   async function renderRoute() {
     const serial = ++S.loadSerial, route = parseRoute(), requestedHash = location.hash; const routeIsCurrent = () => serial === S.loadSerial && location.hash === requestedHash; message(); S.route = location.hash; S.detail = null; S.object = null; S.listRefresh = null; const kind = route.parts[0];
+    if (kind === 'tasks' || kind === 'task') { S.page='tasks';setNav('tasks');await renderTaskWorkspace(kind==='task'?decodeURIComponent(route.parts.slice(1).join('/')):'',routeIsCurrent);return; }
     if (kind === 'object') {
       S.page = 'object'; setNav('overview'); $('page').replaceChildren(el('div', '正在打开这份资料…', 'loading-state'));
       try { const id = decodeURIComponent(route.parts.slice(1).join('/')), object = objectResult(await api(`/api/desk/object?id=${encodeURIComponent(id)}`)); if (!routeIsCurrent()) return; if (!object || String(object.id) !== String(id) || (id.startsWith('product:') && object.kind !== 'product') || (id.startsWith('customer:') && object.kind !== 'customer') || (id.startsWith('channel:') && object.kind !== 'channel')) throw new Error('返回资料与所选对象不一致，未打开。请重新选择。'); S.object = object; remember(object.id); const index = S.objects.findIndex(item => item.id === object.id); if (index < 0) S.objects.push(object); else S.objects[index] = object; setNav(object.kind === 'product' ? 'products' : object.kind === 'channel' ? 'channels' : 'customers'); $('page-name').textContent = object.title; renderObject(object, route.query.get('artifact')); }

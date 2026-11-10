@@ -1,5 +1,13 @@
 # 贝强 Agent 原生运营架构与执行要求
 
+## 第一阶段任务接续实现（2026-11-10）
+
+`TaskContinuity` 是 `AgentJobs` 的增量 mixin：会话关联、任务 version、运行尝试与 artifact_ids 仍存原 agent_jobs JSON。旧记录按需补齐，不导入聊天历史，不根据缺失日志反推执行成功。关联来源和时间可追溯；只有后端实际 session_id 使用官方 CLI resume，手动关联为 reference_only。新会话仍在原任务上显式执行，携带当前对象/原档指纹、原目标及有界历史成果；原子认领、依赖和活进程检查不绕开。
+
+`task_workspace.py` 是只读投影与确定性路由，不保存另一套状态。`GET /api/desk/task-overview` 合并本机任务及已配对云队列，来源加前缀避免 ID 碰撞；`GET /api/desk/task-context` 返回原对象和成果；`POST /api/desk/command` 只预览精确对象匹配，创建/执行继续通过原 job/plan、job/dispatch。会话关联与新会话续接需 expected_version。客户决定仍由原业务服务 revision 保护，不把任务 version 当作跨数据库业务锁。
+
+网站本机桥新增认证后的 workspace_status，只投影既有非询盘项目运行、心跳、时间和截断信息，不创建任务、不暴露 proposal 原文；读取沿原 runFor 回收过期租约语义。新加坡服务未部署新接口时，本地显示不可用。UI `/tasks` 和任务详情复用原页面、原成果审阅，不把关联聊天当 worker。部署、验证及功能缺口见 [README](README.md)。
+
 ## 2026-11-10 已实查的云端分工
 
 公开页面由 EdgeOne 部署；生产私有 API 经独立 TLS 网关进入新加坡现有服务器，以本机 PostgreSQL 和私有文件维护网站业务对象。官网询盘与云工作台复用这些原对象；本地商品、客户、素材、渠道会话和 SQLite 仍以本地工作台及各业务档案为准，尚无自动双向同步。本机离线时不得把本地工具标为可用。
