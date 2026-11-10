@@ -149,6 +149,18 @@ class TodayTests(unittest.TestCase):
         app.gmail.status = lambda: {'state': 'not_connected'}
         self.assertTrue(any(row['kind'] == 'gmail_link' for row in Today(app).snapshot()['groups']['act']))
 
+    def test_customer_mail_error_does_not_hide_a_successful_buyer_scan(self):
+        app = self.app(inbox=[{'id':'synthetic-mail', 'title':'新买家', 'is_new':True, 'answered':False}])
+        app.gmail.status = lambda: {'state':'error', 'error':'客户邮件读取失败'}
+        snapshot = Today(app).snapshot()
+        self.assertEqual(snapshot['sources']['gmail']['state'], 'error')
+        self.assertEqual(snapshot['sources']['buyer_mail']['state'], 'ready')
+        self.assertEqual({row['kind'] for row in snapshot['groups']['act']}, {'gmail_link', 'buyer_mail'})
+        app.gmail.buyer_candidates = lambda: {'status': {'state':'error'}, 'items': [
+            {'id':'stale', 'title':'旧扫描', 'is_new':True, 'answered':False}]}
+        snapshot = Today(app).snapshot()
+        self.assertFalse(any(row['kind'] == 'buyer_mail' for row in snapshot['groups']['act']))
+
     def test_catalog_failure_and_actual_differences_are_actionable(self):
         app=self.app()
         app.catalog_monitor=SimpleNamespace(status=lambda:{'state':'error','stale':True,'last_attempt_at':'2026-11-10T00:00:00Z'})

@@ -292,8 +292,8 @@
         if(snapshot.scope)sourceHost.append(el('p',snapshot.scope,'muted'));
         if(snapshot.sources?.cloud?.truncated)sourceHost.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
         for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=snapshot.sources?.[key];sourceHost.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
-        const mail=snapshot.sources?.gmail, website=snapshot.sources?.website;
-        if(mail)sourceHost.append(el('p',`Gmail：${mail.state==='connected'?'已连接'+(mail.last_success_at?` · 上次读取 ${time(mail.last_success_at)}`:''):'暂不可用，不能判断是否有新邮件'}`,'muted'));
+        const mail=snapshot.sources?.gmail, buyerMail=snapshot.sources?.buyer_mail, website=snapshot.sources?.website;
+        if(mail)sourceHost.append(el('p',`Gmail：${mail.state==='connected'?'已连接'+(mail.last_success_at?` · 上次读取 ${time(mail.last_success_at)}`:''):buyerMail?.state==='ready'?'客户邮件同步异常；新买家来信上次读取'+(buyerMail.last_success_at?` ${time(buyerMail.last_success_at)}`:'，时间未知'):'暂不可用，不能判断是否有新邮件'}`,'muted'));
         if(website)sourceHost.append(el('p',`网站询盘：${website.state==='ready' && !website.stale?'已读取'+(website.observed_at?` · ${time(website.observed_at)}`:''):'暂未更新，可能保留上次读取的资料'}`,'muted'));
         if(['customers','prospects'].some(key=>snapshot.sources?.[key]?.state==='unavailable'))sourceHost.append(el('p','部分客户待办暂不可读，请重新读取。','inline-error'));
         if(snapshot.sources?.cloud?.dispatch){const dispatch=snapshot.sources.cloud.dispatch;sourceHost.append(el('p',`云端执行器：${dispatch.ready?'可接收任务':'尚不可执行'}`));for(const reason of dispatch.blocking_reasons || [])sourceHost.append(el('p',text(reason),'muted'));}

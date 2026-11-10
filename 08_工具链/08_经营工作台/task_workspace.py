@@ -43,7 +43,7 @@ class TaskWorkspace:
         try:
             today = self.app.today.snapshot()
             today_sources = today.get('sources') or {}
-            for name in ('customers', 'prospects', 'gmail', 'website'):
+            for name in ('customers', 'prospects', 'gmail', 'buyer_mail', 'website'):
                 sources[name] = today_sources.get(name, {'state': 'unavailable'})
             for item in today.get('groups', {}).get('act', []):
                 kind, oid = item.get('kind'), item.get('object_id')
@@ -54,7 +54,7 @@ class TaskWorkspace:
         except Exception:
             # A missing business source must not make the task list fail or
             # look as though the customer inbox was successfully read.
-            for name in ('customers', 'prospects', 'gmail', 'website'):
+            for name in ('customers', 'prospects', 'gmail', 'buyer_mail', 'website'):
                 sources[name] = {'state': 'unavailable'}
         try:
             cloud = self.app.cloud_review.workspace_status()

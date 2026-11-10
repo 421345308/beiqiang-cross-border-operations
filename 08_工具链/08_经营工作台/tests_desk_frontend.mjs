@@ -1495,6 +1495,13 @@ test('经营 Inbox 打开原客户和关联任务，来源失效时不冒充空�
  await findButton(h.elements.page,'查看客户').click();assert.equal(h.location.hash,'/object/customer%3Awebsite-one');
  assert.equal(h.requests.filter(x=>x.payload).length,0);
 });
+test('客户邮件异常时仍展示独立成功的新买家扫描时间',async()=>{
+ const h=harness('#/tasks');h.interceptFetch(async(path,opts)=>path==='/api/desk/task-overview'?{ok:true,json:async()=>({
+   sources:{local:{state:'ok'},cloud:{state:'ok'},gmail:{state:'error'},buyer_mail:{state:'ready',last_success_at:'2026-11-10T16:49:35Z'}},
+   tasks:[],inbox:[{id:'synthetic-mail',kind:'buyer_mail',title:'新买家来信',action:{type:'open_development',label:'查看来信'}}]})}:h.originalFetch(path,opts));
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/客户邮件同步异常；新买家来信上次读取/);
+ assert.match(h.elements.page.textContent,/新买家来信/);assert.ok(findButton(h.elements.page,'查看来信'));
+});
 test('任务页更新 Inbox 和连接状态，保留未提交的任务要求',async()=>{
  const h=harness('#/tasks'),original=h.originalFetch;let revision=1,items=[],website={state:'ready',stale:false,observed_at:'2026-11-10T00:00:00Z'};
  h.interceptFetch(async(path,opts)=>{

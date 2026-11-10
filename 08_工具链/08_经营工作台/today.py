@@ -111,15 +111,20 @@ class Today:
     def _mail(self, sources):
         status = self.app.gmail.status()
         sources['gmail'] = {'state': status.get('state'), 'last_success_at': status.get('last_success_at')}
-        if status.get('state') != 'connected':
-            return [self._item('act', 'gmail_link', 'Gmail 暂未连接',
-                status.get('error') or '连接后可查看客户邮件和新回复。',
-                {'label': '打开客户开发', 'type': 'open_development'}, severity='high')]
-        if not hasattr(self.app.gmail, 'buyer_candidates'):
-            return []
-        inbox = self.app.gmail.buyer_candidates()
-        sources['buyer_mail'] = inbox.get('status', {})
         items = []
+        if status.get('state') != 'connected':
+            items.append(self._item('act', 'gmail_link', 'Gmail 暂未连接',
+                status.get('error') or '连接后可查看客户邮件和新回复。',
+                {'label': '打开客户开发', 'type': 'open_development'}, severity='high'))
+        if not hasattr(self.app.gmail, 'buyer_candidates'):
+            return items
+        inbox = self.app.gmail.buyer_candidates()
+        sources['buyer_mail'] = inbox.get('status') or {}
+        # Customer thread reads and the buyer-inbox scan have independent
+        # results. Preserve a successful scan even if a customer read failed,
+        # but do not present a failed scan's cached rows as fresh mail.
+        if status.get('state') == 'not_connected' or sources['buyer_mail'].get('state') != 'ready':
+            return items
         for row in inbox.get('items', []):
             if not row.get('is_new') or row.get('answered') is True:
                 continue
