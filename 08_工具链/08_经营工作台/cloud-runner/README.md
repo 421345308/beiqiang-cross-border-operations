@@ -14,7 +14,7 @@
 
 ## 当前常驻路线（2026-10-31）
 
-自动派发复用原 `runner.py`，现有新加坡服务器运行自建单实例；[Render部署包](deploy/README.md)只是历史可选参考，当前不采购该服务。生产已设 `WORKBENCH_RUNNER_MODE=self_hosted`、`WORKBENCH_AUTODISPATCH=enabled`，并由通过预检的执行器报告 `auth=api` 与所支持模型；领取时只选执行器声明支持的模型。每个任务可选择 Luna 或 Sol，费用按 OpenAI API 实际用量计费，未设置金额硬上限。当前只处理明确入队的任务，不自行定时创建经营任务。
+自动派发复用原 `runner.py`，现有新加坡服务器运行自建单实例；[Render部署包](deploy/README.md)只是历史可选参考，当前不采购该服务。生产已设 `WORKBENCH_RUNNER_MODE=self_hosted`、`WORKBENCH_AUTODISPATCH=enabled`，并由通过预检的执行器报告 `auth=api` 与所支持模型；领取时只选执行器声明支持的模型。每个任务可选择 Luna 或 Sol，费用按 OpenAI API 实际用量计费，未设置金额硬上限。官方明确[订阅附带的 API 赠金](https://developers.openai.com/api/docs/guides/chatgpt-api-credits)不支持通过 API 密钥使用 Codex，本账户实际扣费来源待核；测试成功不证明使用的是该赠金。当前只处理明确入队的任务，不自行定时创建经营任务。
 
 无指定run_id的runner启动先检查私有持久目录、Linux非root、固定CLI、明确选择的认证配置和正式队列地址，再发ready心跳；API 凭证格式存在不等于模型和余额已验证。执行/结果上报失败将原因及run_id保存到私有 `blocked.json`，重启仍暂停，按部署文档核回执后恢复；不增加自动重试层。指定run_id的一次性调用继续保留。
 
