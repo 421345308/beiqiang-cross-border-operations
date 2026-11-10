@@ -16,7 +16,7 @@
 
 **模型与费用核对（2026-11-10）：** 新加坡服务器已用 API 实测 `gpt-6-luna`，包含 Codex CLI 和正式队列；负责人可在支持 API 的在线执行器报告两种模型时为任务选择 Luna 或 Sol。自动领取内部任务 `4f2975ec845b0f7e47e9e13e8980908e` 的真实用量为输入 9,602、输出 542 tokens，结果留在待审阅；这不是业务完成。API 使用与 ChatGPT 登录分别管理；符合条件的订阅可关联 API 赠送额度，但官方明确该订阅赠金不支持通过 API 密钥使用 Codex；本账户实际扣费来源仍待官方账单核对，测试成功不等于赠金额度适用。[登录方式](https://learn.chatgpt.com/docs/auth)、[赠送额度说明](https://developers.openai.com/api/docs/guides/chatgpt-api-credits)。API 的 Luna 标准文本价为每百万输入 0.10 美元、输出 0.50 美元，缓存写入等另计；Sol 为输入 2 美元、输出 10 美元，实际以账户账单为准。[Luna 价格](https://developers.openai.com/api/docs/models/gpt-6-luna)、[Sol 价格](https://developers.openai.com/api/docs/models/gpt-6.1-sol)。DeepSeek 尚未实际调用或接入；价格按[官方页面](https://api-docs.deepseek.com/quick_start/pricing/)为准。负责人决定暂不设置月度上限；金额与到期情况见[本地私有记录](.local/cloud-runner-budget.md)，以官方账单为准。每次运行显示模型及 tokens，但没有自动费用账本或自动定时生成任务，故障通知仍待完善。
 
-电脑控制已于本次恢复：窗口清单与腾讯云控制台实际操作成功。以下旧故障记录保留为历史，不能再作为当前控制不可用的结论。
+电脑控制在本次早先曾恢复，窗口清单与腾讯云控制台实际操作成功；晚间再次读取时连接超时，不能仅凭扩展显示已连接判断可用。服务器 SSH 端口可达，本机已准备专用密钥，首次公钥登记与服务器身份核验仍待完成。网站新连接路径已收到转发请求，但旧版服务器返回 404；待部署后再验收，不等同云本机协作已上线。
 
 ## 批次研究进度与中断接续（2026-11-08）
 
@@ -255,7 +255,7 @@ BQ009真实任务首次接续发现，产品记录已指定唯一当前档案，
 | `server.py` | 本地HTTP、共用对象/任务/成果接口；旧运行接口保留历史兼容 |
 | `web/index.html`、`desk.js`、`desk.css` | 新默认界面；旧app/workspace文件不再加载 |
 | `media_assets.py`、`connectors/`、`product_changes.py` | 复用媒体预览及已有平台能力，后续接入对象内流程 |
-| `cloud-runner/` | 既有云端执行代码，当前不启用 |
+| `cloud-runner/` | 云端执行代码；现有执行器已运行，Responses 接续版本尚待部署 |
 
 验证：本目录运行`python -X utf8 -m unittest discover -p 'tests*.py'`及`node --test tests_desk_frontend.mjs tests_library_frontend.mjs`。真实任务日志、读取依据与成果索引在被忽略的`.local/`，不进入公开Git。新会话先看PRODUCT确定下一包，再看本页确认实际能力。
 
