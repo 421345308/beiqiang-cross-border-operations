@@ -13,7 +13,7 @@ import tempfile
 import threading
 import time
 from datetime import datetime
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request
 
@@ -337,7 +337,23 @@ def main():
     state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
     state.mkdir(parents=True,exist_ok=True);require_reconciled(state);queue=Queue(endpoint,secret)
     while True:
-        queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
+        # A heartbeat happens before creating a claim marker and cannot claim
+        # work. Recover from temporary connection failures here only; unknown
+        # outcomes after a claim continue to require reconciliation below.
+        try:
+            queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
+        except HTTPError as error:
+            if args.once or args.run_id or error.code not in (429, 500, 502, 503, 504):
+                raise
+            print('Heartbeat temporarily unavailable; retrying in 20 seconds.', flush=True)
+            time.sleep(20)
+            continue
+        except (URLError, TimeoutError, OSError):
+            if args.once or args.run_id:
+                raise
+            print('Heartbeat temporarily unavailable; retrying in 20 seconds.', flush=True)
+            time.sleep(20)
+            continue
         claiming, active = state / 'claiming.json', state / 'active.json'
         write_recovery_marker(claiming, {'at':time.time(), 'requested_run_id':args.run_id or None})
         # Another process may have finished claiming after this process started.

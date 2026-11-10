@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch, Mock
 import tempfile
 import json
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 import runner
 
 
@@ -108,6 +108,45 @@ class RunnerTests(unittest.TestCase):
                              ['heartbeat', 'claim', 'heartbeat', 'claim'])
             self.assertFalse((Path(directory)/'claiming.json').exists())
             self.assertFalse((Path(directory)/'active.json').exists())
+
+    def test_idle_heartbeat_recovers_only_before_any_claim(self):
+        queue = Mock()
+        failures = [URLError(ConnectionResetError('fixture')),
+                    HTTPError('https://example.invalid', 503, 'fixture', {}, io.BytesIO(b''))]
+        def respond(action, **fields):
+            if action == 'heartbeat' and failures:
+                raise failures.pop(0)
+            if action == 'claim': return {'job': None}
+            return {}
+        queue.call.side_effect = respond
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py']), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), \
+                    patch('preflight.preflight',return_value={'ok':True}), \
+                    patch.object(runner,'Queue',return_value=queue), \
+                    patch.object(runner.time,'sleep',side_effect=[None, None, SystemExit('stop fixture')]) as sleep:
+                with self.assertRaises(SystemExit): runner.main()
+            self.assertEqual([call.args[0] for call in queue.call.call_args_list],
+                             ['heartbeat', 'heartbeat', 'heartbeat', 'claim'])
+            self.assertEqual([call.args[0] for call in sleep.call_args_list], [20, 20, 10])
+            self.assertFalse((Path(directory)/'claiming.json').exists())
+            self.assertFalse((Path(directory)/'active.json').exists())
+
+    def test_heartbeat_auth_failure_stops_without_claiming(self):
+        queue = Mock()
+        queue.call.side_effect = HTTPError('https://example.invalid', 401, 'fixture', {}, io.BytesIO(b''))
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only','WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py']), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), \
+                    patch('preflight.preflight',return_value={'ok':True}), \
+                    patch.object(runner,'Queue',return_value=queue):
+                with self.assertRaises(HTTPError): runner.main()
+            self.assertEqual([call.args[0] for call in queue.call.call_args_list], ['heartbeat'])
+            self.assertFalse((Path(directory)/'claiming.json').exists())
 
     def test_targeted_rolled_back_claim_does_not_retry(self):
         queue = Mock()
