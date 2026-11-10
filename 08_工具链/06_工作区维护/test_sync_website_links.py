@@ -51,6 +51,23 @@ class WebsiteLinkSyncTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'changed the model'):
             sync.plan(self.inputs, [('BQ001', '1234567890')])
 
+    def test_owner_confirmed_factory_requires_explicit_current_mode_date_and_local_evidence(self):
+        product = self.inputs['products']['P1']
+        product.update(source_state='OWNER_CONFIRMED', adopted_source_id=None,
+                       supply_mode={'current': 'OWN_FACTORY', 'state': 'OWNER_CONFIRMED_2026_11_02',
+                                    'at': '2026-11-02', 'evidence': ['source.json']})
+        self.inputs['listings']['1234567890']['bound_source_id'] = None
+        self.assertEqual(sync.plan(self.inputs, [('BQ001', '1234567890')])['changes'][0]['to'], '1234567890')
+        for field, value in [('current', 'UNKNOWN'), ('state', 'INFERRED'), ('at', 'not-a-date'), ('evidence', ['missing.json'])]:
+            old = product['supply_mode'][field]
+            product['supply_mode'][field] = value
+            with self.assertRaisesRegex(ValueError, 'no recorded adopted source'):
+                sync.plan(self.inputs, [('BQ001', '1234567890')])
+            product['supply_mode'][field] = old
+        product['source_state'] = 'MAPPED'
+        with self.assertRaisesRegex(ValueError, 'no recorded adopted source'):
+            sync.plan(self.inputs, [('BQ001', '1234567890')])
+
     def test_plan_rejects_concurrent_source_change_and_fresh_reapply_is_noop(self):
         proposal = sync.plan(self.inputs, [('BQ001', '1234567890')])
         (self.root / 'source.json').write_text('{"revision": 2}', encoding='utf-8')

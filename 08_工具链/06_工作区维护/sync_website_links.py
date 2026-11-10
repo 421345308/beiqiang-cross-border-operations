@@ -116,6 +116,25 @@ def source_evidence(product, sources, root):
     return bool(source and source.get('url')), bool(raw)
 
 
+def confirmed_factory_evidence(product, root):
+    """Recognise an explicit owner-confirmed factory identity, not just a missing source."""
+    supply = product.get('supply_mode') or {}
+    if (product.get('source_state') != 'OWNER_CONFIRMED'
+            or supply.get('current') != 'OWN_FACTORY'
+            or not str(supply.get('state', '')).startswith('OWNER_CONFIRMED_')
+            or not supply.get('at')):
+        return False
+    try:
+        datetime.fromisoformat(str(supply['at']).replace('Z', '+00:00'))
+    except (TypeError, ValueError):
+        return False
+    for evidence in supply.get('evidence') or []:
+        path = (root / evidence).resolve()
+        if path.is_relative_to(root.resolve()) and path.is_file():
+            return True
+    return False
+
+
 def resolve_site_product(inputs, code):
     ids = inputs['index'].get(code, set())
     if len(ids) != 1:
@@ -151,8 +170,8 @@ def validate_target(inputs, code, listing_id):
     bound = listing.get('bound_source_id')
     if adopted and bound and adopted != bound:
         raise ValueError(f'{code}: listing is bound to a different adopted source')
-    if not any(source_evidence(product, inputs['sources'], inputs['root'])):
-        raise ValueError(f'{code}: no recorded adopted source URL or accessible raw package')
+    if not any(source_evidence(product, inputs['sources'], inputs['root'])) and not confirmed_factory_evidence(product, inputs['root']):
+        raise ValueError(f'{code}: no recorded adopted source URL or accessible raw package or owner-confirmed factory evidence')
     official = inputs['official'].get(str(listing_id))
     if not official or official.get('display') != 'Y' or official.get('status') != 'approved':
         raise ValueError(f'{code}: selected listing was not approved and displayed in the snapshot')
@@ -231,7 +250,7 @@ def audit(inputs):
             elif newer_field_problem(listing, official, inputs['snapshot']['observed_at_utc']):
                 issues.append({'code': code, 'id': linked, 'issue': 'NEWER_FORMAL_READBACK_DIFFERS'})
         adopted, raw = source_evidence(product, inputs['sources'], inputs['root'])
-        if not (adopted or raw):
+        if not (adopted or raw or confirmed_factory_evidence(product, inputs['root'])):
             issues.append({'code': code, 'issue': 'NO_ADOPTED_SOURCE_URL_OR_ACCESSIBLE_RAW_PACKAGE'})
         if len(row['images']) < 4 or not row['colors']:
             issues.append({'code': code, 'issue': 'WEBSITE_MEDIA_OR_COLOUR_GAP'})
@@ -264,6 +283,7 @@ def audit(inputs):
         missing.append({'product_id': pid, 'current_model': product.get('current_model') or pid,
                         'listing_ids': groups[pid], 'source_state': product.get('source_state'),
                         'adopted_source_url_recorded': adopted, 'accessible_raw_package': raw,
+                        'owner_factory_confirmed': confirmed_factory_evidence(product, inputs['root']),
                         'reference_source_url_recorded': bool(reference.get('url')),
                         'indexed_asset_files': len(asset_paths),
                         'accessible_indexed_asset_files': sum((inputs['root'] / path).is_file() for path in asset_paths),
