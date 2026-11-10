@@ -38,7 +38,8 @@
       "alibaba_links": [
         "https://www.alibaba.com/product-detail/high-top-knit-sock-slip-on-casual-shoes_1601924292931.html"
       ],
-      "ok": true
+      "ok": true,
+      "direct_alibaba_product_link_present": true
     },
     {
       "path": "/zh/products/bq036/",
@@ -51,7 +52,8 @@
       "alibaba_links": [
         "https://www.alibaba.com/product-detail/high-top-knit-sock-slip-on-casual-shoes_1601924292931.html"
       ],
-      "ok": true
+      "ok": true,
+      "direct_alibaba_product_link_present": true
     },
     {
       "path": "/de/products/bq036/",
@@ -62,7 +64,10 @@
       "localized_name_present": true,
       "size_present": true,
       "alibaba_links": [],
-      "ok": true
+      "ok": true,
+      "localized_quote_href": "/de/request-quote/",
+      "quote_target_http": 200,
+      "direct_alibaba_product_link_present": false
     },
     {
       "path": "/fr/products/bq036/",
@@ -73,7 +78,10 @@
       "localized_name_present": true,
       "size_present": true,
       "alibaba_links": [],
-      "ok": true
+      "ok": true,
+      "localized_quote_href": "/fr/request-quote/",
+      "quote_target_http": 200,
+      "direct_alibaba_product_link_present": false
     },
     {
       "path": "/es/products/bq036/",
@@ -84,7 +92,10 @@
       "localized_name_present": true,
       "size_present": true,
       "alibaba_links": [],
-      "ok": true
+      "ok": true,
+      "localized_quote_href": "/es/request-quote/",
+      "quote_target_http": 200,
+      "direct_alibaba_product_link_present": false
     }
   ],
   "web_images": [
@@ -223,5 +234,9 @@
         "content_type": "text/vtt; charset=utf-8"
       }
     ]
+  },
+  "multilingual_link_scope": {
+    "checked_at_utc": "2026-11-10T18:58:52+00:00",
+    "note": "English and Chinese pages link to the selected Alibaba listing. German, French and Spanish pages follow the existing localized inquiry route; those targets returned HTTP 200, but these product pages do not have a direct Alibaba product link. No inquiry was submitted."
   }
 }
