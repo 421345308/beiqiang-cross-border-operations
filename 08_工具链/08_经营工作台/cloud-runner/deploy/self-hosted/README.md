@@ -1,7 +1,7 @@
 # 原生执行器
 
 配合网站 `self-hosted/deploy/`，独立 `beiqiang-runner` 非root账号。
-2026-11-10：负责人改选 API 后，新加坡 VPS 的 runner `20261110-v8` 已启用并自动领取内部验收任务，实际回传待审阅；空闲重启后重新心跳。API key 放在服务器 root 0600 文件，通过 systemd `LoadCredential=openai-api-key:<服务器私有文件>` 提供给非root执行器，`WORKBENCH_RUNNER_AUTH=api`；文件内容和实际路径不进入公开仓库。服务依旧按单实例运行、限制内存与 CPU，失败不自动重试。关机独立执行及金额预算上限仍待实际验收/设置。以下原 ChatGPT 设备登录过程为历史备选，不必重复登录。
+2026-11-10：负责人改选 API 后，新加坡 VPS 的 runner 现运行 `20261110-v9-lockfix`，数据库锁冲突修复与实际内部任务回传见[云端执行入口](../../README.md)。API key 放在服务器 root 0600 文件，通过 systemd `LoadCredential=openai-api-key:<服务器私有文件>` 提供给非root执行器，`WORKBENCH_RUNNER_AUTH=api`；文件内容和实际路径不进入公开仓库。服务依旧按单实例运行、限制内存与 CPU；仅服务器明确确认领取事务已回滚时可继续轮询，未知结果仍停下对账。负责人决定暂不设置金额上限，实际关机后独立执行仍待验收。以下原 ChatGPT 设备登录过程为历史备选，不必重复登录。
 
 原安装记录：固定Codex CLI 0.166.0，非root可执行且真实私有挂载/0700写入验证通过。安装固定 `@openai/codex@0.166.0` 到
 `/opt/beiqiang-codex`（将`/opt/beiqiang/runtime/node/bin`加入本次安装PATH后运行
