@@ -10771,6 +10771,56 @@
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md"
       ]
+    },
+    {
+      "id": "src-7hao-999-2279074",
+      "url": "https://7hao.sooxie.com/detail/2279074",
+      "shop_url": "https://7hao.sooxie.com",
+      "supplier": "7号仓库",
+      "model": "999",
+      "unit": "页面未注明",
+      "observed_at": "2026-11-11",
+      "price_terms": "页面标价；计价单位、最终成交价及色码供货按订单确认。页面有一件代发入口，不证明每色码实时可供。",
+      "colors": [
+        "深灰",
+        "浅灰"
+      ],
+      "page_size_range": "38–44；尺码体系需核",
+      "source_materials": {
+        "upper": "供方图写网布",
+        "lining": "供方图写织物",
+        "outsole": "供方图写橡胶",
+        "midsole": "未注明"
+      },
+      "evidence": [
+        "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      ]
+    },
+    {
+      "id": "src-chaoren-2613-1875753",
+      "url": "https://chaoren.sooxie.com/detail/1875753",
+      "shop_url": "https://chaoren.sooxie.com",
+      "supplier": "潮仁鞋业",
+      "model": "2613",
+      "unit": "页面未注明",
+      "observed_at": "2026-11-11",
+      "price_terms": "页面标价；计价单位、最终成交价及色码供货按订单确认。页面有一件代发入口，不证明每色码实时可供。",
+      "colors": [
+        "白色",
+        "白色镂空",
+        "白色带花",
+        "白色带花镂空"
+      ],
+      "page_size_range": "35–40；来源参考图含34，但页面不列34",
+      "source_materials": {
+        "upper": "供方图写二层牛皮",
+        "outsole": "供方图写MD",
+        "lining": "未注明",
+        "midsole": "未注明"
+      },
+      "evidence": [
+        "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      ]
     }
   ],
   "imported_evidence": [
@@ -11546,7 +11596,8 @@
       ],
       "source_ids": [
         "src-7hao-8805-2507214",
-        "src-7hao-d903-1156694"
+        "src-7hao-d903-1156694",
+        "src-7hao-999-2279074"
       ]
     },
     {
@@ -11557,6 +11608,17 @@
       ],
       "source_ids": [
         "src-xile-8805-2508765"
+      ]
+    },
+    {
+      "id": "supplier-dbd044535854",
+      "shop_url": "https://chaoren.sooxie.com",
+      "names": [
+        "潮仁鞋业"
+      ],
+      "source_ids": [
+        "src-hr014-chaoren-889",
+        "src-chaoren-2613-1875753"
       ]
     }
   ]

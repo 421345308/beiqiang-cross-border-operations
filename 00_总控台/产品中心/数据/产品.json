@@ -33644,6 +33644,86 @@
         ],
         "scope": "内部采购与履约分类；页面来源不证明实时库存或具体订单条件。"
       }
+    },
+    {
+      "id": "BQ-HC001",
+      "current_model": "BQ-HC001",
+      "aliases": [
+        "BQ-HC001"
+      ],
+      "source_state": "CANDIDATE",
+      "adopted_source_id": null,
+      "candidate_source_ids": [
+        "src-chaoren-2613-1875753"
+      ],
+      "raw_packages": [],
+      "evidence": [
+        "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      ],
+      "notes": [
+        "供方页为护士工作鞋，四个白色版本、35–40码；图表另含34但页面选项不含34。",
+        "供方图写二层牛皮和MD鞋底；不声称医疗疗效或未验证防护性能。",
+        "供方图12明确四版本；照片00/18为白色，21为白色镂空，23为白色带花，26为白色带花镂空。各图含排版或中文字，未加工成正式SKU图。"
+      ],
+      "classification": {
+        "local_intent_candidates": [
+          "护士工作鞋"
+        ],
+        "state": "CANDIDATE_SOURCE_PAGE_EVIDENCED",
+        "evidence": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      },
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_功能鞋复核/获准类目候选/来源图片/chaoren_2613"
+        ],
+        "current_fields_file": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md",
+        "state": "SOURCE_PHOTOS_REVIEWED_CANDIDATE"
+      },
+      "publication_disposition": {
+        "state": "HOLD_SOURCE",
+        "scope": "候选有真实页面和图片；四版本源图已对照，网页标价单位及可直接用于SKU的图片待核，无国际站商品 ID。",
+        "evidence": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      }
+    },
+    {
+      "id": "BQ-HI001",
+      "current_model": "BQ-HI001",
+      "aliases": [
+        "BQ-HI001"
+      ],
+      "source_state": "CANDIDATE",
+      "adopted_source_id": null,
+      "candidate_source_ids": [
+        "src-7hao-999-2279074"
+      ],
+      "raw_packages": [],
+      "evidence": [
+        "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      ],
+      "notes": [
+        "供方图展示两种灰色、鞋舌 YU KING YING 和侧面图案；保留真实标识，不称无标或自有商标。",
+        "供方图称鞋底与增高垫合计7.5 cm，未实测；来源鞋码38–44，尺码体系、网页标价单位及订单条件待核。"
+      ],
+      "classification": {
+        "local_intent_candidates": [
+          "男士内增高系带鞋"
+        ],
+        "state": "CANDIDATE_SOURCE_PAGE_EVIDENCED",
+        "evidence": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      },
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_功能鞋复核/获准类目候选/来源图片/7hao_999"
+        ],
+        "current_fields_file": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md",
+        "state": "SOURCE_PHOTOS_REVIEWED_PHOTOBANK_READY_CANDIDATE",
+        "photobank_readback": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_功能鞋复核/获准类目候选/999图片银行/图片银行公开链接回读.json"
+      },
+      "publication_disposition": {
+        "state": "HOLD_SOURCE",
+        "scope": "候选有真实页面和图片；六张来源图已上传图片银行并回读，计价单位及尺码体系未核，无国际站商品 ID。",
+        "evidence": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md"
+      }
     }
   ],
   "identity_consolidation": [
