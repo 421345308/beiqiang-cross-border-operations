@@ -148,6 +148,11 @@ class CatalogMonitor:
                         row = compact(raw)
                         if row['id'] in ids: raise ValueError('DUPLICATE_ID')
                         ids.add(row['id']); rows.append(row)
+                    # Alibaba can report the final page's actual row count as
+                    # page_size, making the adapter's hasMore overestimate.
+                    # A complete set of unique IDs matching total is decisive.
+                    if len(rows) > total: raise ValueError('INCOMPLETE_CATALOG')
+                    if len(rows) == total: break
                     if pagination.get('hasMore') is False: break
                     if pagination.get('hasMore') is not True or pagination.get('nextPage') != page + 1:
                         raise ValueError('INVALID_PAGINATION')

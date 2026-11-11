@@ -63,6 +63,16 @@ class CatalogMonitorTests(unittest.TestCase):
         self.now+=timedelta(hours=1,minutes=1);self.pages[2]=self.page(2,2,[{'id':'102','status':'approved','display':'N'}])
         self.assertEqual(self.monitor.collect()['state'],'ready')
 
+    def test_final_short_page_stops_when_all_unique_ids_are_collected(self):
+        # The official API reports the final page's returned size as page_size.
+        # Its derived hasMore can therefore still be true on a complete page.
+        self.pages={1:self.page(1,3,[{'id':'101','status':'approved','display':'Y'},
+                                    {'id':'102','status':'approved','display':'N'}],True),
+                    2:self.page(2,3,[{'id':'103','status':'tbd','display':'N'}],True)}
+        result=self.monitor.collect()
+        self.assertEqual(result['state'],'ready');self.assertEqual(result['total'],3)
+        self.assertEqual(result['pages'],2);self.assertEqual(self.calls,[('products',1),('products',2)])
+
     def test_initial_failure_and_duplicate_ids_are_not_complete_snapshots(self):
         self.pages={1:self.page(1,2,[{'id':'101','status':'approved','display':'Y'}],True),
                     2:self.page(2,2,[{'id':'101','status':'approved','display':'Y'}])}
