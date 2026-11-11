@@ -682,6 +682,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(app.task_workspace.route(body.get('instruction'),body.get('object_id')))
             if parts==['api','desk','desktop-snapshot']:
                 return self.send_json(app.desktop_snapshot.import_snapshot(body))
+            if parts==['api','desk','desktop-observation']:
+                return self.send_json(app.desktop_snapshot.import_observation(body))
+            if parts==['api','desk','workstream-link']:
+                return self.send_json(app.desktop_snapshot.link_workstream(body))
             if parts==['api','desk','job','adjust']:
                 if set(body)-{'id','expected_version','priority','next_action'}:raise ValueError('任务调整字段无效')
                 return self.send_json(app.agent_jobs.adjust(body.get('id'),expected_version=body.get('expected_version'),priority=body.get('priority'),next_action=body.get('next_action')))

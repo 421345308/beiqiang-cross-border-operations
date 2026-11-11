@@ -224,5 +224,11 @@ def supplier_index(root, *, q='', product='', process='', city='', identity='', 
     found.sort(key=lambda row: not row['has_profile'])
     if q:
         for row in found:
-            row['sources'].sort(key=lambda source: not _contains(source, q))
+            # A supplier name describes the whole supplier; a source/model hit
+            # instead narrows the displayed clues to the matching sources.  A
+            # profile-only hit must still retain all of that supplier's clues.
+            if not _contains(row['names'], q):
+                matching_sources = [source for source in row['sources'] if _contains(source, q)]
+                if matching_sources:
+                    row['sources'] = matching_sources
     return {'suppliers': found, 'unassociated_sources': unmatched, 'options': options}

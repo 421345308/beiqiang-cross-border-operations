@@ -70,9 +70,13 @@ class SupplierIndexTests(unittest.TestCase):
 
     def test_product_relations_and_unknown_identity_are_not_supply_claims(self):
         row = supplier_index(self.root, q='8805')['suppliers'][0]
-        self.assertEqual(row['sources'][0]['model'], '8805')
+        self.assertEqual([source['model'] for source in row['sources']], ['8805'])
         self.assertEqual(row['sources'][0]['products'][0]['role'], 'adopted')
-        self.assertEqual(row['sources'][1]['products'][0]['role'], 'candidate')
+        candidate = supplier_index(self.root, q='8806')['suppliers'][0]
+        self.assertEqual([source['model'] for source in candidate['sources']], ['8806'])
+        self.assertEqual(candidate['sources'][0]['products'][0]['role'], 'candidate')
+        product = supplier_index(self.root, q='BQ-1')['suppliers'][0]
+        self.assertEqual([source['id'] for source in product['sources']], ['one', 'two'])
         historical = supplier_index(self.root, q='T33')['suppliers'][0]
         self.assertEqual(historical['sources'][0]['products'][0]['role'], 'reference')
         self.assertEqual(historical['sources'][0]['products'][0]['source_state'], 'HOLD_SOURCE')
@@ -84,22 +88,42 @@ class SupplierIndexTests(unittest.TestCase):
 
     def test_source_id_with_model_and_product_number_is_not_a_phone(self):
         source_id = 'src-fixture-h008-2094876'
-        self.supply['suppliers'][0]['source_ids'].append(source_id)
+        other_source_id = 'src-fixture-29095-1539439'
+        self.supply['suppliers'][0]['source_ids'].extend([source_id, other_source_id])
         self.supply['suppliers'][0]['matching_profile']['product_directions'].append(
-            {'name': '涉水鞋', 'scope': f'来源编号 {source_id}', 'source_ids': [source_id], 'evidence': [{'kind': 'SUPPLIER_PRODUCT_PAGE', 'url': 'https://shop.example/h008'}]})
+            {'name': '涉水鞋', 'scope': f'H008 来源编号 {source_id}', 'source_ids': [source_id], 'evidence': [{'kind': 'SUPPLIER_PRODUCT_PAGE', 'url': 'https://shop.example/h008'}]})
+        self.supply['suppliers'][0]['matching_profile']['customization']['summary'] = 'H008 的定制线索'
         self.supply['sources'].append({'id': source_id, 'model': 'H008', 'url': 'https://shop.example/h008'})
+        self.supply['sources'].append({'id': other_source_id, 'model': '29095', 'url': 'https://shop.example/29095'})
         self.products['products'].append({'id': 'BQ-H008', 'candidate_source_ids': [source_id]})
         self.save()
         row = supplier_index(self.root, q='H008')['suppliers'][0]
         self.assertIn(source_id, row['profile']['product_directions'][-1]['source_ids'])
         self.assertIn(source_id, row['profile']['product_directions'][-1]['scope'])
-        source = next(item for item in row['sources'] if item['id'] == source_id)
+        self.assertEqual([item['id'] for item in row['sources']], [source_id])
+        source = row['sources'][0]
         self.assertEqual(source['products'][0]['id'], 'BQ-H008')
         self.assertEqual(source['products'][0]['role'], 'candidate')
+        self.assertEqual([item['id'] for item in supplier_index(self.root, q='29095')['suppliers'][0]['sources']], [other_source_id])
+        self.assertEqual([item['id'] for item in supplier_index(self.root, q='BQ-H008')['suppliers'][0]['sources']], [source_id])
+        filtered = supplier_index(self.root, q='H008', process='开模', city='泉州', identity='供应商自述', customization_evidence='OWNER_REPORTED')
+        self.assertEqual([item['id'] for item in filtered['suppliers'][0]['sources']], [source_id])
+        self.assertEqual(supplier_index(self.root, q='H008', city='厦门')['suppliers'], [])
+        all_sources = ['one', 'two', source_id, other_source_id]
+        # The supplier name appears in source labels too, but must not narrow
+        # the supplier to only those labelled sources.
+        self.assertEqual([item['id'] for item in supplier_index(self.root, q='七号仓库')['suppliers'][0]['sources']], all_sources)
+        # A profile-only match has no matching source, so retains all clues.
+        self.assertEqual([item['id'] for item in supplier_index(self.root, q='开模')['suppliers'][0]['sources']], all_sources)
         orphan_id = 'src-fixture-a009-2462264'
         self.supply['sources'].append({'id': orphan_id, 'model': 'A009', 'url': 'https://shop.example/a009'})
+        self.products['products'].append({'id': 'BQ-RF1105A', 'adopted_source_id': orphan_id})
         self.save()
-        self.assertEqual([item['id'] for item in supplier_index(self.root, q='A009')['unassociated_sources']], [orphan_id])
+        for query in ('A009', 'BQ-RF1105A'):
+            result = supplier_index(self.root, q=query)
+            self.assertEqual(result['suppliers'], [])
+            self.assertEqual([item['id'] for item in result['unassociated_sources']], [orphan_id])
+            self.assertEqual(result['unassociated_sources'][0]['products'][0]['role'], 'adopted')
 
     def test_orphan_is_searchable_without_creating_a_supplier(self):
         result = supplier_index(self.root, q='old1')
@@ -165,7 +189,9 @@ class SupplierIndexTests(unittest.TestCase):
                 connection.close()
                 return data
             before = (self.root / SUPPLY).read_bytes()
-            self.assertEqual(get('8805')['suppliers'][0]['id'], 's1')
+            supplier = get('8805')['suppliers'][0]
+            self.assertEqual(supplier['id'], 's1')
+            self.assertEqual([source['id'] for source in supplier['sources']], ['one'])
             self.assertEqual(before, (self.root / SUPPLY).read_bytes())
             self.supply['sources'][0]['model'] = '8805-更新'
             self.save()

@@ -1,4 +1,6 @@
 import unittest
+import tempfile
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from types import SimpleNamespace
 from urllib.parse import quote
@@ -34,6 +36,35 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(rows['local:child']['next_action'],'')
         self.assertEqual(rows['local:solo']['capabilities']['scheduling_effect'],'explicit_standalone_dispatch')
         self.assertEqual(rows['local:group']['capabilities']['next_action_effect'],'none')
+
+    def test_explicit_workstream_references_use_individual_freshness_without_guessing(self):
+        self.jobs.append({'id':'related','object_id':'product:BQ01','status':'completed',
+            'conversations':[{'provider':'codex','conversation_id':'one','control':'reference_only'}]})
+        snapshot={'state':'unavailable','source':'complete snapshot','observed_at':'2026-11-11T11:00:00+00:00',
+            'snapshot_observed_at':'2026-11-11T05:00:00+00:00','threads':[
+                {'id':'one','hostId':'durable','title':'Same title','status':'active'},
+                {'id':'two','hostId':'durable','title':'Same title','status':'active',
+                 'individual_observation':{'state':'ok','observed_at':'2026-11-11T10:59:00+00:00',
+                    'attempted_at':'2026-11-11T10:59:00+00:00','source':'official single read','age_seconds':4}},
+                {'id':'three','hostId':'durable','title':'Other','status':'notLoaded',
+                 'individual_observation':{'state':'ok','observed_at':'2026-11-11T10:59:00+00:00',
+                    'attempted_at':'2026-11-11T10:59:00+00:00','source':'official single read','age_seconds':4}}],
+            'workstream_links':[{'workstream':'tools','host_id':'durable','thread_id':'one'},
+                {'workstream':'alibaba','host_id':'durable','thread_id':'two'},
+                {'workstream':'website','host_id':'durable','thread_id':'three'}]}
+        self.app.desktop_snapshot=SimpleNamespace(read=lambda:snapshot)
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview()
+        rows={row['id']:row for row in result['tasks']}
+        self.assertEqual(rows['desktop:durable:one']['status'],'unknown')
+        self.assertEqual(rows['desktop:durable:one']['source_status'],'active')
+        self.assertEqual(rows['desktop:durable:one']['freshness']['state'],'unavailable')
+        self.assertEqual(rows['desktop:durable:two']['status'],'active')
+        self.assertEqual(rows['desktop:durable:two']['business_line'],'alibaba')
+        self.assertEqual(rows['desktop:durable:three']['status'],'unknown')
+        self.assertEqual(rows['local:related']['workstream_id'],'tools')
+        self.assertEqual([x['id'] for x in result['workstreams'][0]['related_jobs']],['local:related'])
 
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')

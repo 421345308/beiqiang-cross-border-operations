@@ -1589,7 +1589,7 @@ test('本机外部关联不剥夺安全调整，桌面快照有效状态可读�
 });
 
 test('桌面详情来源不冒充本机，业务推导优先级说明且区分观测与更新',async()=>{
- const h=harness('#/task/desktop%3Ah%3At');h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>({tasks:[{id:'desktop:h:t',origin:'desktop',status:'running',title:'外部对话',priority:null,updated_at:'2026-11-01T00:00:00Z',observed_at:'2026-11-11T00:00:00Z',freshness:{state:'ok'}}]})}:h.originalFetch(p,o));await h.ui.bootstrap();assert.doesNotMatch(h.elements.page.textContent,/本地 · 正在处理/);assert.match(h.elements.page.textContent,/桌面对话快照 · 快照时观察：正在处理/);assert.match(h.elements.page.textContent,/优先级：未登记/);assert.match(h.elements.page.textContent,/记录更新：/);assert.match(h.elements.page.textContent,/本次观测：/);assert.match(h.elements.page.textContent,/快照时效：/);
+ const h=harness('#/task/desktop%3Ah%3At');h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>({tasks:[{id:'desktop:h:t',origin:'desktop',status:'running',title:'外部对话',priority:null,updated_at:'2026-11-01T00:00:00Z',observed_at:'2026-11-11T00:00:00Z',freshness:{state:'ok'}}]})}:h.originalFetch(p,o));await h.ui.bootstrap();assert.doesNotMatch(h.elements.page.textContent,/本地 · 正在处理/);assert.match(h.elements.page.textContent,/桌面对话快照 · 最近一次观察：正在处理/);assert.match(h.elements.page.textContent,/优先级：未登记/);assert.match(h.elements.page.textContent,/记录更新：/);assert.match(h.elements.page.textContent,/本次观测：/);assert.match(h.elements.page.textContent,/快照时效：/);
  const b=harness('#/tasks');b.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>({tasks:[{id:'business:x',origin:'business',title:'待办',priority:'high',priority_basis:'business_severity',source_severity:'urgent'}]})}:b.originalFetch(p,o));await b.ui.bootstrap();assert.match(b.elements.page.textContent,/由业务事项严重程度推导/);assert.match(b.elements.page.textContent,/记录更新时效：/);
 });
 
@@ -1648,4 +1648,30 @@ test('独立计划明确确认后仅提交预览候选并刷新列表',async()=>
 
 test('独立计划重新预览失败时禁止启动旧候选',async()=>{
  const h=harness('#/tasks'),posts=[];let reads=0;h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[]})};if(p==='/api/desk/job/priority-next?id=standalone'){reads++;return reads===1?{ok:true,json:async()=>({group_id:'standalone',candidate:{id:'alone-1',title:'旧候选',version:2},ready_count:1,blocked_count:0})}:{ok:false,status:503,json:async()=>({error:'来源暂不可用'})};}if(p==='/api/desk/job/priority-next'){posts.push(JSON.parse(o.body));return {ok:true,json:async()=>({id:'alone-1'})};}return h.originalFetch(p,o);});await h.ui.bootstrap();await findButton(h.elements.page,'预览独立计划优先项').click();const old=findButton(h.elements.page,'确认启动该独立计划');await findButton(h.elements.page,'预览独立计划优先项').click();assert.equal(old.disabled,true);await old.click();assert.equal(posts.length,0);assert.match(h.elements.page.textContent,/未取得有效候选/);
+});
+
+test('三条工作线显示来源与只读会话，过期状态不冒充当前运行',async()=>{
+ const h=harness('#/tasks'),writes=[];
+ const data={tasks:[{id:'desktop:durable:thread1',thread_id:'thread1',host_id:'durable',origin:'desktop',title:'旧会话',status:'active',observed_at:'2026-11-11T05:50:35Z',freshness:{state:'unavailable'}},{id:'local:job1',origin:'local',job_id:'job1',title:'已关联任务',status:'completed'}],
+  workstreams:[{id:'tools',title:'总控与工具',focus:'改造任务总览',source:{state:'ok',label:'工作台资料',observed_at:'2026-11-11T10:00:00Z',modified_at:'2026-11-11T09:00:00Z',result:'已验收',next_action:'继续接入',blocker:'暂无明确阻塞'},conversation:{id:'thread1',host_id:'durable',title:'经营空间开发会话',state:'unavailable',observed_status:'active',observed_at:'2026-11-11T05:50:35Z',attempted_at:'2026-11-11T09:03:16Z',source:'正式列表',association_source:'负责人确认',associated_at:'2026-11-11T08:00:00Z',control:'reference_only'},related_jobs:[{id:'local:job1',title:'已关联任务',status:'completed'}]},
+  {id:'alibaba',title:'国际站运营',focus:'核实经营范围',source:{state:'unavailable',label:'国际站资料',result:'绝不可冒充实时'},conversation:null,related_jobs:[]},
+  {id:'website',title:'独立站增长',focus:'产品对齐',source:{state:'ok',label:'网站资料',result:'已有部署',next_action:'核素材',blocker:''},conversation:{id:'thread2',host_id:'durable',state:'ok',observed_status:'idle',observed_at:'2026-11-11T10:00:00Z',source:'单项观察',control:'reference_only'},related_jobs:[]}]};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>data};if(o.method==='POST')writes.push(p);return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview');assert.ok(panel);assert.match(panel.textContent,/并行工作线/);assert.match(panel.textContent,/总控与工具/);assert.match(panel.textContent,/国际站运营/);assert.match(panel.textContent,/独立站增长/);assert.match(panel.textContent,/经营空间开发会话/);assert.match(panel.textContent,/Codex 只读引用/);assert.match(panel.textContent,/当前执行者未确认/);assert.match(panel.textContent,/关联依据：负责人确认/);assert.match(panel.textContent,/当前状态未知/);assert.match(panel.textContent,/观察：正在处理/);assert.match(panel.textContent,/最近一次观察/);assert.match(panel.textContent,/来源不可用/);assert.match(panel.textContent,/未关联工作台任务/);assert.match(panel.textContent,/业务资料暂不可读/);assert.doesNotMatch(panel.textContent,/绝不可冒充实时/);assert.ok(!walk(panel).some(x=>x.tagName==='BUTTON' && /启动|接续|发送|调整/.test(x.textContent)));
+ await findButton(panel,'查看只读会话引用').click();assert.match(h.location.hash,/desktop%3Adurable%3Athread1/);assert.deepEqual(writes,[]);
+});
+
+test('桌面旧快照主状态为未知，历史运行仅有观测时间',async()=>{
+ const h=harness('#/tasks');h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>({tasks:[{id:'desktop:local:x',origin:'desktop',status:'unknown',source_status:'active',title:'旧引用',observed_at:'2026-11-11T05:50:35Z',freshness:{state:'stale'}}]})}:h.originalFetch(p,o));await h.ui.bootstrap();const card=h.elements.page.querySelector('.task-overview-card');assert.match(card.textContent,/当前状态未知/);assert.match(card.textContent,/快照时观察：正在处理/);assert.match(card.textContent,/11\/11/);
+});
+
+test('工作线长摘录可展开查看全文但不改变原业务数据',async()=>{
+ const h=harness('#/tasks'),full='隔离业务资料'.repeat(60),data={tasks:[],workstreams:[{id:'tools',title:'总控与工具',source:{state:'ok',label:'工作台资料',result:full,next_action:'下一步',blocker:''},conversation:null,related_jobs:[]}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview');assert.match(panel.textContent,/查看业务记录摘录/);assert.ok(panel.textContent.includes(full));assert.equal(data.workstreams[0].source.result,full);
+});
+
+test('仅合法 UUID 能生成只用于定位的 Codex 会话链接',async()=>{
+ const h=harness('#/tasks'),valid='01234567-89ab-cdef-0123-456789abcdef',malicious=valid+'?target=evil',base={source:{state:'ok'},related_jobs:[]};
+ const data={tasks:[],workstreams:[{...base,id:'tools',title:'总控与工具',conversation:{id:valid,state:'stale',observed_status:'active',association_source:'明确关联',associated_at:'2026-11-11T08:00:00Z'}},{...base,id:'website',title:'独立站增长',conversation:{id:malicious,state:'stale',observed_status:'active'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview'),links=walk(panel).filter(x=>x.tagName==='A');assert.equal(links.length,1);assert.equal(links[0].href,`codex://threads/${valid}`);assert.match(links[0].textContent,/仅定位/);assert.match(panel.textContent,/关联依据：明确关联/);assert.match(panel.textContent,/当前状态未知/);
 });

@@ -7,6 +7,7 @@ import re
 from datetime import datetime, timezone
 from urllib.parse import quote
 from desktop_snapshot import SOURCE as DESKTOP_SOURCE
+from workstreams import build_workstreams
 
 
 def now():
@@ -118,14 +119,31 @@ class TaskWorkspace:
             snapshot = {'state':'unavailable','threads':[], 'observed_at':None, 'source':DESKTOP_SOURCE,
                 'automatic_refresh':False,'reason':'无法读取桌面快照。'}
         sources['desktop'] = {k:v for k,v in snapshot.items() if k != 'threads'}
+        workstreams = build_workstreams(self.app.root, jobs, snapshot) if getattr(self.app,'root',None) else []
+        thread_streams, job_streams = {}, {}
+        for stream in workstreams:
+            conversation = stream.get('conversation') or {}
+            identity = (conversation.get('host_id'), conversation.get('id'))
+            if all(identity): thread_streams.setdefault(identity,set()).add(stream['id'])
+            for related in stream.get('related_jobs',[]):
+                job_streams.setdefault(related['id'],set()).add(stream['id'])
+        for row in tasks:
+            matches = job_streams.get(row.get('id'),set())
+            if len(matches)==1: row['workstream_id'] = next(iter(matches))
         for thread in snapshot['threads']:
             status = thread.get('status') or 'unknown'
+            observation = thread.get('individual_observation') or {}
+            freshness = observation.get('state') or snapshot['state']
+            observed_at = observation.get('observed_at') or snapshot.get('snapshot_observed_at') or snapshot.get('observed_at')
+            matches = thread_streams.get((thread['hostId'],thread['id']),set())
+            workstream_id = next(iter(matches)) if len(matches)==1 else None
             tasks.append({'id':'desktop:' + quote(thread['hostId'],safe='') + ':' + quote(thread['id'],safe=''),
                 'thread_id':thread['id'], 'host_id':thread['hostId'], 'origin':'desktop', 'object_id':None,
-                'title':thread.get('title') or '桌面会话', 'status':'unknown' if status=='notLoaded' else status,
-                'source_status':status, 'source':DESKTOP_SOURCE, 'updated_at':thread.get('updatedAt'),
-                'observed_at':snapshot.get('snapshot_observed_at') or snapshot.get('observed_at'),
-                'snapshot_state':snapshot['state'], 'snapshot_imported_at':snapshot.get('imported_at'),
+                'title':thread.get('title') or '桌面会话', 'status':status if freshness=='ok' and status!='notLoaded' else 'unknown',
+                'source_status':status, 'source':observation.get('source') or DESKTOP_SOURCE, 'updated_at':thread.get('updatedAt'),
+                'observed_at':observed_at, 'observation_attempted_at':observation.get('attempted_at') or snapshot.get('observed_at'),
+                'snapshot_state':freshness, 'snapshot_age_seconds':observation.get('age_seconds', snapshot.get('age_seconds')),
+                'snapshot_imported_at':snapshot.get('imported_at'), 'workstream_id':workstream_id,
                 'conversation_scope':'reference_only',
                 'next_action':'请在原桌面会话核对；此处不读取历史或控制执行。'})
         for source in sources.values():
@@ -159,7 +177,7 @@ class TaskWorkspace:
             oid = row.get('object_id') or ''
             kind = obj.get('kind') or oid.split(':')[0]
             source_path = str(row.get('source') or obj.get('source') or '').replace('\\','/')
-            line = ('other' if row['origin']=='desktop' else
+            line = ((row.get('workstream_id') if row.get('workstream_id') in ('alibaba','website') else 'other') if row['origin']=='desktop' else
                     'alibaba' if row.get('kind')=='catalog_status' or oid=='channel:alibaba' or source_path.startswith('02_Alibaba运营/') else
                     'website' if oid.startswith('customer:website-') or source_path.startswith('03_独立站/') else
                     'domestic' if oid == 'channel:douyin' else
@@ -182,14 +200,14 @@ class TaskWorkspace:
                     'next_action_effect':'next_attempt' if row['origin']=='local' and row.get('task_kind')!='group' else 'none',
                     'external_conversation_control':False,
                     'read_only_reason':'' if row['origin']=='local' else '此总览未接入该来源的安全写入。'})
-            row['freshness'] = ({'state':snapshot['state'], 'updated_at':row.get('updated_at'),
-                'age_seconds':snapshot.get('age_seconds')} if row['origin']=='desktop'
+            row['freshness'] = ({'state':row.get('snapshot_state'), 'updated_at':row.get('updated_at'),
+                'age_seconds':row.get('snapshot_age_seconds')} if row['origin']=='desktop'
                 else self._freshness(row.get('updated_at'), observed))
             row['conversation_scope'] = 'reference_only' if row['origin']=='desktop' or any(c.get('control')=='reference_only' for c in row.get('conversations') or []) else None
         options = {key:[{'value':value, 'label':value} for value in sorted({str(row.get(key)) for row in tasks if row.get(key)})]
                    for key in ('business_line','object_id','executor','priority')}
         tasks = [row for row in tasks if all(str(row.get(key) or '') == value for key,value in filters.items() if value)]
-        return {'tasks': tasks, 'sources': sources, 'inbox': inbox, 'observed_at': observed,
+        return {'tasks': tasks, 'workstreams':workstreams, 'sources': sources, 'inbox': inbox, 'observed_at': observed,
                 'filters':options, 'applied_filters':filters,
                 'scheduling_effect':'explicit_standalone_or_group_dispatch_only',
                 'scope': '本机 AgentJobs、已配对云队列、现有业务待办及由 Dot 导入的桌面会话只读快照（非实时、未自动更新）；未导入或未登记的会话和其他数据库不在此列表。'}

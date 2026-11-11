@@ -19,6 +19,23 @@ from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_desktop_observation_and_workstream_link_use_existing_csrf_and_conflict_guards(self):
+        from workspaces import WorkspaceConflict
+        observation={'host_id':'local','thread_id':'fixture','observed_at':'2026-11-11T00:00:00Z',
+                     'status':'unavailable','source_tool':'mcp__codex_app__read_thread','metadata':{}}
+        link={'workstream':'tools','host_id':'local','thread_id':'fixture','source_note':'明确登记的隔离引用'}
+        for path,payload,method in [('/api/desk/desktop-observation',observation,'import_observation'),
+                                    ('/api/desk/workstream-link',link,'link_workstream')]:
+            with patch.object(self.app.desktop_snapshot,method,create=True,return_value={'ok':True}) as action:
+                try: denied=self.request(path,payload,token=False)[0]
+                except (ConnectionAbortedError,ConnectionResetError):denied=0
+                self.assertIn(denied,(0,403));action.assert_not_called()
+                status,result=self.request(path,payload)
+                self.assertEqual(status,200);self.assertTrue(result['ok']);action.assert_called_once_with(payload)
+                action.side_effect=WorkspaceConflict('观测版本已变化')
+                self.assertEqual(self.request(path,payload)[0],409)
+            self.assertEqual(self.app.agent_jobs.list_jobs(),[])
+
     def test_direct_dispatch_requires_version_and_propagates_conflicts(self):
         from workspaces import WorkspaceConflict
         with patch.object(self.app.agent_jobs,'get_job',return_value={'id':'p1','mode':'draft'}) as get, \

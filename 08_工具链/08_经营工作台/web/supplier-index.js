@@ -92,7 +92,15 @@ window.renderSupplierIndex = async function ({ page, current, api, goObject, set
     node.value = selected;
   }
   let timer, sequence = 0;
+  function invalidate() {
+    if (timer !== undefined) clearTimeout(timer);
+    timer = undefined;
+    sequence += 1;
+    count.textContent = '正在查找…';
+    list.replaceChildren();
+  }
   async function find() {
+    if (!current()) return;
     const request = ++sequence, params = new URLSearchParams();
     for (const [key, value] of [['q',query.value], ['product',product.value], ['process',process.value], ['city',city.value], ['identity',identity.value], ['customization_evidence',custom.value]]) if (value.trim()) params.set(key, value.trim());
     count.textContent = '正在查找…';
@@ -117,7 +125,16 @@ window.renderSupplierIndex = async function ({ page, current, api, goObject, set
       }
     }
   }
-  for (const field of [query, product, process]) field.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(find, 250); });
-  for (const field of [city, identity, custom]) field.addEventListener('change', find);
-  setRefresh(find); await find();
+  function findNow() {
+    if (!current()) return;
+    invalidate();
+    return find();
+  }
+  for (const field of [query, product, process]) field.addEventListener('input', () => {
+    if (!current()) return;
+    invalidate();
+    timer = setTimeout(() => { timer = undefined; find(); }, 250);
+  });
+  for (const field of [city, identity, custom]) field.addEventListener('change', findNow);
+  setRefresh(findNow); await find();
 };
