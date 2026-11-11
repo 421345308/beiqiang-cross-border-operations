@@ -33548,6 +33548,102 @@
         "scope": "2026-11-04 16:09 主图补充后 approved/Y，质量分4.90且未返回具体扣分原因；买家页待验。",
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-9002/当前状态.md"
       }
+    },
+    {
+      "id": "BQ-GF001",
+      "current_model": "BQ-GF001",
+      "aliases": [
+        "BQ-GF001"
+      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-7hao-8805-2507214",
+      "candidate_source_ids": [
+        "src-xile-8805-2508765"
+      ],
+      "raw_packages": [],
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md"
+      ],
+      "notes": [
+        "来源为供应商 8805；后跟图案归属未确认，实图保留。",
+        "来源单价、逐色逐码可供和交易条件按订单复核。"
+      ],
+      "classification": {
+        "local_intent_candidates": [
+          "低帮旋钮高尔夫鞋"
+        ],
+        "state": "SOURCE_CONFIRMED_PUBLISH_REJECTED",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md"
+      },
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_七号仓库选款",
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_功能鞋复核"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md",
+        "state": "PHOTOS_IN_IMAGE_BANK_NO_LISTING"
+      },
+      "publication_disposition": {
+        "state": "BLOCKED_CATEGORY_SCOPE",
+        "scope": "国际站 Golf Shoes 正式创建返回经营类目范围业务拒绝；没有商品 ID。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md"
+      },
+      "supply_mode": {
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-11-11",
+        "evidence": [
+          "02_Alibaba运营/05_扩品工程/执行记录/BQ-GF001/README.md"
+        ],
+        "scope": "内部采购与履约分类；页面来源不证明实时库存或具体订单条件。"
+      }
+    },
+    {
+      "id": "BQ-WR001",
+      "current_model": "BQ-WR001",
+      "aliases": [
+        "BQ-WR001"
+      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-7hao-d903-1156694",
+      "candidate_source_ids": [],
+      "raw_packages": [],
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/BQ-WR001/README.md"
+      ],
+      "notes": [
+        "来源图鞋舌、鞋跟与鞋盒显示 Day-Key；不擦标或声称品牌授权。",
+        "来源页面列33–44码，包括39和40；男、女尺码表中39、40码脚长不同，不声称未经确认的统一脚长。"
+      ],
+      "classification": {
+        "local_intent_candidates": [
+          "高帮系带拳击摔跤鞋"
+        ],
+        "state": "SOURCE_CONFIRMED_PUBLISH_REJECTED",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-WR001/README.md"
+      },
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_七号仓库选款",
+          "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_功能鞋复核"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/BQ-WR001/README.md",
+        "state": "PHOTOS_IN_IMAGE_BANK_NO_LISTING"
+      },
+      "publication_disposition": {
+        "state": "BLOCKED_CATEGORY_SCOPE",
+        "scope": "国际站 Wrestling Shoes 正式创建返回经营类目范围业务拒绝；没有商品 ID。",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/BQ-WR001/README.md"
+      },
+      "supply_mode": {
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-11-11",
+        "evidence": [
+          "02_Alibaba运营/05_扩品工程/执行记录/BQ-WR001/README.md"
+        ],
+        "scope": "内部采购与履约分类；页面来源不证明实时库存或具体订单条件。"
+      }
     }
   ],
   "identity_consolidation": [
