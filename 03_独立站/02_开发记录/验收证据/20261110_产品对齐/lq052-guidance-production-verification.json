@@ -1,0 +1,162 @@
+{
+  "recorded_at_utc": "2026-11-11T09:05:34+00:00",
+  "commit": "9a244495e50cddd9657417b526a2d78a5da70a5f",
+  "release": {
+    "releaseId": "2026-11-11.7",
+    "releasedAt": "2026-11-11T08:56:00+00:00",
+    "productCount": 156,
+    "publicLanguages": [
+      "en",
+      "zh",
+      "de",
+      "fr",
+      "es"
+    ],
+    "lineSheetProductCount": 156,
+    "lineSheetPages": 34,
+    "factoryVideo": {
+      "durationSeconds": 180,
+      "narrationLanguages": [
+        "en"
+      ],
+      "captionLanguages": [
+        "en",
+        "zh"
+      ],
+      "stillCount": 9
+    },
+    "publicOrigin": "https://www.beiqiang.online"
+  },
+  "edgeone_deployment": {
+    "id": "dprx0822uwtu",
+    "status": "Success"
+  },
+  "product_guidance_checks": [
+    {
+      "path": "/products/bq-lq052/?check=guidance-20261111.7",
+      "status": 200,
+      "expected_guidance_present": true,
+      "incorrect_guidance_absent": true,
+      "ok": true
+    },
+    {
+      "path": "/zh/products/bq-lq052/?check=guidance-20261111.7",
+      "status": 200,
+      "expected_guidance_present": true,
+      "incorrect_guidance_absent": true,
+      "ok": true
+    },
+    {
+      "path": "/products/bq1048/?check=guidance-20261111.7",
+      "status": 200,
+      "expected_guidance_present": true,
+      "incorrect_guidance_absent": null,
+      "ok": true
+    },
+    {
+      "path": "/zh/products/bq1048/?check=guidance-20261111.7",
+      "status": 200,
+      "expected_guidance_present": true,
+      "incorrect_guidance_absent": null,
+      "ok": true
+    }
+  ],
+  "catalogue_checks": [
+    {
+      "type": "catalogue_page",
+      "locale": "en",
+      "path": "/line-sheet/",
+      "status": 200,
+      "download_link": true,
+      "product_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "zh",
+      "path": "/zh/line-sheet/",
+      "status": 200,
+      "download_link": true,
+      "product_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "de",
+      "path": "/de/line-sheet/",
+      "status": 200,
+      "download_link": true,
+      "product_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "fr",
+      "path": "/fr/line-sheet/",
+      "status": 200,
+      "download_link": true,
+      "product_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "es",
+      "path": "/es/line-sheet/",
+      "status": 200,
+      "download_link": true,
+      "product_count": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "en",
+      "path": "/downloads/beiqiang-footwear-line-sheet-2026.pdf?v=2026-11-11.7",
+      "status": 200,
+      "bytes": 1970735,
+      "sha256": "1ebc36a694e0988f55ded4ad371a0b52d33d7c7c74850cbd624422544a4b8032",
+      "matches_validated_156_product_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "zh",
+      "path": "/downloads/beiqiang-footwear-line-sheet-zh-2026.pdf?v=2026-11-11.7",
+      "status": 200,
+      "bytes": 2033447,
+      "sha256": "9ff00f3bb9b4212fb05b52b6ef762f1b9b63c5ac2ac3baf7e2791dcf07070710",
+      "matches_validated_156_product_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "de",
+      "path": "/downloads/beiqiang-footwear-line-sheet-de-2026.pdf?v=2026-11-11.7",
+      "status": 200,
+      "bytes": 1886215,
+      "sha256": "9b6497319e97c0802c699c26850355437f2eef14d03a0ec9d9ecdcaf555ef713",
+      "matches_validated_156_product_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "fr",
+      "path": "/downloads/beiqiang-footwear-line-sheet-fr-2026.pdf?v=2026-11-11.7",
+      "status": 200,
+      "bytes": 1885752,
+      "sha256": "bbfc5ba836b7e948320c09090b9ac032b6b1d4e05c81113ab407f37fbaf930ec",
+      "matches_validated_156_product_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "es",
+      "path": "/downloads/beiqiang-footwear-line-sheet-es-2026.pdf?v=2026-11-11.7",
+      "status": 200,
+      "bytes": 1885235,
+      "sha256": "75304bce3997d981dce469a3915ef5bad466d7bb28b289655e5bc813723c93c7",
+      "matches_validated_156_product_pdf": true,
+      "ok": true
+    }
+  ],
+  "all_passed": true
+}
