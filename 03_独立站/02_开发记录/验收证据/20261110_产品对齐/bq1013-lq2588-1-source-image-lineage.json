@@ -1,0 +1,106 @@
+{
+  "recorded_at_utc": "2026-11-11T11:00:09+00:00",
+  "website_commit": "c8ebf7331a94e32392ad2d523711c00ba3b9bbf2",
+  "website_release": "2026-11-11.11",
+  "scope": "Existing Beiqiang website pages and website-download product catalogues; does not extend to independent distribution or other channels.",
+  "source_state": "Both sources were already adopted in the existing product master; SKU configuration is not live inventory.",
+  "products": [
+    {
+      "code": "BQ1013",
+      "product_id": "HR013",
+      "source_id": "src-hr013-renli-2269",
+      "source_url": "https://renli.sooxie.com/detail/2547894",
+      "listing_id": "1601943542214",
+      "receipt": {
+        "path": "03_独立站/02_开发记录/验收证据/.local/20261111_待补图正式回读/1601943542214-20261111T035717Z.json",
+        "sha256": "23bddc43c16cf9a2b875d065dc692ca300182d96ab1af1a0baa8bdc2216985af",
+        "observed_at_utc": "2026-11-11T03:57:17+00:00",
+        "sku_pairs": 39
+      }
+    },
+    {
+      "code": "BQ-LQ2588-1",
+      "product_id": "BQ-LQ2588-1",
+      "source_id": "src-e186dd666102",
+      "source_url": "https://luqi.sooxie.com/detail/2412409",
+      "listing_id": "1601973772709",
+      "receipt": {
+        "path": "03_独立站/02_开发记录/验收证据/.local/20261111_待补图正式回读/1601973772709-20261111T034909Z.json",
+        "sha256": "cba99738baa498eae0c71f2bd87bc59ad87893cdd5d743e4016c0914161857ff",
+        "observed_at_utc": "2026-11-11T03:49:09+00:00",
+        "sku_pairs": 27
+      }
+    }
+  ],
+  "images": [
+    {
+      "code": "BQ1013",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR013/.local/搜鞋替代候选/2269/11.jpg",
+      "website_path": "/catalog/bq1013/01_main.jpg",
+      "colour": "Sand",
+      "role": "on-foot",
+      "sha256": "972f0664204754c53d8e98424766bfdabb1cc9941ea56ba95d206f043a5ca705"
+    },
+    {
+      "code": "BQ1013",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR013/.local/搜鞋替代候选/2269/13.jpg",
+      "website_path": "/catalog/bq1013/02_wine_red.jpg",
+      "colour": "Wine Red",
+      "role": "on-foot",
+      "sha256": "48ade64426a112c212271a4eaf53bbf09547ad75040904bcfbcbec9afa0644ba"
+    },
+    {
+      "code": "BQ1013",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR013/.local/搜鞋替代候选/2269/18.jpg",
+      "website_path": "/catalog/bq1013/03_black.jpg",
+      "colour": "Black",
+      "role": "on-foot",
+      "sha256": "5bf705eb4c3093c87f9770c4ff28fb22b71c17c07150a5f817dcf77da576d8d5"
+    },
+    {
+      "code": "BQ1013",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR013/.local/搜鞋替代候选/2269/19.jpg",
+      "website_path": "/catalog/bq1013/04_black_side.jpg",
+      "colour": "Black",
+      "role": "on-foot",
+      "sha256": "f67609e72b44388228ce24716bfbda3775699b2b0c8f67d5338ca80eed886992"
+    },
+    {
+      "code": "BQ-LQ2588-1",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/22.jpg",
+      "website_path": "/catalog/bq-lq2588-1/01_main.jpg",
+      "colour": "White",
+      "role": "on-foot",
+      "sha256": "bcbc488c054a6c2956f1c3d1629074192eab5b84c435c1a4c90e825cac76798e"
+    },
+    {
+      "code": "BQ-LQ2588-1",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/15.jpg",
+      "website_path": "/catalog/bq-lq2588-1/02_black_white.jpg",
+      "colour": "Black/White",
+      "role": "on-foot",
+      "sha256": "42592927696eebd6ab042ab72b8b2fde9029dde182d18425f79606c9439e38ac"
+    },
+    {
+      "code": "BQ-LQ2588-1",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/24.jpg",
+      "website_path": "/catalog/bq-lq2588-1/03_all_black.jpg",
+      "colour": "All Black",
+      "role": "on-foot",
+      "sha256": "dfc881102c4a3d3da3f6c004ca3b9745f5bb5d58e566113f0ffcf07a96fae77d"
+    },
+    {
+      "code": "BQ-LQ2588-1",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/21.jpg",
+      "website_path": "/catalog/bq-lq2588-1/04_black_white_side.jpg",
+      "colour": "Black/White",
+      "role": "on-foot",
+      "sha256": "57165ac8093261d1b6a1cfc8010a20ca6f5b68ae14eebe4dfa8e33a93a8d4e1f"
+    }
+  ],
+  "identity_notes": {
+    "BQ1013": "HR013 is one identity with three Alibaba links 1601943542214, 1601943514448, 1601943543192. All were approved/Y in the 2026-11-10 15:46 UTC snapshot; the 2026-11-11 receipt in this file is for the first link only. Sizes 36–48 are supplier labels, not verified EU conversions.",
+    "BQ-LQ2588-1": "Source catalogue identifies 2588-1; the platform title abbreviates it as 2588. The platform color photographs are historical AI-processed versions and are not byte-identical to the four source images used on the website. The documented wide-toe source category was confirmed by the owner."
+  },
+  "raw_image_policy": "The eight selected source JPEGs were copied byte for byte; existing source files and BQ-LQ1026 copyright/artist metadata were not altered."
+}
