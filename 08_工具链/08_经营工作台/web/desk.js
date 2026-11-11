@@ -54,7 +54,7 @@
   function toast(value) { $('save-indicator').textContent = value; $('save-indicator').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('save-indicator').hidden = true; }, 4500); }
   async function api(path, body) {
     const response = await fetch(path, body === undefined ? { cache: 'no-store' } : { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Workbench-Token': S.token }, body: JSON.stringify(body) }); let value;
-    try { value = await response.json(); } catch { throw new Error('暂时无法读取服务结果，请稍后重新读取。'); }
+    try { value = await response.json(); } catch { const error = new Error('暂时无法读取服务结果，请稍后重新读取。'); error.status = response.status; throw error; }
     const errors={NO_CHANGE:'图片顺序没有变化，请先调整。',SIX_IMAGE_GALLERY_REQUIRED:'当前链接不是六张主图，暂不支持在此调整。',GALLERY_SCHEMA_UNVERIFIED:'平台未返回完整的主图编辑信息，请刷新后重试。',GALLERY_SCHEMA_MISMATCH:'平台主图刚发生变化，请刷新商品后重新调整。',GALLERY_IMAGE_UNAVAILABLE:'未能读取当前主图，请刷新后重试。',GALLERY_IMAGE_NOT_OFFICIAL:'当前主图无法匹配国际站图片银行。',IMAGE_BANK_UNAVAILABLE:'图片银行暂时无法读取，请稍后重试。',IMAGE_BANK_ASSET_NOT_FOUND:'图片银行未找到对应主图，请检查图片后再操作。',IMAGE_BANK_ASSET_AMBIGUOUS:'图片银行中有重复的对应图片，需要先确认。',LOCAL_IMAGE_FORMAT_UNSUPPORTED:'请选择 JPG 或 PNG 图片。',INVALID_LOCAL_IMAGE:'所选图片无法读取，或文件超过 5 MB。',DUPLICATE_GALLERY_IMAGE:'主图中有重复图片，请选择不同的图片。',DETAIL_TYPE_UNVERIFIED:'当前商品的详情类型暂不支持在此调整。',DETAIL_REORDER_WITHIN_GROUP_ONLY:'请保持每组图片连续，整组移动。',DETAIL_SCHEMA_MISMATCH:'平台详情图刚发生变化，请重新读取分组。',DETAIL_IMAGES_UNAVAILABLE:'平台未返回可调整的详情图。',PLATFORM_VERSION_CONFLICT:'平台商品已变化，请刷新后重新准备方案。',LOCAL_VERSION_CONFLICT:'本地商品记录已变化，请重新读取后准备方案。',PLATFORM_NOT_APPROVED:'商品仍在平台审核中，请审核完成后再调整。'};
     if (!response.ok || value.ok === false) { const error = new Error(typeof value.error === 'string' ? value.error.slice(0, 400) : value.error?.message || errors[value.error?.code] || '这次操作未完成，请稍后再试。'); error.status = response.status; throw error; }
     return value;
@@ -623,6 +623,11 @@
     } catch(error) { message(error.message); }
   }
   function renderSearchPage(kind, query) {
+    if (kind === 'products' && parseRoute().query.get('view') === 'suppliers') {
+      const serial = S.loadSerial;
+      window.renderSupplierIndex({ page:$('page'), current:() => serial === S.loadSerial && parseRoute().parts[0] === 'products' && parseRoute().query.get('view') === 'suppliers', api, goObject, setRefresh:callback => { S.listRefresh = callback; }, el, button, link, heading, empty });
+      return;
+    }
     if (kind === 'customers' && parseRoute().query.get('view') === 'batches') { renderCustomerBatches(); return; }
     if (kind === 'customers' && parseRoute().query.get('view') === 'competitors') { renderCompetitors(); return; }
     if (kind === 'customers' && parseRoute().query.get('view') !== 'inquiries') { renderDevelopment(); return; }
@@ -652,7 +657,7 @@
       } catch (error) { if (sequence === searchSerial && listIsCurrent()) { count.textContent = ''; list.replaceChildren(el('div', error.message, 'empty')); } }
     }
     if (sourceSelect) sourceSelect.addEventListener('change', () => { if (!listIsCurrent()) return; history.replaceState(null, '', `#/customers?view=inquiries&source=${sourceSelect.value}${input.value ? `&q=${encodeURIComponent(input.value)}` : ''}`); find(input.value); });
-    input.addEventListener('input', () => { if (!listIsCurrent()) return; clearTimeout(timer); const value = input.value; history.replaceState(null, '', `#/${kind}?${kind === 'customers' ? `view=inquiries&source=${sourceSelect.value}&` : ''}${value ? `q=${encodeURIComponent(value)}` : ''}`); timer = setTimeout(() => find(value), 250); }); S.listRefresh = () => find(input.value); find(query);
+    input.addEventListener('input', () => { if (!listIsCurrent()) return; clearTimeout(timer); const value = input.value; history.replaceState(null, '', `#/${kind}?${kind === 'customers' ? `view=inquiries&source=${sourceSelect.value}&` : ''}${value ? `q=${encodeURIComponent(value)}` : ''}`); timer = setTimeout(() => find(value), 250); }); S.listRefresh = () => find(input.value); if (kind === 'products') page.insertBefore(button('寻找合作厂家 →', () => { location.hash = '/products?view=suppliers'; }, 'quiet'), page.children[1] || null); find(query);
   }
   const workflowStates = { new: '待处理', preparing: '准备回复', waiting_customer: '等客户', internal_review: '内部评估', quoting: '报价沟通', sampling: '样品推进', won: '已成交', lost: '不再推进', archived: '归档' };
   const priorityNames = { urgent: '紧急', high: '优先', normal: '正常', low: '稍后' };

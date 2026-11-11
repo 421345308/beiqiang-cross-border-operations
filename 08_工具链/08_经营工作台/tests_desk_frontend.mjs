@@ -66,9 +66,37 @@ function harness(hash = '#/overview') {
     return { ok: true, json: async () => structuredClone(value) };
   };
   const source = fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'); assert.doesNotMatch(source, /\.innerHTML\s*=/);
-  vm.createContext(context); vm.runInContext(fs.readFileSync(new URL('./web/product-review.js', import.meta.url), 'utf8'),context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
+  vm.createContext(context); vm.runInContext(fs.readFileSync(new URL('./web/product-review.js', import.meta.url), 'utf8'),context); vm.runInContext(fs.readFileSync(new URL('./web/supplier-index.js', import.meta.url), 'utf8'),context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, clipboard: () => local.get('clipboard'), setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
+
+test('产品页可进入只读合作厂家查询', async () => {
+  const h = harness('#/products');
+  h.interceptFetch(async (path, options) => {
+    if (new URL(path, 'http://127.0.0.1:8765').pathname === '/api/desk/suppliers') return {ok:true,json:async()=>({suppliers:[{id:'s1',names:['7号仓库'],shop_url:'https://shop.example',has_profile:false,profile:{factory_identity:{status:'未知'},customization:{status:'未知'},location:{}},sources:[]}],unassociated_sources:[],options:{cities:[],identities:['未知'],customization_evidence:[]}})};
+    return h.originalFetch(path, options);
+  });
+  await h.ui.bootstrap(); await settle();
+  await findButton(h.elements.page,'寻找合作厂家 →').click();
+  assert.equal(h.location.hash,'/products?view=suppliers');
+  h.location.hash = `#${h.location.hash}`; // A browser adds '#' when assigning location.hash.
+  await h.ui.renderRoute(); await settle();
+  assert.match(h.elements.page.textContent,/7号仓库/);
+  assert.match(h.elements.page.textContent,/未据此认定厂家身份或能力/);
+});
+
+test('旧工作台的厂家接口返回 JSON 或 HTML 404 时提示等待工作完成后重启', async () => {
+  for (const format of ['json','html']) {
+    const h = harness('#/products?view=suppliers');
+    h.interceptFetch(async (path, options) => {
+      if (new URL(path, 'http://127.0.0.1:8765').pathname === '/api/desk/suppliers') return {ok:false,status:404,json:async()=>{if(format==='html')throw new SyntaxError('not json');return {error:'接口不存在'};}};
+      return h.originalFetch(path, options);
+    });
+    await h.ui.bootstrap(); await settle();
+    assert.match(h.elements.page.textContent,/服务版本尚未更新/);
+    assert.match(h.elements.page.textContent,/等待当前工作结束后重启/);
+  }
+});
 
 test('抖店经营对象沿用 Agent 任务入口并返回渠道', async () => {
   const h=harness('#/object/channel%3Adouyin');

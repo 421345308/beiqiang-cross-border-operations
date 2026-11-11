@@ -17,6 +17,7 @@ from product_detail_uploads import LocalDetailPlans
 from search_console import SearchConsole
 from alibaba_product_review import AlibabaProductReview
 from business import Business, CHANNEL
+from supplier_index import supplier_index
 from agent_jobs import AgentJobs, codex_executable
 from batch_research import BatchResearch
 from customer_workspace import CustomerWorkspace, CustomerWriteOutcomeUnknown
@@ -440,6 +441,7 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send_json(search_buyers(value('q') or 'footwear'))
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
+                if u.path=='/api/desk/suppliers':return self.send_json(supplier_index(app.root,**{k:value(k) for k in ('q','product','process','city','identity','customization_evidence')}))
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
                 if u.path=='/api/desk/desktop-snapshot':return self.send_json(app.desktop_snapshot.read())
                 if u.path=='/api/desk/task-overview':return self.send_json(app.task_workspace.overview({k:value(k) for k in ('business_line','object_id','executor','priority') if value(k)}))
