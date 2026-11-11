@@ -3,17 +3,20 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import re
 from pathlib import Path
 import shutil
 import signal
+import stat
 import subprocess
 import tempfile
 import threading
 import time
 import uuid
 from datetime import datetime
+from contextlib import contextmanager
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request
@@ -316,66 +319,153 @@ def remove_recovery_marker(path):
     path.unlink()
     sync_marker_directory(path.parent)
 
+@contextmanager
+def runner_process_lock(state):
+    """Serialize cooperating runners on this one private state directory only."""
+    path = state / '.runner.lock'
+    if path.is_symlink():
+        raise RuntimeError('Runner lock must not be a symlink')
+    flags = os.O_RDWR | os.O_CREAT | getattr(os, 'O_NOFOLLOW', 0)
+    fd = os.open(path, flags, 0o600)
+    stream = os.fdopen(fd, 'r+b')
+    locked = False
+    try:
+        info = os.fstat(stream.fileno())
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+            raise RuntimeError('Runner lock is not a private regular file')
+        if os.name == 'nt':
+            import msvcrt
+            if info.st_size == 0:
+                stream.write(b'0'); stream.flush()
+            stream.seek(0)
+            try: msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
+            except OSError: raise RuntimeError('Another runner holds the local state lock') from None
+        else:
+            import fcntl
+            try: fcntl.flock(stream.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except OSError: raise RuntimeError('Another runner holds the local state lock') from None
+        locked = True
+        yield
+    finally:
+        if locked:
+            if os.name == 'nt':
+                stream.seek(0); msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(stream.fileno(), fcntl.LOCK_UN)
+        stream.close()
+
+
 def require_reconciled(state):
     for name in ('claiming.json', 'active.json', 'blocked.json'):
         marker = state / name
         if marker.exists() or marker.is_symlink():
             raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
 
+
+def claim_status_once(queue, request_id, claim_options):
+    """Read the server's single receipt slot without heartbeat, claim or lease renewal."""
+    try:
+        receipt = queue.call('claim_status', request_id=request_id, **claim_options)
+    except HTTPError as error:
+        if error.code == 409:
+            return {'state':'scope_conflict', 'retryable':False}
+        return {'state':'http_error', 'retryable':error.code in (429, 500, 502, 503, 504)}
+    except (URLError, TimeoutError, OSError):
+        return {'state':'network_error', 'retryable':True}
+    except RuntimeError:
+        return {'state':'status_rejected', 'retryable':False}
+    except (ValueError, TypeError, AttributeError, UnicodeError):
+        return {'state':'invalid_response', 'retryable':False}
+    if (not isinstance(receipt, dict) or type(receipt.get('claim_protocol')) is not int
+            or receipt['claim_protocol'] != 1 or receipt.get('request_id') != request_id):
+        return {'state':'receipt_mismatch', 'retryable':False}
+    status = receipt.get('state')
+    run_id = receipt.get('run_id')
+    if status in ('empty', 'unknown'):
+        if run_id is not None:
+            return {'state':'receipt_mismatch', 'retryable':False}
+        return {'state':status, 'retryable':status == 'unknown'}
+    if status == 'claimed':
+        if (not isinstance(run_id, str) or not re.fullmatch(r'[a-f0-9]{32}', run_id)
+                or (claim_options.get('run_id') and claim_options['run_id'] != run_id)):
+            return {'state':'receipt_mismatch', 'retryable':False}
+        return {'state':'claimed', 'run_id':run_id, 'retryable':False}
+    return {'state':'invalid_response', 'retryable':False}
+
+
 def confirmed_empty_claim(queue, request_id, claim_options, *, attempts=3):
     """Read back only. Never retry a claim or recover a lost execution lease."""
     for attempt in range(attempts):
-        try:
-            receipt = queue.call('claim_status', request_id=request_id, **claim_options)
-        except HTTPError as error:
-            if error.code not in (429, 500, 502, 503, 504): return False
-            receipt = None
-        except (URLError, TimeoutError, OSError):
-            receipt = None
-        if receipt is not None:
-            if (not isinstance(receipt, dict) or receipt.get('claim_protocol') != 1
-                    or receipt.get('request_id') != request_id): return False
-            if receipt.get('state') == 'empty': return True
-            if receipt.get('state') != 'unknown': return False
+        status = claim_status_once(queue, request_id, claim_options)
+        if status['state'] == 'empty': return True
+        if not status['retryable']: return False
         if attempt + 1 < attempts: time.sleep(2)
     return False
 
 
-def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--once',action='store_true')
-    parser.add_argument('--run-id', help='Execute only this explicitly selected run, then exit')
-    args=parser.parse_args()
-    endpoint=os.environ.get('WORKBENCH_RUNNER_URL','');secret=os.environ.get('WORKBENCH_RUNNER_SECRET','')
-    if not endpoint or not secret:parser.error('Set WORKBENCH_RUNNER_URL and WORKBENCH_RUNNER_SECRET in the deployment environment')
-    auth_mode = os.environ.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
-    if auth_mode not in ('chatgpt', 'api'):
-        parser.error('Unsupported runner authentication method')
-    engine = os.environ.get('WORKBENCH_RUNNER_ENGINE', 'codex')
-    if engine not in ('codex', 'responses') or (engine == 'responses' and auth_mode != 'api'):
-        parser.error('Unsupported runner engine or authentication method')
-    executable=shutil.which('codex') if engine == 'codex' else None
-    if engine == 'codex' and not executable:
-        parser.error('Install and authenticate Codex CLI on this execution host first')
-    if auth_mode == 'api':
-        forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
-                     'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')
-        if any(os.environ.get(name) for name in forbidden):
-            parser.error('Unexpected inherited authentication or provider override')
-        from preflight import read_api_credential
-        try: read_api_credential(os.environ)
-        except (OSError, UnicodeError, ValueError): parser.error('Private API credential is unavailable')
-    capabilities = None
-    if not args.run_id:
-        from preflight import preflight
-        checked = preflight()
-        if not checked['ok']:
-            parser.error('Private worker startup checks failed; run preflight.py for safe check results')
-        auth = checked.get('auth', {}).get('method') or 'chatgpt'
-        capabilities = {'ready': True, 'auth': auth, 'model': MODEL,
-                        'models': list(API_MODELS if auth == 'api' else (MODEL,)),
-                        'public_web_research': engine == 'responses'}
-    state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
-    state.mkdir(parents=True,exist_ok=True);require_reconciled(state);queue=Queue(endpoint,secret)
+def reconcile_startup_claim(state, queue):
+    """Read the persisted request once; clear only its exact confirmed-empty marker.
+
+    Caller holds runner_process_lock. Active or blocked outcomes never auto-resume.
+    The lock covers cooperating processes on this host and is not a VPS lease.
+    """
+    for name in ('active.json', 'blocked.json'):
+        path = state / name
+        if path.exists() or path.is_symlink():
+            raise RuntimeError('Prior execution requires reconciliation; no automatic resume')
+    marker = state / 'claiming.json'
+    if not marker.exists() and not marker.is_symlink():
+        return False
+    if marker.is_symlink() or not marker.is_file() or marker.stat().st_size > 16384:
+        raise RuntimeError('Claim reconciliation paused (invalid marker); preserve and inspect it')
+    try:
+        raw = marker.read_bytes()
+        saved = json.loads(raw.decode('utf-8'))
+    except (OSError, UnicodeError, ValueError):
+        raise RuntimeError('Claim reconciliation paused (invalid marker); preserve and inspect it') from None
+    if not isinstance(saved, dict):
+        raise RuntimeError('Claim reconciliation paused (invalid marker); preserve and inspect it')
+    request_id = saved.get('request_id')
+    options = saved.get('claim_options')
+    requested_run_id = saved.get('requested_run_id')
+    at = saved.get('at')
+    try:
+        valid_at = type(at) in (int, float) and math.isfinite(at) and at > 0
+    except (OverflowError, ValueError):
+        valid_at = False
+    valid = (type(saved.get('claim_protocol')) is int and saved['claim_protocol'] == 1
+             and isinstance(request_id, str) and bool(re.fullmatch(r'[a-f0-9]{32}', request_id))
+             and isinstance(options, dict) and not (set(options) - {'run_id', 'public_web_research'})
+             and valid_at)
+    if valid:
+        run_id = options.get('run_id')
+        valid = ((run_id is None and 'run_id' not in options and requested_run_id is None)
+                 or (isinstance(run_id, str) and bool(re.fullmatch(r'[a-f0-9]{32}', run_id))
+                     and requested_run_id == run_id))
+        if 'public_web_research' in options:
+            valid = valid and type(options['public_web_research']) is bool
+    if not valid:
+        raise RuntimeError('Claim reconciliation paused (unsupported marker or scope); preserve and inspect it')
+    status = claim_status_once(queue, request_id, options)
+    audit = {'event':'startup_claim_status', 'request_id':request_id, 'scope':options, 'state':status['state']}
+    if status.get('run_id'): audit['run_id'] = status['run_id']
+    print(json.dumps(audit, ensure_ascii=True, sort_keys=True), flush=True)
+    if status['state'] != 'empty':
+        detail = ' run_id='+status['run_id'] if status['state']=='claimed' else ''
+        raise RuntimeError('Claim reconciliation paused ('+status['state']+'). Preserve marker; '
+                           'reconcile this request and any claimed run before resuming.'+detail)
+    try:
+        unchanged = not marker.is_symlink() and marker.is_file() and marker.read_bytes() == raw
+    except OSError:
+        unchanged = False
+    if not unchanged or any((state/name).exists() or (state/name).is_symlink() for name in ('active.json','blocked.json')):
+        raise RuntimeError('Claim reconciliation paused (marker changed); preserve and inspect it')
+    remove_recovery_marker(marker)
+    print('Prior claim reconciled as empty for its exact request and scope.', flush=True)
+    return True
+
+
+def run_claim_loop(args, queue, state, capabilities, engine, executable):
     while True:
         # A heartbeat happens before creating a claim marker and cannot claim
         # work. Recover from temporary connection failures here only; unknown
@@ -456,5 +546,55 @@ def main():
             remove_recovery_marker(claiming)
         if args.once or args.run_id:return
         time.sleep(10)
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--once',action='store_true')
+    parser.add_argument('--run-id', help='Execute only this explicitly selected run, then exit')
+    args=parser.parse_args()
+    endpoint=os.environ.get('WORKBENCH_RUNNER_URL','');secret=os.environ.get('WORKBENCH_RUNNER_SECRET','')
+    if not endpoint or not secret:parser.error('Set WORKBENCH_RUNNER_URL and WORKBENCH_RUNNER_SECRET in the deployment environment')
+    auth_mode = os.environ.get('WORKBENCH_RUNNER_AUTH', 'chatgpt')
+    if auth_mode not in ('chatgpt', 'api'):
+        parser.error('Unsupported runner authentication method')
+    engine = os.environ.get('WORKBENCH_RUNNER_ENGINE', 'codex')
+    if engine not in ('codex', 'responses') or (engine == 'responses' and auth_mode != 'api'):
+        parser.error('Unsupported runner engine or authentication method')
+    executable=shutil.which('codex') if engine == 'codex' else None
+    if engine == 'codex' and not executable:
+        parser.error('Install and authenticate Codex CLI on this execution host first')
+    if auth_mode == 'api':
+        forbidden = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'OPENAI_BASE_URL',
+                     'AZURE_OPENAI_ENDPOINT', 'CODEX_OSS_BASE_URL')
+        if any(os.environ.get(name) for name in forbidden):
+            parser.error('Unexpected inherited authentication or provider override')
+        from preflight import read_api_credential
+        try: read_api_credential(os.environ)
+        except (OSError, UnicodeError, ValueError): parser.error('Private API credential is unavailable')
+    state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
+    checked = None
+    if not args.run_id:
+        from preflight import preflight, claim_reconciliation_eligible
+        checked = preflight()
+        if not checked['ok'] and not claim_reconciliation_eligible(checked, state):
+            parser.error('Private worker startup checks failed; run preflight.py for safe check results')
+    state.mkdir(parents=True,exist_ok=True)
+    with runner_process_lock(state):
+        queue=Queue(endpoint,secret)
+        reconciled = reconcile_startup_claim(state, queue)
+        require_reconciled(state)
+        if checked is not None and (reconciled or not checked['ok']):
+            if not reconciled:
+                parser.error('Private worker startup checks failed; run preflight.py for safe check results')
+            checked = preflight()
+            if not checked['ok']:
+                parser.error('Private worker startup checks failed after claim reconciliation')
+        capabilities = None
+        if checked is not None:
+            auth = checked.get('auth', {}).get('method') or 'chatgpt'
+            capabilities = {'ready': True, 'auth': auth, 'model': MODEL,
+                            'models': list(API_MODELS if auth == 'api' else (MODEL,)),
+                            'public_web_research': engine == 'responses'}
+        return run_claim_loop(args, queue, state, capabilities, engine, executable)
 
 if __name__=='__main__':main()

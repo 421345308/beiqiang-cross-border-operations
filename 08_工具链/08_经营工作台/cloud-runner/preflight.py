@@ -189,13 +189,35 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
     return result
 
 
+def claim_reconciliation_eligible(result, state):
+    """Allow only a pending claim to reach the runner's read-only reconciliation."""
+    failed = [check for check in result.get('checks', []) if not check.get('ok')]
+    if not failed or any(check.get('name') != 'execution_recovery'
+                         or check.get('code') != 'EXECUTION_OUTCOME_REQUIRES_REVIEW' for check in failed):
+        return False
+    try:
+        state = Path(state)
+        claiming = state / 'claiming.json'
+        if claiming.is_symlink() or not claiming.is_file():
+            return False
+        return not any((state/name).exists() or (state/name).is_symlink() for name in ('active.json','blocked.json'))
+    except (OSError, ValueError, TypeError):
+        return False
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--expected-codex-version')
+    parser.add_argument('--allow-claim-reconciliation', action='store_true',
+                        help='permit only read-only reconciliation of a pending claim; not execution readiness')
     args = parser.parse_args(argv)
     value = preflight(expected_version=args.expected_codex_version)
+    eligible = bool(args.allow_claim_reconciliation and not value['ok']
+                    and claim_reconciliation_eligible(value, os.environ.get('WORKBENCH_RUNNER_STATE', '')))
+    if args.allow_claim_reconciliation:
+        value['claim_reconciliation_eligible'] = eligible
     print(json.dumps(value, ensure_ascii=False))
-    return 0 if value['ok'] else 1
+    return 0 if value['ok'] or eligible else 1
 
 
 if __name__ == '__main__':

@@ -3,7 +3,9 @@ import os
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
+import io
 import unittest
+from unittest.mock import patch
 
 from preflight import DEFAULT_CODEX_VERSION, QUEUE_URL, preflight, is_mountpoint
 
@@ -202,6 +204,35 @@ class PreflightTests(unittest.TestCase):
                 self.assertIn('EXECUTION_OUTCOME_REQUIRES_REVIEW', [x['code'] for x in result['checks']])
                 self.assertNotIn('PRIVATE TASK DATA', json.dumps(result))
                 marker.unlink()
+
+    def test_reconciliation_preflight_allows_only_claiming_without_ready(self):
+        import preflight as module
+        state=Path(self.env['WORKBENCH_RUNNER_STATE']);marker=state/'claiming.json'
+        marker.write_text('PRIVATE FIXTURE MARKER',encoding='utf-8')
+        result=self.invoke()
+        self.assertFalse(result['ok']);self.assertFalse(result['eligible_to_start'])
+        self.assertTrue(module.claim_reconciliation_eligible(result,state))
+        with patch.dict(os.environ,self.env,clear=True),patch('preflight.preflight',return_value=result):
+            with patch('sys.stdout',new_callable=io.StringIO) as out:
+                self.assertEqual(module.main(['--allow-claim-reconciliation']),0)
+                output=json.loads(out.getvalue())
+            self.assertTrue(output['claim_reconciliation_eligible'])
+            self.assertFalse(output['ok']);self.assertFalse(output['eligible_to_start'])
+            with patch('sys.stdout',new_callable=io.StringIO):self.assertEqual(module.main([]),1)
+        self.assertEqual(marker.read_text(encoding='utf-8'),'PRIVATE FIXTURE MARKER')
+        for name in ('active.json','blocked.json'):
+            other=state/name;other.write_text('{}',encoding='utf-8')
+            self.assertFalse(module.claim_reconciliation_eligible(result,state));other.unlink()
+        bad={**result,'checks':result['checks']+[{'name':'queue_endpoint','ok':False,'code':'UNEXPECTED_QUEUE_ENDPOINT'}]}
+        self.assertFalse(module.claim_reconciliation_eligible(bad,state))
+        marker.unlink();self.assertFalse(module.claim_reconciliation_eligible(result,state))
+
+    def test_self_hosted_unit_only_allows_reconciliation_not_auto_restart(self):
+        unit=(Path(__file__).parent/'deploy/self-hosted/beiqiang-runner.service').read_text(encoding='utf-8')
+        self.assertIn('preflight.py --allow-claim-reconciliation',unit)
+        self.assertIn('NoNewPrivileges=true',unit)
+        self.assertIn('ProtectSystem=strict',unit)
+        self.assertIn('Restart=no',unit)
 
     @unittest.skipIf(os.name == 'nt', 'POSIX mode and symlink guarantees')
     def test_private_modes_and_no_symlink_escape(self):

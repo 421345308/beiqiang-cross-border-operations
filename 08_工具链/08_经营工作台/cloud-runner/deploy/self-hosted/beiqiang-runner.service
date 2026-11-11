@@ -15,7 +15,7 @@ Environment=WORKBENCH_RUNNER_BIND_SOURCE=/var/lib/beiqiang/runner
 Environment=PATH=/opt/beiqiang/runtime/node/bin:/opt/beiqiang-codex/bin:/usr/local/bin:/usr/bin:/bin
 # Private mount namespace; does not mount over the host's /var/data.
 BindPaths=/var/lib/beiqiang/runner:/var/data
-ExecStartPre=/usr/bin/python3 /opt/beiqiang-runner/current/preflight.py
+ExecStartPre=/usr/bin/python3 /opt/beiqiang-runner/current/preflight.py --allow-claim-reconciliation
 ExecStart=/usr/bin/python3 -u /opt/beiqiang-runner/current/runner.py
 UMask=0077
 NoNewPrivileges=true
