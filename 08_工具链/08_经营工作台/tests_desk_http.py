@@ -19,6 +19,42 @@ from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_direct_dispatch_requires_version_and_propagates_conflicts(self):
+        from workspaces import WorkspaceConflict
+        with patch.object(self.app.agent_jobs,'get_job',return_value={'id':'p1','mode':'draft'}) as get, \
+             patch.object(self.app.agent_jobs,'dispatch',return_value={'id':'p1','status':'queued'}) as start:
+            status,_=self.request('/api/desk/job/dispatch',{'id':'p1'});self.assertEqual(status,400);get.assert_not_called();start.assert_not_called()
+            status,_=self.request('/api/desk/job/dispatch',{'id':'p1','expected_version':0});self.assertEqual(status,200);start.assert_called_once_with('p1',expected_version=0)
+            start.side_effect=WorkspaceConflict('版本已变化')
+            status,_=self.request('/api/desk/job/dispatch',{'id':'p1','expected_version':0});self.assertEqual(status,409);self.assertEqual(start.call_count,2)
+            get.return_value={'id':'p1','batch_id':'batch','mode':'outreach_research'}
+            status,_=self.request('/api/desk/job/dispatch',{'id':'p1','expected_version':0});self.assertEqual(status,400);self.assertEqual(start.call_count,2)
+
+    def test_priority_next_routes_require_previewed_identity_and_propagate_conflict(self):
+        from workspaces import WorkspaceConflict
+        preview={'group_id':'g1','candidate':{'id':'p1','title':'fixture','priority':'high','version':0},'ready_count':1,'blocked_count':1,'reason':None}
+        with patch.object(self.app.agent_jobs,'preview_priority_dispatch',return_value=preview,create=True) as read, \
+             patch.object(self.app.agent_jobs,'dispatch_priority_next',return_value={'id':'p1','status':'queued'},create=True) as start:
+            status,value=self.request('/api/desk/job/priority-next?id=g1');self.assertEqual(status,200);self.assertEqual(value['candidate']['id'],'p1');read.assert_called_once_with('g1');start.assert_not_called()
+            status,value=self.request('/api/desk/job/priority-next',{'group_id':'g1','expected_job_id':'p1','expected_version':0});self.assertEqual(status,200);self.assertEqual(value['status'],'queued');start.assert_called_once_with('g1','p1',0)
+            status,_=self.request('/api/desk/job/priority-next',{'group_id':'g1','expected_job_id':'p1','expected_version':True});self.assertEqual(status,400);self.assertEqual(start.call_count,1)
+            status,_=self.request('/api/desk/job/priority-next',{'group_id':'g1','expected_job_id':'p1','expected_version':0,'extra':'no'});self.assertEqual(status,400);self.assertEqual(start.call_count,1)
+            start.side_effect=WorkspaceConflict('候选已变化')
+            status,_=self.request('/api/desk/job/priority-next',{'group_id':'g1','expected_job_id':'p1','expected_version':0});self.assertEqual(status,409);self.assertEqual(start.call_count,2)
+
+    def test_held_result_and_explicit_reconciliation_routes(self):
+        from workspaces import WorkspaceConflict
+        held={'job_id':'p1','attempt':1,'content':'合成待复核成果','format':'markdown','reason':'result_outcome_unknown','warning':'核对业务结果'}
+        with patch.object(self.app.agent_jobs,'read_held_result',return_value=held,create=True) as read, \
+             patch.object(self.app.agent_jobs,'reconcile_result_commit',return_value={'id':'p1','status':'needs_input'},create=True) as reconcile:
+            status,value=self.request('/api/desk/job/held-result?id=p1');self.assertEqual(status,200);self.assertEqual(value['content'],held['content']);read.assert_called_once_with('p1');reconcile.assert_not_called()
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录'});self.assertEqual(status,200);reconcile.assert_called_once_with('p1',expected_version=2,evidence='已核对原业务记录')
+            reconcile.side_effect=WorkspaceConflict('任务已变化')
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录'});self.assertEqual(status,409)
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':True,'evidence':'不合法'});self.assertEqual(status,400);self.assertEqual(reconcile.call_count,2)
+            read.side_effect=ValueError('此任务没有可读取的保留成果')
+            status,_=self.request('/api/desk/job/held-result?id=unknown');self.assertEqual(status,400)
+
     def test_cloud_review_routes_reuse_service_and_require_local_token(self):
         class Cloud:
             calls=0

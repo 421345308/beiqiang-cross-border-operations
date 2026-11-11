@@ -18,6 +18,23 @@ class WorkspaceTests(unittest.TestCase):
             cloud_review=SimpleNamespace(workspace_status=lambda:self.cloud))
         self.service=TaskWorkspace(self.app)
 
+    def test_adjustments_describe_actual_effect_and_allow_clearing_next_action(self):
+        self.jobs.extend([
+            {'id':'group','object_id':'product:BQ01','task_kind':'group','status':'planned'},
+            {'id':'child','object_id':'product:BQ01','task_kind':'work','parent_job_id':'group',
+             'status':'planned','next_action':'','priority':'high'},
+            {'id':'solo','object_id':'product:BQ010','task_kind':'work','status':'planned'},
+        ])
+        self.app.agent_jobs.get_graph=lambda group_id:{'aggregate':{'status':'ready','total':1}}
+        result=self.service.overview()
+        rows={row['id']:row for row in result['tasks']}
+        self.assertEqual(result['scheduling_effect'],'explicit_standalone_or_group_dispatch_only')
+        self.assertEqual(rows['local:child']['capabilities']['scheduling_effect'],'explicit_group_dispatch')
+        self.assertEqual(rows['local:child']['capabilities']['next_action_effect'],'next_attempt')
+        self.assertEqual(rows['local:child']['next_action'],'')
+        self.assertEqual(rows['local:solo']['capabilities']['scheduling_effect'],'explicit_standalone_dispatch')
+        self.assertEqual(rows['local:group']['capabilities']['next_action_effect'],'none')
+
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')
         self.assertEqual(result['object_id'],'product:BQ010')
@@ -182,7 +199,7 @@ class WorkspaceHTTPTests(unittest.TestCase):
         self.assertEqual(status,200)
         self.assertEqual(changed['status'],'planned')
         self.assertEqual(changed['instruction'],'Plan')
-        self.assertEqual(changed['adjustments'][-1]['scheduling_effect'],'display_only')
+        self.assertEqual(changed['adjustments'][-1]['scheduling_effect'],'explicit_standalone_dispatch_only')
         status,_=self.request('/api/desk/job/adjust',{'id':job['id'],
             'expected_version':job['version'],'priority':'low'})
         self.assertEqual(status,409)

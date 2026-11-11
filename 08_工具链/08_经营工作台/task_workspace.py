@@ -32,7 +32,7 @@ class TaskWorkspace:
         for job in jobs:
             row = {key: job.get(key) for key in (
                 'object_id', 'title', 'instruction', 'status', 'summary', 'error',
-                'updated_at', 'artifact_id', 'session_id', 'attempt', 'task_kind',
+                'updated_at', 'artifact_id', 'session_id', 'attempt', 'task_kind', 'mode', 'batch_id',
                 'parent_job_id', 'depends_on', 'version', 'priority', 'next_action', 'conversations')}
             row.update(id='local:' + job['id'], job_id=job['id'], origin='local', version=job.get('version', 0))
             if job.get('task_kind') == 'group':
@@ -130,6 +130,30 @@ class TaskWorkspace:
                 'next_action':'请在原桌面会话核对；此处不读取历史或控制执行。'})
         for source in sources.values():
             if source is not sources['desktop']: source.setdefault('observed_at', observed)
+        jobs_by_id = {job['id']: job for job in jobs}
+        def belongs_to_group(row):
+            parent = row.get('parent_job_id')
+            seen = set()
+            found = False
+            while parent and parent not in seen:
+                seen.add(parent)
+                item = jobs_by_id.get(parent)
+                if not item:
+                    return False
+                if item.get('status') == 'cancelled':
+                    return False
+                if item.get('task_kind') == 'group':
+                    found = True
+                parent = item.get('parent_job_id')
+            return found and parent is None
+        def priority_effect(row):
+            if (row['origin'] != 'local' or row.get('task_kind') == 'group'
+                    or row.get('status') != 'planned' or row.get('attempt', 0)
+                    or (row.get('batch_id') and row.get('mode') == 'outreach_research')):
+                return 'display_only'
+            if not row.get('parent_job_id'):
+                return 'explicit_standalone_dispatch'
+            return 'explicit_group_dispatch' if belongs_to_group(row) else 'display_only'
         for row in tasks:
             obj = objects.get(row.get('object_id'), {})
             oid = row.get('object_id') or ''
@@ -146,14 +170,16 @@ class TaskWorkspace:
                 executor='codex_cli' if row['origin']=='local' else 'paired_cloud' if row['origin']=='cloud' else 'codex_desktop' if row['origin']=='desktop' else 'business_owner',
                 priority=(row.get('priority') or 'normal') if row['origin']=='local' else row.get('priority'),
                 priority_basis=row.get('priority_basis') or ('registered' if row.get('priority') else 'local_default' if row['origin']=='local' else 'unregistered'),
-                next_action=row.get('next_action') or row.get('next_steps') or
+                next_action=(row.get('next_action') if row.get('next_action') is not None else row.get('next_steps') or
                     ({'planned':'核对计划后显式派发', 'running':'等待执行结果', 'queued':'等待已派发任务启动',
                       'failed':'核对中断原因与已有成果', 'needs_input':'补充所需信息', 'completed':'核对成果'}
-                     .get(row.get('status'), '') if row['origin']=='local' else ''),
+                     .get(row.get('status'), '') if row['origin']=='local' else '')),
                 blocker=row.get('error') or ('前置任务：' + ', '.join(row['depends_on']) if row.get('depends_on') else ''),
                 result=row.get('summary') or '', observed_at=row.get('observed_at', observed),
                 source=row.get('source') or ('AgentJobs' if row['origin']=='local' else 'paired_cloud_queue' if row['origin']=='cloud' else 'business_source'),
-                capabilities={'adjust':row['origin']=='local', 'scheduling_effect':'display_only',
+                capabilities={'adjust':row['origin']=='local',
+                    'scheduling_effect':priority_effect(row),
+                    'next_action_effect':'next_attempt' if row['origin']=='local' and row.get('task_kind')!='group' else 'none',
                     'external_conversation_control':False,
                     'read_only_reason':'' if row['origin']=='local' else '此总览未接入该来源的安全写入。'})
             row['freshness'] = ({'state':snapshot['state'], 'updated_at':row.get('updated_at'),
@@ -165,7 +191,7 @@ class TaskWorkspace:
         tasks = [row for row in tasks if all(str(row.get(key) or '') == value for key,value in filters.items() if value)]
         return {'tasks': tasks, 'sources': sources, 'inbox': inbox, 'observed_at': observed,
                 'filters':options, 'applied_filters':filters,
-                'scheduling_effect':'display_only',
+                'scheduling_effect':'explicit_standalone_or_group_dispatch_only',
                 'scope': '本机 AgentJobs、已配对云队列、现有业务待办及由 Dot 导入的桌面会话只读快照（非实时、未自动更新）；未导入或未登记的会话和其他数据库不在此列表。'}
 
     @staticmethod

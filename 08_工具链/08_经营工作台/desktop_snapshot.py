@@ -54,6 +54,7 @@ class DesktopSnapshot:
         state = payload.get('status')
         if state not in ('ok','unavailable') or type(payload.get('truncated')) is not bool:
             raise ValueError('快照来源状态或截断标记无效。')
+        incomplete = state == 'ok' and payload['truncated']
         raw = payload.get('threads')
         if not isinstance(raw, list) or len(raw)>MAX_THREADS or (state=='unavailable' and raw):
             raise ValueError('会话列表最多500条；来源不可用时不得附带新列表。')
@@ -101,11 +102,15 @@ class DesktopSnapshot:
                 old = self._stored()
                 if old and observed < timestamp(old['observed_at']):
                     raise WorkspaceConflict('已有更新的桌面观测，请重新读取后导入。')
-                value = {'observed_at':observed.isoformat(),'imported_at':stamp(),'status':state,
-                         'truncated':payload['truncated'],'threads':threads,'excluded_count':excluded}
-                if state == 'unavailable' and old:
+                value = {'observed_at':observed.isoformat(),'imported_at':stamp(),
+                         'status':'unavailable' if incomplete else state,
+                         'truncated':payload['truncated'],'attempt_truncated':incomplete,
+                         'threads':threads,'excluded_count':excluded}
+                if (state == 'unavailable' or incomplete) and old:
                     value.update(threads=old['threads'],snapshot_observed_at=old.get('snapshot_observed_at') or old['observed_at'],
                                  truncated=old['truncated'])
+                elif incomplete:
+                    value.update(threads=[],snapshot_observed_at=value['observed_at'])
                 else:
                     value['snapshot_observed_at'] = value['observed_at']
                 self.app.db.execute('INSERT OR REPLACE INTO desktop_observation VALUES (1,?)',(json.dumps(value,ensure_ascii=False),))
@@ -121,9 +126,11 @@ class DesktopSnapshot:
             return {'state':'missing','source':SOURCE,'threads':[], 'observed_at':None,
                     'automatic_refresh':False,'reason':'尚未导入；本机后台没有持续读取桌面会话的连接器。'}
         age = max(0,int((datetime.now(timezone.utc)-timestamp(value['snapshot_observed_at'])).total_seconds()))
+        reason = ('本次列表不完整，保留上一份完整快照；请重试正式来源。' if value.get('attempt_truncated') else
+                  '只读元信息快照；不包含会话正文，也不代表实时执行队列。')
         return {**value,'state':'unavailable' if value['status']=='unavailable' else 'stale' if age>=STALE_SECONDS else 'ok',
                 'stale':age>=STALE_SECONDS or value['status']=='unavailable','age_seconds':age,
-                'automatic_refresh':False,'source':SOURCE,'reason':'只读元信息快照；不包含会话正文，也不代表实时执行队列。'}
+                 'automatic_refresh':False,'source':SOURCE,'reason':reason}
 
 
 if __name__ == '__main__':

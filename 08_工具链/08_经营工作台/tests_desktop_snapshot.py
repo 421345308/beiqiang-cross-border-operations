@@ -140,6 +140,23 @@ class DesktopSnapshotTests(unittest.TestCase):
         for extra in ('summary','history','messages'):
             with self.assertRaises(ValueError):
                 self.service.import_snapshot(self.payload([self.thread(**{extra:'forbidden'})]))
+
+    def test_partial_refresh_does_not_replace_last_complete_snapshot(self):
+        previous=self.service.import_snapshot(self.payload([self.thread(id='old')],minutes=1))
+        partial=self.payload([self.thread(id='partial')]);partial['truncated']=True
+        value=self.service.import_snapshot(partial)
+        self.assertEqual(value['state'],'unavailable')
+        self.assertTrue(value['stale'])
+        self.assertTrue(value['attempt_truncated'])
+        self.assertEqual(value['snapshot_observed_at'],previous['snapshot_observed_at'])
+        self.assertEqual([item['id'] for item in value['threads']],['old'])
+
+    def test_first_partial_refresh_does_not_masquerade_as_complete(self):
+        partial=self.payload([self.thread(id='partial')]);partial['truncated']=True
+        value=self.service.import_snapshot(partial)
+        self.assertEqual(value['state'],'unavailable')
+        self.assertEqual(value['threads'],[])
+        self.assertTrue(value['attempt_truncated'])
         with self.assertRaises(ValueError):self.service.import_snapshot(self.payload([self.thread()]*501))
     def test_overview_read_only_not_loaded_unknown_no_title_association(self):
         self.service.import_snapshot(self.payload())
@@ -170,7 +187,7 @@ class DesktopSnapshotHTTPTests(unittest.TestCase):
     request=Fixture.request
     write=Fixture.write
     def test_import_uses_existing_csrf_and_never_creates_job(self):
-        payload={'observed_at':datetime.now(timezone.utc).isoformat(),'status':'ok','truncated':True,
+        payload={'observed_at':datetime.now(timezone.utc).isoformat(),'status':'ok','truncated':False,
                  'threads':[{'id':'test','hostId':'local','cwd':str(self.root),'status':'notLoaded','title':'Fixture'}]}
         try: denied=self.request('/api/desk/desktop-snapshot',payload,token=False)[0]
         except (ConnectionAbortedError,ConnectionResetError):denied=0
@@ -178,6 +195,6 @@ class DesktopSnapshotHTTPTests(unittest.TestCase):
         self.assertEqual(self.app.desktop_snapshot.read()['state'],'missing')
         status,value=self.request('/api/desk/desktop-snapshot',payload)
         self.assertEqual(status,200)
-        self.assertTrue(value['truncated'])
+        self.assertFalse(value['truncated'])
         self.assertEqual(self.app.agent_jobs.list_jobs(),[])
         self.assertEqual(self.request('/api/desk/desktop-snapshot')[0],200)

@@ -447,6 +447,8 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
                 if u.path=='/api/desk/job/graph':return self.send_json(app.agent_jobs.get_graph(value('id')))
+                if u.path=='/api/desk/job/priority-next':return self.send_json(app.agent_jobs.preview_priority_dispatch(value('id')))
+                if u.path=='/api/desk/job/held-result':return self.send_json(app.agent_jobs.read_held_result(value('id')))
                 if u.path=='/api/desk/customer-batches/research-groups':return self.send_json(app.batch_research.list_groups(value('batch_id')))
                 if u.path=='/api/desk/artifacts':return self.send_json({'artifacts':app.business.list_artifacts(value('object_id') or None)})
             if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
@@ -638,10 +640,10 @@ class Handler(BaseHTTPRequestHandler):
                 if set(body)!={'id','depends_on'}:raise ValueError('依赖字段无效')
                 return self.send_json(app.agent_jobs.add_dependency(body['id'],body['depends_on']))
             if parts==['api','desk','job','dispatch']:
-                if set(body)!={'id'}:raise ValueError('任务字段无效')
+                if set(body)!={'id','expected_version'} or not isinstance(body['id'],str) or not body['id'] or type(body['expected_version']) is not int or body['expected_version']<0:raise ValueError('请提供任务编号和已读取版本')
                 job=app.agent_jobs.get_job(body['id'])
                 if job.get('batch_id') and job.get('mode')=='outreach_research':raise ValueError('客户批次研究请回到原批次继续')
-                return self.send_json(app.agent_jobs.dispatch(body['id']))
+                return self.send_json(app.agent_jobs.dispatch(body['id'],expected_version=body['expected_version']))
             if parts==['api','desk','search-console','oauth','start']:
                 config=body.get('client_config')
                 if not config and app.gmail.status().get('account_email'):
@@ -681,6 +683,13 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','job','adjust']:
                 if set(body)-{'id','expected_version','priority','next_action'}:raise ValueError('任务调整字段无效')
                 return self.send_json(app.agent_jobs.adjust(body.get('id'),expected_version=body.get('expected_version'),priority=body.get('priority'),next_action=body.get('next_action')))
+            if parts==['api','desk','job','priority-next']:
+                if set(body)!={'group_id','expected_job_id','expected_version'}:raise ValueError('优先执行字段无效')
+                if not isinstance(body['group_id'],str) or not body['group_id'] or not isinstance(body['expected_job_id'],str) or not body['expected_job_id'] or type(body['expected_version']) is not int or body['expected_version']<0:raise ValueError('请使用已预览的任务编号和版本')
+                return self.send_json(app.agent_jobs.dispatch_priority_next(body['group_id'],body['expected_job_id'],body['expected_version']))
+            if parts==['api','desk','job','reconcile-result']:
+                if set(body)!={'id','expected_version','evidence'} or not isinstance(body['id'],str) or not body['id'] or type(body['expected_version']) is not int or body['expected_version']<0 or not isinstance(body['evidence'],str):raise ValueError('请填写任务、版本和核对依据')
+                return self.send_json(app.agent_jobs.reconcile_result_commit(body['id'],expected_version=body['expected_version'],evidence=body['evidence']))
             if parts==['api','desk','job','conversation']:
                 if set(body)-{'id','provider','conversation_id','provenance','url','expected_version'}:raise ValueError('会话关联字段无效')
                 return self.send_json(app.agent_jobs.link_conversation(body.get('id'),provider=body.get('provider'),conversation_id=body.get('conversation_id'),provenance=body.get('provenance'),url=body.get('url'),expected_version=body.get('expected_version')))

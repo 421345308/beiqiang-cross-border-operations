@@ -39,6 +39,9 @@ class TaskContinuity:
             if run is None:
                 run={'attempt':job['attempt'],'started_at':stamp(),'instruction':job['instruction'],
                      'continuation_mode':job.get('continuation_mode','initial'),'artifact_ids':[]}
+                plan = job.get('attempt_plan') or {}
+                if plan.get('attempt') == job['attempt']:
+                    run['attempt_plan'] = dict(plan)
                 job['runs'].append(run)
             run.update(status=job['status'],session_id=job.get('session_id'),summary=job.get('summary'),error=job.get('error'))
             if job.get('artifact_id') and job['artifact_id'] not in run['artifact_ids']:
@@ -98,7 +101,7 @@ class TaskContinuity:
                            'content':raw.decode('utf-8-sig')[:12000], 'truncated':len(raw.decode('utf-8-sig'))>12000})
         return {'job':job,'object':obj,'artifacts':artifacts,'shared_sources':shared,'customer_context':customer_context,
                 'goal':job.get('initial_instruction',job['instruction']),'instruction':job['instruction'],
-                'next_action':job.get('summary') or job.get('error') or '',
+                'next_action':job.get('next_action',''),
                 'dependencies':job.get('depends_on',[]),'parent_job_id':job.get('parent_job_id'),
                 'source_version':{'job_version':job['version'],'object_sha256':hashlib.sha256(json.dumps(obj,sort_keys=True,ensure_ascii=False).encode()).hexdigest()},
                 'read_at':stamp(),'capabilities':{'execution_backend':'codex_cli','model':__import__('codex_backend').MODEL,

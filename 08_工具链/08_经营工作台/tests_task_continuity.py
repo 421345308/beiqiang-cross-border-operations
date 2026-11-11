@@ -1,7 +1,13 @@
 import unittest
+import sqlite3
+import threading
+import time
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 from tests_agent_jobs import AgentJobTests, join_job_threads
+from agent_jobs import AgentJobs
+from workspaces import WorkspaceConflict
 
 class TaskContinuityTests(AgentJobTests):
     def test_multiple_links_version_and_validation(self):
@@ -83,6 +89,156 @@ class TaskContinuityTests(AgentJobTests):
         self.assertEqual(context['customer_context']['operator_context'],'latest owner decision')
         self.assertEqual(context['customer_context']['commercial']['next_action'],'current quote')
         self.assertIn('latest owner decision',self.jobs._continuity_prompt(job['id']))
+
+    def test_claim_freezes_owner_action_and_later_change_holds_result(self):
+        first=self.wait(self.jobs.start('product:shoe','原始目标'))
+        planned=self.jobs.adjust(first['id'],expected_version=first['version'],next_action='本轮先核对样品')
+        with self.assertRaises(ValueError):
+            self.jobs.resume(first['id'],'继续原任务')
+        gate=threading.Event();self.options={'gate':gate}
+        second=self.jobs.resume(first['id'],'继续原任务',expected_version=planned['version'])
+        try:
+            deadline=time.monotonic()+3
+            while time.monotonic()<deadline:
+                if len(self.processes)>=2 and self.processes[-1].stdin.closed:break
+                time.sleep(.01)
+            self.assertGreaterEqual(len(self.processes),2)
+            prompt=self.processes[-1].stdin.value
+            self.assertIn('本轮先核对样品',prompt)
+            running=self.jobs.get_job(first['id'])
+            self.assertEqual(running['attempt_plan']['next_action'],'本轮先核对样品')
+            updated=self.jobs.adjust(first['id'],expected_version=running['version'],next_action='下一轮先核对包装')
+            self.assertEqual(updated['next_action'],'下一轮先核对包装')
+            self.assertNotIn('下一轮先核对包装',prompt)
+        finally:gate.set()
+        done=self.wait(second)
+        self.assertEqual(done['status'],'needs_input')
+        self.assertEqual(done['next_action'],'下一轮先核对包装')
+        self.assertEqual(done['runs'][-1]['attempt_plan']['next_action'],'本轮先核对样品')
+        self.assertEqual(done['runs'][-1]['attempt_plan']['adjustment_version'],planned['adjustment_version'])
+        self.assertEqual(done['held_result']['reason'],'planning_changed_during_attempt')
+        self.assertEqual(len(self.app.business.artifacts),1)
+        held=self.jobs.read_held_result(first['id'])
+        self.assertEqual(held['attempt'],2)
+        self.assertIn('有依据的可用草稿',held['content'])
+        self.assertIn('其他工具',held['warning'])
+        self.assertEqual(self.jobs.get_task_context(first['id'])['next_action'],'下一轮先核对包装')
+        self.assertTrue(any(x['type']=='planning_adjusted' for x in done['events']))
+
+    def test_stale_worker_save_preserves_planning_event_and_explicit_clear(self):
+        job=self.wait(self.jobs.start('product:shoe','目标'))
+        stale=self.jobs.get_job(job['id'])
+        changed=self.jobs.adjust(job['id'],expected_version=stale['version'],next_action='先核对')
+        cleared=self.jobs.adjust(job['id'],expected_version=changed['version'],next_action='')
+        self.jobs._save(stale)
+        result=self.jobs.get_job(job['id'])
+        self.assertEqual(result['next_action'],'')
+        self.assertEqual(result['adjustment_version'],cleared['adjustment_version'])
+        self.assertEqual(sum(x['type']=='planning_adjusted' for x in result['events']),2)
+        self.assertEqual(self.jobs.get_task_context(job['id'])['next_action'],'')
+
+    def test_planned_dispatch_uses_action_frozen_at_claim(self):
+        plan=self.jobs.start('product:shoe','准备资料',defer=True)
+        planned=self.jobs.adjust(plan['id'],expected_version=plan['version'],next_action='先读取当前商品资料')
+        started=self.jobs.dispatch(plan['id'],expected_version=planned['version'])
+        done=self.wait(started)
+        self.assertEqual(done['status'],'completed')
+        self.assertIn('先读取当前商品资料',self.processes[-1].stdin.value)
+        self.assertEqual(done['runs'][-1]['attempt_plan']['next_action'],'先读取当前商品资料')
+        self.assertEqual(done['runs'][-1]['attempt_plan']['adjustment_version'],planned['adjustment_version'])
+
+    def test_new_session_receives_frozen_owner_action(self):
+        first=self.wait(self.jobs.start('product:shoe','原始目标'))
+        planned=self.jobs.adjust(first['id'],expected_version=first['version'],next_action='先检查供应依据')
+        second=self.jobs.resume(first['id'],'接续工作',new_session=True,expected_version=planned['version'])
+        done=self.wait(second)
+        self.assertEqual(done['status'],'completed')
+        self.assertIn('先检查供应依据',self.processes[-1].stdin.value)
+        self.assertEqual(done['runs'][-1]['attempt_plan']['next_action'],'先检查供应依据')
+        self.assertNotIn('resume',self.command)
+
+    def test_result_commit_fences_another_database_connection(self):
+        dbfile=self.root/'shared.sqlite3'
+        first_db=sqlite3.connect(dbfile,check_same_thread=False)
+        second_db=sqlite3.connect(dbfile,check_same_thread=False)
+        first_app=SimpleNamespace(root=self.root,state=self.root/'.local',lock=threading.RLock(),db=first_db,business=self.app.business)
+        second_app=SimpleNamespace(root=self.root,state=self.root/'.local',lock=threading.RLock(),db=second_db,business=self.app.business)
+        first=AgentJobs(first_app);other=AgentJobs(second_app)
+        entered=threading.Event();release=threading.Event();save=first_app.business.save_artifact
+        def blocked(*args,**kwargs):
+            entered.set()
+            if not release.wait(5):raise AssertionError('test failed to release final save')
+            return save(*args,**kwargs)
+        first_app.business.save_artifact=blocked
+        try:
+            job=first.start('product:shoe','隔离并发验证')
+            self.assertTrue(entered.wait(3))
+            committing=other.get_job(job['id'])
+            self.assertEqual(committing['result_commit']['state'],'saving')
+            self.assertEqual(committing['result_commit']['attempt'],1)
+            self.assertEqual(committing['result_commit']['owner_id'],first.owner_id)
+            self.assertTrue(committing['result_commit']['started_at'])
+            with self.assertRaises(WorkspaceConflict):
+                other.adjust(job['id'],expected_version=committing['version'],next_action='不要覆盖当前结果')
+            release.set();join_job_threads(first,job['id'])
+            complete=other.get_job(job['id'])
+            self.assertEqual(complete['status'],'completed')
+            self.assertNotIn('result_commit',complete)
+            adjusted=other.adjust(job['id'],expected_version=complete['version'],next_action='下一次再核对')
+            self.assertEqual(adjusted['next_action'],'下一次再核对')
+        finally:
+            release.set();join_job_threads(first)
+            first_app.business.save_artifact=save
+            first_db.close();second_db.close()
+
+    def test_unknown_result_requires_explicit_reconciliation_before_resume(self):
+        self.app.business.fail_save=True
+        job=self.wait(self.jobs.start('product:shoe','目标'))
+        self.assertEqual(job['status'],'needs_input')
+        self.assertEqual(job['result_commit']['state'],'outcome_unknown')
+        self.assertIn('有依据的可用草稿',self.jobs.read_held_result(job['id'])['content'])
+        with self.assertRaises(ValueError):
+            self.jobs.resume(job['id'],'继续',new_session=True,expected_version=job['version'])
+        with self.assertRaises(ValueError):
+            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='  ')
+        with self.assertRaises(WorkspaceConflict):
+            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version']-1,evidence='已核对业务资料')
+        count=len(self.processes)
+        reviewed=self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='已核对业务资料和回执')
+        self.assertNotIn('result_commit',reviewed)
+        self.assertEqual(reviewed['status'],'needs_input')
+        self.assertEqual(reviewed['result_reconciliations'][-1]['evidence'],'已核对业务资料和回执')
+        self.assertEqual(len(self.processes),count)
+
+    def test_restart_during_result_commit_preserves_uncertain_outcome(self):
+        job=self.wait(self.jobs.start('product:shoe','目标'))
+        with self.jobs._write():
+            row=self.jobs.get_job(job['id'])
+            row.update(status='running',owner_pid=999999998,process_id=999999999,worker_finished=False,
+                       result_commit={'state':'saving','attempt':row['attempt'],'owner_id':'old',
+                                      'owner_pid':999999998,'started_at':'2026-11-11T00:00:00Z'})
+            self.jobs._save(row)
+        with patch.object(AgentJobs,'_pid_alive',return_value=False):
+            other=AgentJobs(self.app)
+            recovered=other.get_job(job['id'])
+            self.assertEqual(recovered['status'],'needs_input')
+            self.assertEqual(recovered['result_commit']['state'],'outcome_unknown')
+            self.assertEqual(recovered['held_result']['reason'],'result_outcome_unknown')
+            with self.assertRaises(ValueError):
+                other.resume(job['id'],'继续',new_session=True,expected_version=recovered['version'])
+        self.assertEqual(len(self.processes),1)
+
+    def test_held_result_cannot_read_unrecorded_or_oversized_attempt(self):
+        job=self.wait(self.jobs.start('product:shoe','目标'))
+        with self.assertRaises(ValueError):self.jobs.read_held_result(job['id'])
+        with self.jobs._write():
+            row=self.jobs.get_job(job['id'])
+            row['held_result']={'attempt':1,'format':'markdown','reason':'result_outcome_unknown','recorded_at':'now'}
+            self.jobs._save(row)
+        path=self.app.state/'agent-jobs'/job['id']/'attempt-1'/'final.md'
+        path.write_bytes(b'a'*2_000_001)
+        with self.assertRaises(ValueError):self.jobs.read_held_result(job['id'])
+        with self.assertRaises(ValueError):self.jobs.read_held_result('../other')
 
     def test_legacy_record_defaults_and_live_context(self):
         job=self.wait(self.jobs.start('product:shoe','目标'))

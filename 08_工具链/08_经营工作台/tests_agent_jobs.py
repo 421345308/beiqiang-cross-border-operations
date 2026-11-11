@@ -255,7 +255,9 @@ class AgentJobTests(unittest.TestCase):
             self.assertEqual(result['status'],'failed');self.assertIn('未找到Codex CLI',result['error'])
         self.app.business.fail_save=True
         result=self.wait(self.jobs.start('product:shoe','整理'))
-        self.assertEqual(result['status'],'failed');self.assertIn('保存成果失败',result['error'])
+        self.assertEqual(result['status'],'needs_input');self.assertIn('保存结果不明',result['error'])
+        self.assertEqual(result['result_commit']['state'],'outcome_unknown')
+        self.assertEqual(result['held_result']['reason'],'result_outcome_unknown')
 
     def test_desktop_cli_can_be_found_when_service_path_is_stale(self):
         installed=self.root/'OpenAI'/'Codex'/'bin'/'updated-version'/'codex.exe'
@@ -432,6 +434,31 @@ class AgentJobTests(unittest.TestCase):
         self.assertNotIn('35-45',current['content'])
         self.assertNotIn('unrelated',current['content'])
         self.assertIn('current platform',current['projection'])
+
+    def test_priority_adjustment_describes_actual_explicit_selection_scope(self):
+        solo=self.jobs.start('product:shoe','独立计划',defer=True)
+        solo=self.jobs.adjust(solo['id'],expected_version=solo['version'],priority='high')
+        self.assertEqual(solo['adjustments'][-1]['scheduling_effect'],'explicit_standalone_dispatch_only')
+        self.assertIn('显式独立计划选择',solo['events'][-1]['text'])
+
+        group=self.jobs.create_group('product:shoe','分组')
+        child=self.jobs.start('product:shoe','分组计划',parent_job_id=group['id'],defer=True)
+        child=self.jobs.adjust(child['id'],expected_version=child['version'],priority='high')
+        self.assertEqual(child['adjustments'][-1]['scheduling_effect'],'explicit_group_dispatch_only')
+        self.jobs.cancel(group['id'])
+        child=self.jobs.adjust(child['id'],expected_version=child['version'],priority='low')
+        self.assertEqual(child['adjustments'][-1]['scheduling_effect'],'display_only')
+
+        attempted=self.jobs.start('product:shoe','已尝试计划',defer=True)
+        with self.jobs._write():
+            attempted=self.jobs.get_job(attempted['id']);attempted['attempt']=1;self.jobs._save(attempted)
+        attempted=self.jobs.adjust(attempted['id'],expected_version=attempted['version'],priority='high')
+        self.assertEqual(attempted['adjustments'][-1]['scheduling_effect'],'display_only')
+
+        self.app.business.obj.update(id='customer:buyer',kind='customer')
+        batch=self.jobs.start('customer:buyer','批次研究',mode='outreach_research',batch_id='a'*32,defer=True)
+        batch=self.jobs.adjust(batch['id'],expected_version=batch['version'],priority='high')
+        self.assertEqual(batch['adjustments'][-1]['scheduling_effect'],'display_only')
 
 
 if __name__=='__main__':unittest.main()
