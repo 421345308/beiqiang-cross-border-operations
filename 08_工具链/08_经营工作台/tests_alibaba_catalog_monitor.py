@@ -1,10 +1,15 @@
 import json
+import io
+from contextlib import redirect_stdout
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from alibaba_catalog_monitor import CatalogMonitor, CHANNEL
+from alibaba_catalog_monitor import CatalogMonitor, CHANNEL, main
 
 
 class CatalogMonitorTests(unittest.TestCase):
@@ -21,9 +26,9 @@ class CatalogMonitorTests(unittest.TestCase):
             {'id':'101','product_id':'BQ001','current_platform_fields':{'model':'BQ001','status':'approved','display':'Y'}},
             {'id':'102','product_id':'BQ002','current_platform_fields':{'model':'BQ002','status':'approved','display':'N'}},
             {'id':'999','current_platform_fields':{'status':'approved','display':'Y'}}]}),encoding='utf8')
-        self.calls=[];self.pages={}
+        self.calls=[];self.page_sizes=[];self.pages={}
         def fetch(command,**kwargs):
-            self.calls.append((command,kwargs['page']));return self.pages[kwargs['page']]
+            self.calls.append((command,kwargs['page']));self.page_sizes.append(kwargs['page_size']);return self.pages[kwargs['page']]
         self.monitor=CatalogMonitor(self.root,self.state,fetch=fetch,clock=lambda:self.now)
 
     @staticmethod
@@ -50,6 +55,7 @@ class CatalogMonitorTests(unittest.TestCase):
         self.assertEqual(result['comparison']['different'][0]['product_id'],'BQ001')
         self.assertEqual(result['comparison']['local_not_seen'],2)
         self.assertEqual(self.calls,[('products',1),('products',2)])
+        self.assertEqual(self.page_sizes,[30,30])
         self.assertEqual(self.local.read_bytes(),before)
 
     def test_partial_failure_preserves_last_success_and_does_not_report_empty(self):
@@ -59,9 +65,16 @@ class CatalogMonitorTests(unittest.TestCase):
         result=self.monitor.collect()
         self.assertEqual(result['state'],'error');self.assertEqual(result['error']['code'],'CLIENT_FAILURE')
         self.assertEqual(result['total'],2);self.assertEqual(result['last_success_at'],self.snapshot_time())
+        self.assertEqual(result['audit'][-1]['outcome'],'error')
+        self.assertEqual(result['audit'][-1]['error_code'],'CLIENT_FAILURE')
+        self.assertEqual(result['audit'][-1]['pages_attempted'],2)
         self.assertEqual(self.monitor.collect()['state'],'error');self.assertEqual(len(self.calls),2)
+        self.assertEqual(len(self.monitor.status()['audit']),1)
         self.now+=timedelta(hours=1,minutes=1);self.pages[2]=self.page(2,2,[{'id':'102','status':'approved','display':'N'}])
-        self.assertEqual(self.monitor.collect()['state'],'ready')
+        recovered=self.monitor.collect();self.assertEqual(recovered['state'],'ready')
+        self.assertEqual([item['outcome'] for item in recovered['audit']],['error','ready'])
+        self.assertEqual(recovered['last_failure']['error_code'],'CLIENT_FAILURE')
+        self.assertEqual(recovered['audit'][-1]['records_seen'],2)
 
     def test_final_short_page_stops_when_all_unique_ids_are_collected(self):
         # The official API reports the final page's returned size as page_size.
@@ -86,6 +99,75 @@ class CatalogMonitorTests(unittest.TestCase):
         result=self.monitor.seed(self.snapshot)
         self.assertEqual(result['comparison']['ambiguous_ids'],1)
         self.assertEqual(result['comparison']['matched'],1)
+
+    def test_running_local_collector_excludes_an_overlapping_attempt(self):
+        self.monitor.seed(self.snapshot)
+        with self.monitor._locked() as acquired:
+            self.assertTrue(acquired)
+            other=CatalogMonitor(self.root,self.state,fetch=self.monitor.fetch,clock=lambda:self.now)
+            self.assertEqual(other.collect(force=True)['state'],'busy')
+        self.assertEqual(self.calls,[])
+
+    def test_local_lock_excludes_a_separate_process(self):
+        script=('import json,sys; from alibaba_catalog_monitor import CatalogMonitor; '
+                'm=CatalogMonitor(sys.argv[1],sys.argv[2],fetch=lambda *a,**k: 1/0); '
+                'print(json.dumps(m.collect(force=True)))')
+        with self.monitor._locked() as acquired:
+            self.assertTrue(acquired)
+            child=subprocess.run([sys.executable,'-c',script,str(self.root),str(self.state)],
+                                 capture_output=True,text=True,encoding='utf-8',timeout=10)
+        self.assertEqual(child.returncode,0,child.stderr)
+        self.assertEqual(json.loads(child.stdout)['state'],'busy')
+        self.assertEqual(self.calls,[])
+
+    def test_process_interruption_keeps_snapshot_and_records_unconfirmed_attempt(self):
+        self.monitor.seed(self.snapshot);self.now+=timedelta(hours=6,minutes=1)
+        self.monitor.fetch=lambda *args,**kwargs: (_ for _ in ()).throw(SystemExit('simulated interruption'))
+        with self.assertRaises(SystemExit):self.monitor.collect()
+        interrupted=self.monitor.status()
+        self.assertEqual(interrupted['total'],2)
+        self.assertEqual(interrupted['last_success_at'],self.snapshot_time())
+        self.assertEqual(interrupted['audit'][-1]['outcome'],'started')
+        self.assertEqual(interrupted['unconfirmed_attempts'],1)
+        self.monitor.fetch=lambda *args,**kwargs:self.page(1,2,[
+            {'id':'101','status':'approved','display':'Y'},{'id':'102','status':'approved','display':'N'}])
+        recovered=self.monitor.collect()
+        self.assertEqual([row['outcome'] for row in recovered['audit']],['started','ready'])
+        self.assertEqual(recovered['unconfirmed_attempts'],1)
+
+    def test_client_initialization_failure_is_audited_and_preserves_snapshot(self):
+        self.monitor.seed(self.snapshot);self.now+=timedelta(hours=6,minutes=1)
+        self.monitor.fetch=None
+        with patch('alibaba_catalog_monitor.adapter.ExistingClient',side_effect=RuntimeError('private detail')):
+            result=self.monitor.collect()
+        self.assertEqual(result['state'],'error');self.assertEqual(result['total'],2)
+        self.assertEqual(result['last_success_at'],self.snapshot_time())
+        self.assertEqual(result['audit'][-1]['outcome'],'error')
+        self.assertEqual(result['audit'][-1]['error_code'],'READ_FAILED')
+        self.assertNotIn('private detail',json.dumps(result['audit']))
+
+    def test_audit_is_bounded_and_does_not_expose_unexpected_fields(self):
+        self.monitor.seed(self.snapshot)
+        previous=self.monitor._read()
+        previous['audit']=[{'started_at':self.now.isoformat(),'finished_at':self.now.isoformat(),
+                            'outcome':'ready','mode':'due','pages_attempted':1,'records_seen':2,
+                            'expected_total':2,'unexpected_secret':'must-not-be-returned'} for _ in range(70)]
+        self.monitor._write(previous)
+        self.pages={1:self.page(1,2,[{'id':'101','status':'approved','display':'Y'},
+                                     {'id':'102','status':'approved','display':'N'}])}
+        result=self.monitor.collect(force=True)
+        self.assertEqual(len(result['audit']),64)
+        self.assertNotIn('unexpected_secret',json.dumps(result['audit']))
+        self.assertEqual(result['audit'][-1]['mode'],'forced')
+
+    def test_status_cli_never_collects_or_changes_the_snapshot(self):
+        state=self.root/'08_工具链/08_经营工作台/.local'
+        monitor=CatalogMonitor(self.root,state,fetch=self.monitor.fetch,clock=lambda:self.now)
+        monitor.seed(self.snapshot);before=monitor.path.read_bytes();out=io.StringIO()
+        with patch.object(CatalogMonitor,'collect',side_effect=AssertionError('must not collect')),redirect_stdout(out):
+            code=main(['--root',str(self.root),'--status'])
+        self.assertEqual(code,0);self.assertEqual(json.loads(out.getvalue())['total'],2)
+        self.assertEqual(monitor.path.read_bytes(),before);self.assertEqual(self.calls,[])
 
     def snapshot_time(self): return '2026-11-10T12:00:00+00:00'
 

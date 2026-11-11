@@ -19,6 +19,8 @@ import tempfile
 from connectors.alibaba import adapter
 
 INTERVAL = timedelta(hours=6)
+PRODUCT_PAGE_SIZE = 30  # Official alibaba.icbu.product.list limit.
+AUDIT_LIMIT = 64
 CHANNEL = '02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
 
 
@@ -40,6 +42,38 @@ def compact(row, id_key='id'):
         raise ValueError('INVALID_PRODUCT_ID')
     return {'id': identity, 'status': row.get('status') if isinstance(row.get('status'), str) else None,
             'display': row.get('display') if isinstance(row.get('display'), str) else None}
+
+
+def audit_entries(value):
+    """Bound and project attempt metadata; never return arbitrary cached fields."""
+    if not isinstance(value, list): return []
+    result = []
+    for item in value[-AUDIT_LIMIT:]:
+        if (not isinstance(item, dict) or item.get('outcome') not in ('started', 'ready', 'error')
+                or item.get('mode') not in ('due', 'forced')
+                or not parsed_time(item.get('started_at'))
+                or (item.get('outcome') != 'started' and not parsed_time(item.get('finished_at')))
+                or (item.get('outcome') == 'started' and item.get('finished_at') is not None)):
+            continue
+        counts = {key: item.get(key) for key in ('pages_attempted', 'records_seen', 'expected_total')}
+        if any(value is not None and (type(value) is not int or value < 0) for value in counts.values()):
+            continue
+        entry = {key: item.get(key) for key in ('started_at', 'finished_at', 'outcome', 'mode')}
+        entry.update(counts)
+        code = item.get('error_code')
+        if item['outcome'] == 'error' and isinstance(code, str) and re.fullmatch(r'[A-Z_]{1,80}', code):
+            entry['error_code'] = code
+        result.append(entry)
+    return result
+
+
+def append_audit(previous, *, started, finished, outcome, forced, page, rows, total, code=None):
+    entries = audit_entries(previous.get('audit'))
+    entry = {'started_at': started, 'finished_at': finished, 'outcome': outcome,
+             'mode': 'forced' if forced else 'due', 'pages_attempted': min(page, 100),
+             'records_seen': len(rows), 'expected_total': total}
+    if code: entry['error_code'] = code
+    return (entries + [entry])[-AUDIT_LIMIT:]
 
 
 class CatalogMonitor:
@@ -129,11 +163,17 @@ class CatalogMonitor:
                 return self.status()
             started = now.isoformat(); rows = []; ids = set(); total = None; page = 1
             old = {r['id']: r for r in previous.get('records', [])}
-            client = adapter.ExistingClient() if self.fetch is None else None
-            fetch = self.fetch or adapter.execute
             try:
+                # A durable start entry survives an interrupted process. It
+                # does not advance the retry clock or replace the last success.
+                self._write({**previous, 'version': 1, 'state': previous.get('state', 'not_loaded'),
+                             'records': previous.get('records', []),
+                             'audit': append_audit(previous, started=started, finished=None,
+                                 outcome='started', forced=force, page=0, rows=[], total=None)})
+                client = adapter.ExistingClient() if self.fetch is None else None
+                fetch = self.fetch or adapter.execute
                 while page <= 100:
-                    response = fetch('products', client=client, page=page, page_size=50)
+                    response = fetch('products', client=client, page=page, page_size=PRODUCT_PAGE_SIZE)
                     if not isinstance(response, dict) or response.get('ok') is not True:
                         code = ((response or {}).get('error') or {}).get('code') if isinstance(response, dict) else None
                         raise ValueError(code if isinstance(code, str) and re.fullmatch(r'[A-Z_]{1,80}', code) else 'READ_FAILED')
@@ -165,24 +205,35 @@ class CatalogMonitor:
                     'not_seen': sorted(old.keys() - current.keys()),
                     'status_or_display': [{'id': key, 'before': old[key], 'after': current[key]}
                                           for key in sorted(current.keys() & old.keys()) if current[key] != old[key]]}
+                finished = self.clock().isoformat()
                 self._write({'version': 1, 'state': 'ready', 'last_attempt_at': started,
-                             'last_success_at': self.clock().isoformat(), 'pages': page,
-                             'records': rows, 'changes': changes, 'error': None})
+                             'last_success_at': finished, 'pages': page, 'records': rows,
+                             'changes': changes, 'error': None,
+                             'audit': append_audit(previous, started=started, finished=finished,
+                                 outcome='ready', forced=force, page=page, rows=rows, total=total)})
             except Exception as error:
                 code = str(error) if isinstance(error, ValueError) and re.fullmatch(r'[A-Z_]{1,80}', str(error)) else 'READ_FAILED'
+                finished = self.clock().isoformat()
                 self._write({**previous, 'version': 1, 'records': previous.get('records', []),
-                             'state': 'error', 'last_attempt_at': started, 'error': {'code': code}})
+                             'state': 'error', 'last_attempt_at': started, 'error': {'code': code},
+                             'audit': append_audit(previous, started=started, finished=finished,
+                                 outcome='error', forced=force, page=page, rows=rows, total=total, code=code)})
             return self.status()
 
     def status(self):
         try: value = self._read()
         except (OSError, ValueError, TypeError): return {'state': 'error', 'error': {'code': 'INVALID_CACHE'}, 'stale': True}
-        if not value: return {'state': 'not_loaded', 'stale': True, 'last_success_at': None}
+        if not value: return {'state': 'not_loaded', 'stale': True, 'last_success_at': None,
+                              'audit': [], 'last_failure': None, 'unconfirmed_attempts': 0}
+        audit = audit_entries(value.get('audit'))
+        last_failure = next((item for item in reversed(audit) if item['outcome'] == 'error'), None)
+        unconfirmed = sum(item['outcome'] == 'started' for item in audit)
         records = value['records']; at = parsed_time(value.get('last_success_at'))
         if at is None:
             return {'state':value.get('state'), 'error':value.get('error'), 'stale':True,
                     'last_attempt_at':value.get('last_attempt_at'), 'last_success_at':None,
-                    'total':None, 'comparison':None, 'changes':None}
+                    'total':None, 'comparison':None, 'changes':None, 'audit':audit,
+                    'last_failure':last_failure, 'unconfirmed_attempts':unconfirmed}
         stale = at is None or not timedelta(0) <= self.clock() - at <= INTERVAL + timedelta(hours=1)
         latest = {r['id']: r for r in records}; comparison = None; observed = {}
         try:
@@ -217,21 +268,24 @@ class CatalogMonitor:
                 'review_required':sum(row.get('status')=='tbd' for row in records),
                 'unknown_state':sum(row.get('status') not in ('approved','tbd','new','modified','sketch') or row.get('display') not in ('Y','N') for row in records),
                 'review_items':review_items,
-                'changes':value.get('changes'), 'comparison':comparison,
+                'changes':value.get('changes'), 'comparison':comparison, 'audit':audit,
+                'last_failure':last_failure, 'unconfirmed_attempts':unconfirmed,
                 'scope':'官方商品列表只读快照；未出现不等于下架，本机离线时计划任务不会运行。'}
 
 
-def main():
+def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2])
     parser.add_argument('--seed',type=Path)
     parser.add_argument('--force',action='store_true')
-    args=parser.parse_args()
+    parser.add_argument('--status',action='store_true',help='Read the existing snapshot and attempt audit without collecting')
+    args=parser.parse_args(argv)
+    if args.status and (args.seed or args.force): parser.error('--status cannot be combined with --seed or --force')
     monitor=CatalogMonitor(args.root,args.root/'08_工具链/08_经营工作台/.local')
-    result=monitor.seed(args.seed) if args.seed else monitor.collect(force=args.force)
+    result=monitor.status() if args.status else monitor.seed(args.seed) if args.seed else monitor.collect(force=args.force)
     # No product details, signed URLs or credentials go into scheduler output.
     if sys.stdout is not None:
-        print(json.dumps({key:result.get(key) for key in ('state','last_attempt_at','last_success_at','total','stale','error')},ensure_ascii=False))
+        print(json.dumps({key:result.get(key) for key in ('state','last_attempt_at','last_success_at','pages','total','stale','error','audit','last_failure','unconfirmed_attempts')},ensure_ascii=False))
     return 0 if result.get('state') in ('ready','already_present','busy') else 1
 
 
