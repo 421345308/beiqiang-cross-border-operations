@@ -6,6 +6,50 @@ from datetime import datetime, timezone
 
 _PRODUCT_REFERENCE = re.compile(r'(?<![A-Za-z0-9-])(?:BQ|HR)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?![A-Za-z0-9-])', re.I)
 
+def current_goals_projection(text):
+    """Select current global direction without treating historical plans as instructions."""
+    lines = text.splitlines()
+    headings = [(i, line.strip()) for i, line in enumerate(lines) if line.startswith('## ')]
+    if not headings:
+        return '', False
+    intro = [line.strip() for line in lines[:headings[0][0]] if line.strip()]
+    parts = ['# 当前状态']
+    directions = [line for line in intro if re.match(r'^\*\*\d{4}-\d{2}-\d{2}\s+新方向：\*\*', line)]
+    positions = [line for line in intro if re.fullmatch(r'\*\*当前位置：.+\*\*', line)]
+    # Unlabelled preface prose is not assumed to be a current instruction.
+    # Ambiguous or historical markers require a fresh read of the source.
+    ambiguous = any(re.match(r'^(?:\*\*)?(?:历史|旧决定|已被取代)', line) or
+                    ('**当前位置：' in line and line not in positions) or
+                    ('新方向：**' in line and line not in directions) for line in intro)
+    complete = len(directions) == 1 and len(positions) == 1 and not ambiguous
+    if len(directions) == 1:
+        parts.append(directions[0])
+    if len(positions) == 1:
+        parts.append(positions[0])
+    history_marker = re.compile(r'^\s*(?:[-*]\s+)?(?:\*\*)?(?:历史决定|历史阶段|历史记录|旧执行摘要|已被取代|superseded)', re.I)
+    for title in ('## 长期要做成什么', '## 中期要形成的经营能力', '## 怎样选择下一项工作'):
+        matches = [index for index, heading in headings if heading == title]
+        if len(matches) != 1:
+            complete = False
+            continue
+        start = matches[0]
+        end = next((index for index, _ in headings if index > start), len(lines))
+        block = lines[start:end]
+        if any(history_marker.match(line) for line in block):
+            complete = False
+            filtered, paragraph = [], []
+            for line in block + ['']:
+                if line.strip():
+                    paragraph.append(line)
+                else:
+                    if not any(history_marker.match(item) for item in paragraph):
+                        filtered.extend(paragraph)
+                        filtered.append('')
+                    paragraph = []
+            block = filtered
+        parts.append('\n'.join(block).strip())
+    return '\n\n'.join(part for part in parts if part), complete
+
 def _commercial_product_refs(business, commercial):
     """Resolve explicit codes against product IDs and recorded current models, not aliases."""
     records=(commercial or {}).get('records') or []
@@ -51,11 +95,19 @@ def build_context(desk):
             continue
         text = path.read_text(encoding='utf-8-sig')
         raw_hash = hashlib.sha256(text.encode('utf8')).hexdigest()
-        projection = ('完整当前状态；执行摘要可能滞后，对象原档仍是具体状态依据'
-                      if role == 'current-goals-and-priorities' else None)
+        content = text
+        projection = None
+        complete = True
+        if role == 'current-goals-and-priorities':
+            content, complete = current_goals_projection(text)
+            projection = ('当前方向、长期目标、中期能力和现行选择规则的节选；历史阶段及业务执行记录按需读取原文，'
+                          '具体进度以业务原档为准。')
+            if not complete:
+                projection += ' 当前状态文档结构不完整或有歧义，请读取原文核对。'
         records.append({'path': relative, 'role': role, 'available': True,
-                        'content': text, 'source_sha256': raw_hash, 'projection': projection,
-                        'sha256': hashlib.sha256(text.encode('utf8')).hexdigest(),
+                        'content': content, 'source_sha256': raw_hash, 'projection': projection,
+                        'projection_complete': complete,
+                        'sha256': hashlib.sha256(content.encode('utf8')).hexdigest(),
                         'file_modified_at': datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat()})
     sources = desk.sources()
     current = []

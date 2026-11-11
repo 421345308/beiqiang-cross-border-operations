@@ -687,8 +687,11 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','workstream-link']:
                 return self.send_json(app.desktop_snapshot.link_workstream(body))
             if parts==['api','desk','job','adjust']:
-                if set(body)-{'id','expected_version','priority','next_action'}:raise ValueError('任务调整字段无效')
-                return self.send_json(app.agent_jobs.adjust(body.get('id'),expected_version=body.get('expected_version'),priority=body.get('priority'),next_action=body.get('next_action')))
+                intent_fields=('current_goal','effective_decisions','intent_source','intent_reason')
+                if set(body)-{'id','expected_version','priority','next_action',*intent_fields}:raise ValueError('任务调整字段无效')
+                if any(key in body and body[key] is None for key in intent_fields):raise ValueError('意图调整字段无效')
+                intent={key:body[key] for key in intent_fields if key in body}
+                return self.send_json(app.agent_jobs.adjust(body.get('id'),expected_version=body.get('expected_version'),priority=body.get('priority'),next_action=body.get('next_action'),**intent))
             if parts==['api','desk','job','priority-next']:
                 if set(body)!={'group_id','expected_job_id','expected_version'}:raise ValueError('优先执行字段无效')
                 if not isinstance(body['group_id'],str) or not body['group_id'] or not isinstance(body['expected_job_id'],str) or not body['expected_job_id'] or type(body['expected_version']) is not int or body['expected_version']<0:raise ValueError('请使用已预览的任务编号和版本')

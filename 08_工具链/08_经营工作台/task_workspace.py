@@ -35,6 +35,26 @@ class TaskWorkspace:
                 'object_id', 'title', 'instruction', 'status', 'summary', 'error',
                 'updated_at', 'artifact_id', 'session_id', 'attempt', 'task_kind', 'mode', 'batch_id',
                 'parent_job_id', 'depends_on', 'version', 'priority', 'next_action', 'conversations')}
+            intent = job.get('intent')
+            if 'intent' not in job:
+                has_initial = isinstance(job.get('initial_instruction'), str)
+                goal = job['initial_instruction'] if has_initial else job.get('instruction')
+                row.update(current_goal=goal, effective_decisions=[], decisions_recorded=False,
+                           intent_version=0, intent_source='initial_instruction' if has_initial else 'legacy_instruction_fallback',
+                           intent_state='legacy')
+            elif (isinstance(intent, dict) and isinstance(intent.get('goal'), str)
+                  and type(intent.get('version')) is int and intent['version'] >= 0
+                  and type(intent.get('decisions_recorded')) is bool
+                  and isinstance(intent.get('source'), str)
+                  and isinstance(intent.get('decisions'), list)
+                  and all(isinstance(item, dict) and isinstance(item.get('text'), str)
+                          and isinstance(item.get('source'), str) for item in intent['decisions'])):
+                row.update(current_goal=intent['goal'], effective_decisions=intent['decisions'],
+                           decisions_recorded=intent['decisions_recorded'], intent_version=intent['version'],
+                           intent_source=intent['source'], intent_state='recorded')
+            else:
+                row.update(current_goal=None, effective_decisions=None, decisions_recorded=None,
+                           intent_version=None, intent_source=None, intent_state='unavailable')
             row.update(id='local:' + job['id'], job_id=job['id'], origin='local', version=job.get('version', 0))
             if job.get('task_kind') == 'group':
                 row['graph'] = self.app.agent_jobs.get_graph(job['id'])

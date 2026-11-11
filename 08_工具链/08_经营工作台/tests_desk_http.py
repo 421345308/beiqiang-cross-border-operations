@@ -36,6 +36,57 @@ class DeskHTTPTests(unittest.TestCase):
                 self.assertEqual(self.request(path,payload)[0],409)
             self.assertEqual(self.app.agent_jobs.list_jobs(),[])
 
+    def test_task_intent_adjustment_uses_existing_versioned_local_entry(self):
+        job=self.app.agent_jobs.start('product:BQ009','旧合成目标',defer=True)
+        body={'id':job['id'],'expected_version':job['version'],'current_goal':'新合成目标',
+              'effective_decisions':[{'text':'保留已验收能力','source':'合成原决定'}],
+              'intent_source':'合成负责人要求','intent_reason':'目标已更新'}
+        try: denied=self.request('/api/desk/job/adjust',body,token=False)[0]
+        except (ConnectionAbortedError,ConnectionResetError):denied=0
+        self.assertIn(denied,(0,403))
+        self.assertEqual(self.app.agent_jobs.get_job(job['id'])['version'],job['version'])
+        status,updated=self.request('/api/desk/job/adjust',body)
+        self.assertEqual(status,200)
+        self.assertEqual(updated['intent']['goal'],'新合成目标')
+        self.assertEqual(updated['intent']['decisions'],body['effective_decisions'])
+        self.assertEqual(self.request('/api/desk/job/adjust',body)[0],409)
+        clear={'id':job['id'],'expected_version':updated['version'],'effective_decisions':[],
+               'intent_source':'合成负责人要求','intent_reason':'明确无任务专属决定'}
+        status,cleared=self.request('/api/desk/job/adjust',clear)
+        self.assertEqual(status,200)
+        self.assertEqual(cleared['intent']['decisions'],[])
+        self.assertTrue(cleared['intent']['decisions_recorded'])
+        status,context=self.request('/api/desk/task-context?'+urlencode({'id':job['id']}))
+        self.assertEqual(status,200)
+        self.assertEqual(context['goal'],'新合成目标')
+        self.assertEqual(len(self.processes),0)
+
+    def test_task_intent_adjustment_rejects_invalid_input_without_writing(self):
+        job=self.app.agent_jobs.start('product:BQ009','合成目标',defer=True)
+        base={'id':job['id'],'expected_version':job['version'],
+              'intent_source':'合成来源','intent_reason':'合成理由'}
+        invalid=[
+            {'current_goal':None,'priority':'high'}, {'current_goal':'  ','priority':'high'},
+            {'current_goal':'x'*4001}, {'effective_decisions':None,'priority':'high'},
+            {'effective_decisions':'not a list'}, {'effective_decisions':[{'text':'x'}]},
+            {'effective_decisions':[{'text':'x','source':'s','extra':'field'}]},
+            {'effective_decisions':[{'text':'x','source':'s'}]*21},
+            {'effective_decisions':[{'text':'x'*500,'source':'s'*500}]*7},
+            {'current_goal':'x','intent_reason':'  '},
+        ]
+        for extra in invalid:
+            with self.subTest(extra=str(extra)[:100]):
+                self.assertEqual(self.request('/api/desk/job/adjust',{**base,**extra})[0],400)
+        for key in ('intent_source','intent_reason'):
+            payload={**base,'current_goal':'x'};payload.pop(key)
+            with self.subTest(omitted=key):self.assertEqual(self.request('/api/desk/job/adjust',payload)[0],400)
+        self.assertEqual(self.request('/api/desk/job/adjust',{**base,'priority':'high'})[0],400)
+        for task_id in ('cloud:fake','reference:fake'):
+            with self.subTest(id=task_id):
+                self.assertEqual(self.request('/api/desk/job/adjust',{**base,'id':task_id,'current_goal':'x'})[0],400)
+        self.assertEqual(self.app.agent_jobs.get_job(job['id'])['version'],job['version'])
+        self.assertEqual(len(self.processes),0)
+
     def test_direct_dispatch_requires_version_and_propagates_conflicts(self):
         from workspaces import WorkspaceConflict
         with patch.object(self.app.agent_jobs,'get_job',return_value={'id':'p1','mode':'draft'}) as get, \

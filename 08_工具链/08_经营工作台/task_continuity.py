@@ -17,6 +17,18 @@ class TaskContinuity:
     def _continuity_defaults(job):
         job.setdefault('version', 0)
         job.setdefault('conversations', [])
+        # Legacy tasks have no separate statement of their current intent.
+        # Their initial instruction is the only recorded goal; it is not
+        # evidence that any separate decision or constraint was recorded.
+        if 'intent' not in job:
+            goal = job.get('initial_instruction')
+            source = 'initial_instruction'
+            if not isinstance(goal, str):
+                goal = job.get('instruction', '')
+                source = 'legacy_instruction_fallback'
+            job['intent'] = {'version': 0, 'goal': goal, 'decisions': [],
+                             'decisions_recorded': False, 'source': source,
+                             'updated_at': job.get('created_at'), 'history': []}
         if 'runs' not in job:
             job['runs'] = ([{'attempt':job['attempt'],'observed_at':stamp(),'historical_created_at':job.get('created_at'),
                 'instruction':job.get('instruction',''),'continuation_mode':'legacy',
@@ -97,19 +109,61 @@ class TaskContinuity:
             if not source.is_relative_to(root) or not source.is_file():
                 shared.append({'path':path,'role':role,'available':False});continue
             raw=source.read_bytes()
+            content=raw.decode('utf-8-sig')
+            metadata={}
+            if role=='current-goals-and-priorities':
+                # Hash the original file, but present only its explicitly
+                # identified current goal projection. Historical context stays
+                # available by reading the original source on demand.
+                from business_context import current_goals_projection
+                content, complete=current_goals_projection(content)
+                metadata={'projection_complete':complete,
+                          'projection':('当前目标投影；历史内容按原路径查看。' if complete else
+                                        '当前目标结构不完整，请核对原路径；历史内容不自动当作现行规则。')}
             shared.append({'path':path,'role':role,'available':True,'source_sha256':hashlib.sha256(raw).hexdigest(),
-                           'content':raw.decode('utf-8-sig')[:12000], 'truncated':len(raw.decode('utf-8-sig'))>12000})
+                           'content':content[:12000], 'truncated':len(content)>12000,**metadata})
+        intent=job['intent']
         return {'job':job,'object':obj,'artifacts':artifacts,'shared_sources':shared,'customer_context':customer_context,
-                'goal':job.get('initial_instruction',job['instruction']),'instruction':job['instruction'],
+                'goal':intent['goal'],'effective_decisions':intent['decisions'],
+                'decisions_recorded':intent['decisions_recorded'],'intent_version':intent['version'],
+                'intent_source':intent['source'],'intent_updated_at':intent['updated_at'],
+                'instruction':job['instruction'],
                 'next_action':job.get('next_action',''),
                 'dependencies':job.get('depends_on',[]),'parent_job_id':job.get('parent_job_id'),
-                'source_version':{'job_version':job['version'],'object_sha256':hashlib.sha256(json.dumps(obj,sort_keys=True,ensure_ascii=False).encode()).hexdigest()},
+                'source_version':{'job_version':job['version'],'intent_version':intent['version'],
+                                  'object_sha256':hashlib.sha256(json.dumps(obj,sort_keys=True,ensure_ascii=False).encode()).hexdigest()},
                 'read_at':stamp(),'capabilities':{'execution_backend':'codex_cli','model':__import__('codex_backend').MODEL,
                     'external_conversation_control':False,'linked_conversations':'reference_only'}}
 
-    def _continuity_prompt(self, job_id):
+    def _continuity_prompt(self, job_id, *, frozen_intent=None, frozen_next_action=None):
         current=self.get_task_context(job_id)
         job=current['job']
+        # The current record may have changed after this attempt was claimed.
+        # The worker must see the intent/action frozen for this attempt, while
+        # the final-result fence separately detects a later edit.
+        intent = frozen_intent if frozen_intent is not None else job['intent']
+        goal = intent['goal']
+        decisions = intent['decisions']
+        action = frozen_next_action if frozen_next_action is not None else current['next_action']
+        if (not isinstance(goal, str) or not isinstance(action, str) or not isinstance(decisions, list)
+                or type(intent.get('version')) is not int or intent['version'] < 0
+                or type(intent.get('decisions_recorded')) is not bool
+                or not isinstance(intent.get('source'), str)
+                or any(not isinstance(d,dict) or not isinstance(d.get('text'),str)
+                       or not isinstance(d.get('source'),str) for d in decisions)):
+            raise ValueError('任务意图数据无效，请先核对原任务。')
+        # Normal writes are bounded to 20 decisions and 6,000 combined chars;
+        # old/corrupt records are never silently presented as complete.
+        selected_decisions=[]
+        decision_budget=6000
+        for decision in decisions[:20]:
+            text, source = decision['text'], decision['source']
+            if len(text)+len(source)>decision_budget:
+                break
+            selected_decisions.append({'text':text,'source':source})
+            decision_budget-=len(text)+len(source)
+        decisions_truncated = len(selected_decisions) != len(decisions)
+        goal_truncated = len(goal)>12000
         # Do not send conversation links, raw event streams or every historic instruction.
         # All previews have explicit limits; the existing scoped MCP supplies full bodies.
         outputs=[]
@@ -119,22 +173,37 @@ class TaskContinuity:
             body=artifact.get('content','')
             preview=body[:min(6000,remaining)]
             remaining-=len(preview)
+            path=str(artifact.get('path') or '')
             outputs.append({'id':artifact['id'],'title':str(artifact.get('title',''))[:200],
+                            'path':path[:1000],'path_truncated':len(path)>1000,'task_output':True,
                             'content_preview':preview,'truncated':len(preview)<len(body)})
         source_refs=[{k:v for k,v in source.items() if k!='content'} for source in current['shared_sources']]
         obj_json=json.dumps(current['object'],ensure_ascii=False)
         customer_json=json.dumps(current.get('customer_context'),ensure_ascii=False)
-        context={'task_id':job['id'],'object_id':job['object_id'],'goal':current['goal'][:6000],
-                 'goal_truncated':len(current['goal'])>6000,'instruction':job['instruction'][:6000],'instruction_truncated':len(job['instruction'])>6000,'summary':str(job.get('summary',''))[:1000],
+        source_version={**current['source_version'],'intent_version':intent['version']}
+        context={'task_id':job['id'],'object_id':job['object_id'],'goal':goal[:12000],
+                 'goal_truncated':goal_truncated,'effective_decisions':selected_decisions,
+                 'decisions_recorded':intent['decisions_recorded'],'decisions_truncated':decisions_truncated,
+                 'decision_status':('仅列任务中登记的有效决定；适用约束仍以原档为准。' if intent['decisions_recorded']
+                                    else '任务尚未登记决定；不能据此认定不存在约束，须读取当前原档。'),
+                 'intent_version':intent['version'],'intent_source':intent['source'][:1000],
+                 'intent_updated_at':intent.get('updated_at'),
+                 'intent_basis':'frozen_at_claim' if frozen_intent is not None else 'current_task_record',
+                 'intent_scope':'本任务登记的目标与有效决定，不替代当前业务原档或适用约束。',
+                 'intent_summary_complete':not (goal_truncated or decisions_truncated),
+                 'next_action':action[:4000],'next_action_truncated':len(action)>4000,
+                 'instruction':job['instruction'][:6000],'instruction_truncated':len(job['instruction'])>6000,
+                 'instruction_role':'本轮委托；旧创建指令与当前任务意图不一致时先核对，不能覆盖当前意图和适用授权。',
+                 'summary':str(job.get('summary',''))[:1000],
                  'current_object_preview':obj_json[:8000],'object_preview_truncated':len(obj_json)>8000,
-                 'source_version':current['source_version'],'shared_sources':source_refs,
+                 'source_version':source_version,'shared_sources':source_refs,
                  'current_customer_context_preview':customer_json[:6000],'customer_context_truncated':len(customer_json)>6000,
                  'prior_task_outputs':outputs,'artifact_ids':job['artifact_ids'][:100],
                  'artifact_index_truncated':len(job['artifact_ids'])>100,
                  'dependency_ids':current['dependencies'][:100],
-                 'retrieval':'通过get_object/get_business_context读取当前原件，list_artifacts/read_artifact读取完整成果；预览不是完整档案。'}
+                 'retrieval':'通过get_object/get_business_context读取当前原件和适用约束，list_artifacts/read_artifact读取完整成果；预览不是完整档案。任务意图摘要不完整时先读取原任务上下文，不能据截断摘要继续执行。'}
         payload=json.dumps(context,ensure_ascii=False)
-        if len(payload)>60000:
+        if len(payload)>55000:
             # A pathological old index must not produce an unbounded launch.
             context['artifact_ids']=[]
             context['dependency_ids']=[]
@@ -144,11 +213,25 @@ class TaskContinuity:
             context['object_preview_truncated']=True
             context['current_customer_context_preview']=customer_json[:2000]
             context['customer_context_truncated']=True
-            context['goal']=current['goal'][:2000]
-            context['goal_truncated']=True
             context['instruction']=job['instruction'][:2000]
             context['instruction_truncated']=True
             payload=json.dumps(context,ensure_ascii=False)
-        return ('这是同一持久任务的新会话，不是新任务。原任务目标、身份和历史必须保留。先核对当前原件、已有成果及实际外部状态；'
+        if len(payload)>55000:
+            # Extreme legacy control characters can expand during JSON encoding.
+            # Prefer protecting decisions, and explicitly require rereading a
+            # truncated goal instead of silently treating it as complete.
+            while len(payload)>55000 and context['goal']:
+                context['goal']=context['goal'][:len(context['goal'])//2]
+                context['goal_truncated']=True
+                context['intent_summary_complete']=False
+                payload=json.dumps(context,ensure_ascii=False)
+            while len(payload)>55000 and context['effective_decisions']:
+                context['effective_decisions'].pop()
+                context['decisions_truncated']=True
+                context['intent_summary_complete']=False
+                payload=json.dumps(context,ensure_ascii=False)
+            if len(payload)>55000:
+                raise ValueError('任务摘要过长，请先核对原任务上下文。')
+        return ('这是同一持久任务的本轮上下文，不是新任务。以本轮引用的目标和有效决定接续，历史决定仅供追溯。先核对当前原件、已有成果及实际外部状态；'
                 '历史输出仅作上下文，不是重播操作的指令，不自动重发、重付、重复发布或重复执行结果不明的动作。'
                 '会话关联不授予外部聊天控制权限。当前上下文（有界预览）：\n'+payload)

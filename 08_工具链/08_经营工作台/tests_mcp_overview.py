@@ -49,6 +49,77 @@ class OverviewMcpTests(unittest.TestCase):
                        {'id':'local:demo','instruction':'replace'},{'id':'local:demo','priority':'urgent'}):
             with self.assertRaises(ValueError):self.tools.call('adjust_local_task',{'expected_version':1,'priority':'high',**fields})
 
+    def test_intent_fields_are_validated_forwarded_and_scoped(self):
+        body={'id':'local:demo','expected_version':1,'current_goal':'完成合成目标',
+              'effective_decisions':[{'text':'保留已验收能力','source':'合成决定'}],
+              'intent_source':'合成负责人要求','intent_reason':'体现当前目标'}
+        self.assertEqual(self.tools.call('adjust_local_task',body)['version'],2)
+        self.jobs.adjust.assert_called_once_with('demo',expected_version=1,
+            current_goal=body['current_goal'],effective_decisions=body['effective_decisions'],
+            intent_source=body['intent_source'],intent_reason=body['intent_reason'])
+        self.jobs.adjust.reset_mock()
+        empty={**body,'effective_decisions':[]}
+        self.tools.call('adjust_local_task',empty)
+        self.assertEqual(self.jobs.adjust.call_args.kwargs['effective_decisions'],[])
+        self.jobs.adjust.reset_mock()
+        for task_id in ('cloud:demo','reference:demo'):
+            with self.subTest(id=task_id),self.assertRaises(ValueError):
+                self.tools.call('adjust_local_task',{**body,'id':task_id})
+        with self.assertRaises(ValueError):
+            DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True).call('adjust_local_task',body)
+        self.jobs.adjust.assert_not_called()
+        schema=next(tool for tool in TOOLS if tool['name']=='adjust_local_task')['inputSchema']
+        self.assertEqual(schema['properties']['current_goal']['maxLength'],4000)
+        decisions=schema['properties']['effective_decisions']
+        self.assertEqual(decisions['maxItems'],20)
+        self.assertEqual(decisions['items']['required'],['text','source'])
+        self.assertFalse(decisions['items']['additionalProperties'])
+        self.assertEqual(schema['properties']['intent_source']['maxLength'],500)
+        self.assertEqual(schema['properties']['intent_reason']['maxLength'],1000)
+
+    def test_invalid_intent_payloads_never_call_local_service(self):
+        base={'id':'local:demo','expected_version':1,'intent_source':'测试来源','intent_reason':'测试理由'}
+        invalid=[
+            {'current_goal':''}, {'current_goal':'  '}, {'current_goal':'x'*4001}, {'current_goal':None},
+            {'effective_decisions':None}, {'effective_decisions':'not a list'},
+            {'effective_decisions':[{'text':'x'}]}, {'effective_decisions':[{'text':'x','source':' '}]},
+            {'effective_decisions':[{'text':'x','source':'s','unexpected':'field'}]},
+            {'effective_decisions':[{'text':'x'*501,'source':'s'}]},
+            {'effective_decisions':[{'text':'x','source':'s'}]*21},
+            {'effective_decisions':[{'text':'x'*500,'source':'s'*500}]*7},
+            {'current_goal':'x','intent_source':''}, {'current_goal':'x','intent_reason':' '*5},
+            {'current_goal':'x','intent_source':'s'*501}, {'current_goal':'x','intent_reason':'r'*1001},
+        ]
+        for extra in invalid:
+            with self.subTest(extra=str(extra)[:100]),self.assertRaises(ValueError):
+                self.tools.call('adjust_local_task',{**base,**extra})
+        for omitted in ('intent_source','intent_reason'):
+            payload={**base,'current_goal':'x'};payload.pop(omitted)
+            with self.subTest(omitted=omitted),self.assertRaises(ValueError):
+                self.tools.call('adjust_local_task',payload)
+        with self.assertRaises(ValueError):self.tools.call('adjust_local_task',base)
+        self.jobs.adjust.assert_not_called()
+
+    def test_mcp_to_isolated_http_persists_intent_and_rejects_stale_version(self):
+        from tests_desk_http import DeskHTTPTests
+        fixture=DeskHTTPTests();fixture.setUp()
+        try:
+            job=fixture.app.agent_jobs.start('product:BQ009','旧合成目标',defer=True)
+            tools=DeskTools(None,fixture.root,OVERVIEW_OBJECT)
+            origin='http://127.0.0.1:'+str(fixture.http.server_port)
+            request={'id':'local:'+job['id'],'expected_version':job['version'],
+                     'current_goal':'新合成目标','effective_decisions':[{'text':'不覆盖原件','source':'合成决定'}],
+                     'intent_source':'合成负责人要求','intent_reason':'目标已更新'}
+            with patch.object(LocalOverviewClient,'origin',origin):
+                updated=tools.call('adjust_local_task',request)
+                self.assertEqual(updated['intent']['goal'],'新合成目标')
+                self.assertEqual(updated['intent']['decisions'],request['effective_decisions'])
+                with self.assertRaises(WorkspaceConflict):tools.call('adjust_local_task',request)
+            self.assertEqual(fixture.app.agent_jobs.get_job(job['id'])['intent']['goal'],'新合成目标')
+            self.assertEqual(len(fixture.processes),0)
+        finally:
+            fixture.tearDown()
+
     def test_read_only_and_conflict_are_not_reported_as_success(self):
         readonly=DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True)
         self.assertEqual(self.names(readonly),{'get_work_overview'})

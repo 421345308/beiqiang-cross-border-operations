@@ -27,6 +27,39 @@ class WorkOverviewError(ValueError):
         self.code = code
 
 
+def _validate_intent_adjustment(fields):
+    """Reject malformed intent updates before contacting the local service."""
+    has_intent = 'current_goal' in fields or 'effective_decisions' in fields
+    has_provenance = 'intent_source' in fields or 'intent_reason' in fields
+    if not has_intent:
+        if has_provenance:
+            raise WorkOverviewError('invalid_input', '意图来源和修改理由须随目标或有效决定一同提交。')
+        return
+    for key, limit in (('intent_source', 500), ('intent_reason', 1000)):
+        value = fields.get(key)
+        if not isinstance(value, str) or not value.strip() or len(value) > limit:
+            raise WorkOverviewError('invalid_input', '请填写有效的意图来源和修改理由。')
+    if 'current_goal' in fields:
+        goal = fields['current_goal']
+        if not isinstance(goal, str) or not goal.strip() or len(goal) > 4000:
+            raise WorkOverviewError('invalid_input', '当前目标必须为不超过4000字的非空文本。')
+    if 'effective_decisions' in fields:
+        decisions = fields['effective_decisions']
+        if not isinstance(decisions, list) or len(decisions) > 20:
+            raise WorkOverviewError('invalid_input', '有效决定必须为最多20项的列表。')
+        total = 0
+        for decision in decisions:
+            if not isinstance(decision, dict) or set(decision) != {'text', 'source'}:
+                raise WorkOverviewError('invalid_input', '每项有效决定必须明确文字和来源。')
+            for key in ('text', 'source'):
+                value = decision[key]
+                if not isinstance(value, str) or not value.strip() or len(value) > 500:
+                    raise WorkOverviewError('invalid_input', '决定文字和来源须各为最多500字的非空文本。')
+                total += len(value)
+        if total > 6000:
+            raise WorkOverviewError('invalid_input', '有效决定文字和来源合计不能超过6000字。')
+
+
 class LocalOverviewClient:
     """Use the existing local service; never start it or retry a mutation."""
     origin = 'http://127.0.0.1:8766'
@@ -274,16 +307,18 @@ class DeskTools:
                 return workspace.overview(filters=filters) if workspace else client.overview(filters)
             if self.read_only:
                 raise WorkOverviewError('read_only', '当前连接只读，不能调整任务。')
-            if set(args) - {'id','expected_version','priority','next_action'}:
+            if set(args) - {'id','expected_version','priority','next_action','current_goal','effective_decisions','intent_source','intent_reason'}:
                 raise WorkOverviewError('invalid_input', '任务调整参数无效。')
             task_id, version = args.get('id'), args.get('expected_version')
             if (not isinstance(task_id, str) or not task_id.startswith('local:') or not task_id[6:]
                     or type(version) is not int or version < 0):
                 raise WorkOverviewError('unsupported_task', '仅支持带当前版本的本机任务；参考事项和云端任务不可写。')
-            fields = {key: args[key] for key in ('priority','next_action') if key in args}
-            if (not fields or ('priority' in fields and fields['priority'] not in ('high','normal','low'))
+            fields = {key: args[key] for key in ('priority','next_action','current_goal','effective_decisions','intent_source','intent_reason') if key in args}
+            if (not any(key in fields for key in ('priority','next_action','current_goal','effective_decisions'))
+                    or ('priority' in fields and fields['priority'] not in ('high','normal','low'))
                     or ('next_action' in fields and (not isinstance(fields['next_action'], str) or len(fields['next_action']) > 4000))):
-                raise WorkOverviewError('invalid_input', '请提供有效的优先级或下一动作。')
+                raise WorkOverviewError('invalid_input', '请提供有效的任务调整。')
+            _validate_intent_adjustment(fields)
             jobs = getattr(app, 'agent_jobs', None)
             return (jobs.adjust(task_id[6:], expected_version=version, **fields) if jobs else
                     client.adjust(task_id[6:], expected_version=version, **fields))
@@ -493,12 +528,35 @@ TOOLS.extend(_customer_tools())
 
 TOOLS.extend([
     {'name':'get_work_overview',
-     'description':'读取工作总览、来源状态、参考事项及可写能力；仅限明确的 workspace:overview 绑定。来源失败不代表任务为空。',
+     'description':'读取工作总览、本机任务当前目标和已登记决定、来源状态、参考事项及可写能力；仅限明确的 workspace:overview 绑定。来源失败不代表任务为空。',
      'inputSchema':{'type':'object','properties':{'filters':{'type':'object','properties':{key:{'type':'string','maxLength':500} for key in ('business_line','object_id','executor','priority')},'additionalProperties':False}},'additionalProperties':False},
      'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
     {'name':'adjust_local_task',
-     'description':'用总览返回的 local: ID 和 expected_version 调整本机任务优先级或下一动作；优先级仅影响展示，不改变执行调度，不执行或重启任务。参考事项和云端任务不可写；冲突须重新读取合并，结果未确认须先核对。',
-     'inputSchema':{'type':'object','properties':{'id':{'type':'string','pattern':'^local:.+'},'expected_version':{'type':'integer','minimum':0},'priority':{'type':'string','enum':['high','normal','low']},'next_action':{'type':'string','maxLength':4000}},'required':['id','expected_version'],'additionalProperties':False},
+     'description':'用总览返回的 local: ID 和 expected_version 调整本机任务的优先级、下一动作或当前目标与有效决定。调整目标或决定须提供来源和修改理由；空决定列表表示明确无任务专属决定。优先级仅作用于符合条件的显式选择，运行中任务不被打断；不执行或重启任务。参考事项和云端任务不可写；冲突须重新读取合并，结果未确认须先核对。',
+     'inputSchema':{
+         'type':'object',
+         'properties':{
+             'id':{'type':'string','pattern':'^local:.+'},
+             'expected_version':{'type':'integer','minimum':0},
+             'priority':{'type':'string','enum':['high','normal','low']},
+             'next_action':{'type':'string','maxLength':4000},
+             'current_goal':{'type':'string','minLength':1,'maxLength':4000,'pattern':r'\S'},
+             'effective_decisions':{'type':'array','maxItems':20,
+                 'description':'任务专属有效决定；文字和来源合计不超过6000字。空数组表示明确无任务专属决定。',
+                 'items':{'type':'object','properties':{
+                     'text':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'},
+                     'source':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'}},
+                     'required':['text','source'],'additionalProperties':False}},
+             'intent_source':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'},
+             'intent_reason':{'type':'string','minLength':1,'maxLength':1000,'pattern':r'\S'}},
+         'required':['id','expected_version'],
+         'anyOf':[{'required':[key]} for key in ('priority','next_action','current_goal','effective_decisions')],
+         'allOf':[
+             {'if':{'anyOf':[{'required':['current_goal']},{'required':['effective_decisions']}]},
+              'then':{'required':['intent_source','intent_reason']}},
+             {'if':{'anyOf':[{'required':['intent_source']},{'required':['intent_reason']}]},
+              'then':{'anyOf':[{'required':['current_goal']},{'required':['effective_decisions']}]}}],
+         'additionalProperties':False},
      'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
 ])
 

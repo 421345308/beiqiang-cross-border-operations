@@ -410,19 +410,28 @@
       }
       const task=tasks.find(t=>String(t.id)===id);host.append(button('返回任务列表',()=>{location.hash='/tasks';},'quiet'));
       if(!task)throw Error('未找到任务，或其来源暂不可用。请重新读取。');
-      host.append(el('h2',text(task.title || task.instruction || task.id)),el('p',`${originName(task)} · ${taskStatus(task)}`),citedText(task.summary || task.error || task.instruction));
-      taskFacts(host,task,true);
-      if(isReference(task)){host.append(el('p','此条仅作参考，不能启动、接续或修改。'));return;}
-      if(task.origin==='business'){if(task.object_id)host.append(button('打开业务资料',()=>goObject(task.object_id),'quiet'));return;}
-      if(task.origin==='cloud'){host.append(el('p','云端成果沿现有审核入口预览和确认，不会在此自动写回。'),button('打开云端审核',()=>{S.cloudReview.open=true;location.hash='/overview';},'quiet'));return;}
+      const headingTitle=task.title || (task.origin==='local'?'本机任务':task.instruction || task.id);
+      host.append(el('h2',text(headingTitle)),el('p',`${originName(task)} · ${taskStatus(task)}`),citedText(task.summary || task.error || (task.origin==='local'?'':task.instruction)));
+      if(isReference(task)){taskFacts(host,task,true);host.append(el('p','此条仅作参考，不能启动、接续或修改。'));return;}
+      if(task.origin==='business'){taskFacts(host,task,true);if(task.object_id)host.append(button('打开业务资料',()=>goObject(task.object_id),'quiet'));return;}
+      if(task.origin==='cloud'){taskFacts(host,task,true);host.append(el('p','云端成果沿现有审核入口预览和确认，不会在此自动写回。'),button('打开云端审核',()=>{S.cloudReview.open=true;location.hash='/overview';},'quiet'));return;}
       const context=await api(`/api/desk/task-context?id=${encodeURIComponent(task.job_id || task.id)}`);if(!current())return;
       const job=context.job;if(!job || String(job.id)!==String(task.job_id || task.id))throw Error('返回任务与所选任务不一致。');
+      taskFacts(host,{...task,next_action:typeof context.next_action==='string'?context.next_action:task.next_action},true);
       if(job.status==='planned' && job.task_kind!=='group'){let attempted=false;const start=button('确认启动此任务',async()=>{if(attempted)return;attempted=true;start.disabled=true;try{await api('/api/desk/job/dispatch',{id:job.id,expected_version:job.version ?? 0});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())host.append(el('p',`${error.message} 请重新读取状态，勿重复启动。`,'inline-error'));}},'primary');host.append(el('p','此任务仅已准备，尚未执行。'),start);}
       if(context.object)host.append(button('打开关联业务资料',()=>goObject(context.object.id,job.artifact_id || ''),'quiet'));
-      host.append(sectionHeading('任务进展'),el('p',`目标：${text(job.instruction || '未提供')}`),el('p',`当前结果：${text(job.summary || job.error || '尚无结果')}`),el('p',`执行记录：${(job.runs || []).length} 次`));
-      const next=job.next_steps || job.next_step || context.next_steps;if(next)host.append(el('p',`下一步：${text(next)}`));
+      const goal=typeof context.goal==='string'?context.goal:job.instruction;
+      host.append(sectionHeading('任务进展'),el('p',`目标：${text(goal) || '未提供'}`),el('p',`当前结果：${text(job.summary || job.error || '尚无结果')}`),el('p',`执行记录：${(job.runs || []).length} 次`));
+      if(context.decisions_recorded===true){
+        const decisions=context.effective_decisions;
+        if(!Array.isArray(decisions))host.append(el('p','任务有效决定暂不可读，请核对原任务及适用约束。','muted'));
+        else if(!decisions.length)host.append(el('p','任务有效决定已登记为空；仍需遵守当前业务原档和适用约束。','muted'));
+        else {host.append(el('p','任务有效决定：'));for(const decision of decisions){if(typeof decision?.text!=='string' || typeof decision?.source!=='string' || !decision.text.trim() || !decision.source.trim())host.append(el('p','决定内容或来源不完整，请核对原任务。','inline-error'));else host.append(el('p',`${text(decision.text)} · 来源：${text(decision.source)}`));}}
+      }else host.append(el('p','任务决定尚未登记，不代表没有约束；请核对当前业务原档和适用规则。','muted'));
+      const next=typeof context.next_action==='string'?context.next_action:(job.next_steps || job.next_step || context.next_steps || task.next_action);
+      host.append(el('p',`下一步：${text(next) || '未登记'}`));
       host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
-      if(job.status==='needs_input'){
+      if(job.held_result || job.status==='needs_input'){
         if(job.held_result){const held=el('section',undefined,'card'),content=el('div'),message=el('p','','agent-feedback');const show=button('查看保留的待复核成果',async()=>{show.disabled=true;try{const result=await api(`/api/desk/job/held-result?id=${encodeURIComponent(job.id)}`);if(!current())return;if(String(result.job_id)!==String(job.id))throw Error('返回成果与所选任务不一致');content.replaceChildren(el('p',text(result.warning) || '该成果尚未自动合并，请核对后处理。','muted'),el('pre',text(result.content),'source-body'));}catch(error){if(current())message.textContent=`${error.message} 未能读取保留成果。`;}finally{show.disabled=false;}},'quiet');held.append(el('h3','待复核成果'),el('p','只读取此任务登记的保留成果，不自动合并或覆盖。','muted'),show,content,message);host.append(held);}else host.append(el('p','此任务当前没有登记可查看的保留成果。','muted'));
       }
       if(job.status==='needs_input' && job.result_commit?.state==='outcome_unknown'){

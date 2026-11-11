@@ -1549,6 +1549,26 @@ test('任务上下文可复制，会话关联带版本且不自动执行',async(
  await h.ui.bootstrap();assert.match(h.elements.page.textContent,/仅供定位/);assert.equal(h.elements.page.querySelectorAll('a').length,0);await findButton(h.elements.page,'复制任务上下文').click();assert.match(h.clipboard(),/已有成果/);assert.equal(writes.length,0);
  h.elements.page.querySelectorAll('input').find(x=>x['aria-label']==='会话 ID').value='manual-id';await findButton(h.elements.page,'保存会话关联').click();await settle();assert.equal(writes[0].expected_version,7);assert.equal(writes[0].provenance,'explicit_manual');
 });
+test('任务详情以当前目标、有效决定来源及上下文下一步为准，不展示旧目标作为现状',async()=>{
+ const h=harness('#/task/local%3Aj1');const ctx={goal:'新目标',next_action:'新下一步',decisions_recorded:true,effective_decisions:[{text:'有效决定',source:'负责人原记录'}],job:{id:'j1',version:8,status:'failed',instruction:'已被替代的旧目标',intent:{history:[{goal:'历史目标',status:'superseded'}]},conversations:[]},artifacts:[]};
+ h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'failed',instruction:'已被替代的旧目标',next_action:'过期下一步'}]})};if(path.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>ctx};return h.originalFetch(path,opts);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;assert.match(shown,/目标：新目标/);assert.match(shown,/任务有效决定/);assert.match(shown,/有效决定 · 来源：负责人原记录/);assert.match(shown,/下一步：新下一步/);assert.match(shown,/下一动作：新下一步/);assert.doesNotMatch(shown,/已被替代的旧目标|历史目标|过期下一步/);
+});
+test('任务详情兼容旧接口，并明确未登记决定不代表没有约束',async()=>{
+ const h=harness('#/task/local%3Aj1');const ctx={job:{id:'j1',version:1,status:'failed',instruction:'旧接口原要求',next_steps:'旧接口下一步',conversations:[]},artifacts:[]};
+ h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'failed',title:'任务'}]})};if(path.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>ctx};return h.originalFetch(path,opts);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;assert.match(shown,/目标：旧接口原要求/);assert.match(shown,/下一步：旧接口下一步/);assert.match(shown,/任务决定尚未登记，不代表没有约束/);
+});
+test('已清空的当前目标和下一步不回退旧值，已登记空决定不等于没有业务约束',async()=>{
+ const h=harness('#/task/local%3Aj1');const ctx={goal:'',next_action:'',decisions_recorded:true,effective_decisions:[],job:{id:'j1',version:2,status:'failed',instruction:'过期目标',next_steps:'过期下一步',conversations:[]},artifacts:[]};
+ h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'failed',title:'任务',next_action:'过期下一步'}]})};if(path.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>ctx};return h.originalFetch(path,opts);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;assert.match(shown,/目标：未提供/);assert.match(shown,/下一步：未登记/);assert.match(shown,/有效决定已登记为空；仍需遵守/);assert.doesNotMatch(shown,/过期目标|过期下一步/);
+});
+test('任务决定结构损坏时提示核对，不伪装成空决定',async()=>{
+ const h=harness('#/task/local%3Aj1');const ctx={goal:'目标',decisions_recorded:true,effective_decisions:null,job:{id:'j1',status:'failed',conversations:[]},artifacts:[]};
+ h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'failed',title:'任务'}]})};if(path.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>ctx};return h.originalFetch(path,opts);});
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/任务有效决定暂不可读/);assert.doesNotMatch(h.elements.page.textContent,/有效决定已登记为空/);
+});
 test('离开任务页后慢返回上下文不得覆盖新页面',async()=>{
  const h=harness('#/task/local%3Aj1');let release;h.interceptFetch(async(path,opts)=>{if(path==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local'}]})};if(path.startsWith('/api/desk/task-context'))return new Promise(resolve=>{release=()=>resolve({ok:true,json:async()=>({job:{id:'j1',version:1,status:'failed'}})});});return h.originalFetch(path,opts);});
  const loading=h.ui.bootstrap();await settle();h.location.hash='#/products';await h.ui.renderRoute();release();await loading;assert.doesNotMatch(h.elements.page.textContent,/可恢复上下文/);
@@ -1620,6 +1640,20 @@ test('原会话接续的版本冲突保留输入，并要求重新读取后人�
 test('待复核成果仅按任务明确读取，普通任务不伪称有保留结果',async()=>{
  const h=harness('#/task/local%3Ar1'),reads=[];h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'needs_input',version:3,task_kind:'atomic',held_result:{attempt:1,reason:'planning_changed_during_attempt'}},artifacts:[]})};if(p.startsWith('/api/desk/job/held-result?')){reads.push(p);return {ok:true,json:async()=>({job_id:'r1',content:'合成保留成果',warning:'请核对后处理'})};}return h.originalFetch(p,o);});await h.ui.bootstrap();assert.equal(reads.length,0);assert.doesNotMatch(h.elements.page.textContent,/合成保留成果/);await findButton(h.elements.page,'查看保留的待复核成果').click();assert.equal(reads.length,1);assert.match(h.elements.page.textContent,/合成保留成果/);assert.match(h.elements.page.textContent,/不自动合并或覆盖/);
  const other=harness('#/task/local%3Ar2');other.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r2',job_id:'r2',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r2',status:'needs_input',version:1,task_kind:'atomic'},artifacts:[]})};return other.originalFetch(p,o);});await other.ui.bootstrap();assert.match(other.elements.page.textContent,/没有登记可查看的保留成果/);assert.ok(!walk(other.elements.page).some(x=>x.textContent==='查看保留的待复核成果'));
+});
+
+test('失败任务有保留成果时可只读查看，不自动写入或合并',async()=>{
+ const h=harness('#/task/local%3Af1'),reads=[],writes=[];
+ h.interceptFetch(async(p,o={})=>{
+   if(o.method && o.method!=='GET')writes.push({path:p,method:o.method});
+   if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:f1',job_id:'f1',origin:'local',status:'failed',title:'合成失败任务'}]})};
+   if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'f1',status:'failed',version:2,held_result:{attempt:1,reason:'unverified_result'}},artifacts:[]})};
+   if(p.startsWith('/api/desk/job/held-result?')){reads.push(p);return {ok:true,json:async()=>({job_id:'f1',content:'失败时保留的合成原始成果',warning:'尚未校验，请人工复核'})};}
+   return h.originalFetch(p,o);
+ });
+ await h.ui.bootstrap();assert.equal(reads.length,0);assert.equal(writes.length,0);assert.doesNotMatch(h.elements.page.textContent,/失败时保留的合成原始成果/);
+ await findButton(h.elements.page,'查看保留的待复核成果').click();
+ assert.deepEqual(reads,['/api/desk/job/held-result?id=f1']);assert.equal(writes.length,0);assert.match(h.elements.page.textContent,/失败时保留的合成原始成果/);assert.match(h.elements.page.textContent,/尚未校验，请人工复核/);assert.match(h.elements.page.textContent,/不自动合并或覆盖/);
 });
 
 test('成果提交结果不明时只显式记录核对依据，冲突保留输入且不自动重试',async()=>{

@@ -81,9 +81,59 @@ class ContextTests(unittest.TestCase):
             write('00_总控台/当前状态.md', '# 当前状态\n## 长期要做成什么\n持续合作\n## 中期要形成的经营能力\n旧执行摘要')
             context = desk.call('get_business_context', {})
             self.assertIn('持续合作', context['shared_sources'][1]['content'])
-            self.assertIn('旧执行摘要', context['shared_sources'][1]['content'])
-            self.assertIn('可能滞后', context['shared_sources'][1]['projection'])
+            self.assertNotIn('旧执行摘要', context['shared_sources'][1]['content'])
+            self.assertIn('历史阶段', context['shared_sources'][1]['projection'])
+            self.assertFalse(context['shared_sources'][1]['projection_complete'])
             self.assertIn('旧执行摘要', desk.read('00_总控台/当前状态.md')['content'])
+
+    def test_global_goal_projection_keeps_current_direction_and_original_history(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            path = root/'00_总控台/当前状态.md'
+            path.parent.mkdir(parents=True)
+            original = ('# 当前状态\n**2026-11-04 新方向：** 四条业务线并行。\n**当前位置：四条业务线动态安排。**\n'
+                        '## 长期要做成什么\n长期目标：持续合作。\n'
+                        '## 中期要形成的经营能力\n可重复获客和客户推进。\n'
+                        '## 近期先推进什么\n历史决定（已被取代）：暂缓扩建。\n'
+                        '## 怎样选择下一项工作\n按时限、机会、收益和成本动态安排。\n')
+            path.write_text(original, encoding='utf8')
+            products = root/PRODUCTS
+            products.parent.mkdir(parents=True, exist_ok=True)
+            products.write_text('{"products":[]}', encoding='utf8')
+            business = SimpleNamespace(get_object=lambda oid: {'id':oid,'kind':'product','source':PRODUCTS,'content':'{}'})
+            desk = DeskTools(business, root, 'product:shoe')
+            source = desk.call('get_business_context', {})['shared_sources'][1]
+            self.assertTrue(source['projection_complete'])
+            self.assertIn('四条业务线动态安排', source['content'])
+            self.assertIn('长期目标', source['content'])
+            self.assertIn('可重复获客和客户推进', source['content'])
+            self.assertIn('按时限、机会、收益和成本', source['content'])
+            self.assertNotIn('暂缓扩建', source['content'])
+            self.assertNotEqual(source['source_sha256'], source['sha256'])
+            self.assertEqual(desk.read('00_总控台/当前状态.md')['content'].replace('\r\n', '\n'), original)
+
+    def test_global_goal_projection_fails_closed_on_ambiguous_markers(self):
+        from business_context import current_goals_projection
+        sections = ('\n## 长期要做成什么\n长期目标\n## 中期要形成的经营能力\n客户推进\n'
+                    '## 怎样选择下一项工作\n动态安排\n')
+        direction = '**2026-11-04 新方向：** 四线并行。\n'
+        position = '**当前位置：四线动态安排。**\n'
+        cases = [
+            ('# 当前状态\n'+direction+sections, '当前位置：四线动态安排'),
+            ('# 当前状态\n历史决定（已取代）：暂缓工作台扩建。\n'+direction+position+sections, '暂缓工作台扩建'),
+            ('# 当前状态\n'+direction+'**当前位置：过期位置。**\n'+position+sections, '过期位置')]
+        for document, forbidden in cases:
+            with self.subTest(forbidden=forbidden):
+                content, complete = current_goals_projection(document)
+                self.assertFalse(complete)
+                self.assertNotIn(forbidden, content)
+        mixed = ('# 当前状态\n'+direction+position+'## 长期要做成什么\n长期目标\n'
+                 '## 中期要形成的经营能力\n历史决定：旧规则。\n旧规则续行。\n\n当前能力。\n'
+                 '## 怎样选择下一项工作\n动态安排\n')
+        content, complete = current_goals_projection(mixed)
+        self.assertFalse(complete)
+        self.assertNotIn('旧规则续行', content)
+        self.assertIn('当前能力', content)
 
     def test_customer_workflow_is_reused_and_creation_is_excluded(self):
         with tempfile.TemporaryDirectory() as folder:

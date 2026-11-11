@@ -20,6 +20,30 @@ class WorkspaceTests(unittest.TestCase):
             cloud_review=SimpleNamespace(workspace_status=lambda:self.cloud))
         self.service=TaskWorkspace(self.app)
 
+    def test_overview_exposes_current_task_intent_without_history_or_guessing(self):
+        self.jobs.extend([
+            {'id':'current','object_id':'product:BQ01','status':'completed', 'instruction':'旧委托',
+             'next_action':'核对成果','intent':{'version':2,'goal':'现行目标','decisions_recorded':True,
+                 'source':'最新负责人指令','decisions':[{'text':'有效决定','source':'依据'}],
+                 'history':[{'goal':'已替代目标','decisions':[{'text':'已替代决定','source':'旧依据'}]}]}},
+            {'id':'legacy','object_id':'product:BQ01','status':'completed',
+             'instruction':'最后续接指令','initial_instruction':'原始任务目标'},
+            {'id':'fallback','object_id':'product:BQ01','status':'completed','instruction':'遗留指令'},
+            {'id':'null','object_id':'product:BQ01','status':'completed','intent':None},
+            {'id':'invalid','object_id':'product:BQ01','status':'completed','intent':{'version':2}}])
+        rows={row['id']:row for row in self.service.overview()['tasks']}
+        current=rows['local:current']
+        self.assertEqual((current['current_goal'],current['intent_version']),('现行目标',2))
+        self.assertEqual(current['effective_decisions'],[{'text':'有效决定','source':'依据'}])
+        self.assertNotIn('已替代决定',str(current))
+        self.assertEqual(current['next_action'],'核对成果')
+        self.assertEqual(rows['local:legacy']['current_goal'],'原始任务目标')
+        self.assertFalse(rows['local:legacy']['decisions_recorded'])
+        self.assertEqual(rows['local:fallback']['intent_source'],'legacy_instruction_fallback')
+        self.assertEqual(rows['local:null']['intent_state'],'unavailable')
+        self.assertEqual(rows['local:invalid']['intent_state'],'unavailable')
+        self.assertIsNone(rows['local:invalid']['current_goal'])
+
     def test_adjustments_describe_actual_effect_and_allow_clearing_next_action(self):
         self.jobs.extend([
             {'id':'group','object_id':'product:BQ01','task_kind':'group','status':'planned'},

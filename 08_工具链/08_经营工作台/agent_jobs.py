@@ -25,6 +25,9 @@ from job_dependencies import JobDependencies
 from task_continuity import TaskContinuity
 
 ACTIVE = ('queued', 'running')
+HELD_REASONS = ('planning_changed_during_attempt', 'intent_snapshot_missing', 'result_outcome_unknown',
+                'customer_source_unverified', 'customer_source_changed', 'customer_profile_conflict',
+                'result_unvalidated')
 
 
 class JobFailure(Exception):
@@ -149,7 +152,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
             job['version'] = max(job['version'], persisted['version'])
             # Worker snapshots must not overwrite concurrent operator adjustments.
             if persisted.get('adjustment_version', 0) > job.get('adjustment_version', 0):
-                for key in ('priority', 'next_action', 'adjustment_version', 'adjustments'):
+                for key in ('priority', 'next_action', 'adjustment_version', 'adjustments', 'intent'):
                     if key in persisted: job[key] = persisted[key]
                 from collections import Counter
                 identity = lambda event: (event.get('at'), event.get('type'), event.get('text'), event.get('adjustment_version'))
@@ -158,7 +161,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
                 for event in persisted.get('events', []):
                     key = identity(event)
                     persisted_events[key] += 1
-                    if event.get('type') == 'planning_adjusted' and persisted_events[key] > known_events[key]:
+                    if event.get('type') in ('planning_adjusted', 'intent_changed') and persisted_events[key] > known_events[key]:
                         job.setdefault('events', []).append(event)
                         known_events[key] += 1
                 job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
@@ -170,14 +173,40 @@ class AgentJobs(TaskContinuity, JobDependencies):
             self.app.db.execute('INSERT OR REPLACE INTO agent_jobs VALUES (?,?)', (job['id'], json.dumps(job, ensure_ascii=False)))
             if not self._transaction:self.app.db.commit()
 
-    def adjust(self, job_id, *, expected_version, priority=None, next_action=None):
+    def adjust(self, job_id, *, expected_version, priority=None, next_action=None,
+               current_goal=None, effective_decisions=None, intent_source=None, intent_reason=None):
         """Update planning metadata without interrupting or dispatching a worker."""
-        if priority is None and next_action is None:
-            raise ValueError('请提供优先级或下一动作。')
+        intent_requested = current_goal is not None or effective_decisions is not None
+        if priority is None and next_action is None and not intent_requested:
+            raise ValueError('请提供优先级、下一动作或任务意图。')
         if priority is not None and priority not in ('high', 'normal', 'low'):
             raise ValueError('优先级必须为 high、normal 或 low。')
         if next_action is not None and (not isinstance(next_action, str) or len(next_action) > 4000):
             raise ValueError('下一动作必须为最多4000字的文本。')
+        if current_goal is not None and (not isinstance(current_goal, str) or not current_goal.strip() or len(current_goal) > 4000):
+            raise ValueError('当前目标必须为不超过4000字的非空文本。')
+        if effective_decisions is not None:
+            if not isinstance(effective_decisions, list) or len(effective_decisions) > 20:
+                raise ValueError('有效决定必须为最多20条的列表。')
+            normalized = []
+            total_length = 0
+            for item in effective_decisions:
+                if not isinstance(item, dict) or set(item) != {'text', 'source'}:
+                    raise ValueError('每条有效决定必须包含内容和来源。')
+                if any(not isinstance(item[k], str) or not item[k].strip() or len(item[k]) > 500 for k in ('text', 'source')):
+                    raise ValueError('决定内容和来源均须为不超过500字的非空文本。')
+                total_length += len(item['text']) + len(item['source'])
+                normalized.append({k:item[k].strip() for k in ('text', 'source')})
+            if total_length > 6000:
+                raise ValueError('有效决定内容和来源总计不能超过6000字。')
+            effective_decisions = normalized
+        if intent_requested:
+            if any(not isinstance(value, str) or not value.strip() or len(value) > limit
+                   for value, limit in ((intent_source, 500), (intent_reason, 1000))):
+                raise ValueError('调整任务目标或决定时，请提供来源和修改理由。')
+            intent_source, intent_reason = intent_source.strip(), intent_reason.strip()
+        elif intent_source is not None or intent_reason is not None:
+            raise ValueError('未提供任务目标或决定，不能单独修改意图来源或理由。')
         with self._write():
             job = self._continuity_defaults(self.get_job(job_id))
             if type(expected_version) is not int or expected_version != job['version']:
@@ -191,17 +220,36 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     if job.get(key, 'normal' if key == 'priority' else '') != value:
                         changes[key] = {'before': job.get(key), 'after': value}
                         job[key] = value
-            if changes:
+            intent = job['intent']
+            goal = current_goal.strip() if current_goal is not None else intent['goal']
+            decisions = effective_decisions if effective_decisions is not None else intent['decisions']
+            recorded = True if effective_decisions is not None else intent['decisions_recorded']
+            intent_changed = intent_requested and (goal != intent['goal'] or decisions != intent['decisions']
+                                                  or recorded != intent['decisions_recorded']
+                                                  or intent_source != intent['source'])
+            if intent_changed:
+                changed_at = now()
+                previous = {key:intent.get(key) for key in ('version','goal','decisions','decisions_recorded','source','updated_at')}
+                previous.update(status='superseded', superseded_at=changed_at,
+                                superseded_by=intent['version']+1, replacement_reason=intent_reason)
+                intent['history'].append(previous)
+                intent.update(version=intent['version']+1, goal=goal, decisions=decisions,
+                              decisions_recorded=recorded, source=intent_source, updated_at=changed_at)
+            if changes or intent_changed:
                 job['adjustment_version'] = job.get('adjustment_version', 0) + 1
-                effect = self._priority_adjustment_effect(job)
-                job.setdefault('adjustments', []).append({'at': now(), 'changes': changes,
-                    'scheduling_effect': effect})
-                job['adjustments'] = job['adjustments'][-200:]
-                effect_text = {'explicit_group_dispatch_only':'优先级仅影响符合条件的显式分组选择。',
-                               'explicit_standalone_dispatch_only':'优先级仅影响符合条件的显式独立计划选择。',
-                               'display_only':'此任务的优先级仅作显示，不改变调度。'}[effect]
-                self._event(job, 'planning_adjusted', '已调整计划：' + effect_text + '下一动作在下一次领取时固定，不改变正在运行的指令。')
-                job['events'][-1]['adjustment_version'] = job['adjustment_version']
+                if changes:
+                    effect = self._priority_adjustment_effect(job)
+                    job.setdefault('adjustments', []).append({'at': now(), 'changes': changes,
+                        'scheduling_effect': effect})
+                    job['adjustments'] = job['adjustments'][-200:]
+                    effect_text = {'explicit_group_dispatch_only':'优先级仅影响符合条件的显式分组选择。',
+                                   'explicit_standalone_dispatch_only':'优先级仅影响符合条件的显式独立计划选择。',
+                                   'display_only':'此任务的优先级仅作显示，不改变调度。'}[effect]
+                    self._event(job, 'planning_adjusted', '已调整计划：' + effect_text + '下一动作在下一次领取时固定，不改变正在运行的指令。')
+                    job['events'][-1]['adjustment_version'] = job['adjustment_version']
+                if intent_changed:
+                    self._event(job, 'intent_changed', '任务目标或已登记决定已变更；旧版本保留为已替代，本轮运行成果须核对。')
+                    job['events'][-1].update(adjustment_version=job['adjustment_version'], intent_version=intent['version'])
                 self._save(job)
         return job
 
@@ -229,19 +277,33 @@ class AgentJobs(TaskContinuity, JobDependencies):
         """Capture the operator's plan atomically with an explicit work claim."""
         if not self._transaction:
             raise RuntimeError('必须在任务领取事务内固定本轮计划。')
+        self._continuity_defaults(job)
         revision = job.get('adjustment_version', 0)
         action = job.get('next_action', '')
         if type(revision) is not int or revision < 0 or not isinstance(action, str):
             raise ValueError('任务的人工安排版本无效，请先核对。')
+        intent = job['intent']
+        if (type(intent.get('version')) is not int or intent['version'] < 0 or
+                not isinstance(intent.get('goal'), str) or len(intent['goal']) > 12000 or
+                type(intent.get('decisions_recorded')) is not bool or
+                not isinstance(intent.get('source'), str) or len(intent['source']) > 500 or
+                not isinstance(intent.get('decisions'), list) or len(intent['decisions']) > 20 or
+                any(not isinstance(item, dict) or set(item) != {'text', 'source'} or
+                    any(not isinstance(item.get(key), str) or not item[key].strip() or len(item[key]) > 500
+                        for key in ('text', 'source')) for item in intent['decisions']) or
+                sum(len(item['text'])+len(item['source']) for item in intent['decisions']) > 6000):
+            raise ValueError('任务意图版本无效，请先核对。')
+        frozen = {key:intent.get(key) for key in ('version','goal','decisions','decisions_recorded','source','updated_at')}
+        frozen = json.loads(json.dumps(frozen, ensure_ascii=False))
         job['attempt_plan'] = {'attempt': job.get('attempt', 0) + 1,
             'adjustment_version': revision, 'next_action': action,
-            'priority': job.get('priority', 'normal'), 'captured_at': now()}
+            'priority': job.get('priority', 'normal'), 'intent': frozen, 'captured_at': now()}
         self._event(job, 'attempt_plan_frozen',
                     '已固定本轮领取时的人工安排；之后的调整留待下一次领取。')
         return job['attempt_plan']
 
     def _hold_attempt_result(self, job, attempt, reason):
-        if reason not in ('planning_changed_during_attempt', 'result_outcome_unknown'):
+        if reason not in HELD_REASONS:
             raise ValueError('待复核原因无效。')
         job['held_result'] = {'attempt': attempt, 'reason': reason, 'recorded_at': now(),
                               'format': 'json' if job.get('mode') == 'customer_analysis' else 'markdown'}
@@ -253,8 +315,19 @@ class AgentJobs(TaskContinuity, JobDependencies):
             if job.get('status') != 'running' or job.get('attempt') != attempt or job.get('owner_id') != self.owner_id:
                 return None
             plan = job.get('attempt_plan') or {}
+            self._continuity_defaults(job)
+            frozen_intent = plan.get('intent')
+            if not isinstance(frozen_intent, dict) or type(frozen_intent.get('version')) is not int:
+                self._hold_attempt_result(job, attempt, 'intent_snapshot_missing')
+                job.update(status='needs_input', summary='本轮缺少任务意图快照，原始成果待复核。',
+                    error='该轮未记录领取时的任务目标与决定版本，原始成果已保留，未自动保存最终业务成果；其他工具的实际写入或外部动作仍须核对。')
+                if job.get('mode') == 'customer_analysis': job['profile_saved'] = False
+                self._event(job, 'needs_input', job['error'])
+                self._save(job)
+                return None
             if (plan.get('attempt') != attempt or type(plan.get('adjustment_version')) is not int or
-                    job.get('adjustment_version', 0) != plan['adjustment_version']):
+                    job.get('adjustment_version', 0) != plan['adjustment_version'] or
+                    job['intent']['version'] != frozen_intent['version']):
                 self._hold_attempt_result(job, attempt, 'planning_changed_during_attempt')
                 job.update(status='needs_input', summary='本轮计划已变化，原始成果待复核。',
                     error='本轮领取后人工安排已变化，原始成果已保留，未自动保存最终业务成果；运行中其他工具的实际写入或外部动作仍须核对。')
@@ -263,7 +336,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
                 self._save(job)
                 return None
             job['result_commit'] = {'state': 'saving', 'attempt': attempt,
-                'adjustment_version': plan['adjustment_version'], 'owner_id': self.owner_id,
+                'adjustment_version': plan['adjustment_version'], 'intent_version': frozen_intent['version'], 'owner_id': self.owner_id,
                 'owner_pid': os.getpid(), 'started_at': now()}
             self._event(job, 'result_commit_claimed', '已核对本轮人工安排版本，正在保存最终成果。')
             self._save(job)
@@ -278,7 +351,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
         if not isinstance(held, dict) or type(held.get('attempt')) is not int or held['attempt'] < 1:
             raise ValueError('当前任务没有可查看的待复核成果。')
         reason, kind = held.get('reason'), held.get('format')
-        if reason not in ('planning_changed_during_attempt', 'result_outcome_unknown') or kind not in ('json', 'markdown'):
+        if reason not in HELD_REASONS or kind not in ('json', 'markdown'):
             raise ValueError('当前任务没有可查看的待复核成果。')
         base = Path(self.app.state).resolve() / 'agent-jobs'
         directory = base / job_id / ('attempt-' + str(held['attempt']))
@@ -295,7 +368,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
             raise ValueError('待复核成果不可用或超出大小限制。') from None
         return {'job_id': job_id, 'attempt': held['attempt'], 'format': kind,
                 'content': content, 'reason': reason, 'recorded_at': held.get('recorded_at'),
-                'warning': '这是保留的原始成果；运行中的其他工具可能已写入业务资料或产生外部动作，需单独核对。'}
+                'warning': '这是保留的原始成果，可能尚未完成或通过校验；运行中的其他工具可能已写入业务资料或产生外部动作，需单独核对。'}
 
     def reconcile_result_commit(self, job_id, *, expected_version, evidence):
         """Record explicit human reconciliation without publishing or retrying."""
@@ -614,6 +687,18 @@ class AgentJobs(TaskContinuity, JobDependencies):
     def command(exe, folder, final, *, root, state, object_id, session_id=None, mode='draft'):
         return CodexBackend.command(exe,folder,final,root=root,state=state,object_id=object_id,session_id=session_id,mode=mode)
 
+    @staticmethod
+    def _attempt_intent_prompt(plan):
+        intent = plan.get('intent') if isinstance(plan, dict) else None
+        if not isinstance(intent, dict) or type(intent.get('version')) is not int:
+            raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
+        payload = {key:intent.get(key) for key in ('version','goal','decisions','decisions_recorded','source','updated_at')}
+        payload['next_action'] = plan.get('next_action', '')
+        return ('\n\n本轮领取时固定的任务意图与下一步：\n' + json.dumps(payload, ensure_ascii=False) +
+                '\n初始委托或旧会话内容与本轮任务目标冲突时，不把旧内容当作当前目标。'
+                '这里的决定仅限本任务已登记事项；尚未登记不代表没有其他约束。'
+                '当前业务原档、适用规则与实际授权仍须按需核对；存在冲突先核实，不得据此扩大授权或重放结果不明的动作。\n')
+
     def _work(self, job_id, obj):
         process = None
         folder = None
@@ -639,11 +724,20 @@ class AgentJobs(TaskContinuity, JobDependencies):
             if job.get('mode')=='customer_analysis':
                 schema=folder/'customer-analysis.schema.json'
                 schema.write_text(json.dumps(customer_analysis.SCHEMA,ensure_ascii=False),encoding='utf8')
+            plan = job.get('attempt_plan') or {}
+            if plan.get('attempt') != job['attempt']:
+                raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
             prompt = (('继续原工作。先核对上次执行后的实际文件、已完成成果与外部状态，避免重复执行。\n'
                        if job.get('session_id') else '') + self._prompt(job, obj))
             if job.get('continuation_mode') == 'new_session':
-                prompt = self._continuity_prompt(job_id) + '\n' + prompt
-            plan = job.get('attempt_plan') or {}
+                prompt = self._continuity_prompt(job_id, frozen_intent=plan.get('intent'),
+                                                 frozen_next_action=plan.get('next_action', '')) + '\n' + prompt
+                if not isinstance(plan.get('intent'), dict):
+                    raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
+                prompt += ('\n本轮任务目标与已登记决定以上方领取时的摘要为准；与旧委托、'
+                           '现行原档或授权不一致时先核对，不扩大权限或重放结果不明的动作。\n')
+            else:
+                prompt += self._attempt_intent_prompt(plan)
             if plan.get('attempt') == job['attempt'] and plan.get('next_action'):
                 prompt += ('\n\n本轮领取时负责人安排的下一动作：\n' + plan['next_action'] +
                     '\n这是本轮执行要求，不代表该动作已经完成；不得据此扩大授权、自动对外发送，'
@@ -754,11 +848,13 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     try:result=customer_analysis.parse_result(content)
                     except ValueError as error:raise JobFailure(str(error))
                     if not source_ready:
-                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='客户原件读取未完成。',error='原件依据待补，本次未保存翻译与分析。')
+                        self._hold_attempt_result(job,job['attempt'],'customer_source_unverified')
+                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='客户原件读取未完成。',error='原件依据待补，本次未保存翻译与分析；原始成果已保留供复核。')
                         self._event(job,'needs_input',job['error']);self._save(job);return
                     current=self.app.customer_workspace.profile(job['object_id'])
                     if current['source_hash']!=job['source_hash']:
-                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='原来源已变化，请重新核对。',error='分析依据已过期，本次未覆盖客户派生资料。')
+                        self._hold_attempt_result(job,job['attempt'],'customer_source_changed')
+                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='原来源已变化，请重新核对。',error='分析依据已过期，本次未覆盖客户派生资料；原始成果已保留供复核。')
                         self._event(job,'needs_input',job['error']);self._save(job);return
                     if not job.get('profile_revision'):
                         raise WorkspaceConflict('原任务没有客户分析版本，请读取当前资料后继续原任务。')
@@ -786,7 +882,10 @@ class AgentJobs(TaskContinuity, JobDependencies):
                 self._diagnostic(folder, '\n[' + phase + ' exception] ' + repr(exc) + '\n')
             if process is not None and process.poll() is None:
                 self._stop(process)
-            with self.lock:
+            # Read intent, choose the failure/held state, and persist it under
+            # the same cross-connection SQLite write transaction. Otherwise
+            # an adjustment can arrive after the check but before _save.
+            with self._write():
                 job = self.get_job(job_id)
                 if job['status'] in ACTIVE:
                     if job.get('result_commit'):
@@ -798,7 +897,34 @@ class AgentJobs(TaskContinuity, JobDependencies):
                         self._event(job,'needs_input',job['error'])
                         self._save(job)
                         return
+                    # A failed validation must not hide an already generated
+                    # result when this attempt's task intent changed meanwhile.
+                    plan = job.get('attempt_plan') or {}
+                    frozen = plan.get('intent')
+                    original = folder / ('analysis.json' if job.get('mode') == 'customer_analysis' else 'final.md') if folder else None
+                    try:
+                        result_available = bool(original and original.is_file() and 0 < original.stat().st_size <= 2_000_000)
+                    except OSError:
+                        result_available = False
+                    if result_available:
+                        if not isinstance(frozen, dict) or type(frozen.get('version')) is not int:
+                            conflict = 'intent_snapshot_missing'
+                        elif (plan.get('attempt') != job.get('attempt') or
+                              plan.get('adjustment_version') != job.get('adjustment_version', 0) or
+                              frozen['version'] != self._continuity_defaults(job)['intent']['version']):
+                            conflict = 'planning_changed_during_attempt'
+                        else:
+                            conflict = None
+                        if conflict:
+                            self._hold_attempt_result(job,job.get('attempt',0),conflict)
+                            job.update(status='needs_input',summary='任务意图或计划已变化，原始成果待复核。',
+                                       error='本轮未完成校验且任务意图或计划已变化；原始成果已保留，未自动保存最终业务成果。')
+                            if job.get('mode')=='customer_analysis':job['profile_saved']=False
+                            self._event(job,'needs_input',job['error']);self._save(job);return
+                        self._hold_attempt_result(job,job.get('attempt',0),'result_unvalidated')
                     if isinstance(exc,WorkspaceConflict) and job.get('mode')=='customer_analysis':
+                        if folder and (folder/'analysis.json').is_file():
+                            self._hold_attempt_result(job,job.get('attempt',0),'customer_profile_conflict')
                         job.update(status='needs_input',profile_saved=False,artifact_id=None,
                                    summary='客户分析已变化，请核对后继续。',
                                    error='客户派生资料已变化或缺少原版本，本次未覆盖；请核对当前资料后继续原任务。')
