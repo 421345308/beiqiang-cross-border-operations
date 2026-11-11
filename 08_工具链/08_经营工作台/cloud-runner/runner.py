@@ -12,6 +12,7 @@ import subprocess
 import tempfile
 import threading
 import time
+import uuid
 from datetime import datetime
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
@@ -321,6 +322,25 @@ def require_reconciled(state):
         if marker.exists() or marker.is_symlink():
             raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
 
+def confirmed_empty_claim(queue, request_id, claim_options, *, attempts=3):
+    """Read back only. Never retry a claim or recover a lost execution lease."""
+    for attempt in range(attempts):
+        try:
+            receipt = queue.call('claim_status', request_id=request_id, **claim_options)
+        except HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504): return False
+            receipt = None
+        except (URLError, TimeoutError, OSError):
+            receipt = None
+        if receipt is not None:
+            if (not isinstance(receipt, dict) or receipt.get('claim_protocol') != 1
+                    or receipt.get('request_id') != request_id): return False
+            if receipt.get('state') == 'empty': return True
+            if receipt.get('state') != 'unknown': return False
+        if attempt + 1 < attempts: time.sleep(2)
+    return False
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--once',action='store_true')
     parser.add_argument('--run-id', help='Execute only this explicitly selected run, then exit')
@@ -361,7 +381,7 @@ def main():
         # work. Recover from temporary connection failures here only; unknown
         # outcomes after a claim continue to require reconciliation below.
         try:
-            queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
+            heartbeat = queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
         except HTTPError as error:
             if args.once or args.run_id or error.code not in (429, 500, 502, 503, 504):
                 raise
@@ -375,16 +395,19 @@ def main():
             time.sleep(20)
             continue
         claiming, active = state / 'claiming.json', state / 'active.json'
-        write_recovery_marker(claiming, {'at':time.time(), 'requested_run_id':args.run_id or None})
+        claim_options = {'run_id': args.run_id} if args.run_id else {}
+        if engine == 'responses': claim_options['public_web_research'] = True
+        request_id = uuid.uuid4().hex if isinstance(heartbeat, dict) and heartbeat.get('claim_protocol') == 1 else None
+        marker = {'at':time.time(), 'requested_run_id':args.run_id or None}
+        if request_id: marker.update(request_id=request_id, claim_protocol=1, claim_options=claim_options)
+        write_recovery_marker(claiming, marker)
         # Another process may have finished claiming after this process started.
         # The exclusive claiming marker serializes this check with every claimant.
         if any(p.exists() or p.is_symlink() for p in (active, state / 'blocked.json')):
             remove_recovery_marker(claiming)
             raise RuntimeError('A prior runner outcome requires reconciliation before claiming another job')
         try:
-            claim_options={'run_id': args.run_id} if args.run_id else {}
-            if engine == 'responses':claim_options['public_web_research']=True
-            response=queue.call('claim', **claim_options)
+            response=queue.call('claim', **claim_options, **({'request_id': request_id} if request_id else {}))
         except ClaimTransactionRolledBack:
             # The private server explicitly confirmed its transaction rolled
             # back; unlike a timeout or generic 409, no claim can have committed.
@@ -394,6 +417,17 @@ def main():
             print('Claim transaction rolled back; retrying after a short pause.', flush=True)
             time.sleep(10)
             continue
+        except (URLError, TimeoutError, OSError) as error:
+            if isinstance(error, HTTPError) and error.code not in (429, 500, 502, 503, 504): raise
+            if not request_id or not confirmed_empty_claim(queue, request_id, claim_options): raise
+            remove_recovery_marker(claiming)
+            print('Claim response lost; server confirmed this request claimed no job.', flush=True)
+            if args.once or args.run_id: return
+            time.sleep(10)
+            continue
+        if request_id and (not isinstance(response, dict) or response.get('claim_protocol') != 1
+                           or response.get('request_id') != request_id):
+            raise RuntimeError('Claim acknowledgement mismatched; reconcile before proceeding')
         if not isinstance(response, dict) or 'job' not in response:
             raise RuntimeError('Claim response was incomplete; reconcile before proceeding')
         job=response['job']
