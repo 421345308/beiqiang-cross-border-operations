@@ -481,6 +481,7 @@ class DeskTools:
         if self.audit:
             with self.audit.open('a',encoding='utf8') as stream:
                 stream.write(json.dumps({'path':path,'start':start,'returned':len(result['content']),
+                                         'total_chars':result['totalChars'],'next_start':result['nextStart'],
                                          'role':allowed[path]['role'],'tool':'read_source','success':True,
                                          'sha256':result['sha256']},ensure_ascii=False)+'\n')
         return result

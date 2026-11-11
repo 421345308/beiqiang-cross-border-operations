@@ -189,6 +189,35 @@ class IntentSummaryTests(unittest.TestCase):
         self.assertIn('不能覆盖当前意图',handoff['instruction_role'])
         self.assertLess(len(prompt),60000)
 
+    def test_tiny_budget_preserves_goal_decisions_action_and_result_location(self):
+        self.service.job['intent']={'version':3,'goal':'完整目标',
+            'decisions':[{'text':'有效决定','source':'原档来源'}],
+            'decisions_recorded':True,'source':'负责人来源','updated_at':None,'history':[]}
+        self.service.job['artifact_ids']=['task-output']
+        self.service.business.artifacts=[{'id':'task-output','title':'成果',
+            'path':'work/result.md','content':'成果正文需要时读取'}]
+        _,handoff=self.payload(budget_chars=0)
+        self.assertEqual(handoff['preview_budget_state'],'required_context_exceeds_budget')
+        self.assertEqual(handoff['goal'],'完整目标')
+        self.assertEqual(handoff['effective_decisions'],[{'text':'有效决定','source':'原档来源'}])
+        self.assertEqual(handoff['next_action'],'当前下一步')
+        self.assertEqual(handoff['prior_task_outputs'][0]['path'],'work/result.md')
+        self.assertTrue(handoff['prior_task_outputs'][0]['truncated'])
+        self.assertTrue(handoff['object_preview_truncated'])
+        self.assertIn('read_artifact',handoff['retrieval'])
+
+    def test_required_intent_is_not_cut_to_meet_soft_budget(self):
+        goal='\x01'*12000
+        decisions=[{'text':'\x02'*290,'source':'来源'} for _ in range(20)]
+        self.service.job['intent']={'version':4,'goal':goal,'decisions':decisions,
+            'decisions_recorded':True,'source':'负责人','updated_at':None,'history':[]}
+        prompt,handoff=self.payload()
+        self.assertGreater(len(prompt),55000)
+        self.assertEqual(handoff['preview_budget_state'],'required_context_exceeds_budget')
+        self.assertEqual(handoff['goal'],goal)
+        self.assertEqual(handoff['effective_decisions'],decisions)
+        self.assertTrue(handoff['intent_summary_complete'])
+
 
 if __name__ == '__main__':
     unittest.main()

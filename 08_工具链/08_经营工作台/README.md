@@ -40,6 +40,8 @@
 
 代码按现有职责查找：agent_jobs.py 与 completion_followup.py / completion_dispatch.py 管理原任务与回合；supervisor.py 消费符合条件的持久状态；task_workspace.py 与 workstreams.py 提供只读总览；desk_mcp.py 和 server.py 提供本机入口；business.py、customer_workspace.py、gmail_sync.py 和 alibaba_catalog_monitor.py 沿原对象访问资料。产品约束见 PRODUCT.md，架构与跨服务边界见 ARCHITECTURE.md。
 
-在本目录可用 python -X utf8 -m unittest 运行对应 tests_*.py；前端可直接运行 node tests_desk_frontend.mjs。一次既有真实普通任务报告 input 566,960、cached input 484,736、output 5,696 tokens；另一次开发草稿分别报告 148,798、132,736、711。字段可能包含关系，不能相加或当成单次上下文长度。当前记录不足以形成普通、新会话及客户分析三类真实前后对照，不能据此声称已节省 token。
+在本目录可用 python -X utf8 -m unittest 运行对应 tests_*.py；前端可直接运行 node tests_desk_frontend.mjs。一次既有真实普通任务报告 input 566,960、cached input 484,736、output 5,696 tokens；另一次开发草稿分别报告 148,798、132,736、711。字段可能包含关系，不能相加或当成单次上下文长度。前一任务的来源审计中，两段内容在相同 hash 和起点下各读了两次，重复返回共 24,800 字符；无法仅据日志判断复读是否用于核变更。该历史任务有原委托、成果引用和读取审计，但未单独登记当前决定或下一步，旧委托只能作为回退，不能推断其现行目标。
+
+新会话接续以 55,000 字符为软目标：先省略可按原对象或成果位置重读的预览，保留当前目标、有效决定和下一步；customer_analysis 的完整客户原文不为达标而截断，必要内容超额时明确记录。普通和原会话任务只去除重复的下一动作，不声称已实施总量上限。现有 attempt_usage 新增仅含长度的 prompt_metrics，后续 read_source 审计记录 total_chars 和 next_start，不保存正文；旧日志不能补出分页完整性。固定合成样本的普通提示从 8,810 减到 5,275 字符、新会话从 62,115 减到 38,636 字符；这不是 token 或真实成果质量对照。现有记录不足以比较普通、新会话及客户分析三类真实前后效果。
 
 旧版本页含大量历史部署、排查和验收记录；已由本次入口替代为当前地图，原文仍可按需通过 Git 读取：git show 'ef40f6f:08_工具链/08_经营工作台/README.md'。客户、商品和订单原档、回执及可恢复成果未因精简而删除。

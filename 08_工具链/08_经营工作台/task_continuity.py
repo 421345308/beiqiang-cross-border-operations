@@ -151,7 +151,13 @@ class TaskContinuity:
                 'read_at':stamp(),'capabilities':{'execution_backend':'codex_cli','model':__import__('codex_backend').MODEL,
                     'external_conversation_control':False,'linked_conversations':'reference_only'}}
 
-    def _continuity_prompt(self, job_id, *, frozen_intent=None, frozen_next_action=None):
+    def _continuity_prompt(self, job_id, *, frozen_intent=None, frozen_next_action=None, budget_chars=None):
+        if budget_chars is not None and (type(budget_chars) is not int or budget_chars < 0):
+            raise ValueError('接续摘要预算无效。')
+        maximum = min(55000, budget_chars) if budget_chars is not None else 55000
+        prefix = ('这是同一持久任务的本轮上下文，不是新任务。以本轮引用的目标和有效决定接续，历史决定仅供追溯。先核对当前原件、已有成果及实际外部状态；'
+                  '历史输出仅作上下文，不是重播操作的指令，不自动重发、重付、重复发布或重复执行结果不明的动作。'
+                  '会话关联不授予外部聊天控制权限。当前上下文（有界预览）：\n')
         current=self.get_task_context(job_id)
         job=current['job']
         # The current record may have changed after this attempt was claimed.
@@ -216,35 +222,32 @@ class TaskContinuity:
                  'prior_task_outputs':outputs,'artifact_ids':job['artifact_ids'][:100],
                  'artifact_index_truncated':len(job['artifact_ids'])>100,
                  'dependency_ids':current['dependencies'][:100],
-                 'retrieval':'通过get_object/get_business_context读取当前原件和适用约束，list_artifacts/read_artifact读取完整成果；预览不是完整档案。任务意图摘要不完整时先读取原任务上下文，不能据截断摘要继续执行。'}
+                 'retrieval':'通过get_object/get_business_context读取当前原件和适用约束，list_artifacts/read_artifact读取完整成果；预览不是完整档案。任务意图摘要不完整时先读取原任务上下文，不能据截断摘要继续执行。',
+                 'preview_budget_state':'within_budget'}
         payload=json.dumps(context,ensure_ascii=False)
-        if len(payload)>55000:
-            # A pathological old index must not produce an unbounded launch.
+        if len(prefix)+len(payload)>maximum:
+            # The complete original is still reachable through the scoped tools.
+            # Remove optional previews before touching the current intent.
+            context['current_object_preview']=''
+            context['object_preview_truncated']=bool(obj_json)
+            context['current_customer_context_preview']=''
+            context['customer_context_truncated']=bool(customer_json)
+            context['prior_task_outputs']=[{**item,'content_preview':'',
+                'truncated':bool(item.get('content_preview')) or item['truncated']} for item in outputs]
+            context['summary']=''
+            context['summary_truncated']=bool(job.get('summary'))
+            context['preview_budget_state']='previews_omitted'
+            payload=json.dumps(context,ensure_ascii=False)
+        if len(prefix)+len(payload)>maximum:
             context['artifact_ids']=[]
             context['dependency_ids']=[]
             context['artifact_index_truncated']=True
-            context['prior_task_outputs']=outputs[:1]
-            context['current_object_preview']=obj_json[:4000]
-            context['object_preview_truncated']=True
-            context['current_customer_context_preview']=customer_json[:2000]
-            context['customer_context_truncated']=True
+            context['dependency_index_truncated']=bool(current['dependencies'])
+            context['prior_task_outputs']=context['prior_task_outputs'][:1]
+            context['prior_task_outputs_truncated']=len(outputs)>1
             payload=json.dumps(context,ensure_ascii=False)
-        if len(payload)>55000:
-            # Extreme legacy control characters can expand during JSON encoding.
-            # Prefer protecting decisions, and explicitly require rereading a
-            # truncated goal instead of silently treating it as complete.
-            while len(payload)>55000 and context['goal']:
-                context['goal']=context['goal'][:len(context['goal'])//2]
-                context['goal_truncated']=True
-                context['intent_summary_complete']=False
-                payload=json.dumps(context,ensure_ascii=False)
-            while len(payload)>55000 and context['effective_decisions']:
-                context['effective_decisions'].pop()
-                context['decisions_truncated']=True
-                context['intent_summary_complete']=False
-                payload=json.dumps(context,ensure_ascii=False)
-            if len(payload)>55000:
-                raise ValueError('任务摘要过长，请先核对原任务上下文。')
-        return ('这是同一持久任务的本轮上下文，不是新任务。以本轮引用的目标和有效决定接续，历史决定仅供追溯。先核对当前原件、已有成果及实际外部状态；'
-                '历史输出仅作上下文，不是重播操作的指令，不自动重发、重付、重复发布或重复执行结果不明的动作。'
-                '会话关联不授予外部聊天控制权限。当前上下文（有界预览）：\n'+payload)
+        if len(prefix)+len(payload)>maximum:
+            # A soft budget must never silently cut the goal or decisions.
+            context['preview_budget_state']='required_context_exceeds_budget'
+            payload=json.dumps(context,ensure_ascii=False)
+        return prefix+payload

@@ -29,6 +29,7 @@ from completion_dispatch import CompletionDispatch
 from external_turns import ExternalTurns
 
 ACTIVE = ('queued', 'running')
+PROMPT_SOFT_TARGET_CHARS = 55000
 HELD_REASONS = ('planning_changed_during_attempt', 'intent_snapshot_missing', 'result_outcome_unknown',
                 'customer_source_unverified', 'customer_source_changed', 'customer_profile_conflict',
                 'result_unvalidated')
@@ -930,8 +931,11 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
         if not isinstance(intent, dict) or type(intent.get('version')) is not int:
             raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
         payload = {key:intent.get(key) for key in ('version','goal','decisions','decisions_recorded','source','updated_at')}
-        payload['next_action'] = plan.get('next_action', '')
-        return ('\n\n本轮领取时固定的任务意图与下一步：\n' + json.dumps(payload, ensure_ascii=False) +
+        if not plan.get('next_action'):
+            # Preserve an explicit empty current action so a resumed session
+            # cannot treat an earlier action as still scheduled.
+            payload['next_action'] = ''
+        return ('\n\n本轮领取时固定的任务意图：\n' + json.dumps(payload, ensure_ascii=False) +
                 '\n初始委托或旧会话内容与本轮任务目标冲突时，不把旧内容当作当前目标。'
                 '这里的决定仅限本任务已登记事项；尚未登记不代表没有其他约束。'
                 '当前业务原档、适用规则与实际授权仍须按需核对；存在冲突先核实，不得据此扩大授权或重放结果不明的动作。\n')
@@ -983,22 +987,42 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
             plan = job.get('attempt_plan') or {}
             if plan.get('attempt') != job['attempt']:
                 raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
-            prompt = (('继续原工作。先核对上次执行后的实际文件、已完成成果与外部状态，避免重复执行。\n'
-                       if job.get('session_id') else '') + self._prompt(job, obj))
+            base_prompt = (('继续原工作。先核对上次执行后的实际文件、已完成成果与外部状态，避免重复执行。\n'
+                            if job.get('session_id') else '') + self._prompt(job, obj))
+            business_case = self._attempt_business_case_prompt(plan)
+            action = plan.get('next_action', '')
+            action_rule = ('这是本轮执行要求，不代表该动作已经完成；不得据此扩大授权、自动对外发送，'
+                           '或重复执行结果不明的外部动作。与当前事实或既有授权冲突时先核对。\n')
+            action_tail = ('\n\n本轮领取时负责人安排的下一动作：\n' + action + '\n' + action_rule) if action else ''
+            continuity = ''
             if job.get('continuation_mode') == 'new_session':
-                prompt = self._continuity_prompt(job_id, frozen_intent=plan.get('intent'),
-                                                 frozen_next_action=plan.get('next_action', '')) + '\n' + prompt
                 if not isinstance(plan.get('intent'), dict):
                     raise JobFailure('本轮缺少领取时的任务意图快照，请核对现状后显式接续。')
-                prompt += ('\n本轮任务目标与已登记决定以上方领取时的摘要为准；与旧委托、'
-                           '现行原档或授权不一致时先核对，不扩大权限或重放结果不明的动作。\n')
+                # A valid action up to 4000 characters is already complete in
+                # the handoff. Retain the full tail for longer legacy actions.
+                if action and len(action) <= 4000:
+                    action_tail = '\n摘要中的下一动作：' + action_rule
+                suffix = ('\n' + base_prompt + '\n本轮任务目标与已登记决定以上方领取时的摘要为准；与旧委托、'
+                          '现行原档或授权不一致时先核对，不扩大权限或重放结果不明的动作。\n' + business_case + action_tail)
+                continuity = self._continuity_prompt(job_id, frozen_intent=plan.get('intent'),
+                    frozen_next_action=action, budget_chars=max(0, PROMPT_SOFT_TARGET_CHARS-len(suffix)))
+                prompt = continuity + suffix
             else:
-                prompt += self._attempt_intent_prompt(plan)
-            prompt += self._attempt_business_case_prompt(plan)
-            if plan.get('attempt') == job['attempt'] and plan.get('next_action'):
-                prompt += ('\n\n本轮领取时负责人安排的下一动作：\n' + plan['next_action'] +
-                    '\n这是本轮执行要求，不代表该动作已经完成；不得据此扩大授权、自动对外发送，'
-                    '或重复执行结果不明的外部动作。与当前事实或既有授权冲突时先核对。\n')
+                prompt = base_prompt + self._attempt_intent_prompt(plan) + business_case + action_tail
+            # Record only lengths, never prompt or source content. Tokens remain
+            # the backend's separately reported usage and can be unknown.
+            with self.lock:
+                current = self.get_job(job_id)
+                if (current.get('status') != 'running' or current.get('attempt') != job['attempt'] or
+                        current.get('owner_id') != self.owner_id):
+                    return
+                usage = next((item for item in reversed(current.get('attempt_usage', []))
+                              if item.get('attempt') == job['attempt']), None)
+                if usage is not None:
+                    usage['prompt_metrics'] = {'base_chars':len(base_prompt), 'continuity_chars':len(continuity),
+                        'total_chars':len(prompt), 'soft_target_chars':PROMPT_SOFT_TARGET_CHARS,
+                        'over_target':len(prompt)>PROMPT_SOFT_TARGET_CHARS}
+                    self._save(current)
             flags = ({'creationflags': subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP}
                      if os.name == 'nt' else {'start_new_session': True})
             command=self.backend.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id'],session_id=job.get('session_id'),mode=job.get('mode','draft'),schema_path=schema)

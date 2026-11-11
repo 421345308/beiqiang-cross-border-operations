@@ -1,4 +1,5 @@
 """Contract and integration tests for the injected local execution adapter."""
+import copy
 import json
 import sqlite3
 import tempfile
@@ -17,6 +18,7 @@ from tests_agent_jobs import Business, Process, join_job_threads, stop_job_threa
 class FakeBackend:
     def __init__(self, usage=True):
         self.commands=[]
+        self.processes=[]
         self.parsed=0
         self.usage=usage
 
@@ -28,6 +30,7 @@ class FakeBackend:
 
     def spawn(self, command, *, env, flags):
         process=Process(command)
+        self.processes.append(process)
         original=process.stdout
         include_usage=self.usage
         class Stream:
@@ -47,6 +50,16 @@ class FakeBackend:
 
 
 class RuntimeBackendTests(unittest.TestCase):
+    def without_prompt_metrics(self, usage):
+        rows=copy.deepcopy(usage)
+        for row in rows:
+            metrics=row.pop('prompt_metrics')
+            self.assertEqual(set(metrics),{'base_chars','continuity_chars','total_chars','soft_target_chars','over_target'})
+            self.assertIs(type(metrics['total_chars']),int)
+            self.assertGreater(metrics['total_chars'],0)
+            self.assertEqual(metrics['over_target'],metrics['total_chars']>metrics['soft_target_chars'])
+        return rows
+
     def test_usage_mapping_ignores_unknown_or_invalid_fields(self):
         event=CodexBackend.parse_event(json.dumps({'type':'turn.completed','usage':{'input_tokens':0,'output_tokens':7,'cached_input_tokens':-1,'reasoning_output_tokens':True,'secret':'ignored'}}))
         self.assertEqual(event,{'kind':'completed','usage':{'input_tokens':0,'output_tokens':7}})
@@ -77,9 +90,11 @@ class RuntimeBackendTests(unittest.TestCase):
                 self.assertEqual(second['status'],'completed')
                 self.assertEqual(backend.commands[1]['session_id'],first['session_id'])
                 self.assertGreater(backend.parsed,0)
-                self.assertEqual(second['attempt_usage'],[
+                self.assertEqual(self.without_prompt_metrics(second['attempt_usage']),[
                     {'attempt':1,'turns':[{'tokens':{'input_tokens':12,'output_tokens':4}},{'tokens':{'input_tokens':2,'output_tokens':1}}],'cost':None},
                     {'attempt':2,'turns':[{'tokens':{'input_tokens':12,'output_tokens':4}},{'tokens':{'input_tokens':2,'output_tokens':1}}],'cost':None}])
+                self.assertEqual([x['prompt_metrics']['total_chars'] for x in second['attempt_usage']],
+                                 [len(process.stdin.value) for process in backend.processes])
                 self.assertNotIn('private',json.dumps(second))
             finally:
                 stop_job_threads(jobs)
@@ -99,7 +114,8 @@ class RuntimeBackendTests(unittest.TestCase):
                     if row['status'] not in ('queued','running'):break
                     threading.Event().wait(.01)
                 join_job_threads(jobs,job['id'])
-                self.assertEqual(jobs.get_job(job['id'])['attempt_usage'],[{'attempt':1,'turns':[{'tokens':None}],'cost':None}])
+                self.assertEqual(self.without_prompt_metrics(jobs.get_job(job['id'])['attempt_usage']),
+                                 [{'attempt':1,'turns':[{'tokens':None}],'cost':None}])
             finally:
                 stop_job_threads(jobs)
                 app.db.close()
@@ -136,7 +152,8 @@ class RuntimeBackendTests(unittest.TestCase):
                     join_job_threads(jobs,job['id'])
                 result=jobs.get_job(job['id'])
                 self.assertEqual(result['status'],'cancelled')
-                self.assertEqual(result['attempt_usage'],[{'attempt':1,'turns':[{'tokens':{'input_tokens':5}}],'cost':None}])
+                self.assertEqual(self.without_prompt_metrics(result['attempt_usage']),
+                                 [{'attempt':1,'turns':[{'tokens':{'input_tokens':5}}],'cost':None}])
                 self.assertFalse(app.business.artifacts)
             finally:
                 gate.set();stop_job_threads(jobs);app.db.close()

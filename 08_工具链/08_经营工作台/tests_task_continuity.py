@@ -177,6 +177,16 @@ class TaskContinuityTests(AgentJobTests):
         self.assertEqual(sum(x['type']=='planning_adjusted' for x in result['events']),2)
         self.assertEqual(self.jobs.get_task_context(job['id'])['next_action'],'')
 
+    def test_resumed_session_keeps_an_explicitly_cleared_action_empty(self):
+        first=self.wait(self.jobs.start('product:shoe','原始目标'))
+        planned=self.jobs.adjust(first['id'],expected_version=first['version'],next_action='OLD_ACTION_SENTINEL')
+        cleared=self.jobs.adjust(first['id'],expected_version=planned['version'],next_action='')
+        done=self.wait(self.jobs.resume(first['id'],'继续核对当前任务',expected_version=cleared['version']))
+        prompt=self.processes[-1].stdin.value
+        self.assertEqual(done['status'],'completed')
+        self.assertIn('"next_action": ""',prompt)
+        self.assertNotIn('OLD_ACTION_SENTINEL',prompt)
+
     def test_planned_dispatch_uses_action_frozen_at_claim(self):
         plan=self.jobs.start('product:shoe','准备资料',defer=True)
         planned=self.jobs.adjust(plan['id'],expected_version=plan['version'],next_action='先读取当前商品资料')
@@ -184,6 +194,7 @@ class TaskContinuityTests(AgentJobTests):
         done=self.wait(started)
         self.assertEqual(done['status'],'completed')
         self.assertIn('先读取当前商品资料',self.processes[-1].stdin.value)
+        self.assertEqual(self.processes[-1].stdin.value.count('先读取当前商品资料'),1)
         self.assertEqual(done['runs'][-1]['attempt_plan']['next_action'],'先读取当前商品资料')
         self.assertEqual(done['runs'][-1]['attempt_plan']['adjustment_version'],planned['adjustment_version'])
 
@@ -194,8 +205,55 @@ class TaskContinuityTests(AgentJobTests):
         done=self.wait(second)
         self.assertEqual(done['status'],'completed')
         self.assertIn('先检查供应依据',self.processes[-1].stdin.value)
+        self.assertEqual(self.processes[-1].stdin.value.count('先检查供应依据'),1)
         self.assertEqual(done['runs'][-1]['attempt_plan']['next_action'],'先检查供应依据')
         self.assertNotIn('resume',self.command)
+
+    def test_new_session_budgets_optional_previews_but_keeps_intent_and_locations(self):
+        first=self.wait(self.jobs.start('product:shoe','初始任务'))
+        action='NEXT_ACTION_'+('A'*3500)
+        self.app.business.obj['content']='OBJECT_START_'+('O'*29970)+'_OBJECT_END'
+        self.app.business.artifacts[0]['content']='A'*15000
+        self.app.business.artifacts.append({'id':'artifact-2','object_id':'product:shoe',
+            'title':'SECOND','content':'B'*15000,'path':'second.md'})
+        with self.jobs._write():
+            row=self.jobs.get_job(first['id']);row.setdefault('artifact_ids',[]).append('artifact-2');self.jobs._save(row)
+        row=self.jobs.get_job(first['id'])
+        decisions=[{'text':'D'*450,'source':'fixture-source'} for _ in range(10)]
+        row=self.jobs.adjust(row['id'],expected_version=row['version'],current_goal='G'*3900,
+            effective_decisions=decisions,intent_source='fixture',intent_reason='fixture',next_action=action)
+        done=self.wait(self.jobs.resume(row['id'],'CONTINUE_REQUEST_'+('I'*4900),
+                                        new_session=True,expected_version=row['version']))
+        prompt=self.processes[-1].stdin.value
+        handoff,_=json.JSONDecoder().raw_decode(prompt.split('当前上下文（有界预览）：\n',1)[1])
+        self.assertEqual(done['status'],'completed')
+        self.assertLessEqual(len(prompt),55000)
+        self.assertEqual(prompt.count(action),1)
+        self.assertEqual(handoff['goal'],'G'*3900)
+        self.assertEqual(handoff['effective_decisions'],decisions)
+        self.assertEqual(handoff['next_action'],action)
+        self.assertEqual(handoff['preview_budget_state'],'previews_omitted')
+        self.assertTrue(handoff['object_preview_truncated'])
+        self.assertTrue(all(item['truncated'] for item in handoff['prior_task_outputs']))
+        self.assertEqual({item['path'] for item in handoff['prior_task_outputs']},{'result.md','second.md'})
+        metrics=done['attempt_usage'][-1]['prompt_metrics']
+        self.assertEqual(metrics['total_chars'],len(prompt))
+        self.assertFalse(metrics['over_target'])
+        self.assertNotIn(action,json.dumps(metrics,ensure_ascii=False))
+
+    def test_legacy_long_next_action_is_not_cut_for_new_session(self):
+        first=self.wait(self.jobs.start('product:shoe','初始任务'))
+        action='LEGACY_START_'+('L'*5000)+'_LEGACY_END'
+        with self.jobs._write():
+            row=self.jobs.get_job(first['id']);row['next_action']=action;self.jobs._save(row)
+        row=self.jobs.get_job(first['id'])
+        done=self.wait(self.jobs.resume(row['id'],'继续核对',new_session=True,expected_version=row['version']))
+        prompt=self.processes[-1].stdin.value
+        handoff,_=json.JSONDecoder().raw_decode(prompt.split('当前上下文（有界预览）：\n',1)[1])
+        self.assertEqual(done['status'],'completed')
+        self.assertTrue(handoff['next_action_truncated'])
+        self.assertIn(action,prompt)
+        self.assertEqual(prompt.count(action),1)
 
     def test_result_commit_fences_another_database_connection(self):
         dbfile=self.root/'shared.sqlite3'

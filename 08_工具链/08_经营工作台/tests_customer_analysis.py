@@ -67,6 +67,28 @@ class CustomerAnalysisTests(unittest.TestCase):
         self.assertFalse(schema['additionalProperties']);self.assertEqual(set(schema['properties']['cleaned']['required']),set(CLEANED))
         self.assertNotIn('translation_zh',self.jobs.get_job(job['id']))
 
+    def test_new_session_keeps_full_customer_source_even_above_soft_target(self):
+        original='SYNTHETIC_START_'+('x'*65000)+'_SYNTHETIC_TAIL_47_双重限制'
+        self.obj['content']=json.dumps({'reference':'BQ-REAL','requirements':original},ensure_ascii=False)
+        self.app.business.list_artifacts=lambda object_id:[]
+        first=self.wait(self.start())
+        self.assertEqual(first['status'],'completed')
+        first_prompt=self.processes[-1].stdin.value
+        self.assertIn(original,first_prompt)
+        self.assertTrue(first['attempt_usage'][-1]['prompt_metrics']['over_target'])
+        second=self.wait(self.jobs.resume(first['id'],'保留完整原文重新分析',new_session=True,
+                                          expected_version=first['version']))
+        prompt=self.processes[-1].stdin.value
+        handoff,_=json.JSONDecoder().raw_decode(prompt.split('当前上下文（有界预览）：\n',1)[1])
+        self.assertEqual(second['status'],'completed')
+        self.assertIn(original,prompt)
+        self.assertIn('完整逐段翻译',prompt)
+        self.assertEqual(handoff['preview_budget_state'],'required_context_exceeds_budget')
+        self.assertTrue(handoff['intent_summary_complete'])
+        metrics=second['attempt_usage'][-1]['prompt_metrics']
+        self.assertEqual(metrics['total_chars'],len(prompt))
+        self.assertTrue(metrics['over_target'])
+
     def test_source_read_failure_is_needs_input_and_no_profile_save(self):
         self.options['source_read']=False;job=self.wait(self.start())
         self.assertEqual(job['status'],'needs_input');self.assertFalse(job['profile_saved']);self.assertIsNone(job['artifact_id'])

@@ -18,6 +18,28 @@ class ContextTests(unittest.TestCase):
             self.assertEqual(result['kind'], 'channel')
             self.assertEqual(result['current_sources'][0]['content'], '当前抖店经营资料')
 
+    def test_context_page_can_be_reused_and_continued_without_rereading_prefix(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);source=root/'09_国内电商/抖店/README.md'
+            source.parent.mkdir(parents=True)
+            original=('前'*20000)+'尾段限制'
+            source.write_text(original,encoding='utf8')
+            business=SimpleNamespace(get_object=lambda oid:{'id':oid,'kind':'channel','source':'09_国内电商/抖店/README.md'})
+            audit=root/'source-audit.jsonl';desk=DeskTools(business,root,'channel:douyin',audit)
+            result=desk.call('get_business_context',{})
+            first=result['current_sources'][0]
+            self.assertEqual(first['nextStart'],20000)
+            self.assertIn('从该位置继续read_source',result['guidance'])
+            self.assertIn('需要确认来源是否发生变化时仍须重新读取',result['guidance'])
+            last=desk.read(first['path'],start=first['nextStart'])
+            self.assertEqual(first['content']+last['content'],original)
+            self.assertIsNone(last['nextStart'])
+            self.assertEqual(first['sha256'],last['sha256'])
+            reads=[json.loads(line) for line in audit.read_text(encoding='utf8').splitlines()
+                   if json.loads(line).get('tool')=='read_source']
+            self.assertEqual([row['start'] for row in reads],[0,20000])
+            self.assertEqual([row['next_start'] for row in reads],[20000,None])
+
     def test_customer_commercial_product_links_keep_status_and_require_exact_ids(self):
         with tempfile.TemporaryDirectory() as folder:
             commercial={'records':[{'id':'q1','kind':'quotation','status':'draft','products':'BQ009 / BQ001；BQ009-W1'},

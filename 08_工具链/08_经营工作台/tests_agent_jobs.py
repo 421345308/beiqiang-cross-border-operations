@@ -411,6 +411,21 @@ class AgentJobTests(unittest.TestCase):
         self.assertEqual(part['content'],'前文');self.assertEqual(part['nextStart'],2)
         with self.assertRaises(ValueError):scoped.call('read_artifact',{'artifact_id':'other'})
 
+    def test_source_audit_records_pagination_without_source_text(self):
+        file=self.root/'facts/shoe.md';file.parent.mkdir(parents=True,exist_ok=True)
+        file.write_text('前文与尾段限制',encoding='utf8')
+        products=self.root/PRODUCTS;products.parent.mkdir(parents=True,exist_ok=True)
+        products.write_text(json.dumps({'products':[{'id':'shoe'}]}),encoding='utf8')
+        audit=self.root/'pagination.jsonl';tools=DeskTools(self.app.business,self.root,'product:shoe',audit)
+        first=tools.read('facts/shoe.md',start=0,limit=3)
+        second=tools.read('facts/shoe.md',start=first['nextStart'],limit=20)
+        events=[json.loads(line) for line in audit.read_text(encoding='utf8').splitlines()]
+        self.assertEqual(first['content']+second['content'],'前文与尾段限制')
+        self.assertEqual([event['total_chars'] for event in events],[7,7])
+        self.assertEqual([event['next_start'] for event in events],[3,None])
+        self.assertEqual(events[0]['sha256'],events[1]['sha256'])
+        self.assertNotIn('前文与尾段限制',audit.read_text(encoding='utf8'))
+
     def test_website_virtual_source_uses_id_not_display_label(self):
         self.app.business.obj.update(id='customer:website-REF',kind='customer',source='网站询盘 · REF',content='original inquiry')
         tools=DeskTools(self.app.business,self.root,'customer:website-REF')
