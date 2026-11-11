@@ -1,4 +1,5 @@
 import unittest
+import json
 import sqlite3
 import threading
 import time
@@ -47,6 +48,40 @@ class TaskContinuityTests(AgentJobTests):
         self.assertIn('原始目标',prompt)
         self.assertIn('有依据的可用草稿',prompt)
         self.assertFalse(self.jobs.get_task_context(job['id'])['capabilities']['external_conversation_control'])
+
+    def test_new_session_includes_long_instruction_once_and_preserves_current_intent(self):
+        first=self.wait(self.jobs.start('product:shoe','OLD_INITIAL_GOAL_SENTINEL'))
+        current=self.jobs.get_job(first['id'])
+        decisions=[{'text':'CURRENT_DECISION_SENTINEL','source':'DECISION_SOURCE_SENTINEL'}]
+        changed=self.jobs.adjust(first['id'],expected_version=current['version'],
+            current_goal='CURRENT_GOAL_SENTINEL',effective_decisions=decisions,
+            intent_source='CURRENT_INTENT_SOURCE',intent_reason='隔离测试确认现行目标',
+            next_action='CURRENT_NEXT_ACTION_SENTINEL')
+        self.app.business.obj['content']='OBJECT_START_'+('B'*22000)+'_OBJECT_END'
+        self.app.business.artifacts[0]['content']='ARTIFACT_START_'+('A'*10000)+'_ARTIFACT_END'
+        instruction='LONG_INSTRUCTION_START_'+('X'*11920)+'_LONG_INSTRUCTION_END'
+        self.assertLessEqual(len(instruction),12000)
+        next_job=self.jobs.resume(first['id'],instruction,new_session=True,expected_version=changed['version'])
+        self.wait(next_job)
+        prompt=self.processes[-1].stdin.value
+        self.assertNotIn('resume',self.command)
+        self.assertEqual(prompt.count(instruction),1)
+        self.assertEqual(prompt.count('LONG_INSTRUCTION_START_'),1)
+        self.assertNotIn('OLD_INITIAL_GOAL_SENTINEL',prompt)
+        summary=prompt.split('当前上下文（有界预览）：\n',1)[1]
+        handoff,_=json.JSONDecoder().raw_decode(summary)
+        self.assertNotIn('instruction',handoff)
+        self.assertNotIn('instruction_truncated',handoff)
+        self.assertIn('不能覆盖当前意图',handoff['instruction_role'])
+        self.assertEqual(handoff['goal'],'CURRENT_GOAL_SENTINEL')
+        self.assertEqual(handoff['effective_decisions'],decisions)
+        self.assertEqual(handoff['intent_source'],'CURRENT_INTENT_SOURCE')
+        self.assertEqual(handoff['intent_basis'],'frozen_at_claim')
+        self.assertTrue(handoff['intent_summary_complete'])
+        self.assertEqual(handoff['next_action'],'CURRENT_NEXT_ACTION_SENTINEL')
+        self.assertTrue(handoff['object_preview_truncated'])
+        self.assertEqual(handoff['prior_task_outputs'][0]['path'],'result.md')
+        self.assertTrue(handoff['prior_task_outputs'][0]['truncated'])
 
     def test_handoff_bounds_and_excludes_conversation_and_event_history(self):
         job=self.wait(self.jobs.start('product:shoe','目标'))

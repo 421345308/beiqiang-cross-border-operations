@@ -35,10 +35,6 @@ def _excerpt(text, limit=800):
     return text if len(text) <= limit else text[:limit].rstrip() + '…（原文节选）'
 
 
-def _line(lines, prefix):
-    return next((line.strip() for line in lines if line.strip().startswith(prefix)), '')
-
-
 def _read_entry(root, relative):
     """Read one unchanged, bounded workspace source and retain its modification time."""
     reason = '原业务档案不可读取。'
@@ -92,7 +88,7 @@ def _structured_workstream(lines):
     return fields if any(fields.values()) else None
 
 
-def _source(root, name, relative, key):
+def _source(root, name, relative):
     observed = _now()
     result = {'label': name, 'observed_at': observed, 'modified_at': None,
               'state': 'unavailable', 'focus': '', 'result': '', 'next_action': '', 'blocker': '',
@@ -103,22 +99,13 @@ def _source(root, name, relative, key):
         return result
     result['modified_at'] = modified
     lines = content.splitlines()
-    if key == 'tools':
-        focus = _line(lines, '**总控当前工作：**').removeprefix('**总控当前工作：**').strip()
-        evidence = _line(lines, '**总控已验证结果：**').removeprefix('**总控已验证结果：**').strip()
-        next_action = _line(lines, '**总控下一步：**').removeprefix('**总控下一步：**').strip()
-        blocker = _line(lines, '**总控阻塞：**').removeprefix('**总控阻塞：**').strip()
-    else:
-        fields = _structured_workstream(lines)
-        if fields is None:
-            result.update(state='unknown', read_state='ok',
-                          reason='业务来源可读，但没有明确、唯一的结构化当前状态；请查看原业务入口或已关联任务。')
-            return result
-        focus, evidence = fields['当前工作'], fields['已验证结果']
-        next_action, blocker = fields['下一步'], fields['阻塞']
-    if key == 'tools' and (not evidence or not next_action or not blocker or not focus):
-        result['reason'] = '原业务档案结构或所需段落已变化，请查看业务入口。'
+    fields = _structured_workstream(lines)
+    if fields is None:
+        result.update(state='unknown', read_state='ok',
+                      reason='业务来源可读，但没有明确、唯一的结构化当前状态；请查看原业务入口或已关联任务。')
         return result
+    focus, evidence = fields['当前工作'], fields['已验证结果']
+    next_action, blocker = fields['下一步'], fields['阻塞']
     result.update(state='ok', reason='', focus=_excerpt(focus), result=_excerpt(evidence),
                   next_action=_excerpt(next_action), blocker=_excerpt(blocker))
     return result
@@ -285,7 +272,7 @@ def build_workstreams(root, jobs, desktop_snapshot):
     output = []
     for key, title, focus, label, path in _SPECS:
         conversation = _conversation(key, snapshot)
-        source = _source(root, label, path, key)
+        source = _source(root, label, path)
         related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
                                                  conversation.get('id') if conversation else None)
         displayed_focus = source.get('focus') or (focus if source.get('state') == 'ok' else '当前工作未登记')

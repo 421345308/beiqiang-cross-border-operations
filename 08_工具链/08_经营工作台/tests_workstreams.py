@@ -52,18 +52,47 @@ class WorkstreamProjectionTests(unittest.TestCase):
     def test_source_excerpts_have_provenance_and_no_copied_store(self):
         rows = {row['id']: row for row in build_workstreams(self.root, [], self.snapshot())}
         self.assertEqual(set(rows), {'tools','alibaba','website'})
-        for row in rows.values():
+        for key in ('alibaba', 'website'):
+            row = rows[key]
             self.assertEqual(row['source']['state'], 'ok')
             self.assertTrue(row['source']['observed_at'])
             self.assertTrue(row['source']['modified_at'])
             self.assertTrue(row['source']['result'])
             self.assertTrue(row['source']['next_action'])
-        self.assertIn('合成工具结果', rows['tools']['source']['result'])
-        self.assertEqual(rows['tools']['focus'], '合成工作目标。')
-        self.assertIn('核对合成权限', rows['tools']['source']['next_action'])
+        self.assertEqual(rows['tools']['source']['state'], 'unknown')
+        self.assertEqual(rows['tools']['source']['read_state'], 'ok')
+        self.assertTrue(rows['tools']['source']['observed_at'])
+        self.assertTrue(rows['tools']['source']['modified_at'])
+        self.assertEqual(rows['tools']['focus'], '当前工作未登记')
+        self.assertEqual(rows['tools']['source']['result'], '')
+        self.assertEqual(rows['tools']['source']['next_action'], '')
         self.assertIn('合成提交被拒绝', rows['alibaba']['source']['blocker'])
         self.assertIn('继续逐款核对合成来源', rows['website']['source']['next_action'])
         self.assertEqual(rows['website']['source']['blocker'], '')
+
+    def test_tools_current_task_comes_from_bound_job_even_when_readme_is_missing(self):
+        snapshot = self.snapshot()
+        snapshot['workstream_links'].append({'workstream':'tools','host_id':'durable','thread_id':'tools-thread'})
+        snapshot['threads'].append({'id':'tools-thread','hostId':'durable','status':'notLoaded'})
+        jobs = [{'id':'real-job','title':'实际关联工作','status':'running',
+                 'summary':'AgentJobs 当前成果','next_action':'AgentJobs 当前下一步',
+                 'conversations':[{'provider':'codex','conversation_id':'tools-thread',
+                                   'control':'reference_only','host_id':'durable',
+                                   'host_bound_at':'2026-11-11T08:30:00+00:00'}]}]
+        row = next(x for x in build_workstreams(self.root, jobs, snapshot) if x['id']=='tools')
+        self.assertEqual(row['source']['state'], 'unknown')
+        self.assertEqual(row['source']['read_state'], 'ok')
+        self.assertEqual(row['source']['result'], '')
+        self.assertEqual(row['related_jobs'][0]['status'], 'running')
+        self.assertEqual(row['related_jobs'][0]['result'], 'AgentJobs 当前成果')
+        self.assertEqual(row['related_jobs'][0]['next_action'], 'AgentJobs 当前下一步')
+        self.assertEqual(row['related_jobs'][0]['source'], 'AgentJobs')
+        (self.root/'08_工具链/08_经营工作台/README.md').unlink()
+        row = next(x for x in build_workstreams(self.root, jobs, snapshot) if x['id']=='tools')
+        self.assertEqual(row['source']['state'], 'unavailable')
+        self.assertIsNone(row['source']['modified_at'])
+        self.assertEqual(row['related_jobs'][0]['id'], 'local:real-job')
+        self.assertEqual(row['related_jobs'][0]['status'], 'running')
 
     def test_unavailable_source_or_changed_structure_is_not_misreported(self):
         path = self.root/'03_独立站/README.md'

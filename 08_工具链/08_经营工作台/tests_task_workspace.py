@@ -176,7 +176,9 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(rows['desktop:durable:two']['business_line'],'alibaba')
         self.assertEqual(rows['desktop:durable:three']['status'],'unknown')
         self.assertEqual(rows['local:related']['workstream_id'],'tools')
+        self.assertEqual(result['workstreams'][0]['source']['state'],'unavailable')
         self.assertEqual([x['id'] for x in result['workstreams'][0]['related_jobs']],['local:related'])
+        self.assertEqual(result['workstreams'][0]['related_jobs'][0]['status'],'completed')
 
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')

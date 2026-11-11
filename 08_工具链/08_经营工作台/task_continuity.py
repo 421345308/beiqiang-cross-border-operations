@@ -208,7 +208,6 @@ class TaskContinuity:
                  'intent_scope':'本任务登记的目标与有效决定，不替代当前业务原档或适用约束。',
                  'intent_summary_complete':not (goal_truncated or decisions_truncated),
                  'next_action':action[:4000],'next_action_truncated':len(action)>4000,
-                 'instruction':job['instruction'][:6000],'instruction_truncated':len(job['instruction'])>6000,
                  'instruction_role':'本轮委托；旧创建指令与当前任务意图不一致时先核对，不能覆盖当前意图和适用授权。',
                  'summary':str(job.get('summary',''))[:1000],
                  'current_object_preview':obj_json[:8000],'object_preview_truncated':len(obj_json)>8000,
@@ -229,8 +228,6 @@ class TaskContinuity:
             context['object_preview_truncated']=True
             context['current_customer_context_preview']=customer_json[:2000]
             context['customer_context_truncated']=True
-            context['instruction']=job['instruction'][:2000]
-            context['instruction_truncated']=True
             payload=json.dumps(context,ensure_ascii=False)
         if len(payload)>55000:
             # Extreme legacy control characters can expand during JSON encoding.

@@ -170,6 +170,25 @@ class IntentSummaryTests(unittest.TestCase):
         self.assertFalse(handoff['intent_summary_complete'])
         self.assertIn('先读取原任务上下文', handoff['retrieval'])
 
+    def test_oversized_artifact_index_falls_back_without_duplicate_instruction(self):
+        self.service.job['instruction']='LONG_INSTRUCTION_'+('x'*11900)
+        self.service.job['artifact_ids']=[str(i)+('a'*1000) for i in range(100)]
+        self.service.job['intent']={'version':3,'goal':'现行目标',
+            'decisions':[{'text':'现行决定','source':'决定来源'}],
+            'decisions_recorded':True,'source':'现行来源','updated_at':None,'history':[]}
+        prompt,handoff=self.payload()
+        self.assertNotIn('instruction',handoff)
+        self.assertNotIn('instruction_truncated',handoff)
+        self.assertTrue(handoff['artifact_index_truncated'])
+        self.assertTrue(handoff['object_preview_truncated'])
+        self.assertTrue(handoff['customer_context_truncated'])
+        self.assertEqual(handoff['goal'],'现行目标')
+        self.assertEqual(handoff['effective_decisions'],[{'text':'现行决定','source':'决定来源'}])
+        self.assertEqual(handoff['intent_source'],'现行来源')
+        self.assertEqual(handoff['next_action'],'当前下一步')
+        self.assertIn('不能覆盖当前意图',handoff['instruction_role'])
+        self.assertLess(len(prompt),60000)
+
 
 if __name__ == '__main__':
     unittest.main()
