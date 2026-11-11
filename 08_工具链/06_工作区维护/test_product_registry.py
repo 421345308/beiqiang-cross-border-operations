@@ -83,21 +83,71 @@ class FormalFieldResolution(unittest.TestCase):
         self.listing = {'id': self.pid, 'product_id': 'LQ-1680',
                         'formal_fields': {'file': 'new.json', 'at': '2026-11-11T03:33:49Z'}}
         (self.root/'old.json').write_text(json.dumps({'requested_product_id': self.pid,
+            'method':'alibaba.icbu.product.get','observed_at_utc':'2026-10-19T18:51:15Z',
             'response': {'product': {'product_id': 'encrypted', 'subject': 'old'}}}), encoding='utf-8')
-        (self.root/'new.json').write_text(json.dumps({'product': {'product_id': 'encrypted', 'subject': 'new'}}), encoding='utf-8')
+        (self.root/'new.json').write_text(json.dumps({'product': {'product_id': self.pid, 'subject': 'new'}}), encoding='utf-8')
 
     def test_registered_listing_wins_and_old_bytes_remain(self):
         old = (self.root/'old.json').read_bytes()
         result = self.resolve(self.root, 'LQ-1680', [self.listing], channel='alibaba')
-        self.assertEqual((result['state'],result['file'],result['observed_at']),
-                         ('recorded','new.json','2026-11-11T03:33:49Z'))
+        self.assertEqual((result['state'],result['file'],result['observed_at']),('recorded','new.json',None))
+        self.assertEqual(result['identity_basis'],'receipt_numeric_product_id')
+        self.assertEqual(result['listing_field_at'],'2026-11-11T03:33:49Z')
+        self.assertIsNone(result['observed_at_source'])
         self.assertEqual((self.root/'old.json').read_bytes(), old)
 
     def test_receipt_observation_time_is_not_replaced_by_registration_time(self):
-        (self.root/'new.json').write_text(json.dumps({'requested_product_id':self.pid,
+        (self.root/'new.json').write_text(json.dumps({'requested_product_id':self.pid,'method':'alibaba.icbu.product.get',
             'observed_at_utc':'2026-10-19T18:51:15Z','response':{'product':{'product_id':'encrypted'}}}),encoding='utf-8')
         result=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')
         self.assertEqual(result['observed_at'],'2026-10-19T18:51:15Z')
+        self.assertEqual(result['observed_at_source'],'receipt.observed_at_utc')
+        self.assertEqual(result['identity_basis'],'receipt_requested_product_id')
+
+    def test_invalid_observation_time_does_not_become_recorded_time(self):
+        (self.root/'new.json').write_text(json.dumps({'observed_at_utc':'not-a-time',
+            'product':{'product_id':self.pid}}),encoding='utf-8')
+        result=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')
+        self.assertEqual(result['state'],'recorded')
+        self.assertIsNone(result['observed_at']);self.assertIsNone(result['observed_at_source'])
+        self.assertEqual(result['listing_field_at'],'2026-11-11T03:33:49Z')
+
+    def test_opaque_id_requires_checkable_requested_receipt(self):
+        (self.root/'new.json').write_text(json.dumps({'product':{'product_id':'encrypted','subject':'new'}}),encoding='utf-8')
+        unknown=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')
+        self.assertEqual(unknown['reference_state'],'registered')
+        self.assertEqual(unknown['registered_file'],'new.json')
+        self.assertEqual(unknown['receipt_state'],'available')
+        self.assertEqual(unknown['identity_state'],'unverified')
+        self.assertEqual(unknown['reason'],'receipt_identity_unverified')
+        self.assertIsNone(unknown['file']);self.assertIsNone(unknown['observed_at'])
+        self.assertEqual(unknown['listing_field_at'],'2026-11-11T03:33:49Z')
+        matched=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba',identity_evidence_file='old.json')
+        self.assertEqual(matched['state'],'recorded')
+        self.assertEqual(matched['identity_basis'],'same_opaque_id_as_requested_receipt')
+        self.assertEqual(matched['identity_evidence_file'],'old.json')
+        self.assertEqual(matched['identity_evidence_observed_at'],'2026-10-19T18:51:15Z')
+        self.assertIsNone(matched['observed_at'])
+        (self.root/'old.json').write_text(json.dumps({'requested_product_id':'1600000000002',
+            'method':'alibaba.icbu.product.get','response':{'product':{'product_id':'encrypted'}}}),encoding='utf-8')
+        self.assertEqual(self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba',identity_evidence_file='old.json')['reason'],
+                         'receipt_identity_unverified')
+
+    def test_undated_historical_receipt_does_not_create_identity(self):
+        (self.root/'new.json').write_text(json.dumps({'product':{'product_id':'encrypted'}}),encoding='utf-8')
+        (self.root/'old.json').write_text(json.dumps({'requested_product_id':self.pid,
+            'method':'alibaba.icbu.product.get','response':{'product':{'product_id':'encrypted'}}}),encoding='utf-8')
+        result=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba',identity_evidence_file='old.json')
+        self.assertEqual(result['identity_state'],'unverified')
+        self.assertIsNone(result['file'])
+
+    def test_unverified_method_and_wrong_opaque_id_do_not_create_identity(self):
+        (self.root/'new.json').write_text(json.dumps({'requested_product_id':self.pid,
+            'response':{'product':{'product_id':'encrypted'}}}),encoding='utf-8')
+        self.assertEqual(self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')['reason'],'receipt_identity_unverified')
+        (self.root/'new.json').write_text(json.dumps({'product':{'product_id':'other-encrypted'}}),encoding='utf-8')
+        self.assertEqual(self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba',identity_evidence_file='old.json')['reason'],
+                         'receipt_identity_unverified')
 
     def test_channel_and_listing_must_be_unambiguous(self):
         self.assertEqual(self.resolve(self.root,'LQ-1680',[self.listing])['reason'], 'channel_not_selected_or_unsupported')
@@ -111,7 +161,13 @@ class FormalFieldResolution(unittest.TestCase):
 
     def test_missing_or_mismatched_receipt_never_falls_back(self):
         self.listing['formal_fields']['file']='missing.json'
-        self.assertEqual(self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')['reason'],'formal_receipt_unavailable')
+        missing=self.resolve(self.root,'LQ-1680',[self.listing],channel='alibaba')
+        self.assertEqual(missing['reason'],'formal_receipt_unavailable')
+        self.assertEqual(missing['reference_state'],'registered')
+        self.assertEqual(missing['registered_file'],'missing.json')
+        self.assertEqual(missing['receipt_state'],'unavailable')
+        self.assertEqual(missing['identity_state'],'unknown')
+        self.assertIsNone(missing['file']);self.assertIsNone(missing['observed_at'])
         self.listing['formal_fields']['file']='new.json'
         (self.root/'new.json').write_text(json.dumps({'requested_product_id':'1600000000002',
             'response': {'product': {'product_id':'encrypted'}}}),encoding='utf-8')

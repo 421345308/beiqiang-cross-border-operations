@@ -14,6 +14,7 @@ from pathlib import Path, PureWindowsPath
 import tempfile
 import time
 from contextlib import contextmanager
+from datetime import datetime
 
 PRODUCTS = Path('00_总控台/产品中心/数据/产品.json')
 SUPPLY = Path('00_总控台/产品中心/数据/供应来源.json')
@@ -22,14 +23,19 @@ CHANNEL_FIELDS = ('next_action', 'dossier_path', 'content_quality_revision', 're
 CHANNEL_CLASSIFICATION = ('platform_category_ids', 'store_groups')
 
 
-def resolve_formal_fields(root, product_id, listings, *, channel=None, listing_id=None):
-    """Resolve only a registered Alibaba receipt for an unambiguous listing.
+def resolve_formal_fields(root, product_id, listings, *, channel=None, listing_id=None,
+                          identity_evidence_file=None):
+    """Separate registration, checkable listing identity and observation time.
 
-    Product-level local assets remain source/preparation evidence; they cannot
-    select a channel or replace a missing registered receipt.
+    A product-level historical receipt may corroborate an opaque ID only when
+    it explicitly records the same numeric request and the returned ID matches.
+    It is never substituted for the registered current receipt.
     """
-    result = {'state': 'unknown', 'channel': channel, 'listing_id': None,
-              'file': None, 'observed_at': None, 'reason': None}
+    result = {'state': 'unknown', 'channel': channel, 'listing_id': None, 'file': None,
+              'reference_state': 'unknown', 'registered_file': None, 'receipt_state': 'unknown',
+              'identity_state': 'unknown', 'identity_basis': None, 'identity_evidence_file': None,
+              'identity_evidence_observed_at': None, 'observed_at': None,
+              'observed_at_source': None, 'listing_field_at': None, 'reason': None}
     def unknown(reason):
         result['reason'] = reason
         return result
@@ -54,32 +60,86 @@ def resolve_formal_fields(root, product_id, listings, *, channel=None, listing_i
     registered = listing.get('formal_fields') or {}
     value = registered.get('file') if isinstance(registered, dict) else None
     if not isinstance(value, str) or not value.strip():
+        result['reference_state'] = 'not_registered'
         return unknown('formal_receipt_not_registered')
-    relative = Path(value.replace('\\', '/'))
-    if relative.is_absolute() or PureWindowsPath(value).drive or '..' in relative.parts:
-        return unknown('unsafe_receipt_path')
+    result['reference_state'] = 'registered'
+    result['listing_field_at'] = registered.get('at')
     root = Path(root).resolve()
-    path = (root / relative).resolve()
-    if not path.is_relative_to(root):
+    def safe_path(name):
+        if not isinstance(name, str) or not name.strip():
+            return None
+        relative = Path(name.replace('\\', '/'))
+        if relative.is_absolute() or PureWindowsPath(name).drive or '..' in relative.parts:
+            return None
+        try:
+            target = (root / relative).resolve()
+        except OSError:
+            return None
+        return target if target.is_relative_to(root) else None
+    path = safe_path(value)
+    if path is None:
         return unknown('unsafe_receipt_path')
+    result['registered_file'] = value
     try:
         snap = json.loads(path.read_text(encoding='utf-8-sig'))
-        if not isinstance(snap, dict):
-            return unknown('invalid_formal_receipt')
-        response = snap.get('response') or {}
-        actual = (response.get('product') if isinstance(response, dict) else None) or snap.get('product')
-        if not isinstance(actual, dict) or not actual:
-            return unknown('invalid_formal_receipt')
-        requested = snap.get('requested_product_id')
-        returned = str(actual.get('product_id') or '')
-        if requested is None and not returned:
-            return unknown('receipt_identity_unknown')
-        if (requested is not None and str(requested) != selected_id) or (returned.isdigit() and returned != selected_id):
-            return unknown('receipt_listing_mismatch')
     except (OSError, UnicodeError, ValueError):
+        result['receipt_state'] = 'unavailable'
         return unknown('formal_receipt_unavailable')
-    result.update(state='recorded', file=value, reason=None,
-                  observed_at=snap.get('observed_at_utc') or snap.get('observed_at') or registered.get('at'))
+    if not isinstance(snap, dict):
+        result['receipt_state'] = 'invalid'
+        return unknown('invalid_formal_receipt')
+    response = snap.get('response') or {}
+    actual = (response.get('product') if isinstance(response, dict) else None) or snap.get('product')
+    if not isinstance(actual, dict) or not actual:
+        result['receipt_state'] = 'invalid'
+        return unknown('invalid_formal_receipt')
+    result['receipt_state'] = 'available'
+    for key in ('observed_at_utc', 'observed_at'):
+        value_at = snap.get(key)
+        if isinstance(value_at, str):
+            try:
+                datetime.fromisoformat(value_at.replace('Z', '+00:00'))
+            except ValueError:
+                continue
+            result['observed_at'] = value_at
+            result['observed_at_source'] = 'receipt.' + key
+            break
+    requested = snap.get('requested_product_id')
+    returned = str(actual.get('product_id') or '')
+    if (requested is not None and str(requested) != selected_id) or (returned.isdigit() and returned != selected_id):
+        result['identity_state'] = 'mismatch'
+        return unknown('receipt_listing_mismatch')
+    if requested is not None and snap.get('method') == 'alibaba.icbu.product.get':
+        result['identity_basis'] = 'receipt_requested_product_id'
+    elif returned.isdigit():
+        result['identity_basis'] = 'receipt_numeric_product_id'
+    elif returned:
+        prior_path = safe_path(identity_evidence_file)
+        try:
+            prior = json.loads(prior_path.read_text(encoding='utf-8-sig')) if prior_path and prior_path != path else {}
+            prior_response = (prior.get('response') or {}) if isinstance(prior, dict) else {}
+            prior_product = prior_response.get('product') if isinstance(prior_response, dict) else None
+            prior_time = (prior.get('observed_at_utc') or prior.get('observed_at')) if isinstance(prior, dict) else None
+            dated = False
+            if isinstance(prior_time, str):
+                try:
+                    datetime.fromisoformat(prior_time.replace('Z', '+00:00'))
+                    dated = True
+                except ValueError:
+                    pass
+            if (dated and isinstance(prior, dict) and prior.get('method') == 'alibaba.icbu.product.get'
+                    and str(prior.get('requested_product_id') or '') == selected_id
+                    and isinstance(prior_product, dict)
+                    and str(prior_product.get('product_id') or '') == returned):
+                result['identity_basis'] = 'same_opaque_id_as_requested_receipt'
+                result['identity_evidence_file'] = identity_evidence_file
+                result['identity_evidence_observed_at'] = prior_time
+        except (OSError, UnicodeError, ValueError):
+            pass
+    if not result['identity_basis']:
+        result['identity_state'] = 'unverified'
+        return unknown('receipt_identity_unverified')
+    result.update(state='recorded', file=value, identity_state='matched', reason=None)
     return result
 
 

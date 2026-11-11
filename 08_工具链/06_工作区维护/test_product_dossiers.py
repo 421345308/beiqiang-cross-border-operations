@@ -32,7 +32,8 @@ class DossierReceipts(unittest.TestCase):
                           'formal_fields': {'file': 'receipts/new.json', 'at': '2026-11-03T05:00:00Z'}}],
         }
         self.write_json(dossiers.DETAILS / self.pid / 'formal_get.json',
-                        {'observed_at_utc': '2026-09-01', 'response': {'product': {
+                        {'requested_product_id':self.pid,'method':'alibaba.icbu.product.get',
+                         'observed_at_utc': '2026-09-01', 'response': {'product': {
                             'product_id': self.pid, 'subject': 'old shoe', 'main_image': {'images': [self.old_url]}}}})
         self.write_json('receipts/new.json', {'product': {'product_id': self.pid, 'subject': 'new shoe', 'status': 'approved',
                                                          'main_image': {'images': [self.short_url]}}})
@@ -53,6 +54,8 @@ class DossierReceipts(unittest.TestCase):
         result = self.render()
         self.assertIn('new shoe', result)
         self.assertIn('2026-11-03T05:00:00Z', result)
+        self.assertIn('回执观察时间 未记录', result)
+        self.assertIn('渠道记录at字段 2026-11-03T05:00:00Z（性质未核，不替代观察时间）', result)
         self.assertIn('images/new.jpg', result)
         self.assertIn(self.short_url, result)
         self.assertNotIn('old shoe', result)
@@ -68,6 +71,13 @@ class DossierReceipts(unittest.TestCase):
         self.assertNotIn(self.old_url, result)
         dossiers.sync_formal_references(self.data)
         self.assertEqual(self.data['listings'][0]['formal_fields']['file'], 'receipts/new.json')
+
+    def test_registered_opaque_receipt_without_identity_stays_unverified(self):
+        self.write_json('receipts/new.json', {'product': {'product_id': 'opaque', 'subject': 'unverified'}})
+        result=self.render()
+        self.assertIn('已登记的正式回读不可用或归属未核',result)
+        self.assertNotIn('unverified',result)
+        self.assertNotIn('old shoe',result)
 
     def test_unregistered_old_receipt_is_not_promoted(self):
         del self.data['listings'][0]['formal_fields']

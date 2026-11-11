@@ -25,17 +25,18 @@ def official_image_key(url):
     return re.sub(r'\.(?:jpe?g|png|webp|gif)$', '', match.group(1), flags=re.I)
 
 
-def formal_snapshot(listing, listings=None):
-    """Only the explicitly registered per-listing receipt is a current reference."""
+def formal_snapshot(listing, listings=None, identity_evidence_file=None):
+    """Only a registered receipt with checkable listing identity is current."""
     registered = listing.get('formal_fields') or {}
     path = Path(registered['file']) if registered.get('file') else None
     resolved = resolve_formal_fields(ROOT, listing.get('product_id'), listings if listings is not None else [listing],
-                                     channel='alibaba', listing_id=listing.get('id'))
+                                     channel='alibaba', listing_id=listing.get('id'),
+                                     identity_evidence_file=identity_evidence_file)
     if resolved['state'] != 'recorded':
-        return path, None, None
+        return path, None, resolved
     snap = read(ROOT / path)
     actual = (snap.get('response') or {}).get('product') or snap.get('product')
-    return path, actual, resolved['observed_at']
+    return path, actual, resolved
 
 
 def indexed_image(url, product, index):
@@ -129,14 +130,16 @@ def builds(data):
         lines += ['', '## 国际站链接与本地正式字段', '']
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
-            path, actual, observed_at = formal_snapshot(listing, data['listings'])
+            path, actual, resolved = formal_snapshot(listing, data['listings'], identity_evidence_file=current)
             prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
             model_label=('历史编号 · ' if re.fullmatch(r'HR[-_]?\d+(?:-[A-Z]+)?',listing['model'],re.I) else '')+listing['model']
             lines += [f"### {model_label} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
             if actual:
                 absent=(listing.get('observation',{}).get('current_presence') or {}).get('state')=='CURRENT_CATALOG_ABSENT_AND_EXACT_GET_NO_PRODUCT'
-                prefix='换款前历史' if prior else '历史' if absent else '当前'
-                lines += [f"- {prefix}正式回读：{ref(path,parent,'完整商品字段')}；时间 {observed_at or '待补'}。", f"- {prefix}正式标题：{actual.get('subject','')}", f"- {prefix}审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
+                prefix='换款前历史' if prior else '历史' if absent else '已登记'
+                lines += [f"- {prefix}正式回读：{ref(path,parent,'完整商品字段')}；回执观察时间 {resolved['observed_at'] or '未记录'}；渠道记录at字段 {resolved['listing_field_at'] or '未记录'}（性质未核，不替代观察时间）；身份依据 `{resolved['identity_basis']}`。", f"- {prefix}正式标题：{actual.get('subject','')}", f"- {prefix}审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
+                if resolved.get('identity_evidence_file'):
+                    lines.append('- 身份比对依据：'+ref(resolved['identity_evidence_file'],parent,'带请求ID的历史回读'))
                 group_id=str(actual.get('group_id') or '')
                 group_file=DETAILS.parent/'店内分组'/(group_id+'.json')
                 if group_id and (ROOT/group_file).exists():
@@ -155,7 +158,7 @@ def builds(data):
                         else:
                             lines.append(f'  - M{slot}：本地图片待补；官方来源 {url}')
                 else:
-                    lines.append('- 当前正式回读未返回主图；不继承旧图库。')
+                    lines.append('- 该正式回读未返回主图；不继承旧图库。')
             else:
                 if listing.get('formal_fields', {}).get('file'):
                     lines.append(f"- 已登记的正式回读不可用或归属未核：{ref(path,parent,'登记的回读')}；不回退旧字段。")
@@ -194,11 +197,13 @@ def builds(data):
 
 def sync_formal_references(data):
     seen = 0
+    products = {product['id']: product for product in data['products']}
     for listing in data['listings']:
         path = DETAILS / listing['id'] / 'formal_get.json'
         registered = (listing.get('formal_fields') or {}).get('file')
+        identity = (products.get(listing.get('product_id'), {}).get('local_assets') or {}).get('current_fields_file')
         resolved = resolve_formal_fields(ROOT, listing.get('product_id'), data['listings'],
-                                         channel='alibaba', listing_id=listing.get('id'))
+                                         channel='alibaba', listing_id=listing.get('id'), identity_evidence_file=identity)
         if resolved['state'] != 'recorded':
             continue
         if Path(registered).as_posix() != path.as_posix():

@@ -87,16 +87,20 @@ class Workspace:
             fail("INPUT_TOO_LARGE", "JSON source exceeds 30MB")
         return json.loads(path.read_text(encoding="utf-8-sig"))
 
-    def _formal_fields(self, product_id, listings, channel, listing_id):
-        empty = {"state": "unknown", "channel": channel, "listing_id": None,
-                 "file": None, "observed_at": None, "reason": "resolver_unavailable"}
+    def _formal_fields(self, product_id, listings, channel, listing_id, identity_evidence_file=None):
+        empty = {"state": "unknown", "channel": channel, "listing_id": None, "file": None,
+                 "reference_state": "unknown", "registered_file": None, "receipt_state": "unknown",
+                 "identity_state": "unknown", "identity_basis": None, "identity_evidence_file": None,
+                 "identity_evidence_observed_at": None, "observed_at": None, "observed_at_source": None,
+                 "listing_field_at": None, "reason": "resolver_unavailable"}
         path = self.root / "08_工具链/06_工作区维护/product_registry.py"
         if not path.is_file():
             return empty
         spec = importlib.util.spec_from_file_location("commerce_product_registry", path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        return module.resolve_formal_fields(self.root, product_id, listings, channel=channel, listing_id=listing_id)
+        return module.resolve_formal_fields(self.root, product_id, listings, channel=channel, listing_id=listing_id,
+                                            identity_evidence_file=identity_evidence_file)
 
     def inspect_product(self, sku, listing_id=None, channel=None):
         ledger = self.json(LEDGER)
@@ -127,17 +131,17 @@ class Workspace:
         source_ids += product.get("candidate_source_ids", [])
         sources = [s for s in ledger.get("sources", []) if s["id"] in source_ids]
         selected = dict(product=product, listings=listings, sources=sources)
-        formal = self._formal_fields(product["id"], ledger["listings"], channel, listing_id)
         projected = dict(product)
         local = dict(product.get("local_assets") or {})
         legacy = local.pop("current_fields_file", None)
+        formal = self._formal_fields(product["id"], ledger["listings"], channel, listing_id, legacy)
         historical = [legacy] if isinstance(legacy, str) and legacy != formal.get("file") else []
         if "local_assets" in product:
             projected["local_assets"] = local
         projected_listings = []
         for row in listings:
             entry = dict(row)
-            row_formal = self._formal_fields(product["id"], ledger["listings"], channel, row.get("id"))
+            row_formal = self._formal_fields(product["id"], ledger["listings"], channel, row.get("id"), legacy)
             local_sync = dict(row.get("local_sync") or {})
             sync_file = local_sync.pop("current_fields_file", None)
             if sync_file and sync_file != row_formal.get("file"):
@@ -154,6 +158,7 @@ class Workspace:
             "selected_listing_id": listing_id, "listing_ids": [str(p["id"]) for p in listings],
             "product": projected, "listings": projected_listings, "sources": sources, "references": references,
             "platform_formal_fields": formal, "historical_or_preparation_paths": historical,
+            "unverified_reference_paths": [formal["registered_file"]] if formal.get("registered_file") and not formal.get("file") else [],
             "record_hash": digest(selected), "ledger_updated_on": ledger.get("updated_on"),
             "evidence_interpretation": "Local ledger observations, not live status; use the registered per-listing formal receipt for platform fields. Product-level and unverified paths are historical or preparation evidence, not a publish approval.",
             "identity_layers": {"canonical_product": product["id"], "aliases": product.get("aliases", []),

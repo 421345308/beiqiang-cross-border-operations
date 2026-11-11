@@ -206,6 +206,14 @@ class ProductProjectionTests(BusinessTests):
         self.assertIn('new.json',brief['selected_evidence_paths'])
         self.assertNotIn('old.json',brief['selected_evidence_paths'])
         self.assertEqual(brief['historical_or_preparation_paths'],['old.json'])
+        self.assertIsNone(brief['alibaba_formal_fields']['observed_at'])
+        self.assertEqual(brief['alibaba_formal_fields']['listing_field_at'],'2026-11-11T03:33:49Z')
+        self.write('new.json',{'product':{'product_id':'encrypted','subject':'unverified'}})
+        unknown=json.loads(self.business.get_object('product:BQ009')['content'])
+        self.assertEqual(unknown['alibaba_formal_fields']['identity_state'],'unverified')
+        self.assertEqual(unknown['unverified_reference_paths'],['new.json'])
+        self.assertNotIn('new.json',unknown['selected_evidence_paths'])
+        self.write('new.json',{'product':{'product_id':'1601','subject':'new'}})
         channel['listings'].append({'id':'1602','product_id':'BQ009','formal_fields':{'file':'new.json'}})
         self.write(CHANNEL,channel)
         obj=self.business.get_object('product:BQ009');brief=json.loads(obj['content'])
@@ -213,5 +221,18 @@ class ProductProjectionTests(BusinessTests):
         self.assertNotIn('new.json',brief['selected_evidence_paths'])
         self.assertNotIn('old.json',brief['selected_evidence_paths'])
         self.assertEqual(obj['subtitle'],'')
+
+    def test_duplicate_product_identity_does_not_resolve_platform_fields(self):
+        import json
+        from business import PRODUCTS, CHANNEL
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        data['products'].append(dict(data['products'][0]))
+        self.write(PRODUCTS,data)
+        channel=json.loads((self.root/CHANNEL).read_text(encoding='utf8'))
+        channel['listings'][0]['formal_fields']={'file':'new.json'};self.write(CHANNEL,channel)
+        self.write('new.json',{'product':{'product_id':'1601'}})
+        for obj in self.business._products():
+            self.assertEqual(json.loads(obj['content'])['alibaba_formal_fields']['reason'],'product_identity_unknown')
 
 if __name__=='__main__':unittest.main()

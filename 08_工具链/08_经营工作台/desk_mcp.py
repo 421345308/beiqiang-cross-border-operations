@@ -372,7 +372,8 @@ class DeskTools:
         if obj.get('kind')=='product':
             file=self.root/PRODUCTS
             rows=json.loads(file.read_text(encoding='utf-8-sig')).get('products',[])
-            product=next((r for r in rows if r.get('id')==self.object_id.removeprefix('product:')),None)
+            matches=[r for r in rows if r.get('id')==self.object_id.removeprefix('product:')]
+            product=matches[0] if len(matches)==1 else None
             paths[CHANNEL]='current-channel-records'
             if product:
                 # Only a product explicitly declaring this canonical archive
@@ -400,6 +401,8 @@ class DeskTools:
                     if isinstance(ref,str):paths[ref]='selected-evidence'
                 for ref in brief.get('historical_or_preparation_paths',[]):
                     if isinstance(ref,str):paths.setdefault(ref,'historical-or-preparation')
+                for ref in brief.get('unverified_reference_paths',[]):
+                    if isinstance(ref,str):paths.setdefault(ref,'registered-reference-unverified')
                 if q:
                     for ref in product.get('evidence',[]):
                         if isinstance(ref,str) and q.casefold() in ref.casefold():paths.setdefault(ref,'historical-evidence')
@@ -409,8 +412,10 @@ class DeskTools:
                 product_id=self.object_id.removeprefix('product:')
                 for row in listings:
                     if row.get('product_id')==product_id:
-                        formal=resolve_formal_fields(self.root,product_id,listings,channel='alibaba',listing_id=row.get('id'))
+                        identity=((product.get('local_assets') or {}).get('current_fields_file') if product else None)
+                        formal=resolve_formal_fields(self.root,product_id if product else None,listings,channel='alibaba',listing_id=row.get('id'),identity_evidence_file=identity)
                         if formal.get('file'):paths[formal['file']]='formal-readback-listing-'+str(row.get('id'))
+                        elif formal.get('registered_file'):paths.setdefault(formal['registered_file'],'registered-reference-unverified')
                         local=(row.get('local_sync')or{}).get('current_fields_file')
                         if isinstance(local,str) and local!=formal.get('file'):paths.setdefault(local,'local-sync-unverified')
             paths['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md']='applicable-sop'
@@ -472,8 +477,9 @@ class DeskTools:
             except UnicodeDecodeError:content=raw.decode('gb18030')
             if path==PRODUCTS:
                 rows=json.loads(content).get('products',[])
-                row=next((r for r in rows if r.get('id')==self.object_id.removeprefix('product:')),None)
-                if row is None:raise ValueError('原档未找到当前产品')
+                matches=[r for r in rows if r.get('id')==self.object_id.removeprefix('product:')]
+                if len(matches)!=1:raise ValueError('原档产品身份缺失或不唯一')
+                row=matches[0]
                 row={k:v for k,v in row.items() if k!='evidence'}
                 local=dict(row.get('local_assets') or {})
                 legacy=local.pop('current_fields_file',None)
@@ -487,10 +493,14 @@ class DeskTools:
                 all_rows=channel_data.get('listings',[])
                 product_id=self.object_id.removeprefix('product:')
                 rows=[r for r in all_rows if r.get('product_id')==product_id]
+                products_file=self.root/PRODUCTS
+                products=json.loads(products_file.read_text(encoding='utf-8-sig')).get('products',[]) if products_file.is_file() else []
+                matches=[p for p in products if p.get('id')==product_id]
+                identity=((matches[0].get('local_assets') or {}).get('current_fields_file') if len(matches)==1 else None)
                 selected=[]
                 for row in rows:
                     current=row.get('current_platform_fields') or {}
-                    formal=resolve_formal_fields(self.root,product_id,all_rows,channel='alibaba',listing_id=row.get('id'))
+                    formal=resolve_formal_fields(self.root,product_id if len(matches)==1 else None,all_rows,channel='alibaba',listing_id=row.get('id'),identity_evidence_file=identity)
                     local=dict(row.get('local_sync') or {})
                     local_file=local.pop('current_fields_file',None)
                     if local_file and local_file!=formal.get('file'):local['unverified_field_file']=local_file

@@ -29,14 +29,19 @@ class SourceIdentity(unittest.TestCase):
             (root/'new.json').write_text(json.dumps({'product':{'product_id':pid}}),encoding='utf-8')
             with patch('build_product_workspace.ROOT',root), patch('product_dossiers.ROOT',root):
                 query=build(data)[QUERY].decode()
-                self.assertIn('已登记正式回读',query)
+                self.assertIn('已登记且身份有依据的回读',query)
                 self.assertIn('new.json',query)
                 self.assertIn('产品级历史或准备资料（非当前平台字段）',query)
                 self.assertIn('old.json',query)
+                (root/'new.json').write_text(json.dumps({'product':{'product_id':'opaque'}}),encoding='utf-8')
+                unknown=build(data)[QUERY].decode()
+                self.assertIn('已登记回读（身份待核，非当前结论）',unknown)
+                self.assertNotIn('已登记且身份有依据的回读',unknown)
+                (root/'new.json').write_text(json.dumps({'product':{'product_id':pid}}),encoding='utf-8')
                 second=copy.deepcopy(data['listings'][0]);second['id']='1600000000002';data['listings'].append(second)
                 ambiguous=build(data)[QUERY].decode()
                 self.assertIn('multiple_listings',ambiguous)
-                self.assertNotIn('已登记正式回读',ambiguous)
+                self.assertNotIn('已登记且身份有依据的回读',ambiguous)
 
     def test_candidate_never_exports_as_formally_adopted(self):
         data=fixture()

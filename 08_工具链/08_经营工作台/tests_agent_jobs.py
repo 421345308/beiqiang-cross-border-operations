@@ -452,6 +452,14 @@ class AgentJobTests(unittest.TestCase):
         listing=json.loads(tools.read(CHANNEL)['content'])['listings'][0]
         self.assertEqual(listing['formal_field_resolution']['file'],'new.json')
         self.assertEqual(listing['local_sync']['unverified_field_file'],'old.json')
+        (self.root/'new.json').write_text(json.dumps({'product':{'product_id':'encrypted'}}),encoding='utf8')
+        self.app.business.obj['content']=json.dumps({'selected_evidence_paths':[],
+            'historical_or_preparation_paths':['old.json'],'unverified_reference_paths':['new.json']})
+        roles={row['path']:row['role'] for row in tools.sources()}
+        self.assertEqual(roles['new.json'],'registered-reference-unverified')
+        listing=json.loads(tools.read(CHANNEL)['content'])['listings'][0]
+        self.assertEqual(listing['formal_field_resolution']['identity_state'],'unverified')
+        self.assertIsNone(listing['formal_field_resolution']['file'])
 
     def test_sources_default_compact_history_search_and_current_projection(self):
         products=self.root/PRODUCTS;products.parent.mkdir(parents=True)

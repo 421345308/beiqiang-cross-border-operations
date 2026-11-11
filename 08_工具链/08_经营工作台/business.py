@@ -113,6 +113,8 @@ class Business:
         channel_file=self.root/CHANNEL
         channel_states=json.loads(channel_file.read_text(encoding='utf-8-sig')).get('product_state',{}) if channel_file.is_file() else {}
         products=self._json(PRODUCTS,'products')
+        product_id_counts={}
+        for row in products:product_id_counts[row.get('id')]=product_id_counts.get(row.get('id'),0)+1
         # Only explicit product identities and recorded current models claim a
         # website code. Multiple product records claiming a code are ambiguous.
         website_owners={}
@@ -204,9 +206,10 @@ class Business:
             evidence=[p for p in product.get('evidence',[]) if isinstance(p,str)]
             evidence.sort(key=lambda p:(bool(re.search(r'receipt|verification|after_get|after_render|update_once',p,re.I)),not bool(re.search(r'facts|事实|原包|规格|计划|copy',p,re.I))))
             local=product.get('local_assets') or {}
-            formal=resolve_formal_fields(self.root,pid,all_channel_listings,channel='alibaba')
             legacy=local.get('current_fields_file')
+            formal=resolve_formal_fields(self.root,pid if product_id_counts.get(pid)==1 else None,all_channel_listings,channel='alibaba',identity_evidence_file=legacy)
             historical=[legacy] if isinstance(legacy,str) and legacy!=formal.get('file') else []
+            unverified=[formal['registered_file']] if formal.get('registered_file') and not formal.get('file') else []
             selected=[p for p in [formal.get('file'),local.get('current_buyer_copy'),local.get('current_assortment')]+evidence if isinstance(p,str) and p not in historical]
             selected=list(dict.fromkeys(selected))[:8]
             core={k:product[k] for k in ('id','current_model','aliases','source_state','raw_packages','notes','supply_mode','publication_disposition') if k in product}
@@ -227,7 +230,8 @@ class Business:
             obj['other_channels']={'douyin':{'source_available':douyin_file.is_file(),'listings':douyin},'website':website}
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
                 'supply_source':source_core,'selected_evidence_paths':selected,'alibaba_formal_fields':formal,
-                'historical_or_preparation_paths':historical,'channel_listings':channel_core,'other_channels':obj['other_channels'],
+                'historical_or_preparation_paths':historical,'unverified_reference_paths':unverified,
+                'channel_listings':channel_core,'other_channels':obj['other_channels'],
                 'full_index':PRODUCTS,'boundary':'channel_listings.current是本地记录投影；平台正式字段按alibaba_formal_fields及逐ID回读核对。标题/用途候选不是材料、功能、自有工厂或供货承诺的证明。'},ensure_ascii=False,indent=2)
             result.append(obj)
         return result
