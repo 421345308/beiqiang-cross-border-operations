@@ -5857,7 +5857,14 @@
       "observed_at": "历史记录；日期见原证据",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
-      ]
+      ],
+      "availability_observation": {
+        "state": "MERCHANT_ANNOUNCED_DELISTED",
+        "observed_on": "2026-11-11",
+        "announcement_date": "2026-10-18",
+        "url": "https://yjxf.sooxie.com/describe/",
+        "scope": "店铺公告仅指历史来源型号25273；不推断该店其他型号状态。"
+      }
     },
     {
       "id": "src-edd8fc33a0c7",
@@ -11036,6 +11043,87 @@
         "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
       ],
       "source_state": "RESEARCH_CANDIDATE"
+    },
+    {
+      "id": "src-bomei-nurse5192-102",
+      "url": "https://gb.qzbmshoes.com/products_details/102.html",
+      "shop_url": "https://gb.qzbmshoes.com",
+      "supplier": "泉州博美鞋业有限公司",
+      "model": "5192",
+      "colors": [],
+      "page_size_range": "未在已读页面注明",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "页面标价单位及实际成交和供货条件待确认。"
+    },
+    {
+      "id": "src-jztgcd-jzt81622-2543263",
+      "url": "https://jztgcd.sooxie.com/detail/2543263",
+      "shop_url": "https://jztgcd.sooxie.com",
+      "supplier": "金足特工厂店",
+      "model": "JZT81622",
+      "colors": [
+        "白色",
+        "白色镂空"
+      ],
+      "page_size_range": "34–41；尺码体系未注明",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "页面标价单位及实际成交和供货条件待确认。"
+    },
+    {
+      "id": "src-yjxf-2505-2164769",
+      "url": "https://yjxf.sooxie.com/detail/2164769",
+      "shop_url": "https://yjxf.sooxie.com",
+      "supplier": "有间鞋坊",
+      "model": "2505",
+      "colors": [
+        "黑色",
+        "灰色"
+      ],
+      "page_size_range": "37–45；尺码体系未注明",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "页面标价单位及实际成交和供货条件待确认。"
+    },
+    {
+      "id": "src-zhengbo-29968-2380707",
+      "url": "https://zhengbo.sooxie.com/detail/2380707",
+      "shop_url": "https://zhengbo.sooxie.com",
+      "supplier": "正博鞋业",
+      "model": "29968",
+      "colors": [
+        "黑色",
+        "白色"
+      ],
+      "page_size_range": "39–44；尺码体系未注明",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "页面标价单位及实际成交和供货条件待确认。"
     }
   ],
   "imported_evidence": [
@@ -11859,10 +11947,80 @@
     {
       "id": "supplier-91f826fb2721",
       "shop_url": "https://yjxf.sooxie.com",
-      "names": [],
+      "names": [
+        "有间鞋坊"
+      ],
       "source_ids": [
-        "src-ec11e7a32502"
-      ]
+        "src-ec11e7a32502",
+        "src-yjxf-2505-2164769"
+      ],
+      "matching_profile": {
+        "product_directions": [
+          {
+            "name": "低帮增高鞋/休闲鞋",
+            "scope": "2505；页面列黑灰及37–45；具体增高结构、尺码体系和外形匹配待确认。",
+            "source_ids": [
+              "src-yjxf-2505-2164769"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://yjxf.sooxie.com/detail/2164769",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方页面及当次记录；不证明实物库存或逐款制造主体。"
+              }
+            ]
+          }
+        ],
+        "process_directions": [],
+        "factory_identity": {
+          "status": "SELF_CLAIMED_FACTORY",
+          "summary": "2505商品页称工厂直营，店铺简介称工厂拿货；实际生产主体与产线未经独立核实。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://yjxf.sooxie.com/detail/2164769",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "商品标题的自述；不能据此认定店铺或逐款的制造身份。"
+            },
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://yjxf.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺简介称工厂拿货。"
+            }
+          ]
+        },
+        "customization": {
+          "status": "UNKNOWN",
+          "summary": "尚未找到2505的具体改样能力依据。",
+          "evidence": []
+        },
+        "location": {
+          "city": "泉州",
+          "type": "店铺/拿货地",
+          "summary": "店铺页面列拿货地点，非已确认工厂地址。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://yjxf.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺页面列取货信息，不等于工厂地址。"
+            }
+          ]
+        },
+        "owner_interactions": [],
+        "open_questions": [
+          "2505增高结构是鞋内垫、鞋底还是组合，鞋码属于什么体系？",
+          "能否提供与参考鞋相近的实物图，并确认鞋面、鞋底、内垫和标识可改范围？",
+          "实际生产主体、工厂地点以及样品、混码和报价条件如何？",
+          "历史型号25273曾被本店公告列为下架，其他款是否有现货须分别确认。"
+        ]
+      }
     },
     {
       "id": "supplier-493cc9235742",
@@ -12840,7 +12998,8 @@
       ],
       "source_ids": [
         "src-bomei-bm678-173",
-        "src-bomei-bm677-172"
+        "src-bomei-bm677-172",
+        "src-bomei-nurse5192-102"
       ],
       "matching_profile": {
         "product_directions": [
@@ -12873,6 +13032,22 @@
                 "path": "",
                 "observed_on": "2026-11-11",
                 "summary": "供方商品页面；不是实时供货或性能证明。"
+              }
+            ]
+          },
+          {
+            "name": "护士鞋/护理工作鞋",
+            "scope": "5192；官网列护士鞋及自定义标识，鞋型、材料、尺码与实际生产方待核。",
+            "source_ids": [
+              "src-bomei-nurse5192-102"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://gb.qzbmshoes.com/products_details/102.html",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方页面及当次记录；不证明实物库存或逐款制造主体。"
               }
             ]
           }
@@ -12908,7 +13083,7 @@
         },
         "customization": {
           "status": "SUPPLIER_SELF_CLAIM",
-          "summary": "官网展示OEM/ODM，BM-678与BM-677商品页列自定义标识；实际打样及订单条件待确认。",
+          "summary": "官网展示OEM/ODM；BM-678、BM-677及5192商品页列自定义标识，实际打样及订单条件待确认。",
           "evidence": [
             {
               "kind": "SUPPLIER_SELF_CLAIM",
@@ -12930,6 +13105,13 @@
               "path": "",
               "observed_on": "2026-11-11",
               "summary": "BM-677页面列自定义标识。"
+            },
+            {
+              "kind": "SUPPLIER_PRODUCT_PAGE",
+              "url": "https://gb.qzbmshoes.com/products_details/102.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "5192页面列自定义标识；具体可改结构及订单条件待核。"
             }
           ]
         },
@@ -12951,7 +13133,171 @@
         "open_questions": [
           "BM-678与BM-677分别由哪家工厂、哪条产线生产，实际工厂地址及营业主体是什么？",
           "针对客户鞋型，可修改哪些鞋底、颜色、标识和包装；样品及数量条件如何？",
-          "客户如提出特定厨房地面或测试标准，能否提供与所选款式和版本对应的资料？"
+          "客户如提出特定厨房地面或测试标准，能否提供与所选款式和版本对应的资料？",
+          "5192的实际鞋面、扣带、鞋底及尺码是什么，可否按参考款修改？"
+        ]
+      }
+    },
+    {
+      "id": "supplier-8511a8d28f5c",
+      "shop_url": "https://jztgcd.sooxie.com",
+      "names": [
+        "金足特工厂店"
+      ],
+      "source_ids": [
+        "src-jztgcd-jzt81622-2543263"
+      ],
+      "matching_profile": {
+        "product_directions": [
+          {
+            "name": "护士鞋/护士工作鞋",
+            "scope": "JZT81622；页面列白色及白色镂空、34–41，尺码体系及逐色码供货待确认。",
+            "source_ids": [
+              "src-jztgcd-jzt81622-2543263"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://jztgcd.sooxie.com/detail/2543263",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方页面及当次记录；不证明实物库存或逐款制造主体。"
+              }
+            ]
+          }
+        ],
+        "process_directions": [
+          {
+            "name": "女鞋开模、定版、加工缝制（商家自述）",
+            "scope": "店铺自述业务方向；JZT81622具体改动、模具归属和制造关系待确认。",
+            "source_ids": [
+              "src-jztgcd-jzt81622-2543263"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_SELF_CLAIM",
+                "url": "https://jztgcd.sooxie.com/describe/",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "店铺自述女鞋加工及定制，未独立核验。"
+              }
+            ]
+          }
+        ],
+        "factory_identity": {
+          "status": "SELF_CLAIMED_FACTORY",
+          "summary": "店铺自称代加工工厂并提及金足特鞋业有限公司；该公司法定主体、门店关联及逐款制造未独立核实。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://jztgcd.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺简介自述；不是登记信息或验厂结果。"
+            }
+          ]
+        },
+        "customization": {
+          "status": "SUPPLIER_SELF_CLAIM",
+          "summary": "店铺简介称可定制开发；JZT81622具体可改结构与样品条件待确认。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://jztgcd.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺层面的定制说法，不能推断该款全部结构可改。"
+            }
+          ]
+        },
+        "location": {
+          "city": "泉州",
+          "type": "店铺/拿货地",
+          "summary": "店铺页面显示泉州拿货地，不等于工厂位置。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://jztgcd.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺页面列取货信息，不等于工厂地址。"
+            }
+          ]
+        },
+        "owner_interactions": [],
+        "open_questions": [
+          "JZT81622实际生产主体、工厂地点及店铺与所述公司的关系是什么？",
+          "白色和镂空版本的尺码体系、鞋面与底材料、当前供货及混码条件如何？",
+          "是否能按参考鞋修改孔位、扣带、鞋底或标识，样品及报价条件如何？"
+        ]
+      }
+    },
+    {
+      "id": "supplier-b83cefe61d2a",
+      "shop_url": "https://zhengbo.sooxie.com",
+      "names": [
+        "正博鞋业"
+      ],
+      "source_ids": [
+        "src-zhengbo-29968-2380707"
+      ],
+      "matching_profile": {
+        "product_directions": [
+          {
+            "name": "内增高鞋/运动休闲鞋",
+            "scope": "29968；商家标题称内增高，页面列黑白及39–44，尺码体系和增高结构待确认。",
+            "source_ids": [
+              "src-zhengbo-29968-2380707"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://zhengbo.sooxie.com/detail/2380707",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方页面及当次记录；不证明实物库存或逐款制造主体。"
+              }
+            ]
+          }
+        ],
+        "process_directions": [],
+        "factory_identity": {
+          "status": "SELF_CLAIMED_FACTORY",
+          "summary": "29968商品标题写工厂自营；未独立确认其经营主体、生产主体或具体产线。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://zhengbo.sooxie.com/detail/2380707",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "商品标题的商家自述，不是验厂证据。"
+            }
+          ]
+        },
+        "customization": {
+          "status": "UNKNOWN",
+          "summary": "未找到可确定29968接受来样改结构的依据；按具体订单询问。",
+          "evidence": []
+        },
+        "location": {
+          "city": "泉州",
+          "type": "店铺/拿货地",
+          "summary": "店铺页面列拿货地址，工厂位置未核。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://zhengbo.sooxie.com/describe/",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "店铺页面列取货信息，不等于工厂地址。"
+            }
+          ]
+        },
+        "owner_interactions": [],
+        "open_questions": [
+          "29968是否为自有产线生产，实际经营主体和工厂地点是什么？",
+          "内增高来自内垫还是鞋底，实际结构、高度口径与尺码体系如何？",
+          "可否调整鞋面、颜色、内垫或标识，样品、混码及报价条件如何？"
         ]
       }
     }
