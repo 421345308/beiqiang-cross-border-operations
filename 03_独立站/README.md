@@ -8,6 +8,45 @@
 
 国际站会话于 2026-11-10 15:46 UTC 取回完整官方目录：490 个唯一商品 ID，其中 482 条 `approved/Y`、6 条 `approved/N`、2 条 `tbd/N`；另有 29 条本地历史 ID 本次未检出，不能据此认定已下架。[原始目录及状态对比](../02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_商品状态只读/catalog_escalated/status_snapshot.json)保留时间及取数边界。按产品中心明确身份归并，482 条展示链接属于 247 个产品身份；网站 149 款覆盖其中 149 个身份，另有 **98 个身份 / 153 条展示链接**尚未进入网站投影，其中 68 个身份对应一条、30 个对应多条链接。此差异按当次平台状态与本地身份计算，不是 98 款已完成选款、可直接发布的结论。
 
+**待图的独立站草稿：BQ-LQ02507、BQ-LQ02508。** 两款分别复用产品中心原身份，拟用国际站链接 `1601973978339`、`1601973995230`，不是新建商品或同款多链接。2026-11-11 02:38 UTC 两条 `product.get` 正式回读均为 `approved/Y`，各有棕色、蓝色各 EU 39–48 共 20 个 SKU；中底、外底、内里均未指定，网站草稿不猜材料或实时库存。02507 是侧拉链加系带，02508 为系带无侧拉链；供货依据分别回[02507 商品档案](../02_Alibaba运营/02_单品优化记录/商品档案/BQ-LQ02507/README.md)与[02508 商品档案](../02_Alibaba运营/02_单品优化记录/商品档案/BQ-LQ02508/README.md)。两条完整正式回执保存在本机 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`，SHA256 分别为 `742cb2301d90a8776f78f801fc904f81728759236b25a5d33678fe17d51c3ed5`、`214e89bfd8d9d1eb04c38e106da6dc751cbc2390804015ea85b208d381d06e64`。
+
+02507 拟选原图 `19.jpg`（棕）、`24.jpg`（蓝），02508 拟选原图 `18.jpg`（棕）、`22.jpg`（蓝），均在[路崎原图目录](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/)对应款号内；四图原尺寸已查看，本机 SHA256 与各自[02507 正式图片银行映射](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02507准备/正式图片银行映射.json)和[02508 正式图片银行映射](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02508准备/正式图片银行映射.json)一致。四图无人物、未观察到可识别第三方字标；02507 五金局部太小，不能判断看不清的细节。已查资料尚未明确该四图可用于贝强独立站与产品册，这不等于确认侵权或断言授权不存在；继续查既有许可，必要时仅确认这四图用于商品页、五语产品册及尺寸/格式适配的范围和期限。原图 02–06 是其他推荐款，不混用。下列为编辑草稿，**未进入网站目录、询价清单或公开产品册**；工作台现已匹配原身份和各自国际站 ID，网站状态仍为 `not_in_subset`。待图组可用后再用正式链接计划工具及当前回读复核，分别验收五语页面、颜色、询价、产品册和工作台。
+
+| 语言 | BQ-LQ02507 文案草稿 | BQ-LQ02508 文案草稿 |
+| --- | --- | --- |
+| 中文 | 侧拉链系带低帮休闲鞋。棕色或蓝色，EU 39–48；请结合样品及订单确认合脚和供货。 | 拼片系带低帮休闲鞋。棕色或蓝色，EU 39–48；请结合样品及订单确认合脚和供货。 |
+| English | Side-Zip Lace-Up Low-Top Shoes. Brown or Blue, EU 39–48; confirm sample fit and order availability. | Panelled Lace-Up Low-Top Shoes. Brown or Blue, EU 39–48; confirm sample fit and order availability. |
+| Deutsch | Niedrige Schnürschuhe mit seitlichem Reißverschluss. Braun oder Blau, EU 39–48; Passform am Muster und Verfügbarkeit zur Bestellung bestätigen. | Niedrige Schnürschuhe mit mehrteiligen Einsätzen. Braun oder Blau, EU 39–48; Passform am Muster und Verfügbarkeit zur Bestellung bestätigen. |
+| Français | Chaussures basses à lacets et zip latéral. Marron ou bleu, EU 39–48 ; confirmer le chaussant sur échantillon et la disponibilité pour la commande. | Chaussures basses à lacets et empiècements. Marron ou bleu, EU 39–48 ; confirmer le chaussant sur échantillon et la disponibilité pour la commande. |
+| Español | Calzado bajo de cordones con cremallera lateral. Marrón o azul, EU 39–48; confirme el ajuste con una muestra y la disponibilidad para el pedido. | Calzado bajo de cordones con paneles. Marrón o azul, EU 39–48; confirme el ajuste con una muestra y la disponibilidad para el pedido. |
+
+**另备 BQ033、BQ037、BQ038 五语文案，仍未发布。** 产品中心记录负责人确认三款为本厂产品，拟分别指向国际站 `1601924345456`、`1601924347721`、`1601924732369`。2026-11-11 02:42–02:43 UTC 三款官方只读回读均为 `approved/Y`；运行中的本地工作台已匹配各自身份和上述 ID，网站仍为 `not_in_subset`。完整回执在本机 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`，SHA256 依次为 `58928f0d0a4b2566dff3dc6ffa01cc3a23e21871c1e67c75d3747876fcfdcf01`、`1c8a0e5efe4a20bd43141a72001d827f68234e5018d2f0f66e657d894bd3a745`、`70d7fc39d5ff3c31417f32a65f99a63deaacd7002235b1f02112c18b3abb0364`。尺码保留正式属性中的原始数字标签，不擅自换算；三款共 44、72、55 个颜色尺码组合，不把颜色或加绒版本算成独立款。
+
+历史颜色图包可在 `E:/贝强离线归档/产品旧档/历史制作资料/00_最终上传/` 的 `BQ033_T5503`、`BQ037_H7116`、`BQ038_M889` 中按对应款查到。BQ033 黑、米白、粉三色归档图与正式色图哈希一致，灰色归档图与正式色图不同，待按版本单独核；BQ037 黑白普通与加绒、BQ038 的黑白普通与加绒及全黑普通与加绒分别共用同一图片字节，不能将外观图写成加绒内里实拍。所查来源记录尚未明确这些照片的拍摄权利或独立站及产品册使用范围；本厂鞋款身份不自动证明照片权利，也不据此断言侵权。确认所选图可用依据并逐色复核后才进入网站投影。
+
+逐款补证位置：BQ033 的历史灰图 `02_grey.jpg` SHA256 为 `f7cd80c8e0406d6b16f075af71d965d33b015a3e80021c975bfdd067e2c2d95a`，正式灰图索引为 `449c211751fe71080efae1e0348d87b4cd1c716c7c232c740f3d9d5b3a972b51`，已查本地 72 张相关图仍未找到同哈希文件，不据此回改平台。BQ037 各色成品中黑白鞋头、白色鞋底有截断，完整六色来源图为 `E:/贝强离线归档/产品旧档/历史输入/待审_搜鞋网_2026-08-14/H7116/原图/12.webp`，SHA256 `25e1bcf5372f48ec4523c3139df48df957f9d387c15f88ffd8c650f554071430`；BQ038 的白色成品有截断，完整三色来源图为同一历史输入目录的 `M889/原图/11.webp`，SHA256 `e343af232299f50151dc2eb4a2b5396febc4b1c85df586deeaa2682aeeecaf57`。来源图可追溯不等于已取得独立站使用许可。
+
+另核 BQ040 / 1689（`1601924792152`）和 BQ041 / 202（`10000047127570`）：历史资料对应贝强搜鞋店商品，两款当前产品中心仍为 `MAPPED`，未记录已采用来源 ID，不能据旧店页面断定当前供货。2026-10-21 正式字段记录 BQ040 三色尺码 39–45、BQ041 三色尺码 31–40；尚未以本次接口重读。BQ041 三色原图及处理图在上述离线归档的 `历史输入/待审_搜鞋网_2026-08-14/202/原图` 与 `历史制作资料/00_最终上传/BQ041_202/03_颜色图` 中；色图无人物，来源和独立站使用范围仍需确认。BQ040 的部分色图包含人物、文案或图形，旧主图历史加工方式记录有歧义，暂不直接复用。两款均未进入网站草稿或正式目录。
+
+<details>
+<summary>BQ033、BQ037、BQ038 五语标题及色码草稿（未上线）</summary>
+
+| 款号 | 中文 | English | Deutsch | Français | Español |
+| --- | --- | --- | --- | --- | --- |
+| BQ033 | 针织系带鞋，发泡鞋底 | Knit Lace-Up Shoes with Foamed Sole | Strick-Schnürschuhe mit Schaumsohle | Chaussures en maille à lacets et semelle mousse | Calzado de punto con cordones y suela de espuma |
+| BQ037 | 针织系带鞋，撞色鞋头 | Knit Lace-Up Shoes with Contrast Toe | Strick-Schnürschuhe mit Kontrastkappe | Chaussures en maille à lacets et bout contrasté | Calzado de punto con cordones y puntera en contraste |
+| BQ038 | 针织系带鞋，EVA 鞋底 | Knit Lace-Up Shoes with EVA Sole | Strick-Schnürschuhe mit EVA-Sohle | Chaussures en maille à lacets et semelle EVA | Calzado de punto con cordones y suela de EVA |
+
+| 语言 | BQ033 色码 | BQ037 色码 | BQ038 色码 |
+| --- | --- | --- | --- |
+| 中文 | 黑、粉、米白、灰；尺码标签 35–45。 | 黑白、灰、白、蓝、绿及黑白加绒：尺码标签 35–45；紫色：35–40。 | 黑白、白、全黑；黑白及全黑另有加绒，尺码标签 35–45。 |
+| English | Black, Pink, Off White and Grey; size labels 35–45. | Black/White, Grey, White, Blue, Green and Black/White Fleece: size labels 35–45; Purple: 35–40. | Black/White, White and All Black; Black/White and All Black are also offered with fleece lining; size labels 35–45. |
+| Deutsch | Schwarz, Rosa, gebrochenes Weiß und Grau; Größenetiketten 35–45. | Schwarz/Weiß, Grau, Weiß, Blau, Grün und Schwarz/Weiß mit Fleecefutter: Größenetiketten 35–45; Violett: 35–40. | Schwarz/Weiß, Weiß und ganz Schwarz; Schwarz/Weiß und ganz Schwarz auch mit Fleecefutter; Größenetiketten 35–45. |
+| Français | Noir, rose, blanc cassé et gris ; pointures indiquées 35–45. | Noir/blanc, gris, blanc, bleu, vert et noir/blanc fourré : pointures indiquées 35–45 ; violet : 35–40. | Noir/blanc, blanc et noir intégral ; noir/blanc et noir intégral aussi fourrés ; pointures indiquées 35–45. |
+| Español | Negro, rosa, blanco roto y gris; tallas indicadas 35–45. | Negro/blanco, gris, blanco, azul, verde y negro/blanco con forro abrigado: tallas indicadas 35–45; morado: 35–40. | Negro/blanco, blanco y negro integral; negro/blanco y negro integral también con forro abrigado; tallas indicadas 35–45. |
+
+</details>
+
 本批 BQ-LQ018、BQ-LQ2572、BQ-LQ2578 分别对应既有身份 LQ-018、LQ-2572、LQ-2578，以及国际站 `1601974978404`、`1601974755167`、`1601974917344`；2026-11-11 逐款官方只读回读均为 `approved/Y`。018 四色 EU 37–48，仅采用有依据的橡胶外底；2572 米色和黑色 EU 39–46，宽鞋头、网面与 PU 外底有来源，合脚以样品确认；2578 三色 EU 39–46，贾卡织物鞋面、MD 中底和橡塑外底依正式字段记录。2572 的旧宣传图曾写 39–48，本次按当前来源和正式 SKU 展示 39–46。12 张原图按 [来源和 SHA256](02_开发记录/验收证据/20261110_产品对齐/lq-20261111-source-image-lineage.json) 留证，所选图未观察到明显第三方鞋标；部分 018、2578 图片有不含可识别人脸的手或腿部，摄影或模特使用许可未在现有材料中单独证明，未断言统一授权。2578 另有两张未选照片存在角度或版本疑问，本批未采用。
 
 本地工作台只读接口已按三条原身份回读到对应网站投影及国际站 ID。完整构建及 558 项测试中 551 项通过、7 项数据库测试因未配置跳过；类型检查通过，lint 无错误、9 项既有图片警告；五语产品册已渲染检查。[正式回读](02_开发记录/验收证据/20261110_产品对齐/lq-20261111-production-verification.json)通过 15 个五语商品页面、12 张网页图、5 份产品册及 3 条本地映射核对；中英文页指向相应国际站商品，德法西语页保留各自语言询价入口。正式页实测 018 黑卡其、2572 黑色和 2578 浅灰色，均联动对应图片与询价颜色；工厂视频及中英文字幕版本一致性通过，未提交真实询盘。其他候选的具体图像、既有经营决定和版本疑问记录在 [逐款筛查证据](02_开发记录/验收证据/20261110_产品对齐/lq-20261111-screening-evidence.json)，只就有关图片和产品判断，不将个别疑点扩大为全部商品阻塞。
