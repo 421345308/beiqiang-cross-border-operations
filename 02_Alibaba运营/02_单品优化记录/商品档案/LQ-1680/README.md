@@ -2,16 +2,16 @@
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`ADOPTED`。灰色色码图修正已提交，官方回读新图但审核中，买家页仍是旧图；继续核审核及公开展示。
+来源状态：`ADOPTED`。灰色色码图修正已通过平台审核并在买家页显示。
 
 ## 灰色色码详情图修复
 
 - 原问题：详情图将灰色写成 EU 33–48，官方 SKU 和买家选码为 EU 39–48；[原详情图](https://sc04.alicdn.com/kf/Hd8f79337c7e74921b05d176abeeebefcK.png)与 2026-11-10 的[官方回读](../../../01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/formal_get.json)留作历史依据。
 - 2026-11-11 03:17 UTC 按负责人指示只提交第三张详情图的替换，官方接口返回业务成功，请求 ID `0b0b3a2717943670259648177`；[修正图](https://sc04.alicdn.com/kf/H7df6474d495f44888f0362fac5c1e507S.png)灰色为 EU 39–48。
-- 03:25 UTC 的[官方回读](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T032520Z.json)第三张已是新图，审核/展示为 `modified / N`，其他三张的顺序、29 个 SKU、标题、价格及其他字段与提交前一致。
-- 提交后[买家页](https://www.alibaba.com/product-detail/Plush-Lined-Winter-Ankle-Boots-with_1601980486423.html)仍显示灰色 EU 33–48 的旧图，尚未完成公开验收。继续核对审核与买家端，不重复提交。
+- 03:33 UTC 的[官方回读](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T033349Z.json)第三张为新图，审核/展示已通过为 `approved / Y`，其他三张的顺序、29 个 SKU、标题、价格及其他字段与提交前一致。
+- 审核通过后[买家页](https://www.alibaba.com/product-detail/Plush-Lined-Winter-Ankle-Boots-with_1601980486423.html)已实际显示灰色 EU 39–48；黑色 EU 36–48、酒红 EU 36–41 也仍显示。提交后审核期间曾短暂显示旧图，已留存核验记录。
 - [本地修正成品](../../../../01_产品资产/02_成品素材/BQ-LQ1680/BQ-LQ1680-size-chart-EU39-48.png) SHA-256 `6c4be2dff4c6df208cccdb6173b38d4d8ff43161950ccf0dc14404132637fc47`；与平台旧图比较，修改框外也有轻微像素差异，不能称为框外像素完全一致。
-- [上传回执](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/upload_receipt.json)、[提交回执](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/update_receipt.json)、[核验摘要](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/latest_readback_summary.json)及[像素比较](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/pixel_verification.json)留作追溯。
+- [上传回执](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/upload_receipt.json)、[提交回执](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/update_receipt.json)、[最终核验](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/final_verification.json)及[像素比较](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/pixel_verification.json)留作追溯。
 
 ## 当前资料与实物证据
 
@@ -47,9 +47,9 @@
 ### BQ-LQ1680 · 1601980486423
 
 - 平台链接：[1601980486423](https://www.alibaba.com/product-detail/Plush-Lined-Winter-Ankle-Boots-with_1601980486423.html)
-- 最新正式回读：[完整商品字段](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T032520Z.json)；UTC 2026-11-11T03:25:20+00:00。
+- 最新正式回读：[完整商品字段](../../../01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T033349Z.json)；UTC 2026-11-11T03:33:49+00:00。
 - 当前正式标题：Plush Lined Winter Ankle Boots with Rotary Dial Closure Block Tread Shoes Black Grey Burgundy Wholesale EU Sizes
-- 审核/展示：2026-11-11 03:25 UTC 回读为 modified / N；平台类目ID：202248402。
+- 审核/展示：2026-11-11 03:33 UTC 回读为 approved / Y；平台类目ID：202248402。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
@@ -59,8 +59,8 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E7%B4%A0%E6%9D%90/BQ-LQ1680/BQ-LQ1680_8bfd012719e4d082.jpg) · 800×800
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E7%B4%A0%E6%9D%90/BQ-LQ1680/BQ-LQ1680_2bc1c6c6c6c1f28e.jpg) · 800×800
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
+- 本地同步状态：`FORMAL_GET_AND_BUYER_PAGE_VERIFIED`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；灰色色码详情图已审核通过并在买家页显示 EU 39–48；不重放历史文案。
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601980486423/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601980486423/update_receipt.json)
   - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601980486423/verification.json)
