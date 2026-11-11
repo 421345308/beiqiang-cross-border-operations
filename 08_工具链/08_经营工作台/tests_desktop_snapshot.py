@@ -77,6 +77,21 @@ class DesktopSnapshotTests(unittest.TestCase):
         self.assertFalse(self.app.db.in_transaction)
         self.assertEqual(self.service.read()['threads'][0]['title'],'Synthetic title')
 
+    def test_title_whitespace_preserved_but_controls_and_other_fields_rejected(self):
+        title='Synthetic\r\nTitle\t<script>literal</script>'
+        value=self.service.import_snapshot(self.payload([self.thread(title=title)]))
+        self.assertEqual(value['threads'][0]['title'],title)
+        for control in ('\x00','\x1b','\x7f','\x85','\u202e'):
+            with self.subTest(control=repr(control)):
+                with self.assertRaises(ValueError):
+                    self.service.import_snapshot(self.payload([self.thread(title='Synthetic'+control)]))
+        for key in ('id','hostId','cwd','kind','status','projectId'):
+            for control in ('\r','\n','\t'):
+                with self.subTest(key=key,control=repr(control)):
+                    with self.assertRaises(ValueError):
+                        self.service.import_snapshot(self.payload([self.thread(**{key:'Synthetic'+control})]))
+        self.assertEqual(self.service.read()['threads'][0]['title'],title)
+
     def test_missing_scope_and_no_other_project_persisted(self):
         self.assertEqual(self.service.read()['state'],'missing')
         value=self.service.import_snapshot(self.payload([self.thread(),self.thread(id='outside',cwd=str(self.root.parent/'personal')),
@@ -97,6 +112,22 @@ class DesktopSnapshotTests(unittest.TestCase):
         self.assertEqual(len(value['threads']),1)
         self.assertEqual(value['threads'][0]['workspace_cwd'],str(self.root))
         self.assertEqual(value['threads'][0]['cwd'],prefix+str(self.root))
+    def test_real_thread_service_mapping_keeps_strict_workspace_boundary(self):
+        prefix='/tmp/codex-cloud-agent-abc/app_servers/thread_service/workspace/'
+        value=self.service.import_snapshot(self.payload([
+            self.thread(id='real',hostId='durable',cwd=prefix+str(self.root)),
+            self.thread(id='child',hostId='durable',cwd=prefix+str(self.root/'child')),
+            self.thread(id='wrong-host',hostId='local',cwd=prefix+str(self.root)),
+            self.thread(id='wrong-prefix',hostId='durable',cwd='/tmp/untrusted/app_servers/thread_service/workspace/'+str(self.root)),
+            self.thread(id='different-root',hostId='durable',cwd=prefix+str(self.root)+'-personal'),
+            self.thread(id='traversal',hostId='durable',cwd=prefix+str(self.root/'..'/'personal')),
+            self.thread(id='similar-service',hostId='durable',cwd='/tmp/codex-cloud-agent-abc/app_servers/thread_service_extra/workspace/'+str(self.root)),
+            self.thread(id='nested-marker',hostId='durable',cwd=prefix+'fake/workspace/'+str(self.root))]))
+        self.assertEqual([row['id'] for row in value['threads']],['real','child'])
+        self.assertEqual(value['excluded_count'],6)
+        self.assertEqual(value['threads'][0]['cwd'],prefix+str(self.root))
+        self.assertEqual(value['threads'][1]['workspace_cwd'],str(self.root/'child'))
+
     def test_expiry_unavailable_retains_last_observation_and_metadata_only(self):
         value=self.service.import_snapshot(self.payload(minutes=11))
         self.assertEqual(value['state'],'stale')

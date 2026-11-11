@@ -25,6 +25,13 @@ def timestamp(value):
         raise ValueError('观测时间必须为带时区的 ISO 时间。') from None
 
 
+def forbidden_controls(value, *, title=False):
+    # Titles are displayed with DOM textContent, never as HTML or shell input.
+    # Preserve ordinary title whitespace while rejecting terminal/bidi controls.
+    return any((ord(c)<32 or 0x7f<=ord(c)<=0x9f or c in '\u202a\u202b\u202c\u202d\u202e\u2066\u2067\u2068\u2069')
+               and not (title and c in '\r\n\t') for c in value)
+
+
 class DesktopSnapshot:
     def __init__(self, app):
         self.app = app
@@ -55,11 +62,12 @@ class DesktopSnapshot:
             if not isinstance(item, dict) or set(item)-FIELDS:
                 raise ValueError('禁止导入摘要、消息或历史正文。')
             for key in ('id','hostId','cwd'):
-                if not isinstance(item.get(key),str) or not item[key] or len(item[key])>2000 or any(ord(c)<32 for c in item[key]):
+                if not isinstance(item.get(key),str) or not item[key] or len(item[key])>2000 or forbidden_controls(item[key]):
                     raise ValueError('会话标识或工作区路径无效。')
             path_text = item['cwd']
             if (item['hostId']=='durable' and path_text.startswith('/tmp/codex-cloud-agent-')
-                    and '/app_servers/threads/' in path_text and path_text.count('/workspace/')==1):
+                    and any(part in path_text for part in ('/app_servers/threads/', '/app_servers/thread_service/'))
+                    and path_text.count('/workspace/')==1):
                 path_text = path_text.split('/workspace/',1)[1]
             cwd = Path(path_text)
             if not cwd.is_absolute():
@@ -77,7 +85,7 @@ class DesktopSnapshot:
                 if key=='updatedAt' and type(value) in (int,float):
                     try: value = datetime.fromtimestamp(value,timezone.utc).isoformat()
                     except (ValueError,OverflowError,OSError): raise ValueError('源更新时间无效。') from None
-                if value is not None and (not isinstance(value,str) or len(value)>2000 or any(ord(c)<32 for c in value)):
+                if value is not None and (not isinstance(value,str) or len(value)>2000 or forbidden_controls(value, title=key=='title')):
                     raise ValueError('会话元信息必须为有限文本。')
                 clean[key] = value
             if path_text != item['cwd']: clean['workspace_cwd'] = str(cwd.resolve())
