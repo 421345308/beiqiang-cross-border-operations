@@ -1006,5 +1006,20 @@
   },
   "pdf_visual_review": "Five languages, both new cards, with labels, four BQ1017 colours, images and page fit reviewed at 2x. PDFs match isolated_pdf SHA256.",
   "source_scope": "Previously adopted products and existing website download feature only; platform SKU configuration does not establish real-time stock.",
-  "remaining": "Coordinate BQ1005 and BQ1017 with the production API owner, publish website through its normal workflow, then rerun verify:deployments and independently verify the formal five-language pages, inquiry paths and downloads."
+  "remaining": "Coordinate BQ1005 and BQ1017 with the production API owner, publish website through its normal workflow, then rerun verify:deployments and independently verify the formal five-language pages, inquiry paths and downloads.",
+  "local_api_bundle": {
+    "path": "99_临时区/独立站产品对齐/api-164-4b9db5b",
+    "checked_at_utc": "2026-11-11T12:26:33+00:00",
+    "state": "LOCAL_BUNDLE_NOT_UPLOADED_OR_ACTIVATED",
+    "source_commit": "4b9db5b7e0069020fda736aaf609291a724944ac",
+    "manifest_file_count": 266,
+    "manifest_sha256": "f471dba72ee3b344a17ebe65031ab49dd9e9baeb3a27bce520ad0e76b044ae2b",
+    "catalogue_count": 164,
+    "new_codes": [
+      "BQ1005",
+      "BQ1017"
+    ],
+    "whitelist_matches_local_committed_source": true,
+    "all_manifest_files_match": true
+  }
 }
