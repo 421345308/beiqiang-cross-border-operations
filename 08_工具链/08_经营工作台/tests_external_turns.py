@@ -535,5 +535,158 @@ class ExternalTurnsTests(unittest.TestCase):
             other_db.close()
 
 
+class ManagedReadSchemaTests(unittest.TestCase):
+    """Schema-shaped sanitized replay of the supported managed read response.
+
+    Execution is isolated. This proves ingestion compatibility, not a live
+    subscription, provider authentication, production deployment or auto-resume.
+    """
+    setUp = fixture.AgentJobTests.setUp
+    tearDown = fixture.AgentJobTests.tearDown
+    planned = ExternalTurnsTests.planned
+    current = ExternalTurnsTests.current
+    register = ExternalTurnsTests.register
+    assess = ExternalTurnsTests.assess
+    prepare = ExternalTurnsTests.prepare
+
+    def managed(self, job_id, turn='managed-1', observed=OBSERVED, **changes):
+        import json
+        from external_turns import MANAGED_SOURCE
+        # Actual managed tool shape, with identifiers/content anonymized.
+        response = {'threadId': THREAD, 'parentThreadId': None,
+                    'latestTurn': {'id': turn, 'status': 'completed', 'error': None},
+                    'items': [{'id': 'message-1', 'turnId': turn,
+                               'role': 'assistant', 'text': 'sanitized result', 'truncated': False}],
+                    'nextCursor': None}
+        head = response['latestTurn']
+        args = dict(expected_version=self.current(job_id)['version'],
+                    host_id='durable', thread_id=response['threadId'], turn_id=head['id'],
+                    head_turn_id=head['id'], head_status=head['status'],
+                    source=MANAGED_SOURCE, observed_at=observed,
+                    evidence=json.dumps(response, separators=(',', ':')))
+        args.update(changes)
+        return self.jobs.register_external_turn(job_id, **args)
+
+    def test_missing_execution_time_is_preserved_not_fabricated(self):
+        import json
+        from external_turns import MANAGED_SOURCE
+        job_id = self.planned()
+        event = self.managed(job_id)
+        self.assertEqual(event['source'], MANAGED_SOURCE)
+        self.assertEqual(json.loads(event['evidence']['detail'])['latestTurn']['id'], 'managed-1')
+        for field in ('started_at', 'completed_at'):
+            self.assertIsNone(event[field])
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertEqual(row['state'], 'review_required')
+        self.assertFalse(row['current'])
+        self.assertFalse(row['execution_time_known'])
+        with self.assertRaises(WorkspaceConflict): self.assess(job_id, event['event_id'])
+        with self.assertRaises(WorkspaceConflict): self.prepare(job_id, event['event_id'])
+        self.assertEqual(self.processes, [])
+
+    def test_duplicate_managed_read_deduplicates_without_version_change(self):
+        job_id = self.planned()
+        event = self.managed(job_id)
+        version = self.current(job_id)['version']
+        duplicate = self.managed(job_id, expected_version=version-1)
+        self.assertEqual(event, duplicate)
+        self.assertEqual(self.current(job_id)['version'], version)
+        self.assertEqual(len(self.current(job_id)['external_turn_events']), 1)
+
+    def test_newer_observation_is_not_execution_order(self):
+        job_id = self.planned()
+        self.managed(job_id, 'managed-a')
+        self.managed(job_id, 'managed-b', LATER)
+        # Older read arriving last must not erase the incomparable candidates.
+        self.managed(job_id, 'managed-c', OBSERVED)
+        rows = self.jobs.external_turns_view(self.current(job_id))
+        self.assertEqual(len(rows), 3)
+        for row in rows:
+            self.assertTrue(row['order_ambiguous'])
+            self.assertFalse(row['current'])
+            self.assertEqual(row['head_turn_id'], 'managed-a')
+            self.assertEqual(row['incomparable_head_count'], 1)
+
+    def test_native_and_managed_provenance_cannot_alias_or_clear_unknown(self):
+        job_id = self.planned()
+        native = self.register(job_id)
+        self.assess(job_id, native['event_id'])
+        self.prepare(job_id, native['event_id'])
+        managed = self.managed(job_id, 'turn-1', LATER)
+        self.assertNotEqual(native['event_id'], managed['event_id'])
+        rows = {row['event_id']:row for row in self.jobs.external_turns_view(self.current(job_id))}
+        self.assertEqual(rows[native['event_id']]['state'], 'dispatch_unknown')
+        self.assertFalse(rows[native['event_id']]['current'])
+        self.assertTrue(rows[native['event_id']]['cross_source_ambiguous'])
+        self.assertEqual(rows[managed['event_id']]['state'], 'review_required')
+        with self.assertRaises(WorkspaceConflict): self.prepare(job_id, managed['event_id'])
+
+    def test_missing_time_on_another_job_and_host_blocks_native_reuse(self):
+        from external_turns import MANAGED_SOURCE
+        native_job=self.planned()
+        native=self.register(native_job)
+        self.assess(native_job,native['event_id'])
+        other=self.jobs.start('product:shoe','second synthetic task',defer=True)
+        other=self.jobs.link_conversation(other['id'],provider='codex',conversation_id=THREAD,
+            provenance='synthetic second host',expected_version=other['version'])
+        other=self.jobs.bind_external_thread(other['id'],expected_version=other['version'],
+            host_id='other-host',thread_id=THREAD)
+        self.jobs.register_external_turn(other['id'],expected_version=other['version'],host_id='other-host',
+            thread_id=THREAD,turn_id='managed-other',head_turn_id='managed-other',head_status='completed',
+            source=MANAGED_SOURCE,observed_at=LATER,evidence='synthetic managed observation')
+        row=self.jobs.external_turns_view(self.current(native_job))[0]
+        self.assertTrue(row['cross_source_ambiguous'])
+        self.assertFalse(row['current'])
+        self.assertEqual(row['state'],'review_required')
+        with self.assertRaises(WorkspaceConflict):self.assess(native_job,native['event_id'])
+        with self.assertRaises(WorkspaceConflict):self.prepare(native_job,native['event_id'])
+        self.assertIsNone(self.current(native_job)['external_turn_events'][native['event_id']]['dispatch'])
+        self.assertEqual(self.processes,[])
+
+    def test_managed_observation_before_native_on_another_host_stays_ambiguous(self):
+        from external_turns import MANAGED_SOURCE
+        native_job=self.planned()
+        other=self.jobs.start('product:shoe','second synthetic task',defer=True)
+        other=self.jobs.link_conversation(other['id'],provider='codex',conversation_id=THREAD,
+            provenance='synthetic second host',expected_version=other['version'])
+        other=self.jobs.bind_external_thread(other['id'],expected_version=other['version'],
+            host_id='other-host',thread_id=THREAD)
+        self.jobs.register_external_turn(other['id'],expected_version=other['version'],host_id='other-host',
+            thread_id=THREAD,turn_id='managed-first',head_turn_id='managed-first',head_status='completed',
+            source=MANAGED_SOURCE,observed_at=OBSERVED,evidence='synthetic managed observation')
+        native=self.register(native_job,observed=LATER)
+        row=self.jobs.external_turns_view(self.current(native_job))[0]
+        self.assertTrue(row['cross_source_ambiguous'])
+        self.assertFalse(row['current'])
+        self.assertEqual(row['state'],'review_required')
+        with self.assertRaises(WorkspaceConflict):self.assess(native_job,native['event_id'])
+        self.assertEqual(self.processes,[])
+
+    def test_managed_does_not_accept_invented_times_or_unknown_source(self):
+        job_id = self.planned()
+        for values in ({'started_at': BASE}, {'completed_at': BASE+10},
+                       {'head_started_at': BASE}, {'source': 'unrecognized.read'}):
+            with self.subTest(values=values), self.assertRaises(ValueError):
+                self.managed(job_id, **values)
+        self.assertEqual(self.current(job_id)['external_turn_events'], {})
+
+    def test_managed_incomparable_head_limit_rejects_new_without_losing_old(self):
+        job_id = self.planned()
+        for index in range(100):
+            observed=(NOW-timedelta(seconds=120-index)).isoformat()
+            self.managed(job_id, 'managed-'+str(index), observed)
+        before=self.current(job_id)
+        with self.assertRaises(WorkspaceConflict):
+            self.managed(job_id, 'managed-over-limit', (NOW-timedelta(seconds=19)).isoformat())
+        after=self.current(job_id)
+        self.assertEqual(after['version'],before['version'])
+        self.assertEqual(after['external_turn_events'],before['external_turn_events'])
+        rows=self.jobs.external_turns_view(after)
+        self.assertEqual(len(rows),100)
+        self.assertTrue(all(row['state']=='review_required' and not row['current'] for row in rows))
+        self.assertTrue(all(row['incomparable_head_count']==99 for row in rows))
+        self.assertEqual(self.processes,[])
+
+
 if __name__ == '__main__':
     unittest.main()

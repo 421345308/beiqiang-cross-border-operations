@@ -20,7 +20,7 @@
 
 本机服务恢复后，workspace:overview 范围的 MCP 可调用 get_work_overview、get_supervisor_status、configure_task_supervision 和 disable_task_supervision。配置必须传入本机任务 ID、expected_version、acceptance_criteria、continuation_instruction、authorization_ref、business_case、prerequisite_state 和 value_state；具体字段以 tools/list 为准。配置 ready/supported 可能触发一次上述内部续接，停用不取消已运行工作。HTTP 与 MCP 沿现有本机回环、Host/Origin 和写入令牌保护；这不是公网身份认证，也不证明云端 Dot 已直连本机 MCP。
 
-外部回合只接受调用者对明确绑定会话的正式观察，工作台不自行订阅或发送。Dot 的 thread_management.read_thread 对 Dot 创建的线程传 threadId 并省略 environmentId；原生线程按其工具 schema 使用明确环境标识，该接口没有 hostId 参数。本机 codex-app-tools 的同名接口是另一套 schema，可按其定义提供 hostId。已完成轮次须有实际提供的必要起止时间；当前进行中回合的 startedAt 可以为空，顺序不明确时保留未知，不能编造时间、验收或派工。外发或派工结果未知先对账，不盲重发；本机登记本身不证明调用者确实取得了外部回执。
+外部回合只接受调用者对明确绑定会话的正式观察，工作台不自行订阅或发送。Dot 的 thread_management.read_thread 对 Dot 创建的线程传 threadId 并省略 environmentId；原生线程按其工具 schema 使用明确环境标识，该接口没有 hostId 参数。本机 codex-app-tools 的同名接口是另一套 schema，可按其定义提供 hostId。登记时用 source 区分 codex_app.read_thread 与 thread_management.read_thread，默认保留原生协议。受管正式读回没有执行起止时间时，省略 started_at、completed_at、head_started_at，evidence 只保留必要的脱敏元数据，不复制会话正文、客户资料或密钥；observed_at 仅是核读时间，不能冒充执行时间。缺少可信执行顺序的观察可幂等保存并显示 review_required，但不能据此验收或准备派工；本切片未打通受管自动接续。这是保守停点，不是完整接续能力：在本机同一数据库内，任意历史缺执行时间的受管记录都会使相同线程标识的跨来源原生记录保持 cross_source_ambiguous，即使它们登记在不同任务或宿主，目前没有解除路径，不能靠切换来源恢复自动派工。不可比较的 head 候选最多保留 100 个；达到上限后拒绝新增候选并要求核对原会话，不静默丢弃旧候选，也不因此判断工作完成。原生协议仍要求实际起止时间，仅不同的进行中或未知 head 可缺开始时间。来源切换不能隐藏未定顺序或解除未知请求；顺序不明确时保留待核验，不编造时间。外发或派工结果未知先对账，不盲重发；本机登记本身不证明调用者确实取得了外部回执。
 
 ## 客户、商品和渠道
 

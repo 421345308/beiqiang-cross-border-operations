@@ -19,6 +19,10 @@ from workspaces import WorkspaceConflict
 
 SOURCE = 'codex_app.read_thread'
 SEND_SOURCE = 'codex_app.send_message_to_thread'
+MANAGED_SOURCE = 'thread_management.read_thread'
+MANAGED_SEND_SOURCE = 'thread_management.send_message'
+READ_SOURCES = {SOURCE, MANAGED_SOURCE}
+SEND_SOURCES = {SOURCE: SEND_SOURCE, MANAGED_SOURCE: MANAGED_SEND_SOURCE}
 HEAD_STATES = {'completed', 'inProgress', 'in_progress', 'failed', 'cancelled', 'unknown'}
 HEAD_WITHOUT_START = {'inProgress', 'in_progress', 'unknown'}
 RECEIPT_STATES = {'unknown', 'accepted', 'running', 'completed', 'failed'}
@@ -32,14 +36,14 @@ def _identifier(value, label):
     return value
 
 
-def _event_id(host_id, thread_id, turn_id):
-    identity = [SOURCE, host_id, thread_id, turn_id, 'turn.completed']
+def _event_id(host_id, thread_id, turn_id, source=SOURCE):
+    identity = [source, host_id, thread_id, turn_id, 'turn.completed']
     raw = json.dumps(identity, ensure_ascii=True, separators=(',', ':')).encode('ascii')
     return 'external:' + hashlib.sha256(raw).hexdigest()
 
 
-def _head_key(host_id, thread_id):
-    return hashlib.sha256(json.dumps([SOURCE, host_id, thread_id], ensure_ascii=True,
+def _head_key(host_id, thread_id, source=SOURCE):
+    return hashlib.sha256(json.dumps([source, host_id, thread_id], ensure_ascii=True,
                                      separators=(',', ':')).encode('ascii')).hexdigest()
 
 
@@ -80,7 +84,7 @@ def _merge_head(old, incoming):
         identities.add(identity)
         start = candidate.get('started_at')
         if start is None:
-            if candidate.get('status') not in HEAD_WITHOUT_START:
+            if candidate.get('source') != MANAGED_SOURCE and candidate.get('status') not in HEAD_WITHOUT_START:
                 raise ValueError('原最新回合缺少有效开始时间。')
         else:
             _seconds(start, '原最新回合开始时间')
@@ -204,29 +208,37 @@ class ExternalTurns:
             return copy.deepcopy(job)
 
     def register_external_turn(self, job_id, *, expected_version, host_id, thread_id, turn_id,
-                               started_at, completed_at, head_turn_id, head_status, head_started_at,
-                               observed_at, evidence):
+                               started_at=None, completed_at=None, head_turn_id, head_status, head_started_at=None,
+                               observed_at, evidence, source=SOURCE):
         """Register a caller-attested completed turn and latest-page head."""
         for value, label in ((host_id, '主机标识'), (thread_id, '会话标识'),
                              (turn_id, '回合标识'), (head_turn_id, '最新回合标识')):
             _identifier(value, label)
         if head_status not in HEAD_STATES or (turn_id == head_turn_id and head_status != 'completed'):
             raise ValueError('最新回合状态与完成事件不一致。')
-        started_at = _seconds(started_at, '回合开始时间')
-        completed_at = _seconds(completed_at, '回合结束时间')
-        if head_started_at is None:
-            if head_turn_id == turn_id or head_status not in HEAD_WITHOUT_START:
-                raise ValueError('仅不同的进行中或未知回合可缺少开始时间。')
+        if source not in READ_SOURCES:
+            raise ValueError('外部读取来源无效。')
+        if source == MANAGED_SOURCE:
+            # The supported managed read schema has no execution timestamps.
+            # Do not turn observer time or UUID ordering into execution evidence.
+            if any(value is not None for value in (started_at, completed_at, head_started_at)):
+                raise ValueError('受管读取未提供执行时间，不得推算或补造。')
         else:
-            head_started_at = _seconds(head_started_at, '最新回合开始时间')
-        observed = _evidence({'source': SOURCE, 'observed_at': observed_at, 'detail': evidence})
+            started_at = _seconds(started_at, '回合开始时间')
+            completed_at = _seconds(completed_at, '回合结束时间')
+            if head_started_at is None:
+                if head_turn_id == turn_id or head_status not in HEAD_WITHOUT_START:
+                    raise ValueError('仅不同的进行中或未知回合可缺少开始时间。')
+            else:
+                head_started_at = _seconds(head_started_at, '最新回合开始时间')
+        observed = _evidence({'source': source, 'observed_at': observed_at, 'detail': evidence})
         observed_time = datetime.fromisoformat(observed['observed_at'])
-        if (started_at > completed_at or completed_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp() or
+        if source == SOURCE and (started_at > completed_at or completed_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp() or
                 (head_started_at is not None and head_started_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp()) or
                 (turn_id == head_turn_id and started_at != head_started_at) or
                 (head_started_at is not None and head_started_at < started_at)):
             raise ValueError('回合起止时间或观察时间不一致。')
-        event_id = _event_id(host_id, thread_id, turn_id)
+        event_id = _event_id(host_id, thread_id, turn_id, source)
         with self._write():
             job = self._external_defaults(self._continuity_defaults(self.get_job(job_id)))
             self._external_reference(job, host_id, thread_id)
@@ -234,13 +246,13 @@ class ExternalTurns:
             previous = events.get(event_id)
             if previous is not None:
                 if (not isinstance(previous, dict) or previous.get('event_id') != event_id or
-                        previous.get('source') != SOURCE or previous.get('event_type') != 'turn.completed' or
+                        previous.get('source') != source or previous.get('event_type') != 'turn.completed' or
                         previous.get('host_id') != host_id or previous.get('thread_id') != thread_id or previous.get('turn_id') != turn_id or
                         previous.get('started_at') != started_at or previous.get('completed_at') != completed_at):
                     raise WorkspaceConflict('相同回合身份的原始时间不一致，保留原记录等待核对。')
-            key = _head_key(host_id, thread_id)
+            key = _head_key(host_id, thread_id, source)
             old_head = heads.get(key)
-            next_head = {'source':SOURCE, 'host_id':host_id, 'thread_id':thread_id,
+            next_head = {'source':source, 'host_id':host_id, 'thread_id':thread_id,
                          'turn_id':head_turn_id, 'status':head_status, 'started_at':head_started_at,
                          'observed_at':observed['observed_at']}
             next_head, replace_head = _merge_head(old_head, next_head)
@@ -249,7 +261,7 @@ class ExternalTurns:
             if type(expected_version) is not int or expected_version != job['version']:
                 raise WorkspaceConflict('任务版本已变化，请重新读取后登记观察。')
             if previous is None:
-                previous = {'event_id':event_id, 'source':SOURCE, 'event_type':'turn.completed',
+                previous = {'event_id':event_id, 'source':source, 'event_type':'turn.completed',
                     'host_id':host_id, 'thread_id':thread_id, 'turn_id':turn_id,
                     'started_at':started_at, 'completed_at':completed_at, 'observed_at':observed['observed_at'],
                     'evidence':observed, 'verification':'caller_attested', 'recorded_at':stamp(),
@@ -266,13 +278,27 @@ class ExternalTurns:
         job = self._external_defaults(copy.deepcopy(job))
         events, heads = job['external_turn_events'], job['external_thread_heads']
         intent_version = _intent_version(job)
+        # The same thread ID may be bound through another host on another job.
+        # Keep those records separate, but never let a missing-time observation
+        # disappear merely because its reference belongs to a different job.
+        related_events = list(events.values())
+        if events:
+            for other_job in self.list_jobs():
+                if other_job.get('id') == job.get('id'):
+                    continue
+                other_events = other_job.get('external_turn_events', {})
+                if isinstance(other_events, dict):
+                    related_events.extend(other_events.values())
         result = []
         for key, raw in events.items():
             if not isinstance(raw, dict) or any(not isinstance(raw.get(k), str) for k in ('host_id','thread_id','turn_id')):
                 raise ValueError('外部回合记录身份无效。')
-            if key != _event_id(raw['host_id'], raw['thread_id'], raw['turn_id']) or raw.get('event_id') != key:
+            source = raw.get('source')
+            if source not in READ_SOURCES:
+                raise ValueError('外部回合记录来源无效。')
+            if key != _event_id(raw['host_id'], raw['thread_id'], raw['turn_id'], source) or raw.get('event_id') != key:
                 raise ValueError('外部回合记录身份不一致。')
-            head = heads.get(_head_key(raw['host_id'], raw['thread_id']))
+            head = heads.get(_head_key(raw['host_id'], raw['thread_id'], source))
             if not isinstance(head, dict):raise ValueError('外部会话观察水位缺失。')
             try:
                 head_time = datetime.fromisoformat(head['observed_at'])
@@ -282,12 +308,19 @@ class ExternalTurns:
                 raise ValueError('外部会话观察时间不可读。') from None
             item = copy.deepcopy(raw)
             same_thread = [x for x in events.values() if isinstance(x, dict) and x.get('host_id') == raw['host_id']
-                           and x.get('thread_id') == raw['thread_id']]
+                           and x.get('thread_id') == raw['thread_id'] and x.get('source') == source]
             comparable = [x.get('completed_at') for x in same_thread if isinstance(x.get('completed_at'), (int,float))
                           and not isinstance(x.get('completed_at'), bool)]
             pending = head.get('incomparable_heads', [])
             if not isinstance(pending, list):raise ValueError('外部会话待比较观察不可读。')
-            order_ambiguous = bool(head.get('started_at') is None or pending or
+            # A source switch must not make a missing-time observation disappear
+            # from the native view and thereby permit dispatch using an old head.
+            cross_source_ambiguous = any(isinstance(x, dict) and x.get('thread_id') == raw['thread_id']
+                                         and x.get('source') != source and
+                                         (x.get('started_at') is None or x.get('completed_at') is None)
+                                         for x in related_events)
+            order_ambiguous = bool(cross_source_ambiguous or raw.get('started_at') is None or raw.get('completed_at') is None or
+                                   head.get('started_at') is None or pending or
                                    (comparable and raw.get('completed_at') == max(comparable) and
                                     sum(x == raw.get('completed_at') for x in comparable) > 1))
             current = (head.get('turn_id') == raw['turn_id'] and head.get('status') == 'completed' and
@@ -313,12 +346,17 @@ class ExternalTurns:
             else:
                 state = 'awaiting_review'
             item.update(state=state, current=current, order_ambiguous=order_ambiguous,
+                        execution_time_known=raw.get('started_at') is not None and raw.get('completed_at') is not None,
+                        cross_source_ambiguous=cross_source_ambiguous,
                         intent_changed=changed, head_turn_id=head.get('turn_id'), head_status=head.get('status'),
                          head_started_at=head.get('started_at'), incomparable_head_count=len(pending),
                         head_observed_at=head.get('observed_at'), source_stale=age_seconds>600,
                         source_age_seconds=int(age_seconds))
             result.append(item)
-        return sorted(result, key=lambda item:(item['completed_at'], item['event_id']), reverse=True)
+        # Presentation ordering only: missing execution times stay missing.
+        return sorted(result, key=lambda item:(item['completed_at'] is not None,
+                      item['completed_at'] if item['completed_at'] is not None else 0,
+                      item['observed_at'], item['event_id']), reverse=True)
 
     def _external_event(self, job, event_id):
         if not isinstance(event_id, str) or not re.fullmatch(r'external:[0-9a-f]{64}', event_id):
@@ -327,9 +365,9 @@ class ExternalTurns:
         if not isinstance(event, dict):raise ValueError('找不到该外部回合观察。')
         self._external_reference(job, event.get('host_id'), event.get('thread_id'))
         _identifier(event.get('turn_id'), '回合标识')
-        if (event.get('source') != SOURCE or event.get('event_type') != 'turn.completed' or
+        if (event.get('source') not in READ_SOURCES or event.get('event_type') != 'turn.completed' or
                 event.get('event_id') != event_id or
-                _event_id(event['host_id'],event['thread_id'],event.get('turn_id')) != event_id):
+                _event_id(event['host_id'],event['thread_id'],event.get('turn_id'),event.get('source')) != event_id):
             raise ValueError('外部回合观察身份不一致。')
         return event
 
@@ -443,7 +481,7 @@ class ExternalTurns:
         _identifier(request_id,'请求标识')
         if state not in RECEIPT_STATES:raise ValueError('外部请求状态无效。')
         proof = _evidence(evidence)
-        if proof['source'] not in (SOURCE,SEND_SOURCE):raise ValueError('外部回执来源无效。')
+        if proof['source'] not in READ_SOURCES | set(SEND_SOURCES.values()):raise ValueError('外部回执来源无效。')
         if target_turn_id is not None:_identifier(target_turn_id,'目标回合标识')
         if observed_instruction_sha256 is not None and (not isinstance(observed_instruction_sha256,str) or not re.fullmatch(r'[0-9a-f]{64}',observed_instruction_sha256)):
             raise ValueError('所观察内容的指纹无效。')
@@ -456,7 +494,9 @@ class ExternalTurns:
                 raise WorkspaceConflict('请求标识不匹配，不能改写其他回执。')
             if type(expected_version) is not int or expected_version != job['version']:
                 raise WorkspaceConflict('任务版本已变化，请重新读取原请求后对账。')
-            if state == 'accepted' and proof['source'] != SEND_SOURCE:
+            if proof['source'] not in (event['source'], SEND_SOURCES[event['source']]):
+                raise ValueError('回执来源与登记会话类型不一致。')
+            if state == 'accepted' and proof['source'] != SEND_SOURCES[event['source']]:
                 raise ValueError('已受理只能登记调用方实际获得的发送响应。')
             if state == 'accepted' and target_turn_id == event['turn_id']:
                 raise ValueError('发送回执中的目标回合不能与原回合相同。')
@@ -464,7 +504,7 @@ class ExternalTurns:
                     receipt['accepted_target_turn_id'] != target_turn_id):
                 raise WorkspaceConflict('发送回执中的目标回合冲突，保留原记录。')
             if state in ('running','completed','failed'):
-                if proof['source'] != SOURCE or not target_turn_id or target_turn_id == event['turn_id']:
+                if proof['source'] != event['source'] or not target_turn_id or target_turn_id == event['turn_id']:
                     raise ValueError('请提供正式读取中的目标新回合与状态。')
                 if correlation == 'matching_receipt':
                     if not receipt.get('accepted_target_turn_id') or receipt['accepted_target_turn_id'] != target_turn_id:

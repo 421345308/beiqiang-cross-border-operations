@@ -201,5 +201,33 @@ class ExternalHTTPIntegrationTests(unittest.TestCase):
         self.assertEqual(self.processes, [])
 
 
+    def test_managed_schema_without_times_crosses_mcp_and_http_but_cannot_dispatch(self):
+        from external_turns import MANAGED_SOURCE
+        job_id, task_id = self.planned_bound_task()
+        context = self.context(job_id)
+        response = {'threadId': THREAD, 'parentThreadId': None,
+                    'latestTurn': {'id': 'managed-turn', 'status': 'completed', 'error': None},
+                    'items': [], 'nextCursor': None}
+        args = {'id': task_id, 'expected_version': context['job']['version'],
+                'host_id': HOST, 'thread_id': response['threadId'],
+                'turn_id': response['latestTurn']['id'], 'source': MANAGED_SOURCE,
+                'head_turn_id': response['latestTurn']['id'], 'head_status': 'completed',
+                'observed_at': self.moment(50), 'evidence': json.dumps(response)}
+        event = self.call('register_external_turn', args)
+        duplicate = self.call('register_external_turn', args)
+        self.assertEqual(event['event_id'], duplicate['event_id'])
+        self.assertIsNone(event['started_at'])
+        self.assertIsNone(event['completed_at'])
+        self.assertEqual(event['source'], MANAGED_SOURCE)
+        inbox = self.inbox(self.overview(), event['event_id'])
+        self.assertEqual(len(inbox), 1)
+        self.assertEqual(inbox[0]['state'], 'review_required')
+        context = self.context(job_id)
+        self.conflict('assess_external_turn', self.assessment(task_id, context, event['event_id']))
+        self.conflict('prepare_external_dispatch', {'id': task_id, 'event_id': event['event_id'],
+            'expected_version': context['job']['version'],
+            'expected_intent_version': context['intent_version'],
+            'request_id': 'must-not-send', 'instruction': 'not authorized by missing order'})
+
 if __name__ == '__main__':
     unittest.main()

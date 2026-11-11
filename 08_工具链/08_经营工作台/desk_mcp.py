@@ -140,14 +140,15 @@ def _validate_external_operation(name, args):
     required={
         'link_local_conversation':common | {'provider','conversation_id','provenance'},
         'bind_external_thread':common | {'host_id','thread_id'},
-        'register_external_turn':common | {'host_id','thread_id','turn_id','started_at','completed_at',
-                                           'head_turn_id','head_status','head_started_at','observed_at','evidence'},
+        'register_external_turn':common | {'host_id','thread_id','turn_id',
+                                           'head_turn_id','head_status','observed_at','evidence'},
         'assess_external_turn':common | event | assessment,
         'prepare_external_dispatch':common | event | {'expected_intent_version','request_id','instruction'},
         'observe_external_dispatch':common | event | {'request_id','state','evidence'},
         'resolve_external_failure':common | event | {'request_id','evidence'},
     }
-    optional={'observe_external_dispatch':{'target_turn_id','observed_instruction_sha256','correlation'}}
+    optional={'register_external_turn':{'source','started_at','completed_at','head_started_at'},
+              'observe_external_dispatch':{'target_turn_id','observed_instruction_sha256','correlation'}}
     if (name not in required or not isinstance(args,dict) or not required[name].issubset(args)
             or set(args)-required[name]-optional.get(name,set())):
         raise WorkOverviewError('invalid_input','外部回合登记参数无效。')
@@ -173,8 +174,15 @@ def _validate_external_operation(name, args):
     if name=='register_external_turn':
         if args['head_status'] not in ('completed','inProgress','in_progress','failed','cancelled','unknown'):
             raise WorkOverviewError('invalid_input','最新回合状态无效。')
+        source=args.get('source','codex_app.read_thread')
+        if source not in ('codex_app.read_thread','thread_management.read_thread'):
+            raise WorkOverviewError('invalid_input','外部读取来源无效。')
         for key in ('started_at','completed_at','head_started_at'):
-            value=args[key]
+            value=args.get(key)
+            if source=='thread_management.read_thread':
+                if value is not None:
+                    raise WorkOverviewError('invalid_input','受管读取未提供执行时间，不得推算或补造。')
+                continue
             if (key=='head_started_at' and value is None and args['head_turn_id'] != args['turn_id']
                     and args['head_status'] in ('inProgress','in_progress','unknown')):
                 continue
@@ -182,7 +190,7 @@ def _validate_external_operation(name, args):
             except OverflowError:valid=False
             if not valid:
                 raise WorkOverviewError('invalid_input','回合时间须为有效的 Unix 秒数。')
-        if args['completed_at']<args['started_at']:
+        if source=='codex_app.read_thread' and args['completed_at']<args['started_at']:
             raise WorkOverviewError('invalid_input','回合结束时间不能早于开始时间。')
         if not isinstance(args['evidence'],str) or not args['evidence'].strip() or len(args['evidence'])>4000:
             raise WorkOverviewError('invalid_input','请提供外部回合观测说明。')
@@ -882,14 +890,19 @@ _EXTERNAL_SCHEMAS={
         'provenance':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'}},set()),
     'bind_external_thread':({**_EXTERNAL_COMMON,'host_id':_EXTERNAL_ID,'thread_id':_EXTERNAL_ID},set()),
     'register_external_turn':({**_EXTERNAL_COMMON,'host_id':_EXTERNAL_ID,'thread_id':_EXTERNAL_ID,
-        'turn_id':_EXTERNAL_ID,'started_at':{'type':'number','minimum':0},'completed_at':{'type':'number','minimum':0},
+        'turn_id':_EXTERNAL_ID,
+        'source':{'type':'string','enum':['codex_app.read_thread','thread_management.read_thread'],
+                  'description':'默认原生来源；受管来源不提供执行时间，记录后待核验。'},
+        'started_at':{'anyOf':[{'type':'number','minimum':0},{'type':'null'}]},
+        'completed_at':{'anyOf':[{'type':'number','minimum':0},{'type':'null'}]},
         'head_turn_id':_EXTERNAL_ID,'head_status':{'type':'string',
             'enum':['completed','inProgress','in_progress','failed','cancelled','unknown'],
             'description':'记录正式来源的回合状态；in_progress 是兼容写法。'},
         'head_started_at':{'anyOf':[{'type':'number','minimum':0},{'type':'null'}],
-                           'description':'仅不同的进行中或未知 head 可缺少开始时间；缺失时顺序待核对。'},
+                           'description':'受管来源可缺失；原生来源仅不同的进行中或未知 head 可缺失。缺失不推算，顺序待核对。'},
         'observed_at':{'type':'string','format':'date-time','maxLength':100},
-        'evidence':{'type':'string','minLength':1,'maxLength':4000,'pattern':r'\S'}},set()),
+        'evidence':{'type':'string','minLength':1,'maxLength':4000,'pattern':r'\S'}},
+        {'source','started_at','completed_at','head_started_at'}),
     'assess_external_turn':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,
         **{key:value for key,value in _RUN_ASSESS_PROPERTIES.items() if key not in ('id','attempt','expected_version')}},set()),
     'prepare_external_dispatch':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,
