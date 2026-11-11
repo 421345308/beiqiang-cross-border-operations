@@ -1,0 +1,412 @@
+{
+  "recorded_at_utc": "2026-11-11T08:10:07+00:00",
+  "website_commit": "1d80e74795a68f50392b6b293de2b237b7aec77b",
+  "release": {
+    "releaseId": "2026-11-11.5",
+    "releasedAt": "2026-11-11T07:53:43+00:00",
+    "productCount": 154,
+    "publicLanguages": [
+      "en",
+      "zh",
+      "de",
+      "fr",
+      "es"
+    ],
+    "lineSheetProductCount": 154,
+    "lineSheetPages": 33,
+    "factoryVideo": {
+      "durationSeconds": 180,
+      "narrationLanguages": [
+        "en"
+      ],
+      "captionLanguages": [
+        "en",
+        "zh"
+      ],
+      "stillCount": 9
+    },
+    "publicOrigin": "https://www.beiqiang.online"
+  },
+  "public_checks": [
+    {
+      "type": "catalogue_page",
+      "locale": "en",
+      "path": "/line-sheet/",
+      "status": 200,
+      "html_lang": "en",
+      "has_versioned_download": true,
+      "has_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "zh",
+      "path": "/zh/line-sheet/",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "has_versioned_download": true,
+      "has_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "de",
+      "path": "/de/line-sheet/",
+      "status": 200,
+      "html_lang": "de",
+      "has_versioned_download": true,
+      "has_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "fr",
+      "path": "/fr/line-sheet/",
+      "status": 200,
+      "html_lang": "fr",
+      "has_versioned_download": true,
+      "has_count": true,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "es",
+      "path": "/es/line-sheet/",
+      "status": 200,
+      "html_lang": "es",
+      "has_versioned_download": true,
+      "has_count": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "en",
+      "path": "/downloads/beiqiang-footwear-line-sheet-2026.pdf?v=2026-11-11.5",
+      "status": 200,
+      "bytes": 1941724,
+      "sha256": "6255aace28e0d9aa29828a30dcf5639fdaab9a260016d304151324931eb22b4a",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "zh",
+      "path": "/downloads/beiqiang-footwear-line-sheet-zh-2026.pdf?v=2026-11-11.5",
+      "status": 200,
+      "bytes": 2004509,
+      "sha256": "aa5ea8a3c4821c284f71d958464641e7de5c02a37dc5cef7edd357c8422e8e9a",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "de",
+      "path": "/downloads/beiqiang-footwear-line-sheet-de-2026.pdf?v=2026-11-11.5",
+      "status": 200,
+      "bytes": 1858893,
+      "sha256": "eddf1f6ac81101e36880e24128c250d2067b34952610d3fa23b662c76a0a0cfc",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "fr",
+      "path": "/downloads/beiqiang-footwear-line-sheet-fr-2026.pdf?v=2026-11-11.5",
+      "status": 200,
+      "bytes": 1858430,
+      "sha256": "18ee111b62cf36a5ad67f0ee6da718d5f40be89e44207cf8aa82e77eaf2877b2",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "es",
+      "path": "/downloads/beiqiang-footwear-line-sheet-es-2026.pdf?v=2026-11-11.5",
+      "status": 200,
+      "bytes": 1857915,
+      "sha256": "85c0796783b9ccb7baad34e88957dcb6eacab159b18be3d2c7c7dacf16e6ae3f",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "en",
+      "path": "/request-quote/",
+      "status": 200,
+      "html_lang": "en",
+      "has_versioned_download": null,
+      "has_count": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "zh",
+      "path": "/zh/request-quote/",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "has_versioned_download": null,
+      "has_count": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "de",
+      "path": "/de/request-quote/",
+      "status": 200,
+      "html_lang": "de",
+      "has_versioned_download": null,
+      "has_count": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "fr",
+      "path": "/fr/request-quote/",
+      "status": 200,
+      "html_lang": "fr",
+      "has_versioned_download": null,
+      "has_count": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "es",
+      "path": "/es/request-quote/",
+      "status": 200,
+      "html_lang": "es",
+      "has_versioned_download": null,
+      "has_count": null,
+      "ok": true
+    }
+  ],
+  "local_pdf_verification": {
+    "catalogueProducts": 154,
+    "languages": {
+      "en": {
+        "pages": 33,
+        "distinct_products": 154,
+        "code_links_ok": 154,
+        "sha256": "6255aace28e0d9aa29828a30dcf5639fdaab9a260016d304151324931eb22b4a",
+        "new_products": {
+          "BQ-LQ02507": {
+            "page": 31,
+            "source": "/catalog/bq-lq02507/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.243662109375,
+            "text_ok": true
+          },
+          "BQ-LQ02508": {
+            "page": 32,
+            "source": "/catalog/bq-lq02508/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2910546875,
+            "text_ok": true
+          },
+          "BQ-LQ2559": {
+            "page": 32,
+            "source": "/catalog/bq-lq2559/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.3322226821192053,
+            "text_ok": true
+          },
+          "BQ-LQ061": {
+            "page": 32,
+            "source": "/catalog/bq-lq061/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.389228515625,
+            "text_ok": true
+          },
+          "BQ-W5998": {
+            "page": 32,
+            "source": "/catalog/bq-w5998/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.237001953125,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "zh": {
+        "pages": 33,
+        "distinct_products": 154,
+        "code_links_ok": 154,
+        "sha256": "aa5ea8a3c4821c284f71d958464641e7de5c02a37dc5cef7edd357c8422e8e9a",
+        "new_products": {
+          "BQ-LQ02507": {
+            "page": 31,
+            "source": "/catalog/bq-lq02507/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.243662109375,
+            "text_ok": true
+          },
+          "BQ-LQ02508": {
+            "page": 32,
+            "source": "/catalog/bq-lq02508/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2910546875,
+            "text_ok": true
+          },
+          "BQ-LQ2559": {
+            "page": 32,
+            "source": "/catalog/bq-lq2559/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.3322226821192053,
+            "text_ok": true
+          },
+          "BQ-LQ061": {
+            "page": 32,
+            "source": "/catalog/bq-lq061/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.389228515625,
+            "text_ok": true
+          },
+          "BQ-W5998": {
+            "page": 32,
+            "source": "/catalog/bq-w5998/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.237001953125,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "de": {
+        "pages": 41,
+        "distinct_products": 154,
+        "code_links_ok": 154,
+        "sha256": "eddf1f6ac81101e36880e24128c250d2067b34952610d3fa23b662c76a0a0cfc",
+        "new_products": {
+          "BQ-LQ02507": {
+            "page": 39,
+            "source": "/catalog/bq-lq02507/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.243662109375,
+            "text_ok": true
+          },
+          "BQ-LQ02508": {
+            "page": 39,
+            "source": "/catalog/bq-lq02508/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2910546875,
+            "text_ok": true
+          },
+          "BQ-LQ2559": {
+            "page": 39,
+            "source": "/catalog/bq-lq2559/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.3322226821192053,
+            "text_ok": true
+          },
+          "BQ-LQ061": {
+            "page": 40,
+            "source": "/catalog/bq-lq061/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.389228515625,
+            "text_ok": true
+          },
+          "BQ-W5998": {
+            "page": 40,
+            "source": "/catalog/bq-w5998/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.237001953125,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "fr": {
+        "pages": 41,
+        "distinct_products": 154,
+        "code_links_ok": 154,
+        "sha256": "18ee111b62cf36a5ad67f0ee6da718d5f40be89e44207cf8aa82e77eaf2877b2",
+        "new_products": {
+          "BQ-LQ02507": {
+            "page": 39,
+            "source": "/catalog/bq-lq02507/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.243662109375,
+            "text_ok": true
+          },
+          "BQ-LQ02508": {
+            "page": 39,
+            "source": "/catalog/bq-lq02508/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2910546875,
+            "text_ok": true
+          },
+          "BQ-LQ2559": {
+            "page": 39,
+            "source": "/catalog/bq-lq2559/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.3322226821192053,
+            "text_ok": true
+          },
+          "BQ-LQ061": {
+            "page": 40,
+            "source": "/catalog/bq-lq061/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.389228515625,
+            "text_ok": true
+          },
+          "BQ-W5998": {
+            "page": 40,
+            "source": "/catalog/bq-w5998/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.237001953125,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "es": {
+        "pages": 41,
+        "distinct_products": 154,
+        "code_links_ok": 154,
+        "sha256": "85c0796783b9ccb7baad34e88957dcb6eacab159b18be3d2c7c7dacf16e6ae3f",
+        "new_products": {
+          "BQ-LQ02507": {
+            "page": 39,
+            "source": "/catalog/bq-lq02507/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.243662109375,
+            "text_ok": true
+          },
+          "BQ-LQ02508": {
+            "page": 39,
+            "source": "/catalog/bq-lq02508/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2910546875,
+            "text_ok": true
+          },
+          "BQ-LQ2559": {
+            "page": 39,
+            "source": "/catalog/bq-lq2559/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.3322226821192053,
+            "text_ok": true
+          },
+          "BQ-LQ061": {
+            "page": 40,
+            "source": "/catalog/bq-lq061/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.389228515625,
+            "text_ok": true
+          },
+          "BQ-W5998": {
+            "page": 40,
+            "source": "/catalog/bq-w5998/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.237001953125,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      }
+    },
+    "issues": [],
+    "all_passed": true
+  },
+  "tested_static_product_routes": 770,
+  "static_product_routes_missing": 0,
+  "all_passed": true
+}
