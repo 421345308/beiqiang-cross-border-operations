@@ -324,19 +324,25 @@ def build_workstreams(root, jobs, desktop_snapshot, customer_batches=None, jobs_
     for key, title, focus, label, path in _SPECS:
         conversation = _conversation(key, snapshot)
         source = _source(root, label, path)
-        related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
-                                                 conversation.get('id') if conversation else None)
-        if not jobs_available:
-            link_observation.update(state='unavailable', reason='AgentJobs 不可读，无法核对关联任务。')
         batches, batch_observation = [], None
         if key == 'outreach':
-            batches, batch_jobs, batch_observation = _batch_work(jobs, customer_batches, jobs_available)
-            by_id = {job['id']:job for job in related}
-            for job in batch_jobs:
-                if job['id'] in by_id:
-                    job = {**by_id[job['id']], **job, 'relation':'conversation_ref_and_customer_batch'}
-                by_id[job['id']] = job
-            related = list(by_id.values())
+            # A conversation identifies a reference, not the customer to whom
+            # a job belongs. Only the explicit batch/member join can attach it.
+            batches, related, batch_observation = _batch_work(jobs, customer_batches, jobs_available)
+            link_observation = dict(batch_observation)
+            if not jobs_available:
+                link_observation['state'] = 'unavailable'
+            elif batch_observation['state'] == 'unavailable':
+                link_observation['state'] = 'unknown'
+            elif batch_observation['state'] == 'partial':
+                link_observation['state'] = 'ambiguous'
+            else:
+                link_observation['state'] = 'ok' if related else 'not_linked'
+        else:
+            related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
+                                                     conversation.get('id') if conversation else None)
+            if not jobs_available:
+                link_observation.update(state='unavailable', reason='AgentJobs 不可读，无法核对关联任务。')
         displayed_focus = source.get('focus') or (focus if source.get('state') == 'ok' else '当前工作未登记')
         output.append({'id': key, 'title': title, 'focus': displayed_focus,
                        'source': source,

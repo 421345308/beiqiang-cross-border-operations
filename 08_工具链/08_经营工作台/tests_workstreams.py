@@ -110,21 +110,55 @@ class WorkstreamProjectionTests(unittest.TestCase):
                 self.assertEqual(row['related_batches'], [])
                 self.assertNotIn('所有任务已完成', row['focus'])
 
-    def test_outreach_conversation_and_batch_reference_are_deduplicated(self):
+    def test_outreach_conversation_alone_does_not_attach_a_job(self):
         snapshot = self.snapshot('ok')
         snapshot['workstream_links'].append({'workstream':'outreach','host_id':'durable','thread_id':'outreach-thread'})
         snapshot['threads'].append({'id':'outreach-thread','hostId':'durable','status':'notLoaded'})
-        job = {'id':'linked','batch_id':'batch-a','object_id':'customer:a','status':'completed','artifact_id':'artifact-a',
+        job = {'id':'linked','object_id':'customer:a','status':'completed','artifact_id':'artifact-a',
                'conversations':[{'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
                                  'host_id':'durable','host_bound_at':'2026-11-11T08:30:00+00:00'}]}
         batch = {'id':'batch-a','object_ids':['customer:a']}
         row = next(x for x in build_workstreams(self.root, [job], snapshot, [batch]) if x['id']=='outreach')
-        self.assertEqual(len(row['related_jobs']), 1)
-        self.assertEqual(row['related_jobs'][0]['relation'], 'conversation_ref_and_customer_batch')
-        self.assertEqual(row['related_jobs'][0]['artifact_id'], 'artifact-a')
+        self.assertEqual(row['related_jobs'], [])
+        self.assertEqual(row['related_jobs_observation']['state'], 'not_linked')
+        self.assertEqual(row['conversation']['id'], 'outreach-thread')
+        self.assertEqual(row['conversation']['control'], 'reference_only')
         row = next(x for x in build_workstreams(self.root, [job], snapshot, None) if x['id']=='outreach')
         self.assertEqual(row['batch_observation']['state'], 'unavailable')
-        self.assertEqual(row['related_jobs'][0]['relation'], 'conversation_ref')
+        self.assertEqual(row['related_jobs_observation']['state'], 'unknown')
+        self.assertEqual(row['related_jobs'], [])
+        self.assertEqual(row['conversation']['id'], 'outreach-thread')
+
+    def test_outreach_removed_customer_stays_unlinked_even_with_conversation(self):
+        snapshot = self.snapshot('ok')
+        snapshot['workstream_links'].append({'workstream':'outreach','host_id':'durable','thread_id':'outreach-thread'})
+        snapshot['threads'].append({'id':'outreach-thread','hostId':'durable','status':'idle'})
+        job = {'id':'removed','batch_id':'batch-a','object_id':'customer:removed',
+               'conversations':[{'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
+                                 'host_id':'durable','host_bound_at':'2026-11-11T08:30:00+00:00'}]}
+        row = next(x for x in build_workstreams(self.root, [job], snapshot,
+                   [{'id':'batch-a','object_ids':['customer:a']}]) if x['id']=='outreach')
+        self.assertEqual(row['related_jobs'], [])
+        self.assertEqual(row['batch_observation']['state'], 'partial')
+        self.assertEqual(row['related_jobs_observation']['state'], 'ambiguous')
+        self.assertEqual(row['conversation']['id'], 'outreach-thread')
+
+    def test_outreach_reused_conversation_cannot_override_batch_membership(self):
+        snapshot = self.snapshot('ok')
+        snapshot['workstream_links'].append({'workstream':'outreach','host_id':'durable','thread_id':'outreach-thread'})
+        snapshot['threads'].append({'id':'outreach-thread','hostId':'durable','status':'idle'})
+        ref = {'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
+               'host_id':'durable','host_bound_at':'2026-11-11T08:30:00+00:00'}
+        jobs = [{'id':'valid','batch_id':'batch-a','object_id':'customer:a','artifact_id':'artifact-a','conversations':[ref]},
+                {'id':'other','batch_id':'batch-a','object_id':'customer:b','conversations':[dict(ref)]},
+                {'id':'no-batch','object_id':'customer:c','conversations':[dict(ref)]}]
+        row = next(x for x in build_workstreams(self.root, jobs, snapshot,
+                   [{'id':'batch-a','object_ids':['customer:a']}]) if x['id']=='outreach')
+        self.assertEqual([job['id'] for job in row['related_jobs']], ['local:valid'])
+        self.assertEqual(row['related_jobs'][0]['relation'], 'customer_batch_membership')
+        self.assertEqual(row['related_jobs'][0]['artifact_id'], 'artifact-a')
+        self.assertEqual(row['batch_observation']['state'], 'partial')
+        self.assertEqual(row['conversation']['id'], 'outreach-thread')
 
     def test_four_workstreams_only_show_their_explicitly_related_jobs(self):
         snapshot = {'state':'ok','threads':[], 'workstream_links':[]}

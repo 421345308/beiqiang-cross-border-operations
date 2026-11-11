@@ -235,6 +235,25 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(task['business_line'],'international')
         self.assertEqual(task['conversation_scope'],'reference_only')
 
+    def test_outreach_conversation_does_not_assign_an_unverified_customer_job(self):
+        self.objects.append({'id':'customer:a','title':'合成客户','kind':'customer'})
+        self.jobs.append({'id':'unverified','object_id':'customer:a','status':'completed',
+            'conversations':[{'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
+                              'host_id':'host','host_bound_at':'2026-11-11T10:00:00Z'}]})
+        self.app.customer_batches=SimpleNamespace(workstream_links=lambda:[
+            {'id':'batch-a','title':'合成批次','object_ids':['customer:a']}])
+        self.app.desktop_snapshot=SimpleNamespace(read=lambda:{'state':'ok','observed_at':'2026-11-11T11:00:00Z',
+            'threads':[{'id':'outreach-thread','hostId':'host','status':'idle'}],
+            'workstream_links':[{'workstream':'outreach','host_id':'host','thread_id':'outreach-thread'}]})
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview()
+        stream=next(row for row in result['workstreams'] if row['id']=='outreach')
+        task=next(row for row in result['tasks'] if row['id']=='local:unverified')
+        self.assertEqual(stream['related_jobs'],[])
+        self.assertEqual(stream['conversation']['id'],'outreach-thread')
+        self.assertNotIn('workstream_id',task)
+
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')
         self.assertEqual(result['object_id'],'product:BQ010')
