@@ -17,6 +17,68 @@ DRAFT_TOOLS = {'get_business_context','get_object','list_sources','read_source',
                'get_customer_profile','get_customer_email_draft','prepare_customer_email_draft',
                'save_customer_email_draft','add_customer_email_attachment'}
 RESEARCH_TOOLS = DRAFT_TOOLS | {'research_company','save_customer_profile','list_objects'}
+OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task'}
+OVERVIEW_OBJECT = 'workspace:overview'
+
+
+class WorkOverviewError(ValueError):
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+
+
+class LocalOverviewClient:
+    """Use the existing local service; never start it or retry a mutation."""
+    origin = 'http://127.0.0.1:8766'
+
+    def _request(self, path, payload=None, token=None):
+        from urllib.request import Request, build_opener, ProxyHandler, HTTPRedirectHandler
+        from urllib.error import HTTPError, URLError
+        from workspaces import WorkspaceConflict
+
+        class NoRedirect(HTTPRedirectHandler):
+            def redirect_request(self, req, fp, code, msg, headers, newurl):
+                return None
+
+        headers = {'Accept': 'application/json'}
+        data = None
+        if payload is not None:
+            data = json.dumps(payload).encode('utf8')
+            headers.update({'Content-Type': 'application/json',
+                            'Origin': self.origin, 'X-Workbench-Token': token})
+        request = Request(self.origin + path, data=data, headers=headers)
+        try:
+            with build_opener(ProxyHandler({}), NoRedirect()).open(request, timeout=15) as response:
+                raw = response.read(8_000_001)
+                if len(raw) > 8_000_000:
+                    raise ValueError('response too large')
+                return json.loads(raw.decode('utf8'))
+        except HTTPError as exc:
+            if exc.code == 409:
+                raise WorkspaceConflict('工作版本已变化，请重新读取。') from None
+            if payload is not None:
+                raise WorkOverviewError('outcome_unknown',
+                                        '调整结果未确认，请先重新读取总览核对，勿直接重试。') from None
+            raise WorkOverviewError('local_service_unavailable',
+                                    '本机工作台接口不可用或拒绝请求；未自动重试。') from None
+        except (URLError, OSError, UnicodeError, ValueError):
+            if payload is not None:
+                raise WorkOverviewError('outcome_unknown',
+                                        '调整结果未确认，请先重新读取总览核对，勿直接重试。') from None
+            raise WorkOverviewError('local_service_unavailable',
+                                    '无法读取本机工作台；请核对本机服务及版本。') from None
+
+    def overview(self, filters):
+        from urllib.parse import urlencode
+        query = urlencode(filters)
+        return self._request('/api/desk/task-overview' + ('?' + query if query else ''))
+
+    def adjust(self, job_id, **fields):
+        bootstrap = self._request('/api/desk/bootstrap')
+        token = bootstrap.get('csrf_token')
+        if not isinstance(token, str) or not token:
+            raise WorkOverviewError('local_service_unavailable', '本机工作台认证不可用。')
+        return self._request('/api/desk/job/adjust', {'id': job_id, **fields}, token)
 
 
 class DeskTools:
@@ -194,6 +256,37 @@ class DeskTools:
     def call(self,name,args):
         if self.draft_only and name not in DRAFT_TOOLS:raise ValueError('本次任务仅能处理当前客户的邮件草稿')
         if self.research_only and name not in RESEARCH_TOOLS:raise ValueError('本次任务仅能研究当前客户并准备邮件草稿')
+        if self.object_id == OVERVIEW_OBJECT and name not in OVERVIEW_TOOLS:
+            raise ValueError('总览绑定仅支持工作总览与本机任务调整')
+        if name in OVERVIEW_TOOLS:
+            if self.object_id != OVERVIEW_OBJECT:
+                raise WorkOverviewError('scope_denied', '工作总览需要明确绑定 workspace:overview。')
+            app = getattr(self.business, 'app', None)
+            client = LocalOverviewClient()
+            if name == 'get_work_overview':
+                if set(args) - {'filters'}:
+                    raise WorkOverviewError('invalid_input', '总览参数无效。')
+                filters = args.get('filters', {})
+                if (not isinstance(filters, dict) or set(filters) - {'business_line','object_id','executor','priority'}
+                        or any(not isinstance(value, str) or len(value) > 500 for value in filters.values())):
+                    raise WorkOverviewError('invalid_input', '总览筛选参数无效。')
+                workspace = getattr(app, 'task_workspace', None)
+                return workspace.overview(filters=filters) if workspace else client.overview(filters)
+            if self.read_only:
+                raise WorkOverviewError('read_only', '当前连接只读，不能调整任务。')
+            if set(args) - {'id','expected_version','priority','next_action'}:
+                raise WorkOverviewError('invalid_input', '任务调整参数无效。')
+            task_id, version = args.get('id'), args.get('expected_version')
+            if (not isinstance(task_id, str) or not task_id.startswith('local:') or not task_id[6:]
+                    or type(version) is not int or version < 0):
+                raise WorkOverviewError('unsupported_task', '仅支持带当前版本的本机任务；参考事项和云端任务不可写。')
+            fields = {key: args[key] for key in ('priority','next_action') if key in args}
+            if (not fields or ('priority' in fields and fields['priority'] not in ('high','normal','low'))
+                    or ('next_action' in fields and (not isinstance(fields['next_action'], str) or len(fields['next_action']) > 4000))):
+                raise WorkOverviewError('invalid_input', '请提供有效的优先级或下一动作。')
+            jobs = getattr(app, 'agent_jobs', None)
+            return (jobs.adjust(task_id[6:], expected_version=version, **fields) if jobs else
+                    client.adjust(task_id[6:], expected_version=version, **fields))
         if name=='read_douyin_store':
             if self.read_only:raise ValueError('自动邮件整理不访问店铺数据')
             from douyin_agent import read_store
@@ -399,6 +492,17 @@ def _customer_tools():
 TOOLS.extend(_customer_tools())
 
 TOOLS.extend([
+    {'name':'get_work_overview',
+     'description':'读取工作总览、来源状态、参考事项及可写能力；仅限明确的 workspace:overview 绑定。来源失败不代表任务为空。',
+     'inputSchema':{'type':'object','properties':{'filters':{'type':'object','properties':{key:{'type':'string','maxLength':500} for key in ('business_line','object_id','executor','priority')},'additionalProperties':False}},'additionalProperties':False},
+     'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'adjust_local_task',
+     'description':'用总览返回的 local: ID 和 expected_version 调整本机任务优先级或下一动作；优先级仅影响展示，不改变执行调度，不执行或重启任务。参考事项和云端任务不可写；冲突须重新读取合并，结果未确认须先核对。',
+     'inputSchema':{'type':'object','properties':{'id':{'type':'string','pattern':'^local:.+'},'expected_version':{'type':'integer','minimum':0},'priority':{'type':'string','enum':['high','normal','low']},'next_action':{'type':'string','maxLength':4000}},'required':['id','expected_version'],'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
+])
+
+TOOLS.extend([
     {'name':'get_customer_email_draft','description':'只读当前客户已有邮件草稿；没有草稿返回空。版本供后续安全保存，不会发送。',
      'inputSchema':{'type':'object','properties':{},'additionalProperties':False},'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
     {'name':'prepare_customer_email_draft','description':'为当前客户准备本机邮件草稿；已有草稿沿用，已发送或结果未知的邮件不会覆盖。不发送。',
@@ -418,18 +522,26 @@ def dispatch(tools,message):
     if method=='initialize':
         result={'protocolVersion':'2024-11-05','capabilities':{'tools':{}},'serverInfo':{'name':'beiqiang-business','version':'1.0'}}
     elif method=='ping':result={}
-    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if (not getattr(tools,'draft_only',False) or tool['name'] in DRAFT_TOOLS) and (not getattr(tools,'research_only',False) or tool['name'] in RESEARCH_TOOLS) and (not tools.read_only or (tool['annotations'].get('readOnlyHint') and tool['name']!='read_douyin_store'))]}
+    elif method=='tools/list':result={'tools':[tool for tool in TOOLS if
+        ((getattr(tools,'object_id',None)==OVERVIEW_OBJECT) == (tool['name'] in OVERVIEW_TOOLS))
+        and (not getattr(tools,'draft_only',False) or tool['name'] in DRAFT_TOOLS)
+        and (not getattr(tools,'research_only',False) or tool['name'] in RESEARCH_TOOLS)
+        and (not tools.read_only or (tool['annotations'].get('readOnlyHint') and tool['name']!='read_douyin_store'))]}
     elif method=='tools/call':
         params=message.get('params') or {}
         try:
             value=tools.call(params.get('name'),params.get('arguments') or {})
             result={'content':[{'type':'text','text':json.dumps(value,ensure_ascii=False)}],'isError':False}
+        except WorkOverviewError as exc:
+            result={'content':[{'type':'text','text':json.dumps({'code':exc.code,'message':str(exc)},ensure_ascii=False)}],'isError':True}
         except CustomerWriteOutcomeUnknown:
             result={'content':[{'type':'text','text':json.dumps({'code':'outcome_unknown','message':'客户资料保存结果不明，请先核对当前资料和上一版，再决定是否继续。'},ensure_ascii=False)}],'isError':True}
         except ValueError as exc:
             from workspaces import WorkspaceConflict
             if isinstance(exc,WorkspaceConflict):
                 result={'content':[{'type':'text','text':json.dumps({'code':'version_conflict','message':'画布或记录已被其他操作更新，请重新读取并合并后再保存。'},ensure_ascii=False)}],'isError':True}
+            elif params.get('name') in OVERVIEW_TOOLS:
+                result={'content':[{'type':'text','text':json.dumps({'code':'invalid_input','message':'任务不可调整或参数无效，请重新读取总览中的当前版本及可写能力。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in ('get_customer_email_draft','prepare_customer_email_draft','save_customer_email_draft','add_customer_email_attachment'):
                 result={'content':[{'type':'text','text':json.dumps({'code':'draft_unavailable','message':'邮件草稿或附件不可保存，请先读取当前草稿和实际资料；不要发送或覆盖。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in ('save_creation_canvas','product_creation_options','add_product_asset_to_canvas'):
@@ -454,15 +566,17 @@ def main():
     parser.add_argument('--read-only',action='store_true')
     parser.add_argument('--draft-only',action='store_true')
     parser.add_argument('--research-only',action='store_true')
-    args=parser.parse_args();app=open_business(args.root,args.state)
-    if args.object_id.startswith('customer:website-'):app.business.refresh_website(wait=True)
-    tools=DeskTools(app.business,args.root,args.object_id,args.audit,read_only=args.read_only,draft_only=args.draft_only,research_only=args.research_only)
+    args=parser.parse_args()
+    app=None if args.object_id==OVERVIEW_OBJECT else open_business(args.root,args.state)
+    if app and args.object_id.startswith('customer:website-'):app.business.refresh_website(wait=True)
+    tools=DeskTools(app.business if app else None,args.root,args.object_id,args.audit,read_only=args.read_only,draft_only=args.draft_only,research_only=args.research_only)
     try:
         for line in sys.stdin:
             try:reply=dispatch(tools,json.loads(line))
             except Exception:reply={'jsonrpc':'2.0','id':None,'error':{'code':-32700,'message':'Invalid request'}}
             if reply is not None:print(json.dumps(reply,ensure_ascii=False),flush=True)
-    finally:app.db.close()
+    finally:
+        if app:app.db.close()
 
 
 if __name__=='__main__':main()

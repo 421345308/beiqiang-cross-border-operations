@@ -24,6 +24,38 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(result['action'],'create')
         self.assertEqual(self.jobs,[])
 
+    def test_full_name_inside_command_is_candidate_until_confirmed(self):
+        self.objects.append({'id':'creation:canvas','title':'贝强产品视频画布','kind':'creation'})
+        result=self.service.route('继续贝强产品视频画布的下一步')
+        self.assertEqual(result['action'],'choose')
+        self.assertEqual([row['id'] for row in result['candidates']],['creation:canvas'])
+        self.assertEqual(result['jobs'],[])
+        self.assertEqual(self.jobs,[])
+        confirmed=self.service.route('继续贝强产品视频画布的下一步','creation:canvas')
+        self.assertEqual(confirmed['action'],'create')
+        self.assertEqual(self.service.route('贝强产品视频画布')['action'],'create')
+
+    def test_alias_and_current_model_supply_candidates_with_identifier_boundaries(self):
+        self.objects[0].update(aliases=['旧鞋款名','AB01'],current_model='NEW001')
+        for command in ('优化旧鞋款名图片','研究 AB01 的价格','检查 NEW001'):
+            result=self.service.route(command)
+            self.assertEqual(result['action'],'choose')
+            self.assertEqual([row['id'] for row in result['candidates']],['product:BQ01'])
+        for command in ('研究 AB010','研究 XAB01','研究 NEW0019','someone else'):
+            self.assertEqual(self.service.route(command)['candidates'],[])
+        self.assertEqual(self.service.route('优化 BQ01')['action'],'create')
+
+    def test_ambiguous_alias_or_name_never_guesses_even_with_one_exact_id(self):
+        self.objects[0].update(aliases=['共同名称'])
+        self.objects[1].update(aliases=['共同名称'])
+        result=self.service.route('继续共同名称')
+        self.assertEqual(result['action'],'choose')
+        self.assertEqual(len(result['candidates']),2)
+        mixed=self.service.route('比较 BQ01 和 Ten')
+        self.assertEqual(mixed['action'],'choose')
+        self.assertEqual(len(mixed['candidates']),2)
+        self.assertEqual(self.jobs,[])
+
     def test_ambiguity_and_missing_object_never_create_work(self):
         self.assertEqual(self.service.route('研究 BQ01 和 BQ010')['action'],'choose')
         self.assertEqual(self.service.route('提高销售')['action'],'choose')
@@ -50,6 +82,12 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual({row['id'] for row in result['tasks']},{'local:a','cloud:a'})
         self.assertEqual(result['inbox'][0]['action']['run_id'],'a')
         self.assertEqual(result['tasks'][1]['status'],'awaiting_review')
+        cloud=next(row for row in result['tasks'] if row['origin']=='cloud')
+        self.assertIsNone(cloud['priority'])
+        self.assertEqual(cloud['priority_basis'],'unregistered')
+        self.assertEqual(cloud['observed_at'],self.cloud['observed_at'])
+        self.cloud.pop('observed_at')
+        self.assertIsNone(next(row for row in self.service.overview()['tasks'] if row['origin']=='cloud')['observed_at'])
 
     def test_local_blocker_is_actionable_not_a_log(self):
         self.jobs=[{'id':'a','object_id':'product:BQ01','status':'needs_input','error':'需要最新资料'},
@@ -84,7 +122,9 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual({row['id'] for row in result['inbox']},{'reply:1','website:2','mail:4'})
         self.assertEqual(result['sources']['gmail']['state'],'error')
         self.assertTrue(result['sources']['website']['stale'])
-        self.assertEqual(result['tasks'],[])
+        self.assertEqual(len(result['tasks']),5)
+        self.assertTrue(all(not row['capabilities']['adjust'] for row in result['tasks']))
+        self.assertTrue(all(row['priority_basis']=='business_severity' for row in result['tasks']))
 
     def test_business_source_failure_does_not_hide_tasks_or_claim_empty_sources(self):
         def fail():raise RuntimeError('fixture failure')
@@ -95,6 +135,37 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(result['sources']['customers']['state'],'unavailable')
         self.assertEqual(result['sources']['gmail']['state'],'unavailable')
 
+    def test_business_line_uses_channel_kind_and_source_fields(self):
+        self.objects.extend([{'id':'customer:website-new','title':'Website buyer','kind':'customer'},
+            {'id':'channel:alibaba','title':'Channel','kind':'channel'},
+            {'id':'creation:site','title':'Source based','kind':'creation','source':'03_独立站/project.md'}])
+        self.jobs=[{'id':'web','object_id':'customer:website-new','status':'planned'},
+            {'id':'channel','object_id':'channel:alibaba','status':'planned'},
+            {'id':'source','object_id':'creation:site','status':'planned'}]
+        self.cloud['runs']=[{'id':'cloud-source','status':'queued','source':'02_Alibaba运营/record.md'}]
+        self.app.today=SimpleNamespace(snapshot=lambda:{'sources':{},'groups':{'act':[
+            {'id':'catalog','kind':'catalog_status','title':'Catalog','severity':'normal'}]}})
+        result=self.service.overview()
+        self.assertEqual({row['id'] for row in self.service.overview({'business_line':'website'})['tasks']},
+                         {'local:web','local:source'})
+        self.assertEqual({row['id'] for row in self.service.overview({'business_line':'alibaba'})['tasks']},
+                         {'local:channel','cloud:cloud-source','business:catalog'})
+        self.assertEqual(next(row for row in result['tasks'] if row['id']=='cloud:cloud-source')['source'],
+                         '02_Alibaba运营/record.md')
+
+    def test_filters_only_offer_observed_values_and_source_time_is_distinct(self):
+        self.jobs=[{'id':'x','object_id':'product:BQ01','status':'planned',
+                    'updated_at':'2020-01-01T00:00:00Z', 'version':3,
+                    'conversations':[{'control':'reference_only'}]}]
+        result=self.service.overview({'business_line':'products','priority':'normal'})
+        row=result['tasks'][0]
+        self.assertEqual(row['freshness']['state'],'older')
+        self.assertEqual(row['conversation_scope'],'reference_only')
+        self.assertFalse(row['capabilities']['external_conversation_control'])
+        self.assertEqual(result['filters']['executor'],[{'value':'codex_cli','label':'codex_cli'}])
+        self.assertEqual(self.service.overview({'business_line':'domestic'})['tasks'],[])
+
+
 
 class WorkspaceHTTPTests(unittest.TestCase):
     from tests_desk_http import DeskHTTPTests as Fixture
@@ -102,6 +173,28 @@ class WorkspaceHTTPTests(unittest.TestCase):
     tearDown=Fixture.tearDown
     request=Fixture.request
     write=Fixture.write
+
+    def test_adjust_roundtrip_conflict_and_worker_snapshot_preservation(self):
+        job=self.app.agent_jobs.start('product:BQ009','Plan',defer=True)
+        stale=self.app.agent_jobs.get_job(job['id'])
+        status,changed=self.request('/api/desk/job/adjust',{'id':job['id'],
+            'expected_version':job['version'],'priority':'high','next_action':'Review source'})
+        self.assertEqual(status,200)
+        self.assertEqual(changed['status'],'planned')
+        self.assertEqual(changed['instruction'],'Plan')
+        self.assertEqual(changed['adjustments'][-1]['scheduling_effect'],'display_only')
+        status,_=self.request('/api/desk/job/adjust',{'id':job['id'],
+            'expected_version':job['version'],'priority':'low'})
+        self.assertEqual(status,409)
+        self.app.agent_jobs._save(stale)
+        saved=self.app.agent_jobs.get_job(job['id'])
+        self.assertEqual(saved['priority'],'high')
+        self.assertEqual(saved['next_action'],'Review source')
+        self.assertEqual(saved['adjustments'],changed['adjustments'])
+        for bad in ([],{},True,'urgent'):
+            with self.assertRaises(ValueError):
+                self.app.agent_jobs.adjust(job['id'],expected_version=saved['version'],priority=bad)
+        self.assertEqual(saved['attempt'],0)
 
     def test_command_plan_and_context_survive_read(self):
         self.app.cloud_review=SimpleNamespace(workspace_status=lambda:{'runs':[], 'dispatch':{'ready':False}})

@@ -188,3 +188,5 @@
 .batch-actions{margin:16px 0}.batch-actions>button{margin:0 10px 10px 0}.batch-row-picks{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}.batch-row-picks label{display:flex;align-items:center;gap:6px}.batch-operation-results{display:grid;gap:8px}.batch-send-entry{padding:10px 0;border-bottom:1px solid #ddd}.batch-send-entry p{margin:3px 0}
 
 .task-workspace{display:grid;gap:14px}.task-context-packet{width:100%;min-height:280px;font:13px/1.6 monospace}.task-workspace input,.task-workspace select,.task-workspace textarea{max-width:100%;padding:10px}
+
+.task-filters{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.task-filters label{display:flex;flex-direction:column;gap:5px;min-width:150px;flex:1}.task-overview-card{overflow-wrap:anywhere}.task-overview-card details{margin-top:12px}.task-overview-card details textarea{display:block;width:100%;min-height:72px;margin:8px 0}.task-overview-card summary{cursor:pointer}

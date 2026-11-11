@@ -142,6 +142,10 @@ class AgentJobs(TaskContinuity, JobDependencies):
             persisted = self._continuity_defaults(json.loads(row[0]))
             self._continuity_defaults(job)
             job['version'] = max(job['version'], persisted['version'])
+            # Worker snapshots must not overwrite concurrent operator adjustments.
+            if persisted.get('adjustment_version', 0) > job.get('adjustment_version', 0):
+                for key in ('priority', 'next_action', 'adjustment_version', 'adjustments'):
+                    if key in persisted: job[key] = persisted[key]
             known = {(c['provider'], c['conversation_id']) for c in job['conversations']}
             job['conversations'].extend(c for c in persisted['conversations'] if (c['provider'], c['conversation_id']) not in known)
         self._record_continuity(job)
@@ -149,6 +153,34 @@ class AgentJobs(TaskContinuity, JobDependencies):
         with self.app.lock:
             self.app.db.execute('INSERT OR REPLACE INTO agent_jobs VALUES (?,?)', (job['id'], json.dumps(job, ensure_ascii=False)))
             if not self._transaction:self.app.db.commit()
+
+    def adjust(self, job_id, *, expected_version, priority=None, next_action=None):
+        """Update existing job planning metadata; never dispatch or reorder workers."""
+        if priority is None and next_action is None:
+            raise ValueError('请提供优先级或下一动作。')
+        if priority is not None and priority not in ('high', 'normal', 'low'):
+            raise ValueError('优先级必须为 high、normal 或 low。')
+        if next_action is not None and (not isinstance(next_action, str) or len(next_action) > 4000):
+            raise ValueError('下一动作必须为最多4000字的文本。')
+        with self._write():
+            job = self._continuity_defaults(self.get_job(job_id))
+            if type(expected_version) is not int or expected_version != job['version']:
+                raise WorkspaceConflict('任务版本已变化，请刷新后再调整。')
+            changes = {}
+            for key, value in (('priority', priority), ('next_action', next_action)):
+                if value is not None:
+                    value = value.strip() if key == 'next_action' else value
+                    if job.get(key, 'normal' if key == 'priority' else '') != value:
+                        changes[key] = {'before': job.get(key), 'after': value}
+                        job[key] = value
+            if changes:
+                job['adjustment_version'] = job.get('adjustment_version', 0) + 1
+                job.setdefault('adjustments', []).append({'at': now(), 'changes': changes,
+                    'scheduling_effect': 'display_only'})
+                job['adjustments'] = job['adjustments'][-200:]
+                self._event(job, 'planning_adjusted', '已调整计划信息；未改变执行顺序、运行指令或启动任务。')
+                self._save(job)
+        return job
 
     def list_jobs(self):
         with self.app.lock:

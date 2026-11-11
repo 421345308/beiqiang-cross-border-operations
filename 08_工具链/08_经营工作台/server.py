@@ -38,6 +38,7 @@ from today import Today
 from miaoshou_bridge import MiaoshouBridge, BridgeError
 from cloud_review import CloudReview
 from task_workspace import TaskWorkspace
+from desktop_snapshot import DesktopSnapshot
 from alibaba_catalog_monitor import CatalogMonitor
 from workspaces import WorkspaceConflict as CanvasConflict
 
@@ -114,6 +115,7 @@ class Workbench:
         self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
         self.cloud_review=CloudReview(self.root,self.state)
+        self.desktop_snapshot=DesktopSnapshot(self)
         self.task_workspace=TaskWorkspace(self)
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
@@ -439,7 +441,8 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
-                if u.path=='/api/desk/task-overview':return self.send_json(app.task_workspace.overview())
+                if u.path=='/api/desk/desktop-snapshot':return self.send_json(app.desktop_snapshot.read())
+                if u.path=='/api/desk/task-overview':return self.send_json(app.task_workspace.overview({k:value(k) for k in ('business_line','object_id','executor','priority') if value(k)}))
                 if u.path=='/api/desk/task-context':return self.send_json(app.agent_jobs.get_task_context(value('id')))
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
@@ -673,6 +676,11 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','command']:
                 if set(body)-{'instruction','object_id'}:raise ValueError('目标路由字段无效')
                 return self.send_json(app.task_workspace.route(body.get('instruction'),body.get('object_id')))
+            if parts==['api','desk','desktop-snapshot']:
+                return self.send_json(app.desktop_snapshot.import_snapshot(body))
+            if parts==['api','desk','job','adjust']:
+                if set(body)-{'id','expected_version','priority','next_action'}:raise ValueError('任务调整字段无效')
+                return self.send_json(app.agent_jobs.adjust(body.get('id'),expected_version=body.get('expected_version'),priority=body.get('priority'),next_action=body.get('next_action')))
             if parts==['api','desk','job','conversation']:
                 if set(body)-{'id','provider','conversation_id','provenance','url','expected_version'}:raise ValueError('会话关联字段无效')
                 return self.send_json(app.agent_jobs.link_conversation(body.get('id'),provider=body.get('provider'),conversation_id=body.get('conversation_id'),provenance=body.get('provenance'),url=body.get('url'),expected_version=body.get('expected_version')))
