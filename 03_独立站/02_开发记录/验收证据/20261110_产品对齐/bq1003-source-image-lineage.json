@@ -1,0 +1,92 @@
+{
+  "scope": "Existing independent-website product pages and its existing website-download catalogues only; no independent distribution authorization is asserted.",
+  "product_id": "HR003",
+  "current_model": "BQ1003",
+  "source_id": "src-hr003-taihao-k0099",
+  "source_url": "https://taihao.sooxie.com/detail/2496569",
+  "chosen_listing": {
+    "id": "1601943312845",
+    "model": "BQ1003-A",
+    "observed_at_utc": "2026-11-11T03:57:01+00:00",
+    "status": "approved/Y",
+    "sku_pairs": 52,
+    "receipt_path": "03_独立站/02_开发记录/验收证据/.local/20261111_待补图正式回读/1601943312845-20261111T035701Z.json",
+    "sha256": "6b38d41cc0160abeec292bf76fe3a48087a77854b4cbb625220199cda37c8576"
+  },
+  "other_historical_listings": [
+    "1601943335928",
+    "1601943467198"
+  ],
+  "platform_size_labels": "EU 38–50",
+  "platform_colours": [
+    "Black",
+    "Grey",
+    "Blue",
+    "Red"
+  ],
+  "original_image_lineage": [
+    {
+      "source": "01_产品资产/01_原始素材/K0099_泰豪_2026-11-03/27.jpg",
+      "colour": "Black",
+      "sha256": "c058a7c7e476f1d6b5786f63dc477c51f0837e4baa6b515b29c3e21054ae0709",
+      "dimensions": [
+        790,
+        829
+      ],
+      "exif_present": false,
+      "xmp_present": true,
+      "iptc_present": false,
+      "xmp_note": "Document IDs and creation software; no contact, rights or device serial fields detected.",
+      "website_path": "/catalog/bq1003/01_main.jpg"
+    },
+    {
+      "source": "01_产品资产/01_原始素材/K0099_泰豪_2026-11-03/22.jpg",
+      "colour": "Grey",
+      "sha256": "1e5fcfdfeec9885d0cb00cf5b20a16ce4829ccaf927538738d998f644e78f206",
+      "dimensions": [
+        790,
+        1077
+      ],
+      "exif_present": false,
+      "xmp_present": true,
+      "iptc_present": false,
+      "xmp_note": "Document IDs and creation software; no contact, rights or device serial fields detected.",
+      "website_path": "/catalog/bq1003/02_grey.jpg"
+    },
+    {
+      "source": "01_产品资产/01_原始素材/K0099_泰豪_2026-11-03/32.jpg",
+      "colour": "Blue",
+      "sha256": "c21676f1361a9285583b07fcd280ef82136be112ec1b4927a2867fd9f3680472",
+      "dimensions": [
+        790,
+        886
+      ],
+      "exif_present": false,
+      "xmp_present": true,
+      "iptc_present": false,
+      "xmp_note": "Document IDs and creation software; no contact, rights or device serial fields detected.",
+      "website_path": "/catalog/bq1003/03_blue.jpg"
+    },
+    {
+      "source": "01_产品资产/01_原始素材/K0099_泰豪_2026-11-03/31.jpg",
+      "colour": "Red",
+      "sha256": "256a0661b47dd1f30e6126aebe0f955e9d0b0aac7d6e6c00f71ef61dee352cb6",
+      "dimensions": [
+        790,
+        696
+      ],
+      "exif_present": false,
+      "xmp_present": true,
+      "iptc_present": false,
+      "xmp_note": "Document IDs and creation software; no contact, rights or device serial fields detected.",
+      "website_path": "/catalog/bq1003/04_red.jpg"
+    }
+  ],
+  "boundaries": [
+    "Source foot-length chart only extends to size 46; check size 47–50 measurements before sale.",
+    "SKU labels are platform configuration, not present inventory.",
+    "Colour photos are existing supplier originals, copied unchanged for website use; dark backdrop lettering and a book are part of the original images.",
+    "Material fields are not inferred from appearance."
+  ],
+  "processing": "Original JPEGs copied byte-for-byte with source XMP intact; responsive WebP and existing website catalogue thumbnails are derivatives."
+}
