@@ -150630,7 +150630,8 @@
             "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/buyer_page_observation.json",
             "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/pixel_verification.json",
             "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T033349Z.json",
-            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/final_verification.json"
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/final_verification.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/pixel_verification_original_webp.json"
           ],
           "attempt_started_at_utc": "2026-11-11T03:17:00.621819+00:00",
           "latest_formal_readback_at_utc": "2026-11-11T03:33:49+00:00",
@@ -150642,7 +150643,18 @@
           "photobank_file_id": "34216609084",
           "update_request_id": "0b0b3a2717943670259648177",
           "buyer_page_observation": "2026-11-11 UTC 审核通过后，买家页详情图显示灰色 EU 39–48、黑色 EU 36–48、酒红 EU 36–41。",
-          "image_comparison": "对照原始平台图，修改框外也存在轻微像素差异；不能称为框外像素完全一致。"
+          "image_comparison": "以修图实际参考 WEBP（e3b63d…）与成品 PNG（6c4be2…）逐像素比较，编辑框外变化为 0；先前报告使用同 URL 的另一 PNG 响应，不可据此判断修图改动框外。",
+          "original_image_note": "这是旧图 URL 返回的 PNG 版本，不是制作修正图时所用的参考版本。",
+          "edit_reference_file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/old_cdn_variant_accept_webp.img",
+          "edit_reference_format": "WEBP",
+          "edit_reference_sha256": "e3b63d2cca6871fc59f5926f5a6fa085d4ee17271e5c22c806236661b2f6ee84",
+          "edit_box_half_open_xyxy": [
+            867,
+            639,
+            908,
+            701
+          ],
+          "edit_reference_outside_changed_pixels": 0
         }
       },
       "source_routes_by_color": {
