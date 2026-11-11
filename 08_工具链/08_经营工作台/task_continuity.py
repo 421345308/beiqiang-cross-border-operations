@@ -130,8 +130,16 @@ class TaskContinuity:
                 completion_state = 'unavailable' if job.get('completion_error') else 'ok'
             except (ValueError, TypeError, KeyError):
                 pass
+        external_turns, external_turns_state = [], 'unavailable'
+        if hasattr(self, 'external_turns_view'):
+            try:
+                external_turns = self.external_turns_view(job)
+                external_turns_state = 'ok'
+            except (ValueError, TypeError, KeyError):
+                pass
         return {'job':job,'object':obj,'artifacts':artifacts,'shared_sources':shared,'customer_context':customer_context,
                 'completion_events':completion,'completion_state':completion_state,
+                'external_turns':external_turns,'external_turns_state':external_turns_state,
                 'goal':intent['goal'],'effective_decisions':intent['decisions'],
                 'decisions_recorded':intent['decisions_recorded'],'intent_version':intent['version'],
                 'intent_source':intent['source'],'intent_updated_at':intent['updated_at'],

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import sys
 from datetime import datetime
@@ -18,7 +19,9 @@ DRAFT_TOOLS = {'get_business_context','get_object','list_sources','read_source',
                'get_customer_profile','get_customer_email_draft','prepare_customer_email_draft',
                'save_customer_email_draft','add_customer_email_attachment'}
 RESEARCH_TOOLS = DRAFT_TOOLS | {'research_company','save_customer_profile','list_objects'}
-OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task', 'assess_local_run', 'continue_local_run', 'reconcile_local_run'}
+EXTERNAL_TOOLS = {'link_local_conversation', 'bind_external_thread', 'register_external_turn', 'assess_external_turn',
+                  'prepare_external_dispatch', 'observe_external_dispatch', 'resolve_external_failure'}
+OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task', 'assess_local_run', 'continue_local_run', 'reconcile_local_run'} | EXTERNAL_TOOLS
 OVERVIEW_OBJECT = 'workspace:overview'
 
 
@@ -94,6 +97,98 @@ def _validate_local_run_operation(name, args):
     return task_id[6:]
 
 
+def _validate_external_operation(name, args):
+    """Validate caller observations, without reading or controlling any external chat."""
+    common={'id','expected_version'}
+    event={'event_id'}
+    assessment={'expected_intent_version','disposition','goal_status','capability_status',
+                'result_ref','gap','next_action','evidence'}
+    required={
+        'link_local_conversation':common | {'provider','conversation_id','provenance'},
+        'bind_external_thread':common | {'host_id','thread_id'},
+        'register_external_turn':common | {'host_id','thread_id','turn_id','started_at','completed_at',
+                                           'head_turn_id','head_status','head_started_at','observed_at','evidence'},
+        'assess_external_turn':common | event | assessment,
+        'prepare_external_dispatch':common | event | {'expected_intent_version','request_id','instruction'},
+        'observe_external_dispatch':common | event | {'request_id','state','evidence'},
+        'resolve_external_failure':common | event | {'request_id','evidence'},
+    }
+    optional={'observe_external_dispatch':{'target_turn_id','observed_instruction_sha256','correlation'}}
+    if (name not in required or not isinstance(args,dict) or not required[name].issubset(args)
+            or set(args)-required[name]-optional.get(name,set())):
+        raise WorkOverviewError('invalid_input','外部回合登记参数无效。')
+    task_id=args['id']
+    if not isinstance(task_id,str) or not re.fullmatch(r'local:[A-Za-z0-9_-]{1,200}',task_id):
+        raise WorkOverviewError('unsupported_task','外部回合只能登记到明确的本机任务。')
+    for key in ('expected_version','expected_intent_version'):
+        if key in args and (type(args[key]) is not int or args[key]<0):
+            raise WorkOverviewError('invalid_input','请提供实际读取的当前任务和意图版本。')
+    if name=='link_local_conversation':
+        if (args['provider']!='codex' or not isinstance(args['conversation_id'],str)
+                or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,199}',args['conversation_id'])
+                or not isinstance(args['provenance'],str) or not args['provenance'].strip()
+                or len(args['provenance'])>500 or any(ord(c)<32 for c in args['provenance'])):
+            raise WorkOverviewError('invalid_input','Codex 会话关联来源或编号无效。')
+    for key in ('host_id','thread_id','turn_id','head_turn_id','request_id','target_turn_id'):
+        if key in args and args[key] is not None and (not isinstance(args[key],str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}',args[key])):
+            raise WorkOverviewError('invalid_input','会话、回合或请求编号无效。')
+        if key in args and args[key] is None and key != 'target_turn_id':
+            raise WorkOverviewError('invalid_input','会话、回合或请求编号无效。')
+    if 'event_id' in args and (not isinstance(args['event_id'],str) or not re.fullmatch(r'external:[a-f0-9]{64}',args['event_id'])):
+        raise WorkOverviewError('invalid_input','外部回合事件编号无效。')
+    if name=='register_external_turn':
+        if args['head_status'] not in ('completed','inProgress','in_progress','failed','cancelled','unknown'):
+            raise WorkOverviewError('invalid_input','最新回合状态无效。')
+        for key in ('started_at','completed_at','head_started_at'):
+            value=args[key]
+            try:valid=type(value) in (int,float) and math.isfinite(value) and value>=0
+            except OverflowError:valid=False
+            if not valid:
+                raise WorkOverviewError('invalid_input','回合时间须为有效的 Unix 秒数。')
+        if args['completed_at']<args['started_at']:
+            raise WorkOverviewError('invalid_input','回合结束时间不能早于开始时间。')
+        if not isinstance(args['evidence'],str) or not args['evidence'].strip() or len(args['evidence'])>4000:
+            raise WorkOverviewError('invalid_input','请提供外部回合观测说明。')
+    if name=='assess_external_turn':
+        if args['disposition'] not in ('verified_complete','continue','needs_decision','blocked','unknown') or any(args[k] not in ('met','not_met','unknown') for k in ('goal_status','capability_status')):
+            raise WorkOverviewError('invalid_input','回合验收状态无效。')
+        if any(not isinstance(args[k],str) or len(args[k])>limit for k,limit in (('result_ref',2000),('gap',4000),('next_action',4000))):
+            raise WorkOverviewError('invalid_input','回合验收内容无效。')
+    if name=='prepare_external_dispatch':
+        if not isinstance(args['instruction'],str) or not args['instruction'].strip() or len(args['instruction'])>12000:
+            raise WorkOverviewError('invalid_input','请提供有范围的接续指令。')
+    if name=='observe_external_dispatch':
+        if args['state'] not in ('unknown','accepted','running','completed','failed'):
+            raise WorkOverviewError('invalid_input','派工观测状态无效。')
+        if args.get('correlation') not in (None,'matching_receipt','manual_verification'):
+            raise WorkOverviewError('invalid_input','派工关联依据无效。')
+        if args['state'] in ('running','completed','failed') and (not args.get('target_turn_id') or not args.get('correlation')):
+            raise WorkOverviewError('invalid_input','运行或完成状态须提供目标回合和明确关联依据。')
+        digest=args.get('observed_instruction_sha256')
+        if digest is not None and (not isinstance(digest,str) or not re.fullmatch(r'[a-f0-9]{64}',digest)):
+            raise WorkOverviewError('invalid_input','指令摘要无效。')
+        if args['state'] in ('running','completed','failed') and args.get('correlation')=='manual_verification' and digest is None:
+            raise WorkOverviewError('invalid_input','人工核验须提供完整请求指纹。')
+    if name in ('assess_external_turn','observe_external_dispatch','resolve_external_failure'):
+        evidence=args['evidence']
+        if (not isinstance(evidence,dict) or set(evidence)!={'source','observed_at','detail'} or
+                any(not isinstance(evidence[k],str) or not evidence[k].strip() or len(evidence[k])>limit for k,limit in (('source',500),('observed_at',100),('detail',2000)))):
+            raise WorkOverviewError('invalid_input','请提供证据来源、观测时间与说明。')
+        observed_at=evidence['observed_at']
+    elif name=='register_external_turn':
+        observed_at=args['observed_at']
+        if not isinstance(observed_at,str) or not observed_at.strip() or len(observed_at)>100:
+            raise WorkOverviewError('invalid_input','观测时间无效。')
+    else:
+        observed_at=None
+    if observed_at is not None:
+        try:observed=datetime.fromisoformat(observed_at.replace('Z','+00:00'))
+        except ValueError:raise WorkOverviewError('invalid_input','观测时间无效。') from None
+        if observed.tzinfo is None or observed.utcoffset() is None:
+            raise WorkOverviewError('invalid_input','观测时间必须包含时区。')
+    return task_id[6:]
+
+
 class LocalOverviewClient:
     """Use the existing local service; never start it or retry a mutation."""
     origin = 'http://127.0.0.1:8766'
@@ -151,6 +246,17 @@ class LocalOverviewClient:
         paths={'assess_local_run':'assess-completion','continue_local_run':'continue-followup',
                'reconcile_local_run':'reconcile-followup'}
         if name not in paths:raise WorkOverviewError('invalid_input','不支持的回合操作。')
+        bootstrap=self._request('/api/desk/bootstrap')
+        token=bootstrap.get('csrf_token')
+        if not isinstance(token,str) or not token:
+            raise WorkOverviewError('local_service_unavailable','本机工作台认证不可用。')
+        return self._request('/api/desk/job/'+paths[name],{'id':job_id,**fields},token)
+
+    def external_operation(self, name, job_id, **fields):
+        paths={'link_local_conversation':'conversation','bind_external_thread':'external-bind','register_external_turn':'external-turn',
+               'assess_external_turn':'external-assess','prepare_external_dispatch':'external-prepare',
+               'observe_external_dispatch':'external-observe','resolve_external_failure':'external-resolve-failure'}
+        if name not in paths:raise WorkOverviewError('invalid_input','不支持的外部观测操作。')
         bootstrap=self._request('/api/desk/bootstrap')
         token=bootstrap.get('csrf_token')
         if not isinstance(token,str) or not token:
@@ -351,6 +457,17 @@ class DeskTools:
                 return workspace.overview(filters=filters) if workspace else client.overview(filters)
             if self.read_only:
                 raise WorkOverviewError('read_only', '当前连接只读，不能调整、验收或接续任务。')
+            if name in EXTERNAL_TOOLS:
+                job_id=_validate_external_operation(name,args)
+                fields={key:value for key,value in args.items() if key!='id'}
+                jobs=getattr(app,'agent_jobs',None)
+                if jobs:
+                    method='link_conversation' if name=='link_local_conversation' else name
+                    if 'event_id' in fields:
+                        event_id=fields.pop('event_id')
+                        return getattr(jobs,method)(job_id,event_id,**fields)
+                    return getattr(jobs,method)(job_id,**fields)
+                return client.external_operation(name,job_id,**fields)
             if name in ('assess_local_run','continue_local_run','reconcile_local_run'):
                 job_id=_validate_local_run_operation(name,args)
                 fields={key:value for key,value in args.items() if key!='id'}
@@ -664,6 +781,49 @@ TOOLS.extend([
                     'required':list(_RUN_FOLLOWUP_PROPERTIES),'additionalProperties':False},
      'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
 ])
+
+_EXTERNAL_ID={'type':'string','minLength':1,'maxLength':200,'pattern':r'^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$'}
+_EXTERNAL_COMMON={'id':_RUN_COMMON_PROPERTIES['id'],'expected_version':_RUN_COMMON_PROPERTIES['expected_version']}
+_EXTERNAL_EVENT={'event_id':{'type':'string','pattern':r'^external:[a-f0-9]{64}$'}}
+_EXTERNAL_EVIDENCE=_RUN_ASSESS_PROPERTIES['evidence']
+_EXTERNAL_SCHEMAS={
+    'link_local_conversation':({**_EXTERNAL_COMMON,'provider':{'type':'string','enum':['codex']},
+        'conversation_id':{'type':'string','pattern':r'^[A-Za-z0-9][A-Za-z0-9_-]{0,199}$'},
+        'provenance':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'}},set()),
+    'bind_external_thread':({**_EXTERNAL_COMMON,'host_id':_EXTERNAL_ID,'thread_id':_EXTERNAL_ID},set()),
+    'register_external_turn':({**_EXTERNAL_COMMON,'host_id':_EXTERNAL_ID,'thread_id':_EXTERNAL_ID,
+        'turn_id':_EXTERNAL_ID,'started_at':{'type':'number','minimum':0},'completed_at':{'type':'number','minimum':0},
+        'head_turn_id':_EXTERNAL_ID,'head_status':{'type':'string',
+            'enum':['completed','inProgress','in_progress','failed','cancelled','unknown'],
+            'description':'记录正式来源的回合状态；in_progress 是兼容写法。'},
+        'head_started_at':{'type':'number','minimum':0},'observed_at':{'type':'string','format':'date-time','maxLength':100},
+        'evidence':{'type':'string','minLength':1,'maxLength':4000,'pattern':r'\S'}},set()),
+    'assess_external_turn':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,
+        **{key:value for key,value in _RUN_ASSESS_PROPERTIES.items() if key not in ('id','attempt','expected_version')}},set()),
+    'prepare_external_dispatch':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,
+        'expected_intent_version':{'type':'integer','minimum':0},'request_id':_EXTERNAL_ID,
+        'instruction':{'type':'string','minLength':1,'maxLength':12000,'pattern':r'\S'}},set()),
+    'observe_external_dispatch':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,'request_id':_EXTERNAL_ID,
+        'state':{'type':'string','enum':['unknown','accepted','running','completed','failed']},
+        'evidence':_EXTERNAL_EVIDENCE,'target_turn_id':{'anyOf':[_EXTERNAL_ID,{'type':'null'}]},
+        'observed_instruction_sha256':{'anyOf':[{'type':'string','pattern':r'^[a-f0-9]{64}$'},{'type':'null'}]},
+        'correlation':{'anyOf':[{'type':'string','enum':['matching_receipt','manual_verification']},{'type':'null'}]}},
+        {'target_turn_id','observed_instruction_sha256','correlation'}),
+    'resolve_external_failure':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,'request_id':_EXTERNAL_ID,
+        'evidence':_EXTERNAL_EVIDENCE},set())}
+_EXTERNAL_DESCRIPTIONS={
+    'link_local_conversation':'将调用方明确提供的 Codex 会话引用关联到本机任务，仅供定位和追溯；reference_only 不授予读取或控制能力，也不自动绑定主机。',
+    'bind_external_thread':'仅将调用方明确指定的外部会话引用登记到本机任务，按任务版本保护。不会读取、创建、发送或控制外部会话，也不表示自动连接。',
+    'register_external_turn':'仅登记调用方从正式来源实际观测的外部已结束回合、最新回合及来源时间；不会自行读取会话。历史完成不代表经营目标完成。',
+    'assess_external_turn':'按当前任务与意图版本，登记调用方对外部回合成果、目标、能力、证据和下一步的验收；不控制外部会话。',
+    'prepare_external_dispatch':'仅为后续人工或正式工具派工登记请求及指令，不发送、不调用外部会话。结果不明先读取原请求对账，不重放。',
+    'observe_external_dispatch':'仅记录调用方实际观察的派工状态和关联依据；运行、完成或失败需目标回合及回执匹配或人工核验。人工核验是调用方断言，不代表服务自行认证；未知不重发。',
+    'resolve_external_failure':'仅登记调用方对失败请求的实际影响及后续处理的核对依据，按任务版本保护；不发送、重派或自动启动外部会话。'}
+for _name,(_properties,_optional) in _EXTERNAL_SCHEMAS.items():
+    TOOLS.append({'name':_name,'description':_EXTERNAL_DESCRIPTIONS[_name],
+        'inputSchema':{'type':'object','properties':_properties,
+                       'required':[key for key in _properties if key not in _optional],'additionalProperties':False},
+        'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}})
 
 
 def dispatch(tools,message):

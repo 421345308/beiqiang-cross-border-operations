@@ -18,7 +18,96 @@ from business import PRODUCTS,SUPPLY,ASSETS,CHANNEL
 from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
+def external_cases():
+    event='external:'+'a'*64
+    evidence={'source':'正式工具隔离回执','observed_at':'2026-11-11T13:00:00Z','detail':'合成观测'}
+    common={'id':'p1','expected_version':3}
+    return [
+        ('external-bind','bind_external_thread',{**common,'host_id':'local','thread_id':'thread-1'}),
+        ('external-turn','register_external_turn',{**common,'host_id':'local','thread_id':'thread-1',
+            'turn_id':'turn-1','started_at':1794400000.0,'completed_at':1794400010.0,
+            'head_turn_id':'turn-2','head_status':'inProgress','head_started_at':1794400020.0,
+            'observed_at':'2026-11-11T13:00:00Z','evidence':'合成 read_thread 元数据'}),
+        ('external-assess','assess_external_turn',{**common,'event_id':event,'expected_intent_version':1,
+            'disposition':'continue','goal_status':'not_met','capability_status':'unknown',
+            'result_ref':'artifact:synthetic','gap':'尚未完成','next_action':'继续核对','evidence':evidence}),
+        ('external-prepare','prepare_external_dispatch',{**common,'event_id':event,'expected_intent_version':1,
+            'request_id':'request-1','instruction':'仅研究合成任务'}),
+        ('external-observe','observe_external_dispatch',{**common,'event_id':event,'request_id':'request-1',
+            'state':'running','evidence':evidence,'target_turn_id':'turn-2','correlation':'manual_verification',
+            'observed_instruction_sha256':'b'*64}),
+        ('external-resolve-failure','resolve_external_failure',{**common,'event_id':event,'request_id':'request-1',
+            'evidence':evidence})]
+
 class DeskHTTPTests(unittest.TestCase):
+    def test_external_observations_http_enforces_security_and_forwards_once(self):
+        from workspaces import WorkspaceConflict
+        for route,method,body in external_cases():
+            with self.subTest(route=route),patch.object(self.app.agent_jobs,method,create=True,
+                    return_value={'event':{'state':'unknown'},'created':True}) as action:
+                path='/api/desk/job/'+route
+                try:denied=self.request(path,body,token=False)[0]
+                except (ConnectionAbortedError,ConnectionResetError):denied=0
+                self.assertIn(denied,(0,403));action.assert_not_called()
+                for rejected in ({'Host':'untrusted.example'},{'Origin':'https://untrusted.example'}):
+                    headers={'Content-Type':'application/json','X-Workbench-Token':self.app.token,**rejected}
+                    connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+                    try:
+                        connection.request('POST',path,body=json.dumps(body).encode(),headers=headers)
+                        response=connection.getresponse();response.read();denied=response.status
+                    except (ConnectionAbortedError,ConnectionResetError):denied=0
+                    finally:connection.close()
+                    self.assertIn(denied,(0,403));action.assert_not_called()
+                status,result=self.request(path,body)
+                self.assertEqual(status,200);self.assertEqual(result['event']['state'],'unknown')
+                fields={k:v for k,v in body.items() if k not in ('id','event_id')}
+                positional=('p1',body['event_id']) if 'event_id' in body else ('p1',)
+                action.assert_called_once_with(*positional,**fields)
+                for malformed in ({**body,'extra':'malicious'},{**body,'id':'../bad'},{**body,'expected_version':True},
+                                  {k:v for k,v in body.items() if k!='expected_version'}):
+                    self.assertEqual(self.request(path,malformed)[0],400)
+                self.assertEqual(action.call_count,1)
+                action.side_effect=WorkspaceConflict('合成版本冲突')
+                self.assertEqual(self.request(path,body)[0],409)
+                self.assertEqual(action.call_count,2)
+        self.assertEqual(len(self.processes),0)
+
+    def test_external_observation_http_rejects_invalid_and_unattributed_data(self):
+        cases={route:(method,body) for route,method,body in external_cases()}
+        bad={
+            'external-bind':[{'host_id':'../escape'},{'thread_id':None}],
+            'external-turn':[{'started_at':True},{'started_at':'1794400000'},{'started_at':float('nan')},
+                {'head_started_at':float('inf')},{'head_started_at':10**400},{'completed_at':1},
+                {'head_turn_id':None},{'head_status':'success'},{'observed_at':'2026-11-11T13:00:00'},
+                {'evidence':{'source':'not a string'}}],
+            'external-assess':[{'event_id':'external:wrong'},{'expected_intent_version':False},
+                {'disposition':'completed'},{'goal_status':'passed'},{'evidence':{}},
+                {'evidence':{'source':'x','observed_at':'2026-11-11T13:00:00','detail':'x'}}],
+            'external-prepare':[{'request_id':'bad/id'},{'instruction':' '},{'instruction':'x'*12001}],
+            'external-observe':[{'state':'running','target_turn_id':None},{'correlation':None},
+                {'state':'sent'},{'correlation':'text_similarity'},{'observed_instruction_sha256':'bad'},
+                {'observed_instruction_sha256':'A'*64},
+                {'observed_instruction_sha256':None},
+                {'evidence':{'source':'x','observed_at':'bad','detail':'x'}}],
+            'external-resolve-failure':[{'request_id':'bad/id'},{'event_id':'external:wrong'},
+                {'evidence':{}},{'evidence':{'source':'x','observed_at':'bad','detail':'x'}}]}
+        for route,malformed in bad.items():
+            method,body=cases[route]
+            with patch.object(self.app.agent_jobs,method,create=True) as action:
+                for change in malformed:
+                    with self.subTest(route=route,change=str(change)[:100]):
+                        self.assertEqual(self.request('/api/desk/job/'+route,{**body,**change})[0],400)
+                action.assert_not_called()
+
+    def test_external_turn_accepts_official_in_progress_and_compatible_alias(self):
+        _,_,body=next(item for item in external_cases() if item[0]=='external-turn')
+        with patch.object(self.app.agent_jobs,'register_external_turn',create=True,return_value={'event':'recorded'}) as action:
+            for state in ('inProgress','in_progress'):
+                with self.subTest(state=state):
+                    self.assertEqual(self.request('/api/desk/job/external-turn',{**body,'head_status':state})[0],200)
+                    self.assertEqual(action.call_args.kwargs['head_status'],state)
+            self.assertEqual(action.call_count,2)
+
     def test_completion_assessment_http_requires_versions_evidence_and_csrf(self):
         from workspaces import WorkspaceConflict
         path='/api/desk/job/assess-completion'

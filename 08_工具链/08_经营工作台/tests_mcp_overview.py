@@ -2,6 +2,7 @@
 import io
 import json
 import unittest
+from contextlib import ExitStack
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 from urllib.error import HTTPError, URLError
@@ -21,7 +22,13 @@ class OverviewMcpTests(unittest.TestCase):
         self.jobs = SimpleNamespace(adjust=Mock(return_value={'id':'demo','version':2}),
             assess_and_continue=Mock(return_value={'assessment':{'state':'continue'}}),
             continue_followup=Mock(return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}),
-            reconcile_followup=Mock(return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}))
+            reconcile_followup=Mock(return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}),
+            link_conversation=Mock(return_value={'id':'p1','conversations':[{'control':'reference_only'}]}),
+            bind_external_thread=Mock(return_value={'id':'p1'}),register_external_turn=Mock(return_value={'event':'recorded'}),
+            assess_external_turn=Mock(return_value={'event':'assessed'}),
+            prepare_external_dispatch=Mock(return_value={'event':{'state':'unknown'},'created':True}),
+            observe_external_dispatch=Mock(return_value={'dispatch':{'state':'unknown'}}),
+            resolve_external_failure=Mock(return_value={'event':'failure_reviewed'}))
         self.business = SimpleNamespace(app=SimpleNamespace(task_workspace=self.workspace,agent_jobs=self.jobs))
         self.tools = DeskTools(self.business,'.',OVERVIEW_OBJECT)
 
@@ -30,7 +37,9 @@ class OverviewMcpTests(unittest.TestCase):
         return {tool['name'] for tool in result['result']['tools']}
 
     def test_explicit_binding_and_existing_worker_restrictions(self):
-        self.assertEqual(self.names(self.tools),{'get_work_overview','adjust_local_task','assess_local_run','continue_local_run','reconcile_local_run'})
+        self.assertEqual(self.names(self.tools),{'get_work_overview','adjust_local_task','assess_local_run','continue_local_run','reconcile_local_run',
+            'link_local_conversation','bind_external_thread','register_external_turn','assess_external_turn',
+            'prepare_external_dispatch','observe_external_dispatch','resolve_external_failure'})
         ordinary=DeskTools(self.business,'.','product:DEMO')
         self.assertNotIn('get_work_overview',self.names(ordinary))
         for tools in (ordinary,DeskTools(self.business,'.',OVERVIEW_OBJECT,draft_only=True),
@@ -43,6 +52,99 @@ class OverviewMcpTests(unittest.TestCase):
         self.workspace.overview.assert_called_once_with(filters={'executor':'local'})
         for filters in ({'secret':'x'},[],{'priority':3}):
             with self.assertRaises(ValueError):self.tools.call('get_work_overview',{'filters':filters})
+
+    def test_external_tools_scope_validation_and_exact_caller_observations(self):
+        from tests_desk_http import external_cases
+        link={'id':'local:p1','expected_version':3,'provider':'codex',
+              'conversation_id':'thread-1','provenance':'合成正式工具观测'}
+        self.assertEqual(self.tools.call('link_local_conversation',link)['conversations'][0]['control'],'reference_only')
+        self.jobs.link_conversation.assert_called_once_with('p1',**{k:v for k,v in link.items() if k!='id'})
+        for route,name,raw in external_cases():
+            body={**raw,'id':'local:p1'}
+            self.tools.call(name,body)
+            action=getattr(self.jobs,name)
+            fields={k:v for k,v in body.items() if k not in ('id','event_id')}
+            positional=('p1',body['event_id']) if 'event_id' in body else ('p1',)
+            action.assert_called_once_with(*positional,**fields)
+            spec=next(tool for tool in TOOLS if tool['name']==name)
+            self.assertFalse(spec['annotations']['readOnlyHint'])
+            self.assertFalse(spec['inputSchema']['additionalProperties'])
+            readonly=DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True)
+            ordinary=DeskTools(self.business,'.','product:DEMO')
+            for scoped in (readonly,ordinary):
+                with self.assertRaises(ValueError):scoped.call(name,body)
+            for bad in ({'id':'reference:p1'},{'id':'cloud:p1'},{'expected_version':True},{'extra':'malicious'}):
+                with self.subTest(name=name,bad=bad),self.assertRaises(ValueError):self.tools.call(name,{**body,**bad})
+            if name=='observe_external_dispatch':
+                for bad in ({'observed_instruction_sha256':'A'*64},{'observed_instruction_sha256':None},
+                            {'correlation':'text_similarity'},{'target_turn_id':None}):
+                    with self.subTest(name=name,bad=bad),self.assertRaises(ValueError):self.tools.call(name,{**body,**bad})
+            self.assertEqual(action.call_count,1)
+        for bad in ({'provider':'chatgpt'},{'conversation_id':'../x'},{'provenance':'  '},{'extra':'x'}):
+            with self.subTest(link=bad),self.assertRaises(ValueError):self.tools.call('link_local_conversation',{**link,**bad})
+        with self.assertRaises(ValueError):DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True).call('link_local_conversation',link)
+        with self.assertRaises(ValueError):DeskTools(self.business,'.','product:DEMO').call('link_local_conversation',link)
+        self.assertEqual(self.jobs.link_conversation.call_count,1)
+
+    def test_external_tools_real_isolated_http_and_conflict(self):
+        from tests_desk_http import DeskHTTPTests,external_cases
+        fixture=DeskHTTPTests();fixture.setUp()
+        link={'id':'local:p1','expected_version':3,'provider':'codex','conversation_id':'thread-1','provenance':'合成观测'}
+        try:
+            tools=DeskTools(None,fixture.root,OVERVIEW_OBJECT)
+            cases=external_cases()
+            with ExitStack() as stack:
+                stack.enter_context(patch.object(LocalOverviewClient,'origin','http://127.0.0.1:'+str(fixture.http.server_port)))
+                mocks={name:stack.enter_context(patch.object(fixture.app.agent_jobs,name,create=True,
+                       return_value={'event':{'state':'unknown'},'created':True})) for _,name,_ in cases}
+                linked=stack.enter_context(patch.object(fixture.app.agent_jobs,'link_conversation',create=True,
+                       return_value={'id':'p1','conversations':[{'control':'reference_only'}]}))
+                self.assertEqual(tools.call('link_local_conversation',link)['conversations'][0]['control'],'reference_only')
+                linked.assert_called_once_with('p1',url=None,**{k:v for k,v in link.items() if k!='id'})
+                for _,name,raw in cases:
+                    body={**raw,'id':'local:p1'}
+                    self.assertEqual(tools.call(name,body)['event']['state'],'unknown')
+                    fields={k:v for k,v in body.items() if k not in ('id','event_id')}
+                    positional=('p1',body['event_id']) if 'event_id' in body else ('p1',)
+                    mocks[name].assert_called_once_with(*positional,**fields)
+                name='assess_external_turn';raw=next(body for _,method,body in cases if method==name)
+                mocks[name].side_effect=WorkspaceConflict('合成版本冲突')
+                response=dispatch(tools,{'id':1,'method':'tools/call','params':{'name':name,
+                    'arguments':{**raw,'id':'local:p1'}}})['result']
+                self.assertTrue(response['isError'])
+                self.assertEqual(json.loads(response['content'][0]['text'])['code'],'version_conflict')
+                self.assertEqual(len(fixture.processes),0)
+        finally:fixture.tearDown()
+
+    def test_external_turn_mcp_accepts_official_in_progress_and_compatible_alias(self):
+        from tests_desk_http import external_cases
+        _,_,raw=next(item for item in external_cases() if item[0]=='external-turn')
+        body={**raw,'id':'local:p1'}
+        for state in ('inProgress','in_progress'):
+            with self.subTest(state=state):
+                self.tools.call('register_external_turn',{**body,'head_status':state})
+                self.assertEqual(self.jobs.register_external_turn.call_args.kwargs['head_status'],state)
+        self.assertEqual(self.jobs.register_external_turn.call_count,2)
+        schema=next(tool for tool in TOOLS if tool['name']=='register_external_turn')['inputSchema']
+        self.assertIn('inProgress',schema['properties']['head_status']['enum'])
+        self.assertIn('in_progress',schema['properties']['head_status']['enum'])
+
+    def test_external_prepare_unknown_transport_is_not_replayed(self):
+        from tests_desk_http import external_cases
+        raw=next(body for _,name,body in external_cases() if name=='prepare_external_dispatch')
+        requests=[]
+        def open_request(request,timeout):
+            requests.append(request)
+            if request.data is None:return io.BytesIO(b'{"csrf_token":"synthetic-test-token"}')
+            self.assertEqual(json.loads(request.data),raw)
+            raise URLError('synthetic failure after request')
+        with patch('urllib.request.build_opener',return_value=SimpleNamespace(open=open_request)):
+            response=dispatch(DeskTools(None,'.',OVERVIEW_OBJECT),{'id':2,'method':'tools/call',
+                'params':{'name':'prepare_external_dispatch','arguments':{**raw,'id':'local:p1'}}})['result']
+        self.assertTrue(response['isError'])
+        self.assertEqual(json.loads(response['content'][0]['text'])['code'],'outcome_unknown')
+        self.assertEqual(len(requests),2)
+        self.assertTrue(requests[1].full_url.endswith('/api/desk/job/external-prepare'))
 
     def test_run_assessment_and_followup_forward_exact_local_scope_and_versions(self):
         body={'id':'local:demo','attempt':2,'expected_version':3,'expected_intent_version':1,

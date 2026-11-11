@@ -310,6 +310,7 @@
       const taskStatus=task=>{const observed=task.origin==='desktop'?(task.source_status || task.status):task.status;const label=statusNames[observed] || ({unknown:'状态未知',notLoaded:'状态未知（尚未加载）',active:'正在处理',idle:'空闲',act:'今天能推',decide:'等你拍板',watch:'持续观察'})[observed] || observed || '状态未知';if(task.origin!=='desktop')return label;const freshness=typeof task.freshness==='object'?task.freshness?.state:task.freshness;return ['ok','fresh'].includes(freshness)?`最近一次观察：${label}（${time(task.observed_at)}，非实时）`:`当前状态未知 · ${time(task.observed_at)} 快照时观察：${label}`;};
       const taskExcerpt=(value,limit=180)=>{const normalized=text(value).replace(/\s+/g,' ').trim();return normalized.length>limit?normalized.slice(0,limit)+'…（查看详情）':normalized;};
       const completionNames={awaiting_review:'待验收',intent_changed:'目标已变化，待重新验收',review_required:'目标已变化，待重新验收',verified_complete:'已验完成',continue_ready:'待继续',ready_to_continue:'待继续',needs_decision:'需负责人决定',blocked:'阻塞',unknown:'未知待核实',dispatch_accepted:'接续已受理',dispatch_starting:'接续启动中',dispatch_running:'接续运行中',dispatch_completed:'接续回合已结束，待验收',dispatch_failed:'接续失败',dispatch_unknown:'接续结果未知，需对账',dispatch_blocked:'派工前阻塞'};
+      const externalNames={awaiting_review:'待验收',review_required:'需重新验收',ready_to_continue:'下一步待处理',needs_decision:'需负责人决定',blocked:'受阻',unknown:'未知待核实',dispatch_unknown:'外部派工未知，先对账',dispatch_accepted:'外部派工已登记受理，待核对',dispatch_running:'外部派工已登记运行，待核对',dispatch_completed:'外部派工已登记结束，待核读新回合',dispatch_failed:'外部派工已登记失败',verified_complete:'该外部回合已验收',historical:'历史回合',order_ambiguous:'回合顺序不明'};
       const receiptNames={accepted:'已受理，尚未确认启动',starting:'启动中',running:'运行中',completed:'本轮已结束，仍需验收',failed:'失败',unknown:'未知，需对账'};
       const acceptanceNames={met:'已满足',not_met:'未满足',unknown:'未知'};
       const notificationNote=value=>{const state=typeof value==='object' && value!==null?value.state:value;return state==='not_connected'?'主动提醒未接通，需在工作台查看。':'主动提醒状态未知，不能认定已送达。';};
@@ -400,10 +401,11 @@
           for(const item of snapshot.inbox || []){
             const task=(snapshot.tasks || []).find(t=>t.id===(item.task_id || item.id)),row=el('article',undefined,'card');
             row.append(el('h3',taskExcerpt(item.title || task?.title || '待处理事项',100)),citedText(taskExcerpt(item.reason || item.judgment || item.summary)));const fullInbox=text(item.reason || item.judgment || item.summary);if(fullInbox.replace(/\s+/g,' ').trim().length>180){const full=el('details');full.append(el('summary','查看事项全文'),citedText(fullInbox));row.append(full);}
-            if(item.kind==='completion_review' || item.kind==='completion_unavailable' || item.kind==='result_outcome_unknown'){
+            if(item.kind==='completion_review' || item.kind==='completion_unavailable' || item.kind==='result_outcome_unknown' || item.kind==='external_turn_review' || item.kind==='external_turn_unavailable'){
               if(item.current_goal)row.append(el('p',`目标：${taskExcerpt(item.current_goal)}`));
               if(item.next_action)row.append(el('p',`下一步：${taskExcerpt(item.next_action)}`));
               row.append(el('p',`来源：${text(item.source) || '未知'} · 观察时间：${time(item.observed_at)}`,'muted'),el('p',notificationNote(item.notification),'muted'));
+              if(item.kind==='external_turn_review' || item.kind==='external_turn_unavailable')row.append(el('p','调用方登记的官方工具读取观察，服务未自行认证；外部会话仅供参考，不会自动控制或发送。','muted'));
             }
             if(task)row.append(button(isReference(task)?'查看只读详情':'打开任务',()=>openTask(task),'quiet'));
             else if(!task && !item.reference_only && item.action?.type==='open_task')row.append(el('p','关联任务暂不可读，请刷新核对。','inline-error'));
@@ -461,6 +463,35 @@
       const next=typeof context.next_action==='string'?context.next_action:(job.next_steps || job.next_step || context.next_steps || task.next_action);
       host.append(el('p',`下一步：${text(next) || '未登记'}`));
       const completionEvents=Array.isArray(context.completion_events)?context.completion_events:(Array.isArray(task.completion_events)?task.completion_events:[]);
+      const externalTurns=Array.isArray(context.external_turns)?context.external_turns:(Array.isArray(task.external_turns)?task.external_turns:[]);
+      const externalState=context.external_turns_state || task.external_turns_state;
+      if(externalState==='unavailable')host.append(el('p','外部回合观察不可读，请核对原任务和原会话；不要重复派发。','inline-error'));
+      if(externalTurns.length){
+        host.append(sectionHeading('外部会话观察（仅供参考）'),el('p','调用方登记的官方工具读取观察，服务未自行认证；外部桥和主动提醒未接通，不会自动控制、发送或重试。','muted'));
+        for(const event of externalTurns){
+          if(!event || typeof event!=='object'){host.append(el('p','部分外部回合观察不可读，请核对原会话。','inline-error'));continue;}
+          const pendingDispatch=['dispatch_unknown','dispatch_accepted','dispatch_running','dispatch_completed','dispatch_failed'].includes(event.state);
+          const detail=el('details',undefined,'card external-turn-observation'),state=event.order_ambiguous?'order_ambiguous':event.current===false && !pendingDispatch?'historical':event.state;
+          const completedDate=typeof event.completed_at==='number' && Number.isFinite(event.completed_at)?new Date(event.completed_at*1000):null;
+          const completed=completedDate?(Number.isNaN(completedDate.getTime())?null:completedDate.toISOString()):event.completed_at;
+          const resolution=event.dispatch?.state==='failed'?event.dispatch.failure_resolution:null;
+          const evidence=resolution && typeof resolution==='object' && !Array.isArray(resolution)?resolution.evidence:null;
+          const checked=resolution?.verification==='caller_attested' && typeof resolution.recorded_at==='string' && resolution.recorded_at.trim() && evidence && typeof evidence==='object' && !Array.isArray(evidence) && ['source','observed_at','detail'].every(key=>typeof evidence[key]==='string' && evidence[key].trim());
+          detail.append(el('summary',`${externalNames[state] || '状态未知'} · 回合 ${text(event.turn_id) || '未知'}`),el('p',`来源：${text(event.source) || '未知'} · 观察时间：${time(event.observed_at)} · 回合结束时间：${time(completed)}`,'muted'));
+          detail.append(el('p',`会话：${text(event.host_id) || '未知主机'} / ${text(event.thread_id) || '未知会话'} · 观察头：${text(event.head_turn_id) || '未知'} · 当时状态：${text(event.head_status) || '未知'} · 观察头时间：${time(event.head_observed_at)}（非实时）`,'muted'));
+          if(event.order_ambiguous)detail.append(el('p','回合顺序不明确，请核对原会话，不要重复派发。','inline-error'));
+          if(event.source_stale===true)detail.append(el('p','旧观察，需正式重新读取；不能据此判断当前状态。','inline-error'));
+          if(event.current===false && pendingDispatch && event.state!=='dispatch_failed')detail.append(el('p','该请求来自较早回合，仍需核对回执；观察到新回合不能证明原请求成功。','inline-error'));
+          if(event.assessment && typeof event.assessment==='object')detail.append(el('p',`验收结论：${text(event.assessment.disposition) || '未知'} · 意图版本：${event.assessment.intent_version ?? '未知'}${event.assessment.next_action?` · 当时下一步：${text(event.assessment.next_action)}`:''}`));
+          if(event.dispatch && typeof event.dispatch==='object')detail.append(el('p',`外部请求：${text(event.dispatch.request_id) || '未知'} · 回执：${text(event.dispatch.state) || '未知'} · 观察时间：${time(event.dispatch.observation_at)}`,'muted'));
+          if(event.state==='dispatch_failed'){
+            if(checked)detail.append(el('p','失败影响已由调用方登记核对，按当前目标选择下一步；原失败回执继续保留。'),el('p',`核对来源：${text(evidence.source)} · 观察时间：${time(evidence.observed_at)} · 登记时间：${time(resolution.recorded_at)} · ${text(evidence.detail)}`,'muted'));
+            else if(resolution!==null && resolution!==undefined)detail.append(el('p','失败影响核对记录不可读，请先核对原回执和可能的副作用，不要重发。','inline-error'));
+            else detail.append(el('p','外部派工失败可能已有副作用，请先核对原回执和已有成果，不要重发。','inline-error'));
+          }
+          detail.append(el('p','reference_only 仅供定位与追溯，不授予对外部会话的自动控制。','muted'));host.append(detail);
+        }
+      }
       if(context.completion_state==='unavailable')host.append(el('p','部分回合验收状态不可读，请核对原任务；不能据此认定已闭环。','inline-error'));
       if(completionEvents.length){
         host.append(sectionHeading('回合验收与接续'),el('p','回合结束后仍需核对目标和成果；派工结果未知时先对账，不自动重发。','muted'));

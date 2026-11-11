@@ -26,6 +26,7 @@ from job_dependencies import JobDependencies
 from task_continuity import TaskContinuity
 from completion_followup import CompletionFollowup
 from completion_dispatch import CompletionDispatch
+from external_turns import ExternalTurns
 
 ACTIVE = ('queued', 'running')
 HELD_REASONS = ('planning_changed_during_attempt', 'intent_snapshot_missing', 'result_outcome_unknown',
@@ -86,7 +87,7 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionDispatch):
+class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionDispatch, ExternalTurns):
     def __init__(self, app, backend=None):
         self.app = app
         self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
@@ -260,6 +261,28 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                         job.setdefault('events', []).append(event)
                         known_events[key] += 1
                 job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
+            saved_external = persisted.get('external_revision', 0)
+            current_external = job.get('external_revision', 0)
+            if (type(saved_external) is not int or saved_external < 0 or
+                    type(current_external) is not int or current_external < 0):
+                raise WorkspaceConflict('外部回合版本不可读，禁止覆盖原记录。')
+            if saved_external > current_external:
+                for key in ('external_turn_events','external_thread_heads','external_revision'):
+                    if key in persisted:job[key] = copy.deepcopy(persisted[key])
+                for saved_ref in persisted['conversations']:
+                    for ref in job['conversations']:
+                        if (ref.get('provider'),ref.get('conversation_id')) == (saved_ref.get('provider'),saved_ref.get('conversation_id')):
+                            for key in ('host_id','host_bound_at'):
+                                if key in saved_ref:ref[key] = saved_ref[key]
+                identities = {(item.get('at'),item.get('type'),item.get('text')) for item in job.get('events',[])}
+                for item in persisted.get('events',[]):
+                    identity = (item.get('at'),item.get('type'),item.get('text'))
+                    if item.get('type','').startswith('external_') and identity not in identities:
+                        job.setdefault('events',[]).append(copy.deepcopy(item));identities.add(identity)
+                job['events'] = sorted(job.get('events',[]),key=lambda item:item.get('at') or '')[-200:]
+            elif saved_external == current_external and any(
+                    persisted.get(key, {}) != job.get(key, {}) for key in ('external_turn_events','external_thread_heads')):
+                raise WorkspaceConflict('相同版本的外部回合记录冲突，禁止覆盖。')
             known = {(c['provider'], c['conversation_id']) for c in job['conversations']}
             job['conversations'].extend(c for c in persisted['conversations'] if (c['provider'], c['conversation_id']) not in known)
         if type(job.get('completion_revision', 0)) is int and job.get('completion_revision', 0) >= 0:

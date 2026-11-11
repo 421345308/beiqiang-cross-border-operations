@@ -198,6 +198,114 @@ class WorkspaceTests(unittest.TestCase):
         self.jobs[0].update(status='completed',review_events=[complete])
         self.assertEqual(self.service.overview()['inbox'],[])
 
+    @staticmethod
+    def external_event(turn, state='awaiting_review', *, current=True, ambiguous=False, **extra):
+        return {'event_id':'external:'+turn, 'host_id':'host1', 'thread_id':'thread1', 'turn_id':turn,
+                'source':'official-read-thread', 'observed_at':'2026-11-11T10:00:00Z',
+                'completed_at':'2026-11-11T09:59:00Z', 'head_turn_id':turn, 'head_status':'idle',
+                'current':current, 'order_ambiguous':ambiguous, 'state':state,
+                'assessment':None, 'dispatch':None, **extra}
+
+    def test_external_current_and_local_completion_coexist_without_duplicating_history(self):
+        current=self.external_event('two','dispatch_unknown',dispatch={'state':'unknown','request_id':'req-1'},source_stale=True)
+        old=self.external_event('one','historical',current=False)
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','next_action':'核对原请求',
+                    'review_events':[{'event_id':'run:1','attempt':1,'state':'awaiting_review'}],
+                    'external_events':[current,dict(current),old]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        self.app.agent_jobs.external_turns_view=lambda job:job['external_events']
+        result=self.service.overview();items=result['inbox']
+        self.assertEqual({item['kind'] for item in items},{'completion_review','external_turn_review'})
+        item=next(item for item in items if item['kind']=='external_turn_review')
+        self.assertEqual((item['state'],item['severity'],item['task_id']),('dispatch_unknown','high','local:a'))
+        self.assertEqual(item['action']['job_id'],'a')
+        self.assertEqual(item['observed_at'],'2026-11-11T10:00:00Z')
+        self.assertEqual(item['notification']['state'],'not_connected')
+        self.assertIn('不要重复派发',item['judgment'])
+        self.assertIn('旧观察，需正式重新读取',item['judgment'])
+        self.assertTrue(item['source_stale'])
+        task=result['tasks'][0]
+        self.assertEqual(task['external_turn_pending'],1)
+        self.assertEqual(task['external_turn_state'],'dispatch_unknown')
+        self.assertEqual(len(task['external_turns']),2)
+        self.assertEqual(result['completion_capabilities']['external_turn_bridge'],'not_connected')
+
+    def test_external_only_verified_current_without_dispatch_leaves_inbox(self):
+        job={'id':'a','object_id':'product:BQ01','status':'completed','external_events':[]}
+        self.jobs=[job];self.app.agent_jobs.external_turns_view=lambda item:item['external_events']
+        done=self.external_event('one','verified_complete',assessment={'disposition':'verified_complete'})
+        job['external_events']=[done]
+        self.assertEqual(self.service.overview()['inbox'],[])
+        for state in ('awaiting_review','review_required','ready_to_continue','needs_decision','blocked',
+                      'unknown','dispatch_unknown','dispatch_accepted','dispatch_running','dispatch_completed','dispatch_failed'):
+            with self.subTest(state=state):
+                job['external_events']=[self.external_event('one',state)]
+                item=self.service.overview()['inbox'][0]
+                self.assertEqual((item['kind'],item['state']),('external_turn_review',state))
+                if state=='dispatch_completed':self.assertIn('新回合并验收',item['judgment'])
+        done['dispatch']={'state':'completed','request_id':'req-1'}
+        job['external_events']=[done]
+        self.assertEqual(self.service.overview()['inbox'][0]['state'],'dispatch_completed')
+        done.update(dispatch=None,assessment=None)
+        self.assertEqual(self.service.overview()['inbox'][0]['state'],'unknown')
+
+    def test_external_ambiguous_order_is_actionable_and_bad_source_is_not_empty(self):
+        job={'id':'a','object_id':'product:BQ01','status':'completed','external_events':[
+            self.external_event('one','historical',current=False,ambiguous=True)]}
+        self.jobs=[job];self.app.agent_jobs.external_turns_view=lambda item:item['external_events']
+        result=self.service.overview();self.assertIn('顺序不明确',result['inbox'][0]['judgment'])
+        self.assertEqual(result['tasks'][0]['external_turn_state'],'order_ambiguous')
+        job['external_events']=[self.external_event('one'),self.external_event('two')]
+        result=self.service.overview();self.assertEqual(len(result['inbox']),2)
+        self.assertTrue(all('顺序不明确' in item['judgment'] for item in result['inbox']))
+        job['external_events']=[self.external_event('one'),self.external_event('one',state='unknown')]
+        result=self.service.overview()
+        self.assertEqual(result['tasks'][0]['external_turns_state'],'unavailable')
+        self.assertEqual(result['inbox'][0]['kind'],'external_turn_unavailable')
+        self.assertIn('不可读',result['inbox'][0]['judgment'])
+        job['external_events']=[{'event_id':'bad'}]
+        self.assertEqual(self.service.overview()['inbox'][0]['kind'],'external_turn_unavailable')
+        del self.app.agent_jobs.external_turns_view
+        result=self.service.overview();self.assertEqual(result['tasks'][0]['external_turns_state'],'not_supported')
+        self.assertEqual(result['inbox'],[])
+        job['external_turn_events']={'retained':'evidence'}
+        result=self.service.overview();self.assertEqual(result['tasks'][0]['external_turns_state'],'unavailable')
+        self.assertEqual(result['inbox'][0]['kind'],'external_turn_unavailable')
+
+    def test_external_unresolved_receipts_remain_visible_after_head_advances(self):
+        job={'id':'a','object_id':'product:BQ01','status':'completed','external_events':[]}
+        self.jobs=[job];self.app.agent_jobs.external_turns_view=lambda item:item['external_events']
+        for state in ('dispatch_unknown','dispatch_accepted','dispatch_running','dispatch_completed'):
+            with self.subTest(state=state):
+                job['external_events']=[self.external_event('one',state,current=False)]
+                item=self.service.overview()['inbox'][0]
+                self.assertEqual((item['kind'],item['state']),('external_turn_review',state))
+        job['external_events']=[self.external_event('one','historical',current=False)]
+        self.assertEqual(self.service.overview()['inbox'],[])
+
+    def test_external_failed_dispatch_requires_real_failure_review_even_after_new_head(self):
+        receipt={'state':'failed','request_id':'req-1'}
+        event=self.external_event('one','dispatch_failed',current=False,dispatch=receipt,
+                                  assessment={'next_action':'旧的建议'})
+        job={'id':'a','object_id':'product:BQ01','status':'completed','next_action':'当前目标的下一步',
+             'external_events':[event]}
+        self.jobs=[job];self.app.agent_jobs.external_turns_view=lambda item:item['external_events']
+        item=self.service.overview()['inbox'][0]
+        self.assertEqual((item['severity'],item['failure_review_state']),('high','pending'))
+        self.assertIn('可能的副作用',item['judgment']);self.assertIn('不要重发',item['judgment'])
+        receipt['failure_resolution']={}
+        item=self.service.overview()['inbox'][0]
+        self.assertEqual(item['failure_review_state'],'unavailable');self.assertIn('不可读',item['judgment'])
+        receipt['failure_resolution']={'verification':'caller_attested','recorded_at':'2026-11-11T10:01:00Z',
+            'evidence':{'source':'codex_app.read_thread','observed_at':'2026-11-11T10:00:00Z','detail':'已核对影响'}}
+        self.assertEqual(self.service.overview()['inbox'],[])
+        event['current']=True
+        result=self.service.overview();item=result['inbox'][0]
+        self.assertEqual((item['severity'],item['failure_review_state']),('normal','checked'))
+        self.assertEqual(item['next_action'],'当前目标的下一步')
+        self.assertIn('失败影响已由调用方登记核对，按当前目标选择下一步',item['judgment'])
+        self.assertEqual(result['tasks'][0]['external_turns'][0]['dispatch']['state'],'failed')
+
     def test_changed_intent_never_presents_old_review_next_action_as_current(self):
         self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','next_action':'核对新目标',
                     'review_events':[{'event_id':'run:1','attempt':1,'state':'intent_changed',

@@ -101,6 +101,101 @@ def _completion_needs_attention(job_id, event, completions):
     return True
 
 
+_EXTERNAL_MESSAGES = {
+    'awaiting_review':'外部回合观察已登记，请按当前目标核对并验收。',
+    'review_required':'任务目标或决定已变化，请重新核对外部回合。',
+    'ready_to_continue':'外部回合待处理，请核对下一动作；不会自动发送。',
+    'needs_decision':'外部回合需要负责人决定下一步。',
+    'blocked':'外部回合后续受阻，请核对原因。',
+    'unknown':'外部回合状态未知，请先核对原会话。',
+    'dispatch_unknown':'外部派工结果未知，请先核对原请求，不要重复派发。',
+    'dispatch_accepted':'外部派工已登记为受理，请核对原请求与实际进展。',
+    'dispatch_running':'外部派工已登记为运行中，请核对原请求与实际进展。',
+    'dispatch_completed':'外部派工已登记为结束，请核读对应新回合并验收。',
+    'dispatch_failed':'外部派工已登记为失败，请核对原回执和已有成果。',
+    'verified_complete':'外部回合已按当时目标验收；不代表长期目标全部完成。',
+    'historical':'历史外部回合，仅供追溯。',
+}
+
+
+def _external_events(reader, job):
+    """Read only caller-registered observations, never control external sessions."""
+    if not callable(reader):
+        for key in ('external_turn_events','external_thread_heads'):
+            if key in job and (not isinstance(job[key], dict) or job[key]):
+                raise ValueError('外部观察已登记但读取能力不可用')
+        return []
+    events = reader(job)
+    if not isinstance(events, list):
+        raise ValueError('外部回合观察不可读')
+    unique = {}
+    for raw in events:
+        if (not isinstance(raw, dict) or any(not isinstance(raw.get(k), str) or not raw[k]
+                for k in ('event_id','host_id','thread_id','turn_id','source','observed_at'))
+                or type(raw.get('current')) is not bool or type(raw.get('order_ambiguous')) is not bool
+                or raw.get('state') not in _EXTERNAL_MESSAGES
+                or (raw.get('assessment') is not None and not isinstance(raw['assessment'], dict))
+                or (raw.get('dispatch') is not None and not isinstance(raw['dispatch'], dict))):
+            raise ValueError('外部回合观察结构不可读')
+        event = dict(raw)
+        if event['current'] and event['state'] == 'historical':
+            event['order_ambiguous'] = True
+        dispatch = event.get('dispatch')
+        if event['state'] == 'verified_complete':
+            assessment = event.get('assessment') or {}
+            if dispatch is not None:
+                dispatch_state = dispatch.get('state')
+                event['state'] = 'dispatch_' + dispatch_state if dispatch_state in ('unknown','accepted','running','completed','failed') else 'dispatch_unknown'
+            elif assessment.get('disposition') != 'verified_complete':
+                event['state'] = 'unknown'
+        event_id = event['event_id']
+        if event_id in unique and unique[event_id] != event:
+            raise ValueError('同一外部回合观察相互矛盾')
+        unique[event_id] = event
+    current = {}
+    for event in unique.values():
+        if event['current']:
+            current.setdefault((event['host_id'],event['thread_id']),[]).append(event)
+    for matches in current.values():
+        if len(matches)>1:
+            for event in matches:
+                event['order_ambiguous'] = True
+    return list(unique.values())
+
+
+def _external_needs_attention(event):
+    if event['order_ambiguous']:
+        return True
+    # A later observed head is not proof that an earlier dispatch was received
+    # or that the right target turn has been registered.
+    if event['state'] in ('dispatch_unknown','dispatch_accepted','dispatch_running','dispatch_completed'):
+        return True
+    if event['state'] == 'dispatch_failed' and _external_failure_review(event) != 'checked':
+        return True
+    if not event['current'] or event['state'] == 'historical':
+        return False
+    return event['state'] != 'verified_complete'
+
+
+def _external_failure_review(event):
+    dispatch = event.get('dispatch')
+    if not isinstance(dispatch, dict) or dispatch.get('state') != 'failed':
+        return 'pending'
+    resolution = dispatch.get('failure_resolution')
+    if resolution is None:
+        return 'pending'
+    if not isinstance(resolution, dict):
+        return 'unavailable'
+    evidence = resolution.get('evidence')
+    if (resolution.get('verification') != 'caller_attested'
+            or not isinstance(resolution.get('recorded_at'), str) or not resolution['recorded_at'].strip()
+            or not isinstance(evidence, dict)
+            or any(not isinstance(evidence.get(k), str) or not evidence[k].strip()
+                   for k in ('source','observed_at','detail'))):
+        return 'unavailable'
+    return 'checked'
+
+
 class TaskWorkspace:
     def __init__(self, app):
         self.app = app
@@ -118,7 +213,9 @@ class TaskWorkspace:
             jobs = []
             local_state = 'unavailable'
         completions, completion_errors, result_pending, result_errors = {}, set(), {}, set()
+        external_events, external_errors = {}, set()
         completion_reader = getattr(self.app.agent_jobs, 'completion_view', None)
+        external_reader = getattr(self.app.agent_jobs, 'external_turns_view', None)
         for job in jobs:
             try:
                 completions[job['id']] = _completion_events(completion_reader, job)
@@ -127,6 +224,11 @@ class TaskWorkspace:
                 completion_errors.add(job['id'])
             if job.get('completion_error') is not None:
                 completion_errors.add(job['id'])
+            try:
+                external_events[job['id']] = _external_events(external_reader, job)
+            except Exception:
+                external_events[job['id']] = []
+                external_errors.add(job['id'])
             try:
                 pending = CompletionDispatch._pending_result_attempts(job)
                 commit = job.get('result_commit')
@@ -168,6 +270,14 @@ class TaskWorkspace:
                            intent_version=None, intent_source=None, intent_state='unavailable')
             row.update(id='local:' + job['id'], job_id=job['id'], origin='local', version=job.get('version', 0))
             row['completion_events'] = completions[job['id']]
+            row['external_turns'] = external_events[job['id']]
+            row['external_turns_state'] = ('unavailable' if job['id'] in external_errors else
+                                           'ok' if callable(external_reader) else 'not_supported')
+            external_open = [event for event in row['external_turns'] if _external_needs_attention(event)]
+            row['external_turn_pending'] = len(external_open)
+            if external_open:
+                latest = max(external_open, key=lambda event: event.get('observed_at') or '')
+                row['external_turn_state'] = 'order_ambiguous' if latest['order_ambiguous'] else latest['state']
             if job.get('task_kind') == 'group':
                 row['graph'] = self.app.agent_jobs.get_graph(job['id'])
             tasks.append(row)
@@ -175,6 +285,48 @@ class TaskWorkspace:
         inbox = []
         for job in jobs:
             task_id = 'local:' + job['id']
+            for event in external_events[job['id']]:
+                if not _external_needs_attention(event):
+                    continue
+                state = event['state']
+                assessment = event.get('assessment') or {}
+                ambiguous = event['order_ambiguous']
+                message = ('外部回合顺序不明确，请核对原会话；不要重复派发。' if ambiguous
+                           else _EXTERNAL_MESSAGES[state])
+                failure_review = _external_failure_review(event) if state == 'dispatch_failed' else None
+                if failure_review == 'checked':
+                    message = ('外部回合顺序不明确，请核对原会话。' if ambiguous else '外部派工已登记为失败。')
+                    message += ' 失败影响已由调用方登记核对，按当前目标选择下一步。'
+                elif failure_review == 'unavailable':
+                    message = '失败影响核对记录不可读，请先核对原回执和可能的副作用，不要重发。'
+                elif failure_review == 'pending':
+                    message = '外部派工已登记为失败，请先核对原回执和可能的副作用，不要重发。'
+                if event.get('source_stale') is True:
+                    message += ' 旧观察，需正式重新读取；不能据此判断当前状态。'
+                action = (job.get('next_action') if ambiguous or state == 'review_required' or failure_review == 'checked'
+                          else assessment.get('next_action') or job.get('next_action'))
+                intent = job.get('intent') if isinstance(job.get('intent'), dict) else {}
+                goal = intent.get('goal') if 'intent' in job else job.get('initial_instruction',job.get('instruction'))
+                inbox.append({'id':'external-turn:'+job['id']+':'+event['event_id'],
+                    'event_id':event['event_id'], 'task_id':task_id,'kind':'external_turn_review','group':'act',
+                    'title':job.get('title') or '本机工作', 'judgment':message,
+                    'severity':'high' if ambiguous or state in ('review_required','blocked','unknown','dispatch_unknown') or failure_review in ('pending','unavailable') else 'normal',
+                    'state':state, 'current_goal':goal if isinstance(goal,str) else None,
+                    'failure_review_state':failure_review,
+                    'next_action':action or '', 'object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'查看外部会话观察'},
+                    'source':event.get('source'),'observed_at':event.get('observed_at'),
+                    'source_stale':event.get('source_stale'),
+                    'updated_at':event.get('observed_at') or job.get('updated_at'),
+                    'notification':{'state':'not_connected'}})
+            if job['id'] in external_errors:
+                inbox.append({'id':'external-turn-unavailable:'+job['id'],'task_id':task_id,
+                    'kind':'external_turn_unavailable','group':'act','title':job.get('title') or '本机工作',
+                    'judgment':'外部回合观察不可读，请核对原任务和原会话；不要重复派发。',
+                    'severity':'high','object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'核对外部观察'},
+                    'source':'调用方登记的外部会话观察','updated_at':job.get('updated_at'),
+                    'notification':{'state':'not_connected'}})
             for attempt in sorted(result_pending[job['id']]):
                 inbox.append({'id':f'result-unknown:{job["id"]}:{attempt}', 'task_id':task_id,
                     'attempt':attempt, 'kind':'result_outcome_unknown', 'group':'act',

@@ -1523,6 +1523,43 @@ test('回合未闭环事项在筛选后仍打开原任务，明确提醒未接�
  assert.match(h.elements.page.textContent,/当前目标/);assert.match(h.elements.page.textContent,/核对回执/);assert.match(h.elements.page.textContent,/主动提醒未接通/);
  await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Aj1');assert.equal(h.requests.filter(x=>x.payload).length,0);
 });
+test('外部待核事项在筛选后仍打开原任务，来源和未认证边界清楚',async()=>{
+ const h=harness('#/tasks'),data={filters:{business_line:[{value:'creation',label:'creation'}]},
+  tasks:[{id:'local:j1',job_id:'j1',origin:'local',business_line:'international',title:'原任务',status:'completed'}],
+  inbox:[{id:'external-turn:j1:e1',task_id:'local:j1',kind:'external_turn_review',title:'原任务',judgment:'外部派工结果未知，请先核对原请求，不要重复派发。',
+    source:'codex_app.read_thread',observed_at:'2026-11-11T10:00:00Z',notification:{state:'not_connected'},action:{type:'open_task',job_id:'j1',task_id:'local:j1'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const filter=walk(h.elements.page).find(x=>x['aria-label']==='筛选业务线');filter.value='creation';filter.listeners.change();
+ assert.match(h.elements.page.textContent,/服务未自行认证/);assert.match(h.elements.page.textContent,/主动提醒未接通/);assert.match(h.elements.page.textContent,/不要重复派发/);
+ await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Aj1');assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('外部和本机回合并存时详情保留引用和回执，外部卡片不提供控制按钮',async()=>{
+ const h=harness('#/task/local%3Aj1'),external={event_id:'external:e1',host_id:'host1',thread_id:'thread1',turn_id:'turn2',current:false,order_ambiguous:false,source_stale:true,state:'dispatch_unknown',
+  source:'codex_app.read_thread',observed_at:'2026-11-11T10:00:00Z',completed_at:Date.parse('2026-11-11T09:59:00Z')/1000,head_turn_id:'turn3',head_status:'in_progress',head_observed_at:'2026-11-11T10:00:00Z',dispatch:{state:'unknown',request_id:'external-req',observation_at:'2026-11-11T10:00:00Z'}};
+ h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'原任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:2,status:'completed'},intent_version:1,completion_events:[{event_id:'local-run',attempt:1,state:'awaiting_review'}],external_turns:[external],external_turns_state:'ok',artifacts:[]})};return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;
+ for(const value of ['外部会话观察（仅供参考）','服务未自行认证','外部桥和主动提醒未接通','host1 / thread1','external-req','回执：unknown','观察头时间','（非实时）','旧观察，需正式重新读取','观察到新回合不能证明原请求成功','回合验收与接续'])assert.ok(shown.includes(value),value);
+ const expectedTime=new Date('2026-11-11T09:59:00Z').toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});assert.ok(shown.includes(`回合结束时间：${expectedTime}`));
+ const detail=h.elements.page.querySelectorAll('details').find(x=>x.textContent.includes('external-req'));assert.ok(detail);assert.equal(walk(detail).filter(x=>x.tagName==='BUTTON').length,0);
+ assert.ok(findButton(h.elements.page,'登记本轮验收'));assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('外部观察不可读时明确提示且不冒充空历史或触发外部动作',async()=>{
+ const h=harness('#/task/local%3Aj1');h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',status:'completed'},completion_events:[],external_turns:[],external_turns_state:'unavailable',artifacts:[]})};return h.originalFetch(p,o);});
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/外部回合观察不可读/);assert.match(h.elements.page.textContent,/不要重复派发/);assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('外部失败回执区分待核查、核对损坏和已登记核对，保留失败记录',async()=>{
+ for(const scenario of ['pending','invalid','checked']){
+  const h=harness('#/task/local%3Aj1'),dispatch={state:'failed',request_id:'failed-req'},event={event_id:'e1',turn_id:'one',host_id:'host1',thread_id:'thread1',current:false,order_ambiguous:false,state:'dispatch_failed',dispatch};
+  if(scenario==='invalid')dispatch.failure_resolution={};
+  if(scenario==='checked')dispatch.failure_resolution={verification:'caller_attested',recorded_at:'2026-11-11T10:01:00Z',evidence:{source:'codex_app.read_thread',observed_at:'2026-11-11T10:00:00Z',detail:'已核查影响'}};
+  h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',status:'completed'},completion_events:[],external_turns:[event],external_turns_state:'ok',artifacts:[]})};return h.originalFetch(p,o);});
+  await h.ui.bootstrap();const shown=h.elements.page.textContent;assert.match(shown,/failed-req/);assert.match(shown,/回执：failed/);
+  if(scenario==='pending')assert.match(shown,/失败可能已有副作用，请先核对/);
+  if(scenario==='invalid')assert.match(shown,/失败影响核对记录不可读/);
+  if(scenario==='checked'){assert.match(shown,/失败影响已由调用方登记核对，按当前目标选择下一步/);assert.match(shown,/已核查影响/);assert.doesNotMatch(shown,/仍需核对回执/);}
+  assert.equal(h.requests.filter(x=>x.payload).length,0);
+ }
+});
 test('总览明确外部回合事件桥与主动通知未接通',async()=>{
  const h=harness('#/tasks'),data={tasks:[],inbox:[],completion_capabilities:{local_finished_events:'agent_jobs',external_turn_bridge:'not_connected',push_notification:'not_connected'}};
  h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();

@@ -727,6 +727,22 @@ class Handler(BaseHTTPRequestHandler):
                 if not isinstance(body['request_id'],str) or not re.fullmatch(r'[A-Za-z0-9_.:-]{1,200}',body['request_id']):raise ValueError('请求编号无效')
                 method=app.agent_jobs.continue_followup if parts[-1]=='continue-followup' else app.agent_jobs.reconcile_followup
                 return self.send_json(method(body['id'],body['attempt'],expected_version=body['expected_version'],request_id=body['request_id']))
+            external_methods={'external-bind':'bind_external_thread','external-turn':'register_external_turn',
+                              'external-assess':'assess_external_turn','external-prepare':'prepare_external_dispatch',
+                              'external-observe':'observe_external_dispatch','external-resolve-failure':'resolve_external_failure'}
+            if len(parts)==4 and parts[:3]==['api','desk','job'] and parts[3] in external_methods:
+                # The same strict envelope is used by the in-process and HTTP MCP paths.
+                from desk_mcp import _validate_external_operation
+                name=external_methods[parts[3]]
+                if not isinstance(body,dict) or not isinstance(body.get('id'),str):raise ValueError('外部回合任务编号无效')
+                args={**body,'id':'local:'+body['id']}
+                job_id=_validate_external_operation(name,args)
+                fields={key:value for key,value in body.items() if key!='id'}
+                method=getattr(app.agent_jobs,name)
+                if 'event_id' in fields:
+                    event_id=fields.pop('event_id')
+                    return self.send_json(method(job_id,event_id,**fields))
+                return self.send_json(method(job_id,**fields))
             if parts==['api','desk','job','conversation']:
                 if set(body)-{'id','provider','conversation_id','provenance','url','expected_version'}:raise ValueError('会话关联字段无效')
                 return self.send_json(app.agent_jobs.link_conversation(body.get('id'),provider=body.get('provider'),conversation_id=body.get('conversation_id'),provenance=body.get('provenance'),url=body.get('url'),expected_version=body.get('expected_version')))

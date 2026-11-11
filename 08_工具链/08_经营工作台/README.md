@@ -8,9 +8,77 @@
 
 登记继续后，仅标准 `CodexBackend` 的 `mail_draft` 在检查当前版本、依赖、对象占用和未确认结果后，自动在原任务领取下一轮。执行工具及业务 MCP 只读，但最终可保存内部草稿；不发送客户消息。其他模式或不满足条件的接续仍显示待处理或阻塞。派工保存 request ID、目标 attempt、会话引用与受理/启动/运行/完成/失败/未知回执；重复请求读取原记录，结果不明先按原请求对账，不盲重发。
 
-**使用和边界：**本机 `workspace:overview` 的 MCP 能读取总览并调用 `assess_local_run`、`continue_local_run`、`reconcile_local_run`；对应本机 HTTP 接口沿现有 Host/令牌保护。MCP 需要已启动的本机服务，Dot 云端直接连接尚未证实。外部桌面会话的持续完成订阅、派工桥和主动推送均未接入；现有正式工具的单次读取不等于自动订阅。通知状态为 `not_connected`，Inbox 待处理不代表负责人已收到提醒。
+**使用和边界：**本机 `workspace:overview` 的 MCP 能读取总览并调用 `assess_local_run`、`continue_local_run`、`reconcile_local_run`；对应本机 HTTP 接口沿现有 Host/令牌保护。代码也支持调用方显式登记已关联外部会话的回合观察、验收与请求回执，具体契约见下方；这些都是调用方提供的观察，不是工作台自行读取或发送。MCP 需要 SPQ 电脑在线且本机服务已启动，Dot 云端直接连接尚未证实。外部桌面会话的持续完成订阅、自动派工桥和主动推送均未接入；现有正式工具的单次读取不等于自动订阅。通知和外部自动桥状态为 `not_connected`，Inbox 待处理不代表负责人已收到提醒。
 
-**证据及运行：**2026-11-11 临时工作区、合成数据和模拟 Agent 的组合回归 322 项中 320 项通过、2 项按条件跳过；前端 DOM 175 项通过。真实 Chrome 隔离纵向测试通过：首轮进入 Inbox，登记继续后同一任务领取第二轮，刷新可读，未调用发送；默认受限环境曾在 Chrome 初始化时返回 `CreateFile` / WinError 5，随后沿已获批准的正式执行权限在临时工作区及非生产端口重测通过。另一次包含多进程测试的较大回归因 Windows 命名管道拒绝访问未通过，原有进程取消测试另有超时；未变更系统策略。当前正式工作台仍因下方 PowerShell 签名拒绝停止，新版没有正式页面或真实 Agent 验收。按系统认可的方式恢复后，先核对唯一监听与健康状态，再用隔离对象验收待办、旧版本、同请求不重复和未知结果对账，不重放客户外发。
+**内部接续先前证据及运行：**2026-11-11 临时工作区、合成数据和模拟 Agent 的组合回归 322 项中 320 项通过、2 项按条件跳过；前端 DOM 175 项通过。真实 Chrome 隔离纵向测试通过：首轮进入 Inbox，登记继续后同一任务领取第二轮，刷新可读，未调用发送；默认受限环境曾在 Chrome 初始化时返回 `CreateFile` / WinError 5，随后沿已获批准的正式执行权限在临时工作区及非生产端口重测通过。另一次包含多进程测试的较大回归因 Windows 命名管道拒绝访问未通过，原有进程取消测试另有超时；未变更系统策略。当前正式工作台仍因下方 PowerShell 签名拒绝停止，新版没有正式页面或真实 Agent 验收。按系统认可的方式恢复后，先核对唯一监听与健康状态，再用隔离对象验收待办、旧版本、同请求不重复和未知结果对账，不重放客户外发。
+
+**本轮外部登记证据：**2026-11-11 的隔离 Python 组合回归 336 项中 334 项通过、2 项按条件跳过；另有外部观察及对账专项 18 项通过，前端 DOM 179 项通过。其中两项使用临时工作区、随机回环端口、真实本机 HTTP/MCP 和 AgentJobs，以合成回合走通关联、验收、未知请求及人工证据对账；没有读取或发送真实外部会话。实际 Dot 通知到登记接口的接线、正式工作台加载及真实外部派工仍未验收。
+
+### 外部回合登记：本机 MCP 调用契约
+
+以下是代码支持的调用顺序和纯合成参数结构，不是已建立的自动连接，也不是发送示例。前提是 SPQ 本机服务已恢复且 `127.0.0.1:8766` 健康，调用方经正式可用的 SPQ 执行环境启动 `python -X utf8 desk_mcp.py --root <工作区> --state <工作台/.local> --object-id workspace:overview`。此入口固定访问本机 8766，不会启动服务；不要对正式数据运行合成样例。客户端逐行发送 JSON-RPC，例如读取总览的消息为：
+
+```json
+{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_work_overview","arguments":{}}}
+```
+
+`result.content[0].text` 是 JSON 文本。先从总览的明确本机任务读取 `id`（`local:` 前缀）、`version` 和 `intent_version`；每次写入后重新读总览，取本次返回的任务最新 `version`，不能猜版本或把桌面引用当成任务。每一步只在前一步成功后继续，冲突或结果不明先回读，不自动重试。以下 `call(name, arguments)` 只生成可复制到该 MCP 客户端 stdin 的单行 JSON-RPC 请求，本身不执行；变量来自当次读取，示意值 `synthetic-*` 只可用于隔离测试：
+
+```python
+import json
+def call(name, arguments):
+    return json.dumps({'jsonrpc':'2.0', 'id':1, 'method':'tools/call',
+                       'params':{'name':name, 'arguments':arguments}}, ensure_ascii=False)
+
+# task_id、v、iv 分别取总览中同一任务的 id、version、intent_version。
+# host_id、thread_id 必须是正式工具返回且确认属于该任务的精确身份。
+call('link_local_conversation', {'id': task_id, 'expected_version': v,
+    'provider': 'codex', 'conversation_id': thread_id, 'provenance': 'synthetic explicit reference'})
+# 重新读总览更新 v，再将同一引用绑定到明确主机。
+call('bind_external_thread', {'id': task_id, 'expected_version': v,
+    'host_id': host_id, 'thread_id': thread_id})
+
+# Dot 正式调用 read_thread(threadId=thread_id, hostId=host_id)，省略 cursor 读最新页；
+# 仅当最新回合确认 completed，且取得其 id、startedAt、completedAt，才使用以下登记。
+# started_at / completed_at / head_started_at 是非负 Unix 秒数字，observed_at 是读取后的带时区时间。
+call('register_external_turn', {'id': task_id, 'expected_version': v,
+    'host_id': host_id, 'thread_id': thread_id, 'turn_id': turn_id,
+    'started_at': started_at, 'completed_at': completed_at,
+    'head_turn_id': turn_id, 'head_status': 'completed', 'head_started_at': started_at,
+    'observed_at': observed_at, 'evidence': 'synthetic latest-page observation'})
+
+# 从返回值取得 event_id，再读总览更新 v / iv；证据源、观察时间和说明来自实际观察。
+call('assess_external_turn', {'id': task_id, 'event_id': event_id, 'expected_version': v,
+    'expected_intent_version': iv, 'disposition': 'continue', 'goal_status': 'not_met',
+    'capability_status': 'unknown', 'result_ref': 'synthetic-result', 'gap': 'synthetic gap',
+    'next_action': 'inspect synthetic gap', 'evidence': {'source': 'codex_app.read_thread',
+    'observed_at': observed_at, 'detail': 'synthetic assessment evidence'}})
+
+# 再读总览更新 v / iv；instruction 须与后续实际授权的请求逐字一致。
+call('prepare_external_dispatch', {'id': task_id, 'event_id': event_id, 'expected_version': v,
+    'expected_intent_version': iv, 'request_id': 'synthetic-request-1',
+    'instruction': 'synthetic next instruction'})
+
+# 仅登记实际取得的观察；本例无发送、无目标回执，因此保持 unknown。
+# 再读总览更新 v，observed_at 也必须是这次实际观察的时间。
+call('observe_external_dispatch', {'id': task_id, 'event_id': event_id, 'expected_version': v,
+    'request_id': 'synthetic-request-1', 'state': 'unknown', 'evidence': {
+    'source': 'codex_app.read_thread', 'observed_at': observed_at, 'detail': 'synthetic uncertain observation'}})
+
+# 仅当该请求确有 failed 观察且已实际核查影响时，才另行登记人工核对依据；
+# 先重新读总览更新 v。此调用不派发，也不能证明外部实际效果。
+call('resolve_external_failure', {'id': task_id, 'event_id': event_id, 'expected_version': v,
+    'request_id': 'synthetic-request-1', 'evidence': {'source': 'synthetic audit',
+    'observed_at': observed_at, 'detail': 'synthetic check of effects and remaining handling'}})
+```
+
+每条代码里的 `v` 都是**该步之前重新读取**的版本，`event_id` 来自登记结果；示例文本不得当成真实观察。正式 `read_thread` 的实际进行中状态曾返回 `inProgress`，登记支持原始 `inProgress` 和兼容写法 `in_progress`；`completed` 已见真实样本，其余状态的实际返回格式尚无样本，不能猜测映射。最新观察超过 10 分钟会标 `source_stale`，不能凭旧页验收或准备请求，须重新读取。较旧回合不覆盖最新页头；时间相同但身份不同、回合时间或终态冲突、同一会话关联多个任务等情况保留原记录并停止，不按标题猜测。
+
+登记和观察均为 `caller_attested`：本机仅校验格式、顺序与版本，不验签调用方导入，也不证明它真的读过官方来源。准备动作只持久化请求意图、准确指令的 SHA-256 和默认 `unknown`，不发送；返回 `created=false` 表示同一请求已登记，**不得再次调用发送**。`created=true` 也不授予发送权限，仍须符合用户对具体目标的授权。若以后实际发送并取得正式受理响应，才能用 `state='accepted'` 和证据源 `codex_app.send_message_to_thread` 登记；`running/completed/failed` 还须正式 `read_thread` 的目标新回合，并提供 `target_turn_id` 及 `correlation='matching_receipt'` 的匹配受理回执，或 `correlation='manual_verification'` 和完整准确指令的 `observed_instruction_sha256`。人工核验仍是调用方断言，不是服务验签；拿不到完整依据就保持未知。
+
+外部回合标记 `failed` 也可能已经产生部分副作用；先核对实际影响和后续处理，再以 `resolve_external_failure` 登记有时间、有来源的核对依据，才可按最新版本重新评估是否在同一会话准备不同指令。该工具不发送，也不能独立证明外部效果；**同一指令的指纹不接受作为新请求重提**。外部调用与本机 SQLite 不在同一事务，外部没有本地可保证的幂等键，断线或结果不明先对账，不重发。
+
+回合按来源、host、thread 和 turn 去重，不同 host 的同一 thread ID 保留各自观察；准备新请求时，会保守检查本机已登记任务中同一 thread ID 的各 host 回执：存在 `unknown/accepted/running` 或未核对的 `failed` 即阻止，同指纹跨 host 也不作为新请求。这不证明跨主机全局唯一，也不是跨主机租约；线程迁移、别名或不同 ID 是否指向同一会话须先核对旧请求。
 
 ## 任务意图与能力守护（2026-11-11）
 
@@ -22,11 +90,11 @@
 
 ## 共同工作总览（2026-11-11）
 
-**总控当前工作：**沿现有 AgentJobs 推进回合验收、安全接续与异常提示，并按明确会话引用和业务原档衔接总控与工具、国际站运营、独立站增长三条工作线；历史会话状态不当作当前运行。
+**总控当前工作：**沿现有 AgentJobs 完成外部回合观察和请求对账的代码切片，接续 Dot 正式通知及本机登记的实际连接；按明确会话引用和业务原档衔接各工作线，历史状态不当作当前运行。
 
-**总控已验证结果：**2026-11-11 三条工作线的明确会话引用已写入现有快照，12:10 UTC 逐条读取超时后保留 05:50 UTC 完整快照；回合验收与内部接续的合成任务、模拟 Agent、隔离 HTTP/MCP、前端及隔离 Chrome 验证见上方。正式服务恢复后仍需现场验收。
+**总控已验证结果：**2026-11-11 三条工作线的明确会话引用已写入现有快照；内部接续及外部回合登记的隔离证据见上方。外部样例是调用方提供的合成观察，正式服务恢复后仍需现场验收。
 
-**总控下一步：**按系统认可的受信方式恢复工作台后，验收共同总览、接续与 H008/A009 厂家查询；在允许的环境补验多进程及进程取消场景，并继续核实正式会话元信息读取及通知接续桥。
+**总控下一步：**按系统认可的受信方式恢复工作台后，验收共同总览、接续与 H008/A009 厂家查询；由 Dot 使用正式通知和 `read_thread` 核对后，验证受支持的本机登记接线与未知回执对账，并在允许的环境补验多进程和进程取消场景。
 
 **总控阻塞：**2026-11-11 12:22 UTC 维护重启时，Windows PowerShell 以脚本缺少数字签名为由拒绝启动，工作台当前停止；未改变安全策略。外部桌面会话自动订阅、派工桥和主动提醒未接入，历史快照与单次读取不能证明持续连接；结果不明的外发不重放。
 
