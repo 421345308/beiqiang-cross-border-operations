@@ -82,6 +82,25 @@ class SupplierIndexTests(unittest.TestCase):
         self.assertFalse(historical['has_profile'])
         self.assertEqual([r['id'] for r in supplier_index(self.root, product='运动鞋')['suppliers']], ['s1'])
 
+    def test_source_id_with_model_and_product_number_is_not_a_phone(self):
+        source_id = 'src-fixture-h008-2094876'
+        self.supply['suppliers'][0]['source_ids'].append(source_id)
+        self.supply['suppliers'][0]['matching_profile']['product_directions'].append(
+            {'name': '涉水鞋', 'scope': f'来源编号 {source_id}', 'source_ids': [source_id], 'evidence': [{'kind': 'SUPPLIER_PRODUCT_PAGE', 'url': 'https://shop.example/h008'}]})
+        self.supply['sources'].append({'id': source_id, 'model': 'H008', 'url': 'https://shop.example/h008'})
+        self.products['products'].append({'id': 'BQ-H008', 'candidate_source_ids': [source_id]})
+        self.save()
+        row = supplier_index(self.root, q='H008')['suppliers'][0]
+        self.assertIn(source_id, row['profile']['product_directions'][-1]['source_ids'])
+        self.assertIn(source_id, row['profile']['product_directions'][-1]['scope'])
+        source = next(item for item in row['sources'] if item['id'] == source_id)
+        self.assertEqual(source['products'][0]['id'], 'BQ-H008')
+        self.assertEqual(source['products'][0]['role'], 'candidate')
+        orphan_id = 'src-fixture-a009-2462264'
+        self.supply['sources'].append({'id': orphan_id, 'model': 'A009', 'url': 'https://shop.example/a009'})
+        self.save()
+        self.assertEqual([item['id'] for item in supplier_index(self.root, q='A009')['unassociated_sources']], [orphan_id])
+
     def test_orphan_is_searchable_without_creating_a_supplier(self):
         result = supplier_index(self.root, q='old1')
         self.assertEqual(result['suppliers'], [])
@@ -95,12 +114,41 @@ class SupplierIndexTests(unittest.TestCase):
         p['open_questions'].extend(['电话 13800138000', '电话 138 0013 8000', '办公电话 0595-12345678', '报价 ￥98', '采购价：人民币 85', '联系 someone@example.com', '微信：private-id'])
         p['factory_identity']['summary'] = '联系方式 13800138000'
         p['customization']['evidence'][0]['url'] = 'https://shop.example/?token=private'
+        self.supply['sources'].append({'id': 'src-13800138000', 'model': 'secret-contact'})
         self.save()
         serialized = json.dumps(supplier_index(self.root), ensure_ascii=False)
         for secret in ('13800138000', '138 0013 8000', '0595-12345678', '99.98', '￥98', '人民币 85', 'someone@example.com', 'private-id', 'token=private'):
             self.assertNotIn(secret, serialized)
         self.assertNotIn('price', serialized)
         self.assertNotIn('phone', serialized)
+
+    def test_identifiers_do_not_expose_embedded_phone_numbers(self):
+        identifiers = [
+            'src-shop13800138000suffix',
+            'src-shop8613800138000suffix',
+            'src-shop008613800138000suffix',
+            'src-shop-86-138-0013-8000suffix',
+            'src-shop_0086_138.0013.8000suffix',
+            'src:shop:86:138:0013:8000suffix',
+            'src-shop1_3_8_0_0_1_3_8_0_0_0suffix',
+            'src-shop+86-138-0013-8000suffix',
+            'src-shop 138 0013 8000',
+            'src-shop-0595-12345678suffix',
+            'src-shop-0086-0595-12345678suffix',
+        ]
+        supplier = self.supply['suppliers'][0]
+        direction = supplier['matching_profile']['product_directions'][0]
+        for n, source_id in enumerate(identifiers):
+            supplier['source_ids'].append(source_id)
+            direction['source_ids'].append(source_id)
+            self.supply['sources'].append({'id': source_id, 'model': f'fixture-{n}'})
+            self.supply['suppliers'].append({'id': source_id, 'names': [source_id], 'source_ids': []})
+            self.products['products'].append({'id': source_id, 'current_model': source_id, 'aliases': [source_id], 'adopted_source_id': 'one'})
+        self.save()
+        serialized = json.dumps(supplier_index(self.root), ensure_ascii=False)
+        for source_id in identifiers:
+            with self.subTest(source_id=source_id):
+                self.assertNotIn(source_id, serialized)
 
     def test_http_reads_current_source_and_does_not_write(self):
         httpd = ThreadingHTTPServer(('127.0.0.1', 0), Handler)

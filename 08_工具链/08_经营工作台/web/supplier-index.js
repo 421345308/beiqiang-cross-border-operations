@@ -36,7 +36,12 @@ window.renderSupplierIndex = async function ({ page, current, api, goObject, set
     if (!claims?.length) return;
     card.append(el('h4', title));
     for (const claim of claims) {
-      card.append(el('p', [claim.name, claim.scope].filter(Boolean).join(' · ') || '资料未注明'));
+      const row = el('p', [claim.name, claim.scope].filter(Boolean).join(' · ') || '资料未注明');
+      if (title === '产品方向') {
+        const urls = [...new Set((claim.evidence || []).filter(item => item.kind === 'SUPPLIER_PRODUCT_PAGE' && item.url).map(item => item.url))];
+        urls.forEach((url, index) => { const source = link(` 查看来源商品${urls.length > 1 ? ` ${index + 1}` : ''} ↗`, url); if (source) row.append(source); });
+      }
+      card.append(row);
       const evidence = evidenceBlock(claim.evidence); if (evidence) card.append(evidence);
     }
   }

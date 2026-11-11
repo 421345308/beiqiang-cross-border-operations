@@ -19,8 +19,8 @@ from business import PRODUCTS, SUPPLY
 # Do not put prices or contact details in this projection, even if someone
 # mistakenly includes them in one of the otherwise public free-text fields.
 _PRIVATE_TEXT = re.compile(
-    r'(?i)(?<!\d)(?:\+?86[\s-]?)?1[3-9](?:[\s-]?\d){9}(?!\d)'
-    r'|(?<!\d)0\d{2,3}[\s-]\d{7,8}(?!\d)'
+    r'(?i)(?<!\d)(?:(?:\+|00)?86[\s._:-]*)?1[\s._:-]*[3-9](?:[\s._:-]*\d){9}(?!\d)'
+    r'|(?<![A-Za-z0-9])(?:(?:\+|00)?86[\s._:-]*)?0[1-9]\d{1,2}[\s._:-]+\d(?:[\s._:-]?\d){6,7}(?!\d)'
     r'|[\w.+-]+@[\w.-]+\.[a-z]{2,}'
     r'|(?:¥|￥|\$|人民币|美元|美金|\b(?:CNY|RMB|USD)\b)\s*\d'
     r'|\d(?:[\d,.]*\s*)(?:元|美元|人民币|美金)(?:\s*(?:/|每|一|每双|每件|每对|/双|/件))?'
@@ -28,6 +28,15 @@ _PRIVATE_TEXT = re.compile(
     r'|(?:微信|wechat|weixin)\s*[:：]\s*\S+'
 )
 _PRIVATE_QUERY = re.compile(r'(?i)(?:token|auth|secret|session|password|passwd|pwd|phone|mobile|email|contact|wechat|weixin|price|cost)')
+_IDENTIFIER = re.compile(r'[A-Za-z0-9][A-Za-z0-9._:-]{0,199}\Z')
+_PHONE_IN_ID = re.compile(
+    # Identifiers can embed mobile numbers directly next to letters, with an
+    # optional China country code and punctuation within the number.
+    r'(?<!\d)(?:(?:00)?86[-_.:]*)?1[-_.:]*[3-9](?:[-_.:]*\d){9}(?!\d)'
+    # A landline area code must start with 01–09; model/page pairs such as
+    # H008-2094876 and A009-2462264 are not valid area-code prefixes.
+    r'|(?<![A-Za-z0-9])(?:(?:00)?86[-_.:]*)?0[1-9]\d{1,2}[-_.:]+\d(?:[-_.:]?\d){6,7}(?!\d)'
+)
 
 
 def _text(value):
@@ -35,6 +44,14 @@ def _text(value):
         return ''
     value = value.strip()
     return '' if _PRIVATE_TEXT.search(value) else value
+
+
+def _identifier(value):
+    """Source IDs are structured keys; a model followed by a page ID is not a telephone."""
+    if not isinstance(value, str):
+        return ''
+    value = value.strip()
+    return value if _IDENTIFIER.fullmatch(value) and not _PHONE_IN_ID.search(value) else ''
 
 
 def _url(value):
@@ -83,7 +100,7 @@ def _claims(value):
         result.append({
             'name': _text(item.get('name')),
             'scope': _text(item.get('scope')),
-            'source_ids': [_text(s) for s in item.get('source_ids', []) if _text(s)] if isinstance(item.get('source_ids', []), list) else [],
+            'source_ids': [_identifier(s) for s in item.get('source_ids', []) if _identifier(s)] if isinstance(item.get('source_ids', []), list) else [],
             'evidence': _evidence(item.get('evidence')),
         })
     return result
@@ -132,7 +149,7 @@ def supplier_index(root, *, q='', product='', process='', city='', identity='', 
         classification = item.get('classification') if isinstance(item.get('classification'), dict) else {}
         intents = classification.get('local_intent_candidates', [])
         product_info = {
-            'id': _text(item.get('id')),
+            'id': _identifier(item.get('id')),
             'current_model': _text(item.get('current_model')),
             'aliases': [_text(a) for a in item.get('aliases', []) if _text(a)] if isinstance(item.get('aliases'), list) else [],
             'source_state': _text(item.get('source_state')),
@@ -147,9 +164,9 @@ def supplier_index(root, *, q='', product='', process='', city='', identity='', 
 
     sources = {}
     for item in supply.get('sources', []):
-        if not isinstance(item, dict) or not _text(item.get('id')):
+        if not isinstance(item, dict) or not _identifier(item.get('id')):
             continue
-        source_id = _text(item['id'])
+        source_id = _identifier(item['id'])
         sources[source_id] = {
             'id': source_id,
             'model': _text(item.get('model')),
@@ -168,7 +185,7 @@ def supplier_index(root, *, q='', product='', process='', city='', identity='', 
         linked_ids.update(source_id for source_id in source_ids if source_id in sources)
         names = item.get('names') if isinstance(item.get('names'), list) else []
         suppliers.append({
-            'id': _text(item.get('id')),
+            'id': _identifier(item.get('id')),
             'names': [_text(name) for name in names if _text(name)],
             'shop_url': _url(item.get('shop_url')),
             'profile': _profile(item.get('matching_profile')),

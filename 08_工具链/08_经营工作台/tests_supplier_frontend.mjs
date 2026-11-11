@@ -26,7 +26,7 @@ function setup() {
   const button = (label, action, cls) => { const item = el('button', label, cls); item.addEventListener('click', action); return item; };
   const link = (label, url) => { if (!url) return null; const item = el('a', label); item.href = url; return item; };
   const supplier = {id:'s1', names:['7号仓库'], shop_url:'https://shop.example/', has_profile:true,
-    profile:{product_directions:[{name:'高尔夫鞋',scope:'来源款',evidence:[{kind:'SUPPLIER_PRODUCT_PAGE'}]}], process_directions:[],
+    profile:{product_directions:[{name:'高尔夫鞋',scope:'来源款',evidence:[{kind:'SUPPLIER_PRODUCT_PAGE',url:'https://shop.example/1'}]}], process_directions:[],
       factory_identity:{status:'SELF_CLAIMED_FACTORY',summary:'身份未独立核验',evidence:[{kind:'SUPPLIER_SELF_CLAIM'}]},
       customization:{status:'OWNER_REPORTED_SINGLE_CASE',summary:'一项需求',evidence:[{kind:'OWNER_REPORTED'}]},
       location:{city:'泉州',type:'店铺所在地',evidence:[]}, owner_interactions:[],open_questions:['核实条件']},
@@ -49,6 +49,9 @@ test('matching page renders evidence, source links and truthful relationships', 
   assert.match(h.page.textContent,/候选来源/);
   assert.match(h.page.textContent,/不代表当前库存或可供条件/);
   assert.ok(walk(h.page).some(node=>node.tagName==='A' && node.href==='https://shop.example/1'));
+  const direction = walk(h.page).find(node=>node.tagName==='P' && node.textContent.includes('高尔夫鞋'));
+  assert.ok(direction.children.some(node=>node.tagName==='A' && node.href==='https://shop.example/1'));
+  assert.ok(walk(h.page).some(node=>node.tagName==='SUMMARY' && node.textContent==='查看依据'));
   walk(h.page).find(node=>node.tagName==='BUTTON' && node.textContent==='BQ-1').listeners.click();
   assert.deepEqual(h.opened,['product:BQ-1']);
   assert.equal(typeof h.refresh(),'function');

@@ -10972,6 +10972,70 @@
         "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
       ],
       "source_state": "RESEARCH_CANDIDATE"
+    },
+    {
+      "id": "src-bomei-bm677-172",
+      "url": "https://gb.qzbmshoes.com/products_details/172.html",
+      "shop_url": "https://gb.qzbmshoes.com",
+      "supplier": "泉州博美鞋业有限公司",
+      "model": "BM-677",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "仅研究候选；报价及供货条件按项目确认。",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE"
+    },
+    {
+      "id": "src-bomei-bm678-173",
+      "url": "https://gb.qzbmshoes.com/products_details/173.html",
+      "shop_url": "https://gb.qzbmshoes.com",
+      "supplier": "泉州博美鞋业有限公司",
+      "model": "BM-678",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "仅研究候选；报价及供货条件按项目确认。",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE"
+    },
+    {
+      "id": "src-sikaiwu-s805m-2576519",
+      "url": "https://sikaiwu.sooxie.com/detail/2576519",
+      "shop_url": "https://sikaiwu.sooxie.com",
+      "supplier": "思凯屋工厂",
+      "model": "S805M",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "仅研究候选；报价及供货条件按项目确认。",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE"
+    },
+    {
+      "id": "src-sikaiwu-s808m-2548914",
+      "url": "https://sikaiwu.sooxie.com/detail/2548914",
+      "shop_url": "https://sikaiwu.sooxie.com",
+      "supplier": "思凯屋工厂",
+      "model": "S808M",
+      "price": "",
+      "currency": "",
+      "unit": "",
+      "price_terms": "仅研究候选；报价及供货条件按项目确认。",
+      "observed_at": "2026-11-11",
+      "evidence": [
+        "00_总控台/产品中心/证据/搜鞋网匹配来源.md"
+      ],
+      "source_state": "RESEARCH_CANDIDATE"
     }
   ],
   "imported_evidence": [
@@ -11140,8 +11204,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "飞织休闲鞋",
-            "scope": "1212；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "飞织休闲鞋/宽头鞋",
+            "scope": "1212；供方描述提及宽头，实际鞋楦与宽度等级尚未核实。",
             "source_ids": [
               "src-f34afedc2d05"
             ],
@@ -11157,7 +11221,7 @@
           },
           {
             "name": "飞织套脚鞋",
-            "scope": "2627；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "2627；供方页面显示飞织套脚款；不据此推断无需用手穿脱。",
             "source_ids": [
               "src-d9ee11e25e75"
             ],
@@ -11172,8 +11236,8 @@
             ]
           },
           {
-            "name": "户外风格鞋",
-            "scope": "2509；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "户外风格休闲鞋",
+            "scope": "2509；户外风格款，场地适用性和具体性能须确认。",
             "source_ids": [
               "src-25bece2e7c64"
             ],
@@ -11223,8 +11287,10 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "目标款实际由谁生产，工厂地点在哪里？",
+          "1212、2627的鞋头空间与尺码体系如何，是否可调整颜色、标识或鞋型？",
+          "2597、2628曾被店铺公告列为下架；客户需要相近款时请确认当前可供的替代型号。",
+          "所需颜色尺码当前能否供货，样品和改样条件如何？"
         ]
       }
     },
@@ -11327,8 +11393,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "五趾涉水鞋",
-            "scope": "A620；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "五趾鞋/涉水鞋",
+            "scope": "A620；五趾鞋方向；使用场景、尺码体系和可改范围需具体确认。",
             "source_ids": [
               "src-chaoxzu-a620-2415784"
             ],
@@ -11344,7 +11410,7 @@
           },
           {
             "name": "骑行鞋",
-            "scope": "200618；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "200618；页面展示不同锁扣选项，接口标准及配件须确认。",
             "source_ids": [
               "src-chaoxzu-200618-2415801"
             ],
@@ -11386,8 +11452,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "A620的脚趾空间、尺码体系和可定制范围是什么？",
+          "200618各版本包含哪些锁扣配件、适配什么接口标准？",
+          "两款分别由谁生产，能否按参考鞋打样及提供订单条件？"
         ]
       }
     },
@@ -11413,8 +11480,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "针织套脚休闲鞋",
-            "scope": "229；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "针织/飞织套脚休闲鞋",
+            "scope": "229；既有来源资料描述飞织鞋面，不证明店家自有飞织设备。",
             "source_ids": [
               "src-67e63a6d3c1b"
             ],
@@ -11430,7 +11497,7 @@
           },
           {
             "name": "系带休闲鞋",
-            "scope": "989；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "989；系带休闲鞋来源线索，具体材料和定制范围须按订单核实。",
             "source_ids": [
               "src-17f7b23cc5bc"
             ],
@@ -11445,7 +11512,24 @@
             ]
           }
         ],
-        "process_directions": [],
+        "process_directions": [
+          {
+            "name": "飞织鞋面（来源款资料）",
+            "scope": "229来源资料描述飞织鞋面；不能据此认定店铺自有设备、工厂工艺或接单能力。",
+            "source_ids": [
+              "src-67e63a6d3c1b"
+            ],
+            "evidence": [
+              {
+                "kind": "WORKSPACE_RECORD",
+                "url": "https://weituo.sooxie.com/detail/2261793",
+                "path": "02_Alibaba运营/05_扩品工程/执行记录/229正式新建_2026-10-04_task5/facts_and_color_bindings.json",
+                "observed_on": "2026-10-04",
+                "summary": "既有款式资料记载来源称飞织；纤维成分与制造主体未据此确定。"
+              }
+            ]
+          }
+        ],
         "factory_identity": {
           "status": "UNVERIFIED",
           "summary": "实际制造主体及工厂身份未独立核实，暂作供货线索。",
@@ -11464,8 +11548,8 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "229、989的实际生产主体、工厂地点和可供尺码是什么？",
+          "229的鞋面、颜色和标识是否能按客户需求调整，能否打样？"
         ]
       }
     },
@@ -11682,8 +11766,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "系带休闲鞋",
-            "scope": "936；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "飞织休闲鞋",
+            "scope": "936；来源页称飞织休闲鞋，具体鞋带或绳扣结构按实际版本确认。",
             "source_ids": [
               "src-bded161d28f1"
             ],
@@ -11699,7 +11783,7 @@
           },
           {
             "name": "镂空套脚鞋",
-            "scope": "9818；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "9818；镂空套脚鞋来源线索，材料与具体版本待确认。",
             "source_ids": [
               "src-hr-hr042-9818"
             ],
@@ -11733,8 +11817,8 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "936的鞋面结构、绳扣版本与尺码体系是什么，能否按要求改色或改标？",
+          "9818的现有版本和实际生产主体、样品及订单条件如何？"
         ]
       }
     },
@@ -11895,7 +11979,7 @@
         "product_directions": [
           {
             "name": "旋钮休闲鞋",
-            "scope": "KB11；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "KB11；页面展示旋钮结构，不证明供方自有旋钮加工工艺。",
             "source_ids": [
               "src-hr-dz14546082-a-kb11"
             ],
@@ -11910,8 +11994,8 @@
             ]
           },
           {
-            "name": "德比鞋",
-            "scope": "D11；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "德比鞋/系带休闲鞋",
+            "scope": "D11；德比鞋来源线索，具体材料与定制条件需核。",
             "source_ids": [
               "src-hr-hr031-d11"
             ],
@@ -11945,8 +12029,8 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "KB11旋钮部件和鞋体由谁生产，损坏后配件及改样是否可安排？",
+          "D11实际生产主体、材料、可选尺码及标识调整条件如何？"
         ]
       }
     },
@@ -11967,7 +12051,7 @@
         "product_directions": [
           {
             "name": "工装风休闲鞋",
-            "scope": "AR288；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "AR288；工装风外观，不据此声称安全防护性能。",
             "source_ids": [
               "src-hr-hr038-ar288"
             ],
@@ -11982,8 +12066,8 @@
             ]
           },
           {
-            "name": "侧拉链踝靴",
-            "scope": "5612；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "侧拉链踝靴/短靴",
+            "scope": "5612；侧拉链踝靴来源线索，材料和尺码按版本确认。",
             "source_ids": [
               "src-hr-hr059-5612"
             ],
@@ -12017,8 +12101,8 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "AR288和5612的实际制造主体、尺码及各版本用料是什么？",
+          "能否修改颜色、标识与包装，样品、交期和订单条件如何？"
         ]
       }
     },
@@ -12114,8 +12198,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "洞洞鞋",
-            "scope": "F263；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "洞洞鞋/包头洞洞鞋",
+            "scope": "F263；既有产品档案关联的洞洞鞋来源。",
             "source_ids": [
               "src-hr-hr053-f263"
             ],
@@ -12130,8 +12214,8 @@
             ]
           },
           {
-            "name": "厨房工作鞋",
-            "scope": "8901；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "厨师鞋/厨房鞋/厨房工作鞋",
+            "scope": "8901；页面列38–39、40–41、42–43、44–45双码，标题写39–45；尺码体系与具体功能须核。",
             "source_ids": [
               "src-banma-8901-2365909"
             ],
@@ -12173,8 +12257,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "F263和8901分别由谁生产，是否有可验证的工厂地点？",
+          "8901标题码段与双码选项不一致，如何选择及确认实际尺码？",
+          "8901的实际材料、可改范围和客户所需地面或防护标准，有无对应款式资料？"
         ]
       }
     },
@@ -12213,7 +12298,7 @@
         "product_directions": [
           {
             "name": "高尔夫鞋",
-            "scope": "8805；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "8805；适合按高尔夫鞋外形和用途初筛，具体结构与目标市场适配须确认。",
             "source_ids": [
               "src-7hao-8805-2507214"
             ],
@@ -12229,7 +12314,7 @@
           },
           {
             "name": "摔跤鞋",
-            "scope": "D903；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "D903；摔跤鞋来源线索，实际品牌版本和适用场地须按订单确认。",
             "source_ids": [
               "src-7hao-d903-1156694"
             ],
@@ -12245,7 +12330,7 @@
           },
           {
             "name": "增高鞋",
-            "scope": "999；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "scope": "999；页面列深灰、浅灰及38–44，尺码体系和进货标价单位尚待确认。",
             "source_ids": [
               "src-7hao-999-2279074"
             ],
@@ -12295,8 +12380,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "目标鞋款是自有产线生产还是代理？实际生产主体及工厂地址是什么？",
+          "999的页面标价按什么单位计价，38–44属于哪种尺码体系，深浅灰版本如何供货？",
+          "针对客户参考鞋，哪些颜色、标识或结构可改，样品和订单条件如何？"
         ]
       }
     },
@@ -12314,8 +12400,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "球类运动鞋",
-            "scope": "2617；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "球类运动鞋/羽毛球鞋/乒乓球鞋/网球鞋",
+            "scope": "2617；商品页面列乒乓球、羽毛球和网球用途，实际场地适配须按项目确认。",
             "source_ids": [
               "src-xile-2617-2588290"
             ],
@@ -12330,8 +12416,8 @@
             ]
           },
           {
-            "name": "足球鞋",
-            "scope": "2668；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "足球鞋/球类运动鞋",
+            "scope": "2668；页面展示长钉与碎钉版本，具体场地和结构须确认。",
             "source_ids": [
               "src-xile-2668-2580043"
             ],
@@ -12396,8 +12482,8 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "2617、2668分别由谁生产，店铺自述来样定做条件是否适用于该款和本订单？",
+          "针对客户运动项目与场地，可改哪些鞋底、颜色和标识？尺码体系及样品条件如何？"
         ]
       }
     },
@@ -12414,8 +12500,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "护士工作鞋",
-            "scope": "2613；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "护士鞋/护士工作鞋",
+            "scope": "2613；四个白色版本，来源尺码表标示 EU 35–40；采购标价单位与实际供货须确认。",
             "source_ids": [
               "src-chaoren-2613-1875753"
             ],
@@ -12430,8 +12516,8 @@
             ]
           },
           {
-            "name": "女式套脚鞋",
-            "scope": "889；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "女式套脚休闲鞋",
+            "scope": "889；已有产品档案关联的女式休闲套脚方向。",
             "source_ids": [
               "src-hr014-chaoren-889"
             ],
@@ -12473,8 +12559,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "2613页面标价的计价单位是什么？四个白色版本及 EU 35–40 如何供货和混码？",
+          "2613能否按客户要求修改颜色、标识或结构，样品条件如何？",
+          "该款的实际生产主体和工厂地点是什么？客户如有性能要求，能否提供对应资料？"
         ]
       }
     },
@@ -12491,8 +12578,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "涉水鞋",
-            "scope": "H008；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "涉水鞋/溯溪鞋",
+            "scope": "H008；商品页自称可来样定制；尺码体系、设计范围和当前订单条件待确认。",
             "source_ids": [
               "src-feitefuluo-h008-2094876"
             ],
@@ -12507,8 +12594,8 @@
             ]
           },
           {
-            "name": "厨房工作鞋",
-            "scope": "29095；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "厨师鞋/厨房鞋/厨房工作鞋",
+            "scope": "29095；厨房工作鞋来源线索，H008的定制条件不自动适用本款。",
             "source_ids": [
               "src-feitefuluo-29095-1539439"
             ],
@@ -12558,8 +12645,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "H008来样可调整哪些结构与图案？页面定制条件是否适用本订单，尺码体系和样品安排如何？",
+          "29095是否支持类似定制；客户若有厨房地面或防护要求，有无该款对应验证资料？",
+          "各款实际生产主体及工厂地点是什么？"
         ]
       }
     },
@@ -12567,16 +12655,19 @@
       "id": "supplier-9ff8c1b07a18",
       "shop_url": "https://sikaiwu.sooxie.com",
       "names": [
-        "思凯屋"
+        "思凯屋",
+        "思凯屋工厂"
       ],
       "source_ids": [
-        "src-sikaiwu-s606-1859131"
+        "src-sikaiwu-s606-1859131",
+        "src-sikaiwu-s805m-2576519",
+        "src-sikaiwu-s808m-2548914"
       ],
       "matching_profile": {
         "product_directions": [
           {
-            "name": "厨房工作鞋",
-            "scope": "S606；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "厨师鞋/厨房鞋/厨房工作鞋",
+            "scope": "S606；商家展示厨房鞋方向，页面选项黑色、卡其及39–44；尺码体系与实测性能未知。",
             "source_ids": [
               "src-sikaiwu-s606-1859131"
             ],
@@ -12589,13 +12680,78 @@
                 "summary": "店铺商品页面展示的鞋款；不是实测性能或实时供货证明。"
               }
             ]
+          },
+          {
+            "name": "厨师鞋/厨房鞋/一体成型款",
+            "scope": "S805M；商家标题称一体成型加绒厨房鞋，设备、模具及性能须按具体款核实。",
+            "source_ids": [
+              "src-sikaiwu-s805m-2576519"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://sikaiwu.sooxie.com/detail/2576519",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方商品页面；不是实时供货或性能证明。"
+              }
+            ]
+          },
+          {
+            "name": "厨师鞋/厨房鞋/一体成型款",
+            "scope": "S808M；商家标题称一体成型加绒厨房鞋，设备、模具及性能须按具体款核实。",
+            "source_ids": [
+              "src-sikaiwu-s808m-2548914"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://sikaiwu.sooxie.com/detail/2548914",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方商品页面；不是实时供货或性能证明。"
+              }
+            ]
           }
         ],
-        "process_directions": [],
+        "process_directions": [
+          {
+            "name": "一体成型（商品标题描述）",
+            "scope": "S805M、S808M商品标题称一体成型；不证明该店自有成型设备或模具。",
+            "source_ids": [
+              "src-sikaiwu-s805m-2576519",
+              "src-sikaiwu-s808m-2548914"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://sikaiwu.sooxie.com/detail/2576519",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "该款标题中的商家表述；设备和生产主体未核。"
+              },
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://sikaiwu.sooxie.com/detail/2548914",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "该款标题中的商家表述；设备和生产主体未核。"
+              }
+            ]
+          }
+        ],
         "factory_identity": {
           "status": "UNVERIFIED",
-          "summary": "实际制造主体及工厂身份未独立核实，暂作供货线索。",
-          "evidence": []
+          "summary": "店铺名称含“工厂”；实际制造主体及工厂身份未独立核实，暂作供货线索。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://sikaiwu.sooxie.com/detail/1859131",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "商品页展示的店铺名称；不能据此证明工厂身份。"
+            }
+          ]
         },
         "customization": {
           "status": "UNKNOWN",
@@ -12618,8 +12774,9 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "S606实际生产主体与工厂地点是什么，能否按客户参考款改样？",
+          "39–44属于什么尺码体系、各颜色如何供货？客户指定厨房地面或防护标准时，有无该款对应资料？",
+          "S805M、S808M的一体成型设备和模具属于谁，能否根据客户图样调整？"
         ]
       }
     },
@@ -12635,8 +12792,8 @@
       "matching_profile": {
         "product_directions": [
           {
-            "name": "团体运动鞋",
-            "scope": "2128；商品页面所示的鞋型或用途，采购与性能须具体核实。",
+            "name": "健美操鞋/啦啦操鞋/团体运动鞋",
+            "scope": "2128；页面标题列健美操和啦啦操用途；具体场地适配需核。",
             "source_ids": [
               "src-zhengda-2128-1885655"
             ],
@@ -12670,8 +12827,131 @@
         },
         "owner_interactions": [],
         "open_questions": [
-          "实际生产主体及工厂地址",
-          "具体款式的定制范围、样品与订单条件"
+          "2128适合客户指定的健美操或啦啦操场地吗，鞋底结构和尺码体系是什么？",
+          "实际生产主体及工厂地点是什么，是否能按团体需求改色、改标或打样？"
+        ]
+      }
+    },
+    {
+      "id": "supplier-6b5f71f0ed0b",
+      "shop_url": "https://gb.qzbmshoes.com",
+      "names": [
+        "泉州博美鞋业有限公司"
+      ],
+      "source_ids": [
+        "src-bomei-bm678-173",
+        "src-bomei-bm677-172"
+      ],
+      "matching_profile": {
+        "product_directions": [
+          {
+            "name": "厨师鞋/厨房鞋/厨房工作鞋",
+            "scope": "BM-678；官网商品页列厨师鞋及自定义标识，具体版本与接单条件须确认。",
+            "source_ids": [
+              "src-bomei-bm678-173"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://gb.qzbmshoes.com/products_details/173.html",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方商品页面；不是实时供货或性能证明。"
+              }
+            ]
+          },
+          {
+            "name": "厨师鞋/厨房鞋/厨房工作鞋",
+            "scope": "BM-677；官网商品页列厨师鞋及自定义标识，具体版本与接单条件须确认。",
+            "source_ids": [
+              "src-bomei-bm677-172"
+            ],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_PRODUCT_PAGE",
+                "url": "https://gb.qzbmshoes.com/products_details/172.html",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "供方商品页面；不是实时供货或性能证明。"
+              }
+            ]
+          }
+        ],
+        "process_directions": [
+          {
+            "name": "自定义设计与标识样品（官网自述）",
+            "scope": "官网展示OEM/ODM及按设计和标识制作样品的服务；具体款的可改范围和费用需核。",
+            "source_ids": [],
+            "evidence": [
+              {
+                "kind": "SUPPLIER_SELF_CLAIM",
+                "url": "https://gb.qzbmshoes.com/sevice.html",
+                "path": "",
+                "observed_on": "2026-11-11",
+                "summary": "公司官网服务页自述；非独立验厂或订单承诺。"
+              }
+            ]
+          }
+        ],
+        "factory_identity": {
+          "status": "SELF_CLAIMED_FACTORY",
+          "summary": "官网自称有自有工厂并与外部工厂合作；公司现状、产线及两款实际生产主体未独立核实。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://gb.qzbmshoes.com/about.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "公司官网自述；不证明逐款由其自产。"
+            }
+          ]
+        },
+        "customization": {
+          "status": "SUPPLIER_SELF_CLAIM",
+          "summary": "官网展示OEM/ODM，BM-678与BM-677商品页列自定义标识；实际打样及订单条件待确认。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://gb.qzbmshoes.com/sevice.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "官网服务页自述。"
+            },
+            {
+              "kind": "SUPPLIER_PRODUCT_PAGE",
+              "url": "https://gb.qzbmshoes.com/products_details/173.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "BM-678页面列自定义标识。"
+            },
+            {
+              "kind": "SUPPLIER_PRODUCT_PAGE",
+              "url": "https://gb.qzbmshoes.com/products_details/172.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "BM-677页面列自定义标识。"
+            }
+          ]
+        },
+        "location": {
+          "city": "泉州",
+          "type": "官网所列公司地区",
+          "summary": "官网所列泉州台商区公司地区，不自动等于生产地址。",
+          "evidence": [
+            {
+              "kind": "SUPPLIER_SELF_CLAIM",
+              "url": "https://gb.qzbmshoes.com/about.html",
+              "path": "",
+              "observed_on": "2026-11-11",
+              "summary": "官网位置表述；工厂地址未核。"
+            }
+          ]
+        },
+        "owner_interactions": [],
+        "open_questions": [
+          "BM-678与BM-677分别由哪家工厂、哪条产线生产，实际工厂地址及营业主体是什么？",
+          "针对客户鞋型，可修改哪些鞋底、颜色、标识和包装；样品及数量条件如何？",
+          "客户如提出特定厨房地面或测试标准，能否提供与所选款式和版本对应的资料？"
         ]
       }
     }
