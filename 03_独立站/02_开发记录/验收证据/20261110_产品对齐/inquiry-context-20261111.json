@@ -162,5 +162,129 @@
     "lint_errors": 0,
     "lint_warnings": 0
   },
-  "bundle_sha256": "82a9a27f012ad1c26d9df60a9af31f308c8fc11601fe1d61bca6202e1a1df0ed"
+  "bundle_sha256": "82a9a27f012ad1c26d9df60a9af31f308c8fc11601fe1d61bca6202e1a1df0ed",
+  "fresh_production_build": {
+    "base_commit": "4b9db5b7e0069020fda736aaf609291a724944ac",
+    "fix_commit": "24d9b15c557570cde0d118726bb1d0ccfd328f1c",
+    "baseline_tracked_files_compared": 4071,
+    "baseline_line_ending_only_differences": 248,
+    "baseline_content_mismatches": 0,
+    "command": "npm run edgeone:build",
+    "exit_code": 0,
+    "build_log_sha256": "898e8fbd85084c6c95c9fea6f31cb559a6d5aecc67b178284ad329616e2916b5",
+    "release": "2026-11-11.12",
+    "product_count": 164,
+    "sitemap_exact_set": {
+      "ok": true,
+      "count": 164,
+      "missing": [],
+      "unexpected": [],
+      "duplicates": 0
+    },
+    "bq1033_excluded": true,
+    "localized_product_pages_checked": 10,
+    "localized_product_pages_passed": 10,
+    "website_pdfs_checked": 5,
+    "website_pdfs_match_verified_164": 5,
+    "build_assets": [
+      {
+        "name": "tracking-BKCoi898.js",
+        "sha256": "5244d3645eadad48e69c5a94b52c5608e7b80aeab659cf2f9fe42b42f86e1642"
+      },
+      {
+        "name": "EuropeInquiry-CXc9wJvP.js",
+        "sha256": "89b1f8ce330e094016844b960832fbd252a0f1861b9a01d66b990b4ba4ff60e3"
+      }
+    ],
+    "targeted_mocked_tests": "32 passed; injected store and mail transport",
+    "browser_checked_at_utc": "2026-11-11T16:52:28.119Z",
+    "browser_target": "fresh isolated production build, no source overlay",
+    "browser_all_passed": true,
+    "browser_locales": [
+      {
+        "locale": "en",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "privateQueryStripped": true,
+        "receiptLocale": "en"
+      },
+      {
+        "locale": "zh",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "privateQueryStripped": true,
+        "receiptLocale": "zh"
+      },
+      {
+        "locale": "de",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "privateQueryStripped": true,
+        "receiptLocale": "de"
+      },
+      {
+        "locale": "fr",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "privateQueryStripped": true,
+        "receiptLocale": "fr"
+      },
+      {
+        "locale": "es",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "privateQueryStripped": true,
+        "receiptLocale": "es"
+      }
+    ],
+    "cross_locale_preference": {
+      "selectedPreference": "de",
+      "pageLocale": "fr",
+      "submittedPreference": "de",
+      "contactMethod": "whatsapp",
+      "contactsPreserved": true,
+      "itemsPreserved": true,
+      "receiptLocale": "de",
+      "valid": true
+    },
+    "analytics_consent_off": {
+      "valid": true,
+      "landingBlank": true,
+      "utmBlank": true,
+      "referrerBlank": true,
+      "contactsCorrect": true
+    },
+    "browser_network": "all requests intercepted; inquiry response mocked; no real inquiry or mail",
+    "production_deployed": false,
+    "release_identity_note": "The base commit and this fix both report .12; deployment commit and built behavior/assets must be checked in addition to release.json.",
+    "build_log_local": "99_临时区/独立站产品对齐/quote-handoff-fix/production-build-4b9-24d9-escalated.log",
+    "static_result_local": "99_临时区/独立站产品对齐/quote-handoff-fix/fresh-build-verification.json",
+    "browser_result_local": "99_临时区/独立站产品对齐/quote-context-e2e-rebuilt.json",
+    "initial_sandbox_attempt": "Vite child process failed with spawn EPERM in the sandbox; the authorized build was rerun with normal available permissions without changing system security settings."
+  }
 }
