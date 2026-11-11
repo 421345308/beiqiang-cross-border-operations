@@ -2,7 +2,7 @@
 
 网站源码使用独立 Git 仓库；经营仓库只维护运营 SOP、开发记录和导航。继续开发前先核对源码工作区与最新发布记录。
 
-**持续推进：国际站与独立站产品对齐（2026-11-11）。** 主办：独立站增长会话；负责独立站产品与链接投影、只读差异核对和本地同步工具。EdgeOne 生产部署于 09:26 UTC 成功，正式域名回读 `2026-11-11.8`：网站与既有五语下载产品册均为 157 款。按 2026-11-10 15:46 UTC 的国际站完整快照，同口径 247 个产品身份中还有 90 个未进入网站；这是历史快照差异，不代表实时在售或库存。继续逐款核对既有来源、版本与素材，并复用产品中心和工作台映射；产品中心、国际站档案和工作台的并行修改由所属会话维护。
+**持续推进：国际站与独立站产品对齐（2026-11-11）。** 主办：独立站增长会话；负责独立站产品与链接投影、只读差异核对和本地同步工具。EdgeOne 生产部署于 10:03 UTC 成功，正式域名回读 `2026-11-11.9`：网站与既有五语下载产品册均为 160 款。按 2026-11-10 15:46 UTC 的国际站完整快照，同口径 247 个产品身份中还有 87 个未进入网站；这是历史快照差异，不代表实时在售或库存。继续逐款核对既有来源、版本与素材，并复用产品中心和工作台映射；产品中心、国际站档案和工作台的并行修改由所属会话维护。
 
 ### 本轮产品对账与同步切片
 
@@ -14,7 +14,11 @@
 
 **BQ-LQ052 选样提示已修复：**后续正式页复核发现 `2026-11-11.6` 英／中文选样提示错误套用了模压洞洞鞋模板，把实际系带称作仿鞋带装饰。网站提交 `9a24449` 已改为系带提示并补单元及实际渲染回归；隔离构建 565 项通过、8 项跳过，lint 0 错误、9 条既有图片警告。EdgeOne 部署 `dprx0822uwtu` 于 09:03 UTC 成功，正式站 `2026-11-11.7` 的 BQ-LQ052 中英提示、原模压款 BQ1048 中英提示，以及五语产品册页面和下载文件均回读通过。[修复回读](02_开发记录/验收证据/20261110_产品对齐/lq052-guidance-production-verification.json) 后续 `2026-11-11.8` 的 BQ-LQ052 中英文页面仍已回读为正确系带提示。
 
-**下一款准备：BQ1021 / HR021。** 2026-11-11 08:13 UTC 已分别回读三条历史链接 `1601943593293`、`1601943584343`、`1601943577329`，平台型号依次为 `BQ1021-A/B/C`，均 `approved/Y`、米／黑各 EU 36–42；三条链接归同一个产品身份。已采用[尚佐 7899 来源](https://shangzuo.sooxie.com/detail/2135354)，四张既有图片及其原片／裁切关系已核，五语标题草稿和 SKU 矩阵暂存 `99_临时区/独立站产品对齐/bq1021-next-prepared.json`。网站目前没有准确的魔术贴闭合类型，需补齐五语展示、目录筛选和测试；选款助手的新闭合偏好须确保实际询价后端能保存后才能开放。该款尚未上站，不能报入 157 款。
+**新增三款正式上线：**[BQ1021](https://www.beiqiang.online/products/bq1021/) / `HR021`、[BQ-LQ2633](https://www.beiqiang.online/products/bq-lq2633/) 和 [BQ-LQ2598](https://www.beiqiang.online/products/bq-lq2598/) 已进入正式站 `2026-11-11.9`。BQ1021 的三条国际站链接 `1601943593293`、`1601943584343`、`1601943577329` 于 08:13 UTC 均回读 `approved/Y`，分别为 `BQ1021-A/B/C`，归一个产品身份；米／黑各 EU 36–42。2633 于 03:57 UTC、2598 于 03:49 UTC 官方回读各自链接均 `approved/Y`，各三色、EU 39–48；平台配置不等于现货。两款路崎鞋的宽鞋头依据是负责人已确认的来源分类，非图片推断。12 张图片及 BQ1021 既有裁切与原片关系见[来源和哈希](02_开发记录/验收证据/20261110_产品对齐/three-products-source-image-lineage.json)。
+
+已新增玛丽珍鞋五语分类，以及目录中的魔术贴与抽绳扣两种闭合方式和可分享筛选；2598 保持普通系带。玛丽珍分类询价按钮直接进入询价页，不伪造当前后端尚不支持的分类来源。网站提交 `9778cb4`、EdgeOne 部署 `dpiu1xkfardz` 为 `Success`。正式站已回读 15 个五语商品页、12 张网页图、5 个分类页、5 个产品册页、5 个询价页和 5 份下载文件；五份 PDF 均含 160 个不重复身份及对应语种链接，中英各 34 页、德法西各 42 页。正式浏览器核验 8 个色图、三款询价清单和 10 个五语闭合筛选，未发送真实询盘；工作台已匹配三款及 BQ1021 的三条链接。隔离构建 572 项通过、8 项跳过，lint 0 错误、9 条既有图片警告。[正式验收](02_开发记录/验收证据/20261110_产品对齐/three-products-20261111-production-verification.json)
+
+**选款助手筛选修复进行中：**后续核验发现男鞋方向的英文匹配把 `Women's` 内的 `men's` 误判为男鞋，BQ1021 因此可能进入男鞋推荐。目录的玛丽珍分类与闭合筛选不受此问题影响。修正正在隔离测试，正式新版本回读前该问题仍存在于 `2026-11-11.9`。另外，魔术贴与抽绳扣暂不作为选款助手提交给私有后端的新偏好；私有 API 版本和真实询盘投递未由本次验证证明。
 
 **BQ1003 / HR003 已正式上线。** 已采用[泰豪 K0099 来源](https://taihao.sooxie.com/detail/2496569)，三条历史链接仍归一个身份；2026-11-11 03:57 UTC 首条 `1601943312845` 官方回读 `approved/Y`，黑、灰、蓝、红各 EU 38–50 共 52 个色码组合。来源脚长表仅至 46，官网五语详情页和五语下载产品册均提示 47–50 需确认样品尺寸；色码组合不是实时库存。四张原图按字节复制并保留原有 XMP，来源及哈希见[图片追溯](02_开发记录/验收证据/20261110_产品对齐/bq1003-source-image-lineage.json)。
 
@@ -24,7 +28,7 @@
 
 **EdgeOne 构建恢复：**此前 GitHub 自动构建确已触发，最新失败记录 `dph703bb11mt` 对应网站提交 `f362dc4`，日志显示复制静态产物时磁盘空间不足（`ENOSPC`），后续云函数文件写入随之失败。网站提交 `4fa10ed` 将同一项目内的静态目录复制改为移动，避免多占一份约 332 MiB 的产物；隔离构建中的 4,135 个文件在移动前后总哈希一致，相关 20 项测试通过。自动生产部署 `dpen3d1dum3c` 于 06:55 UTC 返回 `Success`，正式域名及 EdgeOne 默认域名最终均回读 `2026-11-11.4`；没有重启服务或更改账户和安全配置。
 
-**154 款阶段的产品册验收：**官网既有英／中／德／法／西下载产品册曾从 149 款更新至 154 款，包含 BQ-LQ02507、BQ-LQ02508、BQ-LQ2559、BQ-LQ061、BQ-W5998；该阶段中英各 33 页，德法西各 41 页。每本按 PDF 实际文本核对 154 个身份各出现一次、每个型号链接到对应语言详情页；五款 25 个语言卡片的文案、颜色、尺码及嵌入图片经逐项比对和 10 页目视检查，询价链接和 770 条本地静态商品路由亦核对。官网 5 个产品册页、5 个询价页及 5 份版本化下载均正式回读通过，PDF 哈希与已验文件一致。[正式回读证据](02_开发记录/验收证据/20261110_产品对齐/catalogue-154-production-verification.json) 网站提交 `1d80e74`，EdgeOne 部署 `dpea78rh8vwk` 为 `Success`；隔离构建测试 564 项通过、8 项跳过，lint 0 错误、9 条既有图片警告。现行 156 款见上方更新。
+**154 款阶段的产品册验收：**官网既有英／中／德／法／西下载产品册曾从 149 款更新至 154 款，包含 BQ-LQ02507、BQ-LQ02508、BQ-LQ2559、BQ-LQ061、BQ-W5998；该阶段中英各 33 页，德法西各 41 页。每本按 PDF 实际文本核对 154 个身份各出现一次、每个型号链接到对应语言详情页；五款 25 个语言卡片的文案、颜色、尺码及嵌入图片经逐项比对和 10 页目视检查，询价链接和 770 条本地静态商品路由亦核对。官网 5 个产品册页、5 个询价页及 5 份版本化下载均正式回读通过，PDF 哈希与已验文件一致。[正式回读证据](02_开发记录/验收证据/20261110_产品对齐/catalogue-154-production-verification.json) 网站提交 `1d80e74`，EdgeOne 部署 `dpea78rh8vwk` 为 `Success`；隔离构建测试 564 项通过、8 项跳过，lint 0 错误、9 条既有图片警告。现行数量见上方更新。
 
 上述更新仅覆盖网站既有下载功能；负责人确认搜鞋网图片用于独立站，不自动扩展到邮件外发、第三方平台或其他独立分发。下载产品册选款与单款／比较页打印照片选款已拆开：本批五款的既有打印表现不变。生成过程未修改 BQ-LQ1026 原图及署名元数据，原文件 SHA256 保持 `453884a6aa8c21c694018afb552ae1504f6c803b54af8c13775b28e93ffd69a6`。
 
@@ -34,7 +38,7 @@
 
 **BQ-LQ1026 公开图片元数据专项，仅只读：**正式页面和 JSON-LD 引用的 `/catalog/bq-lq1026/01_main.jpg` 含摄影署名与版权联系线索，联系方式存在于 EXIF、IPTC、XMP 的版权字段；没有证据证明它是供应商联系方式或直接暴露供货关系。六张原 JPEG、六张网页 WebP、六张小图 WebP 和一张缩略图均返回 200；其余五张 JPEG 未检出同一联系值及上述版权／署名值，13 张 WebP 未检出该联系值或版权／署名字段。本专项没有修改图片、剥除元数据、擦除署名或下架；如需改变版权标识，应先弄清其归属和处理依据。
 
-**另备 9 款五语商品草稿，未上站。** BQ1005、BQ1011、BQ1013、BQ1017 分别复用产品中心 HR005、HR011、HR013、HR017 原身份；每款有三条国际站链接，不能拆成三款。另有 BQ-LQ2633、BQ-LQ2667、BQ-MJ9968、BQ-NS003、BQ042 各一条。2026-11-11 03:57 UTC 对各款下表首条 ID 的官方 `product.get` 回读均为 `approved/Y`，合计 263 个色码组合；四个 HR 身份的其余八条链接状态依据 2026-11-10 全量快照，不将该快照误作本次字段回读。这九款当时本地工作台已回读原身份、现行型号及对应 ID，网站状态为 `not_in_subset`；均未进入网站目录、询价或产品册。
+**另备 8 款五语商品草稿，未上站。** BQ1005、BQ1011、BQ1013、BQ1017 分别复用产品中心 HR005、HR011、HR013、HR017 原身份；每款有三条国际站链接，不能拆成三款。另有 BQ-LQ2667、BQ-MJ9968、BQ-NS003、BQ042 各一条。2026-11-11 03:57 UTC 对各款下表首条 ID 的官方 `product.get` 回读均为 `approved/Y`，合计 233 个色码组合；四个 HR 身份的其余八条链接状态依据 2026-11-10 全量快照，不将该快照误作本次字段回读。这八款当时本地工作台已回读原身份、现行型号及对应 ID，网站状态为 `not_in_subset`；均未进入网站目录、询价或产品册。
 
 | 现行型号 / 主库身份 | 原国际站 ID（首条为本次回读） | 已回读色码与对应依据 |
 | --- | --- | --- |
@@ -42,14 +46,13 @@
 | BQ1011 / HR011 | `1601943501378`、`1601943406882`、`1601943513336` | 白、米黄，各供方尺码标签 39–44；已采用[卡特 2081](https://kate.sooxie.com/detail/2582530)。 |
 | BQ1013 / HR013 | `1601943542214`、`1601943514448`、`1601943543192` | 沙、酒红、黑，各供方尺码标签 36–48；已采用[仁里 2269](https://renli.sooxie.com/detail/2547894)。 |
 | BQ1017 / HR017 | `1601943484872`、`1601943583193`、`1601943459958` | 黑、黄、卡其、酒红，各尺码标签 38–44；已采用[宇泰 A1003](https://yut.sooxie.com/detail/2470645)。本次正式值是数字标签，暂不改写成已核欧码。 |
-| BQ-LQ2633 | `1601973753470` | 黑、浅灰、米白，各 EU 39–48；已采用[路崎 2633](https://luqi.sooxie.com/detail/2482666)。 |
 | BQ-LQ2667 | `1601973009551` | 黑，EU 39–48；已采用[路崎 2667](https://luqi.sooxie.com/detail/2561050)。来源另列黑色加绒，正式 SKU 不区分，不能判定其内里版本。 |
 | BQ-MJ9968 | `1601969788941` | 灰、绿、蓝，各尺码标签 35–40；已有已采用来源，正式鞋面字段仅为 Synthetic。 |
 | BQ-NS003 | `1601970690721` | 黑白、灰、全黑、绿、玫红、卡其各尺码标签 35–45，紫色 35–43；已有已采用来源。 |
 | BQ042 / 206 | `10000047166193` | 黑白、全黑、米色，各 EU 35–45；主库仅 `MAPPED`、未记录已采用来源，现有历史来源不等于已核当前供货。 |
 
 <details>
-<summary>九款五语标题及颜色草稿（未上线）</summary>
+<summary>八款五语标题及颜色草稿（未上线）</summary>
 
 | 型号 | 中文 | English | Deutsch | Français | Español |
 | --- | --- | --- | --- | --- | --- |
@@ -57,7 +60,6 @@
 | BQ1011 | 厚底低帮系带休闲鞋 | Chunky-Sole Low-Top Lace-Up Shoes | Niedrige Schnürschuhe mit markanter Sohle | Chaussures basses à lacets et semelle épaisse | Calzado bajo de cordones con suela gruesa |
 | BQ1013 | 单扣套脚休闲鞋，鞋底缝线设计 | Slip-On Casual Shoes with Buckle and Sole Stitching | Slipper mit Schnalle und Sohlennaht | Chaussures à enfiler avec boucle et couture de semelle | Calzado sin cordones con hebilla y costura en la suela |
 | BQ1017 | 铆钉宽带夹趾拖鞋 | Wide-Strap Thong Sandals with Rivet Detail | Zehentrenner mit breitem Riemen und Nietendetails | Sandales à entre-doigts avec bride large et rivets | Sandalias de dedo con tira ancha y remaches |
-| BQ-LQ2633 | 男士宽鞋头抽绳网眼步行鞋 | Men's Wide Toe Box Mesh Walking Shoes with Toggle Closure | Herren-Freizeitschuhe mit weiter Zehenbox, Mesh und Kordelstopper | Chaussures de marche homme à bout large en maille, avec cordon et stoppeur | Zapatillas de malla para hombre con puntera ancha y cierre de cordón con tope |
 | BQ-LQ2667 | 男士低帮系带休闲步行鞋 | Men's Low-Top Lace-Up Casual Walking Shoes | Herren-Schnürschuhe für Alltag und Spaziergänge | Chaussures basses à lacets pour homme, pour la marche au quotidien | Zapatillas bajas con cordones para hombre, para caminar a diario |
 | BQ-MJ9968 | 拼色搭扣玛丽珍平底鞋 | Colorblock Mary Jane Flats with Hook-and-Loop Strap | Flache Mary-Jane-Schuhe mit Klettverschluss und Farbeinsätzen | Babies plates à bride auto-agrippante et empiècements contrastés | Zapatos planos Mary Jane con tira autoadherente y paneles de contraste |
 | BQ-NS003 | 针织套脚休闲鞋 | Knit Slip-On Casual Shoes | Legere Schlupfschuhe aus Strick | Chaussures décontractées à enfiler en maille | Zapatos casuales de punto sin cordones |
@@ -69,7 +71,6 @@
 | BQ1011 | 白、米黄 | White, Beige | Weiß, Beige | Blanc, beige | Blanco, beige |
 | BQ1013 | 沙、酒红、黑 | Sand, Wine Red, Black | Sand, Weinrot, Schwarz | Sable, bordeaux, noir | Arena, burdeos, negro |
 | BQ1017 | 黑、黄、卡其、酒红 | Black, Yellow, Khaki, Wine Red | Schwarz, Gelb, Khaki, Weinrot | Noir, jaune, kaki, bordeaux | Negro, amarillo, caqui, burdeos |
-| BQ-LQ2633 | 黑、浅灰、米白 | Black, Light Grey, Off-White | Schwarz, Hellgrau, Offwhite | Noir, gris clair, blanc cassé | Negro, gris claro, blanco roto |
 | BQ-LQ2667 | 黑 | Black | Schwarz | Noir | Negro |
 | BQ-MJ9968 | 灰、绿、蓝 | Grey, Green, Blue | Grau, Grün, Blau | Gris, vert, bleu | Gris, verde, azul |
 | BQ-NS003 | 黑白、灰、全黑、绿、玫红、紫、卡其 | Black/White, Grey, All Black, Green, Rose Red, Purple, Khaki | Schwarz/Weiß, Grau, ganz Schwarz, Grün, Rosenrot, Violett, Khaki | Noir/blanc, gris, noir intégral, vert, rose vif, violet, kaki | Negro/blanco, gris, negro integral, verde, rosa intenso, morado, caqui |
@@ -79,16 +80,16 @@
 
 </details>
 
-该批十条完整正式回执（含现已上线的 BQ1003）留本机 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`，文件以商品 ID 和 `20261111T0357…Z` 时间命名。已按每个 SKU 而非仅 SKU 数量检查色码组合、原身份和本地渠道映射；原始回执不推送公开仓库。
+该批十条完整正式回执（含现已上线的 BQ1003 和 BQ-LQ2633）留本机 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`，文件以商品 ID 和 `20261111T0357…Z` 时间命名。已按每个 SKU 而非仅 SKU 数量检查色码组合、原身份和本地渠道映射；原始回执不推送公开仓库。
 
 <details>
-<summary>九款逐图和版本问题</summary>
+<summary>八款逐图和版本问题</summary>
 
 负责人已确认搜鞋网商品图片可用于贝强独立站；下列原图仍须核对具体款式、配色、版本和可见标识。来源记录与哈希用于追溯，独立分发产品册的使用范围不在本次明确用途内：
 
-- BQ1005 的黑 `main_01.jpg`、棕 `detail_11.webp`、黑棕合图 `detail_03.webp` 位于 `02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/搜鞋替代候选/627_来源图/`；棕图有广告语，不能当作工艺事实或擅自擦除。
-- BQ1011 原图在 `01_产品资产/01_原始素材/2081_卡特_2026-11-03/`，白 `00.jpg`、米 `18.jpg`；鞋舌有文字，归属未核。BQ1013 原图在 `01_产品资产/01_原始素材/2269_仁里_2026-11-04/`，沙 `25.jpg`、酒红 `23.jpg`、黑 `27.jpg`；详情有模特，逐张选图须核人物画面、鞋款版本及明显标识。BQ1017 原图在 `01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/`，黑 `16.jpg`、黄 `20.jpg`、卡其 `03.jpg`、酒红 `24.jpg`；部分详情仅 480px。
-- BQ-LQ2633 正式颜色对应原图 `13.jpg`、`32.jpg`、`36.jpg` 均有手或腿；无人物原图 `01.jpg`、`22.jpg`、`23.jpg` 的颜色仍需逐张确认，其中 23 无色标。图 36 的涉水场景不证明防水。BQ-LQ2667 的无人主图原件虽保存在 `图片/2588-1/04.jpg`，其 URL 与 2667 供方主图一致，但仍需核对应版本。
+- BQ1005 可复用 `02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/搜鞋替代候选/627_来源图/` 的 `main_02.jpg` 黑、`main_03.jpg`／`main_04.jpg` 棕；本地 `main_05.jpg` 较小，同一图片 ID 的[公开高清原图](https://images.xiecdn.com/FSXY/sz9bug0iqhos0e6kjh1p1smik2go2her.jpg!bac)只读回读为 800×800、SHA256 `05048839697c2e49e3dc30661371d686617c317b246f41a3b5f294c0b3cc330c`，尚未保存。`main_01.jpg` 含设备序列号；不能混入旧款蓝／卡其配色。
+- BQ1011 原图在 `01_产品资产/01_原始素材/2081_卡特_2026-11-03/`，白 `00.jpg`、米 `18.jpg`；鞋舌有文字，归属未核。BQ1013 的同款图可从 `02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR013/.local/搜鞋替代候选/2269/` 复用 `11.jpg` 沙、`13.jpg` 酒红、`18.jpg`／`19.jpg` 黑；四图未发现人脸、明显第三方标识或设备序列号／GPS／联系方式字段。同目录 `23–28.jpg` 有 GPS、机主及设备序列号字段，避免直接公开；平台 `Label n (supplier size)` 不能自动换算成 EU。BQ1017 原图在 `01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/`，黑 `16.jpg`、黄 `20.jpg`、卡其 `03.jpg`、酒红 `24.jpg`；部分详情仅 480px。
+- BQ-LQ2667 的无人主图原件虽保存在 `图片/2588-1/04.jpg`，其 URL 与 2667 供方主图一致，但仍需核对应版本；来源另列普通及加绒内里，不能据平台单一黑色 SKU 推定具体版本。
 - BQ-MJ9968 三色同框原图为 `%USERPROFILE%/Documents/Codex/2026-10-02/task-7/MaryJane_selection/9968/published/03.jpg`；各色独图含人物腿部。BQ-NS003 的 Green、Rose Red、Purple 正式色图绑定历史 `05_AI候选` 处理稿，不能称作原拍；Pink 不能借用 Purple 图，需补各色可用原片。来源“飞织鞋面、MD 大底”与平台把 `Knitted textile (fiber unspecified)` 写在中底字段的记录不同，不由此推定中底材料。
 - BQ042 历史色图存在浅色原图“白色”与平台 Beige 的名称差异；旧修复记录显示黑白色处理图曾定点清除后跟星形标记，不能据此认定原鞋无标识，需核未改标识原片和当前来源。
 
@@ -100,25 +101,23 @@
 
 BQ032 / ZX2212 是一个产品身份，对应 `10000046653813`、`1601939722196`、`1601939751023`、`1601939651515` 四条历史链接；其中 Black／All Black 是同图的名称差异。2026-10-20 来源记 EVA 外底，2026-11-02 四条平台字段均记 Rubber 外底，主链接中底 EVA、其余三条中底 Rubber；材料和图片版本继续核，不把链接拆为四款或据旧字段覆盖现状。
 
-**已备待上站草稿：BQ034、BQ035、BQ039、BQ-LQ2598、BQ-LQ2588-1。** 三款 BQ 复用负责人 2026-11-02 确认的本厂商品身份；两款路崎商品复用已采用的 [2598 来源](https://luqi.sooxie.com/detail/2413165) 与 [2588-1 来源](https://luqi.sooxie.com/detail/2412409)。2026-11-11 03:49 UTC 官方 `product.get` 五条均为 `approved/Y`，色码分别为 33、18、22、30、27 个组合；这是当时平台配置，不等于现货承诺。工作台只读回读已匹配原产品和对应 ID，网站投影均为 `not_in_subset`；五款均未进入网站目录、询价或产品册。路崎两款的宽鞋头分类有[负责人分类事实确认](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/负责人分类事实确认.json)，并非从照片推断宽楦；合脚仍由样品确认。
+**已备待上站草稿：BQ034、BQ035、BQ039、BQ-LQ2588-1。** 三款 BQ 复用负责人 2026-11-02 确认的本厂商品身份；路崎款复用已采用的 [2588-1 来源](https://luqi.sooxie.com/detail/2412409)。2026-11-11 03:49 UTC 官方 `product.get` 四条均为 `approved/Y`，色码分别为 33、18、22、27 个组合；这是当时平台配置，不等于现货承诺。工作台当时已回读原产品和对应 ID，网站投影均为 `not_in_subset`；四款均未进入网站目录、询价或产品册。路崎款的宽鞋头分类有[负责人分类事实确认](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/负责人分类事实确认.json)，并非从照片推断宽楦；合脚仍由样品确认。
 
 | 产品及国际站 ID | 正式色码 | 资料边界 |
 | --- | --- | --- |
 | BQ034 / T5505 · `11000037600317` | 黑、灰、棕，各尺码标签 35–45 | 平台外底 EVA；平台内里 Mesh 与 2026-10-20 来源“无内里”不同，草稿不定论内里。 |
 | BQ035 / A001 · `10000046705043` | 灰、深蓝，各尺码标签 37–45 | 负责人于 2026-10-21 针对 A001 拖鞋类目确认鞋底 EVA；本次国际站中底、外底为 Rubber，原包曾记橡塑。保留两边记录，草稿暂不合并成唯一材料结论。 |
 | BQ039 / 155 · `1601924755368` | 黑、红，各尺码标签 35–45 | 负责人 2026-10-21 按实物确认鞋底 EVA、鞋面及靴筒无内里；平台写分段发泡外底和 Textile Lining。发泡与 EVA 不必然冲突，内里记录需区分；155 不与 A155 合款。 |
-| BQ-LQ2598 · `1601973831465` | Black、Khaki、White，各 EU 39–48 | 平台中底、外底、内里未指定；原图米白、浅棕与平台 White、Khaki 的对应需逐图核对。 |
 | BQ-LQ2588-1 · `1601973772709` | White、BlackWhite、AllBlack，各 EU 39–47 | 平台材料未指定；三色合图与单色图须逐色对应，不从照片猜材料。 |
 
 <details>
-<summary>五款五语标题与色码草稿（未上线）</summary>
+<summary>四款五语标题与色码草稿（未上线）</summary>
 
 | 型号 | 中文 | English | Deutsch | Français | Español |
 | --- | --- | --- | --- | --- | --- |
 | BQ034 | 针织套脚步行鞋，EVA 鞋底 | Knit Slip-On Walking Shoes with EVA Sole | Strick-Slipper mit EVA-Sohle | Chaussures en maille à enfiler, semelle EVA | Calzado de punto sin cordones con suela de EVA |
 | BQ035 | 针织包头半拖鞋 | Knit Closed-Toe Backless Mules | Geschlossene Mules aus Strick | Mules en maille à bout fermé | Mules de punto con puntera cerrada |
 | BQ039 | 弹力针织高帮套脚鞋，EVA 鞋底 | Stretch-Knit High-Top Slip-On Shoes with EVA Sole | Hohe Schlupfschuhe aus elastischem Strick mit EVA-Sohle | Chaussures montantes en maille extensible à enfiler, semelle EVA | Calzado alto de punto elástico sin cordones con suela de EVA |
-| BQ-LQ2598 | 宽鞋头网眼系带步行鞋 | Wide-Toe Mesh Lace-Up Walking Shoes | Schnür-Freizeitschuhe aus Mesh mit weiter Zehenbox | Chaussures de marche en maille à lacets et bout large | Calzado de malla con cordones y puntera ancha |
 | BQ-LQ2588-1 | 宽鞋头厚底系带休闲鞋 | Wide-Toe Chunky-Sole Lace-Up Shoes | Schnürschuhe mit weiter Zehenbox und markanter Sohle | Chaussures à lacets, bout large et semelle épaisse | Calzado con cordones, puntera ancha y suela gruesa |
 
 | 型号 | 中文色码 | English | Deutsch | Français | Español |
@@ -126,25 +125,23 @@ BQ032 / ZX2212 是一个产品身份，对应 `10000046653813`、`1601939722196`
 | BQ034 | 黑、灰、棕；尺码标签 35–45。 | Black, Grey, Brown; size labels 35–45. | Schwarz, Grau, Braun; Größenetiketten 35–45. | Noir, gris, marron ; pointures indiquées 35–45. | Negro, gris, marrón; tallas indicadas 35–45. |
 | BQ035 | 灰、深蓝；尺码 37–45。 | Grey, Deep Blue; size labels 37–45. | Grau, Dunkelblau; Größenetiketten 37–45. | Gris, bleu foncé ; pointures indiquées 37–45. | Gris, azul oscuro; tallas indicadas 37–45. |
 | BQ039 | 黑、红；尺码 35–45。 | Black, Red; size labels 35–45. | Schwarz, Rot; Größenetiketten 35–45. | Noir, rouge ; pointures indiquées 35–45. | Negro, rojo; tallas indicadas 35–45. |
-| BQ-LQ2598 | 黑、卡其、白；EU 39–48。 | Black, Khaki, White; EU 39–48. | Schwarz, Khaki, Weiß; EU 39–48. | Noir, kaki, blanc ; EU 39–48. | Negro, caqui, blanco; EU 39–48. |
 | BQ-LQ2588-1 | 白、黑白、全黑；EU 39–47。 | White, Black/White, All Black; EU 39–47. | Weiß, Schwarz/Weiß, ganz Schwarz; EU 39–47. | Blanc, noir/blanc, noir intégral ; EU 39–47. | Blanco, negro/blanco, negro integral; EU 39–47. |
 
 正式色名 `BlackWhite`、`AllBlack` 仅为阅读增加分隔，不把颜色或链接拆为新款。以上为编辑稿，供货、尺码及合脚按订单和样品确认。
 
 </details>
 
-五款原始正式回执保存在本地 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`。按上表顺序 SHA256 分别为 `f12efdf48a99ac78d33f3dc6399890f1d8684586b16eb97bdffa356edf0a6bf4`、`c4cf475aaed984700537d19c54b28d29b3a60985fc5ea022296d8ddbe4345f4d`、`d609ec2d9ff6bfe23a19bb9a0e4a30cc1d173642866255df44d1c81dd4b5ea6f`、`3664350f80e7afa27cb577e0a9ef6b5c2bfb9f6b5482d30411e0c5071af24cfe`、`cba99738baa498eae0c71f2bd87bc59ad87893cdd5d743e4016c0914161857ff`。
+原五款正式回执（含现已上线的 BQ-LQ2598）保存在本地 `02_开发记录/验收证据/.local/20261111_待补图正式回读/`。按原顺序 BQ034、BQ035、BQ039、BQ-LQ2598、BQ-LQ2588-1 的 SHA256 分别为 `f12efdf48a99ac78d33f3dc6399890f1d8684586b16eb97bdffa356edf0a6bf4`、`c4cf475aaed984700537d19c54b28d29b3a60985fc5ea022296d8ddbe4345f4d`、`d609ec2d9ff6bfe23a19bb9a0e4a30cc1d173642866255df44d1c81dd4b5ea6f`、`3664350f80e7afa27cb577e0a9ef6b5c2bfb9f6b5482d30411e0c5071af24cfe`、`cba99738baa498eae0c71f2bd87bc59ad87893cdd5d743e4016c0914161857ff`。
 
 <details>
-<summary>五款候选图片及下一步确认范围</summary>
+<summary>四款候选图片及下一步确认范围</summary>
 
-已核对下列 12 张图片字节与既有来源记录；负责人现已确认搜鞋网商品图可用于独立站，继续逐图核款式、颜色和版本。独立分发产品册及其他用途不由此次说明自动覆盖；有更清晰的同款原片可按实际版本替换候选。
+已核对下列 11 张图片字节与既有来源记录；负责人现已确认搜鞋网商品图可用于独立站，继续逐图核款式、颜色和版本。独立分发产品册及其他用途不由此次说明自动覆盖；有更清晰的同款原片可按实际版本替换候选。
 
 - BQ034：离线归档 `E:/贝强离线归档/产品旧档/历史制作资料/00_最终上传/BQ034_T5505/03_颜色图/` 的 `01_black.jpg`、`02_grey.jpg`、`03_brown.jpg`。
 - BQ035：同一离线归档下 `BQ035_A001/03_颜色图/` 的 `01_grey.jpg`、`02_deep_blue.jpg`。
 - BQ039：[成品素材目录](../01_产品资产/02_成品素材/BQ039/)的 `BQ039_474bb642b7e46370.png`、`BQ039_cd6faacd2805d240.png`。这两张为国内渠道既有裁切稿，来源是历史 155 原图 `18.webp`、`19.webp`，原图带宣传文字；不得把裁切或文字消失当作权属证明。
-- BQ-LQ2598：[原图目录](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2598/)的 `01.jpg`、`28.jpg`、`29.jpg`；后两张有中文色名，须核米白／White、浅棕／Khaki 对应。
-- BQ-LQ2588-1：[原图目录](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/)的 `26.jpg`、`27.jpg`；前者为带中文字的三色合图，后者为双色图，第三色独图仍待确认。
+- BQ-LQ2588-1：[原图目录](../02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2588-1/)可复用 `15.jpg`／`21.jpg` 黑白、`22.jpg` 白、`24.jpg` 全黑；四图未发现人脸、明显第三方标识或设备序列号／GPS／联系方式。`01.jpg` 含设备序列号，`02–06.jpg` 为其他款推荐，`26.jpg`／`27.jpg` 为多色拼图，不能当作单色图。
 
 </details>
 

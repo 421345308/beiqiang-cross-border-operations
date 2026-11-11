@@ -1,0 +1,999 @@
+{
+  "recorded_at_utc": "2026-11-11T10:07:48+00:00",
+  "website_commit": "9778cb46d32f5e875d6201ac18bc2ad60c8b9ff0",
+  "edgeone_deployment": {
+    "id": "dpiu1xkfardz",
+    "status": "Success",
+    "completed_at_utc": "2026-11-11T10:03:56Z",
+    "log_commit": "9778cb4"
+  },
+  "release": {
+    "releaseId": "2026-11-11.9",
+    "releasedAt": "2026-11-11T09:45:32+00:00",
+    "productCount": 160,
+    "publicLanguages": [
+      "en",
+      "zh",
+      "de",
+      "fr",
+      "es"
+    ],
+    "lineSheetProductCount": 160,
+    "lineSheetPages": 34,
+    "factoryVideo": {
+      "durationSeconds": 180,
+      "narrationLanguages": [
+        "en"
+      ],
+      "captionLanguages": [
+        "en",
+        "zh"
+      ],
+      "stillCount": 9
+    },
+    "publicOrigin": "https://www.beiqiang.online"
+  },
+  "product_pages": [
+    {
+      "path": "/products/bq1021/",
+      "locale": "en",
+      "code": "BQ1021",
+      "status": 200,
+      "html_lang": "en",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/double-strap-mary-jane-casual-shoes_1601943593293.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/zh/products/bq1021/",
+      "locale": "zh",
+      "code": "BQ1021",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/double-strap-mary-jane-casual-shoes_1601943593293.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/de/products/bq1021/",
+      "locale": "de",
+      "code": "BQ1021",
+      "status": 200,
+      "html_lang": "de",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/de/request-quote/",
+        "/de/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/fr/products/bq1021/",
+      "locale": "fr",
+      "code": "BQ1021",
+      "status": 200,
+      "html_lang": "fr",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/fr/request-quote/",
+        "/fr/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/es/products/bq1021/",
+      "locale": "es",
+      "code": "BQ1021",
+      "status": 200,
+      "html_lang": "es",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/es/request-quote/",
+        "/es/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/products/bq-lq2633/",
+      "locale": "en",
+      "code": "BQ-LQ2633",
+      "status": 200,
+      "html_lang": "en",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/wide-toe-box-mesh-shoes-with-toggle-cord_1601973753470.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/zh/products/bq-lq2633/",
+      "locale": "zh",
+      "code": "BQ-LQ2633",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/wide-toe-box-mesh-shoes-with-toggle-cord_1601973753470.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/de/products/bq-lq2633/",
+      "locale": "de",
+      "code": "BQ-LQ2633",
+      "status": 200,
+      "html_lang": "de",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/de/request-quote/",
+        "/de/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/fr/products/bq-lq2633/",
+      "locale": "fr",
+      "code": "BQ-LQ2633",
+      "status": 200,
+      "html_lang": "fr",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/fr/request-quote/",
+        "/fr/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/es/products/bq-lq2633/",
+      "locale": "es",
+      "code": "BQ-LQ2633",
+      "status": 200,
+      "html_lang": "es",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/es/request-quote/",
+        "/es/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/products/bq-lq2598/",
+      "locale": "en",
+      "code": "BQ-LQ2598",
+      "status": 200,
+      "html_lang": "en",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/wide-toe-box-mesh-lace-up-shoes-with-side-panels_1601973831465.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/zh/products/bq-lq2598/",
+      "locale": "zh",
+      "code": "BQ-LQ2598",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [
+        "https://www.alibaba.com/product-detail/wide-toe-box-mesh-lace-up-shoes-with-side-panels_1601973831465.html"
+      ],
+      "localized_quote_links": [],
+      "ok": true
+    },
+    {
+      "path": "/de/products/bq-lq2598/",
+      "locale": "de",
+      "code": "BQ-LQ2598",
+      "status": 200,
+      "html_lang": "de",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/de/request-quote/",
+        "/de/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/fr/products/bq-lq2598/",
+      "locale": "fr",
+      "code": "BQ-LQ2598",
+      "status": 200,
+      "html_lang": "fr",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/fr/request-quote/",
+        "/fr/request-quote/"
+      ],
+      "ok": true
+    },
+    {
+      "path": "/es/products/bq-lq2598/",
+      "locale": "es",
+      "code": "BQ-LQ2598",
+      "status": 200,
+      "html_lang": "es",
+      "visible_name": true,
+      "visible_code": true,
+      "visible_size": true,
+      "visible_colors": true,
+      "visible_closure": true,
+      "alibaba_links": [],
+      "localized_quote_links": [
+        "/es/request-quote/",
+        "/es/request-quote/"
+      ],
+      "ok": true
+    }
+  ],
+  "web_images": [
+    {
+      "path": "/catalog-web/bq1021/01_main.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 27250,
+      "sha256": "6ec5f4625804afab75be6336f31bfdd0b5e89e48c8a2e4d8fcbd5319197b0177",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq1021/02_black.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 23736,
+      "sha256": "cb4bc97bd0f95c15481f1f619477660ffb319129de714038fa7a81bcb51b4f6e",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq1021/03_beige_top.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 34706,
+      "sha256": "8416c15f00bb59f0f15bfc7bc57201b07209df819024cee68d47bf3e9cda27b2",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq1021/04_black_onfoot.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 24534,
+      "sha256": "14ce017ab1812e702d68a30e41bc4b91a2c5e8bcd7dd2a20a22166f7709116f0",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2633/01_main.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 70596,
+      "sha256": "74b39fbecc7d12b95a97fe5f94396771a1410db9719a54a172515e35c6561d09",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2633/02_black.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 59410,
+      "sha256": "8505e6576ce10ac2150d24287364661f18f989abc0400b10ace55e5130ef4f23",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2633/03_light_grey.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 72650,
+      "sha256": "d85e0a6a31ee33242716c5970e4261df9286b75c4faddc58940a3250a89aec11",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2633/04_offwhite_side.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 39792,
+      "sha256": "1ab94b34999b6ca1a102a72870f7f1e534575c482dda2de01a6cea85b6018e48",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2598/01_main.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 115720,
+      "sha256": "220b21752ab63021a1013bd30441f0a518a1793995278b28a0e5ba77ac90513a",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2598/02_black.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 118212,
+      "sha256": "570469f7b9713857f0514e10b0dc615d80316c65105087db986a4daa3672ed1a",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2598/03_khaki.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 92008,
+      "sha256": "f17128c57724c5752b5a91a94732509d2dc09a0b261ea770e516f89a96429a20",
+      "matches_committed": true,
+      "ok": true
+    },
+    {
+      "path": "/catalog-web/bq-lq2598/04_white_side.webp",
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 69540,
+      "sha256": "d49858858192b01c3866fd2f0fdbc1b85c553493fdce24e255090f619344fcbe",
+      "matches_committed": true,
+      "ok": true
+    }
+  ],
+  "catalogue_quote_collection_pdf": [
+    {
+      "type": "catalogue_page",
+      "locale": "en",
+      "path": "/line-sheet/",
+      "status": 200,
+      "html_lang": "en",
+      "download_link": true,
+      "product_count_present": true,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "zh",
+      "path": "/zh/line-sheet/",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "download_link": true,
+      "product_count_present": true,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "de",
+      "path": "/de/line-sheet/",
+      "status": 200,
+      "html_lang": "de",
+      "download_link": true,
+      "product_count_present": true,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "fr",
+      "path": "/fr/line-sheet/",
+      "status": 200,
+      "html_lang": "fr",
+      "download_link": true,
+      "product_count_present": true,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "catalogue_page",
+      "locale": "es",
+      "path": "/es/line-sheet/",
+      "status": 200,
+      "html_lang": "es",
+      "download_link": true,
+      "product_count_present": true,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "en",
+      "path": "/request-quote/",
+      "status": 200,
+      "html_lang": "en",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "zh",
+      "path": "/zh/request-quote/",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "de",
+      "path": "/de/request-quote/",
+      "status": 200,
+      "html_lang": "de",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "fr",
+      "path": "/fr/request-quote/",
+      "status": 200,
+      "html_lang": "fr",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "quote_page",
+      "locale": "es",
+      "path": "/es/request-quote/",
+      "status": 200,
+      "html_lang": "es",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": null,
+      "direct_quote": null,
+      "unsupported_program_absent": null,
+      "ok": true
+    },
+    {
+      "type": "mary_jane_collection",
+      "locale": "en",
+      "path": "/collections/mary-jane-shoes/",
+      "status": 200,
+      "html_lang": "en",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": true,
+      "direct_quote": true,
+      "unsupported_program_absent": true,
+      "ok": true
+    },
+    {
+      "type": "mary_jane_collection",
+      "locale": "zh",
+      "path": "/zh/collections/mary-jane-shoes/",
+      "status": 200,
+      "html_lang": "zh-CN",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": true,
+      "direct_quote": true,
+      "unsupported_program_absent": true,
+      "ok": true
+    },
+    {
+      "type": "mary_jane_collection",
+      "locale": "de",
+      "path": "/de/collections/mary-jane-shoes/",
+      "status": 200,
+      "html_lang": "de",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": true,
+      "direct_quote": true,
+      "unsupported_program_absent": true,
+      "ok": true
+    },
+    {
+      "type": "mary_jane_collection",
+      "locale": "fr",
+      "path": "/fr/collections/mary-jane-shoes/",
+      "status": 200,
+      "html_lang": "fr",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": true,
+      "direct_quote": true,
+      "unsupported_program_absent": true,
+      "ok": true
+    },
+    {
+      "type": "mary_jane_collection",
+      "locale": "es",
+      "path": "/es/collections/mary-jane-shoes/",
+      "status": 200,
+      "html_lang": "es",
+      "download_link": null,
+      "product_count_present": null,
+      "product_present": true,
+      "direct_quote": true,
+      "unsupported_program_absent": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "en",
+      "path": "/downloads/beiqiang-footwear-line-sheet-2026.pdf?v=2026-11-11.9",
+      "status": 200,
+      "bytes": 2030290,
+      "sha256": "6eef427d8d2b468e6d4b8935d204f8674041446294b97e30f9f3f67c166002d0",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "zh",
+      "path": "/downloads/beiqiang-footwear-line-sheet-zh-2026.pdf?v=2026-11-11.9",
+      "status": 200,
+      "bytes": 2094363,
+      "sha256": "52548190511231bc78029a8e20802d790774da59b0d691df4015bb8f85036486",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "de",
+      "path": "/downloads/beiqiang-footwear-line-sheet-de-2026.pdf?v=2026-11-11.9",
+      "status": 200,
+      "bytes": 1945457,
+      "sha256": "295295c8ddc5c5fc36abc0515d3fd1c62843bd3c4714ba0941754925d65f0a38",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "fr",
+      "path": "/downloads/beiqiang-footwear-line-sheet-fr-2026.pdf?v=2026-11-11.9",
+      "status": 200,
+      "bytes": 1944970,
+      "sha256": "134a335860fd990c8459addb9ca86bbe3a5be16645a67cc43ed4abcef00c9849",
+      "matches_validated_pdf": true,
+      "ok": true
+    },
+    {
+      "type": "pdf",
+      "locale": "es",
+      "path": "/downloads/beiqiang-footwear-line-sheet-es-2026.pdf?v=2026-11-11.9",
+      "status": 200,
+      "bytes": 1944444,
+      "sha256": "f760296f695a9616ffcab099afe81ceb360d76548c770c24e445965ec66c4186",
+      "matches_validated_pdf": true,
+      "ok": true
+    }
+  ],
+  "local_workbench": [
+    {
+      "product_id": "HR021",
+      "current_model": "BQ1021",
+      "website": {
+        "state": "matched",
+        "url": "https://www.beiqiang.online/products/bq1021/",
+        "source": "03_独立站/03_网站源码/public/llms.txt"
+      },
+      "channel_listing_ids": [
+        "1601943593293",
+        "1601943584343",
+        "1601943577329"
+      ],
+      "ok": true,
+      "all_three_listing_ids_present": true
+    },
+    {
+      "product_id": "BQ-LQ2633",
+      "current_model": "BQ-LQ2633",
+      "website": {
+        "state": "matched",
+        "url": "https://www.beiqiang.online/products/bq-lq2633/",
+        "source": "03_独立站/03_网站源码/public/llms.txt"
+      },
+      "channel_listing_ids": [
+        "1601973753470"
+      ],
+      "ok": true
+    },
+    {
+      "product_id": "BQ-LQ2598",
+      "current_model": "BQ-LQ2598",
+      "website": {
+        "state": "matched",
+        "url": "https://www.beiqiang.online/products/bq-lq2598/",
+        "source": "03_独立站/03_网站源码/public/llms.txt"
+      },
+      "channel_listing_ids": [
+        "1601973831465"
+      ],
+      "ok": true
+    }
+  ],
+  "local_pdf_verification": {
+    "catalogueProducts": 160,
+    "languages": {
+      "en": {
+        "pages": 34,
+        "distinct_products": 160,
+        "code_links_ok": 160,
+        "sha256": "6eef427d8d2b468e6d4b8935d204f8674041446294b97e30f9f3f67c166002d0",
+        "new_products": {
+          "BQ1021": {
+            "page": 33,
+            "source": "/catalog/bq1021/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.194453125,
+            "text_ok": true
+          },
+          "BQ-LQ2633": {
+            "page": 33,
+            "source": "/catalog/bq-lq2633/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2225,
+            "text_ok": true
+          },
+          "BQ-LQ2598": {
+            "page": 33,
+            "source": "/catalog/bq-lq2598/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.6213692946058091,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "zh": {
+        "pages": 34,
+        "distinct_products": 160,
+        "code_links_ok": 160,
+        "sha256": "52548190511231bc78029a8e20802d790774da59b0d691df4015bb8f85036486",
+        "new_products": {
+          "BQ1021": {
+            "page": 33,
+            "source": "/catalog/bq1021/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.194453125,
+            "text_ok": true
+          },
+          "BQ-LQ2633": {
+            "page": 33,
+            "source": "/catalog/bq-lq2633/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2225,
+            "text_ok": true
+          },
+          "BQ-LQ2598": {
+            "page": 33,
+            "source": "/catalog/bq-lq2598/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.6213692946058091,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "de": {
+        "pages": 42,
+        "distinct_products": 160,
+        "code_links_ok": 160,
+        "sha256": "295295c8ddc5c5fc36abc0515d3fd1c62843bd3c4714ba0941754925d65f0a38",
+        "new_products": {
+          "BQ1021": {
+            "page": 41,
+            "source": "/catalog/bq1021/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.194453125,
+            "text_ok": true
+          },
+          "BQ-LQ2633": {
+            "page": 41,
+            "source": "/catalog/bq-lq2633/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2225,
+            "text_ok": true
+          },
+          "BQ-LQ2598": {
+            "page": 41,
+            "source": "/catalog/bq-lq2598/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.6213692946058091,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "fr": {
+        "pages": 42,
+        "distinct_products": 160,
+        "code_links_ok": 160,
+        "sha256": "134a335860fd990c8459addb9ca86bbe3a5be16645a67cc43ed4abcef00c9849",
+        "new_products": {
+          "BQ1021": {
+            "page": 41,
+            "source": "/catalog/bq1021/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.194453125,
+            "text_ok": true
+          },
+          "BQ-LQ2633": {
+            "page": 41,
+            "source": "/catalog/bq-lq2633/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2225,
+            "text_ok": true
+          },
+          "BQ-LQ2598": {
+            "page": 41,
+            "source": "/catalog/bq-lq2598/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.6213692946058091,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "es": {
+        "pages": 42,
+        "distinct_products": 160,
+        "code_links_ok": 160,
+        "sha256": "f760296f695a9616ffcab099afe81ceb360d76548c770c24e445965ec66c4186",
+        "new_products": {
+          "BQ1021": {
+            "page": 41,
+            "source": "/catalog/bq1021/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.194453125,
+            "text_ok": true
+          },
+          "BQ-LQ2633": {
+            "page": 41,
+            "source": "/catalog/bq-lq2633/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.2225,
+            "text_ok": true
+          },
+          "BQ-LQ2598": {
+            "page": 41,
+            "source": "/catalog/bq-lq2598/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.6213692946058091,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      }
+    },
+    "issues": [],
+    "all_passed": true
+  },
+  "tested_static_product_routes": 800,
+  "static_product_routes_missing": 0,
+  "multilingual_link_scope": "English and Chinese product pages link to the selected Alibaba product. German, French and Spanish pages provide the existing localized inquiry link.",
+  "all_passed": true,
+  "production_browser": {
+    "checkedAt": "2026-11-11T10:05:32.023Z",
+    "target": "production domain",
+    "blockedNonGetRequests": true,
+    "colorChecks": [
+      {
+        "code": "BQ1021",
+        "color": "Beige",
+        "image": "01_main.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1021",
+        "color": "Black",
+        "image": "02_black.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2633",
+        "color": "Off White",
+        "image": "01_main.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2633",
+        "color": "Black",
+        "image": "02_black.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2633",
+        "color": "Light Grey",
+        "image": "03_light_grey.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2598",
+        "color": "White",
+        "image": "01_main.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2598",
+        "color": "Black",
+        "image": "02_black.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ-LQ2598",
+        "color": "Khaki",
+        "image": "03_khaki.webp",
+        "matches": true
+      }
+    ],
+    "quoteListProducts": [
+      "BQ1021",
+      "BQ-LQ2633",
+      "BQ-LQ2598"
+    ],
+    "quotePage": true,
+    "filterChecks": [
+      {
+        "locale": "en",
+        "closure": "Hook & Loop",
+        "code": "BQ1021",
+        "found": true
+      },
+      {
+        "locale": "en",
+        "closure": "Toggle",
+        "code": "BQ-LQ2633",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "closure": "Hook & Loop",
+        "code": "BQ1021",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "closure": "Toggle",
+        "code": "BQ-LQ2633",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "closure": "Hook & Loop",
+        "code": "BQ1021",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "closure": "Toggle",
+        "code": "BQ-LQ2633",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "closure": "Hook & Loop",
+        "code": "BQ1021",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "closure": "Toggle",
+        "code": "BQ-LQ2633",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "closure": "Hook & Loop",
+        "code": "BQ1021",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "closure": "Toggle",
+        "code": "BQ-LQ2633",
+        "found": true
+      }
+    ],
+    "allPassed": true
+  },
+  "validation": {
+    "automated_tests_passed": 572,
+    "automated_tests_skipped": 8,
+    "lint_errors": 0,
+    "preexisting_image_warnings": 9,
+    "pdf_card_pages_visually_inspected": 15,
+    "corrected_chinese_buyer_label_visually_rechecked": true,
+    "source_image_count": 12,
+    "inquiry_sent": false,
+    "finder_mens_filter_issue_discovered_after_release": "BQ1021 was incorrectly matched by mens direction; separate correction in progress."
+  }
+}
