@@ -18,6 +18,26 @@ def fixture():
         'workstreams':[]}
 
 class SourceIdentity(unittest.TestCase):
+    def test_query_view_labels_registered_receipt_and_old_preparation_separately(self):
+        from unittest.mock import patch
+        data=fixture();pid=data['listings'][0]['id']
+        data['products'][0]['local_assets']={'current_fields_file':'old.json'}
+        data['listings'][0]['formal_fields']={'file':'new.json','at':'2026-11-11T03:33:49Z'}
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            (root/'old.json').write_text(json.dumps({'requested_product_id':pid,'response':{'product':{'product_id':pid}}}),encoding='utf-8')
+            (root/'new.json').write_text(json.dumps({'product':{'product_id':pid}}),encoding='utf-8')
+            with patch('build_product_workspace.ROOT',root), patch('product_dossiers.ROOT',root):
+                query=build(data)[QUERY].decode()
+                self.assertIn('已登记正式回读',query)
+                self.assertIn('new.json',query)
+                self.assertIn('产品级历史或准备资料（非当前平台字段）',query)
+                self.assertIn('old.json',query)
+                second=copy.deepcopy(data['listings'][0]);second['id']='1600000000002';data['listings'].append(second)
+                ambiguous=build(data)[QUERY].decode()
+                self.assertIn('multiple_listings',ambiguous)
+                self.assertNotIn('已登记正式回读',ambiguous)
+
     def test_candidate_never_exports_as_formally_adopted(self):
         data=fixture()
         self.assertEqual(validate(data),[])

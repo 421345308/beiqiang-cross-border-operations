@@ -97,6 +97,41 @@ class RuntimeTests(unittest.TestCase):
                     "dialogue": [{"speaker": "actor", "text": "诶，穿着挺舒服。", "mode": "现场"}]}],
                 "production_checks": {k: "Explicit fixture check" for k in ("acting", "motion", "props", "audio", "continuity")}}
 
+    def test_formal_reference_requires_channel_and_unique_listing(self):
+        module = "08_工具链/06_工作区维护/product_registry.py"
+        target = self.root / module; target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / module, target)
+        self.ledger["products"][0]["local_assets"] = {"current_fields_file": "old.json"}
+        self.ledger["listings"][0]["formal_fields"] = {"file": "new.json", "at": "2026-11-11T03:33:49Z"}
+        self.ledger["listings"][0]["local_sync"] = {"current_fields_file":"old.json"}
+        self.write_json(LEDGER, self.ledger)
+        self.write_json("old.json", {"requested_product_id":"1600000000001","response":{"product":{"product_id":"1600000000001"}}})
+        self.write_json("new.json", {"product":{"product_id":"1600000000001"}})
+        unscoped = self.engine.ws.inspect_product("TEST001")
+        self.assertEqual(unscoped["platform_formal_fields"]["reason"], "channel_not_selected_or_unsupported")
+        self.assertNotIn("old.json", unscoped["references"])
+        self.assertEqual(unscoped["historical_or_preparation_paths"], ["old.json"])
+        scoped = self.engine.ws.inspect_product("TEST001", channel="alibaba")
+        self.assertEqual(scoped["platform_formal_fields"]["file"], "new.json")
+        self.assertIn("new.json", scoped["references"])
+        self.assertNotIn("old.json", scoped["references"])
+        self.assertNotIn("current_fields_file", scoped["product"]["local_assets"])
+        self.assertNotIn("current_fields_file", scoped["listings"][0]["local_sync"])
+        self.assertEqual(scoped["listings"][0]["local_sync"]["unverified_field_file"],"old.json")
+        self.ledger["listings"].append({"id":"1600000000003","product_id":"TEST001","formal_fields":{"file":"new.json"}})
+        self.write_json(LEDGER,self.ledger)
+        ambiguous=self.engine.ws.inspect_product("TEST001",channel="alibaba")
+        self.assertEqual(ambiguous["platform_formal_fields"]["reason"],"multiple_listings")
+        self.assertNotIn("new.json",ambiguous["references"])
+        selected=self.engine.ws.inspect_product("TEST001","1600000000001",channel="alibaba")
+        self.assertEqual(selected["platform_formal_fields"]["file"],"new.json")
+        self.write_json(LEDGER,{"updated_on":"2026-11-11","products":self.ledger["products"]})
+        self.write_json("00_总控台/产品中心/数据/供应来源.json",{"sources":[]})
+        self.write_json("02_Alibaba运营/05_扩品工程/数据/国际站商品.json",{"listings":self.ledger["listings"]})
+        split=self.engine.ws.inspect_product("TEST001","1600000000001",channel="alibaba")
+        self.assertEqual(split["platform_formal_fields"]["file"],"new.json")
+        self.assertEqual(split["platform_formal_fields"]["channel"],"alibaba")
+
     def test_alias_and_multi_listing_identity_do_not_change_source_status(self):
         product = self.engine.ws.inspect_product("TEST_ALIAS")
         self.assertEqual(product["canonical_sku"], "TEST001")

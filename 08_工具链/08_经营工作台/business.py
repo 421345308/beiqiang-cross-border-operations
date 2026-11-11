@@ -2,6 +2,7 @@
 from __future__ import annotations
 import csv
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -12,6 +13,11 @@ from urllib.parse import urlencode,urlsplit
 from uuid import uuid4
 from website_inquiries import WebsiteInquiries,URL as WEBSITE_URL
 from connectors.alibaba.customer_source import AlibabaCustomerSource
+
+_registry_spec=importlib.util.spec_from_file_location('business_product_registry',Path(__file__).resolve().parents[1]/'06_工作区维护/product_registry.py')
+_registry_module=importlib.util.module_from_spec(_registry_spec)
+_registry_spec.loader.exec_module(_registry_module)
+resolve_formal_fields=_registry_module.resolve_formal_fields
 
 PRODUCTS='00_总控台/产品中心/数据/产品.json'
 SUPPLY='00_总控台/产品中心/数据/供应来源.json'
@@ -94,7 +100,8 @@ class Business:
         for asset in assets:
             for pid in asset.get('products',[]):asset_map.setdefault(pid,[]).append(asset)
         channel_map={}
-        for row in self._json(CHANNEL,'listings'):channel_map.setdefault(row.get('product_id'),[]).append(row)
+        all_channel_listings=self._json(CHANNEL,'listings')
+        for row in all_channel_listings:channel_map.setdefault(row.get('product_id'),[]).append(row)
         douyin_map={}
         for row in self._json(DOUYIN_CHANNEL,'listings'):
             pid=row.get('product_id')
@@ -120,7 +127,7 @@ class Business:
             adopted=bool(product.get('adopted_source_id'))
             source=sources.get(product.get('adopted_source_id') or product.get('reference_source_id'),{})
             state_label=SOURCE_STATES.get(product.get('source_state'),product.get('source_state') or '尚未记录')
-            first=listings[0] if listings else {};fields=first.get('current_platform_fields') or {}
+            first=listings[0] if len(listings)==1 else {};fields=first.get('current_platform_fields') or {}
             title=fields.get('title') or (first.get('catalog_fields') or {}).get('title') or ''
             historical_only=bool(re.fullmatch(r'HR[-_]?\d+',pid,re.I) and not product.get('current_model'))
             display_model=product.get('current_model') or (f'历史档案 · {pid}' if historical_only else pid)
@@ -197,7 +204,10 @@ class Business:
             evidence=[p for p in product.get('evidence',[]) if isinstance(p,str)]
             evidence.sort(key=lambda p:(bool(re.search(r'receipt|verification|after_get|after_render|update_once',p,re.I)),not bool(re.search(r'facts|事实|原包|规格|计划|copy',p,re.I))))
             local=product.get('local_assets') or {}
-            selected=[p for p in [local.get('current_fields_file'),local.get('current_buyer_copy'),local.get('current_assortment')]+evidence if isinstance(p,str)]
+            formal=resolve_formal_fields(self.root,pid,all_channel_listings,channel='alibaba')
+            legacy=local.get('current_fields_file')
+            historical=[legacy] if isinstance(legacy,str) and legacy!=formal.get('file') else []
+            selected=[p for p in [formal.get('file'),local.get('current_buyer_copy'),local.get('current_assortment')]+evidence if isinstance(p,str) and p not in historical]
             selected=list(dict.fromkeys(selected))[:8]
             core={k:product[k] for k in ('id','current_model','aliases','source_state','raw_packages','notes','supply_mode','publication_disposition') if k in product}
             core['source_state_label']=state_label;core['classification']=classification;core['existing_specifications']=specifications
@@ -216,8 +226,9 @@ class Business:
                      'url':f'https://www.beiqiang.online/products/{matches[0][1]}/' if matched else '', 'source':website_source}
             obj['other_channels']={'douyin':{'source_available':douyin_file.is_file(),'listings':douyin},'website':website}
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
-                'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,'other_channels':obj['other_channels'],
-                'full_index':PRODUCTS,'boundary':'标题/用途候选不是材料、功能、自有工厂或供货承诺的证明。完整回执按原档路径查阅。'},ensure_ascii=False,indent=2)
+                'supply_source':source_core,'selected_evidence_paths':selected,'alibaba_formal_fields':formal,
+                'historical_or_preparation_paths':historical,'channel_listings':channel_core,'other_channels':obj['other_channels'],
+                'full_index':PRODUCTS,'boundary':'channel_listings.current是本地记录投影；平台正式字段按alibaba_formal_fields及逐ID回读核对。标题/用途候选不是材料、功能、自有工厂或供货承诺的证明。'},ensure_ascii=False,indent=2)
             result.append(obj)
         return result
 

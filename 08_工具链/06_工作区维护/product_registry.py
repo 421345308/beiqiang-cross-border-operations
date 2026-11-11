@@ -10,7 +10,7 @@ import copy
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import tempfile
 import time
 from contextlib import contextmanager
@@ -20,6 +20,67 @@ SUPPLY = Path('00_总控台/产品中心/数据/供应来源.json')
 ALIBABA = Path('02_Alibaba运营/05_扩品工程/数据/国际站商品.json')
 CHANNEL_FIELDS = ('next_action', 'dossier_path', 'content_quality_revision', 'replacement_progress')
 CHANNEL_CLASSIFICATION = ('platform_category_ids', 'store_groups')
+
+
+def resolve_formal_fields(root, product_id, listings, *, channel=None, listing_id=None):
+    """Resolve only a registered Alibaba receipt for an unambiguous listing.
+
+    Product-level local assets remain source/preparation evidence; they cannot
+    select a channel or replace a missing registered receipt.
+    """
+    result = {'state': 'unknown', 'channel': channel, 'listing_id': None,
+              'file': None, 'observed_at': None, 'reason': None}
+    def unknown(reason):
+        result['reason'] = reason
+        return result
+    if channel != 'alibaba':
+        return unknown('channel_not_selected_or_unsupported')
+    if not isinstance(product_id, str) or not product_id:
+        return unknown('product_identity_unknown')
+    rows = [row for row in listings if isinstance(row, dict)]
+    if listing_id is not None:
+        matches = [row for row in rows if str(row.get('id', '')) == str(listing_id)]
+        if len(matches) != 1 or matches[0].get('product_id') != product_id:
+            return unknown('listing_identity_unknown')
+    else:
+        matches = [row for row in rows if row.get('product_id') == product_id]
+        if len(matches) != 1:
+            return unknown('listing_missing' if not matches else 'multiple_listings')
+    listing = matches[0]
+    selected_id = str(listing.get('id') or '')
+    if not selected_id or sum(str(row.get('id') or '') == selected_id for row in rows) != 1:
+        return unknown('listing_identity_unknown')
+    result['listing_id'] = selected_id
+    registered = listing.get('formal_fields') or {}
+    value = registered.get('file') if isinstance(registered, dict) else None
+    if not isinstance(value, str) or not value.strip():
+        return unknown('formal_receipt_not_registered')
+    relative = Path(value.replace('\\', '/'))
+    if relative.is_absolute() or PureWindowsPath(value).drive or '..' in relative.parts:
+        return unknown('unsafe_receipt_path')
+    root = Path(root).resolve()
+    path = (root / relative).resolve()
+    if not path.is_relative_to(root):
+        return unknown('unsafe_receipt_path')
+    try:
+        snap = json.loads(path.read_text(encoding='utf-8-sig'))
+        if not isinstance(snap, dict):
+            return unknown('invalid_formal_receipt')
+        response = snap.get('response') or {}
+        actual = (response.get('product') if isinstance(response, dict) else None) or snap.get('product')
+        if not isinstance(actual, dict) or not actual:
+            return unknown('invalid_formal_receipt')
+        requested = snap.get('requested_product_id')
+        returned = str(actual.get('product_id') or '')
+        if requested is None and not returned:
+            return unknown('receipt_identity_unknown')
+        if (requested is not None and str(requested) != selected_id) or (returned.isdigit() and returned != selected_id):
+            return unknown('receipt_listing_mismatch')
+    except (OSError, UnicodeError, ValueError):
+        return unknown('formal_receipt_unavailable')
+    result.update(state='recorded', file=value, reason=None,
+                  observed_at=snap.get('observed_at_utc') or snap.get('observed_at') or registered.get('at'))
+    return result
 
 
 def split(data):

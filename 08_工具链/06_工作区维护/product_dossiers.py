@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import quote, urlsplit
 import re
 from product_asset_store import ALIASES, read, resolve_legacy_asset
+from product_registry import resolve_formal_fields
 
 ROOT = Path(__file__).resolve().parents[2]
 DETAILS = Path('02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品')
@@ -24,15 +25,17 @@ def official_image_key(url):
     return re.sub(r'\.(?:jpe?g|png|webp|gif)$', '', match.group(1), flags=re.I)
 
 
-def formal_snapshot(listing):
-    """A registered receipt is authoritative; missing it never revives an older shoe."""
+def formal_snapshot(listing, listings=None):
+    """Only the explicitly registered per-listing receipt is a current reference."""
     registered = listing.get('formal_fields') or {}
-    path = Path(registered['file']) if registered.get('file') else DETAILS / listing['id'] / 'formal_get.json'
-    if not (ROOT / path).is_file():
+    path = Path(registered['file']) if registered.get('file') else None
+    resolved = resolve_formal_fields(ROOT, listing.get('product_id'), listings if listings is not None else [listing],
+                                     channel='alibaba', listing_id=listing.get('id'))
+    if resolved['state'] != 'recorded':
         return path, None, None
     snap = read(ROOT / path)
     actual = (snap.get('response') or {}).get('product') or snap.get('product')
-    return path, actual, snap.get('observed_at_utc') or snap.get('observed_at') or registered.get('at')
+    return path, actual, resolved['observed_at']
 
 
 def indexed_image(url, product, index):
@@ -84,7 +87,7 @@ def builds(data):
             for path in route.get('evidence',[]):lines.append('- 供货分类依据：'+ref(path,parent))
         assets = product.get('local_assets', {})
         current = assets.get('current_fields_file')
-        lines += [f"- 本地事实/准备字段：{ref(current,parent)}" if current else '- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。']
+        lines += [f"- 产品级资料（可能为历史或准备文件；平台正式字段见下方逐ID回读）：{ref(current,parent)}" if current else '- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。']
         for path in assets.get('asset_roots', []):
             lines.append(f'- 当前素材目录：{ref(path,parent,Path(path).name)}')
         if assets.get('current_gallery_by_id'):
@@ -126,7 +129,7 @@ def builds(data):
         lines += ['', '## 国际站链接与本地正式字段', '']
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
-            path, actual, observed_at = formal_snapshot(listing)
+            path, actual, observed_at = formal_snapshot(listing, data['listings'])
             prior=(product.get('replacement_progress') or {}).get('state')=='IN_REVIEW'
             model_label=('历史编号 · ' if re.fullmatch(r'HR[-_]?\d+(?:-[A-Z]+)?',listing['model'],re.I) else '')+listing['model']
             lines += [f"### {model_label} · {pid}", '', f"- 平台链接：[{pid}]({listing['url']})" if listing.get('url') else '- 平台直链：待补']
@@ -155,7 +158,7 @@ def builds(data):
                     lines.append('- 当前正式回读未返回主图；不继承旧图库。')
             else:
                 if listing.get('formal_fields', {}).get('file'):
-                    lines.append(f"- 已登记的正式回读缺失或无商品字段：{ref(path,parent,'登记的回读')}；不回退旧字段。")
+                    lines.append(f"- 已登记的正式回读不可用或归属未核：{ref(path,parent,'登记的回读')}；不回退旧字段。")
                 else:
                     lines.append('- 当前完整正式回读：待补；历史ID未检出不自动判定删除。')
             presence=listing.get('observation',{}).get('current_presence')
@@ -194,12 +197,12 @@ def sync_formal_references(data):
     for listing in data['listings']:
         path = DETAILS / listing['id'] / 'formal_get.json'
         registered = (listing.get('formal_fields') or {}).get('file')
-        if registered and Path(registered).as_posix() != path.as_posix():
-            _, actual, _ = formal_snapshot(listing)
-            if actual:
-                seen += 1
+        resolved = resolve_formal_fields(ROOT, listing.get('product_id'), data['listings'],
+                                         channel='alibaba', listing_id=listing.get('id'))
+        if resolved['state'] != 'recorded':
             continue
-        if not (ROOT/path).exists():
+        if Path(registered).as_posix() != path.as_posix():
+            seen += 1
             continue
         snap = json.loads((ROOT/path).read_text(encoding='utf-8'))
         actual = snap['response'].get('product') or {}

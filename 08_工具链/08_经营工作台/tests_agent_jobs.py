@@ -431,6 +431,28 @@ class AgentJobTests(unittest.TestCase):
         tools=DeskTools(self.app.business,self.root,'customer:website-REF')
         self.assertEqual(tools.read('website:inquiry:REF')['content'],'original inquiry')
 
+    def test_mcp_distinguishes_formal_readback_from_product_history(self):
+        products=self.root/PRODUCTS;products.parent.mkdir(parents=True)
+        products.write_text(json.dumps({'products':[{'id':'shoe','local_assets':{'current_fields_file':'old.json'}}]}),encoding='utf8')
+        channel=self.root/CHANNEL;channel.parent.mkdir(parents=True)
+        channel.write_text(json.dumps({'listings':[{'id':'123','product_id':'shoe',
+            'formal_fields':{'file':'new.json','at':'2026-11-11T03:33:49Z'},
+            'local_sync':{'current_fields_file':'old.json'}}]}),encoding='utf8')
+        (self.root/'old.json').write_text(json.dumps({'product':{'product_id':'123','subject':'old'}}),encoding='utf8')
+        (self.root/'new.json').write_text(json.dumps({'product':{'product_id':'123','subject':'new'}}),encoding='utf8')
+        self.app.business.obj.update(source=PRODUCTS,content=json.dumps({'selected_evidence_paths':['new.json'],
+            'historical_or_preparation_paths':['old.json']}))
+        tools=DeskTools(self.app.business,self.root,'product:shoe')
+        roles={row['path']:row['role'] for row in tools.sources()}
+        self.assertEqual(roles['new.json'],'formal-readback-listing-123')
+        self.assertEqual(roles['old.json'],'historical-or-preparation')
+        product=json.loads(tools.read(PRODUCTS)['content'])
+        self.assertNotIn('current_fields_file',product['local_assets'])
+        self.assertEqual(product['local_assets']['product_level_evidence_file'],'old.json')
+        listing=json.loads(tools.read(CHANNEL)['content'])['listings'][0]
+        self.assertEqual(listing['formal_field_resolution']['file'],'new.json')
+        self.assertEqual(listing['local_sync']['unverified_field_file'],'old.json')
+
     def test_sources_default_compact_history_search_and_current_projection(self):
         products=self.root/PRODUCTS;products.parent.mkdir(parents=True)
         products.write_text(json.dumps({'products':[{'id':'shoe','evidence':['history/old-'+str(i)+'.json' for i in range(70)]}]}),encoding='utf8')

@@ -87,16 +87,27 @@ class Workspace:
             fail("INPUT_TOO_LARGE", "JSON source exceeds 30MB")
         return json.loads(path.read_text(encoding="utf-8-sig"))
 
-    def inspect_product(self, sku, listing_id=None):
+    def _formal_fields(self, product_id, listings, channel, listing_id):
+        empty = {"state": "unknown", "channel": channel, "listing_id": None,
+                 "file": None, "observed_at": None, "reason": "resolver_unavailable"}
+        path = self.root / "08_工具链/06_工作区维护/product_registry.py"
+        if not path.is_file():
+            return empty
+        spec = importlib.util.spec_from_file_location("commerce_product_registry", path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.resolve_formal_fields(self.root, product_id, listings, channel=channel, listing_id=listing_id)
+
+    def inspect_product(self, sku, listing_id=None, channel=None):
         ledger = self.json(LEDGER)
         # New workspace stores identity independently of supply and channel state.
         # Explicit legacy fixtures can still supply a complete composed record.
         channel_state = {}
         if "listings" not in ledger:
-            channel = self.json("02_Alibaba运营/05_扩品工程/数据/国际站商品.json")
-            ledger["listings"] = channel["listings"]
+            channel_data = self.json("02_Alibaba运营/05_扩品工程/数据/国际站商品.json")
+            ledger["listings"] = channel_data["listings"]
             ledger["sources"] = self.json("00_总控台/产品中心/数据/供应来源.json")["sources"]
-            channel_state = channel.get("product_state", {})
+            channel_state = channel_data.get("product_state", {})
         matches = [p for p in ledger["products"] if sku == p["id"] or sku in p.get("aliases", [])]
         if len(matches) != 1:
             fail("IDENTITY_AMBIGUOUS", "SKU must resolve to exactly one canonical product")
@@ -116,15 +127,35 @@ class Workspace:
         source_ids += product.get("candidate_source_ids", [])
         sources = [s for s in ledger.get("sources", []) if s["id"] in source_ids]
         selected = dict(product=product, listings=listings, sources=sources)
-        references = list(dict.fromkeys([product.get("dossier_path"), product.get("local_assets", {}).get("current_fields_file"),
+        formal = self._formal_fields(product["id"], ledger["listings"], channel, listing_id)
+        projected = dict(product)
+        local = dict(product.get("local_assets") or {})
+        legacy = local.pop("current_fields_file", None)
+        historical = [legacy] if isinstance(legacy, str) and legacy != formal.get("file") else []
+        if "local_assets" in product:
+            projected["local_assets"] = local
+        projected_listings = []
+        for row in listings:
+            entry = dict(row)
+            row_formal = self._formal_fields(product["id"], ledger["listings"], channel, row.get("id"))
+            local_sync = dict(row.get("local_sync") or {})
+            sync_file = local_sync.pop("current_fields_file", None)
+            if sync_file and sync_file != row_formal.get("file"):
+                local_sync["unverified_field_file"] = sync_file
+            if "local_sync" in row:
+                entry["local_sync"] = local_sync
+            entry["formal_field_resolution"] = row_formal
+            projected_listings.append(entry)
+        references = list(dict.fromkeys([product.get("dossier_path"), formal.get("file"),
                                         *product.get("raw_packages", [])]))
         references = [p for p in references if p]
         return {
             "requested_sku": sku, "canonical_sku": product["id"], "source_state": product.get("source_state"),
             "selected_listing_id": listing_id, "listing_ids": [str(p["id"]) for p in listings],
-            "product": product, "listings": listings, "sources": sources, "references": references,
+            "product": projected, "listings": projected_listings, "sources": sources, "references": references,
+            "platform_formal_fields": formal, "historical_or_preparation_paths": historical,
             "record_hash": digest(selected), "ledger_updated_on": ledger.get("updated_on"),
-            "evidence_interpretation": "Local ledger observations; not live readback, physical stock, or a publish approval",
+            "evidence_interpretation": "Local ledger observations, not live status; use the registered per-listing formal receipt for platform fields. Product-level and unverified paths are historical or preparation evidence, not a publish approval.",
             "identity_layers": {"canonical_product": product["id"], "aliases": product.get("aliases", []),
                                 "platform_objects": [{"platform": "alibaba", "listing_id": str(p["id"]), "record_type": p.get("record_type"), "source_relation": p.get("source_relation")} for p in listings],
                                 "other_platform_ids": "not inferred from Alibaba IDs; bind actual account/namespace separately"},
@@ -176,7 +207,7 @@ class Workspace:
             fail("INVALID_REQUEST", str(exc))
         if request.get("listing_id") and not re.fullmatch(r"[0-9]{6,20}", request["listing_id"]):
             fail("INVALID_REQUEST", "listing_id must be a numeric platform product ID")
-        product = self.inspect_product(request["sku"], request.get("listing_id")) if request.get("sku") else None
+        product = self.inspect_product(request["sku"], request.get("listing_id"), request.get("channel")) if request.get("sku") else None
         strategy = self.strategy(request)
         steps = campaign_steps(strategy) if request["workflow"] == "campaign" else [{**s, "state": "pending", "output": None} for s in RECIPES[request["workflow"]]]
         modules = list(dict.fromkeys(s["module"] for s in steps))
@@ -260,7 +291,7 @@ class Engine:
     def changes(self, task):
         changed = []
         if task["product_hash"]:
-            product = self.ws.inspect_product(task["request"]["sku"], task["request"].get("listing_id"))
+            product = self.ws.inspect_product(task["request"]["sku"], task["request"].get("listing_id"), task["request"].get("channel"))
             if product["record_hash"] != task["product_hash"]:
                 changed.append("product_record")
         for ref in task["source_refs"]:
@@ -375,7 +406,7 @@ class Engine:
             self._version(task, expected_revision)
             if step_id == "identity":
                 data = {"kind": "identity", "summary": "Canonical identity resolved; source/physical facts still require business review",
-                        **self.ws.inspect_product(task["request"]["sku"], task["request"].get("listing_id"))}
+                        **self.ws.inspect_product(task["request"]["sku"], task["request"].get("listing_id"), task["request"].get("channel"))}
             elif step_id == "metrics":
                 path = task["request"].get("metrics_path")
                 if not path:

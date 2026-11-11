@@ -33,8 +33,8 @@ class DossierReceipts(unittest.TestCase):
         }
         self.write_json(dossiers.DETAILS / self.pid / 'formal_get.json',
                         {'observed_at_utc': '2026-09-01', 'response': {'product': {
-                            'subject': 'old shoe', 'main_image': {'images': [self.old_url]}}}})
-        self.write_json('receipts/new.json', {'product': {'subject': 'new shoe', 'status': 'approved',
+                            'product_id': self.pid, 'subject': 'old shoe', 'main_image': {'images': [self.old_url]}}}})
+        self.write_json('receipts/new.json', {'product': {'product_id': self.pid, 'subject': 'new shoe', 'status': 'approved',
                                                          'main_image': {'images': [self.short_url]}}})
         self.write_json(dossiers.ASSET_INDEX, {'files': [{'file': 'images/new.jpg',
             'products': ['HR044', 'BQ1044'], 'official_urls': [self.long_url]}]})
@@ -63,14 +63,24 @@ class DossierReceipts(unittest.TestCase):
     def test_missing_registered_receipt_never_falls_back_to_old(self):
         (self.root / 'receipts/new.json').unlink()
         result = self.render()
-        self.assertIn('已登记的正式回读缺失', result)
+        self.assertIn('已登记的正式回读不可用或归属未核', result)
         self.assertNotIn('old shoe', result)
         self.assertNotIn(self.old_url, result)
         dossiers.sync_formal_references(self.data)
         self.assertEqual(self.data['listings'][0]['formal_fields']['file'], 'receipts/new.json')
 
-    def test_legacy_response_receipt_still_renders(self):
+    def test_unregistered_old_receipt_is_not_promoted(self):
         del self.data['listings'][0]['formal_fields']
+        result = self.render()
+        self.assertIn('当前完整正式回读：待补', result)
+        self.assertNotIn('old shoe', result)
+        self.assertNotIn(self.old_url, result)
+        self.assertEqual(dossiers.sync_formal_references(self.data), 0)
+        self.assertNotIn('formal_fields', self.data['listings'][0])
+
+    def test_registered_legacy_response_receipt_still_renders(self):
+        self.data['listings'][0]['formal_fields'] = {
+            'file': (dossiers.DETAILS / self.pid / 'formal_get.json').as_posix(), 'at': '2026-09-01'}
         result = self.render()
         self.assertIn('old shoe', result)
         self.assertIn('2026-09-01', result)

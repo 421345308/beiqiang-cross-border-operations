@@ -187,4 +187,31 @@ class ProductProjectionTests(BusinessTests):
         self.assertEqual(json.dumps(row),original)
         with patch.object(self.website,'records',return_value=[{'reference':'EMPTY'}]):
             self.assertEqual(self.business.get_object('customer:website-EMPTY')['conversation'],[])
+
+    def test_platform_receipt_replaces_old_product_path_without_losing_history(self):
+        import json
+        from business import PRODUCTS, CHANNEL
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        data['products'][0]['local_assets']['current_fields_file']='old.json'
+        data['products'][0]['evidence']=['old.json']
+        self.write(PRODUCTS,data)
+        channel=json.loads((self.root/CHANNEL).read_text(encoding='utf8'))
+        channel['listings'][0]['formal_fields']={'file':'new.json','at':'2026-11-11T03:33:49Z'}
+        self.write(CHANNEL,channel)
+        self.write('old.json',{'requested_product_id':'1601','response':{'product':{'product_id':'1601','subject':'old'}}})
+        self.write('new.json',{'product':{'product_id':'1601','subject':'new'}})
+        brief=json.loads(self.business.get_object('product:BQ009')['content'])
+        self.assertEqual(brief['alibaba_formal_fields']['file'],'new.json')
+        self.assertIn('new.json',brief['selected_evidence_paths'])
+        self.assertNotIn('old.json',brief['selected_evidence_paths'])
+        self.assertEqual(brief['historical_or_preparation_paths'],['old.json'])
+        channel['listings'].append({'id':'1602','product_id':'BQ009','formal_fields':{'file':'new.json'}})
+        self.write(CHANNEL,channel)
+        obj=self.business.get_object('product:BQ009');brief=json.loads(obj['content'])
+        self.assertEqual(brief['alibaba_formal_fields']['reason'],'multiple_listings')
+        self.assertNotIn('new.json',brief['selected_evidence_paths'])
+        self.assertNotIn('old.json',brief['selected_evidence_paths'])
+        self.assertEqual(obj['subtitle'],'')
+
 if __name__=='__main__':unittest.main()

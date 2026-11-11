@@ -9,6 +9,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from customer_workspace import CustomerWriteOutcomeUnknown
+from business import resolve_formal_fields
 from supervisor import BUSINESS_CASE_FIELDS, PREREQUISITE_STATES, VALUE_STATES
 
 TEXT = {'.txt', '.csv', '.json', '.md'}
@@ -397,16 +398,21 @@ class DeskTools:
                 except ValueError:brief={}
                 for ref in brief.get('selected_evidence_paths',[]):
                     if isinstance(ref,str):paths[ref]='selected-evidence'
+                for ref in brief.get('historical_or_preparation_paths',[]):
+                    if isinstance(ref,str):paths.setdefault(ref,'historical-or-preparation')
                 if q:
                     for ref in product.get('evidence',[]):
                         if isinstance(ref,str) and q.casefold() in ref.casefold():paths.setdefault(ref,'historical-evidence')
             channel=self.root/CHANNEL
             if channel.is_file():
                 listings=json.loads(channel.read_text(encoding='utf-8-sig')).get('listings',[])
+                product_id=self.object_id.removeprefix('product:')
                 for row in listings:
-                    if row.get('product_id')==self.object_id.removeprefix('product:'):
-                        for ref in [(row.get('formal_fields')or{}).get('file'),(row.get('local_sync')or{}).get('current_fields_file')]:
-                            if isinstance(ref,str):paths[ref]='current-formal-readback'
+                    if row.get('product_id')==product_id:
+                        formal=resolve_formal_fields(self.root,product_id,listings,channel='alibaba',listing_id=row.get('id'))
+                        if formal.get('file'):paths[formal['file']]='formal-readback-listing-'+str(row.get('id'))
+                        local=(row.get('local_sync')or{}).get('current_fields_file')
+                        if isinstance(local,str) and local!=formal.get('file'):paths.setdefault(local,'local-sync-unverified')
             paths['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md']='applicable-sop'
         elif obj.get('kind')=='channel' and self.object_id=='channel:douyin':
             paths['09_国内电商/抖店/README.md']='current-channel-source'
@@ -469,20 +475,33 @@ class DeskTools:
                 row=next((r for r in rows if r.get('id')==self.object_id.removeprefix('product:')),None)
                 if row is None:raise ValueError('原档未找到当前产品')
                 row={k:v for k,v in row.items() if k!='evidence'}
-                content=json.dumps(row,ensure_ascii=False,indent=2);projection='products[] exact current product ID; historical evidence omitted (search list_sources q)'
+                local=dict(row.get('local_assets') or {})
+                legacy=local.pop('current_fields_file',None)
+                if legacy:
+                    local['product_level_evidence_file']=legacy
+                    local['field_path_boundary']='产品级路径可能为历史或准备资料；平台字段以逐渠道、逐ID正式回读为准。'
+                if 'local_assets' in row:row['local_assets']=local
+                content=json.dumps(row,ensure_ascii=False,indent=2);projection='products[] exact product ID; product-level field path is evidence, not channel authority'
             elif path==CHANNEL:
-                rows=[r for r in json.loads(content).get('listings',[]) if r.get('product_id')==self.object_id.removeprefix('product:')]
+                channel_data=json.loads(content)
+                all_rows=channel_data.get('listings',[])
+                product_id=self.object_id.removeprefix('product:')
+                rows=[r for r in all_rows if r.get('product_id')==product_id]
                 selected=[]
                 for row in rows:
                     current=row.get('current_platform_fields') or {}
+                    formal=resolve_formal_fields(self.root,product_id,all_rows,channel='alibaba',listing_id=row.get('id'))
+                    local=dict(row.get('local_sync') or {})
+                    local_file=local.pop('current_fields_file',None)
+                    if local_file and local_file!=formal.get('file'):local['unverified_field_file']=local_file
                     selected.append({'id':row.get('id'),'product_id':row.get('product_id'),'url':row.get('url'),
                                      'current_platform_fields':current,'formal_fields':row.get('formal_fields'),
-                                     'pending_replacement':row.get('pending_replacement'),
-                                     'local_sync':row.get('local_sync'),
+                                     'formal_field_resolution':formal,'pending_replacement':row.get('pending_replacement'),
+                                     'local_sync':local,
                                      **({'historical_catalog_fields':row.get('catalog_fields')} if not current else {})})
-                state=json.loads(file.read_text(encoding='utf-8-sig')).get('product_state',{}).get(self.object_id.removeprefix('product:'),{})
-                content=json.dumps({'listings':selected,'product_state':state,'priority':'current_platform_fields优先历史计划；缺字段不从旧计划补作当前事实'},ensure_ascii=False,indent=2)
-                projection='listings[] exact common product_id; current platform fields including available formal attributes/SKU; historical evidence omitted'
+                state=channel_data.get('product_state',{}).get(product_id,{})
+                content=json.dumps({'listings':selected,'product_state':state,'priority':'current_platform_fields是本地记录投影；平台正式字段以逐ID登记回读为准，未能对应时为未知。'},ensure_ascii=False,indent=2)
+                projection='listings[] exact product_id; local recorded current platform projection, not live; formal receipt resolved per listing'
         result={'path':path,'content':content[start:start+limit],'start':start,'totalChars':len(content),
                 'nextStart':start+limit if start+limit<len(content) else None,'projection':projection,
                 'sha256':hashlib.sha256(content.encode('utf8')).hexdigest()}

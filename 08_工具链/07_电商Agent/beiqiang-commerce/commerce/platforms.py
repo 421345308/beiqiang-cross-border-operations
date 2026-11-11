@@ -25,7 +25,7 @@ def read_platform(engine, platform, target_id, sku=None, project_id=None):
     if platform == "alibaba":
         if not re.fullmatch(r"[0-9]{6,20}", target_id or "") or not sku:
             fail("INVALID_REQUEST", "Alibaba read requires SKU and numeric listing ID")
-        identity = engine.ws.inspect_product(sku, target_id)
+        identity = engine.ws.inspect_product(sku, target_id, channel="alibaba")
         client = engine.ws.file(".agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py")
         cmd = [sys.executable, "-X", "utf8", str(client), "call", "alibaba.icbu.product.get", "product_id=" + target_id, "language=ENGLISH"]
     elif platform == "libtv":

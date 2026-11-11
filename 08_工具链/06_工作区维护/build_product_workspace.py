@@ -13,7 +13,7 @@ import hashlib
 import os
 import tempfile
 import json
-from product_registry import ProductRegistry
+from product_registry import ProductRegistry, resolve_formal_fields
 from pathlib import Path
 from urllib.parse import urlsplit, quote
 
@@ -164,7 +164,16 @@ def build(data: dict) -> dict[Path, bytes]:
         rendered[-1]['supply_mode']=p.get('supply_mode',{})
         assets=p.get('local_assets',{})
         import os
-        rendered[-1]['local_assets']={'state':assets.get('state','待补'), 'files':[{'path':path,'url':quote(Path(os.path.relpath(ROOT/path,ROOT/QUERY.parent)).as_posix(),safe='/.:_-')} for path in ([assets['current_fields_file']] if assets.get('current_fields_file') else assets.get('asset_roots',[]))]}
+        formal=resolve_formal_fields(ROOT,pid,data['listings'],channel='alibaba')
+        local_paths=[]
+        if formal.get('file'):
+            local_paths.append(('Alibaba '+formal['listing_id']+' 已登记正式回读',formal['file']))
+        legacy=assets.get('current_fields_file')
+        if legacy and legacy!=formal.get('file'):
+            local_paths.append(('产品级历史或准备资料（非当前平台字段）',legacy))
+        if not legacy:
+            local_paths.extend((path,path) for path in assets.get('asset_roots',[]))
+        rendered[-1]['local_assets']={'state':assets.get('state','待补'), 'formal_fields':formal, 'files':[{'path':label,'url':quote(Path(os.path.relpath(ROOT/path,ROOT/QUERY.parent)).as_posix(),safe='/.:_-')} for label,path in local_paths]}
         dossier=p.get('dossier_path')
         if dossier:
             rendered[-1]['local_assets']['files'].insert(0,{'path':'本款统一商品档案','url':quote(Path(os.path.relpath(ROOT/dossier,ROOT/QUERY.parent)).as_posix(),safe='/.:_-')})
@@ -182,7 +191,7 @@ function render(){const q=$('q').value.trim().toLowerCase(),state=$('state').val
 </script></html>'''.replace('PAYLOAD',payload)
     page=page.replace('<span id="count">','<select id="intent" aria-label="采购意图候选分类"><option value="">全部采购意图候选</option></select><span id="count">')
     page=page.replace('const rows=data.filter(p=>',"const intent=$('intent').value;const rows=data.filter(p=>(!intent||(p.classification.local_intent_candidates||[]).includes(intent))&&")
-    page=page.replace('<div class="sources">','<p><small>采购意图（状态 ${esc(p.classification.state)}）：${esc((p.classification.local_intent_candidates||[]).join(" / "))} · 平台类目ID ${esc((p.classification.platform_category_ids||[]).join(" / "))} · 店内分组 ${esc((p.classification.store_groups||[]).map(g=>g.name||g.id).join(" / ")||"接口未返回，待核")}</small></p><p>本地入口：${p.local_assets.files.map(f=>`<a href="${esc(f.url)}">${esc(f.path)}</a>`).join("<br>")||"当前档案待指定"}<br><small>${esc(p.local_assets.state)}</small></p><div class="sources">')
+    page=page.replace('<div class="sources">','<p><small>采购意图（状态 ${esc(p.classification.state)}）：${esc((p.classification.local_intent_candidates||[]).join(" / "))} · 平台类目ID ${esc((p.classification.platform_category_ids||[]).join(" / "))} · 店内分组 ${esc((p.classification.store_groups||[]).map(g=>g.name||g.id).join(" / ")||"接口未返回，待核")}</small></p><p>本地入口：${p.local_assets.files.map(f=>`<a href="${esc(f.url)}">${esc(f.path)}</a>`).join("<br>")||"当前档案待指定"}<br><small>${esc(p.local_assets.state)} · Alibaba正式字段：${esc(p.local_assets.formal_fields.state==="recorded"?"已登记":"未知（"+p.local_assets.formal_fields.reason+"）")}</small></p><div class="sources">')
     page=page.replace('${esc(l.scope)}</td>', '${esc(l.scope)}<br>本轮目录：${esc(l.catalog_presence)} · 本地同步：${esc(l.local_sync)}<br>本轮标题：${esc(l.catalog_fields.title||"未检出")}</td>')
     page=page.replace("$('q').oninput=render;", "$('intent').innerHTML+=[...new Set(data.flatMap(p=>p.classification.local_intent_candidates||[]))].sort().map(x=>`<option value=\"${esc(x)}\">${esc(x)}</option>`).join('');$('intent').onchange=render;$('q').oninput=render;")
     page=page.replace('<div class="sources">','<p>当前供货类型（内部）：${esc(({EXTERNAL_FACTORY:"外采",OWN_FACTORY:"自产"})[p.supply_mode.current]||"待核")} · ${esc(p.supply_mode.state||"尚未分类")}。转产后货号保持稳定。</p><div class="sources">')
