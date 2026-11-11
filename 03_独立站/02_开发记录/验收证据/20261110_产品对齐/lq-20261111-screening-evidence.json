@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-11-11T02:05:33+00:00",
+  "scope": "Read-only screen of specific assets and existing source records. These are individual observations, not a finding of infringement, a judgment on an entire style, or a statement that all other images or supply are unusable. Listing visibility refers only to the dated 2026-11-10T15:46:25Z snapshot, not current inventory.",
+  "items": [
+    {
+      "code": "BQ-LQ021",
+      "alibaba_id": "1601974859471",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/01_产品来源原图/24.jpg",
+      "sha256": "a588af28ed8423af4e506222a12a18006d0318090b60ab7e92aa9177edda1cb7",
+      "observation": "Source image 24 contains a recognizable Apple laptop prop; the observation concerns this image, not proof of a shoe brand or infringement.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ028",
+      "alibaba_id": "1601974617075",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/028准备/当前来源页.png",
+      "sha256": "b6374e3dc52735dc2297ec856c77bd8a40e15eb1a1120f216ecb45992f574217",
+      "observation": "Archived supplier screenshot includes Vibram wording; prior formal field record only said rubber. Original source-photo set was not found locally; verify version and usable images before reuse.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ038",
+      "alibaba_id": "1601975500310",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/038准备/01_产品来源原图/05.jpg",
+      "sha256": "48ca72019595066fbd9b993e24a2d42ad27fa2777b78c7e450f22ef48680324f",
+      "observation": "Source image 05 contains AIRWALK lettering; do not infer rights or the status of other images from this one picture.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ052",
+      "alibaba_id": "1601975454376",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/052准备/01_产品来源原图/04.jpg",
+      "sha256": "9445bfd74dfc65c2b51e0f4f0240b11ad46eb462f1e59e1f4a23607b1d3cea9c",
+      "observation": "Source image 04 includes WILD ARMOR advertising text. Size evidence also needs individual reconciliation: available record lists 39 and 42-48 rather than an assumed continuous size run.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ2568",
+      "alibaba_id": "1601975313957",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2568准备/01_产品来源原图/11.jpg",
+      "sha256": "c70fafb2bec03a2f676331a4cbfffd94ad634342190f50e0b89f4876f274d161",
+      "observation": "Source image 11 contains CAMEL text; review the actual intended images and their rights.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ2571",
+      "alibaba_id": "1601974689145",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2571/01.jpg",
+      "sha256": "65d6f3aa564a6d1656322cb092b22153bf1328374d6205b67752cf3c19706e2a",
+      "observation": "Source image 01 includes a recognizable Apple laptop prop; review alternate genuine images individually.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ2573",
+      "alibaba_id": "1601974740583",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2573准备/01_当前来源原图/01.jpg",
+      "sha256": "418d298a0ecdf63baaf558f2b915f2e8f1696e6bd95c1536e2a32aa6b2008b42",
+      "observation": "Source image 01 includes a recognizable Apple laptop prop; review alternate genuine images individually.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-LQ2585",
+      "alibaba_id": "1601974857344",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/01_产品来源原图/16.jpg",
+      "sha256": "50a66152810038f65f4c236bfcf3d43bde4c5c11d3fda3c0270e2c394b8c9ecc",
+      "observation": "Source image 16 includes a recognizable Apple laptop prop; review alternate genuine images individually.",
+      "batch_decision": "not selected; investigate actual candidate media and facts"
+    },
+    {
+      "code": "BQ-CS063C",
+      "alibaba_id": "1601970622736",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/执行记录/989与725正式新建_2026-10-04_task5/725/selected_assets_complete.json",
+      "sha256": "c2f594fa30bcffad841064bcb04ba75ae48741b7fefd5f2e425efaa65633f62a",
+      "observation": "Source shoe has visible tongue shapes and side graphic. Asset record retains SPORT marking. White/Red image is recorded as AI-assisted layout or crop; other five are recorded as original bytes. An AI-assisted close-up is not independent proof of exact letters. Check use and colour sources individually.",
+      "batch_decision": "not selected in this no-obvious-mark first batch; preserve prior management decision"
+    },
+    {
+      "code": "BQ-W266",
+      "alibaba_id": "1601969951162",
+      "evidence_file": "02_Alibaba运营/05_扩品工程/数据/来源证据/d25c25f4ce45.json",
+      "sha256": "eb2dfc851c27dade5c1487a0eff127e5cbde31f97f55a8f427d9acc0a73b3c6e",
+      "observation": "Original two colour photos contain circular marks. Existing management record explicitly permits retaining the original mark without a separate new mark-approval step, and confirms some materials; that is not itself proof of trademark ownership or test results.",
+      "batch_decision": "not selected in this no-obvious-mark first batch; preserve prior management decision"
+    }
+  ]
+}
