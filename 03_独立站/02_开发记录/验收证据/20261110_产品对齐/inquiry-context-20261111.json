@@ -1,0 +1,166 @@
+{
+  "tested_at_utc": "2026-11-11T16:35:36.677Z",
+  "base_commit": "4b9db5b7e0069020fda736aaf609291a724944ac",
+  "prepared_fix_commit": "24d9b15c557570cde0d118726bb1d0ccfd328f1c",
+  "published": false,
+  "target": "existing isolated 164-style export, retested with in-memory source overlay; not a production build",
+  "network": "all browser requests intercepted, inquiry endpoint simulated locally; no real inquiry or mail",
+  "baseline": {
+    "locales": [
+      {
+        "locale": "en",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": false,
+        "receiptLocale": "en"
+      },
+      {
+        "locale": "zh",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": false,
+        "receiptLocale": "zh"
+      },
+      {
+        "locale": "de",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": false,
+        "receiptLocale": "de"
+      },
+      {
+        "locale": "fr",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": false,
+        "receiptLocale": "fr"
+      },
+      {
+        "locale": "es",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": false,
+        "receiptLocale": "es"
+      }
+    ],
+    "cross_locale_preference": {
+      "selectedPreference": "de",
+      "pageLocale": "fr",
+      "submittedPreference": "fr",
+      "contactMethod": "whatsapp",
+      "contactsPreserved": true,
+      "itemsPreserved": true,
+      "receiptLocale": "fr",
+      "valid": true
+    }
+  },
+  "with_fix": {
+    "locales": [
+      {
+        "locale": "en",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "receiptLocale": "en"
+      },
+      {
+        "locale": "zh",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "receiptLocale": "zh"
+      },
+      {
+        "locale": "de",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "receiptLocale": "de"
+      },
+      {
+        "locale": "fr",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "receiptLocale": "fr"
+      },
+      {
+        "locale": "es",
+        "valid": true,
+        "codesCorrect": true,
+        "selectionsCorrect": true,
+        "contactsCorrect": true,
+        "pageCorrect": true,
+        "utmPreserved": true,
+        "landingPageCorrect": true,
+        "receiptLocale": "es"
+      }
+    ],
+    "cross_locale_preference": {
+      "selectedPreference": "de",
+      "pageLocale": "fr",
+      "submittedPreference": "de",
+      "contactMethod": "whatsapp",
+      "contactsPreserved": true,
+      "itemsPreserved": true,
+      "receiptLocale": "de",
+      "valid": true
+    },
+    "analytics_consent_off": {
+      "valid": true,
+      "landingBlank": true,
+      "utmBlank": true,
+      "referrerBlank": true,
+      "contactsCorrect": true
+    },
+    "source_overlay_exercised": {
+      "tracking": 22,
+      "europeInquiry": 4
+    }
+  },
+  "verification": {
+    "new_behavior_tests": "2 passed",
+    "existing_inquiry_draft_and_receipt_tests": "30 passed, injected stores and transports",
+    "existing_europe_quote_test": "1 passed",
+    "typecheck_errors": 0,
+    "lint_errors": 0,
+    "lint_warnings": 0
+  },
+  "bundle_sha256": "82a9a27f012ad1c26d9df60a9af31f308c8fc11601fe1d61bca6202e1a1df0ed"
+}
