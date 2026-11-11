@@ -5,6 +5,7 @@ read-only preview; explicit plans/dispatches still use AgentJobs' safeguards.
 """
 import math
 import re
+import sqlite3
 from datetime import datetime, timezone
 from urllib.parse import quote
 from completion_dispatch import CompletionDispatch
@@ -333,7 +334,7 @@ class TaskWorkspace:
         try:
             jobs = self.app.agent_jobs.list_jobs()
             local_state = 'ok'
-        except (ValueError, OSError, RuntimeError):
+        except (ValueError, OSError, RuntimeError, sqlite3.Error):
             jobs = []
             local_state = 'unavailable'
         supervision_configs = {job['id']:_supervision_config(job) for job in jobs}
@@ -629,7 +630,18 @@ class TaskWorkspace:
             snapshot = {'state':'unavailable','threads':[], 'observed_at':None, 'source':DESKTOP_SOURCE,
                 'automatic_refresh':False,'reason':'无法读取桌面快照。'}
         sources['desktop'] = {k:v for k,v in snapshot.items() if k != 'threads'}
-        workstreams = build_workstreams(self.app.root, jobs, snapshot) if getattr(self.app,'root',None) else []
+        batch_links = None
+        if getattr(self.app, 'root', None):
+            reader = getattr(getattr(self.app, 'customer_batches', None), 'workstream_links', None)
+            try:
+                batch_links = reader() if callable(reader) else None
+            except Exception:
+                batch_links = None
+        workstreams = (build_workstreams(self.app.root, jobs, snapshot, batch_links, local_state == 'ok')
+                       if getattr(self.app,'root',None) else [])
+        outreach = next((stream for stream in workstreams if stream['id'] == 'outreach'), None)
+        if outreach:
+            sources['customer_batches'] = dict(outreach['batch_observation'])
         thread_streams, job_streams = {}, {}
         for stream in workstreams:
             conversation = stream.get('conversation') or {}
@@ -687,7 +699,8 @@ class TaskWorkspace:
             oid = row.get('object_id') or ''
             kind = obj.get('kind') or oid.split(':')[0]
             source_path = str(row.get('source') or obj.get('source') or '').replace('\\','/')
-            line = ((row.get('workstream_id') if row.get('workstream_id') in ('alibaba','website') else 'other') if row['origin']=='desktop' else
+            line = (('international' if row.get('workstream_id') == 'outreach' else
+                     row.get('workstream_id') if row.get('workstream_id') in ('alibaba','website') else 'other') if row['origin']=='desktop' else
                     'alibaba' if row.get('kind')=='catalog_status' or oid=='channel:alibaba' or source_path.startswith('02_Alibaba运营/') else
                     'website' if oid.startswith('customer:website-') or source_path.startswith('03_独立站/') else
                     'domestic' if oid == 'channel:douyin' else

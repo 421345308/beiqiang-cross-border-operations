@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
 import tempfile
+import sqlite3
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from types import SimpleNamespace
@@ -179,6 +180,60 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(result['workstreams'][0]['source']['state'],'unavailable')
         self.assertEqual([x['id'] for x in result['workstreams'][0]['related_jobs']],['local:related'])
         self.assertEqual(result['workstreams'][0]['related_jobs'][0]['status'],'completed')
+
+    def test_outreach_batch_projection_preserves_task_and_artifact_identity(self):
+        self.objects.append({'id':'customer:a','title':'合成客户','kind':'customer'})
+        self.jobs.append({'id':'draft','object_id':'customer:a','batch_id':'batch-a','mode':'outreach_draft',
+                          'status':'completed','summary':'合成草稿已保存','artifact_id':'artifact-a',
+                          'next_action':'核对草稿','updated_at':'2026-11-11T10:00:00Z'})
+        self.app.customer_batches=SimpleNamespace(workstream_links=lambda:[
+            {'id':'batch-a','title':'合成批次','object_ids':['customer:a'],'updated_at':'2026-11-11T09:00:00Z'}])
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview()
+            stream=next(row for row in result['workstreams'] if row['id']=='outreach')
+            task=next(row for row in result['tasks'] if row['id']=='local:draft')
+            self.assertEqual(result['sources']['customer_batches']['state'],'ok')
+            self.assertEqual(task['workstream_id'],'outreach')
+            self.assertEqual(task['business_line'],'international')
+            self.assertEqual(stream['related_batches'][0]['count'],1)
+            self.assertEqual(stream['related_jobs'][0]['artifact_id'],'artifact-a')
+            self.assertEqual(stream['related_jobs'][0]['result'],'合成草稿已保存')
+            self.app.customer_batches.workstream_links=lambda: (_ for _ in ()).throw(OSError('private path'))
+            unavailable=self.service.overview()
+            stream=next(row for row in unavailable['workstreams'] if row['id']=='outreach')
+            self.assertEqual(unavailable['sources']['customer_batches']['state'],'unavailable')
+            self.assertEqual(stream['related_jobs'],[])
+            self.assertNotIn('private path',str(unavailable))
+            self.assertTrue(any(row['id']=='local:draft' for row in unavailable['tasks']))
+
+    def test_outreach_keeps_batch_but_marks_jobs_unknown_when_agentjobs_unavailable(self):
+        self.app.customer_batches=SimpleNamespace(workstream_links=lambda:[
+            {'id':'batch-a','title':'合成批次','object_ids':['customer:a']}])
+        self.app.agent_jobs.list_jobs=lambda: (_ for _ in ()).throw(sqlite3.OperationalError('private path'))
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview()
+        streams={row['id']:row for row in result['workstreams']}
+        self.assertEqual(streams['outreach']['related_batches'][0]['count'],1)
+        self.assertEqual(streams['outreach']['related_jobs'],[])
+        self.assertEqual(streams['outreach']['batch_observation']['state'],'partial')
+        self.assertIn('AgentJobs 不可读',streams['outreach']['batch_observation']['reason'])
+        for name in ('tools','alibaba','website','outreach'):
+            self.assertEqual(streams[name]['related_jobs_observation']['state'],'unavailable')
+        self.assertNotIn('private path',str(result))
+
+    def test_explicit_outreach_desktop_reference_uses_international_filter(self):
+        self.app.desktop_snapshot=SimpleNamespace(read=lambda:{'state':'ok','observed_at':'2026-11-11T11:00:00Z',
+            'threads':[{'id':'outreach-thread','hostId':'host','status':'idle'}],
+            'workstream_links':[{'workstream':'outreach','host_id':'host','thread_id':'outreach-thread'}]})
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview({'business_line':'international'})
+        task=next(row for row in result['tasks'] if row['id']=='desktop:host:outreach-thread')
+        self.assertEqual(task['workstream_id'],'outreach')
+        self.assertEqual(task['business_line'],'international')
+        self.assertEqual(task['conversation_scope'],'reference_only')
 
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')

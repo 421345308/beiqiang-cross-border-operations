@@ -72,6 +72,18 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(len(self.service.get(b['id'], q='customer:b')['items']), 1)
         self.assertEqual(self.service.list_batches()['items'][0]['counts']['total'], 2)
 
+    def test_workstream_links_read_identity_and_members_without_copying_drafts_or_writing(self):
+        batch = self.create(['customer:a', 'customer:b'])
+        before = self.app.db.total_changes
+        self.service._view = lambda *args, **kwargs: self.fail('projection must not load customer details')
+        links = self.service.workstream_links()
+        self.assertEqual(self.app.db.total_changes, before)
+        self.assertEqual(len(links), 1)
+        self.assertEqual(links[0]['id'], batch['id'])
+        self.assertEqual(links[0]['object_ids'], ['customer:a', 'customer:b'])
+        self.assertNotIn('Synthetic English', str(links))
+        self.assertNotIn('buyer@example.test', str(links))
+
     def test_invalid_addition_rolls_back_all_members(self):
         b = self.create()
         with self.assertRaises(ValueError):

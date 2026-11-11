@@ -29,6 +29,7 @@ class WorkstreamProjectionTests(unittest.TestCase):
                 '**当前工作：**合成独立站工作。\n'
                 '**已验证结果：**合成版本已验证。\n'
                 '**下一步：**继续逐款核对合成来源。\n'),
+            '04_客户开发/README.md': '# 客户开发\n\n历史文章曾说所有任务已完成。\n',
         }
         for name, content in entries.items():
             path = self.root / name
@@ -51,7 +52,7 @@ class WorkstreamProjectionTests(unittest.TestCase):
 
     def test_source_excerpts_have_provenance_and_no_copied_store(self):
         rows = {row['id']: row for row in build_workstreams(self.root, [], self.snapshot())}
-        self.assertEqual(set(rows), {'tools','alibaba','website'})
+        self.assertEqual(set(rows), {'tools','alibaba','website','outreach'})
         for key in ('alibaba', 'website'):
             row = rows[key]
             self.assertEqual(row['source']['state'], 'ok')
@@ -69,6 +70,85 @@ class WorkstreamProjectionTests(unittest.TestCase):
         self.assertIn('合成提交被拒绝', rows['alibaba']['source']['blocker'])
         self.assertIn('继续逐款核对合成来源', rows['website']['source']['next_action'])
         self.assertEqual(rows['website']['source']['blocker'], '')
+        self.assertEqual(rows['outreach']['source']['state'], 'unknown')
+        self.assertEqual(rows['outreach']['batch_observation']['state'], 'unavailable')
+
+    def test_outreach_projects_only_explicit_current_batch_membership_and_result_reference(self):
+        batches = [{'id':'batch-a', 'title':'合成批次', 'updated_at':'2026-11-11T09:00:00Z',
+                    'object_ids':['customer:a']}]
+        jobs = [{'id':'linked', 'batch_id':'batch-a', 'object_id':'customer:a', 'status':'completed',
+                 'summary':'已有合成草稿', 'artifact_id':'artifact-a', 'next_action':'检查草稿',
+                 'updated_at':'2026-11-11T10:00:00Z'},
+                {'id':'removed', 'batch_id':'batch-a', 'object_id':'customer:removed', 'summary':'不可关联'},
+                {'id':'unknown-batch', 'batch_id':'missing', 'object_id':'customer:a'},
+                {'id':'title-only', 'title':'外贸开发', 'object_id':'customer:a', 'status':'running'}]
+        rows = {row['id']:row for row in build_workstreams(self.root, jobs, self.snapshot(), batches)}
+        row = rows['outreach']
+        self.assertEqual(row['source']['state'], 'unknown')
+        self.assertEqual(row['batch_observation']['state'], 'partial')
+        self.assertEqual([job['id'] for job in row['related_jobs']], ['local:linked'])
+        linked = row['related_jobs'][0]
+        self.assertEqual(linked['relation'], 'customer_batch_membership')
+        self.assertEqual((linked['result'], linked['artifact_id'], linked['next_action']),
+                         ('已有合成草稿', 'artifact-a', '检查草稿'))
+        self.assertTrue(linked['observed_at'])
+        self.assertEqual(row['related_batches'][0]['count'], 1)
+        self.assertNotIn('object_ids', row['related_batches'][0])
+        self.assertEqual(rows['alibaba']['related_jobs'], [])
+        self.assertEqual(rows['website']['related_jobs'], [])
+
+    def test_outreach_unreadable_or_ambiguous_batches_do_not_invent_association(self):
+        job = {'id':'possible', 'batch_id':'batch-a', 'object_id':'customer:a', 'status':'running'}
+        batch = {'id':'batch-a', 'object_ids':['customer:a']}
+        for batches in (None, [batch, dict(batch)], [{'id':'batch-a','object_ids':['customer:a','customer:a']}],
+                        [{'id':'batch-a','object_ids':None}]):
+            with self.subTest(batches=batches):
+                row = next(x for x in build_workstreams(self.root, [job], self.snapshot(), batches)
+                           if x['id']=='outreach')
+                self.assertEqual(row['batch_observation']['state'], 'unavailable')
+                self.assertEqual(row['related_jobs'], [])
+                self.assertEqual(row['related_batches'], [])
+                self.assertNotIn('所有任务已完成', row['focus'])
+
+    def test_outreach_conversation_and_batch_reference_are_deduplicated(self):
+        snapshot = self.snapshot('ok')
+        snapshot['workstream_links'].append({'workstream':'outreach','host_id':'durable','thread_id':'outreach-thread'})
+        snapshot['threads'].append({'id':'outreach-thread','hostId':'durable','status':'notLoaded'})
+        job = {'id':'linked','batch_id':'batch-a','object_id':'customer:a','status':'completed','artifact_id':'artifact-a',
+               'conversations':[{'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
+                                 'host_id':'durable','host_bound_at':'2026-11-11T08:30:00+00:00'}]}
+        batch = {'id':'batch-a','object_ids':['customer:a']}
+        row = next(x for x in build_workstreams(self.root, [job], snapshot, [batch]) if x['id']=='outreach')
+        self.assertEqual(len(row['related_jobs']), 1)
+        self.assertEqual(row['related_jobs'][0]['relation'], 'conversation_ref_and_customer_batch')
+        self.assertEqual(row['related_jobs'][0]['artifact_id'], 'artifact-a')
+        row = next(x for x in build_workstreams(self.root, [job], snapshot, None) if x['id']=='outreach')
+        self.assertEqual(row['batch_observation']['state'], 'unavailable')
+        self.assertEqual(row['related_jobs'][0]['relation'], 'conversation_ref')
+
+    def test_four_workstreams_only_show_their_explicitly_related_jobs(self):
+        snapshot = {'state':'ok','threads':[], 'workstream_links':[]}
+        jobs = []
+        for line in ('tools','alibaba','website'):
+            thread = line + '-thread'
+            snapshot['workstream_links'].append({'workstream':line,'host_id':'host','thread_id':thread})
+            snapshot['threads'].append({'id':thread,'hostId':'host','status':'idle'})
+            jobs.append({'id':line+'-job','conversations':[{'provider':'codex','conversation_id':thread,
+                'control':'reference_only','host_id':'host','host_bound_at':'2026-11-11T08:30:00+00:00'}]})
+        jobs.append({'id':'outreach-job','batch_id':'batch-a','object_id':'customer:a','artifact_id':'artifact-a'})
+        rows = {row['id']:row for row in build_workstreams(self.root, jobs, snapshot,
+                [{'id':'batch-a','object_ids':['customer:a']}])}
+        for line in ('tools','alibaba','website','outreach'):
+            self.assertEqual([job['id'] for job in rows[line]['related_jobs']], ['local:'+line+'-job'])
+        self.assertEqual(rows['outreach']['related_jobs'][0]['artifact_id'], 'artifact-a')
+
+    def test_duplicate_job_id_does_not_claim_an_outreach_association(self):
+        jobs=[{'id':'same','batch_id':'batch-a','object_id':'customer:a'},
+              {'id':'same','batch_id':'batch-a','object_id':'customer:a'}]
+        row=next(x for x in build_workstreams(self.root,jobs,self.snapshot(),
+                 [{'id':'batch-a','object_ids':['customer:a']}]) if x['id']=='outreach')
+        self.assertEqual(row['related_jobs'],[])
+        self.assertEqual(row['batch_observation']['state'],'partial')
 
     def test_tools_current_task_comes_from_bound_job_even_when_readme_is_missing(self):
         snapshot = self.snapshot()

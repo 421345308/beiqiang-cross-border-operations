@@ -263,6 +263,23 @@ class CustomerBatches:
             batches = [json.loads(r[0]) for r in self.app.db.execute('SELECT data FROM customer_batches ORDER BY rowid DESC')]
             return {'items': [{k: v for k, v in self._view(b).items() if k != 'items'} for b in batches]}
 
+    def workstream_links(self):
+        """Read only batch identity and membership for the workstream projection."""
+        with self.app.lock:
+            rows = self.app.db.execute('SELECT id,data FROM customer_batches ORDER BY rowid DESC').fetchall()
+        items = []
+        for batch_id, raw in rows:
+            batch = json.loads(raw)
+            if not isinstance(batch, dict) or batch.get('id') != batch_id or not isinstance(batch.get('items'), list):
+                raise ValueError('客户批次关联资料不可读')
+            ids = [entry.get('object_id') if isinstance(entry, dict) else None for entry in batch['items']]
+            if (not isinstance(batch_id, str) or not batch_id or
+                    any(not isinstance(oid, str) or not oid for oid in ids) or len(set(ids)) != len(ids)):
+                raise ValueError('客户批次关联资料不明确')
+            items.append({'id':batch_id, 'title':batch.get('title'), 'updated_at':batch.get('updated_at'),
+                          'object_ids':ids})
+        return items
+
     def _ids(self, body):
         ids = body.get('object_ids', [])
         if not isinstance(ids, list) or len(ids) > 500 or any(not isinstance(i, str) or len(i) > 300 for i in ids):

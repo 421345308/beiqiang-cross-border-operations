@@ -1933,3 +1933,32 @@ test('仅合法 UUID 能生成只用于定位的 Codex 会话链接',async()=>{
  const data={tasks:[],workstreams:[{...base,id:'tools',title:'总控与工具',conversation:{id:valid,state:'stale',observed_status:'active',association_source:'明确关联',associated_at:'2026-11-11T08:00:00Z'}},{...base,id:'website',title:'独立站增长',conversation:{id:malicious,state:'stale',observed_status:'active'}}]};
  h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview'),links=walk(panel).filter(x=>x.tagName==='A');assert.equal(links.length,1);assert.equal(links[0].href,`codex://threads/${valid}`);assert.match(links[0].textContent,/仅定位/);assert.match(panel.textContent,/关联依据：明确关联/);assert.match(panel.textContent,/当前状态未知/);
 });
+
+test('外贸工作线展示明确批次及任务成果引用，不能冒充发送或成交',async()=>{
+ const h=harness('#/tasks'),writes=[],data={tasks:[{id:'local:job1',job_id:'job1',origin:'local',title:'合成客户任务',status:'completed'}],workstreams:[
+  {id:'tools',title:'总控与工具',source:{state:'unknown'}},
+  {id:'alibaba',title:'国际站运营',source:{state:'unknown'}},
+  {id:'website',title:'独立站增长',source:{state:'unknown'}},
+  {id:'outreach',title:'外贸开发',source:{state:'unknown'},batch_observation:{state:'ok'},
+   related_batches:[{id:'batch-a',title:'合成批次',count:1}],
+   related_jobs:[{id:'local:job1',title:'合成客户任务',status:'completed',result:'合成草稿已保存',next_action:'核对草稿',artifact_id:'artifact-a',updated_at:'2026-11-11T10:00:00Z',observed_at:'2026-11-11T11:00:00Z'}]}]};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>data};if(o.method==='POST')writes.push(p);return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview');
+ for(const name of ['总控与工具','国际站运营','独立站增长','外贸开发'])assert.match(panel.textContent,new RegExp(name));
+ assert.match(panel.textContent,/回合已结束/);assert.match(panel.textContent,/合成草稿已保存/);assert.match(panel.textContent,/核对草稿/);assert.match(panel.textContent,/有成果引用/);assert.doesNotMatch(panel.textContent,/已成交|已发送/);
+ await findButton(panel,'打开客户批次：合成批次（1 位）').click();assert.equal(h.location.hash,'/customers?view=batches');assert.deepEqual(writes,[]);
+});
+
+test('外贸批次来源不可用时显示未知且不猜测关联任务',async()=>{
+ const h=harness('#/tasks'),data={tasks:[],workstreams:[{id:'outreach',title:'外贸开发',source:{state:'unknown'},batch_observation:{state:'unavailable'},related_batches:[],related_jobs:[]}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const panel=h.elements.page.querySelector('.workstream-overview');assert.match(panel.textContent,/客户批次关联资料暂不可读/);assert.match(panel.textContent,/批次关联任务状态未知/);assert.doesNotMatch(panel.textContent,/已完成|已发送/);
+});
+
+test('客户批次可读但 AgentJobs 不可读时不把任务缺失当成未关联',async()=>{
+ const h=harness('#/tasks'),data={tasks:[],workstreams:[{id:'outreach',title:'外贸开发',source:{state:'unknown'},
+  batch_observation:{state:'partial',reason:'AgentJobs 不可读，批次关联任务状态未知。'},related_jobs_observation:{state:'unavailable'},
+  related_batches:[{id:'batch-a',title:'合成批次',count:1}],related_jobs:[]}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const panel=h.elements.page.querySelector('.workstream-overview');assert.match(panel.textContent,/AgentJobs 不可读/);assert.match(panel.textContent,/工作台任务来源不可读，关联状态未知/);assert.doesNotMatch(panel.textContent,/未关联工作台任务/);
+});

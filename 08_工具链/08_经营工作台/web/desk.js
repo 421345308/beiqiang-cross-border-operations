@@ -338,7 +338,7 @@
         const streams=Array.isArray(snapshot.workstreams)?snapshot.workstreams:[];
         workstreamHost.replaceChildren();if(!streams.length)return;
         workstreamHost.append(sectionHeading('并行工作线','业务进度来自各自业务资料；会话状态只代表有时间的只读观察。'));
-        const routes={tools:'/overview',alibaba:'/channels?view=alibaba',website:'/channels?view=website'};
+        const routes={tools:'/overview',alibaba:'/channels?view=alibaba',website:'/channels?view=website',outreach:'/customers?view=batches'};
         for(const item of streams){
           const card=el('article',undefined,'card workstream-card'),source=item.source || {},conversation=item.conversation;
           card.append(el('h3',text(item.title) || '工作线'),el('p',`当前工作：${taskExcerpt(item.focus) || '未记录'}`));
@@ -362,9 +362,30 @@
             const ref=(snapshot.tasks || []).find(t=>t.origin==='desktop' && t.thread_id===conversation.id && t.host_id===conversation.host_id);
             if(ref)card.append(button('查看只读会话引用',()=>openTask(ref),'quiet'));
           }
+          if(item.id==='outreach'){
+            const batches=Array.isArray(item.related_batches)?item.related_batches:[],observation=item.batch_observation || {};
+            if(observation.state==='unavailable')card.append(el('p','客户批次关联资料暂不可读，相关状态未知。','inline-error'));
+            else if(observation.state==='partial')card.append(el('p',`批次任务状态不完整：${text(observation.reason) || '关联不明确，请到原批次核对。'}`,'inline-error'));
+            else if(observation.state!=='ok')card.append(el('p','客户批次观察状态未知。','muted'));
+            else if(!batches.length)card.append(el('p','本次未观察到客户开发批次；其他客户工作需到原对象核对。','muted'));
+            for(const batch of batches){
+              if(typeof batch.id!=='string' || !batch.id)continue;
+              card.append(button(`打开客户批次：${taskExcerpt(batch.title,80) || '未命名'}（${Number.isInteger(batch.count)?batch.count:'未知'} 位）`,()=>{S.batchView.id=batch.id;location.hash='/customers?view=batches';},'quiet'));
+            }
+          }
           const related=Array.isArray(item.related_jobs)?item.related_jobs:[];
-          if(!related.length)card.append(el('p','未关联工作台任务。','muted'));
-          else for(const linked of related){const job=(snapshot.tasks || []).find(t=>t.id===linked.id && t.origin==='local');if(job)card.append(button(`打开关联任务：${taskExcerpt(linked.title || job.title,80)}`,()=>openTask(job),'quiet'));else card.append(el('p','已关联工作台任务暂不可读。','inline-error'));}
+          if(!related.length)card.append(el('p',item.related_jobs_observation?.state==='unavailable'?'工作台任务来源不可读，关联状态未知。':item.id==='outreach' && item.batch_observation?.state!=='ok'?'批次关联任务状态未知。':'未关联工作台任务。','muted'));
+          else for(const linked of related){
+            const job=(snapshot.tasks || []).find(t=>t.id===linked.id && t.origin==='local');
+            if(job){
+              const state=({planned:'已计划',queued:'已排队',running:'记录为运行中',completed:'回合已结束',failed:'失败',needs_input:'等待输入',cancelled:'已取消'})[linked.status] || '未知';
+              card.append(el('p',`任务上次记录：${state} · 更新时间 ${time(linked.updated_at)} · 观察 ${time(linked.observed_at)}`,'muted'));
+              if(linked.result)card.append(el('p',`任务记录摘要：${taskExcerpt(linked.result)}`));
+              if(linked.next_action)card.append(el('p',`任务下一步：${taskExcerpt(linked.next_action)}`));
+              if(linked.artifact_id)card.append(el('p','有成果引用，打开任务核对原文。','muted'));
+              card.append(button(`打开关联任务：${taskExcerpt(linked.title || job.title,80)}`,()=>openTask(job),'quiet'));
+            }else card.append(el('p','已关联工作台任务暂不可读。','inline-error'));
+          }
           if(routes[item.id])card.append(button('打开对应业务入口',()=>{location.hash=routes[item.id];},'quiet'));
           workstreamHost.append(card);
         }

@@ -20,6 +20,8 @@ _SPECS = (
      '02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md'),
     ('website', '独立站增长', '独立站产品与国际站对齐', '独立站项目入口',
      '03_独立站/README.md'),
+    ('outreach', '外贸开发', '精准开发与逐封审核', '客户开发业务入口',
+     '04_客户开发/README.md'),
 )
 
 _DIRECTION_IDS = {'国际 B2B': 'international', '国内抖店': 'domestic', '内容与创作': 'creation'}
@@ -111,7 +113,7 @@ def _source(root, name, relative):
     return result
 
 
-def _direction_rows(root, snapshot, jobs):
+def _direction_rows(root, snapshot, jobs, jobs_available=True):
     """Read the global direction table without treating goals as task outcomes."""
     observed = _now()
     content, modified, reason = _read_entry(root, _DIRECTION_PATH)
@@ -162,6 +164,8 @@ def _direction_rows(root, snapshot, jobs):
         conversation = _conversation(key, snapshot)
         related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
                                                  conversation.get('id') if conversation else None)
+        if not jobs_available:
+            link_observation.update(state='unavailable', reason='AgentJobs 不可读，无法核对关联任务。')
         rows.append({'id':key, 'title':_excerpt(title, 120), 'focus':source['focus'], 'source':source,
                      'conversation':conversation, 'related_jobs':related,
                      'related_jobs_observation':link_observation})
@@ -228,6 +232,53 @@ def _related_jobs(jobs, host_id, thread_id):
              'thread_id':thread_id, 'host_bound_at':ref['host_bound_at']}], observation
 
 
+def _batch_work(jobs, batches, jobs_available=True):
+    """Join jobs only through a readable batch ID and current object membership."""
+    observed = _now()
+    observation = {'state':'unavailable', 'source':'客户开发批次与 AgentJobs', 'observed_at':observed,
+                   'reason':'客户批次关联资料不可读，不能判断批次任务。'}
+    if not isinstance(batches, list):
+        return [], [], observation
+    indexed = {}
+    for batch in batches:
+        if not isinstance(batch, dict):
+            return [], [], observation
+        key, members = batch.get('id'), batch.get('object_ids')
+        if (not isinstance(key, str) or not key or key in indexed or not isinstance(members, list)
+                or any(not isinstance(oid, str) or not oid for oid in members) or len(set(members)) != len(members)):
+            return [], [], observation
+        indexed[key] = batch
+    rows = [{'id':key, 'title':batch.get('title') or '客户开发批次', 'count':len(batch['object_ids']),
+             'updated_at':batch.get('updated_at'), 'observed_at':observed, 'source':'客户开发批次'}
+            for key, batch in indexed.items()]
+    if not jobs_available:
+        observation.update(state='partial', reason='AgentJobs 不可读，批次关联任务状态未知。')
+        return rows, [], observation
+    id_counts = {}
+    for job in jobs:
+        if isinstance(job, dict) and isinstance(job.get('id'), str) and job['id']:
+            id_counts[job['id']] = id_counts.get(job['id'], 0) + 1
+    related, incomplete = [], False
+    for job in jobs:
+        if not isinstance(job, dict) or not job.get('batch_id'):
+            continue
+        batch_id, job_id = job.get('batch_id'), job.get('id')
+        if (not isinstance(batch_id, str) or batch_id not in indexed or
+                not isinstance(job_id, str) or not job_id or id_counts[job_id] != 1 or
+                job.get('object_id') not in indexed[batch_id]['object_ids']):
+            incomplete = True
+            continue
+        related.append({'id':'local:' + job_id, 'title':job.get('title') or '本机任务',
+                        'status':job.get('status') or 'unknown', 'result':job.get('summary') or '',
+                        'next_action':job.get('next_action') or '', 'blocker':job.get('error') or '',
+                        'artifact_id':job.get('artifact_id'), 'batch_id':batch_id,
+                        'updated_at':job.get('updated_at'), 'observed_at':observed,
+                        'source':'AgentJobs', 'relation':'customer_batch_membership'})
+    observation.update(state='partial' if incomplete else 'ok',
+                       reason='部分批次任务关联缺失或不明确，未展示。' if incomplete else '')
+    return rows, related, observation
+
+
 def _conversation(key, snapshot):
     links = [link for link in snapshot.get('workstream_links', [])
              if isinstance(link, dict) and link.get('workstream') == key]
@@ -265,7 +316,7 @@ def _conversation(key, snapshot):
             'control': 'reference_only'}
 
 
-def build_workstreams(root, jobs, desktop_snapshot):
+def build_workstreams(root, jobs, desktop_snapshot, customer_batches=None, jobs_available=True):
     """Project existing workstream entries and separately labelled business directions."""
     jobs = jobs if isinstance(jobs, list) else []
     snapshot = desktop_snapshot if isinstance(desktop_snapshot, dict) else {}
@@ -275,9 +326,21 @@ def build_workstreams(root, jobs, desktop_snapshot):
         source = _source(root, label, path)
         related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
                                                  conversation.get('id') if conversation else None)
+        if not jobs_available:
+            link_observation.update(state='unavailable', reason='AgentJobs 不可读，无法核对关联任务。')
+        batches, batch_observation = [], None
+        if key == 'outreach':
+            batches, batch_jobs, batch_observation = _batch_work(jobs, customer_batches, jobs_available)
+            by_id = {job['id']:job for job in related}
+            for job in batch_jobs:
+                if job['id'] in by_id:
+                    job = {**by_id[job['id']], **job, 'relation':'conversation_ref_and_customer_batch'}
+                by_id[job['id']] = job
+            related = list(by_id.values())
         displayed_focus = source.get('focus') or (focus if source.get('state') == 'ok' else '当前工作未登记')
         output.append({'id': key, 'title': title, 'focus': displayed_focus,
                        'source': source,
                        'conversation': conversation, 'related_jobs':related,
-                       'related_jobs_observation':link_observation})
-    return output + _direction_rows(root, snapshot, jobs)
+                       'related_jobs_observation':link_observation,
+                       **({'related_batches':batches, 'batch_observation':batch_observation} if key == 'outreach' else {})})
+    return output + _direction_rows(root, snapshot, jobs, jobs_available)

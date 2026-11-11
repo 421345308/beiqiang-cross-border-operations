@@ -323,6 +323,14 @@ class DesktopSnapshotTests(unittest.TestCase):
         self.assertEqual(updated['workstream_links'][0]['thread_id'],'thread-one')
         self.assertEqual(self.service.link_workstream(link)['registration_state'],'not_in_latest_snapshot')
 
+    def test_outreach_conversation_requires_explicit_registered_reference(self):
+        self.service.import_snapshot(self.payload())
+        link={'workstream':'outreach','host_id':'local','thread_id':'thread-one','source_note':'明确登记'}
+        value=self.service.link_workstream(link)
+        self.assertEqual(value['workstream'],'outreach')
+        self.assertEqual(value['control'],'reference_only')
+        self.assertEqual(self.service.read()['workstream_links'][0]['thread_id'],'thread-one')
+
     def test_workstream_links_conflict_across_independent_connections(self):
         from workspaces import WorkspaceConflict
         database=Path(self.temp.name)/'links.sqlite3'
