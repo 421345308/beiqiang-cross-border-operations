@@ -20,6 +20,7 @@ from workspaces import WorkspaceConflict
 SOURCE = 'codex_app.read_thread'
 SEND_SOURCE = 'codex_app.send_message_to_thread'
 HEAD_STATES = {'completed', 'inProgress', 'in_progress', 'failed', 'cancelled', 'unknown'}
+HEAD_WITHOUT_START = {'inProgress', 'in_progress', 'unknown'}
 RECEIPT_STATES = {'unknown', 'accepted', 'running', 'completed', 'failed'}
 UNRESOLVED = {'unknown', 'accepted', 'running'}
 ID_PATTERN = re.compile(r'[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}\Z')
@@ -54,6 +55,82 @@ def _seconds(value, label):
     except (ValueError, OverflowError, OSError):
         raise ValueError(label + '超出可比较范围。') from None
     return value
+
+
+def _merge_head(old, incoming):
+    """Keep incomparable head observations until their real start times are known."""
+    if old is None:
+        return incoming, True
+    if not isinstance(old, dict):
+        raise ValueError('外部会话观察水位不可读。')
+    pending = old.get('incomparable_heads', [])
+    if not isinstance(pending, list) or any(not isinstance(item, dict) for item in pending):
+        raise ValueError('外部会话待比较观察不可读。')
+    primary = {key:value for key,value in old.items() if key != 'incomparable_heads'}
+    candidates = [primary] + copy.deepcopy(pending)
+    identities = set()
+    times = []
+    for candidate in candidates:
+        if (any(candidate.get(key) != incoming[key] for key in ('source','host_id','thread_id'))
+                or candidate.get('status') not in HEAD_STATES):
+            raise ValueError('外部会话待比较观察来源或状态不可读。')
+        identity = _identifier(candidate.get('turn_id'), '原最新回合标识')
+        if identity in identities:
+            raise ValueError('外部会话待比较观察身份重复。')
+        identities.add(identity)
+        start = candidate.get('started_at')
+        if start is None:
+            if candidate.get('status') not in HEAD_WITHOUT_START:
+                raise ValueError('原最新回合缺少有效开始时间。')
+        else:
+            _seconds(start, '原最新回合开始时间')
+        try:
+            observed = datetime.fromisoformat(candidate['observed_at'])
+            if observed.tzinfo is None or observed.utcoffset() is None:
+                raise ValueError()
+        except (KeyError, TypeError, ValueError):
+            raise ValueError('外部会话观察时间不可读。') from None
+        times.append(observed)
+    observed = datetime.fromisoformat(incoming['observed_at'])
+    index = next((i for i,item in enumerate(candidates)
+                  if item['turn_id'] == incoming['turn_id']), None)
+    if index is None:
+        if observed < max(times):
+            return old, False
+        if observed == max(times):
+            raise WorkspaceConflict('相同观察时间的会话状态冲突，保留原记录。')
+        if len(candidates) >= 100:
+            raise WorkspaceConflict('待比较的回合过多，请先核对原会话。')
+        candidates.append(copy.deepcopy(incoming))
+    else:
+        prior = candidates[index]
+        if observed < times[index]:
+            return old, False
+        if observed == times[index]:
+            if any(prior.get(key) != incoming[key] for key in ('turn_id','status','started_at')):
+                raise WorkspaceConflict('相同观察时间的会话状态冲突，保留原记录。')
+            return old, False
+        old_start, new_start = prior.get('started_at'), incoming['started_at']
+        if old_start is not None and new_start is not None and old_start != new_start:
+            raise WorkspaceConflict('同一回合的开始时间冲突，保留原观察。')
+        if prior.get('status') in ('completed','failed','cancelled') and incoming['status'] != prior['status']:
+            raise WorkspaceConflict('同一回合终态冲突或回退，保留原观察。')
+        updated = copy.deepcopy(incoming)
+        if updated['started_at'] is None and old_start is not None:
+            updated['started_at'] = old_start  # Retain the previously observed real time.
+        candidates[index] = updated
+    starts = [item['started_at'] for item in candidates if item.get('started_at') is not None]
+    if len(starts) != len(set(starts)):
+        raise WorkspaceConflict('两个回合开始时间相同，先后不明，请先核对。')
+    if len(starts) == len(candidates):
+        merged = max(candidates, key=lambda item:item['started_at'])
+    else:
+        # Do not replace a known head with an incomparable newer observation.
+        # Keep every candidate so learning one time cannot hide another one.
+        merged = copy.deepcopy(candidates[0])
+        if len(candidates) > 1:
+            merged['incomparable_heads'] = candidates[1:]
+    return merged, merged != old
 
 
 def _failure_is_resolved(receipt):
@@ -137,12 +214,17 @@ class ExternalTurns:
             raise ValueError('最新回合状态与完成事件不一致。')
         started_at = _seconds(started_at, '回合开始时间')
         completed_at = _seconds(completed_at, '回合结束时间')
-        head_started_at = _seconds(head_started_at, '最新回合开始时间')
+        if head_started_at is None:
+            if head_turn_id == turn_id or head_status not in HEAD_WITHOUT_START:
+                raise ValueError('仅不同的进行中或未知回合可缺少开始时间。')
+        else:
+            head_started_at = _seconds(head_started_at, '最新回合开始时间')
         observed = _evidence({'source': SOURCE, 'observed_at': observed_at, 'detail': evidence})
         observed_time = datetime.fromisoformat(observed['observed_at'])
         if (started_at > completed_at or completed_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp() or
-                head_started_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp() or
-                (turn_id == head_turn_id and started_at != head_started_at) or head_started_at < started_at):
+                (head_started_at is not None and head_started_at > (observed_time + EVIDENCE_CLOCK_SKEW).timestamp()) or
+                (turn_id == head_turn_id and started_at != head_started_at) or
+                (head_started_at is not None and head_started_at < started_at)):
             raise ValueError('回合起止时间或观察时间不一致。')
         event_id = _event_id(host_id, thread_id, turn_id)
         with self._write():
@@ -158,31 +240,10 @@ class ExternalTurns:
                     raise WorkspaceConflict('相同回合身份的原始时间不一致，保留原记录等待核对。')
             key = _head_key(host_id, thread_id)
             old_head = heads.get(key)
-            if old_head is not None and not isinstance(old_head, dict):
-                raise ValueError('外部会话观察水位不可读。')
             next_head = {'source':SOURCE, 'host_id':host_id, 'thread_id':thread_id,
                          'turn_id':head_turn_id, 'status':head_status, 'started_at':head_started_at,
                          'observed_at':observed['observed_at']}
-            replace_head = old_head is None
-            if old_head is not None:
-                try:
-                    old_time = datetime.fromisoformat(old_head['observed_at'])
-                    if old_time.tzinfo is None or old_time.utcoffset() is None:raise ValueError()
-                except (KeyError, TypeError, ValueError):
-                    raise ValueError('外部会话观察时间不可读。') from None
-                old_started = _seconds(old_head.get('started_at'), '原最新回合开始时间')
-                if observed_time == old_time and any(old_head.get(k) != next_head[k] for k in ('turn_id','status','started_at')):
-                    raise WorkspaceConflict('相同观察时间的会话状态冲突，保留原记录。')
-                if old_head.get('turn_id') == head_turn_id and old_started != head_started_at:
-                    raise WorkspaceConflict('同一回合的开始时间冲突，保留原观察。')
-                if old_head.get('turn_id') != head_turn_id and old_started == head_started_at:
-                    raise WorkspaceConflict('两个回合开始时间相同，先后不明，请先核对。')
-                terminal = {'completed','failed','cancelled'}
-                if (old_head.get('turn_id') == head_turn_id and old_head.get('status') in terminal and
-                        head_status != old_head.get('status')):
-                    raise WorkspaceConflict('同一回合终态冲突或回退，保留原观察。')
-                replace_head = observed_time > old_time and (head_started_at > old_started or
-                               (head_started_at == old_started and old_head.get('turn_id') == head_turn_id))
+            next_head, replace_head = _merge_head(old_head, next_head)
             if previous is not None and not replace_head:
                 return copy.deepcopy(previous)
             if type(expected_version) is not int or expected_version != job['version']:
@@ -224,8 +285,11 @@ class ExternalTurns:
                            and x.get('thread_id') == raw['thread_id']]
             comparable = [x.get('completed_at') for x in same_thread if isinstance(x.get('completed_at'), (int,float))
                           and not isinstance(x.get('completed_at'), bool)]
-            order_ambiguous = bool(comparable and raw.get('completed_at') == max(comparable) and
-                                   sum(x == raw.get('completed_at') for x in comparable) > 1)
+            pending = head.get('incomparable_heads', [])
+            if not isinstance(pending, list):raise ValueError('外部会话待比较观察不可读。')
+            order_ambiguous = bool(head.get('started_at') is None or pending or
+                                   (comparable and raw.get('completed_at') == max(comparable) and
+                                    sum(x == raw.get('completed_at') for x in comparable) > 1))
             current = (head.get('turn_id') == raw['turn_id'] and head.get('status') == 'completed' and
                        not order_ambiguous and bool(comparable) and raw.get('completed_at') == max(comparable))
             assessment = item.get('assessment') if isinstance(item.get('assessment'), dict) else None
@@ -250,6 +314,7 @@ class ExternalTurns:
                 state = 'awaiting_review'
             item.update(state=state, current=current, order_ambiguous=order_ambiguous,
                         intent_changed=changed, head_turn_id=head.get('turn_id'), head_status=head.get('status'),
+                         head_started_at=head.get('started_at'), incomparable_head_count=len(pending),
                         head_observed_at=head.get('observed_at'), source_stale=age_seconds>600,
                         source_age_seconds=int(age_seconds))
             result.append(item)

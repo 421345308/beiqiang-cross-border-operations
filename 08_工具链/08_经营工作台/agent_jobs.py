@@ -236,6 +236,32 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                         job.setdefault('events', []).append(event)
                         known_events[key] += 1
                 job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
+            saved_supervision = persisted.get('supervision_revision', 0)
+            current_supervision = job.get('supervision_revision', 0)
+            if (type(saved_supervision) is not int or saved_supervision < 0 or
+                    type(current_supervision) is not int or current_supervision < 0):
+                raise WorkspaceConflict('监督配置版本不可读，停止覆盖原记录。')
+            if saved_supervision > current_supervision:
+                if 'supervision' in persisted:
+                    job['supervision'] = copy.deepcopy(persisted['supervision'])
+                else:
+                    job.pop('supervision', None)
+                job['supervision_revision'] = saved_supervision
+                from collections import Counter
+                identity = lambda event: (event.get('at'), event.get('type'), event.get('text'))
+                known_events = Counter(identity(event) for event in job.get('events', []))
+                saved_events = Counter()
+                for event in persisted.get('events', []):
+                    key = identity(event)
+                    saved_events[key] += 1
+                    if (event.get('type') in ('supervision_configured', 'supervision_disabled') and
+                            saved_events[key] > known_events[key]):
+                        job.setdefault('events', []).append(copy.deepcopy(event))
+                        known_events[key] += 1
+                job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
+            elif (saved_supervision == current_supervision and
+                  persisted.get('supervision') != job.get('supervision')):
+                raise WorkspaceConflict('同一版本的监督配置不一致，停止覆盖。')
             saved_completion = persisted.get('completion_revision', 0)
             current_completion = job.get('completion_revision', 0)
             if (type(saved_completion) is not int or saved_completion < 0 or
@@ -261,6 +287,9 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                         job.setdefault('events', []).append(event)
                         known_events[key] += 1
                 job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
+            elif (saved_completion == current_completion and
+                  persisted.get('completion_events', {}) != job.get('completion_events', {})):
+                raise WorkspaceConflict('同一版本的回合记录不一致，停止覆盖。')
             saved_external = persisted.get('external_revision', 0)
             current_external = job.get('external_revision', 0)
             if (type(saved_external) is not int or saved_external < 0 or
@@ -438,6 +467,21 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
         job['held_result'] = held  # Older clients still see the most recent held attempt.
         job['held_revision'] = revision + 1
 
+    @staticmethod
+    def _supervision_plan_changed(job, plan):
+        # Older and manually continued attempts have no supervision snapshot.
+        if 'supervision_revision' not in plan and 'business_case' not in plan:
+            return False
+        revision, case = plan.get('supervision_revision'), plan.get('business_case')
+        current = job.get('supervision')
+        keys = {'business_outcome','current_bottleneck','intended_change','stop_condition','evidence_source'}
+        return (type(revision) is not int or revision < 1 or
+                type(job.get('supervision_revision')) is not int or job['supervision_revision'] != revision or
+                not isinstance(case, dict) or set(case) != keys or
+                any(not isinstance(case.get(key), str) or not case[key].strip() or len(case[key]) > 500 for key in keys) or
+                not isinstance(current, dict) or current.get('enabled') is not True or
+                current.get('business_case') != case)
+
     def _claim_result_commit(self, job_id, attempt):
         """Fence supported planning edits through the existing final save."""
         with self._write():
@@ -455,12 +499,14 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                 self._event(job, 'needs_input', job['error'])
                 self._save(job)
                 return None
+            supervision_changed = self._supervision_plan_changed(job, plan)
             if (plan.get('attempt') != attempt or type(plan.get('adjustment_version')) is not int or
                     job.get('adjustment_version', 0) != plan['adjustment_version'] or
-                    job['intent']['version'] != frozen_intent['version']):
+                    job['intent']['version'] != frozen_intent['version'] or supervision_changed):
                 self._hold_attempt_result(job, attempt, 'planning_changed_during_attempt')
                 job.update(status='needs_input', summary='本轮计划已变化，原始成果待复核。',
-                    error='本轮领取后人工安排已变化，原始成果已保留，未自动保存最终业务成果；运行中其他工具的实际写入或外部动作仍须核对。')
+                    error=('本轮领取后监督业务意图或停止条件已变化，原始成果已保留，未自动保存最终业务成果；运行中其他工具的实际写入或外部动作仍须核对。'
+                           if supervision_changed else '本轮领取后人工安排已变化，原始成果已保留，未自动保存最终业务成果；运行中其他工具的实际写入或外部动作仍须核对。'))
                 if job.get('mode') == 'customer_analysis': job['profile_saved'] = False
                 self._event(job, 'needs_input', job['error'])
                 self._save(job)
@@ -890,6 +936,25 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                 '这里的决定仅限本任务已登记事项；尚未登记不代表没有其他约束。'
                 '当前业务原档、适用规则与实际授权仍须按需核对；存在冲突先核实，不得据此扩大授权或重放结果不明的动作。\n')
 
+    @staticmethod
+    def _attempt_business_case_prompt(plan):
+        if 'supervision_revision' not in plan and 'business_case' not in plan:
+            return ''
+        revision, case = plan.get('supervision_revision'), plan.get('business_case')
+        labels = (('business_outcome','期望经营结果'), ('current_bottleneck','当前真实瓶颈'),
+                  ('intended_change','本轮计划改变的状态'), ('stop_condition','停止条件'),
+                  ('evidence_source','业务原档与依据来源'))
+        if (type(revision) is not int or revision < 1 or not isinstance(case, dict) or
+                set(case) != {key for key, _ in labels} or
+                any(not isinstance(case.get(key), str) or not case[key].strip() or len(case[key]) > 500
+                    for key, _ in labels)):
+            raise JobFailure('本轮监督业务意图快照不可读，请先核对。')
+        lines = ['本轮领取时固定的监督业务意图（版本 ' + str(revision) + '）：']
+        lines.extend(label + '：' + case[key] for key, label in labels)
+        lines.append('按需读取上述业务原档核实；等待素材、审核或没有新增价值时停止并说明原因，'
+                     '保留已有成果，不扩大授权或重复结果不明的外部动作。')
+        return '\n\n' + '\n'.join(lines) + '\n'
+
     def _work(self, job_id, obj):
         process = None
         folder = None
@@ -929,6 +994,7 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                            '现行原档或授权不一致时先核对，不扩大权限或重放结果不明的动作。\n')
             else:
                 prompt += self._attempt_intent_prompt(plan)
+            prompt += self._attempt_business_case_prompt(plan)
             if plan.get('attempt') == job['attempt'] and plan.get('next_action'):
                 prompt += ('\n\n本轮领取时负责人安排的下一动作：\n' + plan['next_action'] +
                     '\n这是本轮执行要求，不代表该动作已经完成；不得据此扩大授权、自动对外发送，'
@@ -1102,7 +1168,8 @@ class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionD
                             conflict = 'intent_snapshot_missing'
                         elif (plan.get('attempt') != job.get('attempt') or
                               plan.get('adjustment_version') != job.get('adjustment_version', 0) or
-                              frozen['version'] != self._continuity_defaults(job)['intent']['version']):
+                              frozen['version'] != self._continuity_defaults(job)['intent']['version'] or
+                              self._supervision_plan_changed(job, plan)):
                             conflict = 'planning_changed_during_attempt'
                         else:
                             conflict = None

@@ -19,6 +19,7 @@ NOW = datetime.now(timezone.utc)
 OBSERVED = (NOW - timedelta(minutes=2)).isoformat()
 LATER = (NOW - timedelta(minutes=1)).isoformat()
 LAST = NOW.isoformat()
+UNSET = object()
 
 
 def proof(source=SOURCE, observed_at=OBSERVED):
@@ -47,14 +48,14 @@ class ExternalTurnsTests(unittest.TestCase):
         return self.jobs.get_job(job_id)
 
     def register(self, job_id, turn='turn-1', start=BASE, end=BASE+10,
-                 head=None, head_start=None, head_status='completed', observed=OBSERVED,
+                 head=None, head_start=UNSET, head_status='completed', observed=OBSERVED,
                  expected_version=None, host='durable', thread=THREAD):
         job = self.current(job_id)
         return self.jobs.register_external_turn(
             job_id, expected_version=job['version'] if expected_version is None else expected_version,
             host_id=host, thread_id=thread, turn_id=turn, started_at=start, completed_at=end,
             head_turn_id=head or turn, head_status=head_status,
-            head_started_at=start if head_start is None else head_start,
+            head_started_at=start if head_start is UNSET else head_start,
             observed_at=observed, evidence='synthetic read of completed turn and page head')
 
     def assess(self, job_id, event_id, **overrides):
@@ -130,6 +131,98 @@ class ExternalTurnsTests(unittest.TestCase):
             self.register(job_id, head='other-turn', head_start=BASE+20, observed=LATER)
         with self.assertRaises(WorkspaceConflict):
             self.register(job_id, observed=OBSERVED)
+
+    def test_missing_head_start_blocks_review_until_real_time_is_observed(self):
+        job_id = self.planned()
+        version = self.current(job_id)['version']
+        event = self.register(job_id, head='turn-2', head_start=None,
+                              head_status='inProgress', expected_version=version)
+        saved = self.current(job_id)
+        head = next(iter(saved['external_thread_heads'].values()))
+        self.assertIsNone(head['started_at'])
+        row = self.jobs.external_turns_view(saved)[0]
+        self.assertEqual(row['state'], 'review_required')
+        self.assertFalse(row['current'])
+        self.assertTrue(row['order_ambiguous'])
+        self.assertIsNone(row['head_started_at'])
+        with self.assertRaises(WorkspaceConflict):
+            self.assess(job_id, event['event_id'])
+        with self.assertRaises(WorkspaceConflict):
+            self.prepare(job_id, event['event_id'])
+        same = self.register(job_id, head='turn-2', head_start=None,
+                             head_status='inProgress', expected_version=version)
+        self.assertEqual(same['event_id'], event['event_id'])
+        self.assertEqual(self.current(job_id)['version'], saved['version'])
+        self.register(job_id, head='turn-2', head_start=BASE+20,
+                      head_status='inProgress', observed=LATER)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertFalse(row['order_ambiguous'])
+        self.assertFalse(row['current'])
+        self.assertEqual(row['state'], 'historical')
+        with self.assertRaises(WorkspaceConflict):
+            self.assess(job_id, event['event_id'])
+        latest = self.register(job_id, turn='turn-2', start=BASE+20, end=BASE+30, observed=LAST)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertEqual(row['event_id'], latest['event_id'])
+        self.assertTrue(row['current'])
+        self.assertEqual(self.assess(job_id, latest['event_id'])['assessment']['disposition'], 'continue')
+
+    def test_unordered_new_heads_preserve_original_and_unknown_receipt(self):
+        job_id = self.planned()
+        event = self.register(job_id)
+        self.assess(job_id, event['event_id'])
+        self.prepare(job_id, event['event_id'])
+        self.register(job_id, head='turn-2', head_start=None, head_status='unknown', observed=LATER)
+        self.register(job_id, head='turn-3', head_start=None, head_status='inProgress', observed=LAST)
+        saved = self.current(job_id)
+        head = next(iter(saved['external_thread_heads'].values()))
+        self.assertEqual(head['turn_id'], 'turn-1')
+        self.assertEqual({item['turn_id'] for item in head['incomparable_heads']}, {'turn-2','turn-3'})
+        row = self.jobs.external_turns_view(saved)[0]
+        self.assertTrue(row['order_ambiguous'])
+        self.assertFalse(row['current'])
+        self.assertEqual(row['incomparable_head_count'], 2)
+        self.assertEqual(row['state'], 'dispatch_unknown')
+        with self.assertRaises(WorkspaceConflict):
+            self.prepare(job_id, event['event_id'], request='request-2')
+        later = (NOW + timedelta(seconds=1)).isoformat()
+        self.register(job_id, head='turn-2', head_start=BASE+20, head_status='inProgress', observed=later)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertTrue(row['order_ambiguous'], 'other unknown head must remain visible')
+        self.assertEqual(row['head_turn_id'], 'turn-1')
+        last = (NOW + timedelta(seconds=2)).isoformat()
+        self.register(job_id, head='turn-3', head_start=BASE+40, head_status='inProgress', observed=last)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertFalse(row['order_ambiguous'])
+        self.assertEqual(row['head_turn_id'], 'turn-3')
+        self.assertEqual(row['state'], 'dispatch_unknown')
+        self.assertEqual(len(self.current(job_id)['external_turn_events']), 1)
+        self.assertEqual(self.processes, [])
+
+    def test_unknown_primary_is_not_overwritten_by_incomparable_head(self):
+        job_id = self.planned()
+        event = self.register(job_id, head='turn-2', head_start=None, head_status='unknown')
+        self.register(job_id, head='turn-3', head_start=BASE+40, head_status='inProgress', observed=LATER)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertTrue(row['order_ambiguous'])
+        self.assertEqual(row['head_turn_id'], 'turn-2')
+        with self.assertRaises(WorkspaceConflict):
+            self.assess(job_id, event['event_id'])
+        self.register(job_id, head='turn-2', head_start=BASE+20, head_status='inProgress', observed=LAST)
+        row = self.jobs.external_turns_view(self.current(job_id))[0]
+        self.assertFalse(row['order_ambiguous'])
+        self.assertEqual(row['head_turn_id'], 'turn-3')
+        self.assertFalse(row['current'])
+
+    def test_missing_start_is_rejected_for_completed_or_same_head(self):
+        job_id = self.planned()
+        for change in ({'head':'turn-2','head_status':'completed'},
+                       {'head':'turn-2','head_status':'failed'},
+                       {'head':'turn-2','head_status':'cancelled'},
+                       {'head':'turn-1','head_status':'unknown'}):
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.register(job_id, head_start=None, **change)
+        self.assertEqual(self.current(job_id).get('external_turn_events', {}), {})
 
     def test_stale_source_cannot_authorize_assessment(self):
         job_id = self.planned()

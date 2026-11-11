@@ -93,6 +93,7 @@ class ContextTests(unittest.TestCase):
             path.parent.mkdir(parents=True)
             original = ('# 当前状态\n**2026-11-04 新方向：** 四条业务线并行。\n**当前位置：四条业务线动态安排。**\n'
                         '## 长期要做成什么\n长期目标：持续合作。\n'
+                        '**海外 B2B 现行方向：**精准批量开发、逐封审核与可信展示并行。\n'
                         '## 中期要形成的经营能力\n可重复获客和客户推进。\n'
                         '## 近期先推进什么\n历史决定（已被取代）：暂缓扩建。\n'
                         '## 怎样选择下一项工作\n按时限、机会、收益和成本动态安排。\n')
@@ -106,6 +107,7 @@ class ContextTests(unittest.TestCase):
             self.assertTrue(source['projection_complete'])
             self.assertIn('四条业务线动态安排', source['content'])
             self.assertIn('长期目标', source['content'])
+            self.assertIn('精准批量开发、逐封审核与可信展示并行', source['content'])
             self.assertIn('可重复获客和客户推进', source['content'])
             self.assertIn('按时限、机会、收益和成本', source['content'])
             self.assertNotIn('暂缓扩建', source['content'])

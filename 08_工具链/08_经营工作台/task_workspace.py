@@ -3,6 +3,7 @@
 No independent task status or business facts are persisted here. Routing is a
 read-only preview; explicit plans/dispatches still use AgentJobs' safeguards.
 """
+import math
 import re
 from datetime import datetime, timezone
 from urllib.parse import quote
@@ -196,6 +197,129 @@ def _external_failure_review(event):
     return 'checked'
 
 
+def _supervision_config(job):
+    """Project only explicit, valid opt-ins; never expose their instructions."""
+    if 'supervision' not in job:
+        return None
+    config = job['supervision']
+    if isinstance(config, dict) and config.get('enabled') is False:
+        return None
+    if not isinstance(config, dict) or config.get('enabled') is not True:
+        return {'state':'unknown'}
+    policy = config.get('policy')
+    if not isinstance(policy, str) or not policy:
+        return {'state':'unknown'}
+    if policy != 'mail_draft_read_only_v1' or job.get('mode') != 'mail_draft' or job.get('task_kind') == 'group':
+        return {'state':'unsupported'}
+    try:
+        from supervisor import _criteria
+        _criteria(job)
+    except Exception:
+        return {'state':'unknown'}
+    business = config.get('business_case')
+    keys = {'business_outcome','current_bottleneck','intended_change','stop_condition','evidence_source'}
+    if (not isinstance(business, dict) or set(business) != keys
+            or any(not isinstance(business.get(key),str) or not business[key].strip() or len(business[key]) > 500 for key in keys)
+            or config.get('prerequisite_state') not in ('ready','waiting_asset','waiting_review','unknown')
+            or config.get('value_state') not in ('supported','none','unknown')):
+        return {'state':'unknown'}
+    return {'state':'configured', 'policy':'mail_draft_read_only_v1', 'revision':job['supervision_revision'],
+            'prerequisite_state':config['prerequisite_state'], 'value_state':config['value_state']}
+
+
+def _supervisor_time(value):
+    if not isinstance(value, str):
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace('Z','+00:00'))
+        return value if parsed.tzinfo is not None else None
+    except (ValueError, OverflowError):
+        return None
+
+
+def _supervisor_status(supervisor, configured):
+    """Whitelist safe status fields and leases for already opted-in local jobs."""
+    empty = {'state':'not_connected','source':'AgentJobs supervisor.status','observed_at':None,
+             'heartbeat_at':None,'heartbeat_age_seconds':None,'instance_id':None,
+             'lease_seconds':None,'active_leases':None,'leases':None,'supervised_tasks':None,
+             'pending':None,'blocked':None,'unknown':None,'planner':'not_connected',
+             'notification':'not_connected','scan_mode':'unknown'}
+    if supervisor is None or not callable(getattr(supervisor, 'status', None)):
+        return empty
+    try:
+        raw = supervisor.status()
+        if not isinstance(raw, dict):
+            raise ValueError('invalid supervisor status')
+    except Exception:
+        return {**empty, 'state':'unavailable'}
+    state = raw.get('state') if raw.get('state') in ('running','idle','stale','unavailable') else 'unknown'
+    observed = _supervisor_time(raw.get('observed_at'))
+    heartbeat = _supervisor_time(raw.get('heartbeat_at'))
+    age = raw.get('heartbeat_age_seconds')
+    try:
+        age = age if type(age) in (int,float) and math.isfinite(age) and age >= 0 else None
+    except (OverflowError, ValueError):
+        age = None
+    if observed is None or (state == 'running' and (heartbeat is None or age is None)):
+        state = 'unknown'
+    lease_seconds = raw.get('lease_seconds')
+    if state == 'running' and (type(lease_seconds) is not int or lease_seconds < 1):
+        state = 'unknown'
+    elif state == 'running' and age > lease_seconds * 2:
+        state = 'stale'
+    if observed is not None:
+        try:
+            observed_age = (datetime.now(timezone.utc) - datetime.fromisoformat(observed.replace('Z','+00:00'))).total_seconds()
+            if observed_age < -300:
+                state = 'unknown'
+            elif state in ('running','idle') and type(lease_seconds) is int and lease_seconds > 0 and observed_age > lease_seconds * 2:
+                state = 'stale'
+        except (ValueError, OverflowError):
+            state = 'unknown'
+    ident = raw.get('instance_id')
+    ident = ident if isinstance(ident,str) and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}',ident) else None
+    result = {**empty, 'state':state, 'observed_at':observed, 'heartbeat_at':heartbeat,
+              'heartbeat_age_seconds':age, 'instance_id':ident,
+              'planner':'not_connected' if raw.get('planner') == 'not_connected' else 'unknown',
+              'notification':'not_connected' if raw.get('notification') == 'not_connected' else 'unknown',
+              'scan_mode':raw.get('scan_mode') if raw.get('scan_mode') in ('caller_driven','background') else 'unknown'}
+    for key in ('lease_seconds','supervised_tasks','pending','blocked','unknown'):
+        value = raw.get(key)
+        result[key] = value if state not in ('unknown','unavailable') and type(value) is int and value >= (1 if key == 'lease_seconds' else 0) else None
+    leases = raw.get('leases')
+    if isinstance(leases, list) and configured is not None and state not in ('unknown','unavailable'):
+        safe = []
+        invalid = False
+        for item in leases:
+            if not isinstance(item, dict):
+                invalid = True
+                continue
+            job_id = item.get('job_id')
+            if not isinstance(job_id,str):
+                invalid = True
+                continue
+            if job_id not in configured:
+                continue
+            owner = item.get('owner_id')
+            expiry = _supervisor_time(item.get('expires_at'))
+            if not isinstance(owner,str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}',owner) or not expiry:
+                invalid = True
+                continue
+            try:
+                expired = datetime.fromisoformat(expiry.replace('Z','+00:00')) <= datetime.fromisoformat(observed.replace('Z','+00:00'))
+            except (ValueError, OverflowError):
+                invalid = True
+                continue
+            if expired:
+                invalid = True
+                continue
+            safe.append({'job_id':job_id,'owner_id':owner,'expires_at':expiry})
+        if not invalid:
+            result['leases'] = safe
+            result['active_leases'] = len(safe)
+    return result
+
+
 class TaskWorkspace:
     def __init__(self, app):
         self.app = app
@@ -212,6 +336,10 @@ class TaskWorkspace:
         except (ValueError, OSError, RuntimeError):
             jobs = []
             local_state = 'unavailable'
+        supervision_configs = {job['id']:_supervision_config(job) for job in jobs}
+        configured_ids = ({key for key,value in supervision_configs.items() if value and value['state']=='configured'}
+                          if local_state == 'ok' else None)
+        supervisor_status = _supervisor_status(getattr(self.app,'supervisor',None), configured_ids)
         completions, completion_errors, result_pending, result_errors = {}, set(), {}, set()
         external_events, external_errors = {}, set()
         completion_reader = getattr(self.app.agent_jobs, 'completion_view', None)
@@ -270,6 +398,13 @@ class TaskWorkspace:
                            intent_version=None, intent_source=None, intent_state='unavailable')
             row.update(id='local:' + job['id'], job_id=job['id'], origin='local', version=job.get('version', 0))
             row['completion_events'] = completions[job['id']]
+            supervision = supervision_configs[job['id']]
+            if supervision is not None:
+                row['supervision'] = {**supervision, 'status_state':supervisor_status['state'],
+                                      'observed_at':supervisor_status['observed_at'],
+                                      'leases':([{'owner_id':lease['owner_id'],'expires_at':lease['expires_at']}
+                                                 for lease in supervisor_status['leases'] if lease['job_id']==job['id']]
+                                                if isinstance(supervisor_status['leases'],list) and supervision['state']=='configured' else None)}
             row['external_turns'] = external_events[job['id']]
             row['external_turns_state'] = ('unavailable' if job['id'] in external_errors else
                                            'ok' if callable(external_reader) else 'not_supported')
@@ -394,6 +529,36 @@ class TaskWorkspace:
                     'severity':'normal', 'object_id':job.get('object_id'),
                     'action':{'type':'open_task','job_id':job['id'],'task_id':'local:'+job['id'],'label':'核对任务'},
                     'updated_at':job.get('updated_at')})
+            supervision = supervision_configs[job['id']]
+            issue = None
+            if supervision and supervision['state'] == 'unsupported':
+                issue = '自主监督配置不支持当前任务或策略，请核对原任务；未自动接续。'
+            elif supervision and supervision['state'] == 'unknown':
+                issue = '自主监督配置不可读，无法确认是否纳管；请核对原任务。'
+            elif supervision and (supervision.get('prerequisite_state') == 'unknown' or supervision.get('value_state') == 'unknown'):
+                issue = '自主监督的前置条件或价值依据未知，请核对原任务；未自动接续。'
+            elif supervision and (supervision.get('prerequisite_state') != 'ready' or supervision.get('value_state') != 'supported'):
+                issue = '自主监督的前置条件或价值依据尚未满足，请核对原任务；未自动接续。'
+            elif supervision and supervisor_status['state'] in ('not_connected','unavailable','unknown','stale'):
+                issue = ('自主监督心跳已过期，当前运行状态未知；请核对原任务。' if supervisor_status['state']=='stale'
+                         else '自主监督状态暂不可读，无法确认运行情况；请核对原任务。')
+            if issue:
+                existing = next((item for item in reversed(inbox) if (item.get('task_id') or (item.get('action') or {}).get('task_id'))==task_id
+                                 and item.get('kind') in ('completion_review','completion_unavailable','result_outcome_unknown','agent_job')),None)
+                if existing is not None:
+                    existing['judgment'] = (existing.get('judgment') or '') + ' ' + issue
+                    existing['supervision_issue'] = issue
+                    existing['severity'] = 'high'
+                    existing['supervision_state'] = supervision['state']
+                    existing['supervisor_observed_at'] = supervisor_status['observed_at']
+                else:
+                    inbox.append({'id':'supervision-issue:'+job['id'],'task_id':task_id,
+                        'kind':'supervision_issue','group':'act','title':job.get('title') or '本机工作',
+                        'judgment':issue,'severity':'high','object_id':job.get('object_id'),
+                        'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'核对原任务'},
+                        'source':'AgentJobs 监督状态','observed_at':supervisor_status['observed_at'],
+                        'updated_at':supervisor_status['observed_at'] or job.get('updated_at'),
+                        'notification':{'state':'not_connected'}})
         # Reuse the same business decisions as the home page. These are
         # projections of existing customer records, not new tasks or copies
         # of inquiry/message data. Website open is not itself a local todo.
@@ -572,6 +737,7 @@ class TaskWorkspace:
                    for key in ('business_line','object_id','executor','priority')}
         tasks = [row for row in tasks if all(str(row.get(key) or '') == value for key,value in filters.items() if value)]
         return {'tasks': tasks, 'workstreams':workstreams, 'sources': sources, 'inbox': inbox, 'observed_at': observed,
+                'supervisor':supervisor_status,
                 'filters':options, 'applied_filters':filters,
                 'completion_capabilities':{'local_finished_events':'agent_jobs' if local_state=='ok' and callable(completion_reader) else 'unavailable',
                     'external_turn_bridge':'not_connected','push_notification':'not_connected'},

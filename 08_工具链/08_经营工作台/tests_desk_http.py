@@ -108,6 +108,61 @@ class DeskHTTPTests(unittest.TestCase):
                     self.assertEqual(action.call_args.kwargs['head_status'],state)
             self.assertEqual(action.call_count,2)
 
+    def test_external_turn_http_accepts_missing_running_head_time_only(self):
+        _,_,body=next(item for item in external_cases() if item[0]=='external-turn')
+        with patch.object(self.app.agent_jobs,'register_external_turn',create=True,return_value={'event':'recorded'}) as action:
+            for state in ('inProgress','in_progress','unknown'):
+                with self.subTest(state=state):
+                    self.assertEqual(self.request('/api/desk/job/external-turn',
+                        {**body,'head_status':state,'head_started_at':None})[0],200)
+                    self.assertIsNone(action.call_args.kwargs['head_started_at'])
+            for change in ({'head_status':'completed'}, {'head_status':'failed'},
+                           {'head_status':'cancelled'}, {'head_turn_id':body['turn_id']}):
+                with self.subTest(change=change):
+                    self.assertEqual(self.request('/api/desk/job/external-turn',
+                        {**body,**change,'head_started_at':None})[0],400)
+            self.assertEqual(action.call_count,3)
+
+    def test_missing_head_time_reaches_real_task_context_and_inbox(self):
+        from datetime import datetime, timedelta, timezone
+        from urllib.parse import urlencode
+        job=self.app.agent_jobs.start('product:BQ009','合成目标',defer=True)
+        link={'id':job['id'],'expected_version':job['version'],'provider':'codex',
+              'conversation_id':'synthetic-thread','provenance':'隔离测试'}
+        status,linked=self.request('/api/desk/job/conversation',link)
+        self.assertEqual(status,200)
+        status,bound=self.request('/api/desk/job/external-bind',{'id':job['id'],
+            'expected_version':linked['version'],'host_id':'synthetic-host','thread_id':'synthetic-thread'})
+        self.assertEqual(status,200)
+        now=datetime.now(timezone.utc)
+        started=(now-timedelta(seconds=60)).timestamp()
+        body={'id':job['id'],'expected_version':bound['version'],'host_id':'synthetic-host',
+            'thread_id':'synthetic-thread','turn_id':'synthetic-turn-1','started_at':started,
+            'completed_at':started+10,'head_turn_id':'synthetic-turn-2','head_status':'inProgress',
+            'head_started_at':None,'observed_at':now.isoformat(),'evidence':'合成正式来源观察'}
+        status,event=self.request('/api/desk/job/external-turn',body)
+        self.assertEqual(status,200)
+        status,context=self.request('/api/desk/task-context?'+urlencode({'id':job['id']}))
+        self.assertEqual(status,200)
+        row=context['external_turns'][0]
+        self.assertEqual(row['event_id'],event['event_id'])
+        self.assertTrue(row['order_ambiguous']);self.assertFalse(row['current'])
+        self.assertEqual(row['state'],'review_required');self.assertIsNone(row['head_started_at'])
+        status,overview=self.request('/api/desk/task-overview')
+        self.assertEqual(status,200)
+        items=[item for item in overview['inbox'] if item.get('event_id')==event['event_id']]
+        self.assertEqual(len(items),1);self.assertEqual(items[0]['state'],'review_required')
+        self.assertEqual(items[0]['notification']['state'],'not_connected')
+        assess={'id':job['id'],'event_id':event['event_id'],'expected_version':context['job']['version'],
+            'expected_intent_version':context['intent_version'],'disposition':'continue',
+            'goal_status':'not_met','capability_status':'unknown','result_ref':'合成成果',
+            'gap':'合成缺口','next_action':'合成下一步',
+            'evidence':{'source':'codex_app.read_thread','observed_at':now.isoformat(),'detail':'合成核对'}}
+        self.assertEqual(self.request('/api/desk/job/external-assess',assess)[0],409)
+        status,duplicate=self.request('/api/desk/job/external-turn',body)
+        self.assertEqual(status,200);self.assertEqual(duplicate['event_id'],event['event_id'])
+        self.assertEqual(self.processes,[])
+
     def test_completion_assessment_http_requires_versions_evidence_and_csrf(self):
         from workspaces import WorkspaceConflict
         path='/api/desk/job/assess-completion'

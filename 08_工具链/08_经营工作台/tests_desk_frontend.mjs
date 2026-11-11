@@ -1565,6 +1565,32 @@ test('总览明确外部回合事件桥与主动通知未接通',async()=>{
  h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
  assert.match(h.elements.page.textContent,/本机完成事件：AgentJobs 已接入/);assert.match(h.elements.page.textContent,/外部会话事件桥：未接通，未自动订阅/);assert.match(h.elements.page.textContent,/主动通知：未接通/);
 });
+test('自主监督只展示显式本机配置、受管租约与有时间的旧心跳',async()=>{
+ const h=harness('#/tasks'),data={tasks:[
+  {id:'local:m1',job_id:'m1',origin:'local',title:'已配置任务',status:'completed',supervision:{state:'configured',status_state:'stale',prerequisite_state:'ready',value_state:'supported',observed_at:'2026-11-11T10:00:00Z',leases:[{owner_id:'owner-1',expires_at:'2026-11-11T10:01:00Z',token:'PRIVATE-TOKEN'}]}},
+  {id:'local:u1',job_id:'u1',origin:'local',title:'普通任务',status:'planned'},
+  {id:'desktop:h:t',origin:'desktop',title:'外部引用',status:'unknown',supervision:{state:'configured'}}],
+  inbox:[],supervisor:{state:'stale',source:'AgentJobs supervisor.status',instance_id:'instance-1',observed_at:'2026-11-11T10:00:00Z',heartbeat_at:'2026-11-11T09:50:00Z',lease_seconds:30,active_leases:1,supervised_tasks:1,pending:1,blocked:0,unknown:0,planner:'not_connected',notification:'not_connected',scan_mode:'caller_driven',token:'PRIVATE-TOKEN',reason:'C:\\PRIVATE-PATH'}};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const shown=h.elements.page.textContent;assert.match(shown,/心跳已过期，当前运行状态未知/);assert.match(shown,/位置：工作台服务所在主机/);assert.match(shown,/持有人 owner-1/);assert.match(shown,/已启用监督配置：1/);assert.match(shown,/任务规划：未接通 · 主动通知：未接通/);assert.match(shown,/不证明后台持续运行/);
+ assert.equal((shown.match(/已登记自主监督配置/g)||[]).length,1);assert.doesNotMatch(shown,/PRIVATE-TOKEN|PRIVATE-PATH/);assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('自主监督不可用不显示零积压，异常筛选后仍打开原任务',async()=>{
+ const h=harness('#/tasks'),data={filters:{business_line:[{value:'creation',label:'creation'}]},
+  tasks:[{id:'local:m1',job_id:'m1',origin:'local',title:'需核对任务',business_line:'international',status:'completed',supervision:{state:'unknown',status_state:'unavailable'}}],
+  inbox:[{id:'supervision-issue:m1',task_id:'local:m1',kind:'supervision_issue',title:'需核对任务',judgment:'自主监督配置不可读，无法确认是否纳管；请核对原任务。',source:'AgentJobs 监督状态',notification:{state:'not_connected'},action:{type:'open_task',job_id:'m1',task_id:'local:m1'}}],
+  supervisor:{state:'unavailable',source:'AgentJobs supervisor.status',pending:null,blocked:null,unknown:null,supervised_tasks:null,active_leases:null,planner:'not_connected',notification:'not_connected'}};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();const shown=h.elements.page.textContent;
+ assert.match(shown,/状态暂不可读/);assert.match(shown,/待验收或决定：未知 · 阻塞：未知 · 未知：未知/);assert.match(shown,/无法确认是否纳管/);assert.doesNotMatch(shown,/后台循环运行中/);
+ const filter=walk(h.elements.page).find(x=>x['aria-label']==='筛选业务线');filter.value='creation';filter.listeners.change();await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Am1');assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('已有事项的 reason 不遮挡合并的监督异常，也不重复显示',async()=>{
+ const h=harness('#/tasks'),data={tasks:[{id:'local:m1',job_id:'m1',origin:'local',status:'completed'}],inbox:[{
+  id:'completion:m1:one',task_id:'local:m1',kind:'completion_review',title:'任务',reason:'原事项原因',
+  judgment:'原判断 自主监督配置不可读，请核对。',supervision_issue:'自主监督配置不可读，请核对。',notification:{state:'not_connected'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const shown=h.elements.page.textContent;assert.match(shown,/原事项原因/);assert.match(shown,/自主监督配置不可读/);assert.equal((shown.match(/自主监督配置不可读/g)||[]).length,1);
+});
 test('回合事项关联只读引用时仍只有只读入口',async()=>{
  const h=harness('#/tasks'),data={tasks:[{id:'desktop:h:t',origin:'desktop',reference_only:true,title:'只读引用'}],
   inbox:[{id:'completion:ref:one',task_id:'desktop:h:t',kind:'completion_review',title:'待核对',judgment:'状态未知',notification:{state:'not_connected'}}]};
@@ -1878,6 +1904,19 @@ test('三条工作线显示来源与只读会话，过期状态不冒充当前�
  h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>data};if(o.method==='POST')writes.push(p);return h.originalFetch(p,o);});
  await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview');assert.ok(panel);assert.match(panel.textContent,/并行工作线/);assert.match(panel.textContent,/总控与工具/);assert.match(panel.textContent,/国际站运营/);assert.match(panel.textContent,/独立站增长/);assert.match(panel.textContent,/经营空间开发会话/);assert.match(panel.textContent,/Codex 只读引用/);assert.match(panel.textContent,/当前执行者未确认/);assert.match(panel.textContent,/关联依据：负责人确认/);assert.match(panel.textContent,/当前状态未知/);assert.match(panel.textContent,/观察：正在处理/);assert.match(panel.textContent,/最近一次观察/);assert.match(panel.textContent,/来源不可用/);assert.match(panel.textContent,/未关联工作台任务/);assert.match(panel.textContent,/业务资料暂不可读/);assert.doesNotMatch(panel.textContent,/绝不可冒充实时/);assert.ok(!walk(panel).some(x=>x.tagName==='BUTTON' && /启动|接续|发送|调整/.test(x.textContent)));
  await findButton(panel,'查看只读会话引用').click();assert.match(h.location.hash,/desktop%3Adurable%3Athread1/);assert.deepEqual(writes,[]);
+});
+
+test('工作线区分可读但进展未登记、读取失败和资料过期',async()=>{
+ const h=harness('#/tasks'),data={tasks:[],workstreams:[
+  {id:'international',title:'外贸',source:{state:'unknown',label:'外贸原档',result:'不应把不明确内容说成进度'}},
+  {id:'alibaba',title:'国际站',source:{state:'unknown',label:'国际站原档'}},
+  {id:'website',title:'独立站',source:{state:'unavailable',label:'网站原档'}},
+  {id:'tools',title:'工具',source:{state:'stale',label:'工具原档'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const panel=h.elements.page.querySelector('.workstream-overview'),cards=panel.querySelectorAll('article'),card=name=>cards.find(x=>x.querySelector('h3')?.textContent===name);
+ for(const name of ['外贸','国际站']){assert.match(card(name).textContent,/业务原档已读取；当前进展未登记为可识别的状态/);assert.doesNotMatch(card(name).textContent,/业务资料暂不可读/);}
+ assert.doesNotMatch(card('外贸').textContent,/不应把不明确内容说成进度/);assert.match(card('独立站').textContent,/业务资料暂不可读/);assert.doesNotMatch(card('独立站').textContent,/业务原档已读取/);
+ assert.match(card('工具').textContent,/业务资料已过期/);assert.doesNotMatch(card('工具').textContent,/业务资料暂不可读/);assert.equal(h.requests.filter(x=>x.payload).length,0);
 });
 
 test('桌面旧快照主状态为未知，历史运行仅有观测时间',async()=>{

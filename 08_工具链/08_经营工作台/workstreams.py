@@ -4,6 +4,7 @@ Workstreams are projections, not tasks or a second source of business facts.
 No relationship is inferred from a title, object name, or similar wording.
 """
 from datetime import datetime, timezone
+from hashlib import sha256
 from pathlib import Path
 import re
 
@@ -21,6 +22,9 @@ _SPECS = (
      '03_独立站/README.md'),
 )
 
+_DIRECTION_IDS = {'国际 B2B': 'international', '国内抖店': 'domestic', '内容与创作': 'creation'}
+_DIRECTION_PATH = '00_总控台/当前状态.md'
+
 
 def _excerpt(text, limit=800):
     """Render a bounded excerpt of the source, not a newly asserted fact."""
@@ -35,12 +39,57 @@ def _line(lines, prefix):
     return next((line.strip() for line in lines if line.strip().startswith(prefix)), '')
 
 
-def _sentence(line, marker):
-    start = line.find(marker)
-    if start < 0:
-        return ''
-    end = line.find('。', start)
-    return line[start:end + 1] if end >= 0 else line[start:]
+def _read_entry(root, relative):
+    """Read one unchanged, bounded workspace source and retain its modification time."""
+    reason = '原业务档案不可读取。'
+    try:
+        root = Path(root).resolve()
+        path = (root / relative).resolve()
+        if not path.is_relative_to(root) or not path.is_file():
+            return None, None, reason
+        before = path.stat()
+        if before.st_size > 2_000_000:
+            return None, None, '原业务档案超过读取上限。'
+        with path.open('rb') as source:
+            content = source.read(2_000_001)
+        if len(content) > 2_000_000:
+            return None, None, '原业务档案超过读取上限。'
+        content = content.decode('utf-8-sig')
+        after = path.stat()
+        if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
+            return None, None, '原业务档案正在更新，请重新读取。'
+        modified = datetime.fromtimestamp(after.st_mtime, timezone.utc).isoformat()
+        return content, modified, ''
+    except (OSError, UnicodeError, ValueError):
+        return None, None, reason
+
+
+def _unique_field(lines, name):
+    prefixes = (f'**{name}：**', f'{name}：')
+    values = [line.strip().removeprefix(prefix).strip() for line in lines for prefix in prefixes
+              if line.strip().startswith(prefix)]
+    return values[0] if len(values) == 1 else ''
+
+
+def _structured_workstream(lines):
+    """Use only an explicit, unambiguous current-state block if one exists."""
+    headings = [i for i, line in enumerate(lines) if line.strip() == '## 工作线当前状态']
+    if len(headings) != 1:
+        return None
+    block = []
+    for line in lines[headings[0] + 1:]:
+        if re.match(r'^#{1,2}\s+', line.strip()):
+            break
+        block.append(line)
+    fields = {}
+    for name in ('当前工作', '已验证结果', '下一步', '阻塞'):
+        prefixes = (f'**{name}：**', f'{name}：')
+        values = [line.strip().removeprefix(prefix).strip() for line in block for prefix in prefixes
+                  if line.strip().startswith(prefix)]
+        if len(values) > 1:
+            return None
+        fields[name] = values[0] if values else ''
+    return fields if any(fields.values()) else None
 
 
 def _source(root, name, relative, key):
@@ -48,45 +97,26 @@ def _source(root, name, relative, key):
     result = {'label': name, 'observed_at': observed, 'modified_at': None,
               'state': 'unavailable', 'focus': '', 'result': '', 'next_action': '', 'blocker': '',
               'path': relative, 'reason': '原业务档案不可读取。'}
-    try:
-        root = Path(root).resolve()
-        path = (root / relative).resolve()
-        if not path.is_relative_to(root) or not path.is_file():
-            return result
-        before = path.stat()
-        if before.st_size > 2_000_000:
-            result['reason'] = '原业务档案超过读取上限。'
-            return result
-        with path.open('rb') as source:
-            content = source.read(2_000_001)
-        if len(content) > 2_000_000:
-            result['reason'] = '原业务档案超过读取上限。'
-            return result
-        content = content.decode('utf-8-sig')
-        after = path.stat()
-        if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
-            result['reason'] = '原业务档案正在更新，请重新读取。'
-            return result
-        result['modified_at'] = datetime.fromtimestamp(after.st_mtime, timezone.utc).isoformat()
-    except (OSError, UnicodeError, ValueError):
+    content, modified, reason = _read_entry(root, relative)
+    if content is None:
+        result['reason'] = reason
         return result
+    result['modified_at'] = modified
     lines = content.splitlines()
     if key == 'tools':
         focus = _line(lines, '**总控当前工作：**').removeprefix('**总控当前工作：**').strip()
         evidence = _line(lines, '**总控已验证结果：**').removeprefix('**总控已验证结果：**').strip()
         next_action = _line(lines, '**总控下一步：**').removeprefix('**总控下一步：**').strip()
         blocker = _line(lines, '**总控阻塞：**').removeprefix('**总控阻塞：**').strip()
-    elif key == 'alibaba':
-        focus = ''
-        evidence = _line(lines, '本轮研究七号仓库')
-        next_action = _line(lines, '负责人要求优先使用真实适配的现有鞋靴类目')
-        blocker = _sentence(evidence, '11月11日授权后')
     else:
-        focus = ''
-        evidence = _line(lines, '**持续推进：国际站与独立站产品对齐')
-        next_action = _sentence(evidence, '继续逐款')
-        blocker = ''
-    if not evidence or not next_action or (key != 'website' and not blocker) or (key == 'tools' and not focus):
+        fields = _structured_workstream(lines)
+        if fields is None:
+            result.update(state='unknown', read_state='ok',
+                          reason='业务来源可读，但没有明确、唯一的结构化当前状态；请查看原业务入口或已关联任务。')
+            return result
+        focus, evidence = fields['当前工作'], fields['已验证结果']
+        next_action, blocker = fields['下一步'], fields['阻塞']
+    if key == 'tools' and (not evidence or not next_action or not blocker or not focus):
         result['reason'] = '原业务档案结构或所需段落已变化，请查看业务入口。'
         return result
     result.update(state='ok', reason='', focus=_excerpt(focus), result=_excerpt(evidence),
@@ -94,23 +124,121 @@ def _source(root, name, relative, key):
     return result
 
 
-def _related_jobs(jobs, thread_id):
-    if not thread_id:
-        return []
-    related = []
-    for job in jobs:
-        job_id = job.get('id')
-        if not isinstance(job_id, str) or not job_id:
+def _direction_rows(root, snapshot, jobs):
+    """Read the global direction table without treating goals as task outcomes."""
+    observed = _now()
+    content, modified, reason = _read_entry(root, _DIRECTION_PATH)
+    def unavailable(why):
+        source = {'label':'总控方向与长期目标', 'path':_DIRECTION_PATH, 'state':'unknown',
+                  'observed_at':observed, 'modified_at':modified, 'reason':why,
+                  'focus':'', 'result':'', 'next_action':'', 'blocker':'', 'scope':'direction_registry'}
+        return [{'id':'direction-registry-unavailable', 'title':'经营方向', 'focus':'经营方向暂不可读',
+                 'source':source, 'conversation':None, 'related_jobs':[]}]
+    if content is None:
+        # Test or partial workspaces may have no global directory at all.
+        return unavailable(reason) if (Path(root) / '00_总控台').is_dir() else []
+    lines = content.splitlines()
+    header = next((i for i, line in enumerate(lines)
+                   if [cell.strip() for cell in line.strip().strip('|').split('|')] ==
+                      ['方向', '长期结果', '看什么判断进展']), None)
+    if header is None or header + 1 >= len(lines):
+        return unavailable('业务来源可读，但没有可识别的方向表。')
+    separator = lines[header + 1].strip()
+    if not re.fullmatch(r'\|?(?:\s*:?-{3,}:?\s*\|){2}\s*:?-{3,}:?\s*\|?', separator):
+        return unavailable('业务来源可读，但方向表结构无法确认。')
+    rows = []
+    for line in lines[header + 2:]:
+        if not line.strip().startswith('|'):
+            break
+        columns = [cell.strip() for cell in line.strip().strip('|').split('|')]
+        if len(columns) != 3 or not all(columns):
             continue
-        session = job.get('session_id') == thread_id
-        references = job.get('conversations') or []
-        explicit = any(isinstance(ref, dict) and ref.get('provider') == 'codex'
-                       and ref.get('conversation_id') == thread_id for ref in references)
-        if session or explicit:
-            related.append({'id': 'local:' + job_id, 'title': job.get('title') or '本机任务',
-                            'status': job.get('status') or 'unknown',
-                            'relation': 'session_id' if session else 'conversation_ref'})
-    return related
+        title, goal, metric = columns
+        if title == '共同工作能力':  # Already represented by the existing tools row.
+            continue
+        key = _DIRECTION_IDS.get(title) or 'direction-' + sha256(title.encode('utf8')).hexdigest()[:16]
+        duplicate = next((row for row in rows if row['id'] == key), None)
+        if duplicate:
+            duplicate.update(focus='方向重复登记，请核对总控原表。', conversation=None, related_jobs=[])
+            duplicate['source'].update(state='unknown', reason='方向名称重复，不能判断对应目标。',
+                                       focus='', long_term_goal='', progress_measure='')
+            duplicate['related_jobs_observation'] = {'state':'ambiguous', 'reason':'方向重复，未关联任务。',
+                                                     'source':'AgentJobs', 'observed_at':observed}
+            continue
+        current_direction = (_unique_field(lines, '海外 B2B 现行方向') if key == 'international' else '')
+        focus = ('现行方向（原文摘录）：' + current_direction if current_direction else
+                 '长期目标（不代表当前进度）：' + goal)
+        source = {'label':'总控方向与长期目标', 'path':_DIRECTION_PATH, 'state':'ok',
+                  'observed_at':observed, 'modified_at':modified, 'reason':'',
+                  'focus':_excerpt(focus), 'result':'', 'next_action':'', 'blocker':'',
+                  'scope':'direction_only', 'long_term_goal':_excerpt(goal), 'progress_measure':_excerpt(metric)}
+        conversation = _conversation(key, snapshot)
+        related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
+                                                 conversation.get('id') if conversation else None)
+        rows.append({'id':key, 'title':_excerpt(title, 120), 'focus':source['focus'], 'source':source,
+                     'conversation':conversation, 'related_jobs':related,
+                     'related_jobs_observation':link_observation})
+    return rows
+
+
+def _valid_host_bound_reference(ref):
+    host = ref.get('host_id')
+    if not isinstance(host, str) or not host.strip() or ref.get('control') != 'reference_only':
+        return False
+    try:
+        bound_at = datetime.fromisoformat(ref['host_bound_at'].replace('Z', '+00:00'))
+        return bound_at.tzinfo is not None and bound_at.utcoffset() is not None
+    except (KeyError, AttributeError, TypeError, ValueError, OverflowError):
+        return False
+
+
+def _related_jobs(jobs, host_id, thread_id):
+    """Join only an unambiguous, explicitly host-bound reference-only link."""
+    observation = {'state':'unregistered', 'reason':'未登记唯一的主机和会话引用。',
+                   'source':'AgentJobs', 'observed_at':_now()}
+    if not isinstance(host_id, str) or not host_id or not isinstance(thread_id, str) or not thread_id:
+        return [], observation
+    candidates = []
+    ambiguous = False
+    for job in jobs:
+        if not isinstance(job, dict):
+            ambiguous = True
+            continue
+        job_id = job.get('id')
+        references = job.get('conversations', [])
+        if references is None:
+            references = []
+        if not isinstance(references, list):
+            ambiguous = True
+            continue
+        matching = [ref for ref in references if isinstance(ref, dict) and ref.get('provider') == 'codex'
+                    and ref.get('conversation_id') == thread_id]
+        if any(not _valid_host_bound_reference(ref) for ref in matching):
+            ambiguous = True
+        bound = [ref for ref in matching if ref.get('host_id') == host_id]
+        if bound:
+            if (len(matching) != 1 or len(bound) != 1 or not _valid_host_bound_reference(bound[0]) or
+                    not isinstance(job_id, str) or not job_id):
+                ambiguous = True
+                continue
+            candidates.append((job, bound[0]))
+        elif job.get('session_id') == thread_id:
+            # A bare local session id does not establish its desktop host.
+            ambiguous = True
+    if ambiguous or len(candidates) > 1:
+        observation.update(state='ambiguous', reason='会话主机未绑定、引用重复或归属不唯一；未关联任务。')
+        return [], observation
+    if not candidates:
+        observation.update(state='not_linked', reason='没有同主机、同会话的明确任务引用。')
+        return [], observation
+    job, ref = candidates[0]
+    observation.update(state='ok', reason='')
+    return [{'id': 'local:' + job['id'], 'title': job.get('title') or '本机任务',
+             'status': job.get('status') or 'unknown', 'result':job.get('summary') or '',
+             'next_action':job.get('next_action') or '', 'blocker':job.get('error') or '',
+             'updated_at':job.get('updated_at'), 'observed_at':observation['observed_at'],
+             'source':'AgentJobs', 'relation':'conversation_ref', 'host_id':host_id,
+             'thread_id':thread_id, 'host_bound_at':ref['host_bound_at']}], observation
 
 
 def _conversation(key, snapshot):
@@ -151,15 +279,18 @@ def _conversation(key, snapshot):
 
 
 def build_workstreams(root, jobs, desktop_snapshot):
-    """Project current source excerpts and explicit references into three rows."""
+    """Project existing workstream entries and separately labelled business directions."""
     jobs = jobs if isinstance(jobs, list) else []
     snapshot = desktop_snapshot if isinstance(desktop_snapshot, dict) else {}
     output = []
     for key, title, focus, label, path in _SPECS:
         conversation = _conversation(key, snapshot)
         source = _source(root, label, path, key)
-        output.append({'id': key, 'title': title, 'focus': source.get('focus') or focus,
+        related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
+                                                 conversation.get('id') if conversation else None)
+        displayed_focus = source.get('focus') or (focus if source.get('state') == 'ok' else '当前工作未登记')
+        output.append({'id': key, 'title': title, 'focus': displayed_focus,
                        'source': source,
-                       'conversation': conversation,
-                       'related_jobs': _related_jobs(jobs, conversation['id'] if conversation else None)})
-    return output
+                       'conversation': conversation, 'related_jobs':related,
+                       'related_jobs_observation':link_observation})
+    return output + _direction_rows(root, snapshot, jobs)

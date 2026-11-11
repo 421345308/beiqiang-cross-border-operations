@@ -57,6 +57,34 @@ def _evidence(value):
 
 
 class CompletionFollowup:
+    def _verify_supervisor_guard(self, job, job_id, attempt, supervisor_guard):
+        """Validate the internal lease and current policy in the same write transaction."""
+        if supervisor_guard is None:
+            return None
+        from supervisor import verify_guard
+        verify_guard(self.app.db, job_id, attempt, supervisor_guard)
+        policy = job.get('supervision')
+        revision = job.get('supervision_revision')
+        criteria = policy.get('acceptance_criteria') if isinstance(policy, dict) else None
+        business_case = policy.get('business_case') if isinstance(policy, dict) else None
+        case_fields = {'business_outcome', 'current_bottleneck', 'intended_change', 'stop_condition', 'evidence_source'}
+        if (job.get('id') != job_id or type(revision) is not int or revision < 1 or
+                not isinstance(policy, dict) or policy.get('enabled') is not True or
+                policy.get('policy') != 'mail_draft_read_only_v1' or job.get('mode') != 'mail_draft' or
+                policy.get('prerequisite_state') != 'ready' or policy.get('value_state') != 'supported' or
+                not isinstance(business_case, dict) or set(business_case) != case_fields or
+                any(not isinstance(business_case.get(key), str) or not business_case[key].strip() or
+                    len(business_case[key]) > 500
+                    for key in case_fields) or
+                type(policy.get('max_auto_continuations')) is not int or policy['max_auto_continuations'] != 1 or
+                not isinstance(criteria, dict) or set(criteria) != {'kind', 'text'} or
+                criteria.get('kind') != 'artifact_contains' or not isinstance(criteria.get('text'), str) or
+                not criteria['text'].strip() or
+                any(not isinstance(policy.get(key), str) or not policy[key].strip()
+                    for key in ('continuation_instruction', 'authorization_ref'))):
+            raise WorkspaceConflict('监督配置已停用或不可用，停止自动接续。')
+        return revision
+
     def _record_finished_attempt(self, job):
         """Register the current finished attempt once, inside the job write transaction."""
         if not getattr(self, '_transaction', False):
@@ -144,7 +172,8 @@ class CompletionFollowup:
         return sorted(views, key=lambda item:item['attempt'], reverse=True)
 
     def assess_completion(self, job_id, attempt, *, expected_version, expected_intent_version,
-                          disposition, goal_status, capability_status, result_ref, gap, next_action, evidence):
+                          disposition, goal_status, capability_status, result_ref, gap, next_action, evidence,
+                          supervisor_guard=None):
         """Record an evidence-backed review without launching or controlling a conversation."""
         if type(attempt) is not int or attempt < 1:
             raise ValueError('请提供有效的执行轮次。')
@@ -166,6 +195,9 @@ class CompletionFollowup:
         evidence = _evidence(evidence)
         with self._write():
             job = self._continuity_defaults(self.get_job(job_id))
+            supervision_revision = self._verify_supervisor_guard(job, job_id, attempt, supervisor_guard)
+            if supervisor_guard is not None and job.get('version') != expected_version:
+                raise WorkspaceConflict('监督评估的任务版本已变，请重新核对。')
             if _intent_version(job) != expected_intent_version:
                 raise WorkspaceConflict('任务或当前意图版本已变化，请重新读取后验收。')
             revision = job.get('completion_revision', 0)
@@ -175,12 +207,30 @@ class CompletionFollowup:
             event = events.get(str(attempt)) if isinstance(events, dict) else None
             if not isinstance(event, dict) or event.get('event_id') != f'agent-job:{job_id}:attempt:{attempt}':
                 raise ValueError('没有该轮已确认结束的完成事件，请先核对执行记录。')
+            if supervisor_guard is not None:
+                # A mechanical condition never proves the overall business goal.
+                artifacts = event.get('artifact_ids')
+                allowed_action = ((disposition == 'continue' and
+                                   next_action == job['supervision']['continuation_instruction'] and bool(gap)) or
+                                  (disposition == 'needs_decision' and
+                                   next_action == '人工核对机械验收结果及整体业务目标。'))
+                if (not allowed_action or goal_status != 'unknown' or capability_status != 'unknown' or
+                        job.get('attempt') != attempt or job.get('status') != 'completed' or
+                        job.get('worker_finished') is not True or event.get('run_status') != 'completed' or
+                        event.get('intent_version') != expected_intent_version or
+                        not isinstance(artifacts, list) or len(artifacts) != 1 or result_ref != artifacts[0] or
+                        evidence['source'] != 'agent_jobs:artifact_contains'):
+                    raise WorkspaceConflict('当前回合、授权下一步或观察证据不满足自动接续条件。')
+                from supervisor import verify_artifact_assessment
+                verify_artifact_assessment(self.app, job, event, evidence, disposition)
             if disposition == 'verified_complete' and event.get('run_status') != 'completed':
                 raise ValueError('只有执行成功结束的轮次才能登记为该轮验收完成。')
             dispatch = event.get('dispatch')
             values = {'disposition':disposition, 'intent_version':expected_intent_version,
                       'goal_status':goal_status, 'capability_status':capability_status,
                       'result_ref':result_ref, 'gap':gap, 'next_action':next_action, 'evidence':evidence}
+            if supervisor_guard is not None:
+                values['supervision_revision'] = supervision_revision
             previous = event.get('assessment')
             same = isinstance(previous, dict) and all(previous.get(key) == value for key,value in values.items())
             # A replay can return an already persisted receipt even when the
@@ -209,5 +259,8 @@ class CompletionFollowup:
                                    'reviewed_at':stamp(), 'task_version_at_review':job['version']+1}
             job['completion_revision'] = revision + 1
             self._event(job, 'completion_assessed', '已按当前任务意图登记本轮验收与下一动作。')
+            if supervisor_guard is not None:
+                self._verify_supervisor_guard(job, job_id, attempt, supervisor_guard)
+                verify_artifact_assessment(self.app, job, event, evidence, disposition)
             self._save(job)
             return copy.deepcopy(event)

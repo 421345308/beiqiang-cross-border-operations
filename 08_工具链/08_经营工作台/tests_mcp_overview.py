@@ -39,7 +39,8 @@ class OverviewMcpTests(unittest.TestCase):
     def test_explicit_binding_and_existing_worker_restrictions(self):
         self.assertEqual(self.names(self.tools),{'get_work_overview','adjust_local_task','assess_local_run','continue_local_run','reconcile_local_run',
             'link_local_conversation','bind_external_thread','register_external_turn','assess_external_turn',
-            'prepare_external_dispatch','observe_external_dispatch','resolve_external_failure'})
+            'prepare_external_dispatch','observe_external_dispatch','resolve_external_failure',
+            'get_supervisor_status','configure_task_supervision','disable_task_supervision'})
         ordinary=DeskTools(self.business,'.','product:DEMO')
         self.assertNotIn('get_work_overview',self.names(ordinary))
         for tools in (ordinary,DeskTools(self.business,'.',OVERVIEW_OBJECT,draft_only=True),
@@ -128,6 +129,23 @@ class OverviewMcpTests(unittest.TestCase):
         schema=next(tool for tool in TOOLS if tool['name']=='register_external_turn')['inputSchema']
         self.assertIn('inProgress',schema['properties']['head_status']['enum'])
         self.assertIn('in_progress',schema['properties']['head_status']['enum'])
+
+    def test_external_turn_mcp_accepts_missing_running_head_time_only(self):
+        from tests_desk_http import external_cases
+        _,_,raw=next(item for item in external_cases() if item[0]=='external-turn')
+        body={**raw,'id':'local:p1','head_started_at':None}
+        for state in ('inProgress','in_progress','unknown'):
+            with self.subTest(state=state):
+                self.tools.call('register_external_turn',{**body,'head_status':state})
+                self.assertIsNone(self.jobs.register_external_turn.call_args.kwargs['head_started_at'])
+        for change in ({'head_status':'completed'}, {'head_status':'failed'},
+                       {'head_status':'cancelled'}, {'head_turn_id':body['turn_id']}):
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                self.tools.call('register_external_turn',{**body,**change})
+        self.assertEqual(self.jobs.register_external_turn.call_count,3)
+        schema=next(tool for tool in TOOLS if tool['name']=='register_external_turn')['inputSchema']
+        self.assertEqual(schema['properties']['head_started_at']['anyOf'],
+                         [{'type':'number','minimum':0},{'type':'null'}])
 
     def test_external_prepare_unknown_transport_is_not_replayed(self):
         from tests_desk_http import external_cases
@@ -316,7 +334,7 @@ class OverviewMcpTests(unittest.TestCase):
 
     def test_read_only_and_conflict_are_not_reported_as_success(self):
         readonly=DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True)
-        self.assertEqual(self.names(readonly),{'get_work_overview'})
+        self.assertEqual(self.names(readonly),{'get_work_overview','get_supervisor_status'})
         with self.assertRaises(ValueError):readonly.call('adjust_local_task',{'id':'local:demo','expected_version':1,'priority':'high'})
         self.jobs.adjust.side_effect=WorkspaceConflict('synthetic conflict')
         result=dispatch(self.tools,{'id':2,'method':'tools/call','params':{'name':'adjust_local_task','arguments':{'id':'local:demo','expected_version':1,'priority':'high'}}})['result']

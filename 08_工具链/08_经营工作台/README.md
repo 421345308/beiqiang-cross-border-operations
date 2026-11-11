@@ -8,11 +8,11 @@
 
 登记继续后，仅标准 `CodexBackend` 的 `mail_draft` 在检查当前版本、依赖、对象占用和未确认结果后，自动在原任务领取下一轮。执行工具及业务 MCP 只读，但最终可保存内部草稿；不发送客户消息。其他模式或不满足条件的接续仍显示待处理或阻塞。派工保存 request ID、目标 attempt、会话引用与受理/启动/运行/完成/失败/未知回执；重复请求读取原记录，结果不明先按原请求对账，不盲重发。
 
+**受管监督代码：**工作台正常启动时在同一进程运行监督循环，沿用 AgentJobs 和同一 SQLite；只对明确纳管、满足现行任务意图且具备执行条件的 `mail_draft`，按固定授权指令最多自动续接一次。纳管要登记经营结果、瓶颈、本轮状态变化、停止条件和原档来源，以及前置状态和价值判断；等待素材或审核、价值不足或未知时停止。业务判断及证据真实性仍由登记者负责；机械检查通过也不能证明经营目标达成。任务、意图、监督版本和本机租约在受支持的写事务内核对，冲突与结果未知需人工复核，不刷新版本盲重跑。模型规划、主动通知和外部桌面会话订阅未接通；本机租约不代表 VPS 跨主机互斥。该代码尚未加载正式停机中的工作台。
+
 **使用和边界：**本机 `workspace:overview` 的 MCP 能读取总览并调用 `assess_local_run`、`continue_local_run`、`reconcile_local_run`；对应本机 HTTP 接口沿现有 Host/令牌保护。代码也支持调用方显式登记已关联外部会话的回合观察、验收与请求回执，具体契约见下方；这些都是调用方提供的观察，不是工作台自行读取或发送。MCP 需要 SPQ 电脑在线且本机服务已启动，Dot 云端直接连接尚未证实。外部桌面会话的持续完成订阅、自动派工桥和主动推送均未接入；现有正式工具的单次读取不等于自动订阅。通知和外部自动桥状态为 `not_connected`，Inbox 待处理不代表负责人已收到提醒。
 
-**内部接续先前证据及运行：**2026-11-11 临时工作区、合成数据和模拟 Agent 的组合回归 322 项中 320 项通过、2 项按条件跳过；前端 DOM 175 项通过。真实 Chrome 隔离纵向测试通过：首轮进入 Inbox，登记继续后同一任务领取第二轮，刷新可读，未调用发送；默认受限环境曾在 Chrome 初始化时返回 `CreateFile` / WinError 5，随后沿已获批准的正式执行权限在临时工作区及非生产端口重测通过。另一次包含多进程测试的较大回归因 Windows 命名管道拒绝访问未通过，原有进程取消测试另有超时；未变更系统策略。当前正式工作台仍因下方 PowerShell 签名拒绝停止，新版没有正式页面或真实 Agent 验收。按系统认可的方式恢复后，先核对唯一监听与健康状态，再用隔离对象验收待办、旧版本、同请求不重复和未知结果对账，不重放客户外发。
-
-**本轮外部登记证据：**2026-11-11 的隔离 Python 组合回归 336 项中 334 项通过、2 项按条件跳过；另有外部观察及对账专项 18 项通过，前端 DOM 179 项通过。其中两项使用临时工作区、随机回环端口、真实本机 HTTP/MCP 和 AgentJobs，以合成回合走通关联、验收、未知请求及人工证据对账；没有读取或发送真实外部会话。实际 Dot 通知到登记接口的接线、正式工作台加载及真实外部派工仍未验收。
+**既有证据与限制：**2026-11-11 已在临时工作区以合成数据和模拟 Agent 验证内部接续及外部登记，也曾在隔离环境用真实 Chrome 验证接续界面；详细测试和当时状态保留在本文件的 Git 历史提交 `4e35668`、`1654456`。多进程命名管道曾遭拒绝，进程取消测试曾超时，仍需在允许的环境复验。正式工作台因下方 PowerShell 签名拒绝停止；外部通知接线、正式页面、真实外部派工和真实 Agent 尚未验收。
 
 ### 外部回合登记：本机 MCP 调用契约
 
@@ -31,16 +31,19 @@ def call(name, arguments):
                        'params':{'name':name, 'arguments':arguments}}, ensure_ascii=False)
 
 # task_id、v、iv 分别取总览中同一任务的 id、version、intent_version。
-# host_id、thread_id 必须是正式工具返回且确认属于该任务的精确身份。
+# host_id、thread_id 是本机登记接口使用的精确身份；先用对应正式来源核对与任务的关联。
 call('link_local_conversation', {'id': task_id, 'expected_version': v,
     'provider': 'codex', 'conversation_id': thread_id, 'provenance': 'synthetic explicit reference'})
 # 重新读总览更新 v，再将同一引用绑定到明确主机。
 call('bind_external_thread', {'id': task_id, 'expected_version': v,
     'host_id': host_id, 'thread_id': thread_id})
 
-# Dot 正式调用 read_thread(threadId=thread_id, hostId=host_id)，省略 cursor 读最新页；
-# 仅当最新回合确认 completed，且取得其 id、startedAt、completedAt，才使用以下登记。
-# started_at / completed_at / head_started_at 是非负 Unix 秒数字，observed_at 是读取后的带时区时间。
+# Dot 的 thread_management.read_thread 对 Dot 创建的线程只传 threadId，省略 environmentId；
+# 原生线程按其工具 schema 提供明确 environmentId。该工具没有 hostId 参数。
+# 本机 codex-app-tools 的 read_thread 是另一接口，按其 schema 可选传 hostId；两者不要混用。
+# 下例要求正式结果实际提供所需回合、状态和时间；缺字段时保留未知，不猜测或伪造时间。
+# started_at / completed_at 是已完成轮次的非负 Unix 秒；head_started_at 可为 null，
+# observed_at 必须是本次实际读取后的带时区时间。
 call('register_external_turn', {'id': task_id, 'expected_version': v,
     'host_id': host_id, 'thread_id': thread_id, 'turn_id': turn_id,
     'started_at': started_at, 'completed_at': completed_at,
@@ -72,7 +75,7 @@ call('resolve_external_failure', {'id': task_id, 'event_id': event_id, 'expected
     'observed_at': observed_at, 'detail': 'synthetic check of effects and remaining handling'}})
 ```
 
-每条代码里的 `v` 都是**该步之前重新读取**的版本，`event_id` 来自登记结果；示例文本不得当成真实观察。正式 `read_thread` 的实际进行中状态曾返回 `inProgress`，登记支持原始 `inProgress` 和兼容写法 `in_progress`；`completed` 已见真实样本，其余状态的实际返回格式尚无样本，不能猜测映射。最新观察超过 10 分钟会标 `source_stale`，不能凭旧页验收或准备请求，须重新读取。较旧回合不覆盖最新页头；时间相同但身份不同、回合时间或终态冲突、同一会话关联多个任务等情况保留原记录并停止，不按标题猜测。
+每条代码里的 `v` 都是**该步之前重新读取**的版本，`event_id` 来自登记结果；示例文本不得当成真实观察。正式 `read_thread` 的实际进行中状态曾返回 `inProgress` 且 `startedAt=null`：登记保留未知，顺序不明时不能自动验收或派工。已完成轮次缺少接口要求的起止时间时也不能登记成已核实；不得补造。最新观察超过 10 分钟会标 `source_stale`，不能凭旧页验收或准备请求，须重新读取。较旧回合不覆盖最新页头；时间相同但身份不同、回合时间或终态冲突、同一会话关联多个任务等情况保留原记录并停止，不按标题猜测。
 
 登记和观察均为 `caller_attested`：本机仅校验格式、顺序与版本，不验签调用方导入，也不证明它真的读过官方来源。准备动作只持久化请求意图、准确指令的 SHA-256 和默认 `unknown`，不发送；返回 `created=false` 表示同一请求已登记，**不得再次调用发送**。`created=true` 也不授予发送权限，仍须符合用户对具体目标的授权。若以后实际发送并取得正式受理响应，才能用 `state='accepted'` 和证据源 `codex_app.send_message_to_thread` 登记；`running/completed/failed` 还须正式 `read_thread` 的目标新回合，并提供 `target_turn_id` 及 `correlation='matching_receipt'` 的匹配受理回执，或 `correlation='manual_verification'` 和完整准确指令的 `observed_instruction_sha256`。人工核验仍是调用方断言，不是服务验签；拿不到完整依据就保持未知。
 
@@ -90,11 +93,11 @@ call('resolve_external_failure', {'id': task_id, 'event_id': event_id, 'expected
 
 ## 共同工作总览（2026-11-11）
 
-**总控当前工作：**沿现有 AgentJobs 完成外部回合观察和请求对账的代码切片，接续 Dot 正式通知及本机登记的实际连接；按明确会话引用和业务原档衔接各工作线，历史状态不当作当前运行。
+**总控当前工作：**在原 AgentJobs 上验证可恢复监督、当前意图和有停止条件的接续，逐步替换脆弱工作线解析及重复上下文；依原业务对象记录结果，历史状态不当作当前运行。
 
-**总控已验证结果：**2026-11-11 三条工作线的明确会话引用已写入现有快照；内部接续及外部回合登记的隔离证据见上方。外部样例是调用方提供的合成观察，正式服务恢复后仍需现场验收。
+**总控已验证结果：**监督和恢复以临时数据库、合成客户及模拟模型验证，后台循环跨两个独立测试进程恢复并仅接续一次；工作线不再从具体历史业务句推断现状。外部样例依调用方观察，正式服务与真实 Agent 仍需现场验收。
 
-**总控下一步：**按系统认可的受信方式恢复工作台后，验收共同总览、接续与 H008/A009 厂家查询；由 Dot 使用正式通知和 `read_thread` 核对后，验证受支持的本机登记接线与未知回执对账，并在允许的环境补验多进程和进程取消场景。
+**总控下一步：**按系统认可的受信方式恢复工作台后，验收共同总览、监督接续和 H008/A009 厂家查询；由 Dot 核对正式回合后联调本机登记及未知回执。继续用现有 `attempt_usage` 和来源读取审计量测普通任务、新会话接续及客户分析的重复上下文和成果质量，减少冗余但不静默截断完整翻译；实测不足前不宣称已优化。
 
 **总控阻塞：**2026-11-11 12:22 UTC 维护重启时，Windows PowerShell 以脚本缺少数字签名为由拒绝启动，工作台当前停止；未改变安全策略。外部桌面会话自动订阅、派工桥和主动提醒未接入，历史快照与单次读取不能证明持续连接；结果不明的外发不重放。
 
@@ -174,7 +177,7 @@ call('resolve_external_failure', {'id': task_id, 'event_id': event_id, 'expected
 
 下一轮优先：①结合真实新回复继续验收同一客户对象的 Gmail/站内消息到待办闭环；②有证据的潜客研究、去重与逐封审核资料包；③云端官方平台连接、心跳/阻塞监控及基于真实能力的云本地分派。外发审核、退订抑制和公开知识承诺底线保持原规则。
 
-入口：[打开工作台](http://127.0.0.1:8766/)。未启动时双击[启动工作台.cmd](启动工作台.cmd)。2026-11-01核对本机只在8766端口运行工作台；旧的8765地址请改用当前入口。
+入口：[打开工作台](http://127.0.0.1:8766/)。当前服务因上文所述签名拒绝停止；旧 `启动工作台.cmd` 包含 `ExecutionPolicy Bypass`，不能作为本次受信恢复路径。应先由负责人或系统管理员核对拒绝记录及已有可信签名流程，不改变或绕过系统策略。
 
 ## 云端询盘与服务器（2026-11-10）
 

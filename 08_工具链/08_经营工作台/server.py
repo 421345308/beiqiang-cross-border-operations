@@ -41,6 +41,7 @@ from cloud_review import CloudReview
 from task_workspace import TaskWorkspace
 from desktop_snapshot import DesktopSnapshot
 from alibaba_catalog_monitor import CatalogMonitor
+from supervisor import Supervisor
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -134,6 +135,9 @@ class Workbench:
         self.batch_sending=BatchSending(self)
         self.single_send_guard=SingleSendGuard(self)
         self.gmail_event_reconcile=GmailEventReconcile(self)
+        # Construction records only supervisor control metadata; the loop is
+        # started by main(), never by Workbench fixtures or library callers.
+        self.supervisor=Supervisor(self.agent_jobs)
         if self.gmail.status()['state']=='connected':self.gmail.start()
 
     def _gmail_reply(self,object_id,message,context):
@@ -446,6 +450,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/desktop-snapshot':return self.send_json(app.desktop_snapshot.read())
                 if u.path=='/api/desk/task-overview':return self.send_json(app.task_workspace.overview({k:value(k) for k in ('business_line','object_id','executor','priority') if value(k)}))
                 if u.path=='/api/desk/task-context':return self.send_json(app.agent_jobs.get_task_context(value('id')))
+                if u.path=='/api/desk/supervisor':return self.send_json(app.supervisor.status())
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
                 if u.path=='/api/desk/job/graph':return self.send_json(app.agent_jobs.get_graph(value('id')))
@@ -691,6 +696,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(app.desktop_snapshot.import_observation(body))
             if parts==['api','desk','workstream-link']:
                 return self.send_json(app.desktop_snapshot.link_workstream(body))
+            if parts in (['api','desk','supervisor','configure'],['api','desk','supervisor','disable']):
+                from desk_mcp import _validate_supervisor_operation
+                if not isinstance(body.get('id'),str):raise ValueError('请提供本机任务编号')
+                name='configure_task_supervision' if parts[-1]=='configure' else 'disable_task_supervision'
+                job_id=_validate_supervisor_operation(name,{**body,'id':'local:'+body['id']})
+                fields={key:value for key,value in body.items() if key!='id'}
+                method=app.supervisor.configure if parts[-1]=='configure' else app.supervisor.disable
+                return self.send_json(method(job_id,**fields))
             if parts==['api','desk','job','adjust']:
                 intent_fields=('current_goal','effective_decisions','intent_source','intent_reason')
                 if set(body)-{'id','expected_version','priority','next_action',*intent_fields}:raise ValueError('任务调整字段无效')
@@ -805,9 +818,21 @@ def main():
     app=Workbench(args.root);server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler);server.app=app
     app.miaoshou_agent_url='http://127.0.0.1:'+str(server.server_port)+'/api/desk/miaoshou-bridge/agent-read'
     print('贝强工作台 http://127.0.0.1:%s （本地资料、视频与具名渠道操作）'%args.port,flush=True)
-    try:server.serve_forever()
+    supervisor_stop=threading.Event()
+    supervisor_thread=threading.Thread(target=app.supervisor.run_forever,args=(supervisor_stop,),
+                                       name='workbench-supervisor',daemon=True)
+    supervisor_started=False
+    try:
+        supervisor_thread.start();supervisor_started=True
+        server.serve_forever()
     except KeyboardInterrupt:pass
     finally:
+        supervisor_stop.set()
+        if supervisor_started:
+            supervisor_thread.join(timeout=30)
+            if supervisor_thread.is_alive():
+                server.server_close()
+                raise RuntimeError('监督循环未安全停止；保留现有任务供核对。')
         app.gmail.stop()
         app.search_console.stop()
         for job in app.agent_jobs.list_jobs():

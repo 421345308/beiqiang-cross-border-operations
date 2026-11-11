@@ -292,6 +292,15 @@
         sourceHost.append(el('p',`本次观测：${time(snapshot.observed_at || snapshot.generated_at)}`,'muted'),el('p','未登记的外部桌面会话无法自动读取；会话关联仅供定位。reference_only 仅作参考，不能在这里操作。','muted'));
         if(snapshot.scope)sourceHost.append(el('p',snapshot.scope,'muted'));
         if(snapshot.sources?.cloud?.truncated)sourceHost.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
+        const supervisor=snapshot.supervisor;
+        if(supervisor && typeof supervisor==='object'){
+          const labels={running:'本次读取时后台循环运行中',idle:'本次读取时后台循环未运行',stale:'心跳已过期，当前运行状态未知',unavailable:'状态暂不可读',not_connected:'尚未接入',unknown:'运行状态未知'};
+          const count=value=>Number.isInteger(value) && value>=0?String(value):'未知';
+          const unit=el('section',undefined,'card supervisor-status');
+          unit.append(el('h3','自主监督'),el('p',`位置：工作台服务所在主机 · ${labels[supervisor.state] || labels.unknown}`),el('p',`来源：${text(supervisor.source) || '未知'} · 观测时间：${time(supervisor.observed_at)} · 实例：${text(supervisor.instance_id) || '未知'}`,'muted'),el('p',`最近心跳：${time(supervisor.heartbeat_at)} · 租约时长：${supervisor.lease_seconds==null?'未知':`${count(supervisor.lease_seconds)} 秒`} · 观察到的受管租约：${count(supervisor.active_leases)}`,'muted'),el('p',`已启用监督配置：${count(supervisor.supervised_tasks)} · 待验收或决定：${count(supervisor.pending)} · 阻塞：${count(supervisor.blocked)} · 未知：${count(supervisor.unknown)}`),el('p','数量按该次读取的已启用配置估计，不代表全部工作或可直接领取的队列。','muted'),el('p',`任务规划：${supervisor.planner==='not_connected'?'未接通':'状态未知'} · 主动通知：${supervisor.notification==='not_connected'?'未接通':'状态未知'}`,'muted'));
+          if(supervisor.scan_mode==='caller_driven')unit.append(el('p','检查可由调用方触发；此信息不证明后台持续运行。','muted'));
+          sourceHost.append(unit);
+        }
         const completion=snapshot.completion_capabilities;
         if(completion)sourceHost.append(el('p',`本机完成事件：${completion.local_finished_events==='agent_jobs'?'AgentJobs 已接入':'状态不可用'} · 外部会话事件桥：${completion.external_turn_bridge==='not_connected'?'未接通，未自动订阅':'状态未知'} · 主动通知：${completion.push_notification==='not_connected'?'未接通':'状态未知'}`,'muted'));
         for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=snapshot.sources?.[key];sourceHost.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
@@ -314,6 +323,16 @@
       const receiptNames={accepted:'已受理，尚未确认启动',starting:'启动中',running:'运行中',completed:'本轮已结束，仍需验收',failed:'失败',unknown:'未知，需对账'};
       const acceptanceNames={met:'已满足',not_met:'未满足',unknown:'未知'};
       const notificationNote=value=>{const state=typeof value==='object' && value!==null?value.state:value;return state==='not_connected'?'主动提醒未接通，需在工作台查看。':'主动提醒状态未知，不能认定已送达。';};
+      const supervisionFacts=(row,task)=>{
+        const data=task.origin==='local' && !isReference(task)?task.supervision:null;if(!data || typeof data!=='object')return;
+        const label=data.state==='configured'?'已登记自主监督配置，实际执行以回执为准':data.state==='unsupported'?'自主监督配置不支持当前任务或策略':'自主监督配置不可读，无法确认是否纳管';
+        row.append(el('p',label,data.state==='configured'?'muted':'inline-error'));
+        if(data.state==='configured' && (data.prerequisite_state!=='ready' || data.value_state!=='supported'))row.append(el('p',data.prerequisite_state==='unknown' || data.value_state==='unknown'?'自主监督前置条件或价值依据未知。':'自主监督前置条件或价值依据尚未满足。','inline-error'));
+        if(data.state==='configured' && Array.isArray(data.leases)){
+          if(data.leases.length)for(const lease of data.leases)row.append(el('p',`监督租约观察：持有人 ${text(lease.owner_id) || '未知'} · 到期 ${time(lease.expires_at)} · 读取时间 ${time(data.observed_at)}${data.status_state==='stale'?' · 心跳过期，当前状态未知':''}`,'muted'));
+          else row.append(el('p','本次读取未观察到该任务的监督租约，不代表任务已停止。','muted'));
+        }
+      };
       const workstreamHost=el('section',undefined,'workstream-overview');if(!id)host.append(workstreamHost);
       function drawWorkstreams(snapshot){
         const streams=Array.isArray(snapshot.workstreams)?snapshot.workstreams:[];
@@ -326,7 +345,10 @@
           if(source.state==='ok'){
             card.append(el('p',`已记录结果：${taskExcerpt(source.result) || '未记录'}`),el('p',`下一步：${taskExcerpt(source.next_action) || '未记录'}`),el('p',`阻塞：${taskExcerpt(source.blocker) || '未记录'}`));
             const fields=[['已记录结果',source.result],['下一步',source.next_action],['阻塞',source.blocker]];if(fields.some(([,value])=>text(value).replace(/\s+/g,' ').trim().length>180)){const detail=el('details');detail.append(el('summary','查看业务记录摘录'));for(const [label,value] of fields)if(value)detail.append(el('h4',label),el('p',text(value)));card.append(detail);}
-          }else card.append(el('p',`业务资料暂不可读${source.state==='stale'?'或已过期':''}；不能判断当前结果和下一步。`,'inline-error'));
+          }else if(source.state==='unknown')card.append(el('p','业务原档已读取；当前进展未登记为可识别的状态。','muted'));
+          else if(source.state==='unavailable')card.append(el('p','业务资料暂不可读；不能判断当前结果和下一步。','inline-error'));
+          else if(source.state==='stale')card.append(el('p','业务资料已过期；当前结果和下一步待核对。','inline-error'));
+          else card.append(el('p','业务资料读取状态未知，无法判断当前进展。','muted'));
           card.append(el('p',`业务资料：${text(source.label) || '未登记'} · 读取：${time(source.observed_at)} · 资料更新时间：${time(source.modified_at)}`,'muted'));
           if(!conversation){card.append(el('p','会话引用未登记；当前状态未知。','muted'));}
           else{
@@ -348,7 +370,7 @@
         }
       }
       if(!id)drawWorkstreams(data);
-      const taskFacts=(row,task,full=false)=>{const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · 结果：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.completion_state)row.append(el('p',`回合进展：${completionNames[task.completion_state] || '状态未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
+      const taskFacts=(row,task,full=false)=>{supervisionFacts(row,task);const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · 结果：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.completion_state)row.append(el('p',`回合进展：${completionNames[task.completion_state] || '状态未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
       if(!id){
         const command=el('textarea'),result=el('div');command.setAttribute('aria-label','任务要求');command.placeholder='说明想做什么，先匹配已有任务';
         let routing=false;
@@ -401,7 +423,8 @@
           for(const item of snapshot.inbox || []){
             const task=(snapshot.tasks || []).find(t=>t.id===(item.task_id || item.id)),row=el('article',undefined,'card');
             row.append(el('h3',taskExcerpt(item.title || task?.title || '待处理事项',100)),citedText(taskExcerpt(item.reason || item.judgment || item.summary)));const fullInbox=text(item.reason || item.judgment || item.summary);if(fullInbox.replace(/\s+/g,' ').trim().length>180){const full=el('details');full.append(el('summary','查看事项全文'),citedText(fullInbox));row.append(full);}
-            if(item.kind==='completion_review' || item.kind==='completion_unavailable' || item.kind==='result_outcome_unknown' || item.kind==='external_turn_review' || item.kind==='external_turn_unavailable'){
+            if(item.supervision_issue && !fullInbox.includes(text(item.supervision_issue)))row.append(citedText(text(item.supervision_issue)));
+            if(item.kind==='completion_review' || item.kind==='completion_unavailable' || item.kind==='result_outcome_unknown' || item.kind==='external_turn_review' || item.kind==='external_turn_unavailable' || item.kind==='supervision_issue'){
               if(item.current_goal)row.append(el('p',`目标：${taskExcerpt(item.current_goal)}`));
               if(item.next_action)row.append(el('p',`下一步：${taskExcerpt(item.next_action)}`));
               row.append(el('p',`来源：${text(item.source) || '未知'} · 观察时间：${time(item.observed_at)}`,'muted'),el('p',notificationNote(item.notification),'muted'));

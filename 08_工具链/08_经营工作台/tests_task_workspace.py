@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 import tempfile
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
@@ -61,9 +62,96 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(rows['local:solo']['capabilities']['scheduling_effect'],'explicit_standalone_dispatch')
         self.assertEqual(rows['local:group']['capabilities']['next_action_effect'],'none')
 
+    @staticmethod
+    def supervised_job(job_id='managed', **changes):
+        config={'enabled':True,'policy':'mail_draft_read_only_v1',
+                'acceptance_criteria':{'kind':'artifact_contains','text':'私有验收条件'},
+                'continuation_instruction':'私有内部指令', 'authorization_ref':'私有授权来源',
+                'max_auto_continuations':1, 'prerequisite_state':'ready','value_state':'supported',
+                'business_case':{'business_outcome':'结果','current_bottleneck':'阻塞','intended_change':'变化',
+                                 'stop_condition':'停止条件','evidence_source':'依据'}}
+        return {'id':job_id,'object_id':'product:BQ01','status':'completed','mode':'mail_draft',
+                'supervision':config,'supervision_revision':1,**changes}
+
+    def test_supervisor_projection_limits_leases_to_explicitly_supervised_local_jobs(self):
+        instant=datetime.now(timezone.utc);observed=instant.isoformat();expires=(instant+timedelta(seconds=50)).isoformat()
+        self.jobs=[self.supervised_job(),{'id':'ordinary','object_id':'product:BQ01','status':'planned'}]
+        self.app.desktop_snapshot=SimpleNamespace(read=lambda:{'state':'ok','observed_at':observed,'threads':[
+            {'id':'external','hostId':'host1','status':'active'}]})
+        status={'instance_id':'instance-1','state':'running','observed_at':observed,
+                'heartbeat_at':(instant-timedelta(seconds=2)).isoformat(),'heartbeat_age_seconds':2,
+                'lease_seconds':30,'active_leases':2,'supervised_tasks':1,'pending':1,'blocked':0,'unknown':0,
+                'leases':[{'job_id':'managed','owner_id':'owner-1','expires_at':expires,'fence':'PRIVATE-TOKEN'},
+                          {'job_id':'ordinary','owner_id':'owner-2','expires_at':expires}],
+                'planner':'not_connected','notification':'not_connected','scan_mode':'caller_driven',
+                'private_path':'C:\\PRIVATE-LOCATION','last_scan':{'token':'PRIVATE-SCAN'}}
+        calls=[];self.app.supervisor=SimpleNamespace(status=lambda:(calls.append('read') or status))
+        result=self.service.overview();rows={row['id']:row for row in result['tasks']}
+        self.assertEqual(calls,['read']);self.assertEqual(result['supervisor']['state'],'running')
+        self.assertEqual(result['supervisor']['active_leases'],1)
+        self.assertEqual(result['supervisor']['leases'],[{'job_id':'managed','owner_id':'owner-1','expires_at':expires}])
+        self.assertEqual(rows['local:managed']['supervision']['state'],'configured')
+        self.assertEqual(rows['local:managed']['supervision']['leases'][0]['owner_id'],'owner-1')
+        self.assertNotIn('supervision',rows['local:ordinary'])
+        self.assertNotIn('supervision',rows['desktop:host1:external'])
+        for secret in ('PRIVATE-TOKEN','PRIVATE-LOCATION','PRIVATE-SCAN','私有内部指令','私有授权来源','私有验收条件'):
+            self.assertNotIn(secret,str(result))
+
+    def test_supervisor_stale_or_unavailable_merges_into_existing_completion_inbox(self):
+        instant=datetime.now(timezone.utc);job=self.supervised_job(review_events=[{
+            'event_id':'run:1','attempt':1,'state':'ready_to_continue','dispatch':None,
+            'dispatch_blocked':{'reason':'前置未满足','source':'supervisor'}}])
+        self.jobs=[job];self.app.agent_jobs.completion_view=lambda item:item['review_events']
+        status={'instance_id':'one','state':'running','observed_at':instant.isoformat(),
+                'heartbeat_at':(instant-timedelta(seconds=70)).isoformat(),'heartbeat_age_seconds':70,
+                'lease_seconds':30,'leases':[],'supervised_tasks':1,'pending':0,'blocked':1,'unknown':0,
+                'planner':'not_connected','notification':'not_connected','scan_mode':'caller_driven'}
+        self.app.supervisor=SimpleNamespace(status=lambda:status)
+        result=self.service.overview();self.assertEqual(result['supervisor']['state'],'stale')
+        self.assertEqual(len(result['inbox']),1);item=result['inbox'][0]
+        self.assertEqual(item['state'],'dispatch_blocked');self.assertIn('前置未满足',item['judgment'])
+        self.assertIn('心跳已过期',item['judgment']);self.assertEqual(item['severity'],'high')
+        self.assertIn('心跳已过期',item['supervision_issue'])
+        def unavailable():raise OSError('不要显示隐私路径')
+        self.app.supervisor.status=unavailable
+        result=self.service.overview();self.assertEqual(result['supervisor']['state'],'unavailable')
+        self.assertIsNone(result['supervisor']['pending']);self.assertIsNone(result['supervisor']['active_leases'])
+        self.assertEqual(len(result['inbox']),1);self.assertIn('状态暂不可读',result['inbox'][0]['judgment'])
+        self.assertNotIn('不要显示隐私路径',str(result))
+
+    def test_supervision_unknown_unsupported_and_nonready_are_actionable_without_fake_management(self):
+        unsupported=self.supervised_job('unsupported');unsupported['supervision']['policy']='untrusted-other-policy'
+        bad=self.supervised_job('bad');bad['supervision']['business_case']=None
+        waiting=self.supervised_job('waiting');waiting['supervision']['prerequisite_state']='waiting_asset'
+        disabled=self.supervised_job('disabled');disabled['supervision']['enabled']=False
+        ordinary={'id':'ordinary','object_id':'product:BQ01','status':'completed'}
+        self.jobs=[unsupported,bad,waiting,disabled,ordinary]
+        result=self.service.overview();rows={row['job_id']:row for row in result['tasks']}
+        self.assertEqual(rows['unsupported']['supervision']['state'],'unsupported')
+        self.assertEqual(rows['bad']['supervision']['state'],'unknown')
+        self.assertEqual(rows['waiting']['supervision']['state'],'configured')
+        self.assertNotIn('supervision',rows['disabled']);self.assertNotIn('supervision',rows['ordinary'])
+        self.assertEqual({item['task_id'] for item in result['inbox']}, {'local:unsupported','local:bad','local:waiting'})
+        self.assertTrue(all(item['severity']=='high' for item in result['inbox']))
+        self.assertTrue(all(item['action']['type']=='open_task' for item in result['inbox']))
+        self.assertIsNone(result['supervisor']['pending'])
+
+    def test_supervisor_bad_status_or_config_validator_cannot_break_overview(self):
+        job=self.supervised_job();self.jobs=[job]
+        self.app.supervisor=SimpleNamespace(status=lambda:{'state':'running','observed_at':datetime.now(timezone.utc).isoformat(),
+            'heartbeat_at':datetime.now(timezone.utc).isoformat(),'heartbeat_age_seconds':10**400,
+            'lease_seconds':30,'leases':[{'job_id':[],'owner_id':'owner'}], 'pending':0})
+        result=self.service.overview();self.assertEqual(result['supervisor']['state'],'unknown')
+        self.assertIsNone(result['supervisor']['pending']);self.assertEqual(len(result['tasks']),1)
+        with patch('supervisor._criteria',side_effect=RuntimeError('temporary validator failure')):
+            result=self.service.overview()
+        self.assertEqual(result['tasks'][0]['supervision']['state'],'unknown')
+        self.assertEqual(result['inbox'][0]['kind'],'supervision_issue')
+
     def test_explicit_workstream_references_use_individual_freshness_without_guessing(self):
         self.jobs.append({'id':'related','object_id':'product:BQ01','status':'completed',
-            'conversations':[{'provider':'codex','conversation_id':'one','control':'reference_only'}]})
+            'conversations':[{'provider':'codex','conversation_id':'one','control':'reference_only',
+                              'host_id':'durable','host_bound_at':'2026-11-11T10:00:00+00:00'}]})
         snapshot={'state':'unavailable','source':'complete snapshot','observed_at':'2026-11-11T11:00:00+00:00',
             'snapshot_observed_at':'2026-11-11T05:00:00+00:00','threads':[
                 {'id':'one','hostId':'durable','title':'Same title','status':'active'},

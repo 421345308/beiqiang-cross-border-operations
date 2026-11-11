@@ -9,6 +9,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from customer_workspace import CustomerWriteOutcomeUnknown
+from supervisor import BUSINESS_CASE_FIELDS, PREREQUISITE_STATES, VALUE_STATES
 
 TEXT = {'.txt', '.csv', '.json', '.md'}
 DENY = {'.git', '.codex', '.config', 'credentials', 'secrets', 'node_modules'}
@@ -21,7 +22,8 @@ DRAFT_TOOLS = {'get_business_context','get_object','list_sources','read_source',
 RESEARCH_TOOLS = DRAFT_TOOLS | {'research_company','save_customer_profile','list_objects'}
 EXTERNAL_TOOLS = {'link_local_conversation', 'bind_external_thread', 'register_external_turn', 'assess_external_turn',
                   'prepare_external_dispatch', 'observe_external_dispatch', 'resolve_external_failure'}
-OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task', 'assess_local_run', 'continue_local_run', 'reconcile_local_run'} | EXTERNAL_TOOLS
+SUPERVISOR_TOOLS = {'get_supervisor_status','configure_task_supervision','disable_task_supervision'}
+OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task', 'assess_local_run', 'continue_local_run', 'reconcile_local_run'} | EXTERNAL_TOOLS | SUPERVISOR_TOOLS
 OVERVIEW_OBJECT = 'workspace:overview'
 
 
@@ -29,6 +31,38 @@ class WorkOverviewError(ValueError):
     def __init__(self, code, message):
         super().__init__(message)
         self.code = code
+
+
+def _validate_supervisor_operation(name,args):
+    required={'id','expected_version'}
+    if name=='configure_task_supervision':
+        required |= {'acceptance_criteria','continuation_instruction','authorization_ref',
+                     'business_case','prerequisite_state','value_state'}
+    elif name!='disable_task_supervision':
+        raise WorkOverviewError('invalid_input','不支持的监督操作。')
+    if not isinstance(args,dict) or set(args)!=required:
+        raise WorkOverviewError('invalid_input','监督配置字段无效。')
+    task_id=args['id']
+    if not isinstance(task_id,str) or not re.fullmatch(r'local:[A-Za-z0-9_-]{1,200}',task_id):
+        raise WorkOverviewError('unsupported_task','只能监督明确的本机任务。')
+    if type(args['expected_version']) is not int or args['expected_version']<0:
+        raise WorkOverviewError('invalid_input','请提供实际读取的任务版本。')
+    if name=='configure_task_supervision':
+        rule=args['acceptance_criteria']
+        case=args['business_case']
+        nonempty=lambda value,limit:isinstance(value,str) and bool(value.strip()) and len(value)<=limit
+        if (not isinstance(rule,dict) or set(rule)!={'kind','text'} or rule.get('kind')!='artifact_contains'
+                or not nonempty(rule.get('text'),500)
+                or not nonempty(args['continuation_instruction'],4000)
+                or not nonempty(args['authorization_ref'],1000)
+                or not isinstance(case,dict) or set(case)!=BUSINESS_CASE_FIELDS
+                or any(not nonempty(value,500) for value in case.values())
+                or not isinstance(args['prerequisite_state'],str)
+                or args['prerequisite_state'] not in PREREQUISITE_STATES
+                or not isinstance(args['value_state'],str)
+                or args['value_state'] not in VALUE_STATES):
+            raise WorkOverviewError('invalid_input','请填写完整经营说明、验收条件、授权与有效状态。')
+    return task_id[6:]
 
 
 def _validate_intent_adjustment(fields):
@@ -141,6 +175,9 @@ def _validate_external_operation(name, args):
             raise WorkOverviewError('invalid_input','最新回合状态无效。')
         for key in ('started_at','completed_at','head_started_at'):
             value=args[key]
+            if (key=='head_started_at' and value is None and args['head_turn_id'] != args['turn_id']
+                    and args['head_status'] in ('inProgress','in_progress','unknown')):
+                continue
             try:valid=type(value) in (int,float) and math.isfinite(value) and value>=0
             except OverflowError:valid=False
             if not valid:
@@ -262,6 +299,18 @@ class LocalOverviewClient:
         if not isinstance(token,str) or not token:
             raise WorkOverviewError('local_service_unavailable','本机工作台认证不可用。')
         return self._request('/api/desk/job/'+paths[name],{'id':job_id,**fields},token)
+
+    def supervisor_status(self):
+        return self._request('/api/desk/supervisor')
+
+    def supervisor_operation(self, name, job_id, **fields):
+        paths={'configure_task_supervision':'configure','disable_task_supervision':'disable'}
+        if name not in paths:raise WorkOverviewError('invalid_input','不支持的监督操作。')
+        bootstrap=self._request('/api/desk/bootstrap')
+        token=bootstrap.get('csrf_token')
+        if not isinstance(token,str) or not token:
+            raise WorkOverviewError('local_service_unavailable','本机工作台认证不可用。')
+        return self._request('/api/desk/supervisor/'+paths[name],{'id':job_id,**fields},token)
 
 
 class DeskTools:
@@ -455,8 +504,20 @@ class DeskTools:
                     raise WorkOverviewError('invalid_input', '总览筛选参数无效。')
                 workspace = getattr(app, 'task_workspace', None)
                 return workspace.overview(filters=filters) if workspace else client.overview(filters)
+            if name == 'get_supervisor_status':
+                if args:raise WorkOverviewError('invalid_input','监督状态不接受参数。')
+                supervisor = getattr(app,'supervisor',None)
+                return supervisor.status() if supervisor else client.supervisor_status()
             if self.read_only:
                 raise WorkOverviewError('read_only', '当前连接只读，不能调整、验收或接续任务。')
+            if name in SUPERVISOR_TOOLS:
+                job_id=_validate_supervisor_operation(name,args)
+                fields={key:value for key,value in args.items() if key!='id'}
+                supervisor=getattr(app,'supervisor',None)
+                if supervisor:
+                    method=supervisor.configure if name=='configure_task_supervision' else supervisor.disable
+                    return method(job_id,**fields)
+                return client.supervisor_operation(name,job_id,**fields)
             if name in EXTERNAL_TOOLS:
                 job_id=_validate_external_operation(name,args)
                 fields={key:value for key,value in args.items() if key!='id'}
@@ -731,6 +792,34 @@ TOOLS.extend([
      'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
 ])
 
+_SUPERVISOR_TEXT=lambda limit:{'type':'string','minLength':1,'maxLength':limit,'pattern':r'\S'}
+_SUPERVISOR_COMMON={'id':{'type':'string','pattern':'^local:[A-Za-z0-9_-]{1,200}$','maxLength':206},
+                    'expected_version':{'type':'integer','minimum':0}}
+TOOLS.extend([
+    {'name':'get_supervisor_status',
+     'description':'读取本机监督器心跳、后台运行情况、纳管范围、阻塞与未知数；通知和外部规划未连接时如实显示。',
+     'inputSchema':{'type':'object','properties':{},'additionalProperties':False},
+     'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'configure_task_supervision',
+     'description':'按当前版本登记本机任务的验收条件、授权和五项经营说明；ready/supported 且符合白名单时，后台最多可自动接续一次只读 mail_draft 并保存内部草稿，不发送客户消息。机械条件不代表整体目标完成。',
+     'inputSchema':{'type':'object','properties':{**_SUPERVISOR_COMMON,
+         'acceptance_criteria':{'type':'object','properties':{'kind':{'type':'string','enum':['artifact_contains']},
+             'text':_SUPERVISOR_TEXT(500)},'required':['kind','text'],'additionalProperties':False},
+         'continuation_instruction':_SUPERVISOR_TEXT(4000),'authorization_ref':_SUPERVISOR_TEXT(1000),
+         'business_case':{'type':'object','properties':{key:_SUPERVISOR_TEXT(500) for key in sorted(BUSINESS_CASE_FIELDS)},
+             'required':sorted(BUSINESS_CASE_FIELDS),'additionalProperties':False},
+         'prerequisite_state':{'type':'string','enum':sorted(PREREQUISITE_STATES)},
+         'value_state':{'type':'string','enum':sorted(VALUE_STATES)}},
+         'required':['id','expected_version','acceptance_criteria','continuation_instruction','authorization_ref',
+                     'business_case','prerequisite_state','value_state'],'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'disable_task_supervision',
+     'description':'按当前任务版本关闭后续监督领取；不取消或中断已运行工作。',
+     'inputSchema':{'type':'object','properties':_SUPERVISOR_COMMON,
+                    'required':['id','expected_version'],'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
+])
+
 TOOLS.extend([
     {'name':'get_customer_email_draft','description':'只读当前客户已有邮件草稿；没有草稿返回空。版本供后续安全保存，不会发送。',
      'inputSchema':{'type':'object','properties':{},'additionalProperties':False},'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}},
@@ -796,7 +885,9 @@ _EXTERNAL_SCHEMAS={
         'head_turn_id':_EXTERNAL_ID,'head_status':{'type':'string',
             'enum':['completed','inProgress','in_progress','failed','cancelled','unknown'],
             'description':'记录正式来源的回合状态；in_progress 是兼容写法。'},
-        'head_started_at':{'type':'number','minimum':0},'observed_at':{'type':'string','format':'date-time','maxLength':100},
+        'head_started_at':{'anyOf':[{'type':'number','minimum':0},{'type':'null'}],
+                           'description':'仅不同的进行中或未知 head 可缺少开始时间；缺失时顺序待核对。'},
+        'observed_at':{'type':'string','format':'date-time','maxLength':100},
         'evidence':{'type':'string','minLength':1,'maxLength':4000,'pattern':r'\S'}},set()),
     'assess_external_turn':({**_EXTERNAL_COMMON,**_EXTERNAL_EVENT,
         **{key:value for key,value in _RUN_ASSESS_PROPERTIES.items() if key not in ('id','attempt','expected_version')}},set()),
