@@ -150466,7 +150466,7 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/verification.json"
       ],
       "current_platform_fields": {
-        "at": "2026-10-19T18:51:15.790951+00:00",
+        "at": "2026-11-11T03:25:20+00:00",
         "model": "BQ-LQ1680",
         "title": "Plush Lined Winter Ankle Boots with Rotary Dial Closure Block Tread Shoes Black Grey Burgundy Wholesale EU Sizes",
         "keywords": [
@@ -150481,11 +150481,41 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 202248402,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Plush-Lined-Winter-Ankle-Boots-with_1601980486423.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Rotary dial front: Thin cords cross the tongue and pass through paired fabric guides rather than conventional tied laces.\n\nDial adjustment: Turning the dial tensions the front cord across the instep without tying conventional laces.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear."
+        "scope": "2026-11-11 详情图替换后官方 get；审核与买家页公开呈现分阶段验收",
+        "highlights": "Rotary dial front: Thin cords cross the tongue and pass through paired fabric guides rather than conventional tied laces.\n\nDial adjustment: Turning the dial tensions the front cord across the instep without tying conventional laces.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear.",
+        "detail_images": [
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H76a401cf5f5e49b39a3bb727c4d4b554i.png"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H2ba5072d0c0543eb867fa7324ad2c4d30.png"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H7df6474d495f44888f0362fac5c1e507S.png"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H5dfb23de89634c32beaef2a780c491bdz.png"
+          }
+        ]
       },
       "catalog_fields": {
         "at": "2026-10-19T18:51:15.790951+00:00",
@@ -150510,25 +150540,28 @@
         "highlights": "Rotary dial front: Thin cords cross the tongue and pass through paired fabric guides rather than conventional tied laces.\n\nDial adjustment: Turning the dial tensions the front cord across the instep without tying conventional laces.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear."
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_get.json",
-        "at": "2026-10-19T18:51:15.790951+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T032520Z.json",
+        "at": "2026-11-11T03:25:20+00:00",
+        "scope": "详情图替换提交后的本商品官方完整 get；平台审核及公开呈现待验"
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_render.json",
+        "state": "SUBMITTED_GET_MATCH_PENDING_REVIEW",
+        "current_fields_file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T032520Z.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601980486423/当前图库与货号.json",
-        "at": "2026-10-16T04:17:29.298424+00:00",
-        "observed_at": "2026-10-19T18:51:15.790951+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/verification.json"
+        "at": "2026-11-11T03:25:20+00:00",
+        "observed_at": "2026-11-11T03:25:20+00:00",
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/verification.json",
+        "prior_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980486423/formal_render.json",
+        "schema_state": "NOT_CHECKED_AFTER_SUBMISSION",
+        "next_action": "只读核审核通过及买家页面，勿重复提交。"
       },
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-19T18:51:15.790951+00:00",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-11T03:25:20+00:00",
         "score": "5.00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "scope": "本次详情图提交后 get 命中新图；评分为此前记录，买家页仍显示旧图，待审核及公开验收",
+        "score_at_utc": "2026-10-19T18:51:15.790951+00:00"
       },
       "optimization": {
         "real_source_creation": {
@@ -150571,7 +150604,7 @@
           "at": "2026-10-19T18:51:15.790951+00:00",
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved",
-          "next_action": "灰色详情图误写EU 33–48，正式SKU及买家选码为EU 39–48；制作离线修正并核对原图，等待负责人决定，不上传；不重放历史文案。",
+          "next_action": "灰色尺码详情图已提交修正，正式回读为新图但 modified/N 审核中；买家页仍显示旧图。待平台通过后再验收公开页面；不重复提交或重放历史文案。",
           "evidence": [
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/prepared.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601980486423/update_receipt.json",
@@ -150579,18 +150612,35 @@
           ]
         },
         "gallery": {
-          "state": "GREY_DETAIL_SIZE_CONFLICT_CONFIRMED_NOT_FIXED",
+          "state": "DETAIL_IMAGE_SUBMITTED_PENDING_REVIEW",
           "observed_at_utc": "2026-11-10T19:40:28.705442+00:00",
           "target_detail_image_url": "https://sc04.alicdn.com/kf/Hd8f79337c7e74921b05d176abeeebefcK.png",
           "original_image_file": "01_产品资产/01_原始素材/BQ-LQ1680/BQ-LQ1680_176799614b7069a0.png",
           "original_image_sha256": "176799614b7069a04c01f9185b980a2a46a27454a484c6638f65323fbe9b00b4",
           "issue": "买家页详情图将Grey写为EU 33–48；官方正式SKU及买家灰色选码面板为EU 39–48。",
-          "next_action": "仅制作灰色EU 39–48修正版并对照原图；等待负责人决定，未获后续指令不上传或修改平台。",
-          "offline_replacement": "NOT_PREPARED",
+          "next_action": "平台接口已受理且正式回读包含新图；审核/展示为 modified/N，买家页仍为旧图。继续核平台审核及公开页面，不重复提交。",
+          "offline_replacement": "PREPARED_HASH_VERIFIED",
           "evidence": [
             "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/买家页核验.json",
-            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/formal_get.json"
-          ]
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261110_LQ1680灰色色码核验/formal_get.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/upload_receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/update_receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/readback_20261111T032520Z.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/latest_readback_summary.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/buyer_page_observation.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/20261111_LQ1680尺码图替换/pixel_verification.json"
+          ],
+          "attempt_started_at_utc": "2026-11-11T03:17:00.621819+00:00",
+          "latest_formal_readback_at_utc": "2026-11-11T03:25:20+00:00",
+          "review_status": "modified",
+          "display": "N",
+          "replacement_detail_image_url": "https://sc04.alicdn.com/kf/H7df6474d495f44888f0362fac5c1e507S.png",
+          "replacement_image_file": "01_产品资产/02_成品素材/BQ-LQ1680/BQ-LQ1680-size-chart-EU39-48.png",
+          "replacement_image_sha256": "6c4be2dff4c6df208cccdb6173b38d4d8ff43161950ccf0dc14404132637fc47",
+          "photobank_file_id": "34216609084",
+          "update_request_id": "0b0b3a2717943670259648177",
+          "buyer_page_observation": "2026-11-11 UTC 提交后商品说明仍显示旧图，灰色 EU 33–48；修正图尚未在买家页验收通过。",
+          "image_comparison": "对照原始平台图，修改框外也存在轻微像素差异；不能称为框外像素完全一致。"
         }
       },
       "source_routes_by_color": {
