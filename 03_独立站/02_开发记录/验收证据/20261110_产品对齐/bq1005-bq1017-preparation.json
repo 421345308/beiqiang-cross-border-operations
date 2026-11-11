@@ -1,0 +1,1010 @@
+{
+  "recorded_at_utc": "2026-11-11T12:19:49+00:00",
+  "state": "PREPARED_NOT_DEPLOYED",
+  "website_commit_local": "4b9db5b7e0069020fda736aaf609291a724944ac",
+  "website_base_commit": "502bb68f802642b9c4d72df756ae8e4aeb6b9f83",
+  "planned_release": "2026-11-11.12",
+  "planned_product_count": 164,
+  "production_baseline": {
+    "release": "2026-11-11.11",
+    "catalog": [
+      {
+        "target": "VPS inquiry whitelist",
+        "release": "20261111T110747Z",
+        "ok": true,
+        "count": 162,
+        "missing": [],
+        "unexpected": [],
+        "duplicates": 0
+      },
+      {
+        "target": "https://www.beiqiang.online",
+        "ok": true,
+        "count": 162,
+        "missing": [],
+        "unexpected": [],
+        "duplicates": 0
+      }
+    ]
+  },
+  "prepared_to_production_gap": {
+    "expected_release": "2026-11-11.12",
+    "catalog": [
+      {
+        "target": "VPS inquiry whitelist",
+        "release": "20261111T110747Z",
+        "ok": false,
+        "count": 162,
+        "missing": [
+          "BQ1005",
+          "BQ1017"
+        ],
+        "unexpected": [],
+        "duplicates": 0
+      },
+      {
+        "target": "https://www.beiqiang.online",
+        "ok": false,
+        "count": 162,
+        "missing": [
+          "BQ1005",
+          "BQ1017"
+        ],
+        "unexpected": [],
+        "duplicates": 0
+      }
+    ],
+    "interpretation": "Expected gap before coordinated API and website deployments; neither staged product has been verified live."
+  },
+  "products": [
+    {
+      "code": "BQ1005",
+      "product_id": "HR005",
+      "source_id": "src-hr005-fengshou-627",
+      "source_url": "https://fsxy.sooxie.com/detail/2496290",
+      "listing": "1601943335751",
+      "receipt": {
+        "path": "03_独立站/02_开发记录/验收证据/.local/20261111_待补图正式回读/1601943335751-20261111T035706Z.json",
+        "sha256": "c330fea9da40dcac18f33c6931232ff6e7fbfd37288a9cdeb2abbee63a6f4f33",
+        "observed_at_utc": "2026-11-11T03:57:06+00:00",
+        "sku_pairs": 18
+      }
+    },
+    {
+      "code": "BQ1017",
+      "product_id": "HR017",
+      "source_id": "src-hr017-yut-a1003",
+      "source_url": "https://yut.sooxie.com/detail/2470645",
+      "listing": "1601943484872",
+      "receipt": {
+        "path": "03_独立站/02_开发记录/验收证据/.local/20261111_待补图正式回读/1601943484872-20261111T035722Z.json",
+        "sha256": "914dd8b64e76c3cef49719e29d0738b8d47f1ab405e134970b2330e6c1e84ea7",
+        "observed_at_utc": "2026-11-11T03:57:22+00:00",
+        "sku_pairs": 28
+      }
+    }
+  ],
+  "image_lineage": [
+    {
+      "code": "BQ1005",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/搜鞋替代候选/627_来源图/main_02.jpg",
+      "website_path": "/catalog/bq1005/01_main.jpg",
+      "colour": "Black",
+      "role": "on-foot",
+      "sha256": "da8f3ce5f256554e7bfb3d93f271ddc26fdb19a2fde76ccc17ce8b3175e73ec0"
+    },
+    {
+      "code": "BQ1005",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/搜鞋替代候选/627_来源图/main_03.jpg",
+      "website_path": "/catalog/bq1005/02_brown.jpg",
+      "colour": "Brown",
+      "role": "on-foot",
+      "sha256": "d07855ac24435b899f7f9c33ebe8c7abbf5ba118054c96b9b0d6043b6eab953f"
+    },
+    {
+      "code": "BQ1005",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR005/.local/搜鞋替代候选/627_来源图/main_04.jpg",
+      "website_path": "/catalog/bq1005/03_brown_side.jpg",
+      "colour": "Brown",
+      "role": "on-foot",
+      "sha256": "01b1b06ec502bb79d33bb9307294a192fae78c7a5de146dc660d6e2a170508b1"
+    },
+    {
+      "code": "BQ1005",
+      "source": "99_临时区/独立站产品对齐/bq1005-source-black-hd.jpg",
+      "website_path": "/catalog/bq1005/04_black_side.jpg",
+      "colour": "Black",
+      "role": "on-foot",
+      "sha256": "05048839697c2e49e3dc30661371d686617c317b246f41a3b5f294c0b3cc330c",
+      "source_url": "https://images.xiecdn.com/FSXY/sz9bug0iqhos0e6kjh1p1smik2go2her.jpg!bac"
+    },
+    {
+      "code": "BQ1017",
+      "source": "01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/16.jpg",
+      "website_path": "/catalog/bq1017/01_main.jpg",
+      "colour": "Black",
+      "role": "pair",
+      "sha256": "6867311e1ec3c9e401106c502f01a82402593eec4fd90c2f7d763e81bf4c4cc3"
+    },
+    {
+      "code": "BQ1017",
+      "source": "01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/20.jpg",
+      "website_path": "/catalog/bq1017/02_yellow.jpg",
+      "colour": "Yellow",
+      "role": "pair",
+      "sha256": "c60e8ff8cd2cd32180fe156bd5fa27e6c9a237fc19db2f7a8b1d62c15db548c7"
+    },
+    {
+      "code": "BQ1017",
+      "source": "01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/03.jpg",
+      "website_path": "/catalog/bq1017/03_khaki.jpg",
+      "colour": "Khaki",
+      "role": "pair",
+      "sha256": "c6168c043c33cded068c3bdb09ad6f1637bea244e9c4f35afa08eb7d635c3a4e"
+    },
+    {
+      "code": "BQ1017",
+      "source": "01_产品资产/01_原始素材/A1003_宇泰_2026-11-04/24.jpg",
+      "website_path": "/catalog/bq1017/04_wine_red.jpg",
+      "colour": "Wine Red",
+      "role": "pair",
+      "sha256": "75156ff74cd2e016f21b86466e7f5ab7d099acd539423d5eed5b0588e26550ca"
+    }
+  ],
+  "local_workbench_projection": [
+    {
+      "id": "HR005",
+      "model": "BQ1005",
+      "website": {
+        "state": "matched",
+        "url": "https://www.beiqiang.online/products/bq1005/",
+        "source": "03_独立站/03_网站源码/public/llms.txt"
+      },
+      "listing_ids": [
+        "1601943335751",
+        "1601943353831",
+        "1601943444273"
+      ],
+      "all_three_listing_ids_present": true,
+      "ok": true
+    },
+    {
+      "id": "HR017",
+      "model": "BQ1017",
+      "website": {
+        "state": "matched",
+        "url": "https://www.beiqiang.online/products/bq1017/",
+        "source": "03_独立站/03_网站源码/public/llms.txt"
+      },
+      "listing_ids": [
+        "1601943484872",
+        "1601943583193",
+        "1601943459958"
+      ],
+      "all_three_listing_ids_present": true,
+      "ok": true
+    }
+  ],
+  "workbench_scope": "The workbench reads the local llms.txt projection and can show matched while the public product URL is not yet deployed.",
+  "test_summary": {
+    "full_passed": 584,
+    "full_skipped": 8,
+    "lint_errors": 0,
+    "existing_lint_warnings": 9,
+    "additional_focused_build_and_tests": "passed"
+  },
+  "isolated_static": {
+    "release": {
+      "releaseId": "2026-11-11.12",
+      "releasedAt": "2026-11-11T12:02:07+00:00",
+      "productCount": 164,
+      "publicLanguages": [
+        "en",
+        "zh",
+        "de",
+        "fr",
+        "es"
+      ],
+      "lineSheetProductCount": 164,
+      "lineSheetPages": 35,
+      "factoryVideo": {
+        "durationSeconds": 180,
+        "narrationLanguages": [
+          "en"
+        ],
+        "captionLanguages": [
+          "en",
+          "zh"
+        ],
+        "stillCount": 9
+      },
+      "publicOrigin": "https://www.beiqiang.online"
+    },
+    "pages": [
+      {
+        "path": "/products/bq1005/",
+        "code": "BQ1005",
+        "locale": "en",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "Men's Tassel Slip-On Mules · BQ1005 | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [
+          "https://www.alibaba.com/product-detail/men-s-tassel-slip-on-mules_1601943335751.html"
+        ],
+        "localized_quote_links": [],
+        "ok": true,
+        "visible_closure_present": true
+      },
+      {
+        "path": "/zh/products/bq1005/",
+        "code": "BQ1005",
+        "locale": "zh",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "男士流苏包头后空穆勒鞋 · BQ1005 | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [
+          "https://www.alibaba.com/product-detail/men-s-tassel-slip-on-mules_1601943335751.html"
+        ],
+        "localized_quote_links": [],
+        "ok": true,
+        "visible_closure_present": true
+      },
+      {
+        "path": "/de/products/bq1005/",
+        "code": "BQ1005",
+        "locale": "de",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1005 · Herren-Mules mit Quasten und geschlossener Spitze | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/de/request-quote/",
+          "/de/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true
+      },
+      {
+        "path": "/fr/products/bq1005/",
+        "code": "BQ1005",
+        "locale": "fr",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1005 · Mules à bout fermé pour homme, à glands | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/fr/request-quote/",
+          "/fr/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true
+      },
+      {
+        "path": "/es/products/bq1005/",
+        "code": "BQ1005",
+        "locale": "es",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1005 · Mules de hombre con puntera cerrada y borlas | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/es/request-quote/",
+          "/es/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true
+      },
+      {
+        "path": "/products/bq1017/",
+        "code": "BQ1017",
+        "locale": "en",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "Men's Thong Sandals with Rivet Detail · BQ1017 | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [
+          "https://www.alibaba.com/product-detail/men-s-thong-sandals-with-rivet-detail_1601943484872.html"
+        ],
+        "localized_quote_links": [],
+        "ok": true,
+        "visible_closure_present": true,
+        "supplier_label_present": true
+      },
+      {
+        "path": "/zh/products/bq1017/",
+        "code": "BQ1017",
+        "locale": "zh",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "男士铆钉宽带夹趾凉拖 · BQ1017 | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [
+          "https://www.alibaba.com/product-detail/men-s-thong-sandals-with-rivet-detail_1601943484872.html"
+        ],
+        "localized_quote_links": [],
+        "ok": true,
+        "visible_closure_present": true,
+        "supplier_label_present": true
+      },
+      {
+        "path": "/de/products/bq1017/",
+        "code": "BQ1017",
+        "locale": "de",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1017 · Herren-Zehentrenner mit Nietendetail | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/de/request-quote/",
+          "/de/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true,
+        "supplier_label_present": true
+      },
+      {
+        "path": "/fr/products/bq1017/",
+        "code": "BQ1017",
+        "locale": "fr",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1017 · Sandales entre-doigts pour homme avec détail de rivets | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/fr/request-quote/",
+          "/fr/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true,
+        "supplier_label_present": true
+      },
+      {
+        "path": "/es/products/bq1017/",
+        "code": "BQ1017",
+        "locale": "es",
+        "curl_exit": 0,
+        "http_status": 200,
+        "title": "BQ1017 · Sandalias de dedo para hombre con detalle de remaches | Beiqiang",
+        "code_present": true,
+        "localized_name_present": true,
+        "size_present": true,
+        "colours_present": true,
+        "alibaba_links": [],
+        "localized_quote_links": [
+          "/es/request-quote/",
+          "/es/request-quote/"
+        ],
+        "ok": true,
+        "visible_closure_present": true,
+        "supplier_label_present": true
+      }
+    ],
+    "images": [
+      {
+        "path": "/catalog-web/bq1005/01_main.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1005/02_brown.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1005/03_brown_side.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1005/04_black_side.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1017/01_main.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1017/02_yellow.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1017/03_khaki.webp",
+        "ok": true
+      },
+      {
+        "path": "/catalog-web/bq1017/04_wine_red.webp",
+        "ok": true
+      }
+    ],
+    "catalogue": [
+      {
+        "locale": "en",
+        "pdf_matches": true,
+        "versioned_link": true,
+        "count_present": true,
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "pdf_matches": true,
+        "versioned_link": true,
+        "count_present": true,
+        "ok": true
+      },
+      {
+        "locale": "de",
+        "pdf_matches": true,
+        "versioned_link": true,
+        "count_present": true,
+        "ok": true
+      },
+      {
+        "locale": "fr",
+        "pdf_matches": true,
+        "versioned_link": true,
+        "count_present": true,
+        "ok": true
+      },
+      {
+        "locale": "es",
+        "pdf_matches": true,
+        "versioned_link": true,
+        "count_present": true,
+        "ok": true
+      }
+    ],
+    "collections": [
+      {
+        "locale": "en",
+        "product_present": true,
+        "direct_quote_link": true,
+        "unsupported_program_absent": true,
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "product_present": true,
+        "direct_quote_link": true,
+        "unsupported_program_absent": true,
+        "ok": true
+      },
+      {
+        "locale": "de",
+        "product_present": true,
+        "direct_quote_link": true,
+        "unsupported_program_absent": true,
+        "ok": true
+      },
+      {
+        "locale": "fr",
+        "product_present": true,
+        "direct_quote_link": true,
+        "unsupported_program_absent": true,
+        "ok": true
+      },
+      {
+        "locale": "es",
+        "product_present": true,
+        "direct_quote_link": true,
+        "unsupported_program_absent": true,
+        "ok": true
+      }
+    ],
+    "routes_checked": 820,
+    "errors": [],
+    "all_passed": true
+  },
+  "isolated_browser": {
+    "checkedAt": "2026-11-11T12:18:28.370Z",
+    "target": "isolated local static build",
+    "blockedNonGetRequests": true,
+    "colorChecks": [
+      {
+        "code": "BQ1005",
+        "color": "Black",
+        "image": "01_main.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1005",
+        "color": "Brown",
+        "image": "02_brown.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1017",
+        "color": "Black",
+        "image": "01_main.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1017",
+        "color": "Yellow",
+        "image": "02_yellow.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1017",
+        "color": "Khaki",
+        "image": "03_khaki.webp",
+        "matches": true
+      },
+      {
+        "code": "BQ1017",
+        "color": "Wine Red",
+        "image": "04_wine_red.webp",
+        "matches": true
+      }
+    ],
+    "quoteListProducts": [
+      "BQ1005",
+      "BQ1017"
+    ],
+    "quotePage": true,
+    "filterChecks": [
+      {
+        "locale": "en",
+        "closure": "Slip-On",
+        "code": "BQ1005",
+        "found": true
+      },
+      {
+        "locale": "en",
+        "closure": "Slip-On",
+        "code": "BQ1017",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "closure": "Slip-On",
+        "code": "BQ1005",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "closure": "Slip-On",
+        "code": "BQ1017",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "closure": "Slip-On",
+        "code": "BQ1005",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "closure": "Slip-On",
+        "code": "BQ1017",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "closure": "Slip-On",
+        "code": "BQ1005",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "closure": "Slip-On",
+        "code": "BQ1017",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "closure": "Slip-On",
+        "code": "BQ1005",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "closure": "Slip-On",
+        "code": "BQ1017",
+        "found": true
+      }
+    ],
+    "sizeChecks": [
+      {
+        "locale": "en",
+        "code": "BQ1005",
+        "size": "38",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ1005",
+        "size": "46",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ1005",
+        "size": "47",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "en",
+        "code": "BQ1017",
+        "size": "40",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1005",
+        "size": "38",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1005",
+        "size": "46",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1005",
+        "size": "47",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1017",
+        "size": "40",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "de",
+        "code": "BQ1005",
+        "size": "38",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "de",
+        "code": "BQ1005",
+        "size": "46",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "de",
+        "code": "BQ1005",
+        "size": "47",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "de",
+        "code": "BQ1017",
+        "size": "40",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1005",
+        "size": "38",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1005",
+        "size": "46",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1005",
+        "size": "47",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1017",
+        "size": "40",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "es",
+        "code": "BQ1005",
+        "size": "38",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "es",
+        "code": "BQ1005",
+        "size": "46",
+        "found": true,
+        "expected": true
+      },
+      {
+        "locale": "es",
+        "code": "BQ1005",
+        "size": "47",
+        "found": false,
+        "expected": false
+      },
+      {
+        "locale": "es",
+        "code": "BQ1017",
+        "size": "40",
+        "found": false,
+        "expected": false
+      }
+    ],
+    "directionChecks": [
+      {
+        "locale": "en",
+        "code": "BQ1005",
+        "direction": "mule-shoes",
+        "found": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ1017",
+        "direction": "slide-sandals",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1005",
+        "direction": "mule-shoes",
+        "found": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1017",
+        "direction": "slide-sandals",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "code": "BQ1005",
+        "direction": "mule-shoes",
+        "found": true
+      },
+      {
+        "locale": "de",
+        "code": "BQ1017",
+        "direction": "slide-sandals",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1005",
+        "direction": "mule-shoes",
+        "found": true
+      },
+      {
+        "locale": "fr",
+        "code": "BQ1017",
+        "direction": "slide-sandals",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "code": "BQ1005",
+        "direction": "mule-shoes",
+        "found": true
+      },
+      {
+        "locale": "es",
+        "code": "BQ1017",
+        "direction": "slide-sandals",
+        "found": true
+      }
+    ],
+    "guideChecks": [
+      {
+        "locale": "en",
+        "code": "BQ1005",
+        "ok": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ-M858",
+        "ok": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ-W5998",
+        "ok": true
+      },
+      {
+        "locale": "en",
+        "code": "BQ1017",
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1005",
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ-M858",
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ-W5998",
+        "ok": true
+      },
+      {
+        "locale": "zh",
+        "code": "BQ1017",
+        "ok": true
+      }
+    ],
+    "allPassed": true
+  },
+  "isolated_pdf": {
+    "catalogueProducts": 164,
+    "languages": {
+      "en": {
+        "pages": 35,
+        "distinct_products": 164,
+        "code_links_ok": 164,
+        "sha256": "13e8b696fc41b2eb93a0ffd113ebcdb3c85b36d68522bd202c440d865fd18607",
+        "new_products": {
+          "BQ1005": {
+            "page": 34,
+            "source": "/catalog/bq1005/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.1547265625,
+            "text_ok": true
+          },
+          "BQ1017": {
+            "page": 34,
+            "source": "/catalog/bq1017/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.22106573705179283,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "zh": {
+        "pages": 35,
+        "distinct_products": 164,
+        "code_links_ok": 164,
+        "sha256": "ddcb46bf9b2a8f1a0a0b619408718df9c4051681006fea559c1a2bb37edc53bf",
+        "new_products": {
+          "BQ1005": {
+            "page": 34,
+            "source": "/catalog/bq1005/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.1547265625,
+            "text_ok": true
+          },
+          "BQ1017": {
+            "page": 34,
+            "source": "/catalog/bq1017/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.22106573705179283,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "de": {
+        "pages": 43,
+        "distinct_products": 164,
+        "code_links_ok": 164,
+        "sha256": "0cb57122cc11e405a2d9b5ba67a7716e0f7bf22ef9f148ad385d3e4ac3fd1dd8",
+        "new_products": {
+          "BQ1005": {
+            "page": 42,
+            "source": "/catalog/bq1005/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.1547265625,
+            "text_ok": true
+          },
+          "BQ1017": {
+            "page": 42,
+            "source": "/catalog/bq1017/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.22106573705179283,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "fr": {
+        "pages": 43,
+        "distinct_products": 164,
+        "code_links_ok": 164,
+        "sha256": "1ebdc14b63a6a990e42460729c057f29d16a75d42f1260dbfa660e3cde85eac6",
+        "new_products": {
+          "BQ1005": {
+            "page": 42,
+            "source": "/catalog/bq1005/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.1547265625,
+            "text_ok": true
+          },
+          "BQ1017": {
+            "page": 42,
+            "source": "/catalog/bq1017/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.22106573705179283,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      },
+      "es": {
+        "pages": 43,
+        "distinct_products": 164,
+        "code_links_ok": 164,
+        "sha256": "fceb30ce1995b7da0fcb2605c0ffd079af0ee2712964d9ca949ce5379efcf68a",
+        "new_products": {
+          "BQ1005": {
+            "page": 42,
+            "source": "/catalog/bq1005/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.1547265625,
+            "text_ok": true
+          },
+          "BQ1017": {
+            "page": 42,
+            "source": "/catalog/bq1017/01_main.jpg",
+            "embedded_matches_source_thumbnail": true,
+            "maximum_mean_channel_delta": 0.22106573705179283,
+            "text_ok": true
+          }
+        },
+        "errors": []
+      }
+    },
+    "issues": [],
+    "all_passed": true
+  },
+  "pdf_visual_review": "Five languages, both new cards, with labels, four BQ1017 colours, images and page fit reviewed at 2x. PDFs match isolated_pdf SHA256.",
+  "source_scope": "Previously adopted products and existing website download feature only; platform SKU configuration does not establish real-time stock.",
+  "remaining": "Coordinate BQ1005 and BQ1017 with the production API owner, publish website through its normal workflow, then rerun verify:deployments and independently verify the formal five-language pages, inquiry paths and downloads."
+}
