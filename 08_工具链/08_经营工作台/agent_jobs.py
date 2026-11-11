@@ -5,6 +5,7 @@ Customer messages and sensitive commitments remain subject to project rules.
 """
 from __future__ import annotations
 
+import copy
 import json
 import os
 import re
@@ -23,6 +24,8 @@ from workspaces import WorkspaceConflict
 from codex_backend import CodexBackend, MODEL
 from job_dependencies import JobDependencies
 from task_continuity import TaskContinuity
+from completion_followup import CompletionFollowup
+from completion_dispatch import CompletionDispatch
 
 ACTIVE = ('queued', 'running')
 HELD_REASONS = ('planning_changed_during_attempt', 'intent_snapshot_missing', 'result_outcome_unknown',
@@ -83,7 +86,7 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-class AgentJobs(TaskContinuity, JobDependencies):
+class AgentJobs(TaskContinuity, JobDependencies, CompletionFollowup, CompletionDispatch):
     def __init__(self, app, backend=None):
         self.app = app
         self.backend = backend if backend is not None else CodexBackend(executable_resolver=lambda:codex_executable())
@@ -127,6 +130,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
             child_exited=(self._pid_alive(job['process_id']) is False if job.get('process_id')
                           else job['status']=='queued')
             if self._owner_alive(job) is False and child_exited:
+                previous_status = job['status']
                 if job.get('result_commit'):
                     job['result_commit']['state'] = 'outcome_unknown'
                     self._hold_attempt_result(job, job.get('attempt', 0), 'result_outcome_unknown')
@@ -135,7 +139,29 @@ class AgentJobs(TaskContinuity, JobDependencies):
                     job.update(status='failed', error='服务重启中断了执行；未自动重跑，请核对已有成果和进程后继续原会话。', updated_at=now())
                 job['worker_finished']=True
                 self._event(job, 'interrupted', '服务重启，执行已中断；已发生的业务写入和外部动作需核对。')
+                self._record_recovered_attempt(job, previous_status)
                 self._save(job)
+
+    def _record_recovered_attempt(self, job, previous_status):
+        """Register only an observed running attempt, after exit is established."""
+        if not self._transaction:
+            raise RuntimeError('恢复回合登记必须在任务写事务内进行。')
+        # A queued continuation still carries the previous attempt number; it
+        # is not evidence that the next attempt ever started.
+        if previous_status != 'running':
+            return
+        try:
+            attempt = job.get('attempt')
+            if type(attempt) is not int or attempt < 1:
+                raise ValueError('执行轮次不可识别。')
+            self._record_finished_attempt(job)
+        except (ValueError, WorkspaceConflict, TypeError, KeyError):
+            job['completion_error'] = {'state':'unavailable', 'observed_at':now(),
+                'reason':'已确认退出的运行轮次无法登记，请核对原任务和执行记录；未自动续派。'}
+            revision = job.get('completion_revision', 0)
+            if type(revision) is int and revision >= 0:
+                job['completion_revision'] = revision + 1
+            self._event(job, 'completion_record_failed', job['completion_error']['reason'])
 
     def _save(self, job):
         if not self._transaction:
@@ -149,7 +175,51 @@ class AgentJobs(TaskContinuity, JobDependencies):
         if row:
             persisted = self._continuity_defaults(json.loads(row[0]))
             self._continuity_defaults(job)
+            if job['version'] < persisted['version']:
+                saved_commit = persisted.get('result_commit')
+                incoming_commit = job.get('result_commit')
+                newer_unknown = (isinstance(saved_commit, dict) and
+                                 saved_commit.get('state') == 'outcome_unknown' and
+                                 incoming_commit != saved_commit)
+                newer_reconciliation = persisted.get('result_reconciliations', []) != job.get('result_reconciliations', [])
+                terminal_regression = (persisted.get('status') not in ACTIVE and job.get('status') in ACTIVE and
+                                       persisted.get('attempt') == job.get('attempt'))
+                if newer_unknown or newer_reconciliation or terminal_regression:
+                    raise WorkspaceConflict('任务执行状态或成果核对记录已变化；保留当前结果，请重新读取，不自动重试。')
             job['version'] = max(job['version'], persisted['version'])
+            # Results are indexed by attempt, rather than replaced by the most
+            # recent hold. A stale worker must not erase an earlier attempt.
+            saved_held = persisted.get('held_results', {})
+            incoming_held = job.get('held_results', {})
+            if not isinstance(saved_held, dict) or not isinstance(incoming_held, dict):
+                raise ValueError('待复核成果索引不可读，请先核对。')
+            saved_revision = persisted.get('held_revision', 0)
+            incoming_revision = job.get('held_revision', 0)
+            if (type(saved_revision) is not int or saved_revision < 0 or
+                    type(incoming_revision) is not int or incoming_revision < 0):
+                raise ValueError('待复核成果版本不可读，请先核对。')
+            saved_held, incoming_held = copy.deepcopy(saved_held), copy.deepcopy(incoming_held)
+            for source, index in ((persisted, saved_held), (job, incoming_held)):
+                previous = source.get('held_result')
+                if isinstance(previous, dict) and type(previous.get('attempt')) is int and previous['attempt'] > 0:
+                    index.setdefault(str(previous['attempt']), copy.deepcopy(previous))
+            if saved_revision == incoming_revision and any(
+                    saved_held[key] != incoming_held[key] for key in saved_held.keys() & incoming_held.keys()):
+                raise WorkspaceConflict('同一轮的待复核成果索引已变化，请先核对。')
+            if saved_revision > incoming_revision:
+                merged_held = {**incoming_held, **saved_held}
+                if 'held_result' in persisted:
+                    job['held_result'] = copy.deepcopy(persisted['held_result'])
+            else:
+                merged_held = {**saved_held, **incoming_held}
+            if merged_held:
+                job['held_results'] = merged_held
+                job['held_revision'] = max(saved_revision, incoming_revision)
+                valid_held = [item for key, item in merged_held.items() if isinstance(item, dict)
+                              and type(item.get('attempt')) is int and item['attempt'] > 0
+                              and key == str(item['attempt'])]
+                if valid_held:
+                    job['held_result'] = copy.deepcopy(max(valid_held, key=lambda item:item['attempt']))
             # Worker snapshots must not overwrite concurrent operator adjustments.
             if persisted.get('adjustment_version', 0) > job.get('adjustment_version', 0):
                 for key in ('priority', 'next_action', 'adjustment_version', 'adjustments', 'intent'):
@@ -165,8 +235,35 @@ class AgentJobs(TaskContinuity, JobDependencies):
                         job.setdefault('events', []).append(event)
                         known_events[key] += 1
                 job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
+            saved_completion = persisted.get('completion_revision', 0)
+            current_completion = job.get('completion_revision', 0)
+            if (type(saved_completion) is not int or saved_completion < 0 or
+                    type(current_completion) is not int or current_completion < 0):
+                job['completion_events'] = copy.deepcopy(persisted.get('completion_events', {}))
+                job['completion_revision'] = saved_completion
+                job['completion_error'] = {'state':'unavailable', 'observed_at':now(),
+                    'reason':'回合验收版本不可读，请核对原任务；未自动续派。'}
+            elif saved_completion > current_completion:
+                job['completion_events'] = copy.deepcopy(persisted.get('completion_events', {}))
+                job['completion_revision'] = persisted['completion_revision']
+                if 'completion_error' in persisted:
+                    job['completion_error'] = copy.deepcopy(persisted['completion_error'])
+                from collections import Counter
+                identity = lambda event: (event.get('at'), event.get('type'), event.get('text'))
+                known_events = Counter(identity(e) for e in job.get('events', []))
+                saved_events = Counter()
+                for event in persisted.get('events', []):
+                    key = identity(event)
+                    saved_events[key] += 1
+                    if (event.get('type') in ('completion_assessed','completion_record_failed','followup_accepted','followup_unknown','followup_reconciled','followup_blocked')
+                            and saved_events[key] > known_events[key]):
+                        job.setdefault('events', []).append(event)
+                        known_events[key] += 1
+                job['events'] = sorted(job.get('events', []), key=lambda event: event.get('at') or '')[-200:]
             known = {(c['provider'], c['conversation_id']) for c in job['conversations']}
             job['conversations'].extend(c for c in persisted['conversations'] if (c['provider'], c['conversation_id']) not in known)
+        if type(job.get('completion_revision', 0)) is int and job.get('completion_revision', 0) >= 0:
+            self._sync_followup_receipts(job)
         self._record_continuity(job)
         job['updated_at'] = now()
         with self.app.lock:
@@ -303,10 +400,20 @@ class AgentJobs(TaskContinuity, JobDependencies):
         return job['attempt_plan']
 
     def _hold_attempt_result(self, job, attempt, reason):
-        if reason not in HELD_REASONS:
+        if type(attempt) is not int or attempt < 1 or reason not in HELD_REASONS:
             raise ValueError('待复核原因无效。')
-        job['held_result'] = {'attempt': attempt, 'reason': reason, 'recorded_at': now(),
-                              'format': 'json' if job.get('mode') == 'customer_analysis' else 'markdown'}
+        index = job.setdefault('held_results', {})
+        revision = job.get('held_revision', 0)
+        if not isinstance(index, dict) or type(revision) is not int or revision < 0:
+            raise ValueError('待复核成果索引不可读，请先核对。')
+        previous = job.get('held_result')
+        if isinstance(previous, dict) and type(previous.get('attempt')) is int and previous['attempt'] > 0:
+            index.setdefault(str(previous['attempt']), copy.deepcopy(previous))
+        held = {'attempt': attempt, 'reason': reason, 'recorded_at': now(),
+                'format': 'json' if job.get('mode') == 'customer_analysis' else 'markdown'}
+        index[str(attempt)] = held
+        job['held_result'] = held  # Older clients still see the most recent held attempt.
+        job['held_revision'] = revision + 1
 
     def _claim_result_commit(self, job_id, attempt):
         """Fence supported planning edits through the existing final save."""
@@ -342,14 +449,26 @@ class AgentJobs(TaskContinuity, JobDependencies):
             self._save(job)
             return job
 
-    def read_held_result(self, job_id):
+    def read_held_result(self, job_id, *, attempt=None):
         """Read only an explicitly held result from this job's private attempt."""
         if not isinstance(job_id, str) or not re.fullmatch(r'[0-9a-f]{32}', job_id):
             raise ValueError('当前任务没有可查看的待复核成果。')
         job = self.get_job(job_id)
-        held = job.get('held_result')
+        if attempt is not None and (type(attempt) is not int or attempt < 1):
+            raise ValueError('待复核成果轮次无效。')
+        if attempt is None:
+            held = job.get('held_result')
+        else:
+            index = job.get('held_results', {})
+            if not isinstance(index, dict):
+                raise ValueError('待复核成果索引不可读，请先核对。')
+            held = index.get(str(attempt))
+            if held is None and isinstance(job.get('held_result'), dict) and job['held_result'].get('attempt') == attempt:
+                held = job['held_result']
         if not isinstance(held, dict) or type(held.get('attempt')) is not int or held['attempt'] < 1:
             raise ValueError('当前任务没有可查看的待复核成果。')
+        if attempt is not None and held['attempt'] != attempt:
+            raise ValueError('待复核成果索引与轮次不一致，请先核对。')
         reason, kind = held.get('reason'), held.get('format')
         if reason not in HELD_REASONS or kind not in ('json', 'markdown'):
             raise ValueError('当前任务没有可查看的待复核成果。')
@@ -370,29 +489,61 @@ class AgentJobs(TaskContinuity, JobDependencies):
                 'content': content, 'reason': reason, 'recorded_at': held.get('recorded_at'),
                 'warning': '这是保留的原始成果，可能尚未完成或通过校验；运行中的其他工具可能已写入业务资料或产生外部动作，需单独核对。'}
 
-    def reconcile_result_commit(self, job_id, *, expected_version, evidence):
-        """Record explicit human reconciliation without publishing or retrying."""
+    def reconcile_result_commit(self, job_id, *, expected_version, evidence, outcome=None, attempt=None):
+        """Record a human-confirmed save outcome without publishing or retrying."""
         if not isinstance(evidence, str) or not evidence.strip() or len(evidence) > 2000:
             raise ValueError('请填写不超过2000字的实际核对说明。')
+        if attempt is not None and (type(attempt) is not int or attempt < 1):
+            raise ValueError('请提供要核对的有效轮次。')
         with self._write():
             job = self.get_job(job_id)
             self._continuity_defaults(job)
             if type(expected_version) is not int or expected_version != job['version']:
                 raise WorkspaceConflict('任务版本已变化，请刷新后重新核对。')
+            if outcome not in ('completed', 'failed'):
+                raise ValueError('请根据实际回执明确选择保存已完成或已失败；结果仍不明时保持待核对，不会自动重试。')
             commit = job.get('result_commit')
-            if (job.get('status') != 'needs_input' or not isinstance(commit, dict)
-                    or commit.get('state') != 'outcome_unknown'
-                    or type(commit.get('attempt')) is not int or commit['attempt'] != job.get('attempt')):
-                raise ValueError('当前任务没有待核对的成果保存结果。')
             if job.get('worker_finished') is not True:
                 raise ValueError('执行仍在收尾，暂不能完成核对。')
+            if job.get('status') in ACTIVE:
+                raise ValueError('工作仍在执行，暂不能完成核对。')
             if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
                 raise ValueError('原进程仍在运行或状态未知，请先核对。')
-            job.setdefault('result_reconciliations', []).append({'attempt': commit.get('attempt'),
-                'recorded_at': now(), 'evidence': evidence.strip(), 'prior_state': 'outcome_unknown'})
-            job['result_reconciliations'] = job['result_reconciliations'][-100:]
-            job.pop('result_commit', None)
-            self._event(job, 'result_commit_reconciled', '已记录人工核对说明；未自动重试、发布或判定外部动作结果。')
+            pending = self._pending_result_attempts(job)
+            if commit is not None:
+                if (not isinstance(commit, dict) or commit.get('state') not in ('outcome_unknown', 'saving')
+                        or type(commit.get('attempt')) is not int or commit['attempt'] != job.get('attempt')):
+                    raise ValueError('成果保存状态不可核对，请先确认原任务和回执。')
+                if commit['state'] == 'outcome_unknown' and job.get('status') != 'needs_input':
+                    raise ValueError('成果保存状态不可核对，请先确认原任务和回执。')
+                if commit['state'] == 'saving':
+                    # A stale saving marker is itself an unknown result.  It is
+                    # safe to accept an explicit human outcome only if this is
+                    # a terminal job and the original child PID is known and
+                    # positively observed exited; absent/unknown PID is not proof.
+                    pid = job.get('process_id')
+                    if job.get('status') not in ('completed', 'failed', 'needs_input', 'cancelled'):
+                        raise ValueError('任务状态未确认结束，请先核对原任务和进程。')
+                    if type(pid) is not int or pid <= 0 or self._pid_alive(pid) is not False:
+                        raise ValueError('原进程编号缺失或退出状态未知，请先确认原进程已退出。')
+            if attempt is None:
+                if commit is not None:
+                    attempt = commit['attempt']
+                elif len(pending) == 1:
+                    attempt = next(iter(pending))
+                elif len(pending) > 1:
+                    raise ValueError('存在多个未核对轮次，请明确指定本次核对的轮次。')
+            if attempt not in pending:
+                raise ValueError('当前任务没有该轮待核对的成果保存结果。')
+            records = job.setdefault('result_reconciliations', [])
+            if not isinstance(records, list):
+                raise WorkspaceConflict('成果核对记录不可读，请先核对。')
+            prior_state = commit['state'] if commit is not None and commit['attempt'] == attempt else 'outcome_unknown'
+            records.append({'attempt': attempt, 'recorded_at': now(), 'evidence': evidence.strip(),
+                            'prior_state': prior_state, 'outcome': outcome, 'source': 'human_reconciliation'})
+            if commit is not None and commit['attempt'] == attempt:
+                job.pop('result_commit', None)
+            self._event(job, 'result_commit_reconciled', '已记录人工确认的成果保存结论；未自动重试、发布或发起其他动作。')
             self._save(job)
             return job
 
@@ -430,6 +581,9 @@ class AgentJobs(TaskContinuity, JobDependencies):
         for row in self.list_jobs():
             if row.get('object_id') != object_id or row.get('id') == exclude:
                 continue
+            if self._pending_result_attempts(row):
+                raise WorkspaceConflict('该对象先前成果保存结果尚未明确完成或失败，请先核对原任务和实际回执。')
+            self._require_resolved_followups(row)
             if row.get('status') in ACTIVE:
                 raise ValueError('该对象已有工作正在执行，请在原工作结束后继续。')
             if row.get('id') in self.threads:
@@ -518,6 +672,7 @@ class AgentJobs(TaskContinuity, JobDependencies):
             self._continuity_defaults(job)
             self._check_continuity_version(job, expected_version,
                 required=new_session or bool(job.get('adjustment_version', 0)))
+            self._require_resolved_followups(job)
             if job['status'] == 'planned':
                 raise ValueError('尚未执行的计划请使用 dispatch，不能恢复会话。')
             self._check_parent_available(job)
@@ -579,10 +734,23 @@ class AgentJobs(TaskContinuity, JobDependencies):
                 raise ValueError('原服务仍存活或无法确认已退出，不能恢复旧记录')
             if job.get('process_id') and self._pid_alive(job['process_id']) is not False:
                 raise ValueError('原子进程仍存活或无法确认已退出，不能恢复旧记录')
-            job.update(status='failed',owner_pid=former_owner_pid,worker_finished=True,
-                error='已人工核对原服务及子进程退出；未自动重跑，请核对已有成果后显式继续。',
+            previous_status = job['status']
+            commit = job.get('result_commit')
+            if commit is not None:
+                if (not isinstance(commit, dict) or type(commit.get('attempt')) is not int or
+                        commit['attempt'] < 1 or commit['attempt'] != job.get('attempt')):
+                    raise WorkspaceConflict('成果保存记录或轮次不一致，请先核对原任务；不能认定保存失败。')
+                commit['state'] = 'outcome_unknown'
+                self._hold_attempt_result(job, commit['attempt'], 'result_outcome_unknown')
+                job.update(status='needs_input',
+                    error='已人工核对原服务及子进程退出；最终成果保存结果不明，请核对业务资料和回执，未自动重试。')
+            else:
+                job.update(status='failed',
+                    error='已人工核对原服务及子进程退出；未自动重跑，请核对已有成果后显式继续。')
+            job.update(owner_pid=former_owner_pid,worker_finished=True,
                 legacy_recovery={'former_owner_pid':former_owner_pid,'evidence':evidence.strip(),'checked_at':now()})
             self._event(job,'interrupted','人工核对旧拥有者及进程退出；保留成果和会话，未自动执行。')
+            self._record_recovered_attempt(job, previous_status)
             self._save(job)
         return job
 
@@ -956,11 +1124,22 @@ class AgentJobs(TaskContinuity, JobDependencies):
             with self.lock:
                 self.processes.pop(job_id, None)
                 self.threads.pop(job_id, None)
-                job = self.get_job(job_id)
-                job['worker_finished'] = True
-                if process is not None and process.poll() is not None and job.get('process_id') == process.pid:
-                    job['process_id'] = None
-                self._save(job)
+                with self._write():
+                    job = self.get_job(job_id)
+                    job['worker_finished'] = True
+                    if process is not None and process.poll() is not None and job.get('process_id') == process.pid:
+                        job['process_id'] = None
+                    if job.get('status') in ('completed','failed','needs_input') and type(job.get('attempt')) is int and job['attempt'] > 0:
+                        try:
+                            self._record_finished_attempt(job)
+                        except (ValueError, WorkspaceConflict, TypeError, KeyError):
+                            job['completion_error'] = {'state':'unavailable', 'observed_at':now(),
+                                'reason':'本轮验收事件登记失败，请核对原任务和执行记录；未自动续派。'}
+                            revision = job.get('completion_revision', 0)
+                            if type(revision) is int and revision >= 0:
+                                job['completion_revision'] = revision + 1
+                            self._event(job, 'completion_record_failed', job['completion_error']['reason'])
+                    self._save(job)
             if process is not None:
                 streams = [process.stdin, process.stdout]
                 if stderr_thread is None or not stderr_thread.is_alive():

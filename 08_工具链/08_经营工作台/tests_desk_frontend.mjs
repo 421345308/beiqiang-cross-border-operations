@@ -1512,6 +1512,104 @@ test('统一任务入口区分云端不可用，并从 Inbox 打开真正任务'
  const h=harness('#/tasks');h.interceptFetch(async(path,opts)=>path==='/api/desk/task-overview'?{ok:true,json:async()=>({sources:{local:{state:'ok'},cloud:{state:'unavailable',reason:'离线'}},tasks:[{id:'local:j1',job_id:'j1',origin:'local',title:'待确认任务',status:'needs_input'}],inbox:[{task_id:'local:j1',title:'请补充依据'}]})}:h.originalFetch(path,opts));
  await h.ui.bootstrap();assert.match(h.elements.page.textContent,/云端：暂不可用，离线/);await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Aj1');assert.equal(h.requests.filter(x=>x.payload).length,0);
 });
+test('回合未闭环事项在筛选后仍打开原任务，明确提醒未接通',async()=>{
+ const h=harness('#/tasks'),data={filters:{business_line:[{value:'creation',label:'creation'}]},
+  tasks:[{id:'local:j1',job_id:'j1',origin:'local',business_line:'international',title:'原任务',status:'completed'}],
+  inbox:[{id:'completion:j1:run1',task_id:'local:j1',kind:'completion_review',title:'原任务',judgment:'回合已结束，仍需验收。',
+    current_goal:'当前目标',next_action:'核对回执',source:'local_run',observed_at:'2026-11-11T10:00:00Z',notification:{state:'not_connected'},
+    action:{type:'open_task',job_id:'j1',task_id:'local:j1'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ const filter=walk(h.elements.page).find(x=>x['aria-label']==='筛选业务线');filter.value='creation';filter.listeners.change();
+ assert.match(h.elements.page.textContent,/当前目标/);assert.match(h.elements.page.textContent,/核对回执/);assert.match(h.elements.page.textContent,/主动提醒未接通/);
+ await findButton(h.elements.page,'打开任务').click();assert.equal(h.location.hash,'/task/local%3Aj1');assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('总览明确外部回合事件桥与主动通知未接通',async()=>{
+ const h=harness('#/tasks'),data={tasks:[],inbox:[],completion_capabilities:{local_finished_events:'agent_jobs',external_turn_bridge:'not_connected',push_notification:'not_connected'}};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ assert.match(h.elements.page.textContent,/本机完成事件：AgentJobs 已接入/);assert.match(h.elements.page.textContent,/外部会话事件桥：未接通，未自动订阅/);assert.match(h.elements.page.textContent,/主动通知：未接通/);
+});
+test('回合事项关联只读引用时仍只有只读入口',async()=>{
+ const h=harness('#/tasks'),data={tasks:[{id:'desktop:h:t',origin:'desktop',reference_only:true,title:'只读引用'}],
+  inbox:[{id:'completion:ref:one',task_id:'desktop:h:t',kind:'completion_review',title:'待核对',judgment:'状态未知',notification:{state:'not_connected'}}]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ assert.ok(findButton(h.elements.page,'查看只读详情'));assert.ok(!walk(h.elements.page).some(x=>x.tagName==='BUTTON' && x.textContent==='打开任务'));
+ await findButton(h.elements.page,'查看只读详情').click();assert.equal(h.location.hash,'/task/desktop%3Ah%3At');assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('任务详情展示回合验收、派工回执与未接通提醒，旧决定有明确标识',async()=>{
+ const h=harness('#/task/local%3Aj1');const event={event_id:'run1',attempt:1,state:'review_required',intent_changed:true,
+  source:'local_run',observed_at:'2026-11-11T10:00:00Z',summary:'已有合成成果',notification:{state:'not_connected'},
+  assessment:{goal_status:'未达成',capability_status:'待验证',result_ref:'artifact:1',gap:'旧欠交付',next_action:'历史下一步',
+    evidence:{source:'隔离记录',observed_at:'2026-11-11T10:01:00Z',detail:'待复核'}},
+  dispatch:{state:'unknown',request_id:'request-1',target_job_id:'j1',target_session_id:'session-1',target_attempt:2,updated_at:'2026-11-11T10:02:00Z'}};
+ h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',status:'completed',conversations:[]},goal:'现行目标',completion_events:[event],artifacts:[]})};return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;
+ for(const expected of ['回合验收与接续','目标已变化，待重新验收','上次验收依据（目标已变化，仅供重新核对）','成果位置：artifact:1','请求标识：request-1','关联会话：session-1','主动提醒未接通'])assert.ok(shown.includes(expected),expected);
+ assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('任务详情显示派工前阻塞，不把它说成已派工',async()=>{
+ const h=harness('#/task/local%3Aj1'),event={event_id:'run1',attempt:1,state:'ready_to_continue',dispatch:null,
+  dispatch_blocked:{request_id:'req1',reason:'前置任务未完成',observed_at:'2026-11-11T10:00:00Z'},notification:{state:'not_connected'}};
+ h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',status:'completed',conversations:[]},completion_events:[event],artifacts:[]})};return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const shown=h.elements.page.textContent;assert.match(shown,/派工前阻塞/);assert.match(shown,/尚未发出派工：前置任务未完成/);assert.doesNotMatch(shown,/接续已受理/);assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('任务详情在回合记录损坏或登记失败时明确提示不可读',async()=>{
+ const h=harness('#/task/local%3Aj1');h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',status:'completed',conversations:[]},completion_state:'unavailable',completion_events:[],artifacts:[]})};return h.originalFetch(p,o);});
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/回合验收状态不可读/);assert.match(h.elements.page.textContent,/不能据此认定已闭环/);
+});
+test('无派工的验收比较人工下一步基线，且不凭版本变化猜测',async()=>{
+ for(const scenario of ['changed','same','legacy','sent']){
+  const h=harness('#/task/local%3Aj1'),event={event_id:'run1',attempt:1,state:'ready_to_continue',
+   assessment:{next_action:'验收建议',task_next_action_at_review:'当时人工安排',task_version_at_review:3}};
+  if(scenario==='legacy')delete event.assessment.task_next_action_at_review;
+  if(scenario==='sent'){event.state='dispatch_unknown';event.dispatch={state:'unknown',request_id:'req-1'};}
+  const current=scenario==='same'?'当时人工安排':'当前人工安排';
+  h.interceptFetch(async(p,o)=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:19,status:'completed',next_action:current},next_action:current,intent_version:1,completion_events:[event],artifacts:[]})};return h.originalFetch(p,o);});
+  await h.ui.bootstrap();const shown=h.elements.page.textContent;
+  if(scenario==='changed'){assert.match(shown,/当前下一动作已变化：当前人工安排/);assert.ok(shown.includes('上次验收依据（当前下一动作已变化，仅供重新核对）'));assert.ok(findButton(h.elements.page,'登记本轮验收'));}
+  if(scenario==='same'){assert.doesNotMatch(shown,/当前下一动作已变化/);assert.match(shown,/验收记录：/);}
+  if(scenario==='legacy')assert.match(shown,/变更情况未知/);
+  if(scenario==='sent'){assert.doesNotMatch(shown,/当前下一动作已变化/);assert.match(shown,/请求标识：req-1/);assert.ok(findButton(h.elements.page,'核对原派工'));assert.ok(!walk(h.elements.page).some(x=>x.tagName==='BUTTON' && x.textContent==='登记本轮验收'));}
+  assert.equal(h.requests.filter(x=>x.payload).length,0);
+ }
+});
+test('接续运行中的状态留在任务总览，不伪造 Inbox 提醒',async()=>{
+ const h=harness('#/tasks'),data={tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'running',title:'任务',completion_state:'dispatch_running'}],inbox:[]};
+ h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();
+ assert.match(h.elements.page.textContent,/回合进展：接续运行中/);assert.match(h.elements.page.textContent,/暂无待处理事项/);assert.equal(h.requests.filter(x=>x.payload).length,0);
+});
+test('完成回合验收携带当前版本、证据与下一动作，明确继续范围',async()=>{
+ const h=harness('#/task/local%3Aj1'),writes=[],event={event_id:'run1',attempt:1,state:'awaiting_review',notification:{state:'not_connected'}};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:7,status:'completed',conversations:[]},intent_version:3,completion_events:[event],artifacts:[]})};if(p==='/api/desk/job/assess-completion'){writes.push(JSON.parse(o.body));return {ok:true,json:async()=>({ok:true})};}return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const field=label=>walk(h.elements.page).find(x=>x['aria-label']===label);
+ field('验收结论').value='continue';field('目标验收状态').value='not_met';field('能力验收状态').value='met';field('成果位置').value='artifact:1';field('欠交付').value='仍需核对';field('验收下一动作').value='继续检查';field('验收证据来源').value='合成回执';field('验收证据时间').value='2026-11-11T20:00:00+08:00';field('验收证据说明').value='观察到的事实';
+ assert.match(h.elements.page.textContent,/仅内部邮件草稿的只读研究可自动接续/);assert.match(h.elements.page.textContent,/结果保存为内部稿件，不发送/);const save=findButton(h.elements.page,'登记本轮验收');await save.click();await save.click();await settle();
+ assert.equal(writes.length,1);assert.deepEqual(writes[0],{id:'j1',attempt:1,expected_version:7,expected_intent_version:3,disposition:'continue',goal_status:'not_met',capability_status:'met',result_ref:'artifact:1',gap:'仍需核对',next_action:'继续检查',evidence:{source:'合成回执',observed_at:'2026-11-11T20:00:00+08:00',detail:'观察到的事实'}});
+});
+test('验收冲突或传输未知保留输入，不能自动重试',async()=>{
+ for(const outcome of ['conflict','unknown']){
+  const h=harness('#/task/local%3Aj1'),writes=[],event={event_id:'run1',attempt:1,state:'awaiting_review',notification:{state:'not_connected'}};
+  h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:7,status:'completed',conversations:[]},intent_version:3,completion_events:[event],artifacts:[]})};if(p==='/api/desk/job/assess-completion'){writes.push(JSON.parse(o.body));if(outcome==='unknown')throw Error('lost response');return {ok:false,status:409,json:async()=>({error:'conflict'})};}return h.originalFetch(p,o);});
+  await h.ui.bootstrap();const field=label=>walk(h.elements.page).find(x=>x['aria-label']===label);field('验收下一动作').value='保留的下一步';field('验收证据来源').value='合成来源';field('验收证据时间').value='2026-11-11T20:00:00+08:00';field('验收证据说明').value='保留的依据';
+  const save=findButton(h.elements.page,'登记本轮验收');await save.click();await save.click();await settle();assert.equal(writes.length,1);assert.equal(field('验收下一动作').value,'保留的下一步');assert.equal(field('验收证据说明').value,'保留的依据');assert.equal(save.disabled,true);assert.match(h.elements.page.textContent,/不自动重试/);
+ }
+});
+test('验收完成必须有成果位置，矛盾的继续选择先提示核对',async()=>{
+ const h=harness('#/task/local%3Aj1'),writes=[],event={event_id:'run1',attempt:1,state:'awaiting_review'};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:7,status:'completed',conversations:[]},intent_version:3,completion_events:[event],artifacts:[]})};if(p==='/api/desk/job/assess-completion'){writes.push(JSON.parse(o.body));return {ok:true,json:async()=>({})};}return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const field=label=>walk(h.elements.page).find(x=>x['aria-label']===label);field('目标验收状态').value='met';field('能力验收状态').value='met';field('验收证据来源').value='合成来源';field('验收证据时间').value='2026-11-11T20:00:00+08:00';field('验收证据说明').value='合成依据';
+ const save=findButton(h.elements.page,'登记本轮验收');field('验收结论').value='verified_complete';await save.click();assert.match(h.elements.page.textContent,/验收完成时请填写成果位置/);field('验收结论').value='continue';field('验收下一动作').value='继续';await save.click();assert.match(h.elements.page.textContent,/请核对是否应验收完成/);assert.equal(writes.length,0);
+});
+test('验收 HTTP 400 明确拒绝后可保留输入并手动修正',async()=>{
+ const h=harness('#/task/local%3Aj1'),writes=[],event={event_id:'run1',attempt:1,state:'awaiting_review'};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:7,status:'completed',conversations:[]},intent_version:3,completion_events:[event],artifacts:[]})};if(p==='/api/desk/job/assess-completion'){writes.push(JSON.parse(o.body));if(writes.length===1)return {ok:false,status:400,json:async()=>({error:'依据格式需修正'})};return {ok:true,json:async()=>({})};}return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const field=label=>walk(h.elements.page).find(x=>x['aria-label']===label);field('验收下一动作').value='继续检查';field('验收证据来源').value='合成来源';field('验收证据时间').value='2026-11-11T20:00:00+08:00';field('验收证据说明').value='原说明';
+ const save=findButton(h.elements.page,'登记本轮验收');await save.click();await settle();assert.equal(writes.length,1);assert.equal(save.disabled,false);assert.equal(field('验收证据说明').value,'原说明');assert.match(h.elements.page.textContent,/可修正后手动提交/);field('验收证据说明').value='修正说明';await save.click();await settle();assert.equal(writes.length,2);assert.equal(writes[1].evidence.detail,'修正说明');
+});
+test('派工未知时只核对原请求，传输未知不重发',async()=>{
+ const h=harness('#/task/local%3Aj1'),writes=[],event={event_id:'run1',attempt:1,state:'dispatch_unknown',notification:{state:'not_connected'},dispatch:{state:'unknown',request_id:'req-1'}};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:j1',job_id:'j1',origin:'local',status:'completed',title:'任务'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'j1',version:7,status:'completed',conversations:[]},intent_version:3,completion_events:[event],artifacts:[]})};if(p==='/api/desk/job/reconcile-followup'){writes.push({path:p,body:JSON.parse(o.body)});throw Error('lost response');}return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const button=findButton(h.elements.page,'核对原派工');await button.click();await button.click();await settle();assert.deepEqual(writes,[{path:'/api/desk/job/reconcile-followup',body:{id:'j1',attempt:1,expected_version:7,request_id:'req-1'}}]);assert.equal(button.disabled,true);assert.match(h.elements.page.textContent,/不会自动重发派工/);assert.equal(h.requests.some(x=>x.path==='/api/desk/job/continue-followup'),false);
+});
 test('经营 Inbox 打开原客户和关联任务，来源失效时不冒充空收件箱',async()=>{
  const h=harness('#/tasks');h.interceptFetch(async(path,opts)=>path==='/api/desk/task-overview'?{ok:true,json:async()=>({
    sources:{local:{state:'ok'},cloud:{state:'ok'},customers:{state:'ok'},prospects:{state:'ok'},gmail:{state:'error'},website:{state:'ready',stale:true}},
@@ -1642,6 +1740,32 @@ test('待复核成果仅按任务明确读取，普通任务不伪称有保留�
  const other=harness('#/task/local%3Ar2');other.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r2',job_id:'r2',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r2',status:'needs_input',version:1,task_kind:'atomic'},artifacts:[]})};return other.originalFetch(p,o);});await other.ui.bootstrap();assert.match(other.elements.page.textContent,/没有登记可查看的保留成果/);assert.ok(!walk(other.elements.page).some(x=>x.textContent==='查看保留的待复核成果'));
 });
 
+test('多轮保留成果按轮次去重、分别只读并核对返回轮次',async()=>{
+ const h=harness('#/task/local%3Ar1'),reads=[],writes=[];
+ h.interceptFetch(async(p,o={})=>{
+  if(o.method && o.method!=='GET')writes.push({path:p,method:o.method});
+  if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'needs_input'}]})};
+  if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'needs_input',version:3,
+   held_results:{'2':{attempt:2,reason:'result_unvalidated'},'1':{attempt:1,reason:'planning_changed_during_attempt'}},held_result:{attempt:2,reason:'result_unvalidated'}},artifacts:[]})};
+  if(p.startsWith('/api/desk/job/held-result?')){reads.push(p);const attempt=Number(new URL(p,'http://127.0.0.1').searchParams.get('attempt'));return {ok:true,json:async()=>({job_id:'r1',attempt,content:`第${attempt}轮合成成果`,warning:'只读复核'})};}
+  return h.originalFetch(p,o);
+ });
+ await h.ui.bootstrap();assert.deepEqual(reads,[]);assert.equal(writes.length,0);
+ const buttons=walk(h.elements.page).filter(x=>x.tagName==='BUTTON' && /查看第 \d+ 轮待复核成果/.test(x.textContent));assert.deepEqual(buttons.map(x=>x.textContent),['查看第 1 轮待复核成果','查看第 2 轮待复核成果']);
+ await findButton(h.elements.page,'查看第 2 轮待复核成果').click();await findButton(h.elements.page,'查看第 1 轮待复核成果').click();
+ assert.deepEqual(reads,['/api/desk/job/held-result?id=r1&attempt=2','/api/desk/job/held-result?id=r1&attempt=1']);assert.match(h.elements.page.textContent,/第1轮合成成果/);assert.match(h.elements.page.textContent,/第2轮合成成果/);assert.equal(writes.length,0);
+});
+
+test('多轮成果返回错误轮次或损坏索引时明确拒绝',async()=>{
+ const h=harness('#/task/local%3Ar1');h.interceptFetch(async(p,o={})=>{
+  if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'failed'}]})};
+  if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'failed',held_results:{'1':{attempt:1},'bad':{attempt:3}}},artifacts:[]})};
+  if(p.startsWith('/api/desk/job/held-result?'))return {ok:true,json:async()=>({job_id:'r1',attempt:2,content:'错误轮次的成果'})};
+  return h.originalFetch(p,o);
+ });
+ await h.ui.bootstrap();assert.match(h.elements.page.textContent,/部分保留成果索引不可读/);await findButton(h.elements.page,'查看第 1 轮待复核成果').click();assert.match(h.elements.page.textContent,/返回成果与所选任务或轮次不一致/);assert.doesNotMatch(h.elements.page.textContent,/错误轮次的成果/);
+});
+
 test('失败任务有保留成果时可只读查看，不自动写入或合并',async()=>{
  const h=harness('#/task/local%3Af1'),reads=[],writes=[];
  h.interceptFetch(async(p,o={})=>{
@@ -1658,10 +1782,34 @@ test('失败任务有保留成果时可只读查看，不自动写入或合并',
 
 test('成果提交结果不明时只显式记录核对依据，冲突保留输入且不自动重试',async()=>{
  for(const status of [200,409]){
-  const h=harness('#/task/local%3Ar1'),calls=[];h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'needs_input',version:9,task_kind:'atomic',worker_finished:true,result_commit:{state:'outcome_unknown'}},artifacts:[]})};if(p==='/api/desk/job/reconcile-result'){calls.push(JSON.parse(o.body));return {ok:status===200,status,json:async()=>status===200?{id:'r1',status:'needs_input'}:{error:'任务已变化'}};}return h.originalFetch(p,o);});await h.ui.bootstrap();const field=walk(h.elements.page).find(x=>x['aria-label']==='结果核对依据'),record=findButton(h.elements.page,'记录结果核对');await record.click();assert.equal(calls.length,0);field.value='已核对原业务记录与回执';await record.click();await record.click();assert.deepEqual(calls,[{id:'r1',expected_version:9,evidence:'已核对原业务记录与回执'}]);assert.equal(field.value,'已核对原业务记录与回执');assert.equal(record.disabled,true);assert.match(h.elements.page.textContent,status===409?/核对依据已保留/:/已记录核对依据/);assert.match(h.elements.page.textContent,/不会自动重试/);
+  const h=harness('#/task/local%3Ar1'),calls=[];h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'needs_input',version:9,task_kind:'atomic',worker_finished:true,result_commit:{state:'outcome_unknown',attempt:1}},completion_events:[{event_id:'run1',attempt:1,state:'awaiting_review'}],artifacts:[]})};if(p==='/api/desk/job/reconcile-result'){calls.push(JSON.parse(o.body));return {ok:status===200,status,json:async()=>status===200?{id:'r1',status:'needs_input'}:{error:'任务已变化'}};}return h.originalFetch(p,o);});await h.ui.bootstrap();const field=walk(h.elements.page).find(x=>x['aria-label']==='结果核对依据'),outcome=walk(h.elements.page).find(x=>x['aria-label']==='结果核对结论'),record=findButton(h.elements.page,'记录结果核对');await record.click();assert.equal(calls.length,0);field.value='已核对原业务记录与回执';await record.click();assert.equal(calls.length,0);assert.match(h.elements.page.textContent,/请选择实际核对结果/);assert.ok(!walk(h.elements.page).some(x=>x.tagName==='BUTTON' && x.textContent==='登记本轮验收'));outcome.value=status===200?'completed':'failed';await record.click();await record.click();assert.deepEqual(calls,[{id:'r1',attempt:1,expected_version:9,evidence:'已核对原业务记录与回执',outcome:status===200?'completed':'failed'}]);assert.equal(field.value,'已核对原业务记录与回执');assert.equal(record.disabled,true);assert.match(h.elements.page.textContent,status===409?/核对依据已保留/:/已记录核对依据/);assert.match(h.elements.page.textContent,/不会自动重试/);
  }
- const blocked=harness('#/task/local%3Ar2');blocked.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r2',job_id:'r2',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r2',status:'needs_input',version:2,task_kind:'atomic',worker_finished:false,result_commit:{state:'outcome_unknown'}},artifacts:[]})};return blocked.originalFetch(p,o);});await blocked.ui.bootstrap();assert.equal(findButton(blocked.elements.page,'记录结果核对').disabled,true);assert.match(blocked.elements.page.textContent,/执行进程尚未确认退出/);
+ const blocked=harness('#/task/local%3Ar2');blocked.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r2',job_id:'r2',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r2',status:'needs_input',version:2,task_kind:'atomic',worker_finished:false,result_commit:{state:'outcome_unknown',attempt:1}},artifacts:[]})};return blocked.originalFetch(p,o);});await blocked.ui.bootstrap();assert.equal(findButton(blocked.elements.page,'记录结果核对').disabled,true);assert.match(blocked.elements.page.textContent,/执行进程尚未确认退出/);
  const other=harness('#/task/local%3Ar3');other.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r3',job_id:'r3',origin:'local',status:'needs_input'}]})};if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r3',status:'needs_input',version:1,task_kind:'atomic'},artifacts:[]})};return other.originalFetch(p,o);});await other.ui.bootstrap();assert.ok(!walk(other.elements.page).some(x=>x.textContent==='记录结果核对'));
+});
+
+test('历史成果仅有核对依据时按轮次补充结论，已确定的轮次不重复处理',async()=>{
+ const h=harness('#/task/local%3Ar1'),calls=[];h.interceptFetch(async(p,o={})=>{
+  if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'needs_input'}]})};
+  if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'needs_input',version:7,worker_finished:true,
+   held_results:{'1':{attempt:1,reason:'result_outcome_unknown'},'2':{attempt:2,reason:'result_outcome_unknown'},'3':{attempt:3,reason:'result_outcome_unknown'}},
+   result_reconciliations:[{attempt:1,evidence:'历史检查依据'},{attempt:3,evidence:'已回读回执',outcome:'completed'}]},artifacts:[]})};
+  if(p==='/api/desk/job/reconcile-result'){calls.push(JSON.parse(o.body));return {ok:true,json:async()=>({ok:true})};}return h.originalFetch(p,o);
+ });await h.ui.bootstrap();
+ assert.ok(findButton(h.elements.page,'记录第 1 轮结果核对'));assert.ok(findButton(h.elements.page,'记录第 2 轮结果核对'));assert.ok(!walk(h.elements.page).some(x=>x.textContent==='记录第 3 轮结果核对'));
+ const input=walk(h.elements.page).find(x=>x['aria-label']==='第 2 轮结果核对依据'),outcome=walk(h.elements.page).find(x=>x['aria-label']==='第 2 轮结果核对结论');input.value='第 2 轮正式回执';
+ const record=findButton(h.elements.page,'记录第 2 轮结果核对');await record.click();assert.equal(calls.length,0);outcome.value='failed';await record.click();await record.click();
+ assert.deepEqual(calls,[{id:'r1',attempt:2,expected_version:7,evidence:'第 2 轮正式回执',outcome:'failed'}]);assert.equal(findButton(h.elements.page,'记录第 1 轮结果核对').disabled,true);assert.match(h.elements.page.textContent,/请重新读取任务/);
+});
+
+test('终态残留 saving 要逐轮人工对账，进程未知时保留服务端拒绝且不重试',async()=>{
+ const h=harness('#/task/local%3Ar1'),calls=[];h.interceptFetch(async(p,o={})=>{
+  if(p==='/api/desk/task-overview')return {ok:true,json:async()=>({tasks:[{id:'local:r1',job_id:'r1',origin:'local',status:'completed'}]})};
+  if(p.startsWith('/api/desk/task-context'))return {ok:true,json:async()=>({job:{id:'r1',status:'completed',version:5,worker_finished:true,result_commit:{state:'saving',attempt:2}},artifacts:[]})};
+  if(p==='/api/desk/job/reconcile-result'){calls.push(JSON.parse(o.body));return {ok:false,status:400,json:async()=>({error:'原进程编号缺失或退出状态未知，请先确认原进程已退出。'})};}return h.originalFetch(p,o);
+ });await h.ui.bootstrap();assert.match(h.elements.page.textContent,/保存状态仍显示进行中，需确认原进程已退出/);
+ const input=walk(h.elements.page).find(x=>x['aria-label']==='结果核对依据'),outcome=walk(h.elements.page).find(x=>x['aria-label']==='结果核对结论'),record=findButton(h.elements.page,'记录结果核对');input.value='已查业务回执';outcome.value='failed';await record.click();await record.click();
+ assert.deepEqual(calls,[{id:'r1',attempt:2,expected_version:5,evidence:'已查业务回执',outcome:'failed'}]);assert.match(h.elements.page.textContent,/原进程编号缺失或退出状态未知/);assert.match(h.elements.page.textContent,/不会自动重试/);assert.equal(input.value,'已查业务回执');assert.equal(record.disabled,true);
 });
 
 test('独立计划优先选择先预览、再显式确认；旧版本冲突保留原候选且不自动改选',async()=>{

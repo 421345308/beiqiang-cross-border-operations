@@ -292,6 +292,8 @@
         sourceHost.append(el('p',`本次观测：${time(snapshot.observed_at || snapshot.generated_at)}`,'muted'),el('p','未登记的外部桌面会话无法自动读取；会话关联仅供定位。reference_only 仅作参考，不能在这里操作。','muted'));
         if(snapshot.scope)sourceHost.append(el('p',snapshot.scope,'muted'));
         if(snapshot.sources?.cloud?.truncated)sourceHost.append(el('p','云端任务列表未完整读取，当前仅展示返回范围。','muted'));
+        const completion=snapshot.completion_capabilities;
+        if(completion)sourceHost.append(el('p',`本机完成事件：${completion.local_finished_events==='agent_jobs'?'AgentJobs 已接入':'状态不可用'} · 外部会话事件桥：${completion.external_turn_bridge==='not_connected'?'未接通，未自动订阅':'状态未知'} · 主动通知：${completion.push_notification==='not_connected'?'未接通':'状态未知'}`,'muted'));
         for(const [key,label] of [['local','本地'],['cloud','云端']]) {const source=snapshot.sources?.[key];sourceHost.append(el('p',`${label}：${source?.state==='ok'?'已读取':`暂不可用，${source?.reason || '状态未取得'}`}`,'muted'));}
         for(const [key,source] of Object.entries(snapshot.sources || {})){sourceHost.append(el('p',`${source.label || key} · 观测：${time(source.observed_at || source.last_success_at)}${source.stale?' · 来源已过期':''}${source.state==='unavailable'?' · 来源不可用':''}`,'muted'));}
         const desktop=snapshot.sources?.desktop;if(desktop){sourceHost.append(el('p',`桌面对话：${({missing:'尚未导入',ok:'已读取快照',stale:'快照已过期',unavailable:'来源不可用'})[desktop.state] || '状态未知'} · ${text(desktop.source) || '由 Dot 手动导入的一次快照'} · 非实时，不会自动更新${desktop.truncated?' · 仅展示导入范围，快照未完整读取':''}`,'muted'));}
@@ -307,6 +309,10 @@
       const originName=task=>task.origin==='desktop'?'桌面对话快照':task.origin==='cloud'?'云端':task.origin==='business'?'业务待办':'本地';
       const taskStatus=task=>{const observed=task.origin==='desktop'?(task.source_status || task.status):task.status;const label=statusNames[observed] || ({unknown:'状态未知',notLoaded:'状态未知（尚未加载）',active:'正在处理',idle:'空闲',act:'今天能推',decide:'等你拍板',watch:'持续观察'})[observed] || observed || '状态未知';if(task.origin!=='desktop')return label;const freshness=typeof task.freshness==='object'?task.freshness?.state:task.freshness;return ['ok','fresh'].includes(freshness)?`最近一次观察：${label}（${time(task.observed_at)}，非实时）`:`当前状态未知 · ${time(task.observed_at)} 快照时观察：${label}`;};
       const taskExcerpt=(value,limit=180)=>{const normalized=text(value).replace(/\s+/g,' ').trim();return normalized.length>limit?normalized.slice(0,limit)+'…（查看详情）':normalized;};
+      const completionNames={awaiting_review:'待验收',intent_changed:'目标已变化，待重新验收',review_required:'目标已变化，待重新验收',verified_complete:'已验完成',continue_ready:'待继续',ready_to_continue:'待继续',needs_decision:'需负责人决定',blocked:'阻塞',unknown:'未知待核实',dispatch_accepted:'接续已受理',dispatch_starting:'接续启动中',dispatch_running:'接续运行中',dispatch_completed:'接续回合已结束，待验收',dispatch_failed:'接续失败',dispatch_unknown:'接续结果未知，需对账',dispatch_blocked:'派工前阻塞'};
+      const receiptNames={accepted:'已受理，尚未确认启动',starting:'启动中',running:'运行中',completed:'本轮已结束，仍需验收',failed:'失败',unknown:'未知，需对账'};
+      const acceptanceNames={met:'已满足',not_met:'未满足',unknown:'未知'};
+      const notificationNote=value=>{const state=typeof value==='object' && value!==null?value.state:value;return state==='not_connected'?'主动提醒未接通，需在工作台查看。':'主动提醒状态未知，不能认定已送达。';};
       const workstreamHost=el('section',undefined,'workstream-overview');if(!id)host.append(workstreamHost);
       function drawWorkstreams(snapshot){
         const streams=Array.isArray(snapshot.workstreams)?snapshot.workstreams:[];
@@ -341,7 +347,7 @@
         }
       }
       if(!id)drawWorkstreams(data);
-      const taskFacts=(row,task,full=false)=>{const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · 结果：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
+      const taskFacts=(row,task,full=false)=>{const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · 结果：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.completion_state)row.append(el('p',`回合进展：${completionNames[task.completion_state] || '状态未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
       if(!id){
         const command=el('textarea'),result=el('div');command.setAttribute('aria-label','任务要求');command.placeholder='说明想做什么，先匹配已有任务';
         let routing=false;
@@ -392,9 +398,15 @@
         function drawLists(snapshot){
           const currentTasks=(snapshot.tasks || []).filter(task=>Object.entries(selected).every(([key,value])=>!value || String(task[key] ?? '')===value)).sort((a,b)=>{const rank=t=>({running:0,active:0,needs_input:1,blocked:1,awaiting_review:1,act:1,decide:1,failed:2,interrupted:2,outcome_unknown:2,queued:3,planned:3,watch:4,completed:5,cancelled:5,unknown:9,notLoaded:9})[t.status] ?? 8;return rank(a)-rank(b);});listHost.replaceChildren(sectionHeading('经营 Inbox','查看客户消息和需要处理的任务'));
           for(const item of snapshot.inbox || []){
-            const task=currentTasks.find(t=>t.id===(item.task_id || item.id)),row=el('article',undefined,'card');
+            const task=(snapshot.tasks || []).find(t=>t.id===(item.task_id || item.id)),row=el('article',undefined,'card');
             row.append(el('h3',taskExcerpt(item.title || task?.title || '待处理事项',100)),citedText(taskExcerpt(item.reason || item.judgment || item.summary)));const fullInbox=text(item.reason || item.judgment || item.summary);if(fullInbox.replace(/\s+/g,' ').trim().length>180){const full=el('details');full.append(el('summary','查看事项全文'),citedText(fullInbox));row.append(full);}
+            if(item.kind==='completion_review' || item.kind==='completion_unavailable' || item.kind==='result_outcome_unknown'){
+              if(item.current_goal)row.append(el('p',`目标：${taskExcerpt(item.current_goal)}`));
+              if(item.next_action)row.append(el('p',`下一步：${taskExcerpt(item.next_action)}`));
+              row.append(el('p',`来源：${text(item.source) || '未知'} · 观察时间：${time(item.observed_at)}`,'muted'),el('p',notificationNote(item.notification),'muted'));
+            }
             if(task)row.append(button(isReference(task)?'查看只读详情':'打开任务',()=>openTask(task),'quiet'));
+            else if(!task && !item.reference_only && item.action?.type==='open_task')row.append(el('p','关联任务暂不可读，请刷新核对。','inline-error'));
             else if(!task && !item.reference_only) {const action=todayAction(item.action);if(action)row.append(action);}
             if(item.object_id && !task)for(const related of currentTasks.filter(t=>t.origin==='local' && !t.reference_only && !t.capabilities?.reference_only && t.object_id===item.object_id && !['completed','cancelled'].includes(t.status)))row.append(button(`打开关联任务：${text(related.title || related.instruction || '未命名')}`,()=>openTask(related),'quiet'));
             listHost.append(row);
@@ -417,6 +429,24 @@
       if(task.origin==='cloud'){taskFacts(host,task,true);host.append(el('p','云端成果沿现有审核入口预览和确认，不会在此自动写回。'),button('打开云端审核',()=>{S.cloudReview.open=true;location.hash='/overview';},'quiet'));return;}
       const context=await api(`/api/desk/task-context?id=${encodeURIComponent(task.job_id || task.id)}`);if(!current())return;
       const job=context.job;if(!job || String(job.id)!==String(task.job_id || task.id))throw Error('返回任务与所选任务不一致。');
+      const indexedHeld=job.held_results,byAttempt=new Map();let heldIndexInvalid=false;
+      if(indexedHeld!==undefined){
+        if(indexedHeld===null || typeof indexedHeld!=='object' || Array.isArray(indexedHeld))heldIndexInvalid=true;
+        else for(const [key,value] of Object.entries(indexedHeld)){
+          if(!value || typeof value!=='object' || !Number.isInteger(value.attempt) || value.attempt<1 || key!==String(value.attempt))heldIndexInvalid=true;
+          else byAttempt.set(value.attempt,value);
+        }
+      }
+      if(job.held_result!==undefined && job.held_result!==null){const old=job.held_result;if(typeof old==='object' && Number.isInteger(old.attempt) && old.attempt>0){if(!byAttempt.has(old.attempt))byAttempt.set(old.attempt,old);}else heldIndexInvalid=true;}
+      const heldEntries=[...byAttempt.values()].sort((a,b)=>a.attempt-b.attempt),legacyOnly=indexedHeld===undefined || indexedHeld===null;
+      const reconciliations=Array.isArray(job.result_reconciliations)?job.result_reconciliations:[];
+      const confirmed=attempt=>reconciliations.some(r=>r && r.attempt===attempt && ['completed','failed'].includes(r.outcome) && typeof r.evidence==='string' && r.evidence.trim());
+      const unknownAttempts=new Set(heldEntries.filter(entry=>entry.reason==='result_outcome_unknown' && !confirmed(entry.attempt)).map(entry=>entry.attempt));
+      if(job.held_result?.reason==='result_outcome_unknown' && Number.isInteger(job.held_result.attempt) && job.held_result.attempt>0 && !confirmed(job.held_result.attempt))unknownAttempts.add(job.held_result.attempt);
+      const resultCommit=job.result_commit;
+      const terminalSaving=resultCommit?.state==='saving' && ['completed','failed','needs_input','cancelled'].includes(job.status);
+      if((resultCommit?.state==='outcome_unknown' || terminalSaving) && Number.isInteger(resultCommit.attempt) && resultCommit.attempt>0)unknownAttempts.add(resultCommit.attempt);
+      const resultCommitInvalid=resultCommit!==undefined && resultCommit!==null && (typeof resultCommit!=='object' || !['saving','outcome_unknown'].includes(resultCommit.state) || !Number.isInteger(resultCommit.attempt) || resultCommit.attempt<1);
       taskFacts(host,{...task,next_action:typeof context.next_action==='string'?context.next_action:task.next_action},true);
       if(job.status==='planned' && job.task_kind!=='group'){let attempted=false;const start=button('确认启动此任务',async()=>{if(attempted)return;attempted=true;start.disabled=true;try{await api('/api/desk/job/dispatch',{id:job.id,expected_version:job.version ?? 0});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())host.append(el('p',`${error.message} 请重新读取状态，勿重复启动。`,'inline-error'));}},'primary');host.append(el('p','此任务仅已准备，尚未执行。'),start);}
       if(context.object)host.append(button('打开关联业务资料',()=>goObject(context.object.id,job.artifact_id || ''),'quiet'));
@@ -430,13 +460,103 @@
       }else host.append(el('p','任务决定尚未登记，不代表没有约束；请核对当前业务原档和适用规则。','muted'));
       const next=typeof context.next_action==='string'?context.next_action:(job.next_steps || job.next_step || context.next_steps || task.next_action);
       host.append(el('p',`下一步：${text(next) || '未登记'}`));
-      host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
-      if(job.held_result || job.status==='needs_input'){
-        if(job.held_result){const held=el('section',undefined,'card'),content=el('div'),message=el('p','','agent-feedback');const show=button('查看保留的待复核成果',async()=>{show.disabled=true;try{const result=await api(`/api/desk/job/held-result?id=${encodeURIComponent(job.id)}`);if(!current())return;if(String(result.job_id)!==String(job.id))throw Error('返回成果与所选任务不一致');content.replaceChildren(el('p',text(result.warning) || '该成果尚未自动合并，请核对后处理。','muted'),el('pre',text(result.content),'source-body'));}catch(error){if(current())message.textContent=`${error.message} 未能读取保留成果。`;}finally{show.disabled=false;}},'quiet');held.append(el('h3','待复核成果'),el('p','只读取此任务登记的保留成果，不自动合并或覆盖。','muted'),show,content,message);host.append(held);}else host.append(el('p','此任务当前没有登记可查看的保留成果。','muted'));
+      const completionEvents=Array.isArray(context.completion_events)?context.completion_events:(Array.isArray(task.completion_events)?task.completion_events:[]);
+      if(context.completion_state==='unavailable')host.append(el('p','部分回合验收状态不可读，请核对原任务；不能据此认定已闭环。','inline-error'));
+      if(completionEvents.length){
+        host.append(sectionHeading('回合验收与接续'),el('p','回合结束后仍需核对目标和成果；派工结果未知时先对账，不自动重发。','muted'));
+        for(const event of completionEvents){
+          const detail=el('details',undefined,'card completion-event');
+          const assessment=event.assessment && typeof event.assessment==='object'?event.assessment:null;
+          const hasDispatch=event.dispatch!==undefined && event.dispatch!==null;
+          const dispatch=event.dispatch && typeof event.dispatch==='object'?event.dispatch:null;
+          const dispatchBlocked=event.dispatch_blocked && typeof event.dispatch_blocked==='object' && !hasDispatch?event.dispatch_blocked:null;
+          const currentAction=typeof context.next_action==='string'?context.next_action:typeof job.next_action==='string'?job.next_action:job.next_action===undefined?'':null;
+          const actionKnown=assessment && !hasDispatch && typeof assessment.task_next_action_at_review==='string' && currentAction!==null;
+          const actionChanged=!!actionKnown && currentAction!==assessment.task_next_action_at_review;
+          const actionReview=actionChanged;
+          const state=dispatchBlocked?'dispatch_blocked':actionReview && !hasDispatch?'review_required':event.state || event.effective_state || 'unknown';
+          const intentHistorical=state==='intent_changed' || event.intent_changed===true || (state==='review_required' && !actionReview);
+          const historical=intentHistorical || actionReview;
+          detail.append(el('summary',`回合 ${event.attempt ?? '未知'} · ${actionReview && !intentHistorical?'下一动作已变化，需重新验收':completionNames[state] || '状态未知'}`));
+          detail.append(el('p',`来源：${text(event.source) || '未知'} · 观察时间：${time(event.observed_at)}`,'muted'));
+          if(event.summary)detail.append(el('p',`回合结果：${text(event.summary)}`));
+          if(assessment){
+            if(actionChanged)detail.append(el('p',`当前下一动作已变化：${currentAction || '已清空（未登记）'}；请重新验收。`,'inline-error'));
+            else if(!hasDispatch && !actionKnown)detail.append(el('p','该验收没有可比较的任务下一动作基线，变更情况未知，请核对原任务。','muted'));
+            detail.append(el('p',historical?(intentHistorical?'上次验收依据（目标已变化，仅供重新核对）：':'上次验收依据（当前下一动作已变化，仅供重新核对）：'):'验收记录：'));
+            for(const [key,label] of [['goal_status','目标验收'],['capability_status','能力验收'],['result_ref','成果位置'],['gap','欠交付'],['next_action','下一动作']])if(assessment[key])detail.append(el('p',`${label}：${['goal_status','capability_status'].includes(key)?acceptanceNames[assessment[key]] || '未知':text(assessment[key])}`));
+            const evidence=assessment.evidence && typeof assessment.evidence==='object'?assessment.evidence:null;
+            if(evidence)detail.append(el('p',`证据：${text(evidence.source) || '来源未知'} · ${time(evidence.observed_at)}${evidence.detail?` · ${text(evidence.detail)}`:''}`,'muted'));
+          }else detail.append(el('p','尚未登记验收判断，不能认定目标已完成。','muted'));
+          if(dispatch){
+            detail.append(el('p',`接续回执：${receiptNames[dispatch.state] || '未知，需对账'}`));
+            for(const [key,label] of [['request_id','请求标识'],['target_job_id','关联任务'],['target_session_id','关联会话'],['observed_session_id','观察到会话'],['target_attempt','目标轮次'],['observed_process_id','观察到进程'],['prepared_at','准备时间'],['started_at','观察启动时间'],['updated_at','回执时间']])if(dispatch[key]!==undefined && dispatch[key]!==null && dispatch[key]!=='')detail.append(el('p',`${label}：${text(dispatch[key])}`,'muted'));
+          }
+          if(dispatchBlocked)detail.append(el('p',`派工前受阻，尚未发出派工：${text(dispatchBlocked.reason) || '原因未知'}`,'inline-error'),el('p',`请求标识：${text(dispatchBlocked.request_id) || '未登记'} · 观察时间：${time(dispatchBlocked.observed_at)}`,'muted'));
+          if(['awaiting_review','review_required','intent_changed','ready_to_continue','continue_ready','blocked','dispatch_blocked','needs_decision','unknown'].includes(state) && !unknownAttempts.has(event.attempt)){
+            const form=el('section',undefined,'completion-review-form'),feedback=el('p','','agent-feedback');
+            const select=(label,values)=>{const node=el('select');node.setAttribute('aria-label',label);for(const [value,name] of values){const option=el('option',name);option.value=value;node.append(option);}node.value=values[0][0];return node;};
+            const input=(label,placeholder,limit,multiline=false)=>{const node=el(multiline?'textarea':'input');node.setAttribute('aria-label',label);node.placeholder=placeholder;node.maxLength=limit;return node;};
+            const disposition=select('验收结论',[['unknown','未知待核实'],['continue','继续推进'],['verified_complete','已验完成'],['needs_decision','需负责人决定'],['blocked','阻塞']]);
+            const goalStatus=select('目标验收状态',[['unknown','目标未知'],['met','目标已满足'],['not_met','目标未满足']]);
+            const capabilityStatus=select('能力验收状态',[['unknown','能力未知'],['met','能力已满足'],['not_met','能力未满足']]);
+            const resultRef=input('成果位置','成果位置（如有）',2000),gap=input('欠交付','尚未完成的内容（如有）',4000,true),action=input('验收下一动作','下一动作（未完成时必填）',4000,true);
+            const source=input('验收证据来源','证据来源',500),observed=input('验收证据时间','观察时间，如 2026-11-11T20:00:00+08:00',100),evidence=input('验收证据说明','实际观察或回执说明',2000,true);
+            let attempted=false;const save=button('登记本轮验收',async()=>{
+              if(attempted)return;const observedAt=observed.value.trim();
+              if(!source.value.trim() || !evidence.value.trim() || !/([zZ]|[+-]\d{2}:\d{2})$/.test(observedAt) || Number.isNaN(Date.parse(observedAt))){feedback.textContent='请填写证据来源、带时区的观察时间和实际说明。';return;}
+              if(disposition.value!=='verified_complete' && !action.value.trim()){feedback.textContent='尚未完成时请填写具体下一动作。';return;}
+              if(disposition.value==='verified_complete' && (goalStatus.value!=='met' || capabilityStatus.value!=='met' || gap.value.trim())){feedback.textContent='验收完成须目标与能力均已满足，且无未完成缺口。';return;}
+              if(disposition.value==='verified_complete' && !resultRef.value.trim()){feedback.textContent='验收完成时请填写成果位置。';return;}
+              if(disposition.value==='continue' && goalStatus.value==='met' && capabilityStatus.value==='met' && !gap.value.trim()){feedback.textContent='目标与能力均已满足且没有缺口，请核对是否应验收完成。';return;}
+              if(!Number.isInteger(job.version) || job.version<0 || !Number.isInteger(context.intent_version) || context.intent_version<0 || !Number.isInteger(event.attempt) || event.attempt<1){feedback.textContent='任务、意图或回合版本未知，请重新读取。';return;}
+              attempted=true;save.disabled=true;
+              try{await api('/api/desk/job/assess-completion',{id:job.id,attempt:event.attempt,expected_version:job.version,expected_intent_version:context.intent_version,
+                disposition:disposition.value,goal_status:goalStatus.value,capability_status:capabilityStatus.value,result_ref:resultRef.value.trim(),gap:gap.value.trim(),next_action:action.value.trim(),
+                evidence:{source:source.value.trim(),observed_at:observedAt,detail:evidence.value.trim()}});if(current())await renderTaskWorkspace(id,current);}
+              catch(error){if(current()){
+                if(error.status===400){attempted=false;save.disabled=false;feedback.textContent=`${error.message} 输入已保留，可修正后手动提交。`;}
+                else feedback.textContent=error.status===409?'任务或目标版本已变化；输入已保留，请复制并重新读取，不自动重试。':`${error.message} 提交结果可能未知；输入已保留，请先重新读取并核对回执，不自动重试。`;
+              }}
+            },'quiet');
+            form.append(el('h4','登记验收'),el('p','选择继续时，仅内部邮件草稿的只读研究可自动接续，结果保存为内部稿件，不发送；其他任务待原入口处理。','muted'),disposition,goalStatus,capabilityStatus,resultRef,gap,action,source,observed,evidence,save,feedback);detail.append(form);
+          }
+          if(dispatch && ['unknown','accepted','starting'].includes(dispatch.state) && typeof dispatch.request_id==='string' && dispatch.request_id && Number.isInteger(event.attempt) && Number.isInteger(job.version)){
+            const feedback=el('p','','agent-feedback');let attempted=false;const reconcile=button('核对原派工',async()=>{
+              if(attempted)return;attempted=true;reconcile.disabled=true;
+              try{await api('/api/desk/job/reconcile-followup',{id:job.id,attempt:event.attempt,expected_version:job.version,request_id:dispatch.request_id});if(current())await renderTaskWorkspace(id,current);}
+              catch(error){if(current())feedback.textContent=error.status===409?'任务已变化，请重新读取后核对；未重新派工。':`${error.message} 核对结果可能未知，请先重新读取，不会自动重发派工。`;}
+            },'quiet');detail.append(reconcile,feedback);
+          }
+          detail.append(el('p',notificationNote(event.notification),'muted'));host.append(detail);
+        }
       }
-      if(job.status==='needs_input' && job.result_commit?.state==='outcome_unknown'){
-        const audit=el('section',undefined,'card'),evidence=el('textarea'),message=el('p','','agent-feedback');evidence.setAttribute('aria-label','结果核对依据');evidence.placeholder='写明检查了哪些业务记录、回执，以及已核对到的事实';let attempted=false;
-        const record=button('记录结果核对',async()=>{if(attempted)return;const proof=evidence.value.trim();if(!proof || proof.length>2000){message.textContent='请填写 1 至 2000 字的实际核对依据。';return;}attempted=true;record.disabled=true;try{await api('/api/desk/job/reconcile-result',{id:job.id,expected_version:job.version ?? 0,evidence:proof});if(current())message.textContent='已记录核对依据。未自动重试、发布或认定外部动作结果；请重新读取任务。';}catch(error){if(current())message.textContent=error.status===409?'任务版本已变化；核对依据已保留，请先复制并重新读取，不会自动重试。':`${error.message} 核对依据已保留；请先重新读取任务确认结果，不会自动重试。`;}},'quiet');if(job.worker_finished!==true)record.disabled=true;audit.append(el('h3','核对未确认的成果提交'),el('p','请先核对实际业务记录和回执；记录依据不会自动重试、发布或认定外部动作结果。'+(job.worker_finished!==true?' 执行进程尚未确认退出，请先等待或核查。':''),'muted'),evidence,record,message);host.append(audit);
+      host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
+      if(heldEntries.length || heldIndexInvalid || job.status==='needs_input'){
+        if(heldEntries.length){
+          const held=el('section',undefined,'card');held.append(el('h3','待复核成果'),el('p','只读取此任务登记的保留成果，不自动合并或覆盖。','muted'));
+          for(const entry of heldEntries){const content=el('div'),message=el('p','','agent-feedback');
+            const show=button(legacyOnly && heldEntries.length===1?'查看保留的待复核成果':`查看第 ${entry.attempt} 轮待复核成果`,async()=>{show.disabled=true;try{
+              const suffix=legacyOnly && heldEntries.length===1?'':`&attempt=${encodeURIComponent(entry.attempt)}`;
+              const result=await api(`/api/desk/job/held-result?id=${encodeURIComponent(job.id)}${suffix}`);if(!current())return;
+              if(String(result.job_id)!==String(job.id) || ((!legacyOnly || heldEntries.length!==1) && result.attempt!==entry.attempt) || (result.attempt!==undefined && result.attempt!==entry.attempt))throw Error('返回成果与所选任务或轮次不一致');
+              content.replaceChildren(el('p',text(result.warning) || '该成果尚未自动合并，请核对后处理。','muted'),el('pre',text(result.content),'source-body'));
+            }catch(error){if(current())message.textContent=`${error.message} 未能读取保留成果。`;}finally{show.disabled=false;}},'quiet');
+            held.append(el('p',`第 ${entry.attempt} 轮 · 记录时间：${time(entry.recorded_at)}`,'muted'),show,content,message);
+          }
+          if(heldIndexInvalid)held.append(el('p','部分保留成果索引不可读，请核对原任务。','inline-error'));host.append(held);
+        }else host.append(el('p',heldIndexInvalid?'保留成果索引不可读，请核对原任务。':'此任务当前没有登记可查看的保留成果。',heldIndexInvalid?'inline-error':'muted'));
+      }
+      if(resultCommitInvalid)host.append(el('p','成果保存记录的轮次不可读，请先核对原任务和回执，不要重做。','inline-error'));
+      const resultButtons=[];
+      for(const attempt of [...unknownAttempts].sort((a,b)=>a-b)){
+        const multiple=unknownAttempts.size>1,audit=el('section',undefined,'card'),evidence=el('textarea'),outcome=el('select'),message=el('p','','agent-feedback');
+        evidence.setAttribute('aria-label',multiple?`第 ${attempt} 轮结果核对依据`:'结果核对依据');evidence.placeholder='写明检查了哪些业务记录、回执，以及已核对到的事实';
+        outcome.setAttribute('aria-label',multiple?`第 ${attempt} 轮结果核对结论`:'结果核对结论');
+        for(const [value,label] of [['','请选择实际结果'],['completed','已确认保存完成'],['failed','已确认保存失败']]){const option=el('option',label);option.value=value;outcome.append(option);}outcome.value='';let attempted=false;
+        const record=button(multiple?`记录第 ${attempt} 轮结果核对`:'记录结果核对',async()=>{if(attempted)return;const proof=evidence.value.trim();if(!proof || proof.length>2000){message.textContent='请填写 1 至 2000 字的实际核对依据。';return;}if(!['completed','failed'].includes(outcome.value)){message.textContent='请选择实际核对结果；仍不明时保持待核对。';return;}attempted=true;record.disabled=true;try{await api('/api/desk/job/reconcile-result',{id:job.id,attempt,expected_version:job.version ?? 0,evidence:proof,outcome:outcome.value});if(current()){for(const item of resultButtons)item.disabled=true;message.textContent='已记录核对依据和实际结果。未自动重试或发布；请重新读取任务。';}}catch(error){if(current())message.textContent=error.status===409?'任务版本已变化；核对依据已保留，请先复制并重新读取，不会自动重试。':`${error.message} 核对依据已保留；请先重新读取任务确认结果，不会自动重试。`;}},'quiet');
+        resultButtons.push(record);if(job.worker_finished!==true || ['running','queued'].includes(job.status))record.disabled=true;
+        audit.append(el('h3',`核对第 ${attempt} 轮未确认的成果提交`),el('p','请先核对实际业务记录和回执；只记录已确认的事实，不会自动重试或发布。'+(terminalSaving && resultCommit.attempt===attempt?' 保存状态仍显示进行中，需确认原进程已退出，结果不明时不要重做。':'')+(job.worker_finished!==true?' 执行进程尚未确认退出，请先等待或核查。':''),'muted'),outcome,evidence,record,message);host.append(audit);
       }
       const aggregate=task.graph?.aggregate;if(aggregate)host.append(el('p',`子任务汇总：${statusNames[aggregate.status] || aggregate.status} · 总计 ${aggregate.total ?? 0} · ${Object.entries(aggregate.counts || {}).map(([status,count])=>`${statusNames[status] || status} ${count}`).join(' · ')}`));
       if(job.task_kind==='group'){

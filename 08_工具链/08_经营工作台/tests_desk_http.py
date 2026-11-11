@@ -19,6 +19,60 @@ from tests_agent_jobs import Process, stop_job_threads
 from website_inquiries import WebsiteInquiries
 
 class DeskHTTPTests(unittest.TestCase):
+    def test_completion_assessment_http_requires_versions_evidence_and_csrf(self):
+        from workspaces import WorkspaceConflict
+        path='/api/desk/job/assess-completion'
+        body={'id':'p1','attempt':2,'expected_version':3,'expected_intent_version':1,
+              'disposition':'continue','goal_status':'not_met','capability_status':'unknown',
+              'result_ref':'artifact:synthetic','gap':'尚未完成','next_action':'核对下一项',
+              'evidence':{'source':'合成任务成果','observed_at':'2026-11-11T13:00:00Z','detail':'隔离测试'}}
+        fields={key:value for key,value in body.items() if key not in ('id','attempt')}
+        with patch.object(self.app.agent_jobs,'assess_and_continue',create=True,return_value={'assessment':{'state':'continue'}}) as assess:
+            try:denied=self.request(path,body,token=False)[0]
+            except (ConnectionAbortedError,ConnectionResetError):denied=0
+            self.assertIn(denied,(0,403));assess.assert_not_called()
+            for rejected in ({'Host':'untrusted.example'},{'Origin':'https://untrusted.example'}):
+                headers={'Content-Type':'application/json','X-Workbench-Token':self.app.token,**rejected}
+                connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+                try:
+                    connection.request('POST',path,body=json.dumps(body).encode(),headers=headers)
+                    response=connection.getresponse();response.read();denied=response.status
+                except (ConnectionAbortedError,ConnectionResetError):denied=0
+                finally:connection.close()
+                self.assertIn(denied,(0,403));assess.assert_not_called()
+            status,result=self.request(path,body)
+            self.assertEqual(status,200);self.assertEqual(result['assessment']['state'],'continue')
+            assess.assert_called_once_with('p1',2,**fields)
+            invalid=[{'attempt':True},{'attempt':0},{'expected_version':True},{'expected_version':-1},
+                     {'expected_intent_version':True},{'disposition':'completed'}, {'goal_status':'passed'},
+                     {'evidence':{}},{'evidence':{'source':'x','observed_at':'2026-11-11T00:00:00','detail':'x'}},
+                     {'evidence':{'source':'x','observed_at':'invalid','detail':'x'}}, {'extra':'x'}]
+            for extra in invalid:
+                with self.subTest(extra=extra):self.assertEqual(self.request(path,{**body,**extra})[0],400)
+            self.assertEqual(assess.call_count,1)
+            assess.side_effect=WorkspaceConflict('合成版本冲突')
+            self.assertEqual(self.request(path,body)[0],409);self.assertEqual(assess.call_count,2)
+
+    def test_completion_followup_http_preserves_unknown_and_never_retries(self):
+        from workspaces import WorkspaceConflict
+        body={'id':'p1','attempt':2,'expected_version':3,'request_id':'request-1'}
+        for path,method in [('/api/desk/job/continue-followup','continue_followup'),
+                            ('/api/desk/job/reconcile-followup','reconcile_followup')]:
+            with self.subTest(path=path),patch.object(self.app.agent_jobs,method,create=True,
+                    return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}) as operation:
+                try:denied=self.request(path,body,token=False)[0]
+                except (ConnectionAbortedError,ConnectionResetError):denied=0
+                self.assertIn(denied,(0,403));operation.assert_not_called()
+                status,result=self.request(path,body)
+                self.assertEqual(status,200);self.assertEqual(result['dispatch']['state'],'unknown')
+                operation.assert_called_once_with('p1',2,expected_version=3,request_id='request-1')
+                for extra in ({'attempt':True},{'attempt':0},{'expected_version':True},
+                              {'request_id':''},{'request_id':'bad/id'},{'extra':'x'}):
+                    with self.subTest(extra=extra):self.assertEqual(self.request(path,{**body,**extra})[0],400)
+                self.assertEqual(operation.call_count,1)
+                operation.side_effect=WorkspaceConflict('合成版本冲突')
+                self.assertEqual(self.request(path,body)[0],409);self.assertEqual(operation.call_count,2)
+
     def test_desktop_observation_and_workstream_link_use_existing_csrf_and_conflict_guards(self):
         from workspaces import WorkspaceConflict
         observation={'host_id':'local','thread_id':'fixture','observed_at':'2026-11-11T00:00:00Z',
@@ -116,10 +170,15 @@ class DeskHTTPTests(unittest.TestCase):
         with patch.object(self.app.agent_jobs,'read_held_result',return_value=held,create=True) as read, \
              patch.object(self.app.agent_jobs,'reconcile_result_commit',return_value={'id':'p1','status':'needs_input'},create=True) as reconcile:
             status,value=self.request('/api/desk/job/held-result?id=p1');self.assertEqual(status,200);self.assertEqual(value['content'],held['content']);read.assert_called_once_with('p1');reconcile.assert_not_called()
-            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录'});self.assertEqual(status,200);reconcile.assert_called_once_with('p1',expected_version=2,evidence='已核对原业务记录')
+            status,value=self.request('/api/desk/job/held-result?id=p1&attempt=2');self.assertEqual(status,200);read.assert_called_with('p1',attempt=2)
+            status,_=self.request('/api/desk/job/held-result?id=p1&attempt=0');self.assertEqual(status,400)
+            status,_=self.request('/api/desk/job/held-result?id=p1&attempt=../2');self.assertEqual(status,400)
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录'});self.assertEqual(status,400);reconcile.assert_not_called()
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录','outcome':'unknown'});self.assertEqual(status,400);reconcile.assert_not_called()
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录','outcome':'completed'});self.assertEqual(status,200);reconcile.assert_called_once_with('p1',expected_version=2,evidence='已核对原业务记录',outcome='completed')
             reconcile.side_effect=WorkspaceConflict('任务已变化')
-            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录'});self.assertEqual(status,409)
-            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':True,'evidence':'不合法'});self.assertEqual(status,400);self.assertEqual(reconcile.call_count,2)
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':2,'evidence':'已核对原业务记录','outcome':'failed'});self.assertEqual(status,409)
+            status,_=self.request('/api/desk/job/reconcile-result',{'id':'p1','expected_version':True,'evidence':'不合法','outcome':'completed'});self.assertEqual(status,400);self.assertEqual(reconcile.call_count,2)
             read.side_effect=ValueError('此任务没有可读取的保留成果')
             status,_=self.request('/api/desk/job/held-result?id=unknown');self.assertEqual(status,400)
 

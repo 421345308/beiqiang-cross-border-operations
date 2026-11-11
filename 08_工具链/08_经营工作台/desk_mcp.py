@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 from customer_workspace import CustomerWriteOutcomeUnknown
 
@@ -17,7 +18,7 @@ DRAFT_TOOLS = {'get_business_context','get_object','list_sources','read_source',
                'get_customer_profile','get_customer_email_draft','prepare_customer_email_draft',
                'save_customer_email_draft','add_customer_email_attachment'}
 RESEARCH_TOOLS = DRAFT_TOOLS | {'research_company','save_customer_profile','list_objects'}
-OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task'}
+OVERVIEW_TOOLS = {'get_work_overview', 'adjust_local_task', 'assess_local_run', 'continue_local_run', 'reconcile_local_run'}
 OVERVIEW_OBJECT = 'workspace:overview'
 
 
@@ -60,6 +61,39 @@ def _validate_intent_adjustment(fields):
             raise WorkOverviewError('invalid_input', '有效决定文字和来源合计不能超过6000字。')
 
 
+def _validate_local_run_operation(name, args):
+    """Validate explicit local run operations before making a single request."""
+    common={'id','attempt','expected_version'}
+    assessment={'expected_intent_version','disposition','goal_status','capability_status',
+                'result_ref','gap','next_action','evidence'}
+    required=common | (assessment if name=='assess_local_run' else {'request_id'})
+    if not isinstance(args,dict) or set(args)!=required:
+        raise WorkOverviewError('invalid_input','回合验收或接续参数无效。')
+    task_id=args['id']
+    if not isinstance(task_id,str) or not re.fullmatch(r'local:[A-Za-z0-9_-]{1,200}',task_id):
+        raise WorkOverviewError('unsupported_task','仅支持已接入的本机任务；参考会话和云任务不能执行此操作。')
+    if type(args['attempt']) is not int or args['attempt']<1 or type(args['expected_version']) is not int or args['expected_version']<0:
+        raise WorkOverviewError('invalid_input','请提供实际回合和当前任务版本。')
+    if name=='assess_local_run':
+        if type(args['expected_intent_version']) is not int or args['expected_intent_version']<0:
+            raise WorkOverviewError('invalid_input','请提供当前任务意图版本。')
+        if args['disposition'] not in ('verified_complete','continue','needs_decision','blocked','unknown') or any(args[k] not in ('met','not_met','unknown') for k in ('goal_status','capability_status')):
+            raise WorkOverviewError('invalid_input','回合验收状态无效。')
+        if any(not isinstance(args[k],str) or len(args[k])>limit for k,limit in (('result_ref',2000),('gap',4000),('next_action',4000))):
+            raise WorkOverviewError('invalid_input','回合验收内容无效。')
+        evidence=args['evidence']
+        if (not isinstance(evidence,dict) or set(evidence)!={'source','observed_at','detail'} or
+                any(not isinstance(evidence[k],str) or not evidence[k].strip() or len(evidence[k])>limit for k,limit in (('source',500),('observed_at',100),('detail',2000)))):
+            raise WorkOverviewError('invalid_input','请提供证据来源、观测时间与说明。')
+        try:observed=datetime.fromisoformat(evidence['observed_at'].replace('Z','+00:00'))
+        except ValueError:raise WorkOverviewError('invalid_input','证据观测时间无效。') from None
+        if observed.tzinfo is None or observed.utcoffset() is None:
+            raise WorkOverviewError('invalid_input','证据观测时间必须包含时区。')
+    elif not isinstance(args['request_id'],str) or not re.fullmatch(r'[A-Za-z0-9_.:-]{1,200}',args['request_id']):
+        raise WorkOverviewError('invalid_input','接续请求编号无效。')
+    return task_id[6:]
+
+
 class LocalOverviewClient:
     """Use the existing local service; never start it or retry a mutation."""
     origin = 'http://127.0.0.1:8766'
@@ -91,13 +125,13 @@ class LocalOverviewClient:
                 raise WorkspaceConflict('工作版本已变化，请重新读取。') from None
             if payload is not None:
                 raise WorkOverviewError('outcome_unknown',
-                                        '调整结果未确认，请先重新读取总览核对，勿直接重试。') from None
+                                        '任务操作结果未确认，请先读取总览及原请求状态核对，勿直接重试。') from None
             raise WorkOverviewError('local_service_unavailable',
                                     '本机工作台接口不可用或拒绝请求；未自动重试。') from None
         except (URLError, OSError, UnicodeError, ValueError):
             if payload is not None:
                 raise WorkOverviewError('outcome_unknown',
-                                        '调整结果未确认，请先重新读取总览核对，勿直接重试。') from None
+                                        '任务操作结果未确认，请先读取总览及原请求状态核对，勿直接重试。') from None
             raise WorkOverviewError('local_service_unavailable',
                                     '无法读取本机工作台；请核对本机服务及版本。') from None
 
@@ -112,6 +146,16 @@ class LocalOverviewClient:
         if not isinstance(token, str) or not token:
             raise WorkOverviewError('local_service_unavailable', '本机工作台认证不可用。')
         return self._request('/api/desk/job/adjust', {'id': job_id, **fields}, token)
+
+    def run_operation(self, name, job_id, **fields):
+        paths={'assess_local_run':'assess-completion','continue_local_run':'continue-followup',
+               'reconcile_local_run':'reconcile-followup'}
+        if name not in paths:raise WorkOverviewError('invalid_input','不支持的回合操作。')
+        bootstrap=self._request('/api/desk/bootstrap')
+        token=bootstrap.get('csrf_token')
+        if not isinstance(token,str) or not token:
+            raise WorkOverviewError('local_service_unavailable','本机工作台认证不可用。')
+        return self._request('/api/desk/job/'+paths[name],{'id':job_id,**fields},token)
 
 
 class DeskTools:
@@ -306,7 +350,17 @@ class DeskTools:
                 workspace = getattr(app, 'task_workspace', None)
                 return workspace.overview(filters=filters) if workspace else client.overview(filters)
             if self.read_only:
-                raise WorkOverviewError('read_only', '当前连接只读，不能调整任务。')
+                raise WorkOverviewError('read_only', '当前连接只读，不能调整、验收或接续任务。')
+            if name in ('assess_local_run','continue_local_run','reconcile_local_run'):
+                job_id=_validate_local_run_operation(name,args)
+                fields={key:value for key,value in args.items() if key!='id'}
+                jobs=getattr(app,'agent_jobs',None)
+                if jobs:
+                    methods={'assess_local_run':'assess_and_continue','continue_local_run':'continue_followup',
+                             'reconcile_local_run':'reconcile_followup'}
+                    attempt=fields.pop('attempt')
+                    return getattr(jobs,methods[name])(job_id,attempt,**fields)
+                return client.run_operation(name,job_id,**fields)
             if set(args) - {'id','expected_version','priority','next_action','current_goal','effective_decisions','intent_source','intent_reason'}:
                 raise WorkOverviewError('invalid_input', '任务调整参数无效。')
             task_id, version = args.get('id'), args.get('expected_version')
@@ -573,6 +627,44 @@ TOOLS.extend([
      'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
 ])
 
+_RUN_COMMON_PROPERTIES={
+    'id':{'type':'string','pattern':'^local:[A-Za-z0-9_-]{1,200}$','maxLength':206},
+    'attempt':{'type':'integer','minimum':1},
+    'expected_version':{'type':'integer','minimum':0}}
+_RUN_ASSESS_PROPERTIES={
+    **_RUN_COMMON_PROPERTIES,
+    'expected_intent_version':{'type':'integer','minimum':0},
+    'disposition':{'type':'string','enum':['verified_complete','continue','needs_decision','blocked','unknown']},
+    'goal_status':{'type':'string','enum':['met','not_met','unknown']},
+    'capability_status':{'type':'string','enum':['met','not_met','unknown']},
+    'result_ref':{'type':'string','maxLength':2000},
+    'gap':{'type':'string','maxLength':4000},
+    'next_action':{'type':'string','maxLength':4000},
+    'evidence':{'type':'object','properties':{
+        'source':{'type':'string','minLength':1,'maxLength':500,'pattern':r'\S'},
+        'observed_at':{'type':'string','minLength':1,'maxLength':100,'format':'date-time'},
+        'detail':{'type':'string','minLength':1,'maxLength':2000,'pattern':r'\S'}},
+        'required':['source','observed_at','detail'],'additionalProperties':False}}
+_RUN_FOLLOWUP_PROPERTIES={**_RUN_COMMON_PROPERTIES,
+    'request_id':{'type':'string','minLength':1,'maxLength':200,'pattern':r'^[A-Za-z0-9_.:-]+$'}}
+TOOLS.extend([
+    {'name':'assess_local_run',
+     'description':'按当前任务和意图版本验收本机已结束的指定运行回合，记录目标、能力、证据、缺口与下一步；选择继续时，仅 mail_draft 的只读研究可自动领取并保存内部稿件，不发送，其他模式保留待处理。受理不等于已运行，未知先对账、不重放；回合结束不代表经营目标完成，也不能读取或控制外部聊天。',
+     'inputSchema':{'type':'object','properties':_RUN_ASSESS_PROPERTIES,
+                    'required':list(_RUN_ASSESS_PROPERTIES),'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'continue_local_run',
+     'description':'对已验收的本机 mail_draft 回合，以实际读取的任务版本和请求编号发起只读研究接续，成果保存为内部稿件，不发送。受理不等于已运行；结果未知先对账，不自动重放。不能发送或控制外部聊天。',
+     'inputSchema':{'type':'object','properties':_RUN_FOLLOWUP_PROPERTIES,
+                    'required':list(_RUN_FOLLOWUP_PROPERTIES),'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}},
+    {'name':'reconcile_local_run',
+     'description':'按原请求编号核对本机接续回执及运行状态，不重新发起未知请求；未查到结果不能推断失败。不能对账或重发外部聊天。',
+     'inputSchema':{'type':'object','properties':_RUN_FOLLOWUP_PROPERTIES,
+                    'required':list(_RUN_FOLLOWUP_PROPERTIES),'additionalProperties':False},
+     'annotations':{'readOnlyHint':False,'destructiveHint':False,'openWorldHint':False}}
+])
+
 
 def dispatch(tools,message):
     method=message.get('method');rid=message.get('id')
@@ -599,7 +691,7 @@ def dispatch(tools,message):
             if isinstance(exc,WorkspaceConflict):
                 result={'content':[{'type':'text','text':json.dumps({'code':'version_conflict','message':'画布或记录已被其他操作更新，请重新读取并合并后再保存。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in OVERVIEW_TOOLS:
-                result={'content':[{'type':'text','text':json.dumps({'code':'invalid_input','message':'任务不可调整或参数无效，请重新读取总览中的当前版本及可写能力。'},ensure_ascii=False)}],'isError':True}
+                result={'content':[{'type':'text','text':json.dumps({'code':'invalid_input','message':'任务操作不可用或参数无效，请重新读取总览、当前版本与回执，不自动重试。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in ('get_customer_email_draft','prepare_customer_email_draft','save_customer_email_draft','add_customer_email_attachment'):
                 result={'content':[{'type':'text','text':json.dumps({'code':'draft_unavailable','message':'邮件草稿或附件不可保存，请先读取当前草稿和实际资料；不要发送或覆盖。'},ensure_ascii=False)}],'isError':True}
             elif params.get('name') in ('save_creation_canvas','product_creation_options','add_product_asset_to_canvas'):

@@ -450,7 +450,12 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
                 if u.path=='/api/desk/job/graph':return self.send_json(app.agent_jobs.get_graph(value('id')))
                 if u.path=='/api/desk/job/priority-next':return self.send_json(app.agent_jobs.preview_priority_dispatch(value('id')))
-                if u.path=='/api/desk/job/held-result':return self.send_json(app.agent_jobs.read_held_result(value('id')))
+                if u.path=='/api/desk/job/held-result':
+                    attempt=value('attempt')
+                    if attempt:
+                        if not attempt.isascii() or not attempt.isdecimal() or int(attempt)<1:raise ValueError('待复核成果轮次无效')
+                        return self.send_json(app.agent_jobs.read_held_result(value('id'),attempt=int(attempt)))
+                    return self.send_json(app.agent_jobs.read_held_result(value('id')))
                 if u.path=='/api/desk/customer-batches/research-groups':return self.send_json(app.batch_research.list_groups(value('batch_id')))
                 if u.path=='/api/desk/artifacts':return self.send_json({'artifacts':app.business.list_artifacts(value('object_id') or None)})
             if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
@@ -697,8 +702,31 @@ class Handler(BaseHTTPRequestHandler):
                 if not isinstance(body['group_id'],str) or not body['group_id'] or not isinstance(body['expected_job_id'],str) or not body['expected_job_id'] or type(body['expected_version']) is not int or body['expected_version']<0:raise ValueError('请使用已预览的任务编号和版本')
                 return self.send_json(app.agent_jobs.dispatch_priority_next(body['group_id'],body['expected_job_id'],body['expected_version']))
             if parts==['api','desk','job','reconcile-result']:
-                if set(body)!={'id','expected_version','evidence'} or not isinstance(body['id'],str) or not body['id'] or type(body['expected_version']) is not int or body['expected_version']<0 or not isinstance(body['evidence'],str):raise ValueError('请填写任务、版本和核对依据')
-                return self.send_json(app.agent_jobs.reconcile_result_commit(body['id'],expected_version=body['expected_version'],evidence=body['evidence']))
+                required={'id','expected_version','evidence','outcome'}
+                if not required.issubset(body) or set(body)-required-{'attempt'} or not isinstance(body['id'],str) or not body['id'] or type(body['expected_version']) is not int or body['expected_version']<0 or not isinstance(body['evidence'],str) or body['outcome'] not in ('completed','failed'):raise ValueError('请填写任务、版本、实际核对结果和依据')
+                if 'attempt' in body and (type(body['attempt']) is not int or body['attempt']<1):raise ValueError('待核对轮次无效')
+                kwargs={'expected_version':body['expected_version'],'evidence':body['evidence'],'outcome':body['outcome']}
+                if 'attempt' in body:kwargs['attempt']=body['attempt']
+                return self.send_json(app.agent_jobs.reconcile_result_commit(body['id'],**kwargs))
+            if parts==['api','desk','job','assess-completion']:
+                required={'id','attempt','expected_version','expected_intent_version','disposition','goal_status','capability_status','result_ref','gap','next_action','evidence'}
+                if set(body)!=required or not isinstance(body['id'],str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,200}',body['id']):raise ValueError('回合验收字段无效')
+                if type(body['attempt']) is not int or body['attempt']<1 or any(type(body[k]) is not int or body[k]<0 for k in ('expected_version','expected_intent_version')):raise ValueError('请提供实际回合与当前版本')
+                if body['disposition'] not in ('verified_complete','continue','needs_decision','blocked','unknown') or any(body[k] not in ('met','not_met','unknown') for k in ('goal_status','capability_status')):raise ValueError('验收状态无效')
+                if any(not isinstance(body[k],str) or len(body[k])>limit for k,limit in (('result_ref',2000),('gap',4000),('next_action',4000))):raise ValueError('验收内容无效')
+                evidence=body['evidence']
+                if not isinstance(evidence,dict) or set(evidence)!={'source','observed_at','detail'} or any(not isinstance(evidence[k],str) or not evidence[k].strip() or len(evidence[k])>limit for k,limit in (('source',500),('observed_at',100),('detail',2000))):raise ValueError('请提供证据来源、观测时间与说明')
+                try:observed=datetime.fromisoformat(evidence['observed_at'].replace('Z','+00:00'))
+                except ValueError:raise ValueError('证据观测时间无效') from None
+                if observed.tzinfo is None or observed.utcoffset() is None:raise ValueError('证据观测时间必须包含时区')
+                fields={key:body[key] for key in required-{'id','attempt'}}
+                return self.send_json(app.agent_jobs.assess_and_continue(body['id'],body['attempt'],**fields))
+            if parts in (['api','desk','job','continue-followup'],['api','desk','job','reconcile-followup']):
+                if set(body)!={'id','attempt','expected_version','request_id'} or not isinstance(body['id'],str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,200}',body['id']):raise ValueError('接续请求字段无效')
+                if type(body['attempt']) is not int or body['attempt']<1 or type(body['expected_version']) is not int or body['expected_version']<0:raise ValueError('请提供实际回合与当前版本')
+                if not isinstance(body['request_id'],str) or not re.fullmatch(r'[A-Za-z0-9_.:-]{1,200}',body['request_id']):raise ValueError('请求编号无效')
+                method=app.agent_jobs.continue_followup if parts[-1]=='continue-followup' else app.agent_jobs.reconcile_followup
+                return self.send_json(method(body['id'],body['attempt'],expected_version=body['expected_version'],request_id=body['request_id']))
             if parts==['api','desk','job','conversation']:
                 if set(body)-{'id','provider','conversation_id','provenance','url','expected_version'}:raise ValueError('会话关联字段无效')
                 return self.send_json(app.agent_jobs.link_conversation(body.get('id'),provider=body.get('provider'),conversation_id=body.get('conversation_id'),provenance=body.get('provenance'),url=body.get('url'),expected_version=body.get('expected_version')))

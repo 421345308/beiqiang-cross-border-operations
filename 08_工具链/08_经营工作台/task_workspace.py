@@ -6,12 +6,99 @@ read-only preview; explicit plans/dispatches still use AgentJobs' safeguards.
 import re
 from datetime import datetime, timezone
 from urllib.parse import quote
+from completion_dispatch import CompletionDispatch
 from desktop_snapshot import SOURCE as DESKTOP_SOURCE
 from workstreams import build_workstreams
 
 
 def now():
     return datetime.now(timezone.utc).isoformat()
+
+
+_COMPLETION_MESSAGES = {
+    'awaiting_review': '回合已结束，仍需对照目标和证据验收。',
+    'intent_changed': '目标或决定已变化，旧回合需要重新验收。',
+    'review_required': '当前目标已变化，请重新核对本轮验收。',
+    'continue_ready': '已有下一动作，需核对接续是否已执行。',
+    'ready_to_continue': '已有下一动作，需核对接续是否已执行。',
+    'needs_decision': '下一步需要负责人决定。',
+    'blocked': '继续推进遇到阻塞，请核对原因。',
+    'unknown': '当前结果未知，请先核对事实。',
+    'dispatch_accepted': '接续请求已受理，尚未确认启动。',
+    'dispatch_starting': '接续正在启动，尚未确认运行。',
+    'dispatch_running': '接续正在运行，结果尚待验收。',
+    'dispatch_completed': '接续回合已结束，成果仍需验收。',
+    'dispatch_failed': '接续失败，请核对原因及已有成果。',
+    'dispatch_unknown': '接续结果未知，请先对账，不要重复派发。',
+    'dispatch_blocked': '接续在派工前受阻，尚未发出派工。',
+}
+
+
+def _completion_events(reader, job):
+    """Deduplicate a task's read-only event projection without guessing conflicts."""
+    if not reader:
+        return []
+    events = reader(job)
+    if not isinstance(events, list):
+        raise ValueError('回合验收状态不可读')
+    unique = {}
+    for event in events:
+        if not isinstance(event, dict) or not isinstance(event.get('event_id'), str) or not event['event_id']:
+            raise ValueError('回合验收记录缺少事件标识')
+        event = dict(event)
+        dispatch = event.get('dispatch') if isinstance(event.get('dispatch'), dict) else {}
+        dispatch_state = dispatch.get('state')
+        if event.get('state') == 'verified_complete' and dispatch_state in ('accepted','starting','running','completed','failed','unknown'):
+            event['state'] = 'dispatch_' + dispatch_state
+        if event.get('intent_changed') is True and event.get('state') == 'verified_complete':
+            event['state'] = 'review_required'
+        if event.get('intent_version_known') is False and event.get('state') == 'verified_complete':
+            event['state'] = 'review_required'
+            event['reason'] = '任务意图版本无法比较，旧验收需重新核对。'
+        assessment = event.get('assessment') if isinstance(event.get('assessment'), dict) else None
+        if assessment is not None and event.get('dispatch') is None:
+            baseline = assessment.get('task_next_action_at_review')
+            current = job.get('next_action', '')
+            comparable = isinstance(baseline, str) and isinstance(current, str)
+            event['next_action_comparison'] = ('changed' if current != baseline else 'unchanged') if comparable else 'unknown'
+            if comparable and current != baseline:
+                event['next_action_changed'] = True
+                event['next_action_review_required'] = True
+                event['state'] = 'review_required'
+                if not event.get('intent_changed') and event.get('intent_version_known') is not False:
+                    event['reason'] = '任务下一动作已变化，请按当前安排重新验收。'
+        event_id = event['event_id']
+        if event_id in unique and unique[event_id] != event:
+            old = unique[event_id]
+            unique[event_id] = {'event_id':event_id, 'attempt':old.get('attempt'),
+                                'state':'unknown', 'source':old.get('source'),
+                                'observed_at':old.get('observed_at'),
+                                'reason':'同一回合返回矛盾的状态，请核对原任务。',
+                                'notification':{'state':'not_connected'}}
+        else:
+            unique[event_id] = event
+    return list(unique.values())
+
+
+def _completion_needs_attention(job_id, event, completions):
+    state = event.get('state') or 'unknown'
+    changed = (event.get('intent_changed') is True or event.get('next_action_review_required') is True
+               or state in ('intent_changed', 'review_required'))
+    if changed:
+        return True
+    if state == 'verified_complete':
+        return False
+    dispatch = event.get('dispatch') if isinstance(event.get('dispatch'), dict) else {}
+    if dispatch.get('state') == 'running':
+        return False
+    if dispatch.get('state') == 'completed':
+        target, attempt = dispatch.get('target_job_id'), dispatch.get('target_attempt')
+        if (isinstance(target, str) and type(attempt) is int and
+                any(item.get('attempt') == attempt and
+                    (target != job_id or item.get('event_id') != event.get('event_id'))
+                    for item in completions.get(target, []))):
+            return False
+    return True
 
 
 class TaskWorkspace:
@@ -30,7 +117,31 @@ class TaskWorkspace:
         except (ValueError, OSError, RuntimeError):
             jobs = []
             local_state = 'unavailable'
+        completions, completion_errors, result_pending, result_errors = {}, set(), {}, set()
+        completion_reader = getattr(self.app.agent_jobs, 'completion_view', None)
         for job in jobs:
+            try:
+                completions[job['id']] = _completion_events(completion_reader, job)
+            except Exception:
+                completions[job['id']] = []
+                completion_errors.add(job['id'])
+            if job.get('completion_error') is not None:
+                completion_errors.add(job['id'])
+            try:
+                pending = CompletionDispatch._pending_result_attempts(job)
+                commit = job.get('result_commit')
+                # A nonterminal live save is not an unknown outcome. A saving
+                # marker left on a terminal job must be reconciled explicitly.
+                if (isinstance(commit, dict) and commit.get('state') == 'saving'
+                        and job.get('status') not in ('completed', 'failed', 'needs_input', 'cancelled')):
+                    attempt = commit.get('attempt')
+                    if (attempt not in CompletionDispatch._held_unknown_attempts(job)
+                            or CompletionDispatch._confirmed_result_outcome(job, attempt) is not None):
+                        pending.discard(attempt)
+                result_pending[job['id']] = pending
+            except (ValueError, TypeError):
+                result_pending[job['id']] = set()
+                result_errors.add(job['id'])
             row = {key: job.get(key) for key in (
                 'object_id', 'title', 'instruction', 'status', 'summary', 'error',
                 'updated_at', 'artifact_id', 'session_id', 'attempt', 'task_kind', 'mode', 'batch_id',
@@ -56,13 +167,75 @@ class TaskWorkspace:
                 row.update(current_goal=None, effective_decisions=None, decisions_recorded=None,
                            intent_version=None, intent_source=None, intent_state='unavailable')
             row.update(id='local:' + job['id'], job_id=job['id'], origin='local', version=job.get('version', 0))
+            row['completion_events'] = completions[job['id']]
             if job.get('task_kind') == 'group':
                 row['graph'] = self.app.agent_jobs.get_graph(job['id'])
             tasks.append(row)
         sources = {'local': {'state': local_state, 'observed_at': now()}}
         inbox = []
         for job in jobs:
-            if job.get('status') in ('failed', 'needs_input') and job.get('task_kind') != 'group':
+            task_id = 'local:' + job['id']
+            for attempt in sorted(result_pending[job['id']]):
+                inbox.append({'id':f'result-unknown:{job["id"]}:{attempt}', 'task_id':task_id,
+                    'attempt':attempt, 'kind':'result_outcome_unknown', 'group':'act',
+                    'title':job.get('title') or '本机工作',
+                    'judgment':f'第 {attempt} 轮成果保存结果不明，请先核对实际记录和回执，不要重做。',
+                    'severity':'high', 'state':'outcome_unknown', 'object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'核对成果保存结果'},
+                    'source':'AgentJobs 成果保存记录', 'updated_at':job.get('updated_at'),
+                    'notification':{'state':'not_connected'}})
+            if job['id'] in result_errors:
+                inbox.append({'id':'result-unavailable:'+job['id'], 'task_id':task_id,
+                    'kind':'result_outcome_unknown', 'group':'act','title':job.get('title') or '本机工作',
+                    'judgment':'成果保存记录不可读，请先核对原任务和回执，不要重做。',
+                    'severity':'high', 'state':'unknown', 'object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'核对任务'},
+                    'source':'AgentJobs 成果保存记录', 'updated_at':job.get('updated_at'),
+                    'notification':{'state':'not_connected'}})
+            open_events = [event for event in completions[job['id']]
+                           if _completion_needs_attention(job['id'], event, completions)]
+            for event in open_events:
+                state = event.get('state') or 'unknown'
+                dispatch_blocked = event.get('dispatch_blocked') if isinstance(event.get('dispatch_blocked'), dict) and not event.get('dispatch') else None
+                if dispatch_blocked:
+                    state = 'dispatch_blocked'
+                assessment = event.get('assessment') if isinstance(event.get('assessment'), dict) else {}
+                stale_intent = state == 'intent_changed' or event.get('intent_changed') is True
+                stale = state == 'review_required' or stale_intent or event.get('next_action_review_required') is True
+                action = job.get('next_action') if stale or event.get('next_action_changed') else assessment.get('next_action') or job.get('next_action')
+                message = event.get('reason') or _COMPLETION_MESSAGES.get(state, _COMPLETION_MESSAGES['unknown'])
+                if stale_intent and state not in ('intent_changed','review_required'):
+                    message += ' 任务目标或决定已变化，仍需重新验收。'
+                if event.get('next_action_changed') is True and not event.get('reason'):
+                    message += (' 任务下一动作已变化，仍需重新验收。' if event.get('next_action_review_required')
+                                else ' 任务下一动作已变化；原派工回执保持不变。')
+                if dispatch_blocked and isinstance(dispatch_blocked.get('reason'), str) and dispatch_blocked['reason'].strip():
+                    message += ' ' + dispatch_blocked['reason'].strip()
+                if not stale and isinstance(assessment.get('gap'), str) and assessment['gap'].strip():
+                    message += ' ' + assessment['gap'].strip()
+                intent = job.get('intent') if isinstance(job.get('intent'), dict) else {}
+                goal = (intent.get('goal') if 'intent' in job else
+                        job.get('initial_instruction', job.get('instruction')))
+                inbox.append({'id':'completion:'+job['id']+':'+event['event_id'],
+                    'event_id':event['event_id'], 'task_id':task_id, 'kind':'completion_review', 'group':'act',
+                    'title':job.get('title') or '本机工作', 'judgment':message,
+                    'severity':'high' if stale or state in ('dispatch_unknown','intent_changed','review_required') else 'normal',
+                    'state':state, 'current_goal':goal if isinstance(goal, str) else None,
+                    'next_action':action or '', 'object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'查看验收与接续'},
+                    'source':event.get('source'), 'observed_at':event.get('observed_at'),
+                    'updated_at':event.get('observed_at') or job.get('updated_at'),
+                    'notification':event.get('notification')})
+            if job['id'] in completion_errors:
+                failure = job.get('completion_error') if isinstance(job.get('completion_error'), dict) else {}
+                inbox.append({'id':'completion-unavailable:'+job['id'], 'task_id':task_id,
+                    'kind':'completion_unavailable', 'group':'act','title':job.get('title') or '本机工作',
+                    'judgment':'回合验收状态暂不可读，请核对原任务；不能据此认定已闭环。',
+                    'severity':'high', 'object_id':job.get('object_id'),
+                    'action':{'type':'open_task','job_id':job['id'],'task_id':task_id,'label':'核对任务'},
+                    'source':'AgentJobs 回合登记', 'observed_at':failure.get('observed_at'),
+                    'updated_at':failure.get('observed_at') or job.get('updated_at'), 'notification':{'state':'not_connected'}})
+            if not open_events and not result_pending[job['id']] and job['id'] not in result_errors and job['id'] not in completion_errors and job.get('status') in ('failed', 'needs_input') and job.get('task_kind') != 'group':
                 inbox.append({'id':'local:'+job['id'], 'kind':'agent_job', 'group':'act',
                     'title':job.get('title') or '本机工作',
                     'judgment':job.get('error') or job.get('summary') or '请核对成果与中断原因。',
@@ -220,6 +393,25 @@ class TaskWorkspace:
                     'next_action_effect':'next_attempt' if row['origin']=='local' and row.get('task_kind')!='group' else 'none',
                     'external_conversation_control':False,
                     'read_only_reason':'' if row['origin']=='local' else '此总览未接入该来源的安全写入。'})
+            if row['origin']=='local':
+                pending = [event for event in row.get('completion_events', []) if event.get('state') != 'verified_complete']
+                row['completion_pending'] = len(pending)
+                if row.get('job_id') in result_errors or result_pending.get(row.get('job_id')):
+                    row['blocker'] = '成果保存结果不明，请先核对实际记录和回执，不要重做。'
+                elif row.get('job_id') in completion_errors and not row['blocker']:
+                    row['blocker'] = '回合验收状态暂不可读。'
+                elif pending:
+                    latest = max(pending, key=lambda event: (event.get('attempt') if type(event.get('attempt')) is int else -1,
+                                                              str(event.get('observed_at') or '')))
+                    state = latest.get('state') or 'unknown'
+                    row['completion_state'] = state
+                    if isinstance(latest.get('dispatch_blocked'), dict) and not latest.get('dispatch'):
+                        state = 'dispatch_blocked'
+                        row['completion_state'] = state
+                    if state in ('blocked','unknown','intent_changed','review_required','dispatch_failed','dispatch_unknown','dispatch_blocked') and not row['blocker']:
+                        row['blocker'] = latest.get('reason') or _COMPLETION_MESSAGES.get(state, _COMPLETION_MESSAGES['unknown'])
+                        if state=='dispatch_blocked' and latest['dispatch_blocked'].get('reason'):
+                            row['blocker'] += ' ' + str(latest['dispatch_blocked']['reason'])
             row['freshness'] = ({'state':row.get('snapshot_state'), 'updated_at':row.get('updated_at'),
                 'age_seconds':row.get('snapshot_age_seconds')} if row['origin']=='desktop'
                 else self._freshness(row.get('updated_at'), observed))
@@ -229,6 +421,8 @@ class TaskWorkspace:
         tasks = [row for row in tasks if all(str(row.get(key) or '') == value for key,value in filters.items() if value)]
         return {'tasks': tasks, 'workstreams':workstreams, 'sources': sources, 'inbox': inbox, 'observed_at': observed,
                 'filters':options, 'applied_filters':filters,
+                'completion_capabilities':{'local_finished_events':'agent_jobs' if local_state=='ok' and callable(completion_reader) else 'unavailable',
+                    'external_turn_bridge':'not_connected','push_notification':'not_connected'},
                 'scheduling_effect':'explicit_standalone_or_group_dispatch_only',
                 'scope': '本机 AgentJobs、已配对云队列、现有业务待办及由 Dot 导入的桌面会话只读快照（非实时、未自动更新）；未导入或未登记的会话和其他数据库不在此列表。'}
 

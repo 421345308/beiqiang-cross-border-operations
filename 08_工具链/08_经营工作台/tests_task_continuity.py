@@ -95,7 +95,11 @@ class TaskContinuityTests(AgentJobTests):
         planned=self.jobs.adjust(first['id'],expected_version=first['version'],next_action='本轮先核对样品')
         with self.assertRaises(ValueError):
             self.jobs.resume(first['id'],'继续原任务')
-        gate=threading.Event();self.options={'gate':gate}
+        class ObservedGate:
+            def __init__(self):self.entered=threading.Event();self.release=threading.Event()
+            def wait(self,timeout=None):self.entered.set();return self.release.wait(timeout)
+            def set(self):self.release.set()
+        gate=ObservedGate();self.options={'gate':gate}
         second=self.jobs.resume(first['id'],'继续原任务',expected_version=planned['version'])
         try:
             deadline=time.monotonic()+3
@@ -103,6 +107,7 @@ class TaskContinuityTests(AgentJobTests):
                 if len(self.processes)>=2 and self.processes[-1].stdin.closed:break
                 time.sleep(.01)
             self.assertGreaterEqual(len(self.processes),2)
+            self.assertTrue(gate.entered.wait(3))
             prompt=self.processes[-1].stdin.value
             self.assertIn('本轮先核对样品',prompt)
             running=self.jobs.get_job(first['id'])
@@ -200,11 +205,11 @@ class TaskContinuityTests(AgentJobTests):
         with self.assertRaises(ValueError):
             self.jobs.resume(job['id'],'继续',new_session=True,expected_version=job['version'])
         with self.assertRaises(ValueError):
-            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='  ')
+            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='  ',outcome='failed')
         with self.assertRaises(WorkspaceConflict):
-            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version']-1,evidence='已核对业务资料')
+            self.jobs.reconcile_result_commit(job['id'],expected_version=job['version']-1,evidence='已核对业务资料',outcome='failed')
         count=len(self.processes)
-        reviewed=self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='已核对业务资料和回执')
+        reviewed=self.jobs.reconcile_result_commit(job['id'],expected_version=job['version'],evidence='已核对业务资料和回执',outcome='failed')
         self.assertNotIn('result_commit',reviewed)
         self.assertEqual(reviewed['status'],'needs_input')
         self.assertEqual(reviewed['result_reconciliations'][-1]['evidence'],'已核对业务资料和回执')

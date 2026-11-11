@@ -18,7 +18,10 @@ class OverviewMcpTests(unittest.TestCase):
             {'id':'reference:demo','reference_only':True}],
             'sources':{'cloud':{'state':'unavailable'}},'inbox':[]}
         self.workspace = SimpleNamespace(overview=Mock(return_value=self.overview))
-        self.jobs = SimpleNamespace(adjust=Mock(return_value={'id':'demo','version':2}))
+        self.jobs = SimpleNamespace(adjust=Mock(return_value={'id':'demo','version':2}),
+            assess_and_continue=Mock(return_value={'assessment':{'state':'continue'}}),
+            continue_followup=Mock(return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}),
+            reconcile_followup=Mock(return_value={'dispatch':{'state':'unknown','request_id':'request-1'}}))
         self.business = SimpleNamespace(app=SimpleNamespace(task_workspace=self.workspace,agent_jobs=self.jobs))
         self.tools = DeskTools(self.business,'.',OVERVIEW_OBJECT)
 
@@ -27,7 +30,7 @@ class OverviewMcpTests(unittest.TestCase):
         return {tool['name'] for tool in result['result']['tools']}
 
     def test_explicit_binding_and_existing_worker_restrictions(self):
-        self.assertEqual(self.names(self.tools),{'get_work_overview','adjust_local_task'})
+        self.assertEqual(self.names(self.tools),{'get_work_overview','adjust_local_task','assess_local_run','continue_local_run','reconcile_local_run'})
         ordinary=DeskTools(self.business,'.','product:DEMO')
         self.assertNotIn('get_work_overview',self.names(ordinary))
         for tools in (ordinary,DeskTools(self.business,'.',OVERVIEW_OBJECT,draft_only=True),
@@ -40,6 +43,95 @@ class OverviewMcpTests(unittest.TestCase):
         self.workspace.overview.assert_called_once_with(filters={'executor':'local'})
         for filters in ({'secret':'x'},[],{'priority':3}):
             with self.assertRaises(ValueError):self.tools.call('get_work_overview',{'filters':filters})
+
+    def test_run_assessment_and_followup_forward_exact_local_scope_and_versions(self):
+        body={'id':'local:demo','attempt':2,'expected_version':3,'expected_intent_version':1,
+              'disposition':'continue','goal_status':'not_met','capability_status':'unknown',
+              'result_ref':'artifact:synthetic','gap':'尚未完成','next_action':'核对下一项',
+              'evidence':{'source':'合成任务成果','observed_at':'2026-11-11T13:00:00Z','detail':'隔离测试'}}
+        result=self.tools.call('assess_local_run',body)
+        self.assertEqual(result['assessment']['state'],'continue')
+        self.jobs.assess_and_continue.assert_called_once_with('demo',2,**{k:v for k,v in body.items() if k not in ('id','attempt')})
+        dispatch_args={'id':'local:demo','attempt':2,'expected_version':3,'request_id':'request-1'}
+        for name,method in (('continue_local_run',self.jobs.continue_followup),('reconcile_local_run',self.jobs.reconcile_followup)):
+            with self.subTest(name=name):
+                result=self.tools.call(name,dispatch_args)
+                self.assertEqual(result['dispatch']['state'],'unknown')
+                method.assert_called_once_with('demo',2,expected_version=3,request_id='request-1')
+        for name in ('assess_local_run','continue_local_run','reconcile_local_run'):
+            schema=next(tool for tool in TOOLS if tool['name']==name)
+            self.assertFalse(schema['annotations']['readOnlyHint'])
+            self.assertFalse(schema['inputSchema']['additionalProperties'])
+            self.assertEqual(schema['inputSchema']['properties']['attempt']['minimum'],1)
+
+    def test_run_operations_reject_invalid_or_read_only_without_writes(self):
+        body={'id':'local:demo','attempt':2,'expected_version':3,'expected_intent_version':1,
+              'disposition':'continue','goal_status':'not_met','capability_status':'unknown',
+              'result_ref':'','gap':'尚未完成','next_action':'继续核对',
+              'evidence':{'source':'合成来源','observed_at':'2026-11-11T13:00:00+00:00','detail':'隔离测试'}}
+        invalid=[{'id':'cloud:demo'},{'id':'reference:demo'},{'id':'local:../demo'}, {'attempt':True},
+                 {'attempt':0},{'expected_version':True},{'expected_intent_version':-1},
+                 {'disposition':'completed'},{'goal_status':'passed'}, {'evidence':{}},
+                 {'evidence':{'source':'x','observed_at':'2026-11-11T13:00:00','detail':'x'}},
+                 {'evidence':{'source':'x','observed_at':'bad','detail':'x'}}, {'extra':'x'}]
+        for extra in invalid:
+            with self.subTest(extra=extra),self.assertRaises(ValueError):self.tools.call('assess_local_run',{**body,**extra})
+        follow={'id':'local:demo','attempt':2,'expected_version':3,'request_id':'request-1'}
+        for name in ('continue_local_run','reconcile_local_run'):
+            for extra in ({'id':'cloud:demo'},{'attempt':True},{'request_id':''},{'request_id':'bad/id'},{'extra':'x'}):
+                with self.subTest(name=name,extra=extra),self.assertRaises(ValueError):self.tools.call(name,{**follow,**extra})
+        readonly=DeskTools(self.business,'.',OVERVIEW_OBJECT,read_only=True)
+        for name,args in [('assess_local_run',body),('continue_local_run',follow),('reconcile_local_run',follow)]:
+            with self.subTest(name=name),self.assertRaises(ValueError):readonly.call(name,args)
+            ordinary=DeskTools(self.business,'.','product:DEMO')
+            with self.assertRaises(ValueError):ordinary.call(name,args)
+        self.jobs.assess_and_continue.assert_not_called();self.jobs.continue_followup.assert_not_called();self.jobs.reconcile_followup.assert_not_called()
+
+    def test_run_operation_conflict_and_unknown_transport_never_replay(self):
+        body={'id':'local:demo','attempt':2,'expected_version':3,'request_id':'request-1'}
+        self.jobs.continue_followup.side_effect=WorkspaceConflict('合成版本冲突')
+        response=dispatch(self.tools,{'id':1,'method':'tools/call','params':{'name':'continue_local_run','arguments':body}})['result']
+        self.assertTrue(response['isError'])
+        self.assertEqual(json.loads(response['content'][0]['text'])['code'],'version_conflict')
+        self.jobs.continue_followup.assert_called_once()
+        requests=[]
+        def open_request(request,timeout):
+            requests.append(request)
+            if request.data is None:return io.BytesIO(b'{"csrf_token":"synthetic-test-token"}')
+            self.assertEqual(json.loads(request.data),{'id':'demo','attempt':2,'expected_version':3,'request_id':'request-1'})
+            raise URLError('synthetic failure after dispatch')
+        tools=DeskTools(None,'.',OVERVIEW_OBJECT)
+        with patch('urllib.request.build_opener',return_value=SimpleNamespace(open=open_request)):
+            response=dispatch(tools,{'id':2,'method':'tools/call','params':{'name':'continue_local_run','arguments':body}})['result']
+        self.assertTrue(response['isError'])
+        self.assertEqual(json.loads(response['content'][0]['text'])['code'],'outcome_unknown')
+        self.assertEqual(len(requests),2)
+        self.assertTrue(requests[1].full_url.endswith('/api/desk/job/continue-followup'))
+
+    def test_mcp_to_isolated_http_forwards_assessment_and_unknown_followup(self):
+        from tests_desk_http import DeskHTTPTests
+        fixture=DeskHTTPTests();fixture.setUp()
+        body={'id':'local:demo','attempt':2,'expected_version':3,'expected_intent_version':1,
+              'disposition':'continue','goal_status':'not_met','capability_status':'unknown',
+              'result_ref':'artifact:synthetic','gap':'尚未完成','next_action':'核对下一项',
+              'evidence':{'source':'合成任务成果','observed_at':'2026-11-11T13:00:00Z','detail':'隔离测试'}}
+        follow={'id':'local:demo','attempt':2,'expected_version':4,'request_id':'request-1'}
+        try:
+            tools=DeskTools(None,fixture.root,OVERVIEW_OBJECT)
+            origin='http://127.0.0.1:'+str(fixture.http.server_port)
+            with patch.object(LocalOverviewClient,'origin',origin), \
+                 patch.object(fixture.app.agent_jobs,'assess_and_continue',create=True,return_value={'assessment':{'state':'continue'}}) as assess, \
+                 patch.object(fixture.app.agent_jobs,'continue_followup',create=True,return_value={'dispatch':{'state':'unknown'}}) as start, \
+                 patch.object(fixture.app.agent_jobs,'reconcile_followup',create=True,return_value={'dispatch':{'state':'unknown'}}) as reconcile:
+                self.assertEqual(tools.call('assess_local_run',body)['assessment']['state'],'continue')
+                self.assertEqual(tools.call('continue_local_run',follow)['dispatch']['state'],'unknown')
+                self.assertEqual(tools.call('reconcile_local_run',follow)['dispatch']['state'],'unknown')
+                assess.assert_called_once_with('demo',2,**{k:v for k,v in body.items() if k not in ('id','attempt')})
+                start.assert_called_once_with('demo',2,expected_version=4,request_id='request-1')
+                reconcile.assert_called_once_with('demo',2,expected_version=4,request_id='request-1')
+                self.assertEqual(len(fixture.processes),0)
+        finally:
+            fixture.tearDown()
 
     def test_adjust_requires_local_id_version_and_supported_fields(self):
         value=self.tools.call('adjust_local_task',{'id':'local:demo','expected_version':1,'priority':'high','next_action':'Review synthetic result'})

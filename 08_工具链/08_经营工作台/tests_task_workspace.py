@@ -169,6 +169,212 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(inbox[0]['action']['task_id'],'local:a')
         self.assertEqual(inbox[0]['judgment'],'需要最新资料')
 
+    def test_unclosed_completion_events_project_once_and_keep_evidence(self):
+        review={'event_id':'run:1','attempt':1,'state':'awaiting_review','source':'local_run',
+                'observed_at':'2026-11-11T10:00:00Z','notification':{'state':'not_connected'},
+                'assessment':None}
+        unknown={'event_id':'run:2','attempt':2,'state':'dispatch_unknown','source':'local_run',
+                 'observed_at':'2026-11-11T11:00:00Z','notification':{'state':'not_connected'},
+                 'assessment':{'gap':'尚未确认','next_action':'先核对派工回执'}}
+        complete={'event_id':'run:3','attempt':3,'state':'verified_complete','source':'local_run'}
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'needs_input','error':'原任务错误',
+                    'intent':{'version':1,'goal':'当前目标','source':'负责人','decisions_recorded':True,'decisions':[]},
+                    'review_events':[review,dict(review),unknown,complete]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        result=self.service.overview()
+        self.assertEqual(len(result['inbox']),2)
+        self.assertEqual({item['event_id'] for item in result['inbox']},{'run:1','run:2'})
+        self.assertTrue(all(item['task_id']=='local:a' and item['action']['type']=='open_task' for item in result['inbox']))
+        pending=next(item for item in result['inbox'] if item['event_id']=='run:2')
+        self.assertEqual(pending['source'],'local_run')
+        self.assertEqual(pending['observed_at'],'2026-11-11T11:00:00Z')
+        self.assertEqual(pending['current_goal'],'当前目标')
+        self.assertEqual(pending['next_action'],'先核对派工回执')
+        self.assertEqual(pending['notification']['state'],'not_connected')
+        self.assertIn('不要重复派发',pending['judgment'])
+        task=next(row for row in result['tasks'] if row['id']=='local:a')
+        self.assertEqual(task['completion_pending'],2)
+        self.assertEqual(task['blocker'],'原任务错误')
+        self.jobs[0].update(status='completed',review_events=[complete])
+        self.assertEqual(self.service.overview()['inbox'],[])
+
+    def test_changed_intent_never_presents_old_review_next_action_as_current(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','next_action':'核对新目标',
+                    'review_events':[{'event_id':'run:1','attempt':1,'state':'intent_changed',
+                      'assessment':{'gap':'旧目标缺口','next_action':'旧的执行建议'}}]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        row=self.service.overview()['inbox'][0]
+        self.assertEqual(row['next_action'],'核对新目标')
+        self.assertNotIn('旧目标缺口',row['judgment'])
+        self.assertIn('重新验收',row['judgment'])
+
+    def test_next_action_uses_recorded_baseline_not_job_version_or_review_suggestion(self):
+        event={'event_id':'run:1','attempt':1,'state':'ready_to_continue',
+               'assessment':{'next_action':'验收时建议','task_next_action_at_review':'人工原安排',
+                             'task_version_at_review':2}}
+        job={'id':'a','object_id':'product:BQ01','status':'completed','version':17,
+             'next_action':'人工原安排','review_events':[event]}
+        self.jobs=[job];self.app.agent_jobs.completion_view=lambda item:item['review_events']
+        result=self.service.overview()
+        self.assertEqual(result['inbox'][0]['state'],'ready_to_continue')
+        self.assertEqual(result['inbox'][0]['next_action'],'验收时建议')
+        self.assertEqual(result['tasks'][0]['completion_events'][0]['next_action_comparison'],'unchanged')
+        job['next_action']='人工更新安排'
+        result=self.service.overview();item=result['inbox'][0]
+        self.assertEqual(item['state'],'review_required')
+        self.assertEqual(item['next_action'],'人工更新安排')
+        self.assertIn('下一动作已变化',item['judgment'])
+        self.assertEqual(item['severity'],'high')
+        job['next_action']=''
+        self.assertEqual(self.service.overview()['inbox'][0]['next_action'],'')
+        event['state']='verified_complete'
+        self.assertEqual(self.service.overview()['inbox'][0]['state'],'review_required')
+        event['assessment'].pop('task_next_action_at_review')
+        result=self.service.overview()
+        self.assertEqual(result['inbox'],[])
+        self.assertEqual(result['tasks'][0]['completion_events'][0]['next_action_comparison'],'unknown')
+
+    def test_sent_receipt_and_target_event_are_not_reopened_by_task_next_action(self):
+        previous={'event_id':'run:1','attempt':1,'state':'dispatch_completed',
+                  'assessment':{'next_action':'原验收建议','task_next_action_at_review':'验收时安排'},
+                  'dispatch':{'state':'completed','request_id':'req-1','target_job_id':'a','target_attempt':2}}
+        current={'event_id':'run:2','attempt':2,'state':'awaiting_review'}
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','version':50,
+                    'next_action':'接续中登记的安排','review_events':[previous,current]}]
+        self.app.agent_jobs.completion_view=lambda item:item['review_events']
+        result=self.service.overview()
+        self.assertEqual([row['event_id'] for row in result['inbox']],['run:2'])
+        projected=next(e for e in result['tasks'][0]['completion_events'] if e['event_id']=='run:1')
+        self.assertEqual(projected['state'],'dispatch_completed')
+        self.assertEqual(projected['dispatch']['request_id'],'req-1')
+        self.assertNotIn('next_action_review_required',projected)
+        previous.update(state='dispatch_unknown',dispatch={'state':'unknown','request_id':'req-1'})
+        self.jobs[0]['review_events']=[previous]
+        item=self.service.overview()['inbox'][0]
+        self.assertEqual(item['state'],'dispatch_unknown')
+        self.assertIn('不要重复派发',item['judgment'])
+        previous['intent_changed']=True
+        self.assertIn('任务目标或决定已变化',self.service.overview()['inbox'][0]['judgment'])
+
+    def test_uncertain_result_save_has_high_priority_even_with_completion_events(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'needs_input','attempt':2,
+                    'result_commit':{'state':'outcome_unknown','attempt':2},
+                    'held_results':{'1':{'attempt':1,'reason':'result_outcome_unknown'},
+                                    '2':{'attempt':2,'reason':'result_outcome_unknown'}},
+                    'result_reconciliations':[{'attempt':1,'evidence':'旧记录仅记录检查依据'}],
+                    'review_events':[{'event_id':'run:2','attempt':2,'state':'awaiting_review'}]}]
+        self.app.agent_jobs.completion_view=lambda item:item['review_events']
+        result=self.service.overview()
+        unknown=[item for item in result['inbox'] if item['kind']=='result_outcome_unknown']
+        self.assertEqual([item['attempt'] for item in unknown],[1,2])
+        self.assertTrue(all(item['severity']=='high' and item['action']['task_id']=='local:a' for item in unknown))
+        self.assertTrue(all('不要重做' in item['judgment'] for item in unknown))
+        self.assertIn('保存结果不明',result['tasks'][0]['blocker'])
+        self.assertTrue(any(item.get('event_id')=='run:2' for item in result['inbox']))
+        self.jobs[0]['result_reconciliations'].append({'attempt':1,'outcome':'completed','evidence':'正式回执'})
+        self.assertEqual([item['attempt'] for item in self.service.overview()['inbox']
+                          if item['kind']=='result_outcome_unknown'],[2])
+        self.jobs[0]['result_commit']['state']='saving'
+        self.assertEqual([item['attempt'] for item in self.service.overview()['inbox']
+                          if item['kind']=='result_outcome_unknown'],[2])
+        self.jobs[0]['status']='running'
+        self.jobs[0]['held_results'].pop('2')
+        self.assertFalse(any(item['kind']=='result_outcome_unknown' for item in self.service.overview()['inbox']))
+        self.jobs[0]['status']='completed'
+        self.assertEqual([item['attempt'] for item in self.service.overview()['inbox']
+                          if item['kind']=='result_outcome_unknown'],[2])
+        self.jobs[0]['result_commit']={'state':'outcome_unknown'}
+        self.assertIn('不可读',next(item for item in self.service.overview()['inbox']
+                                   if item['kind']=='result_outcome_unknown')['judgment'])
+
+    def test_predispatch_blocked_shows_reason_without_claiming_dispatch(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[
+            {'event_id':'run:1','state':'ready_to_continue','dispatch':None,
+             'dispatch_blocked':{'request_id':'req-1','reason':'前置任务未完成','observed_at':'2026-11-11T10:00:00Z'}}]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        result=self.service.overview();row=result['inbox'][0]
+        self.assertEqual(row['state'],'dispatch_blocked')
+        self.assertIn('尚未发出派工',row['judgment'])
+        self.assertIn('前置任务未完成',row['judgment'])
+        self.assertNotIn('已受理',row['judgment'])
+        self.assertEqual(result['tasks'][0]['completion_state'],'dispatch_blocked')
+
+    def test_completed_dispatch_uses_target_event_and_running_is_not_inbox(self):
+        prior={'event_id':'run:1','attempt':1,'state':'dispatch_completed',
+               'dispatch':{'state':'completed','target_job_id':'a','target_attempt':2}}
+        target={'event_id':'run:2','attempt':2,'state':'awaiting_review'}
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[target,prior]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        result=self.service.overview()
+        self.assertEqual([row['event_id'] for row in result['inbox']],['run:2'])
+        self.assertEqual(result['tasks'][0]['completion_pending'],2)
+        self.assertEqual(result['tasks'][0]['completion_state'],'awaiting_review')
+        prior['intent_changed']=True
+        self.assertEqual({row['event_id'] for row in self.service.overview()['inbox']},{'run:1','run:2'})
+        prior.update(intent_changed=False,state='dispatch_running',dispatch={'state':'running','target_job_id':'a','target_attempt':2})
+        self.jobs[0]['review_events']=[prior]
+        result=self.service.overview()
+        self.assertEqual(result['inbox'],[])
+        self.assertEqual(result['tasks'][0]['completion_state'],'dispatch_running')
+        prior['intent_changed']=True
+        self.assertIn('任务目标或决定已变化',self.service.overview()['inbox'][0]['judgment'])
+
+    def test_dispatch_completion_without_matching_target_remains_unclosed(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[
+            {'event_id':'run:1','attempt':1,'state':'dispatch_completed',
+             'dispatch':{'state':'completed','target_job_id':'a','target_attempt':2}}]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        self.assertEqual(self.service.overview()['inbox'][0]['event_id'],'run:1')
+
+    def test_conflicting_or_unreadable_completion_never_looks_closed(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[
+            {'event_id':'same','state':'verified_complete'}, {'event_id':'same','state':'awaiting_review'}]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        result=self.service.overview()
+        self.assertEqual(len(result['inbox']),1)
+        self.assertEqual(result['inbox'][0]['state'],'unknown')
+        self.assertIn('矛盾',result['inbox'][0]['judgment'])
+        def failed(_job):raise ValueError('来源不可用')
+        self.app.agent_jobs.completion_view=failed
+        result=self.service.overview()
+        self.assertEqual(result['inbox'][0]['kind'],'completion_unavailable')
+        self.assertIn('不能据此认定已闭环',result['inbox'][0]['judgment'])
+        def malformed(_job):raise AttributeError('source projection failed')
+        self.app.agent_jobs.completion_view=malformed
+        self.assertEqual(self.service.overview()['inbox'][0]['kind'],'completion_unavailable')
+
+    def test_changed_intent_does_not_disappear_even_if_source_marks_verified(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[
+            {'event_id':'run:1','state':'verified_complete','intent_changed':True}]}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        self.assertEqual(self.service.overview()['inbox'][0]['state'],'review_required')
+        self.jobs[0]['review_events']=[{'event_id':'run:1','state':'verified_complete','intent_version_known':False}]
+        item=self.service.overview()['inbox'][0]
+        self.assertEqual(item['state'],'review_required')
+        self.assertIn('无法比较',item['judgment'])
+        self.jobs[0]['review_events']=[{'event_id':'run:1','state':'verified_complete','dispatch':{'state':'unknown'}}]
+        self.assertEqual(self.service.overview()['inbox'][0]['state'],'dispatch_unknown')
+
+    def test_completion_record_error_is_visible_even_without_events(self):
+        self.jobs=[{'id':'a','object_id':'product:BQ01','status':'completed','review_events':[],
+                    'completion_error':{'state':'unavailable','observed_at':'2026-11-11T10:00:00Z'}}]
+        self.app.agent_jobs.completion_view=lambda job:job['review_events']
+        result=self.service.overview();item=result['inbox'][0]
+        self.assertEqual(item['kind'],'completion_unavailable')
+        self.assertEqual(item['task_id'],'local:a')
+        self.assertEqual(item['observed_at'],'2026-11-11T10:00:00Z')
+        self.assertEqual(item['notification']['state'],'not_connected')
+        self.assertIn('不能据此认定已闭环',item['judgment'])
+        self.assertIn('验收状态暂不可读',result['tasks'][0]['blocker'])
+        self.assertEqual(result['completion_capabilities'],{'local_finished_events':'agent_jobs',
+                         'external_turn_bridge':'not_connected','push_notification':'not_connected'})
+
+    def test_external_completion_bridge_and_push_are_not_claimed_connected(self):
+        result=self.service.overview()
+        self.assertEqual(result['completion_capabilities']['local_finished_events'],'unavailable')
+        self.assertEqual(result['completion_capabilities']['external_turn_bridge'],'not_connected')
+        self.assertEqual(result['completion_capabilities']['push_notification'],'not_connected')
+
     def test_inbox_prioritizes_cloud_failure_over_normal_local_blocker(self):
         self.jobs=[{'id':'a','object_id':'product:BQ01','status':'needs_input'}]
         self.cloud['runs']=[{'id':'b','status':'interrupted'}]
