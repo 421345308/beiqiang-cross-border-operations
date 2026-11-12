@@ -1935,7 +1935,7 @@ test('仅合法 UUID 能生成只用于定位的 Codex 会话链接',async()=>{
 });
 
 test('外贸工作线展示明确批次及任务成果引用，不能冒充发送或成交',async()=>{
- const h=harness('#/tasks'),writes=[],data={tasks:[{id:'local:job1',job_id:'job1',origin:'local',title:'合成客户任务',status:'completed'}],workstreams:[
+ const h=harness('#/tasks'),writes=[],data={tasks:[{id:'local:job1',job_id:'job1',origin:'local',title:'合成客户任务',status:'completed',current_goal:'旧初始指令',intent_version:0,intent_state:'legacy'}],workstreams:[
   {id:'tools',title:'总控与工具',source:{state:'unknown'}},
   {id:'alibaba',title:'国际站运营',source:{state:'unknown'}},
   {id:'website',title:'独立站增长',source:{state:'unknown'}},
@@ -1945,7 +1945,7 @@ test('外贸工作线展示明确批次及任务成果引用，不能冒充发�
  h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>data};if(o.method==='POST')writes.push(p);return h.originalFetch(p,o);});
  await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview');
  for(const name of ['总控与工具','国际站运营','独立站增长','外贸开发'])assert.match(panel.textContent,new RegExp(name));
- assert.match(panel.textContent,/回合已结束/);assert.match(panel.textContent,/合成草稿已保存/);assert.match(panel.textContent,/核对草稿/);assert.match(panel.textContent,/有成果引用/);assert.doesNotMatch(panel.textContent,/已成交|已发送/);
+  assert.match(panel.textContent,/回合已结束/);assert.match(panel.textContent,/合成草稿已保存/);assert.match(panel.textContent,/核对草稿/);assert.match(panel.textContent,/有成果引用/);assert.match(panel.textContent,/任务当前目标未明确登记/);assert.doesNotMatch(panel.textContent,/旧初始指令|已成交|已发送/);
  await findButton(panel,'打开客户批次：合成批次（1 位）').click();assert.equal(h.location.hash,'/customers?view=batches');assert.deepEqual(writes,[]);
 });
 

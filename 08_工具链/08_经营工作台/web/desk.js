@@ -383,7 +383,8 @@
             if(job){
               const state=({planned:'已计划',queued:'已排队',running:'记录为运行中',completed:'回合已结束',failed:'失败',needs_input:'等待输入',cancelled:'已取消'})[linked.status] || '未知';
               card.append(el('p',`任务上次记录：${state} · 更新时间 ${time(linked.updated_at)} · 观察 ${time(linked.observed_at)}`,'muted'));
-              if(linked.goal || job.current_goal)card.append(el('p',`任务当前目标：${taskExcerpt(linked.goal || job.current_goal)}`));
+              const currentGoal=linked.goal || (job.intent_state==='recorded' && Number.isInteger(job.intent_version) && job.intent_version>0?job.current_goal:'');
+              card.append(el('p',currentGoal?`任务当前目标：${taskExcerpt(currentGoal)}`:'任务当前目标未明确登记，请打开原任务核对。','muted'));
               if(linked.result)card.append(el('p',`任务回合摘要（${linked.result_recorded_at?time(linked.result_recorded_at):'时间未记录'}）：${taskExcerpt(linked.result)}`));
               if(linked.next_action)card.append(el('p',`任务下一步：${taskExcerpt(linked.next_action)}`));
               if(linked.artifact_id)card.append(el('p','有成果引用，打开任务核对原文。','muted'));
