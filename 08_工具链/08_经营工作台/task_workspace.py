@@ -616,7 +616,10 @@ class TaskWorkspace:
                 'next_action':item.get('judgment') or (item.get('action') or {}).get('label') or '',
                 'kind':item.get('kind')})
         try:
-            objects = {obj['id']:obj for obj in self.app.business.list_objects()}
+            object_rows = self.app.business.list_objects()
+            objects = {obj['id']:obj for obj in object_rows}
+            if len(objects) != len(object_rows):
+                raise ValueError('业务对象身份重复')
             sources['objects'] = {'state':'ok', 'observed_at':observed}
         except Exception:
             objects = {}
@@ -637,7 +640,16 @@ class TaskWorkspace:
                 batch_links = reader() if callable(reader) else None
             except Exception:
                 batch_links = None
-        workstreams = (build_workstreams(self.app.root, jobs, snapshot, batch_links, local_state == 'ok')
+        phase_tasks = None
+        try:
+            bootstrap = getattr(self.app, 'bootstrap', None)
+            phase_value = bootstrap() if callable(bootstrap) else None
+            phase_tasks = phase_value.get('tasks') if isinstance(phase_value, dict) else None
+        except Exception:
+            phase_tasks = None
+        workstreams = (build_workstreams(self.app.root, jobs, snapshot, batch_links, local_state == 'ok',
+                                        objects=objects if sources['objects']['state']=='ok' else None,
+                                        phase_tasks=phase_tasks)
                        if getattr(self.app,'root',None) else [])
         outreach = next((stream for stream in workstreams if stream['id'] == 'outreach'), None)
         if outreach:
@@ -700,7 +712,8 @@ class TaskWorkspace:
             kind = obj.get('kind') or oid.split(':')[0]
             source_path = str(row.get('source') or obj.get('source') or '').replace('\\','/')
             line = (('international' if row.get('workstream_id') == 'outreach' else
-                     row.get('workstream_id') if row.get('workstream_id') in ('alibaba','website') else 'other') if row['origin']=='desktop' else
+                     row.get('workstream_id') if row.get('workstream_id') in ('alibaba','website','domestic','creation') else 'other') if row['origin']=='desktop' else
+                    'international' if row['origin']=='local' and row.get('workstream_id')=='outreach' else
                     'alibaba' if row.get('kind')=='catalog_status' or oid=='channel:alibaba' or source_path.startswith('02_Alibaba运营/') else
                     'website' if oid.startswith('customer:website-') or source_path.startswith('03_独立站/') else
                     'domestic' if oid == 'channel:douyin' else

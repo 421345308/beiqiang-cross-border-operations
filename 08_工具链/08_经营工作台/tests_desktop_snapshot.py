@@ -331,6 +331,17 @@ class DesktopSnapshotTests(unittest.TestCase):
         self.assertEqual(value['control'],'reference_only')
         self.assertEqual(self.service.read()['workstream_links'][0]['thread_id'],'thread-one')
 
+    def test_domestic_and_creation_are_explicit_references_not_new_tasks(self):
+        from workspaces import WorkspaceConflict
+        self.service.import_snapshot(self.payload([self.thread(),self.thread(id='thread-two')]))
+        for category,thread in [('domestic','thread-one'),('creation','thread-two')]:
+            link=self.service.link_workstream({'workstream':category,'host_id':'local',
+                                               'thread_id':thread,'source_note':'明确登记'})
+            self.assertEqual((link['workstream'],link['control']),(category,'reference_only'))
+        with self.assertRaises(WorkspaceConflict):
+            self.service.link_workstream({'workstream':'outreach','host_id':'local',
+                                          'thread_id':'thread-one','source_note':'不能复用'})
+
     def test_workstream_links_conflict_across_independent_connections(self):
         from workspaces import WorkspaceConflict
         database=Path(self.temp.name)/'links.sqlite3'

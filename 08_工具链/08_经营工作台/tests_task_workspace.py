@@ -254,6 +254,31 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(stream['conversation']['id'],'outreach-thread')
         self.assertNotIn('workstream_id',task)
 
+    def test_customer_object_task_uses_outreach_without_guessing_other_categories(self):
+        self.objects.append({'id':'customer:website-a','title':'合成客户','kind':'customer'})
+        self.jobs.append({'id':'customer-job','object_id':'customer:website-a','batch_id':None,
+                          'status':'completed','summary':'历史回合','next_action':'等待实物评估',
+                          'intent':{'version':1,'goal':'当前目标','source':'客户资料',
+                                    'decisions_recorded':True,'decisions':[]}})
+        self.app.customer_batches=SimpleNamespace(workstream_links=lambda:[])
+        with tempfile.TemporaryDirectory() as root:
+            self.app.root=Path(root)
+            result=self.service.overview()
+            streams={row['id']:row for row in result['workstreams']}
+            task=next(row for row in result['tasks'] if row['id']=='local:customer-job')
+            self.assertEqual((task['workstream_id'],task['business_line']),('outreach','international'))
+            self.assertEqual(streams['outreach']['related_jobs'][0]['goal'],'当前目标')
+            for key in ('tools','website','alibaba'):
+                self.assertFalse(any(row['id']=='local:customer-job' for row in streams[key]['related_jobs']))
+            self.objects.pop()
+            missing=self.service.overview()
+            self.assertEqual(next(x for x in missing['workstreams'] if x['id']=='outreach')['related_jobs'],[])
+            self.objects.extend([{'id':'customer:website-a','kind':'customer'},
+                                 {'id':'customer:website-a','kind':'prospect'}])
+            duplicate=self.service.overview()
+            self.assertEqual(duplicate['sources']['objects']['state'],'unavailable')
+            self.assertEqual(next(x for x in duplicate['workstreams'] if x['id']=='outreach')['related_jobs'],[])
+
     def test_exact_product_id_does_not_match_prefix(self):
         result=self.service.route('优化 BQ010 的内容')
         self.assertEqual(result['object_id'],'product:BQ010')

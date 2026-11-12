@@ -10,7 +10,7 @@ STALE_SECONDS = 600
 FIELDS = {'id','kind','projectId','hostId','status','cwd','updatedAt','title'}
 INDIVIDUAL_TOOLS = {'mcp__codex_app__read_thread','mcp__codex_app__wait_threads'}
 INDIVIDUAL_FIELDS = {'status','updatedAt'}
-WORKSTREAMS = {'tools','alibaba','website','outreach'}
+WORKSTREAMS = {'tools','alibaba','website','outreach','domestic','creation'}
 MAX_LINK_HISTORY = 100
 
 

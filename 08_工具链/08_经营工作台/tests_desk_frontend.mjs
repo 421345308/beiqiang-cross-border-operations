@@ -1949,6 +1949,17 @@ test('外贸工作线展示明确批次及任务成果引用，不能冒充发�
  await findButton(panel,'打开客户批次：合成批次（1 位）').click();assert.equal(h.location.hash,'/customers?view=batches');assert.deepEqual(writes,[]);
 });
 
+test('现有客户任务区分当前目标和旧回合，六类不显示重复国际方向',async()=>{
+ const h=harness('#/tasks'),writes=[],data={tasks:[{id:'local:one',job_id:'one',origin:'local',title:'原客户任务',status:'completed'}],workstreams:[
+  ...['tools','alibaba','website','domestic','creation'].map(id=>({id,title:id,source:{state:'unknown'},related_jobs:[]})),
+  {id:'international',title:'国际方向',source:{state:'unknown'}},
+  {id:'outreach',title:'外贸开发',source:{state:'ok',scope:'phase_task',recorded_status:'待评估',owner:'客户负责人',result:'阶段结果',next_action:'阶段动作'},batch_observation:{state:'ok'},related_jobs:[{id:'local:one',title:'原客户任务',status:'completed',goal:'实物合作评估',result:'旧回合记录',result_recorded_at:'2026-11-03T01:00:00Z',next_action:'等待实物评估',artifact_id:'old'}]}]};
+ h.interceptFetch(async(p,o={})=>{if(p==='/api/desk/task-overview')return {ok:true,json:async()=>data};if(o.method==='POST')writes.push(p);return h.originalFetch(p,o);});
+ await h.ui.bootstrap();const panel=h.elements.page.querySelector('.workstream-overview'),cards=panel.querySelectorAll('article');
+ assert.equal(cards.length,6);assert.doesNotMatch(panel.textContent,/国际方向/);assert.match(panel.textContent,/任务当前目标：实物合作评估/);assert.match(panel.textContent,/任务回合摘要（.*）：旧回合记录/);assert.match(panel.textContent,/任务下一步：等待实物评估/);assert.match(panel.textContent,/不代表会话正在执行/);
+ assert.ok(findButton(panel,'打开关联任务：原客户任务'));assert.deepEqual(writes,[]);
+});
+
 test('外贸批次来源不可用时显示未知且不猜测关联任务',async()=>{
  const h=harness('#/tasks'),data={tasks:[],workstreams:[{id:'outreach',title:'外贸开发',source:{state:'unknown'},batch_observation:{state:'unavailable'},related_batches:[],related_jobs:[]}]};
  h.interceptFetch(async(p,o)=>p==='/api/desk/task-overview'?{ok:true,json:async()=>data}:h.originalFetch(p,o));await h.ui.bootstrap();

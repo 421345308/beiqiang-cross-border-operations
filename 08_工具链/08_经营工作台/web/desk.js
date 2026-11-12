@@ -316,7 +316,7 @@
       const priorityNames={high:'高',normal:'普通',low:'低'};
       const isReference=task=>task.origin==='desktop' || task.reference_only || task.capabilities?.reference_only;
       const originName=task=>task.origin==='desktop'?'桌面对话快照':task.origin==='cloud'?'云端':task.origin==='business'?'业务待办':'本地';
-      const taskStatus=task=>{const observed=task.origin==='desktop'?(task.source_status || task.status):task.status;const label=statusNames[observed] || ({unknown:'状态未知',notLoaded:'状态未知（尚未加载）',active:'正在处理',idle:'空闲',act:'今天能推',decide:'等你拍板',watch:'持续观察'})[observed] || observed || '状态未知';if(task.origin!=='desktop')return label;const freshness=typeof task.freshness==='object'?task.freshness?.state:task.freshness;return ['ok','fresh'].includes(freshness)?`最近一次观察：${label}（${time(task.observed_at)}，非实时）`:`当前状态未知 · ${time(task.observed_at)} 快照时观察：${label}`;};
+      const taskStatus=task=>{const observed=task.origin==='desktop'?(task.source_status || task.status):task.status;const label=task.origin==='local' && observed==='completed'?'回合已结束':statusNames[observed] || ({unknown:'状态未知',notLoaded:'状态未知（尚未加载）',active:'正在处理',idle:'空闲',act:'今天能推',decide:'等你拍板',watch:'持续观察'})[observed] || observed || '状态未知';if(task.origin!=='desktop')return label;const freshness=typeof task.freshness==='object'?task.freshness?.state:task.freshness;return ['ok','fresh'].includes(freshness)?`最近一次观察：${label}（${time(task.observed_at)}，非实时）`:`当前状态未知 · ${time(task.observed_at)} 快照时观察：${label}`;};
       const taskExcerpt=(value,limit=180)=>{const normalized=text(value).replace(/\s+/g,' ').trim();return normalized.length>limit?normalized.slice(0,limit)+'…（查看详情）':normalized;};
       const completionNames={awaiting_review:'待验收',intent_changed:'目标已变化，待重新验收',review_required:'目标已变化，待重新验收',verified_complete:'已验完成',continue_ready:'待继续',ready_to_continue:'待继续',needs_decision:'需负责人决定',blocked:'阻塞',unknown:'未知待核实',dispatch_accepted:'接续已受理',dispatch_starting:'接续启动中',dispatch_running:'接续运行中',dispatch_completed:'接续回合已结束，待验收',dispatch_failed:'接续失败',dispatch_unknown:'接续结果未知，需对账',dispatch_blocked:'派工前阻塞'};
       const externalNames={awaiting_review:'待验收',review_required:'需重新验收',ready_to_continue:'下一步待处理',needs_decision:'需负责人决定',blocked:'受阻',unknown:'未知待核实',dispatch_unknown:'外部派工未知，先对账',dispatch_accepted:'外部派工已登记受理，待核对',dispatch_running:'外部派工已登记运行，待核对',dispatch_completed:'外部派工已登记结束，待核读新回合',dispatch_failed:'外部派工已登记失败',verified_complete:'该外部回合已验收',historical:'历史回合',order_ambiguous:'回合顺序不明'};
@@ -335,14 +335,16 @@
       };
       const workstreamHost=el('section',undefined,'workstream-overview');if(!id)host.append(workstreamHost);
       function drawWorkstreams(snapshot){
-        const streams=Array.isArray(snapshot.workstreams)?snapshot.workstreams:[];
+        const allStreams=Array.isArray(snapshot.workstreams)?snapshot.workstreams:[];
+        const streams=allStreams.filter(item=>item.id!=='international'||!allStreams.some(other=>other.id==='outreach'));
         workstreamHost.replaceChildren();if(!streams.length)return;
         workstreamHost.append(sectionHeading('并行工作线','业务进度来自各自业务资料；会话状态只代表有时间的只读观察。'));
-        const routes={tools:'/overview',alibaba:'/channels?view=alibaba',website:'/channels?view=website',outreach:'/customers?view=batches'};
+        const routes={tools:'/overview',alibaba:'/channels?view=alibaba',website:'/channels?view=website',outreach:'/customers?view=batches',domestic:'/channels?view=douyin',creation:'/creation'};
         for(const item of streams){
           const card=el('article',undefined,'card workstream-card'),source=item.source || {},conversation=item.conversation;
           card.append(el('h3',text(item.title) || '工作线'),el('p',`当前工作：${taskExcerpt(item.focus) || '未记录'}`));
           if(source.state==='ok'){
+            if(source.scope==='phase_task')card.append(el('p',`阶段记录：${text(source.recorded_status) || '未记录'} · 主办：${text(source.owner) || '未记录'}；不代表会话正在执行。`,'muted'));
             card.append(el('p',`已记录结果：${taskExcerpt(source.result) || '未记录'}`),el('p',`下一步：${taskExcerpt(source.next_action) || '未记录'}`),el('p',`阻塞：${taskExcerpt(source.blocker) || '未记录'}`));
             const fields=[['已记录结果',source.result],['下一步',source.next_action],['阻塞',source.blocker]];if(fields.some(([,value])=>text(value).replace(/\s+/g,' ').trim().length>180)){const detail=el('details');detail.append(el('summary','查看业务记录摘录'));for(const [label,value] of fields)if(value)detail.append(el('h4',label),el('p',text(value)));card.append(detail);}
           }else if(source.state==='unknown')card.append(el('p','业务原档已读取；当前进展未登记为可识别的状态。','muted'));
@@ -368,19 +370,21 @@
             else if(observation.state==='partial')card.append(el('p',`批次任务状态不完整：${text(observation.reason) || '关联不明确，请到原批次核对。'}`,'inline-error'));
             else if(observation.state!=='ok')card.append(el('p','客户批次观察状态未知。','muted'));
             else if(!batches.length)card.append(el('p','本次未观察到客户开发批次；其他客户工作需到原对象核对。','muted'));
+            if(item.customer_object_observation?.state==='unavailable' || item.customer_object_observation?.state==='partial')card.append(el('p','部分客户对象关联不可读或不明确，其他客户任务状态未知。','inline-error'));
             for(const batch of batches){
               if(typeof batch.id!=='string' || !batch.id)continue;
               card.append(button(`打开客户批次：${taskExcerpt(batch.title,80) || '未命名'}（${Number.isInteger(batch.count)?batch.count:'未知'} 位）`,()=>{S.batchView.id=batch.id;location.hash='/customers?view=batches';},'quiet'));
             }
           }
           const related=Array.isArray(item.related_jobs)?item.related_jobs:[];
-          if(!related.length)card.append(el('p',item.related_jobs_observation?.state==='unavailable'?'工作台任务来源不可读，关联状态未知。':item.id==='outreach' && item.batch_observation?.state!=='ok'?'批次关联任务状态未知。':'未关联工作台任务。','muted'));
+          if(!related.length)card.append(el('p',item.related_jobs_observation?.state==='unavailable'?'工作台任务来源不可读，关联状态未知。':item.id==='outreach' && item.batch_observation?.state!=='ok'?'批次关联任务状态未知。':['unknown','ambiguous'].includes(item.related_jobs_observation?.state)?'关联资料不完整，任务状态未知。':'未关联工作台任务。','muted'));
           else for(const linked of related){
             const job=(snapshot.tasks || []).find(t=>t.id===linked.id && t.origin==='local');
             if(job){
               const state=({planned:'已计划',queued:'已排队',running:'记录为运行中',completed:'回合已结束',failed:'失败',needs_input:'等待输入',cancelled:'已取消'})[linked.status] || '未知';
               card.append(el('p',`任务上次记录：${state} · 更新时间 ${time(linked.updated_at)} · 观察 ${time(linked.observed_at)}`,'muted'));
-              if(linked.result)card.append(el('p',`任务记录摘要：${taskExcerpt(linked.result)}`));
+              if(linked.goal || job.current_goal)card.append(el('p',`任务当前目标：${taskExcerpt(linked.goal || job.current_goal)}`));
+              if(linked.result)card.append(el('p',`任务回合摘要（${linked.result_recorded_at?time(linked.result_recorded_at):'时间未记录'}）：${taskExcerpt(linked.result)}`));
               if(linked.next_action)card.append(el('p',`任务下一步：${taskExcerpt(linked.next_action)}`));
               if(linked.artifact_id)card.append(el('p','有成果引用，打开任务核对原文。','muted'));
               card.append(button(`打开关联任务：${taskExcerpt(linked.title || job.title,80)}`,()=>openTask(job),'quiet'));
@@ -391,7 +395,7 @@
         }
       }
       if(!id)drawWorkstreams(data);
-      const taskFacts=(row,task,full=false)=>{supervisionFacts(row,task);const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · 结果：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.completion_state)row.append(el('p',`回合进展：${completionNames[task.completion_state] || '状态未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
+      const taskFacts=(row,task,full=false)=>{supervisionFacts(row,task);const show=value=>full?text(value):taskExcerpt(value);row.append(el('p',`${originName(task)} · ${taskStatus(task)} · 优先级：${priorityNames[task.priority] || task.priority || '未登记'}`),el('p',`业务线：${({international:'国际业务',alibaba:'国际站',website:'独立站',products:'产品',creation:'创作',domestic:'国内电商',other:'其他'})[task.business_line] || text(task.business_line) || '未登记'} · 对象：${text(task.object_title || task.object_id) || '未关联'} · 执行者：${({codex_cli:'本机 Codex',codex_desktop:'桌面 Codex',paired_cloud:'云端执行者',business_owner:'业务负责人'})[task.executor] || text(task.executor) || '未登记'}`),el('p',`阻塞：${show(task.blocker) || '未记录'} · ${task.origin==='local'?'回合摘要':'结果'}：${show(task.result || task.summary || task.error) || '尚无结果'}`),el('p',`下一动作：${show(task.next_action) || '未记录'}`),el('p',`记录更新：${time(task.updated_at)} · 本次观测：${time(task.observed_at)} · ${task.origin==='desktop'?'快照时效':'记录更新时效'}：${({fresh:'有效',stale:'已过期',unavailable:'不可用',unknown:'未知'})[task.freshness] || ({ok:'快照有效（非实时）',stale:'快照已过期',unavailable:'快照来源不可用',missing:'尚未导入快照',recent:'近期更新',older:'较久未更新',unknown:'未知'})[task.freshness?.state] || text(task.freshness) || '未知'}`,'muted'));if(task.completion_state)row.append(el('p',`回合进展：${completionNames[task.completion_state] || '状态未知'}`,'muted'));if(task.priority_basis==='business_severity' || task.priority_source==='business_severity')row.append(el('p',`优先级依据：由业务事项严重程度推导${task.source_severity?'（'+text(task.source_severity)+'）':''}，并非已登记的执行优先级。`,'muted'));if(task.priority_basis==='local_default')row.append(el('p','优先级依据：本机任务默认普通。','muted'));if(task.origin==='local' && task.conversation_scope==='reference_only')row.append(el('p','关联的外部会话仅供定位，不能读取或控制；下方调整仅针对本机任务。','muted'));if(isReference(task))row.append(el('p','仅作参考（reference_only），不可操作。','muted'));};
       if(!id){
         const command=el('textarea'),result=el('div');command.setAttribute('aria-label','任务要求');command.placeholder='说明想做什么，先匹配已有任务';
         let routing=false;
@@ -469,7 +473,9 @@
       const task=tasks.find(t=>String(t.id)===id);host.append(button('返回任务列表',()=>{location.hash='/tasks';},'quiet'));
       if(!task)throw Error('未找到任务，或其来源暂不可用。请重新读取。');
       const headingTitle=task.title || (task.origin==='local'?'本机任务':task.instruction || task.id);
-      host.append(el('h2',text(headingTitle)),el('p',`${originName(task)} · ${taskStatus(task)}`),citedText(task.summary || task.error || (task.origin==='local'?'':task.instruction)));
+      host.append(el('h2',text(headingTitle)),el('p',`${originName(task)} · ${taskStatus(task)}`));
+      if(task.origin==='local' && (task.summary || task.error))host.append(el('p','以下为最近回合摘要；当前目标和下一步见下方。','muted'));
+      host.append(citedText(task.summary || task.error || (task.origin==='local'?'':task.instruction)));
       if(isReference(task)){taskFacts(host,task,true);host.append(el('p','此条仅作参考，不能启动、接续或修改。'));return;}
       if(task.origin==='business'){taskFacts(host,task,true);if(task.object_id)host.append(button('打开业务资料',()=>goObject(task.object_id),'quiet'));return;}
       if(task.origin==='cloud'){taskFacts(host,task,true);host.append(el('p','云端成果沿现有审核入口预览和确认，不会在此自动写回。'),button('打开云端审核',()=>{S.cloudReview.open=true;location.hash='/overview';},'quiet'));return;}
@@ -497,7 +503,7 @@
       if(job.status==='planned' && job.task_kind!=='group'){let attempted=false;const start=button('确认启动此任务',async()=>{if(attempted)return;attempted=true;start.disabled=true;try{await api('/api/desk/job/dispatch',{id:job.id,expected_version:job.version ?? 0});if(current())await renderTaskWorkspace(id,current);}catch(error){if(current())host.append(el('p',`${error.message} 请重新读取状态，勿重复启动。`,'inline-error'));}},'primary');host.append(el('p','此任务仅已准备，尚未执行。'),start);}
       if(context.object)host.append(button('打开关联业务资料',()=>goObject(context.object.id,job.artifact_id || ''),'quiet'));
       const goal=typeof context.goal==='string'?context.goal:job.instruction;
-      host.append(sectionHeading('任务进展'),el('p',`目标：${text(goal) || '未提供'}`),el('p',`当前结果：${text(job.summary || job.error || '尚无结果')}`),el('p',`执行记录：${(job.runs || []).length} 次`));
+      host.append(sectionHeading('任务进展'),el('p',`目标：${text(goal) || '未提供'}`),el('p',`最近回合记录（不代表当前目标完成）：${text(job.summary || job.error || '尚无结果')}`),el('p',`执行记录：${(job.runs || []).length} 次`));
       if(context.decisions_recorded===true){
         const decisions=context.effective_decisions;
         if(!Array.isArray(decisions))host.append(el('p','任务有效决定暂不可读，请核对原任务及适用约束。','muted'));
@@ -606,7 +612,7 @@
           detail.append(el('p',notificationNote(event.notification),'muted'));host.append(detail);
         }
       }
-      host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
+      host.append(sectionHeading('已有成果'));for(const artifact of context.artifacts || []){const row=el('article',undefined,'card');row.append(el('h3',text(artifact.title || artifact.id)),el('p',artifact.task_output?'该任务登记的成果。':'同一业务对象的成果，不代表由本回合产出。','muted'));if(context.object && artifact.object_id===context.object.id && artifact.id)row.append(button('打开这份成果',()=>goObject(context.object.id,artifact.id),'quiet'));row.append(el('pre',text(artifact.content || artifact.summary || '尚无正文'),'source-body'));host.append(row);}if(!(context.artifacts || []).length)host.append(el('p','此任务尚无已保存成果。','muted'));
       if(heldEntries.length || heldIndexInvalid || job.status==='needs_input'){
         if(heldEntries.length){
           const held=el('section',undefined,'card');held.append(el('h3','待复核成果'),el('p','只读取此任务登记的保留成果，不自动合并或覆盖。','muted'));

@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from hashlib import sha256
 from pathlib import Path
 
 from workstreams import build_workstreams
@@ -97,6 +98,54 @@ class WorkstreamProjectionTests(unittest.TestCase):
         self.assertEqual(rows['alibaba']['related_jobs'], [])
         self.assertEqual(rows['website']['related_jobs'], [])
 
+    def test_unbatched_customer_task_requires_current_intent_and_exact_object(self):
+        intent = {'version':1, 'goal':'当前目标', 'source':'已核实来源',
+                  'decisions_recorded':True, 'decisions':[]}
+        job = {'id':'one','object_id':'customer:a','batch_id':None,'intent':intent,
+               'status':'completed','summary':'旧回合摘要','next_action':'实际评估',
+               'artifact_id':'old-result','events':[{'type':'completed','at':'2026-11-03T01:00:00Z'}]}
+        objects = {'customer:a':{'id':'customer:a','kind':'customer'}}
+        def streams(jobs, values):
+            return {row['id']:row for row in build_workstreams(self.root,jobs,self.snapshot(),[],objects=values)}
+        rows=streams([job],objects)
+        linked=rows['outreach']['related_jobs'][0]
+        self.assertEqual((linked['goal'],linked['result'],linked['result_recorded_at'],linked['next_action']),
+                         ('当前目标','旧回合摘要','2026-11-03T01:00:00Z','实际评估'))
+        self.assertEqual((linked['relation'],linked['artifact_id']),('customer_object','old-result'))
+        self.assertEqual(rows['website']['related_jobs'],[])
+        self.assertEqual(rows['alibaba']['related_jobs'],[])
+        for jobs, values in [([job],{}), ([job],None), ([job,job],objects),
+                             ([{**job,'batch_id':'missing'}],objects),
+                             ([{**job,'intent':{**intent,'decisions':'bad'}}],objects),
+                             ([{**job,'next_action':''}],objects),
+                             ([job],{'customer:a':{'id':'customer:b','kind':'customer'}})]:
+            with self.subTest(jobs=jobs, values=values):
+                self.assertEqual(streams(jobs,values)['outreach']['related_jobs'],[])
+        self.assertEqual(streams([job],None)['outreach']['related_jobs_observation']['state'],'unknown')
+        self.assertEqual(streams([job],{})['outreach']['related_jobs_observation']['state'],'ambiguous')
+
+    def test_phase_row_requires_unique_exact_existing_task_and_does_not_replace_other_sources(self):
+        path=self.root/'00_总控台/当前状态.md'
+        path.parent.mkdir(parents=True)
+        title='经营工作台与任务接续'; source='00_总控台/当前状态.md'
+        record={'id':sha256((source+'\n'+title).encode()).hexdigest()[:16], 'source':source,
+                'title':title,'status':'待验','owner':'工具负责人','result':'真实成果',
+                'next':'下一动作','dependency':'当前依赖'}
+        row='| '+ ' | '.join([title,record['status'],record['owner'],record['result'],record['next'],record['dependency'],'原证据'])+' |\n'
+        path.write_text('# 当前状态\n\n## 工作台任务\n'+row,encoding='utf8')
+        rows={x['id']:x for x in build_workstreams(self.root,[],self.snapshot(),phase_tasks=[record])}
+        self.assertEqual(rows['tools']['source']['scope'],'phase_task')
+        self.assertEqual((rows['tools']['source']['result'],rows['tools']['source']['next_action']),('真实成果','下一动作'))
+        self.assertEqual(rows['alibaba']['source']['result'],'合成结果已记录。')
+        self.assertEqual(rows['outreach']['source']['state'],'unknown')
+        for bad in ([{**record,'result':'伪造结果'}], [{**record,'id':'wrong'}], [record,record]):
+            with self.subTest(bad=bad):
+                result=build_workstreams(self.root,[],self.snapshot(),phase_tasks=bad)
+                self.assertEqual(next(x for x in result if x['id']=='tools')['source']['state'],'unknown')
+        path.write_text('# 当前状态\n\n## 工作台任务\n'+row+row,encoding='utf8')
+        self.assertEqual(next(x for x in build_workstreams(self.root,[],self.snapshot(),phase_tasks=[record])
+                              if x['id']=='tools')['source']['state'],'unknown')
+
     def test_outreach_unreadable_or_ambiguous_batches_do_not_invent_association(self):
         job = {'id':'possible', 'batch_id':'batch-a', 'object_id':'customer:a', 'status':'running'}
         batch = {'id':'batch-a', 'object_ids':['customer:a']}
@@ -118,7 +167,7 @@ class WorkstreamProjectionTests(unittest.TestCase):
                'conversations':[{'provider':'codex','conversation_id':'outreach-thread','control':'reference_only',
                                  'host_id':'durable','host_bound_at':'2026-11-11T08:30:00+00:00'}]}
         batch = {'id':'batch-a','object_ids':['customer:a']}
-        row = next(x for x in build_workstreams(self.root, [job], snapshot, [batch]) if x['id']=='outreach')
+        row = next(x for x in build_workstreams(self.root, [job], snapshot, [batch], objects={}) if x['id']=='outreach')
         self.assertEqual(row['related_jobs'], [])
         self.assertEqual(row['related_jobs_observation']['state'], 'not_linked')
         self.assertEqual(row['conversation']['id'], 'outreach-thread')

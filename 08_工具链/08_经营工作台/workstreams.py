@@ -26,6 +26,14 @@ _SPECS = (
 
 _DIRECTION_IDS = {'国际 B2B': 'international', '国内抖店': 'domestic', '内容与创作': 'creation'}
 _DIRECTION_PATH = '00_总控台/当前状态.md'
+_PHASE_TASKS = {
+    'tools': '经营工作台与任务接续',
+    'alibaba': '国际站选品、商品一致与采集',
+    'website': '独立站商品对齐与采购承接',
+    'outreach': '海外精准开发与重点客户',
+    'domestic': '国内抖店经营',
+    'creation': '内容与创作',
+}
 
 
 def _excerpt(text, limit=800):
@@ -113,7 +121,47 @@ def _source(root, name, relative):
     return result
 
 
-def _direction_rows(root, snapshot, jobs, jobs_available=True):
+def _phase_sources(root, tasks):
+    """Project explicitly identified rows from the existing global task table."""
+    if not isinstance(tasks, list):
+        return {}
+    content, modified, _ = _read_entry(root, _DIRECTION_PATH)
+    if content is None:
+        return {}
+    lines = content.splitlines()
+    headings = [i for i, line in enumerate(lines) if line.strip() == '## 工作台任务']
+    if len(headings) != 1:
+        return {}
+    section = []
+    for line in lines[headings[0] + 1:]:
+        if re.match(r'^#{1,2}\s+', line.strip()):
+            break
+        if line.strip().startswith('|'):
+            section.append([cell.strip() for cell in line.strip().strip('|').split('|')])
+    observed, result = _now(), {}
+    for key, title in _PHASE_TASKS.items():
+        matches = [row for row in tasks if isinstance(row, dict)
+                   and row.get('source') == _DIRECTION_PATH and row.get('title') == title]
+        expected_id = sha256((_DIRECTION_PATH + '\n' + title).encode('utf8')).hexdigest()[:16]
+        if (len(matches) != 1 or matches[0].get('id') != expected_id or
+                any(not isinstance(matches[0].get(field), str)
+                    for field in ('status', 'owner', 'result', 'next', 'dependency'))):
+            continue
+        row = matches[0]
+        recorded = [cells for cells in section if len(cells) == 7 and cells[0] == title]
+        if (len(recorded) != 1 or recorded[0][:6] !=
+                [title, row['status'], row['owner'], row['result'], row['next'], row['dependency']]):
+            continue
+        result[key] = {'label':'总控阶段任务记录（非实时）', 'path':_DIRECTION_PATH,
+                       'state':'ok', 'observed_at':observed, 'modified_at':modified,
+                       'scope':'phase_task', 'reason':'', 'focus':_excerpt(title),
+                       'result':_excerpt(row['result']), 'next_action':_excerpt(row['next']),
+                       'blocker':_excerpt(row['dependency']), 'owner':_excerpt(row['owner']),
+                       'recorded_status':_excerpt(row['status'])}
+    return result
+
+
+def _direction_rows(root, snapshot, jobs, jobs_available=True, phase_sources=None):
     """Read the global direction table without treating goals as task outcomes."""
     observed = _now()
     content, modified, reason = _read_entry(root, _DIRECTION_PATH)
@@ -161,6 +209,10 @@ def _direction_rows(root, snapshot, jobs, jobs_available=True):
                   'observed_at':observed, 'modified_at':modified, 'reason':'',
                   'focus':_excerpt(focus), 'result':'', 'next_action':'', 'blocker':'',
                   'scope':'direction_only', 'long_term_goal':_excerpt(goal), 'progress_measure':_excerpt(metric)}
+        phase = (phase_sources or {}).get(key)
+        if phase:
+            source = {**phase, 'long_term_goal':_excerpt(goal), 'progress_measure':_excerpt(metric)}
+            focus = source['focus']
         conversation = _conversation(key, snapshot)
         related, link_observation = _related_jobs(jobs, conversation.get('host_id') if conversation else None,
                                                  conversation.get('id') if conversation else None)
@@ -279,6 +331,58 @@ def _batch_work(jobs, batches, jobs_available=True):
     return rows, related, observation
 
 
+def _customer_object_work(jobs, objects, jobs_available=True):
+    """Include an unbatched task only through its exact readable customer object.
+
+    A current, explicitly recorded goal and next action are required. A desktop
+    conversation or a shared title never establishes customer membership.
+    """
+    observed = _now()
+    observation = {'state':'unavailable', 'source':'客户对象与 AgentJobs', 'observed_at':observed,
+                   'reason':'客户对象或任务不可读，无法核对非批次任务。'}
+    if not jobs_available or not isinstance(objects, dict):
+        return [], observation
+    counts = {}
+    for job in jobs:
+        if isinstance(job, dict) and isinstance(job.get('id'), str) and job['id']:
+            counts[job['id']] = counts.get(job['id'], 0) + 1
+    related, incomplete = [], False
+    for job in jobs:
+        if not isinstance(job, dict) or job.get('batch_id') is not None:
+            continue
+        intent, action = job.get('intent'), job.get('next_action')
+        if (not isinstance(intent, dict) or type(intent.get('version')) is not int or intent['version'] < 1
+                or not isinstance(intent.get('goal'), str) or not intent['goal'].strip()
+                or not isinstance(intent.get('source'), str) or not intent['source'].strip()
+                or type(intent.get('decisions_recorded')) is not bool
+                or not isinstance(intent.get('decisions'), list)
+                or not all(isinstance(item, dict) and isinstance(item.get('text'), str)
+                           and isinstance(item.get('source'), str) for item in intent['decisions'])
+                or not isinstance(action, str) or not action.strip()):
+            continue
+        oid, job_id = job.get('object_id'), job.get('id')
+        obj = objects.get(oid) if isinstance(oid, str) else None
+        if (not isinstance(job_id, str) or not job_id or counts.get(job_id) != 1
+                or not isinstance(obj, dict) or obj.get('id') != oid
+                or obj.get('kind') not in ('customer', 'prospect')):
+            incomplete = True
+            continue
+        events = job.get('events') if isinstance(job.get('events'), list) else []
+        ended = [event.get('at') for event in events if isinstance(event, dict)
+                 and event.get('type') in ('completed', 'failed', 'cancelled')
+                 and isinstance(event.get('at'), str)]
+        related.append({'id':'local:' + job_id, 'title':job.get('title') or '本机任务',
+                        'status':job.get('status') or 'unknown', 'result':job.get('summary') or '',
+                        'result_recorded_at':ended[-1] if ended else None,
+                        'goal':intent['goal'], 'next_action':action, 'blocker':job.get('error') or '',
+                        'artifact_id':job.get('artifact_id'), 'object_id':oid,
+                        'updated_at':job.get('updated_at'), 'observed_at':observed,
+                        'source':'AgentJobs 与客户原对象', 'relation':'customer_object'})
+    observation.update(state='partial' if incomplete else 'ok',
+                       reason='部分非批次任务的客户对象或任务身份无法确认。' if incomplete else '')
+    return related, observation
+
+
 def _conversation(key, snapshot):
     links = [link for link in snapshot.get('workstream_links', [])
              if isinstance(link, dict) and link.get('workstream') == key]
@@ -316,26 +420,32 @@ def _conversation(key, snapshot):
             'control': 'reference_only'}
 
 
-def build_workstreams(root, jobs, desktop_snapshot, customer_batches=None, jobs_available=True):
+def build_workstreams(root, jobs, desktop_snapshot, customer_batches=None, jobs_available=True,
+                      objects=None, phase_tasks=None):
     """Project existing workstream entries and separately labelled business directions."""
     jobs = jobs if isinstance(jobs, list) else []
     snapshot = desktop_snapshot if isinstance(desktop_snapshot, dict) else {}
+    phases = _phase_sources(root, phase_tasks)
     output = []
     for key, title, focus, label, path in _SPECS:
         conversation = _conversation(key, snapshot)
         source = _source(root, label, path)
-        batches, batch_observation = [], None
+        if source['state'] == 'unknown' and key in phases:
+            source = phases[key]
+        batches, batch_observation, object_observation = [], None, None
         if key == 'outreach':
-            # A conversation identifies a reference, not the customer to whom
-            # a job belongs. Only the explicit batch/member join can attach it.
+            # A conversation is only a reference; customer membership must be
+            # established by the current batch or by the exact customer object.
             batches, related, batch_observation = _batch_work(jobs, customer_batches, jobs_available)
+            object_jobs, object_observation = _customer_object_work(jobs, objects, jobs_available)
+            related.extend(object_jobs)
             link_observation = dict(batch_observation)
             if not jobs_available:
                 link_observation['state'] = 'unavailable'
-            elif batch_observation['state'] == 'unavailable':
-                link_observation['state'] = 'unknown'
-            elif batch_observation['state'] == 'partial':
-                link_observation['state'] = 'ambiguous'
+            elif batch_observation['state'] == 'partial' or object_observation['state'] == 'partial':
+                link_observation.update(state='ambiguous', reason='部分任务的批次或客户对象关联不明确。')
+            elif batch_observation['state'] == 'unavailable' or object_observation['state'] == 'unavailable':
+                link_observation.update(state='unknown', reason='批次或客户对象来源不可读，关联状态不完整。')
             else:
                 link_observation['state'] = 'ok' if related else 'not_linked'
         else:
@@ -348,5 +458,6 @@ def build_workstreams(root, jobs, desktop_snapshot, customer_batches=None, jobs_
                        'source': source,
                        'conversation': conversation, 'related_jobs':related,
                        'related_jobs_observation':link_observation,
-                       **({'related_batches':batches, 'batch_observation':batch_observation} if key == 'outreach' else {})})
-    return output + _direction_rows(root, snapshot, jobs, jobs_available)
+                       **({'related_batches':batches, 'batch_observation':batch_observation,
+                           'customer_object_observation':object_observation} if key == 'outreach' else {})})
+    return output + _direction_rows(root, snapshot, jobs, jobs_available, phases)
